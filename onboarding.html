@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAIN — Client Intake</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07080a;
+  --surface:#0f1114;
+  --surface2:#161a1e;
+  --border:#222428;
+  --accent:#00d4be;
+  --accent-dim:#00a896;
+  --accent-faint:rgba(0,212,190,0.08);
+  --accent-glow:rgba(0,212,190,0.18);
+  --text:#f0f1f2;
+  --muted:#666;
+  --muted2:#444;
+  --r:14px;--r-sm:9px;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;min-height:100vh;overflow-x:hidden}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+
+/* ── PROGRESS BAR ── */
+#progress-bar{position:fixed;top:0;left:0;width:100%;height:2px;background:var(--border);z-index:100}
+#progress-fill{height:100%;background:var(--accent);transition:width .5s cubic-bezier(.4,0,.2,1);width:0%}
+
+/* ── NAV HEADER ── */
+#nav{position:fixed;top:0;left:0;right:0;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;z-index:90;background:linear-gradient(to bottom,var(--bg) 60%,transparent)}
+.nav-logo{font-size:17px;font-weight:800;letter-spacing:-0.5px;color:var(--accent)}
+.nav-meta{font-size:12px;color:var(--muted);letter-spacing:.3px}
+
+/* ── STEP WRAPPER ── */
+#form-container{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 24px 60px}
+
+.step{display:none;width:100%;max-width:620px;margin:0 auto;animation:stepIn .4s cubic-bezier(.4,0,.2,1)}
+.step.active{display:block}
+.step.exit{animation:stepOut .3s cubic-bezier(.4,0,.2,1) forwards}
+
+@keyframes stepIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes stepOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-18px)}}
+
+/* ── SECTION LABEL ── */
+.section-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;opacity:.85}
+
+/* ── STEP TITLE ── */
+.step-title{font-size:clamp(22px,4vw,32px);font-weight:700;letter-spacing:-0.8px;line-height:1.2;margin-bottom:10px}
+.step-subtitle{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:32px;max-width:480px}
+
+/* ── COACHING QUESTION STYLE ── */
+.coaching-q .step-title{font-size:clamp(20px,3.5vw,28px);line-height:1.35;max-width:560px}
+.coaching-hint{font-size:12px;color:var(--muted2);margin-top:10px;line-height:1.7;border-left:2px solid var(--border);padding-left:12px}
+
+/* ── FIELDS ── */
+.field{margin-bottom:20px}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field select,.field textarea{
+  width:100%;background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--r-sm);color:var(--text);padding:13px 16px;
+  font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s;
+  font-family:inherit;resize:none;appearance:none;-webkit-appearance:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-faint)
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted2)}
+.field select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+
+/* ── TEXTAREA ── */
+.coaching-textarea{min-height:160px;line-height:1.7;font-size:15px}
+.word-count{font-size:11px;color:var(--muted2);text-align:right;margin-top:6px}
+.word-count span{color:var(--muted)}
+
+/* ── OPTION CARDS ── */
+.option-grid{display:grid;gap:10px}
+.option-grid.cols-2{grid-template-columns:1fr 1fr}
+.option-grid.cols-4{grid-template-columns:repeat(2,1fr)}
+
+.option-card input[type=radio],.option-card input[type=checkbox]{display:none}
+.option-card label{
+  display:flex;align-items:flex-start;gap:14px;padding:16px 18px;
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--r);cursor:pointer;transition:all .2s;
+  user-select:none;
+}
+.option-card label:hover{border-color:var(--muted2);background:var(--surface2)}
+.option-card input:checked+label{
+  border-color:var(--accent);background:var(--accent-faint);
+  box-shadow:0 0 0 1px var(--accent)
+}
+.option-icon{font-size:22px;flex-shrink:0;line-height:1;margin-top:1px}
+.option-text strong{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px}
+.option-text span{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* ── SLIDER ── */
+.slider-wrap{position:relative;padding-bottom:24px}
+.slider-wrap input[type=range]{
+  width:100%;height:3px;appearance:none;-webkit-appearance:none;
+  background:var(--border);border-radius:2px;outline:none;cursor:pointer;
+}
+.slider-wrap input[type=range]::-webkit-slider-thumb{
+  appearance:none;-webkit-appearance:none;width:20px;height:20px;
+  border-radius:50%;background:var(--accent);cursor:pointer;
+  box-shadow:0 0 0 4px var(--accent-faint);transition:box-shadow .2s
+}
+.slider-wrap input[type=range]::-webkit-slider-thumb:hover{box-shadow:0 0 0 6px var(--accent-glow)}
+.slider-labels{display:flex;justify-content:space-between;margin-top:10px}
+.slider-labels span{font-size:11px;color:var(--muted)}
+.slider-val{position:absolute;bottom:0;font-size:13px;font-weight:700;color:var(--accent);transform:translateX(-50%);transition:left .15s}
+
+/* ── CHIP TOGGLES ── */
+.chip-group{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{display:none}
+.chip label{padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);font-size:13px;cursor:pointer;transition:all .2s;background:var(--surface);color:var(--muted)}
+.chip label:hover{border-color:var(--muted2);color:var(--text)}
+.chip input:checked+label{border-color:var(--accent);color:var(--accent);background:var(--accent-faint)}
+
+/* ── NAVIGATION ── */
+.step-nav{display:flex;align-items:center;justify-content:space-between;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r-sm);font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s;font-family:inherit;letter-spacing:.2px}
+.btn-primary{background:var(--accent);color:#07080a}
+.btn-primary:hover{background:var(--accent-dim);transform:translateY(-1px);box-shadow:0 6px 20px var(--accent-glow)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{background:transparent;color:var(--muted);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--muted2);color:var(--text)}
+.btn-lg{padding:16px 36px;font-size:15px;border-radius:var(--r)}
+.btn svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── KEYBOARD HINT ── */
+.key-hint{font-size:11px;color:var(--muted2);display:flex;align-items:center;gap:5px}
+.kbd{display:inline-flex;align-items:center;justify-content:center;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-size:10px;color:var(--muted)}
+
+/* ── WELCOME SCREEN ── */
+#welcome{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:40px 24px;
+  background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(0,212,190,0.06) 0%,transparent 70%)
+}
+.welcome-logo{font-size:42px;font-weight:800;letter-spacing:-2px;color:var(--accent);margin-bottom:16px}
+.welcome-tagline{font-size:clamp(20px,4vw,32px);font-weight:600;letter-spacing:-.5px;color:var(--text);max-width:480px;line-height:1.3;margin-bottom:14px}
+.welcome-sub{font-size:15px;color:var(--muted);max-width:400px;line-height:1.7;margin-bottom:48px}
+.welcome-divider{width:40px;height:2px;background:var(--accent);opacity:.4;margin:0 auto 48px}
+.welcome-time{font-size:12px;color:var(--muted2);margin-top:20px;letter-spacing:.3px}
+
+/* ── COMPLETE SCREEN ── */
+#complete{
+  display:none;min-height:100vh;display:none;flex-direction:column;
+  align-items:center;justify-content:center;padding:80px 24px 60px;
+  text-align:center
+}
+#complete.visible{display:flex}
+.complete-icon{font-size:48px;margin-bottom:20px}
+.complete-title{font-size:32px;font-weight:700;letter-spacing:-1px;margin-bottom:10px}
+.complete-sub{font-size:15px;color:var(--muted);max-width:420px;line-height:1.7;margin-bottom:40px}
+.summary-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;text-align:left;width:100%;max-width:500px;margin-bottom:32px}
+.summary-card h3{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.summary-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.summary-row:last-child{border-bottom:none}
+.summary-row .label{color:var(--muted)}
+.summary-row .val{font-weight:600;max-width:240px;text-align:right}
+.download-btn{
+  display:flex;align-items:center;gap:10px;padding:16px 32px;
+  background:var(--accent);color:#07080a;border:none;border-radius:var(--r);
+  font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;
+  transition:all .2s;letter-spacing:.2px
+}
+.download-btn:hover{background:var(--accent-dim);transform:translateY(-2px);box-shadow:0 8px 24px var(--accent-glow)}
+
+/* ── VALIDATION ── */
+.field-error{border-color:#ef4444!important;box-shadow:0 0 0 3px rgba(239,68,68,.08)!important}
+.error-msg{font-size:11px;color:#ef4444;margin-top:5px}
+
+/* ── RANGE DISPLAY ── */
+.range-display{font-size:28px;font-weight:700;color:var(--accent);letter-spacing:-1px;margin-bottom:4px}
+.range-display-label{font-size:12px;color:var(--muted);margin-bottom:16px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .option-grid.cols-2,.option-grid.cols-4{grid-template-columns:1fr}
+  .field-row,.field-row3{grid-template-columns:1fr}
+  #nav{padding:12px 18px}
+  #form-container{padding:70px 18px 50px}
+}
+</style>
+</head>
+<body>
+
+<!-- Progress -->
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- Nav -->
+<div id="nav">
+  <div class="nav-logo">TRAIN</div>
+  <div class="nav-meta" id="step-counter"></div>
+</div>
+
+<!-- ══ WELCOME ══ -->
+<div id="welcome">
+  <div class="welcome-logo">TRAIN</div>
+  <div class="welcome-tagline">Your program starts with knowing you.</div>
+  <div class="welcome-divider"></div>
+  <div class="welcome-sub">This intake takes about 8 minutes. There are no wrong answers — the more honest you are, the better your program will be.</div>
+  <button class="btn btn-primary btn-lg" onclick="startForm()">
+    Begin Intake
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </button>
+  <div class="welcome-time">~8 minutes · 11 steps</div>
+</div>
+
+<!-- ══ FORM ══ -->
+<div id="form-container" style="display:none">
+
+  <!-- ─ STEP 1: Name ─ -->
+  <div class="step" id="step-1">
+    <div class="section-label">Section 1 — Basics</div>
+    <h1 class="step-title">What's your name?</h1>
+    <p class="step-subtitle">We'll use this to personalize your program.</p>
+    <div class="field">
+      <label>Full Name</label>
+      <input type="text" id="f-name" placeholder="First Last" autocomplete="name">
+    </div>
+    <div class="step-nav">
+      <div class="key-hint"><kbd class="kbd">Enter</kbd><span>to continue</span></div>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 2: Stats ─ -->
+  <div class="step" id="step-2">
+    <div class="section-label">Section 1 — Basics</div>
+    <h1 class="step-title">Your body stats</h1>
+    <p class="step-subtitle">Used to calculate your training and nutrition baselines.</p>
+    <div class="field-row">
+      <div class="field">
+        <label>Age</label>
+        <input type="number" id="f-age" placeholder="e.g. 28" min="16" max="90">
+      </div>
+      <div class="field">
+        <label>Sex</label>
+        <select id="f-sex">
+          <option value="">Select…</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="other">Other / Prefer not to say</option>
+        </select>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Height</label>
+        <select id="f-height">
+          <option value="">Select…</option>
+          <option>4'10" (147 cm)</option><option>4'11" (150 cm)</option>
+          <option>5'0" (152 cm)</option><option>5'1" (155 cm)</option>
+          <option>5'2" (157 cm)</option><option>5'3" (160 cm)</option>
+          <option>5'4" (163 cm)</option><option>5'5" (165 cm)</option>
+          <option>5'6" (168 cm)</option><option>5'7" (170 cm)</option>
+          <option>5'8" (173 cm)</option><option>5'9" (175 cm)</option>
+          <option>5'10" (178 cm)</option><option>5'11" (180 cm)</option>
+          <option>6'0" (183 cm)</option><option>6'1" (185 cm)</option>
+          <option>6'2" (188 cm)</option><option>6'3" (191 cm)</option>
+          <option>6'4" (193 cm)</option><option>6'5" (196 cm)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Weight (lbs)</label>
+        <input type="number" id="f-weight" placeholder="e.g. 165" min="80" max="500">
+      </div>
+    </div>
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 3: Goal ─ -->
+  <div class="step" id="step-3">
+    <div class="section-label">Section 1 — Basics</div>
+    <h1 class="step-title">What's your primary goal?</h1>
+    <p class="step-subtitle">This shapes how your program is structured week over week.</p>
+    <div class="option-grid cols-2" style="margin-bottom:0">
+      <div class="option-card"><input type="radio" name="goal" id="g1" value="fat_loss"><label for="g1"><span class="option-icon">🔥</span><span class="option-text"><strong>Fat Loss</strong><span>Burn fat, preserve muscle, feel lighter and leaner</span></span></label></div>
+      <div class="option-card"><input type="radio" name="goal" id="g2" value="muscle_gain"><label for="g2"><span class="option-icon">💪</span><span class="option-text"><strong>Muscle Gain</strong><span>Build strength and size, progressive overload focus</span></span></label></div>
+      <div class="option-card"><input type="radio" name="goal" id="g3" value="performance"><label for="g3"><span class="option-icon">⚡</span><span class="option-text"><strong>Performance</strong><span>Speed, power, athleticism and functional fitness</span></span></label></div>
+      <div class="option-card"><input type="radio" name="goal" id="g4" value="general_health"><label for="g4"><span class="option-icon">🌿</span><span class="option-text"><strong>General Health</strong><span>Feel better, move better, sustainable long-term habits</span></span></label></div>
+    </div>
+    <div class="step-nav" style="margin-top:24px">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 4: Experience ─ -->
+  <div class="step" id="step-4">
+    <div class="section-label">Section 1 — Basics</div>
+    <h1 class="step-title">How experienced are you?</h1>
+    <p class="step-subtitle">Honest answer here ensures the program challenges you appropriately.</p>
+    <div class="option-grid" style="margin-bottom:0">
+      <div class="option-card"><input type="radio" name="experience" id="e1" value="beginner"><label for="e1"><span class="option-icon">🌱</span><span class="option-text"><strong>Beginner</strong><span>Less than 1 year of consistent training, or returning after a long break</span></span></label></div>
+      <div class="option-card"><input type="radio" name="experience" id="e2" value="intermediate"><label for="e2"><span class="option-icon">🔄</span><span class="option-text"><strong>Intermediate</strong><span>1–3 years of training, comfortable with most movements</span></span></label></div>
+      <div class="option-card"><input type="radio" name="experience" id="e3" value="advanced"><label for="e3"><span class="option-icon">🏆</span><span class="option-text"><strong>Advanced</strong><span>3+ years, strong technique, familiar with periodization</span></span></label></div>
+    </div>
+    <div class="step-nav" style="margin-top:24px">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 5: Schedule ─ -->
+  <div class="step" id="step-5">
+    <div class="section-label">Section 1 — Basics</div>
+    <h1 class="step-title">Your training setup</h1>
+    <p class="step-subtitle">Be realistic — a consistent 3-day program beats an abandoned 6-day one.</p>
+
+    <div class="field">
+      <label>Days available per week</label>
+      <div class="range-display" id="days-display">4</div>
+      <div class="range-display-label">days / week</div>
+      <div class="slider-wrap">
+        <input type="range" id="f-days" min="2" max="7" value="4" oninput="updateRange('days')">
+        <div class="slider-labels"><span>2 days</span><span>7 days</span></div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Session length</label>
+      <div class="range-display" id="duration-display">45</div>
+      <div class="range-display-label">minutes</div>
+      <div class="slider-wrap">
+        <input type="range" id="f-duration" min="20" max="120" step="5" value="45" oninput="updateRange('duration')">
+        <div class="slider-labels"><span>20 min</span><span>120 min</span></div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Equipment access</label>
+      <div class="option-grid cols-2" style="gap:8px">
+        <div class="option-card"><input type="radio" name="equipment" id="eq1" value="full_gym"><label for="eq1" style="padding:12px 14px"><span class="option-icon">🏋️</span><span class="option-text"><strong>Full Gym</strong><span>All equipment available</span></span></label></div>
+        <div class="option-card"><input type="radio" name="equipment" id="eq2" value="home_gym"><label for="eq2" style="padding:12px 14px"><span class="option-icon">🏠</span><span class="option-text"><strong>Home Gym</strong><span>Dumbbells, some machines</span></span></label></div>
+        <div class="option-card"><input type="radio" name="equipment" id="eq3" value="minimal"><label for="eq3" style="padding:12px 14px"><span class="option-icon">🎒</span><span class="option-text"><strong>Minimal</strong><span>Bodyweight + bands</span></span></label></div>
+        <div class="option-card"><input type="radio" name="equipment" id="eq4" value="mixed"><label for="eq4" style="padding:12px 14px"><span class="option-icon">🔀</span><span class="option-text"><strong>Mixed</strong><span>Varies week to week</span></span></label></div>
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 6: Health ─ -->
+  <div class="step" id="step-6">
+    <div class="section-label">Section 1 — Basics</div>
+    <h1 class="step-title">Health & lifestyle</h1>
+    <p class="step-subtitle">Helps us program around your body, not against it.</p>
+
+    <div class="field">
+      <label>Injuries or physical limitations <span style="color:var(--muted2);font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+      <input type="text" id="f-injuries" placeholder="e.g. lower back pain, left knee surgery, shoulder impingement…">
+    </div>
+
+    <div class="field">
+      <label>Average sleep quality</label>
+      <div class="chip-group" id="sleep-chips">
+        <div class="chip"><input type="radio" name="sleep" id="sl1" value="poor"><label for="sl1">Poor</label></div>
+        <div class="chip"><input type="radio" name="sleep" id="sl2" value="inconsistent"><label for="sl2">Inconsistent</label></div>
+        <div class="chip"><input type="radio" name="sleep" id="sl3" value="ok"><label for="sl3">OK</label></div>
+        <div class="chip"><input type="radio" name="sleep" id="sl4" value="good"><label for="sl4">Good</label></div>
+        <div class="chip"><input type="radio" name="sleep" id="sl5" value="great"><label for="sl5">Great</label></div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Current stress levels</label>
+      <div class="chip-group">
+        <div class="chip"><input type="radio" name="stress" id="st1" value="low"><label for="st1">Low</label></div>
+        <div class="chip"><input type="radio" name="stress" id="st2" value="moderate"><label for="st2">Moderate</label></div>
+        <div class="chip"><input type="radio" name="stress" id="st3" value="high"><label for="st3">High</label></div>
+        <div class="chip"><input type="radio" name="stress" id="st4" value="very_high"><label for="st4">Very high</label></div>
+      </div>
+    </div>
+
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">
+        Next: Your Story
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 7: Fitness Evolution ─ -->
+  <div class="step coaching-q" id="step-7">
+    <div class="section-label">Section 2 — Your Story</div>
+    <h1 class="step-title">How has your relationship with fitness evolved over the years? What phases have you gone through?</h1>
+    <p class="coaching-hint">Think about the highs and lows — periods of consistency, falling off, what drove you at different times. No right answer, just your truth.</p>
+    <div class="field" style="margin-top:24px">
+      <textarea class="coaching-textarea" id="f-evolution" placeholder="Take your time with this one…" oninput="updateWordCount(this,'wc-evolution')" rows="7"></textarea>
+      <div class="word-count"><span id="wc-evolution">0</span> words</div>
+    </div>
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 8: Best Results ─ -->
+  <div class="step coaching-q" id="step-8">
+    <div class="section-label">Section 2 — Your Story</div>
+    <h1 class="step-title">What type of training or program have you seen the best results from — even if you stopped? What did you like about it?</h1>
+    <p class="coaching-hint">Results can mean physical changes, how you felt, performance, or even just showing up consistently. What made it work for you?</p>
+    <div class="field" style="margin-top:24px">
+      <textarea class="coaching-textarea" id="f-best-results" placeholder="Describe the program, the feeling, what clicked…" oninput="updateWordCount(this,'wc-results')" rows="7"></textarea>
+      <div class="word-count"><span id="wc-results">0</span> words</div>
+    </div>
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 9: Consistency Blockers ─ -->
+  <div class="step coaching-q" id="step-9">
+    <div class="section-label">Section 2 — Your Story</div>
+    <h1 class="step-title">What has historically stopped you from staying consistent?</h1>
+    <p class="coaching-hint">Time, motivation, injury, boredom, life circumstances — be specific. Naming the pattern is the first step to breaking it.</p>
+    <div class="field" style="margin-top:24px">
+      <textarea class="coaching-textarea" id="f-blockers" placeholder="What gets in the way — and how does it usually go?" oninput="updateWordCount(this,'wc-blockers')" rows="7"></textarea>
+      <div class="word-count"><span id="wc-blockers">0</span> words</div>
+    </div>
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 10: Physical State ─ -->
+  <div class="step coaching-q" id="step-10">
+    <div class="section-label">Section 2 — Your Story</div>
+    <h1 class="step-title">Describe how you currently feel physically.</h1>
+    <p class="coaching-hint">Energy levels throughout the day, strength in training, mobility and range of motion, any persistent discomfort or tightness. Where are you right now?</p>
+    <div class="field" style="margin-top:24px">
+      <textarea class="coaching-textarea" id="f-current-state" placeholder="Morning energy, afternoon slumps, what hurts, what feels strong…" oninput="updateWordCount(this,'wc-state')" rows="7"></textarea>
+      <div class="word-count"><span id="wc-state">0</span> words</div>
+    </div>
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary" onclick="nextStep()">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ─ STEP 11: Vision ─ -->
+  <div class="step coaching-q" id="step-11">
+    <div class="section-label">Section 2 — Your Story</div>
+    <h1 class="step-title">Beyond looking or feeling better — what would being in the best shape of your life actually change for you?</h1>
+    <p class="coaching-hint">What becomes possible? How do you show up differently — at work, at home, in your own head? This is the real reason. Go there.</p>
+    <div class="field" style="margin-top:24px">
+      <textarea class="coaching-textarea" id="f-vision" placeholder="What does your life look like from there?" oninput="updateWordCount(this,'wc-vision')" rows="7"></textarea>
+      <div class="word-count"><span id="wc-vision">0</span> words</div>
+    </div>
+    <div class="step-nav">
+      <button class="btn btn-ghost" onclick="prevStep()">Back</button>
+      <button class="btn btn-primary btn-lg" onclick="submitForm()" style="padding:14px 32px">
+        Complete Intake
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      </button>
+    </div>
+  </div>
+
+</div><!-- /form-container -->
+
+<!-- ══ COMPLETE ══ -->
+<div id="complete">
+  <div class="complete-icon">✦</div>
+  <h1 class="complete-title">Intake complete.</h1>
+  <p class="complete-sub">Your profile has been captured. Download it below to share with your coach or import into TRAIN.</p>
+  <div class="summary-card" id="summary-card"></div>
+  <button class="download-btn" onclick="downloadJSON()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+    Download Profile (.json)
+  </button>
+  <p style="font-size:12px;color:var(--muted2);margin-top:16px">Saved locally — nothing is uploaded anywhere.</p>
+</div>
+
+<script>
+const TOTAL_STEPS = 11;
+let currentStep = 0;
+let formData = {};
+
+// ── START ──
+function startForm() {
+  document.getElementById('welcome').style.display = 'none';
+  document.getElementById('form-container').style.display = 'flex';
+  currentStep = 1;
+  showStep(1);
+  updateProgress();
+}
+
+// ── NAVIGATION ──
+function showStep(n) {
+  document.querySelectorAll('.step').forEach(s => {
+    s.classList.remove('active','exit');
+  });
+  const el = document.getElementById('step-' + n);
+  if (el) {
+    el.classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+    // Focus first input
+    setTimeout(() => {
+      const first = el.querySelector('input:not([type=radio]):not([type=range]), textarea');
+      if (first) first.focus();
+    }, 350);
+  }
+}
+
+function nextStep() {
+  if (!validateStep(currentStep)) return;
+  collectStep(currentStep);
+  if (currentStep < TOTAL_STEPS) {
+    currentStep++;
+    showStep(currentStep);
+    updateProgress();
+  }
+}
+
+function prevStep() {
+  if (currentStep > 1) {
+    currentStep--;
+    showStep(currentStep);
+    updateProgress();
+  }
+}
+
+function updateProgress() {
+  const pct = ((currentStep - 1) / TOTAL_STEPS) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('step-counter').textContent =
+    currentStep <= TOTAL_STEPS ? `${currentStep} of ${TOTAL_STEPS}` : '';
+}
+
+// ── KEYBOARD NAVIGATION ──
+document.addEventListener('keydown', e => {
+  if (!currentStep) return;
+  if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'BUTTON') {
+    e.preventDefault();
+    nextStep();
+  }
+});
+
+// ── RANGE SLIDERS ──
+function updateRange(type) {
+  if (type === 'days') {
+    document.getElementById('days-display').textContent = document.getElementById('f-days').value;
+  } else if (type === 'duration') {
+    document.getElementById('duration-display').textContent = document.getElementById('f-duration').value;
+  }
+}
+
+// ── WORD COUNT ──
+function updateWordCount(el, countId) {
+  const words = el.value.trim() ? el.value.trim().split(/\s+/).length : 0;
+  document.getElementById(countId).textContent = words;
+}
+
+// ── VALIDATION ──
+function validateStep(step) {
+  clearErrors();
+  if (step === 1) {
+    const name = document.getElementById('f-name').value.trim();
+    if (!name) { showError('f-name','Please enter your name.'); return false; }
+  }
+  if (step === 2) {
+    if (!document.getElementById('f-age').value) { showError('f-age','Required.'); return false; }
+    if (!document.getElementById('f-sex').value) { showError('f-sex','Required.'); return false; }
+    if (!document.getElementById('f-height').value) { showError('f-height','Required.'); return false; }
+    if (!document.getElementById('f-weight').value) { showError('f-weight','Required.'); return false; }
+  }
+  if (step === 3 && !document.querySelector('input[name="goal"]:checked')) {
+    showMsg('Please select a goal.'); return false;
+  }
+  if (step === 4 && !document.querySelector('input[name="experience"]:checked')) {
+    showMsg('Please select your experience level.'); return false;
+  }
+  if (step === 5 && !document.querySelector('input[name="equipment"]:checked')) {
+    showMsg('Please select your equipment access.'); return false;
+  }
+  return true;
+}
+
+function showError(id, msg) {
+  const el = document.getElementById(id);
+  el.classList.add('field-error');
+  const err = document.createElement('div');
+  err.className = 'error-msg';
+  err.textContent = msg;
+  el.parentNode.appendChild(err);
+  el.focus();
+}
+
+function showMsg(msg) {
+  alert(msg);
+}
+
+function clearErrors() {
+  document.querySelectorAll('.field-error').forEach(e => e.classList.remove('field-error'));
+  document.querySelectorAll('.error-msg').forEach(e => e.remove());
+}
+
+// ── COLLECT DATA ──
+function collectStep(step) {
+  const get = id => document.getElementById(id)?.value?.trim() || '';
+  const radio = name => document.querySelector(`input[name="${name}"]:checked`)?.value || '';
+  const chips = name => {
+    const checked = document.querySelectorAll(`input[name="${name}"]:checked`);
+    return [...checked].map(c=>c.value);
+  };
+
+  if (step === 1) formData.name = get('f-name');
+  if (step === 2) {
+    formData.age = get('f-age');
+    formData.sex = get('f-sex');
+    formData.height = get('f-height');
+    formData.weight = get('f-weight');
+  }
+  if (step === 3) formData.goal = radio('goal');
+  if (step === 4) formData.experience = radio('experience');
+  if (step === 5) {
+    formData.daysPerWeek = get('f-days');
+    formData.sessionLength = get('f-duration');
+    formData.equipment = radio('equipment');
+  }
+  if (step === 6) {
+    formData.injuries = get('f-injuries');
+    formData.sleep = radio('sleep');
+    formData.stress = radio('stress');
+  }
+  if (step === 7)  formData.fitnessEvolution = get('f-evolution');
+  if (step === 8)  formData.bestResults = get('f-best-results');
+  if (step === 9)  formData.consistencyBlockers = get('f-blockers');
+  if (step === 10) formData.currentPhysicalState = get('f-current-state');
+  if (step === 11) formData.vision = get('f-vision');
+}
+
+// ── SUBMIT ──
+function submitForm() {
+  if (!validateStep(11)) return;
+  collectStep(11);
+
+  formData.submittedAt = new Date().toISOString();
+  formData.date = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+
+  // Hide form, show complete
+  document.getElementById('form-container').style.display = 'none';
+  document.getElementById('progress-fill').style.width = '100%';
+  document.getElementById('step-counter').textContent = 'Complete';
+
+  const complete = document.getElementById('complete');
+  complete.style.display = 'flex';
+  complete.classList.add('visible');
+
+  renderSummary();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── SUMMARY ──
+const LABELS = {
+  goal: {fat_loss:'Fat Loss',muscle_gain:'Muscle Gain',performance:'Performance',general_health:'General Health'},
+  experience: {beginner:'Beginner',intermediate:'Intermediate',advanced:'Advanced'},
+  equipment: {full_gym:'Full Gym',home_gym:'Home Gym',minimal:'Minimal Equipment',mixed:'Mixed'},
+  sleep: {poor:'Poor',inconsistent:'Inconsistent',ok:'OK',good:'Good',great:'Great'},
+  stress: {low:'Low',moderate:'Moderate',high:'High',very_high:'Very High'}
+};
+
+function renderSummary() {
+  const d = formData;
+  const rows = [
+    {label:'Name', val: d.name},
+    {label:'Age / Sex', val: `${d.age} · ${d.sex === 'M' ? 'Male' : d.sex === 'F' ? 'Female' : d.sex}`},
+    {label:'Height / Weight', val: `${d.height} · ${d.weight} lbs`},
+    {label:'Goal', val: LABELS.goal[d.goal]||d.goal},
+    {label:'Experience', val: LABELS.experience[d.experience]||d.experience},
+    {label:'Schedule', val: `${d.daysPerWeek} days/wk · ${d.sessionLength} min sessions`},
+    {label:'Equipment', val: LABELS.equipment[d.equipment]||d.equipment},
+    {label:'Sleep', val: LABELS.sleep[d.sleep]||d.sleep||'—'},
+    {label:'Stress', val: LABELS.stress[d.stress]||d.stress||'—'},
+    {label:'Injuries', val: d.injuries||'None noted'},
+  ];
+
+  document.getElementById('summary-card').innerHTML = `
+    <h3>Client Profile</h3>
+    ${rows.map(r=>`<div class="summary-row"><span class="label">${r.label}</span><span class="val">${r.val||'—'}</span></div>`).join('')}
+  `;
+}
+
+// ── DOWNLOAD JSON ──
+function downloadJSON() {
+  const output = {
+    meta: {
+      source: 'TRAIN Client Intake',
+      version: '1.0',
+      submittedAt: formData.submittedAt
+    },
+    basics: {
+      name: formData.name,
+      age: formData.age,
+      sex: formData.sex,
+      height: formData.height,
+      weight: formData.weight,
+      goal: formData.goal,
+      goalLabel: LABELS.goal[formData.goal] || formData.goal,
+      experience: formData.experience,
+      daysPerWeek: parseInt(formData.daysPerWeek),
+      sessionLengthMin: parseInt(formData.sessionLength),
+      equipment: formData.equipment
+    },
+    health: {
+      injuries: formData.injuries || null,
+      sleepQuality: formData.sleep || null,
+      stressLevel: formData.stress || null
+    },
+    profile: {
+      fitnessEvolution: formData.fitnessEvolution || null,
+      bestResults: formData.bestResults || null,
+      consistencyBlockers: formData.consistencyBlockers || null,
+      currentPhysicalState: formData.currentPhysicalState || null,
+      vision: formData.vision || null
+    }
+  };
+
+  const slug = (formData.name || 'client').replace(/[^a-zA-Z0-9]/g,'-').replace(/-+/g,'-');
+  const dateStr = new Date().toISOString().slice(0,10);
+  const filename = `TRAIN_${slug}_${dateStr}.json`;
+
+  const blob = new Blob([JSON.stringify(output, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
