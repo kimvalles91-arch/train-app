@@ -1,0 +1,1973 @@
+{
+  "muscle_group": "Chest",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Pectoralis Major (Clavicular Head)",
+        "function": "Shoulder flexion, horizontal adduction, internal rotation",
+        "description": "Upper chest fibers, originate from clavicle, emphasized by incline pressing"
+      },
+      {
+        "name": "Pectoralis Major (Sternal Head)",
+        "function": "Shoulder extension (from flexed position), horizontal adduction, internal rotation",
+        "description": "Middle and lower chest fibers, originate from sternum, emphasized by flat and decline pressing"
+      },
+      {
+        "name": "Pectoralis Minor",
+        "function": "Scapular depression, protraction, downward rotation",
+        "description": "Smaller muscle beneath pec major, assists in shoulder movement"
+      }
+    ],
+    "key_concepts": {
+      "pressing_angles": "Flat = overall chest, Incline (30-45°) = upper chest, Decline = lower chest",
+      "stretch_vs_press": "Pressing movements build mass, fly movements emphasize stretch and mind-muscle connection",
+      "full_range_critical": "Chest responds well to full stretch at bottom and full contraction at top"
+    }
+  },
+  "exercises": [
+    {
+      "exercise_id": "chest_001",
+      "exercise_name": "Barbell Bench Press",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (all portions)"],
+        "secondary": ["Anterior Deltoids", "Triceps"],
+        "stabilizers": ["Core", "Lats", "Rotator Cuff"]
+      },
+      "movement_pattern": "Horizontal Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Flat Bench", "Power Rack or Spotter"],
+        "optional": ["Weight Plates", "Safety Bars"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Lie on flat bench, eyes under or slightly behind bar, feet flat on ground, arch in lower back, bar racked above chest.",
+        "key_points": [
+          "Bar should be at wrist level when arms extended",
+          "Shoulder blades retracted and depressed",
+          "Feet firmly planted for leg drive"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on bench with bar held at arm's length above chest, shoulder blades retracted, slight arch in lower back, feet on ground.",
+        "body_alignment": {
+          "head": "Neutral on bench, eyes under bar",
+          "shoulders": "Retracted and depressed, 'pinned' to bench",
+          "spine": "Neutral with slight natural arch in lower back",
+          "hips": "On bench",
+          "feet": "Flat on ground, knees bent approximately 90 degrees",
+          "grip": "Slightly wider than shoulder-width, even on both sides"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower bar with control to lower chest, elbows at 45-degree angle to body",
+          "cues": [
+            "Tuck your elbows at 45 degrees, not flared to 90",
+            "Lower bar to lower chest/sternum area",
+            "Control the descent",
+            "Touch chest lightly, don't bounce",
+            "Keep shoulder blades pinned",
+            "Maintain wrist alignment over elbows"
+          ],
+          "end_position": "Bar touching lower chest, forearms vertical, elbows at 45 degrees, full pec stretch"
+        },
+        "concentric_phase": {
+          "description": "Press bar back up to starting position, driving through legs",
+          "cues": [
+            "Drive the bar up and slightly back toward your face",
+            "Press explosively",
+            "Use leg drive through the ground",
+            "Keep shoulder blades pinned",
+            "Lock out at the top"
+          ],
+          "end_position": "Arms fully extended, bar over chest/shoulders, elbows locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath and brace before lowering, hold during descent and initial press, exhale at top or during press",
+        "alternative": "Valsalva maneuver for heavy loads"
+      },
+      "tempo": {
+        "standard": "2-1-1-0 (2 sec down, 1 sec touch, 1 sec up, no pause)",
+        "strength_focus": "2-1-X-0 (2 sec down, 1 sec pause, explosive up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to bar touching chest",
+        "critical_point": "Bar touches chest, full arm extension at top",
+        "avoid": "Bouncing off chest or partial reps"
+      },
+      "form_cues": [
+        "Think about bending the bar apart as you press",
+        "Your shoulder blades should stay pinned to the bench throughout",
+        "Drive your feet through the ground for leg drive",
+        "The bar path is a slight diagonal - up and slightly back",
+        "Touch your chest, don't bounce off it"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flaring elbows out to 90 degrees",
+          "correction": "Tuck elbows to 45-degree angle from body",
+          "why_it_matters": "90-degree flare increases shoulder injury risk and reduces strength"
+        },
+        {
+          "mistake": "Bouncing bar off chest",
+          "correction": "Control descent, light touch, no bounce",
+          "why_it_matters": "Bouncing uses momentum and can injure sternum/ribs"
+        },
+        {
+          "mistake": "Lifting hips off bench",
+          "correction": "Keep hips down, arch comes from thoracic spine",
+          "why_it_matters": "Hip lift indicates excessive arch or lack of core control"
+        },
+        {
+          "mistake": "Bar drifting toward face or stomach",
+          "correction": "Bar should touch lower chest/sternum, path slightly diagonal",
+          "why_it_matters": "Improper bar path reduces effectiveness and increases injury risk"
+        },
+        {
+          "mistake": "Uneven bar path or uneven lockout",
+          "correction": "Ensure even grip, symmetrical pressing",
+          "why_it_matters": "Asymmetry can cause imbalances and injury"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Bench Press",
+            "description": "Use dumbbells instead of barbell",
+            "when_to_use": "Learning pressing pattern or working around shoulder issues"
+          },
+          {
+            "name": "Smith Machine Bench Press",
+            "description": "Use Smith machine for fixed bar path",
+            "when_to_use": "Building strength before free weight barbell"
+          },
+          {
+            "name": "Floor Press",
+            "description": "Press from ground with reduced range",
+            "when_to_use": "Learning lockout or shoulder issues"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Bench Press",
+            "description": "Pause 2-3 seconds on chest before pressing",
+            "when_to_use": "Building strength off chest, competition training"
+          },
+          {
+            "name": "Tempo Bench Press",
+            "description": "Very slow eccentric (4-5 seconds)",
+            "when_to_use": "Hypertrophy focus, building control"
+          },
+          {
+            "name": "Close-Grip Bench Press",
+            "description": "Grip inside shoulder-width",
+            "when_to_use": "Tricep emphasis, variation"
+          },
+          {
+            "name": "Wide-Grip Bench Press",
+            "description": "Grip wider than standard",
+            "when_to_use": "Chest emphasis, powerlifting variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall chest development", "Building pressing strength", "Chest mass", "Upper body power"],
+        "place_in_workout": "Early workout as primary movement",
+        "pairs_well_with": ["Rows", "Incline Press", "Tricep work"],
+        "rep_ranges": {
+          "strength": "1-5 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Always use spotter or safety bars for heavy loads",
+        "Never bench press alone without safety equipment",
+        "Progress weight gradually",
+        "Ensure proper shoulder positioning before pressing",
+        "Stop if experiencing shoulder or chest pain"
+      ],
+      "video_explanation_script": "The barbell bench press is the king of chest exercises. Lie on the bench with your eyes under the bar and your feet flat on the ground. Grip the bar slightly wider than shoulder-width. Unrack the bar and hold it over your chest with arms extended. Pull your shoulder blades together and down - this position is crucial. From here, lower the bar under control to your lower chest, keeping your elbows tucked at about 45 degrees from your body. Touch the bar to your chest lightly, then drive it back up explosively. The bar path should be slightly diagonal - up and slightly back toward your face. The bench press builds incredible chest strength and mass when performed correctly."
+    },
+    {
+      "exercise_id": "chest_002",
+      "exercise_name": "Incline Barbell Bench Press",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (Clavicular Head - Upper Chest)"],
+        "secondary": ["Anterior Deltoids", "Triceps"],
+        "stabilizers": ["Core", "Rotator Cuff"]
+      },
+      "movement_pattern": "Incline Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Incline Bench", "Power Rack or Spotter"],
+        "optional": ["Weight Plates"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Set bench to 30-45 degree incline, lie back on bench, feet flat on ground, bar racked above upper chest.",
+        "key_points": [
+          "Bench angle 30-45 degrees (30-45 is optimal for upper chest)",
+          "Shoulder blades retracted",
+          "Feet planted firmly"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on incline bench with bar at arm's length above upper chest, shoulder blades retracted, feet on ground.",
+        "body_alignment": {
+          "head": "Neutral on bench",
+          "shoulders": "Retracted and depressed",
+          "spine": "Neutral against bench",
+          "hips": "On bench",
+          "feet": "Flat on ground for stability",
+          "grip": "Slightly wider than shoulder-width"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower bar with control to upper chest/clavicle area",
+          "cues": [
+            "Lower to upper chest or clavicle",
+            "Elbows at 45-degree angle",
+            "Control the descent",
+            "Feel the stretch in upper chest",
+            "Keep shoulder blades pinned"
+          ],
+          "end_position": "Bar touching upper chest/clavicle, forearms vertical, upper chest stretched"
+        },
+        "concentric_phase": {
+          "description": "Press bar back up to starting position",
+          "cues": [
+            "Drive the bar straight up",
+            "Press explosively",
+            "Keep shoulder blades stable",
+            "Full lockout at top"
+          ],
+          "end_position": "Arms fully extended, bar over upper chest/shoulders"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath before lowering, hold during descent and press, exhale at top",
+        "alternative": "Exhale during press"
+      },
+      "tempo": {
+        "standard": "2-1-1-0 (2 sec down, 1 sec touch, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-1-X-0 (2 sec down, 1 sec pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to bar touching upper chest",
+        "critical_point": "Bar touches upper chest/clavicle, full extension at top",
+        "avoid": "Partial reps or bouncing"
+      },
+      "form_cues": [
+        "The bar touches higher on your chest than flat bench - upper chest/clavicle area",
+        "Think about pressing the bar straight up toward ceiling",
+        "Your shoulder blades stay retracted throughout",
+        "Don't let the bar drift forward - straight vertical path",
+        "Upper chest should be burning at the end of the set"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bench angle too steep (over 45 degrees)",
+          "correction": "Keep incline at 30-45 degrees",
+          "why_it_matters": "Too steep shifts emphasis to shoulders, not chest"
+        },
+        {
+          "mistake": "Flaring elbows excessively",
+          "correction": "Maintain 45-degree elbow angle",
+          "why_it_matters": "Excessive flare increases shoulder stress"
+        },
+        {
+          "mistake": "Bar drifting forward away from body",
+          "correction": "Press straight up, bar stays over chest",
+          "why_it_matters": "Forward drift reduces chest activation and control"
+        },
+        {
+          "mistake": "Not touching chest",
+          "correction": "Lower until bar touches upper chest/clavicle",
+          "why_it_matters": "Partial ROM limits upper chest development"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Incline press is typically 70-85% of flat bench weight",
+          "why_it_matters": "Excessive weight causes form breakdown"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Incline Dumbbell Press",
+            "description": "Use dumbbells on incline bench",
+            "when_to_use": "Learning incline pressing or working around limitations"
+          },
+          {
+            "name": "Smith Machine Incline Press",
+            "description": "Use Smith machine for stability",
+            "when_to_use": "Building strength before free weight"
+          },
+          {
+            "name": "Lower Incline (15-30 degrees)",
+            "description": "Use shallower incline",
+            "when_to_use": "Transitioning from flat to incline"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Incline Press",
+            "description": "Pause 2-3 seconds on chest",
+            "when_to_use": "Building strength in stretched position"
+          },
+          {
+            "name": "Tempo Incline Press",
+            "description": "Slow 4-5 second eccentric",
+            "when_to_use": "Hypertrophy emphasis"
+          },
+          {
+            "name": "Close-Grip Incline Press",
+            "description": "Narrower grip for tricep emphasis",
+            "when_to_use": "Variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Upper chest development", "Balanced chest aesthetics", "Shoulder-friendly pressing", "Complete chest development"],
+        "place_in_workout": "Early workout as primary or secondary movement",
+        "pairs_well_with": ["Flat Bench", "Flyes", "Dips"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Always use spotter or safety bars",
+        "Typically use less weight than flat bench",
+        "Ensure bench is secure at chosen angle",
+        "Stop if experiencing shoulder discomfort",
+        "Critical for complete chest development"
+      ],
+      "video_explanation_script": "The incline barbell bench press is essential for developing your upper chest. Set the bench to a 30 to 45-degree incline. Lie back on the bench with your feet flat on the ground and pull your shoulder blades together. Unrack the bar and hold it over your upper chest. From here, lower the bar to your upper chest or clavicle area - higher than where you'd touch on flat bench. Keep your elbows tucked at about 45 degrees. Then press the bar straight up until your arms are fully extended. The incline angle shifts emphasis to your upper pecs, which is crucial for a full, well-developed chest. Most people can handle about 70-85% of their flat bench weight on incline."
+    },
+    {
+      "exercise_id": "chest_003",
+      "exercise_name": "Dumbbell Bench Press",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major"],
+        "secondary": ["Anterior Deltoids", "Triceps"],
+        "stabilizers": ["Core", "Rotator Cuff", "Scapular Stabilizers"]
+      },
+      "movement_pattern": "Horizontal Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbells", "Flat Bench"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit on edge of bench with dumbbells on thighs, lie back while bringing dumbbells to chest level, position at sides of chest.",
+        "key_points": [
+          "Dumbbells start at chest level, arms at 90 degrees",
+          "Shoulder blades retracted",
+          "Feet flat on ground"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on bench with dumbbells held at arm's length above chest, palms forward, shoulder blades retracted.",
+        "body_alignment": {
+          "head": "Neutral on bench",
+          "shoulders": "Retracted and depressed",
+          "spine": "Neutral with slight arch",
+          "hips": "On bench",
+          "feet": "Flat on ground",
+          "arms": "Extended above chest, dumbbells in line"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower dumbbells with control to sides of chest, elbows at 45 degrees",
+          "cues": [
+            "Lower dumbbells to sides of chest",
+            "Elbows stay at 45-degree angle",
+            "Feel the stretch in your chest",
+            "Go deeper than barbell allows",
+            "Control the descent",
+            "Keep wrists stable"
+          ],
+          "end_position": "Dumbbells at or below chest level, deep pec stretch, forearms vertical"
+        },
+        "concentric_phase": {
+          "description": "Press dumbbells back up to starting position",
+          "cues": [
+            "Press dumbbells up and together",
+            "Slight arc motion bringing them together at top",
+            "Squeeze your chest at the top",
+            "Don't bang dumbbells together",
+            "Full arm extension"
+          ],
+          "end_position": "Arms fully extended, dumbbells together or nearly touching above chest"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during press",
+        "alternative": "Hold breath during heavy presses"
+      },
+      "tempo": {
+        "standard": "2-1-1-1 (2 sec down, 1 sec stretch, 1 sec up, 1 sec squeeze)",
+        "hypertrophy_focus": "3-2-2-1 (3 sec down, 2 sec stretch, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to dumbbells at or below chest level",
+        "critical_point": "Dumbbells go deeper than barbell, maximizing stretch",
+        "avoid": "Partial reps or excessive flare"
+      },
+      "form_cues": [
+        "Dumbbells allow greater range of motion than barbell - use it!",
+        "Think about trying to touch your elbows together under the bench",
+        "At the top, squeeze your chest and bring dumbbells together slightly",
+        "Your shoulder blades should stay pinned throughout",
+        "The independent movement challenges stability more than barbell"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Flaring elbows to 90 degrees",
+          "correction": "Keep elbows at 45-degree angle",
+          "why_it_matters": "Excessive flare increases shoulder injury risk"
+        },
+        {
+          "mistake": "Banging dumbbells together at top",
+          "correction": "Bring them close but controlled, focus on chest squeeze",
+          "why_it_matters": "Banging can damage dumbbells and reduces control"
+        },
+        {
+          "mistake": "Not using full range of motion",
+          "correction": "Lower dumbbells until chest is fully stretched",
+          "why_it_matters": "Partial ROM limits chest development"
+        },
+        {
+          "mistake": "Bouncing dumbbells off chest",
+          "correction": "Control descent, pause briefly at stretch",
+          "why_it_matters": "Bouncing uses momentum and can cause injury"
+        },
+        {
+          "mistake": "Uneven pressing (one side faster)",
+          "correction": "Press both dumbbells at same pace",
+          "why_it_matters": "Asymmetry can develop imbalances"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Dumbbell Press",
+            "description": "Use lighter dumbbells to perfect form",
+            "when_to_use": "Learning movement or building stability"
+          },
+          {
+            "name": "Alternating Dumbbell Press",
+            "description": "Press one arm at a time",
+            "when_to_use": "Building unilateral strength and stability"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Dumbbell Press",
+            "description": "Progressive overload with heavier dumbbells",
+            "when_to_use": "Building chest mass"
+          },
+          {
+            "name": "Pause Dumbbell Press",
+            "description": "Pause 2-3 seconds at bottom stretch",
+            "when_to_use": "Maximizing stretch and building strength"
+          },
+          {
+            "name": "Single-Arm Dumbbell Press",
+            "description": "Press with one arm while other is extended",
+            "when_to_use": "Advanced core stability variation"
+          },
+          {
+            "name": "Crush Press",
+            "description": "Press dumbbells together throughout movement",
+            "when_to_use": "Inner chest emphasis"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall chest development", "Addressing imbalances", "Greater range of motion", "Building stability"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Barbell Bench", "Flyes", "Incline Work"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Easier to bail safely than barbell (drop dumbbells)",
+        "Getting heavy dumbbells into position requires technique",
+        "Can reveal strength imbalances between sides",
+        "Generally safer for shoulders than barbell",
+        "Excellent for chest development"
+      ],
+      "video_explanation_script": "The dumbbell bench press is fantastic for chest development. To get into position, sit on the edge of the bench with the dumbbells on your thighs. Lie back while bringing the dumbbells up to chest level. Start with your arms extended and dumbbells above your chest. From here, lower the dumbbells down to the sides of your chest, going deeper than you could with a barbell. Keep your elbows at about 45 degrees. Feel that deep stretch in your chest. Then press the dumbbells back up, bringing them together slightly at the top and squeezing your chest. Dumbbells allow for greater range of motion and require more stabilization than barbells, making them excellent for building chest mass and addressing imbalances."
+    },
+    {
+      "exercise_id": "chest_004",
+      "exercise_name": "Incline Dumbbell Press",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (Clavicular Head - Upper Chest)"],
+        "secondary": ["Anterior Deltoids", "Triceps"],
+        "stabilizers": ["Core", "Rotator Cuff", "Scapular Stabilizers"]
+      },
+      "movement_pattern": "Incline Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbells", "Incline Bench"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Set bench to 30-45 degree incline, sit with dumbbells on thighs, lie back bringing dumbbells to shoulder level.",
+        "key_points": [
+          "Bench angle 30-45 degrees optimal",
+          "Shoulder blades retracted",
+          "Dumbbells at shoulder level to start"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on incline bench with dumbbells at arm's length above upper chest, palms forward, shoulder blades retracted.",
+        "body_alignment": {
+          "head": "Neutral on bench",
+          "shoulders": "Retracted and depressed",
+          "spine": "Neutral against bench",
+          "hips": "On bench",
+          "feet": "Flat on ground",
+          "arms": "Extended above upper chest"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower dumbbells with control to sides of upper chest/shoulders",
+          "cues": [
+            "Lower to sides of upper chest",
+            "Elbows at 45 degrees",
+            "Deep stretch in upper chest",
+            "Control the descent",
+            "Feel upper pecs working"
+          ],
+          "end_position": "Dumbbells at upper chest/shoulder level, deep upper pec stretch"
+        },
+        "concentric_phase": {
+          "description": "Press dumbbells back up to starting position",
+          "cues": [
+            "Press dumbbells up and slightly together",
+            "Drive through upper chest",
+            "Squeeze at the top",
+            "Full arm extension",
+            "Controlled movement"
+          ],
+          "end_position": "Arms fully extended, dumbbells together above upper chest"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during press",
+        "alternative": "Hold breath for heavy reps"
+      },
+      "tempo": {
+        "standard": "2-1-1-1 (2 sec down, 1 sec stretch, 1 sec up, 1 sec squeeze)",
+        "hypertrophy_focus": "3-2-2-1 (3 sec down, 2 sec stretch, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full extension to dumbbells at shoulder/upper chest level",
+        "critical_point": "Deep stretch in upper chest, full contraction at top",
+        "avoid": "Partial range or excessive elbow flare"
+      },
+      "form_cues": [
+        "Think about pressing up toward the ceiling, not forward",
+        "Your upper chest should be doing most of the work",
+        "Dumbbells allow deeper stretch than barbell - use it",
+        "At the top, squeeze your upper chest and bring dumbbells together",
+        "Keep your shoulder blades stable throughout"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bench too steep (over 45 degrees)",
+          "correction": "Keep incline at 30-45 degrees",
+          "why_it_matters": "Too steep makes it shoulder press, not chest"
+        },
+        {
+          "mistake": "Pressing forward instead of up",
+          "correction": "Press straight up toward ceiling",
+          "why_it_matters": "Forward press reduces chest activation"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Lower until upper chest is fully stretched",
+          "why_it_matters": "Partial ROM limits upper chest development"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Incline dumbbell press requires less weight than flat",
+          "why_it_matters": "Heavy weight causes form breakdown"
+        },
+        {
+          "mistake": "Losing shoulder blade position",
+          "correction": "Keep scapulae retracted throughout",
+          "why_it_matters": "Protraction reduces chest activation and shoulder stability"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lower Incline Dumbbell Press",
+            "description": "Use 15-30 degree incline",
+            "when_to_use": "Building up to steeper angles"
+          },
+          {
+            "name": "Alternating Incline Dumbbell Press",
+            "description": "Press one arm at a time",
+            "when_to_use": "Building stability and control"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Incline Dumbbell Press",
+            "description": "Progressive overload",
+            "when_to_use": "Building upper chest mass"
+          },
+          {
+            "name": "Pause Incline Dumbbell Press",
+            "description": "Pause 2-3 seconds at stretch",
+            "when_to_use": "Maximizing upper chest stretch"
+          },
+          {
+            "name": "Single-Arm Incline Dumbbell Press",
+            "description": "Press one arm while other extended",
+            "when_to_use": "Advanced stability variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Upper chest development", "Shoulder-friendly pressing", "Addressing imbalances", "Complete chest development"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Flat Press", "Flyes", "Cable Work"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Easier to bail than barbell incline",
+        "Getting heavy dumbbells into position challenging",
+        "Generally shoulder-friendly",
+        "Reveals imbalances",
+        "Essential for upper chest development"
+      ],
+      "video_explanation_script": "The incline dumbbell press is one of the best exercises for building your upper chest. Set the bench to a 30 to 45-degree incline. Get the dumbbells into position by sitting with them on your thighs, then lying back as you bring them to shoulder level. Start with the dumbbells extended above your upper chest. Lower them down to the sides of your shoulders and upper chest, keeping your elbows at about 45 degrees. Go deep to get a full stretch in your upper pecs. Then press them back up, bringing them slightly together at the top and squeezing your upper chest. The incline dumbbell press gives you greater range of motion than the barbell version and is excellent for building that full, well-developed upper chest."
+    },
+    {
+      "exercise_id": "chest_005",
+      "exercise_name": "Dumbbell Fly",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major"],
+        "secondary": ["Anterior Deltoids"],
+        "stabilizers": ["Biceps", "Core"]
+      },
+      "movement_pattern": "Horizontal Adduction (Fly)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells", "Flat Bench"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Lie on flat bench with dumbbells held above chest, palms facing each other, slight bend in elbows.",
+        "key_points": [
+          "Start with dumbbells together above chest",
+          "Maintain slight elbow bend throughout (10-30 degrees)",
+          "Shoulder blades retracted"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on bench with dumbbells together above chest, palms facing in, arms extended with slight elbow bend, shoulder blades retracted.",
+        "body_alignment": {
+          "head": "Neutral on bench",
+          "shoulders": "Retracted and depressed",
+          "spine": "Neutral with slight arch",
+          "hips": "On bench",
+          "feet": "Flat on ground",
+          "arms": "Extended above chest, slight elbow bend, palms facing"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower dumbbells out to sides in arc motion, maintaining elbow bend",
+          "cues": [
+            "Open your arms out to sides like you're hugging a barrel",
+            "Keep the same elbow bend throughout",
+            "Feel the stretch across your chest",
+            "Control the descent",
+            "Don't go lower than shoulder level"
+          ],
+          "end_position": "Arms out to sides, dumbbells at or slightly above shoulder level, deep pec stretch, elbow bend maintained"
+        },
+        "concentric_phase": {
+          "description": "Bring dumbbells back together above chest in arc motion",
+          "cues": [
+            "Squeeze your chest to bring dumbbells together",
+            "Arc motion like hugging something",
+            "Same elbow bend maintained",
+            "Squeeze your chest at the top",
+            "Think about bringing your elbows together"
+          ],
+          "end_position": "Dumbbells together above chest, chest fully contracted"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during opening (eccentric), exhale during closing (concentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec open, 1 sec stretch, 2 sec close, 1 sec squeeze)",
+        "hypertrophy_focus": "3-2-2-2 (3 sec open, 2 sec stretch, 2 sec close, 2 sec squeeze)",
+        "stretch_focus": "3-3-2-1 (3 sec open, 3 sec stretch hold, 2 sec close, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From dumbbells together above chest to arms out at shoulder level",
+        "critical_point": "Deep chest stretch at bottom, full contraction at top",
+        "avoid": "Going below shoulder level or bending elbows more"
+      },
+      "form_cues": [
+        "Think about hugging a large barrel or tree",
+        "Your elbow angle should never change - it's locked throughout",
+        "This is chest adduction, not pressing",
+        "Feel the stretch across your entire chest at the bottom",
+        "Squeeze your chest like you're flexing your pecs at the top"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bending elbows more during the movement (turning it into a press)",
+          "correction": "Maintain constant elbow angle throughout",
+          "why_it_matters": "Changing elbow angle turns fly into press, removing chest stretch"
+        },
+        {
+          "mistake": "Lowering too far below shoulder level",
+          "correction": "Stop when dumbbells reach shoulder level or slight stretch",
+          "why_it_matters": "Going too low can injure shoulder and pec"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than pressing movements",
+          "why_it_matters": "Heavy weight forces elbow bend and poor form"
+        },
+        {
+          "mistake": "Bouncing or using momentum",
+          "correction": "Smooth controlled arc motion throughout",
+          "why_it_matters": "Momentum removes tension from chest"
+        },
+        {
+          "mistake": "Not squeezing at the top",
+          "correction": "Focus on chest contraction when dumbbells are together",
+          "why_it_matters": "Top contraction is crucial for chest development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Dumbbell Fly",
+            "description": "Use very light dumbbells to learn movement",
+            "when_to_use": "Learning proper fly mechanics"
+          },
+          {
+            "name": "Cable Fly",
+            "description": "Use cables for constant tension",
+            "when_to_use": "Alternative with different resistance curve"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Dumbbell Fly",
+            "description": "Pause 3-5 seconds at stretch position",
+            "when_to_use": "Maximizing stretch stimulus"
+          },
+          {
+            "name": "Incline Dumbbell Fly",
+            "description": "Perform on incline bench",
+            "when_to_use": "Upper chest emphasis"
+          },
+          {
+            "name": "Single-Arm Dumbbell Fly",
+            "description": "Perform one arm at a time",
+            "when_to_use": "Addressing imbalances, increased stretch"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Chest stretch and isolation", "Mind-muscle connection", "Chest definition", "Finishing movement"],
+        "place_in_workout": "After pressing movements as isolation work",
+        "pairs_well_with": ["Bench Press", "Incline Press", "Cable Flyes"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "isolation": "12-20 reps",
+          "stretch_focus": "8-12 reps with pause"
+        }
+      },
+      "safety_considerations": [
+        "Use lighter weight than pressing movements",
+        "Never go below shoulder level to protect shoulder joint",
+        "Maintain constant elbow angle",
+        "Stop if experiencing shoulder or chest pain",
+        "Excellent for chest development when done correctly"
+      },
+      "video_explanation_script": "The dumbbell fly is a classic chest isolation exercise. Lie on a flat bench with dumbbells held together above your chest, palms facing each other. Maintain a slight bend in your elbows - this angle stays the same throughout the entire movement. From here, open your arms out to the sides in a wide arc, like you're hugging a large barrel. Lower until the dumbbells are about level with your shoulders and you feel a deep stretch across your chest. Then squeeze your chest to bring the dumbbells back together above your chest in that same arc motion. Think about your elbows coming together, not your hands. The dumbbell fly is all about the chest stretch and squeeze - use lighter weight than pressing and focus on feeling your chest work."
+    },
+    {
+      "exercise_id": "chest_006",
+      "exercise_name": "Push-Up",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major"],
+        "secondary": ["Anterior Deltoids", "Triceps"],
+        "stabilizers": ["Core", "Serratus Anterior", "Entire Body"]
+      },
+      "movement_pattern": "Horizontal Press",
+      "movement_type": "Bodyweight Compound",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Push-Up Handles", "Weight Vest", "Resistance Bands"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Start in high plank position with hands slightly wider than shoulder-width, body in straight line from head to heels.",
+        "key_points": [
+          "Hands slightly wider than shoulders, fingers forward",
+          "Body completely rigid in plank position",
+          "Feet together or slightly apart"
+        ]
+      },
+      "starting_position": {
+        "description": "High plank with arms extended, hands flat on ground, body in straight line.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Over or slightly ahead of hands, scapulae engaged",
+          "spine": "Neutral, body in straight line",
+          "hips": "Aligned with body, not sagging or piking",
+          "knees": "Straight",
+          "ankles": "Dorsiflexed, toes on ground",
+          "hands": "Slightly wider than shoulders"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower chest toward ground by bending elbows, maintaining rigid body",
+          "cues": [
+            "Lower your chest to the ground",
+            "Elbows at 45-degree angle",
+            "Keep your body completely straight",
+            "Control the descent",
+            "Go as low as you can"
+          ],
+          "end_position": "Chest nearly or lightly touching ground, elbows at 45 degrees, body still rigid"
+        },
+        "concentric_phase": {
+          "description": "Push through hands to extend arms back to starting position",
+          "cues": [
+            "Push the ground away",
+            "Drive through your entire hand",
+            "Maintain rigid body",
+            "Full arm extension at top",
+            "Don't let hips sag"
+          ],
+          "end_position": "Return to high plank with arms fully extended"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during push",
+        "alternative": "Exhale forcefully during push"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "explosive": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to chest touching or nearly touching ground",
+        "critical_point": "Full depth and full extension, rigid body throughout",
+        "avoid": "Partial reps, sagging hips, or piking up"
+      },
+      "form_cues": [
+        "Your body should be completely rigid like a plank of wood",
+        "Imagine someone could lay a broomstick from your head to your heels",
+        "Squeeze your glutes to keep your body straight",
+        "Your elbows should track at 45 degrees, not flared to 90",
+        "Think about pushing yourself away from the ground"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips sagging toward ground",
+          "correction": "Engage core and glutes, maintain straight body line",
+          "why_it_matters": "Hip sag reduces chest activation and strains lower back"
+        },
+        {
+          "mistake": "Piking hips up (making an inverted V)",
+          "correction": "Keep body in straight line, don't make it easier",
+          "why_it_matters": "Piking reduces chest work and difficulty"
+        },
+        {
+          "mistake": "Flaring elbows to 90 degrees",
+          "correction": "Keep elbows at 45-degree angle",
+          "why_it_matters": "90-degree flare increases shoulder stress"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Lower chest all the way to ground",
+          "why_it_matters": "Partial reps limit chest development"
+        },
+        {
+          "mistake": "Head dropping or craning",
+          "correction": "Keep neck neutral in line with spine",
+          "why_it_matters": "Neck movement indicates poor core stability"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Incline Push-Up",
+            "description": "Hands on elevated surface (bench, box, wall)",
+            "when_to_use": "Building toward full push-ups"
+          },
+          {
+            "name": "Knee Push-Up",
+            "description": "Perform from knees instead of toes",
+            "when_to_use": "Building base strength"
+          },
+          {
+            "name": "Negative Push-Up",
+            "description": "Lower slowly, use knees to push back up",
+            "when_to_use": "Building eccentric strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Decline Push-Up",
+            "description": "Feet elevated on bench or box",
+            "when_to_use": "Increasing difficulty and upper chest emphasis"
+          },
+          {
+            "name": "Weighted Push-Up",
+            "description": "Wear weight vest or plate on back",
+            "when_to_use": "When bodyweight becomes too easy"
+          },
+          {
+            "name": "Archer Push-Up",
+            "description": "Shift weight to one side, opposite arm extends",
+            "when_to_use": "Advanced unilateral variation"
+          },
+          {
+            "name": "Plyometric Push-Up",
+            "description": "Explosive push with hands leaving ground",
+            "when_to_use": "Power development"
+          },
+          {
+            "name": "One-Arm Push-Up",
+            "description": "Perform on single arm",
+            "when_to_use": "Elite level bodyweight strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Bodyweight chest training", "Building basic pressing strength", "At-home workouts", "Functional strength"],
+        "place_in_workout": "Any point depending on difficulty level used",
+        "pairs_well_with": ["Pull-ups", "Dips", "Core work"],
+        "rep_ranges": {
+          "strength": "5-15 reps",
+          "hypertrophy": "15-30 reps",
+          "endurance": "30-50+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Excellent for all fitness levels with proper progressions",
+        "Can be done anywhere",
+        "Great measure of relative strength",
+        "Foundation movement for upper body training"
+      ],
+      "video_explanation_script": "The push-up is a fundamental exercise for chest development. Start in a high plank position with your hands slightly wider than shoulder-width and your body in a completely straight line from head to heels. From here, lower your chest toward the ground by bending your elbows, keeping them at about 45 degrees from your body. Your entire body should move as one rigid unit - don't let your hips sag or pike up. Lower until your chest touches or nearly touches the ground, then push yourself back up to full arm extension. Squeeze your glutes and core throughout to maintain that straight body position. The push-up is one of the best bodyweight chest exercises and can be progressed indefinitely with variations."
+    },
+    {
+      "exercise_id": "chest_007",
+      "exercise_name": "Cable Fly (Mid Cable)",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major"],
+        "secondary": ["Anterior Deltoids"],
+        "stabilizers": ["Core", "Rotator Cuff"]
+      },
+      "movement_pattern": "Horizontal Adduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Dual Pulleys", "D-Handles"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulleys at chest height, stand centered between pulleys, grasp handles with arms extended out to sides, step forward into staggered stance.",
+        "key_points": [
+          "Cables set at chest/shoulder height",
+          "Staggered stance for stability",
+          "Slight forward lean from hips"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing between cables in staggered stance, slight forward lean, arms extended out to sides holding handles, slight elbow bend, chest open.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Retracted, chest open",
+          "spine": "Neutral with slight forward lean at hips",
+          "hips": "Hinged forward 10-20 degrees",
+          "stance": "Staggered, one foot forward for stability",
+          "arms": "Extended out to sides, slight elbow bend, palms forward"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Bring handles together in front of chest in arc motion, maintaining elbow angle",
+          "cues": [
+            "Squeeze your chest to bring handles together",
+            "Arc motion like hugging someone",
+            "Maintain elbow angle throughout",
+            "Squeeze your chest hard when hands meet",
+            "Slight forward lean maintained"
+          ],
+          "end_position": "Handles together in front of chest, arms crossed slightly, chest maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control handles as they return to starting position in arc",
+          "cues": [
+            "Control the opening",
+            "Feel the stretch across your chest",
+            "Same elbow bend maintained",
+            "Arms return to sides",
+            "Constant tension"
+          ],
+          "end_position": "Arms out to sides, chest stretched, handles at shoulder level"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during bringing together (concentric), inhale during opening (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec close, 1 sec squeeze, 2 sec open, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec close, 2 sec squeeze, 3 sec open, 1 sec stretch)",
+        "constant_tension": "1-2-2-0 (1 sec close, 2 sec squeeze, 2 sec open, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms out at sides to hands together in front of chest",
+        "critical_point": "Full stretch with arms back, full contraction when together",
+        "avoid": "Going too far back past shoulder level"
+      },
+      "form_cues": [
+        "Cables provide constant tension unlike dumbbells - advantage throughout",
+        "Think about bringing your elbows together, not your hands",
+        "The slight forward lean helps isolate the chest",
+        "Squeeze your chest like you're flexing your pecs when hands meet",
+        "This is all chest - no pressing motion"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Changing elbow angle (turning into press)",
+          "correction": "Maintain constant slight elbow bend throughout",
+          "why_it_matters": "Changing angle removes fly stimulus"
+        },
+        {
+          "mistake": "Going too far back past shoulder level",
+          "correction": "Stop when cables are at shoulder level",
+          "why_it_matters": "Excessive stretch can injure shoulder"
+        },
+        {
+          "mistake": "Standing upright instead of slight lean",
+          "correction": "Maintain 10-20 degree forward lean at hips",
+          "why_it_matters": "Upright position reduces chest isolation"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Smooth controlled arc motion",
+          "why_it_matters": "Momentum removes constant tension benefit"
+        },
+        {
+          "mistake": "Not squeezing at contraction",
+          "correction": "Focus on peak chest contraction when handles meet",
+          "why_it_matters": "Contraction is where cables shine"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Cable Fly",
+            "description": "Use very light weight to learn movement",
+            "when_to_use": "Learning fly pattern with cables"
+          },
+          {
+            "name": "Single-Arm Cable Fly",
+            "description": "Perform one arm at a time",
+            "when_to_use": "Learning pattern or addressing imbalances"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "High-to-Low Cable Fly",
+            "description": "Set cables high, fly motion downward",
+            "when_to_use": "Lower chest emphasis"
+          },
+          {
+            "name": "Low-to-High Cable Fly",
+            "description": "Set cables low, fly motion upward",
+            "when_to_use": "Upper chest emphasis"
+          },
+          {
+            "name": "Paused Cable Fly",
+            "description": "Pause 3-5 seconds at peak contraction",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Isometric Hold Cable Fly",
+            "description": "Hold at various points for time",
+            "when_to_use": "Building isometric strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Chest isolation with constant tension", "Peak contraction work", "Finishing exercise", "Mind-muscle connection"],
+        "place_in_workout": "After pressing movements as isolation",
+        "pairs_well_with": ["Bench Press", "Push-Ups", "Incline Press"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "isolation": "12-20 reps",
+          "finisher": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Constant tension is advantage over dumbbells",
+        "Don't go too far back past shoulders",
+        "Use lighter weight than dumbbell flies",
+        "Excellent for chest development"
+      ],
+      "video_explanation_script": "The cable fly is fantastic for chest isolation because cables provide constant tension throughout the movement. Set the pulleys at about chest height and stand in the middle with a staggered stance. Lean forward slightly from your hips. Grab the handles with your arms extended out to your sides and a slight bend in your elbows. This elbow angle stays the same throughout. From here, squeeze your chest to bring the handles together in front of you in a big arc motion, like you're hugging someone. Really squeeze your chest when the handles meet - even cross your hands slightly. Then control the handles as they open back out to the sides. The constant tension from the cables makes this excellent for that peak contraction and for really feeling your chest work."
+    },
+    {
+      "exercise_id": "chest_008",
+      "exercise_name": "Chest Dip",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (Lower Emphasis)", "Triceps"],
+        "secondary": ["Anterior Deltoids"],
+        "stabilizers": ["Core", "Scapular Stabilizers"]
+      },
+      "movement_pattern": "Vertical Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Parallel Bars or Dip Station"],
+        "optional": ["Weight Belt", "Resistance Bands for Assistance"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Grasp parallel bars, press up to support position with arms extended, lean forward to emphasize chest.",
+        "key_points": [
+          "Bars should be shoulder-width or slightly wider",
+          "Forward lean of 10-30 degrees emphasizes chest",
+          "Feet can be behind you, knees bent"
+        ]
+      },
+      "starting_position": {
+        "description": "Supporting body weight with arms extended on parallel bars, torso leaned forward, legs bent behind.",
+        "body_alignment": {
+          "head": "Neutral, looking slightly down",
+          "shoulders": "Slightly forward and depressed",
+          "torso": "Leaned forward 10-30 degrees (more = more chest)",
+          "hips": "Flexed, knees bent",
+          "legs": "Behind body, feet crossed or together",
+          "arms": "Fully extended"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower body by bending elbows until upper arms are parallel to ground or stretch is felt in chest",
+          "cues": [
+            "Lower yourself under control",
+            "Maintain forward lean",
+            "Go until arms parallel to ground",
+            "Feel the stretch in lower chest",
+            "Keep shoulder blades stable"
+          ],
+          "end_position": "Upper arms parallel to ground or slightly below, chest stretched, forward lean maintained"
+        },
+        "concentric_phase": {
+          "description": "Push through hands to extend arms back to starting position",
+          "cues": [
+            "Push yourself back up",
+            "Drive through your palms",
+            "Maintain forward lean",
+            "Squeeze your chest at top",
+            "Full arm extension"
+          ],
+          "end_position": "Arms fully extended, still leaning forward"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during press up",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to upper arms parallel to ground",
+        "critical_point": "Deep stretch in chest, full extension at top",
+        "avoid": "Going too deep (excessive shoulder stretch) or partial reps"
+      },
+      "form_cues": [
+        "The forward lean is what makes this a chest exercise - stay leaned forward",
+        "More upright = more triceps, more forward = more chest",
+        "Think about pushing yourself away from the bars",
+        "Control the descent - don't drop",
+        "Your chest should be doing most of the work"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Staying too upright",
+          "correction": "Lean forward 10-30 degrees throughout movement",
+          "why_it_matters": "Upright position makes it tricep-dominant, not chest"
+        },
+        {
+          "mistake": "Going too deep",
+          "correction": "Stop when upper arms are parallel to ground",
+          "why_it_matters": "Excessive depth can injure shoulders"
+        },
+        {
+          "mistake": "Shrugging shoulders up",
+          "correction": "Keep shoulders depressed and stable",
+          "why_it_matters": "Shrugging reduces chest activation and stresses neck"
+        },
+        {
+          "mistake": "Using momentum or kipping",
+          "correction": "Controlled descent and press",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Lower until arms are parallel, press to full extension",
+          "why_it_matters": "Partial reps limit chest development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Chest Dip",
+            "description": "Loop band from bars, place knees or feet in band",
+            "when_to_use": "Building toward unassisted dips"
+          },
+          {
+            "name": "Machine-Assisted Dip",
+            "description": "Use assisted dip machine",
+            "when_to_use": "Building strength progressively"
+          },
+          {
+            "name": "Bench Dip",
+            "description": "Hands on bench behind you, feet on ground",
+            "when_to_use": "Building base strength (more tricep-focused)"
+          },
+          {
+            "name": "Negative Chest Dip",
+            "description": "Jump to top, lower slowly (eccentric only)",
+            "when_to_use": "Building toward full dips"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Chest Dip",
+            "description": "Add weight via belt, vest, or dumbbell between feet",
+            "when_to_use": "When bodyweight becomes manageable"
+          },
+          {
+            "name": "Pause Chest Dip",
+            "description": "Pause 2-3 seconds at bottom",
+            "when_to_use": "Building bottom position strength"
+          },
+          {
+            "name": "Rings Chest Dip",
+            "description": "Perform on gymnastics rings",
+            "when_to_use": "Advanced instability variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lower chest development", "Overall chest mass", "Bodyweight chest strength", "Compound pushing strength"],
+        "place_in_workout": "Mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Bench Press", "Incline Work", "Tricep Exercises"],
+        "rep_ranges": {
+          "strength": "5-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Can stress shoulders if done with poor form",
+        "Don't go deeper than arms parallel to ground",
+        "Build up volume gradually",
+        "Use assistance if cannot perform clean reps",
+        "Excellent for lower chest when done correctly"
+      },
+      "video_explanation_script": "The chest dip is one of the best exercises for building your lower chest. The key to making dips a chest exercise instead of a tricep exercise is the forward lean. Grab the parallel bars and press yourself up to the starting position. From here, lean your torso forward about 10 to 30 degrees - the more you lean, the more chest you'll use. Lower yourself down by bending your elbows until your upper arms are about parallel to the ground. Feel the stretch in your lower chest. Then push yourself back up, maintaining that forward lean. Squeeze your chest at the top. If you can't do bodyweight dips yet, use a band or machine for assistance. Once you master bodyweight dips, add weight with a belt or vest."
+    },
+    {
+      "exercise_id": "chest_009",
+      "exercise_name": "Decline Barbell Bench Press",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (Sternal Head - Lower Chest)"],
+        "secondary": ["Triceps", "Anterior Deltoids"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Decline Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Decline Bench", "Power Rack or Spotter"],
+        "optional": ["Weight Plates"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Set bench to 15-30 degree decline, secure feet/ankles, lie back on bench with eyes under bar.",
+        "key_points": [
+          "Bench decline 15-30 degrees",
+          "Feet/ankles secured in pads",
+          "Shoulder blades retracted"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on decline bench with bar at arm's length above lower chest, feet secured, shoulder blades retracted.",
+        "body_alignment": {
+          "head": "Lower than hips on decline",
+          "shoulders": "Retracted and depressed",
+          "spine": "Neutral against bench",
+          "hips": "On bench, higher than head",
+          "feet": "Secured in ankle pads",
+          "grip": "Slightly wider than shoulder-width"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower bar with control to lower chest/sternum area",
+          "cues": [
+            "Lower to lower chest",
+            "Elbows at 45 degrees",
+            "Control the descent",
+            "Touch lower chest/sternum",
+            "Feel lower chest working"
+          ],
+          "end_position": "Bar touching lower chest/sternum, elbows behind torso, lower chest stretched"
+        },
+        "concentric_phase": {
+          "description": "Press bar back up to starting position",
+          "cues": [
+            "Drive bar up",
+            "Press explosively",
+            "Keep shoulder blades pinned",
+            "Full lockout at top"
+          ],
+          "end_position": "Arms fully extended, bar over lower chest"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath before lowering, hold during descent and press, exhale at top",
+        "alternative": "Valsalva for heavy loads"
+      },
+      "tempo": {
+        "standard": "2-1-1-0 (2 sec down, 1 sec touch, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-1-X-0 (2 sec down, 1 sec pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to bar touching lower chest",
+        "critical_point": "Bar touches lower chest/sternum, full extension at top",
+        "avoid": "Partial reps or bouncing"
+      },
+      "form_cues": [
+        "The decline angle targets your lower chest specifically",
+        "Bar touches lower on your chest than flat bench",
+        "Many people are stronger on decline than flat bench",
+        "Keep your shoulder blades pinned throughout",
+        "Press the bar up in a slight arc back toward the rack"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Excessive decline angle (over 30 degrees)",
+          "correction": "Keep decline at 15-30 degrees",
+          "why_it_matters": "Too steep is uncomfortable and doesn't add benefit"
+        },
+        {
+          "mistake": "Bar drifting toward stomach",
+          "correction": "Bar should touch lower chest/sternum",
+          "why_it_matters": "Too low reduces chest activation"
+        },
+        {
+          "mistake": "Bouncing bar off chest",
+          "correction": "Control descent, light touch, no bounce",
+          "why_it_matters": "Bouncing uses momentum and can cause injury"
+        },
+        {
+          "mistake": "Head coming off bench",
+          "correction": "Keep head on bench throughout",
+          "why_it_matters": "Head lift indicates instability"
+        },
+        {
+          "mistake": "Not using spotter",
+          "correction": "Always use spotter on decline - harder to bail safely",
+          "why_it_matters": "Getting out from under bar on decline is difficult"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Decline Dumbbell Press",
+            "description": "Use dumbbells instead of barbell",
+            "when_to_use": "Learning decline pressing or safety concerns"
+          },
+          {
+            "name": "Smith Machine Decline Press",
+            "description": "Use Smith machine for fixed path",
+            "when_to_use": "Building strength before free weight"
+          },
+          {
+            "name": "Slight Decline (10-15 degrees)",
+            "description": "Use shallower decline",
+            "when_to_use": "Getting comfortable with decline"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Decline Press",
+            "description": "Progressive overload, often can handle more than flat",
+            "when_to_use": "Building lower chest mass"
+          },
+          {
+            "name": "Pause Decline Press",
+            "description": "Pause 2-3 seconds on chest",
+            "when_to_use": "Building strength off chest"
+          },
+          {
+            "name": "Close-Grip Decline Press",
+            "description": "Narrower grip for tricep emphasis",
+            "when_to_use": "Variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lower chest development", "Overall chest mass", "Variation in pressing angles", "Often allows heavier loads than flat"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Incline Press", "Flyes", "Dips"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "ALWAYS use spotter - difficult to bail safely",
+        "Ensure feet/ankles are properly secured",
+        "Blood rushes to head - may feel uncomfortable initially",
+        "Not ideal for those with high blood pressure",
+        "Can often handle slightly more weight than flat bench"
+      ],
+      "video_explanation_script": "The decline barbell bench press targets your lower chest. Set the bench to a 15 to 30-degree decline and secure your feet in the ankle pads. Lie back on the bench with your eyes under the bar. Unrack the bar and hold it over your lower chest with your arms extended. Lower the bar to your lower chest or sternum area - lower than where you'd touch on flat bench. Keep your elbows at about 45 degrees. Then press the bar back up to full extension. The decline angle shifts emphasis to your lower pecs and many people find they can handle more weight on decline than flat bench. Always use a spotter on decline bench - it's harder to bail safely than flat bench."
+    },
+    {
+      "exercise_id": "chest_010",
+      "exercise_name": "Incline Dumbbell Fly",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (Clavicular Head - Upper Chest)"],
+        "secondary": ["Anterior Deltoids"],
+        "stabilizers": ["Biceps", "Core"]
+      },
+      "movement_pattern": "Fly on Incline",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells", "Incline Bench"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set bench to 30-45 degree incline, sit with dumbbells on thighs, lie back bringing them to shoulder level, press up to start position.",
+        "key_points": [
+          "Bench angle 30-45 degrees",
+          "Dumbbells start above upper chest",
+          "Slight elbow bend maintained throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on incline bench with dumbbells together above upper chest, palms facing, slight elbow bend, shoulder blades retracted.",
+        "body_alignment": {
+          "head": "Neutral on bench",
+          "shoulders": "Retracted and depressed",
+          "spine": "Neutral against bench",
+          "hips": "On bench",
+          "feet": "Flat on ground",
+          "arms": "Extended above upper chest, slight elbow bend, palms facing"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower dumbbells out to sides in arc motion, maintaining elbow bend",
+          "cues": [
+            "Open your arms out to sides",
+            "Same elbow bend throughout",
+            "Feel stretch in upper chest",
+            "Control the descent",
+            "Stop at shoulder level"
+          ],
+          "end_position": "Arms out to sides, dumbbells at shoulder level, deep upper chest stretch, elbow bend maintained"
+        },
+        "concentric_phase": {
+          "description": "Bring dumbbells back together above chest in arc motion",
+          "cues": [
+            "Squeeze upper chest to bring dumbbells together",
+            "Arc motion like hugging",
+            "Same elbow bend maintained",
+            "Squeeze at the top",
+            "Think elbows together"
+          ],
+          "end_position": "Dumbbells together above upper chest, upper chest contracted"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during opening (eccentric), exhale during closing (concentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec open, 1 sec stretch, 2 sec close, 1 sec squeeze)",
+        "hypertrophy_focus": "3-2-2-2 (3 sec open, 2 sec stretch, 2 sec close, 2 sec squeeze)",
+        "stretch_emphasis": "3-3-2-1 (3 sec open, 3 sec hold stretch, 2 sec close, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From dumbbells together to arms out at shoulder level",
+        "critical_point": "Deep upper chest stretch, full contraction at top",
+        "avoid": "Going below shoulder level or changing elbow angle"
+      },
+      "form_cues": [
+        "The incline angle targets your upper chest specifically",
+        "Keep that elbow angle locked - it never changes",
+        "Feel the stretch across the upper portion of your chest",
+        "This is upper chest adduction, not pressing",
+        "Squeeze your upper chest like you're flexing your pecs at the top"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bench angle too steep (over 45 degrees)",
+          "correction": "Keep incline at 30-45 degrees",
+          "why_it_matters": "Too steep shifts to shoulders"
+        },
+        {
+          "mistake": "Bending elbows more during movement",
+          "correction": "Maintain constant elbow angle",
+          "why_it_matters": "Changing angle turns it into press"
+        },
+        {
+          "mistake": "Going too far below shoulder level",
+          "correction": "Stop when dumbbells reach shoulder level",
+          "why_it_matters": "Excessive stretch can injure shoulder"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than incline press",
+          "why_it_matters": "Heavy weight forces poor form"
+        },
+        {
+          "mistake": "Not focusing on upper chest",
+          "correction": "Concentrate on feeling upper pecs work",
+          "why_it_matters": "Mind-muscle connection crucial for isolation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Incline Fly",
+            "description": "Use very light dumbbells",
+            "when_to_use": "Learning incline fly mechanics"
+          },
+          {
+            "name": "Lower Incline Fly (15-30 degrees)",
+            "description": "Use shallower incline",
+            "when_to_use": "Building up to steeper angles"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Incline Fly",
+            "description": "Pause 3-5 seconds at stretch",
+            "when_to_use": "Maximizing upper chest stretch"
+          },
+          {
+            "name": "Incline Cable Fly",
+            "description": "Perform with cables on incline bench",
+            "when_to_use": "Constant tension variation"
+          },
+          {
+            "name": "Single-Arm Incline Fly",
+            "description": "One arm at a time",
+            "when_to_use": "Increased stretch and addressing imbalances"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Upper chest isolation", "Upper chest stretch", "Mind-muscle connection", "Finishing exercise"],
+        "place_in_workout": "After incline pressing as isolation work",
+        "pairs_well_with": ["Incline Press", "Flat Bench", "Cable Work"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "isolation": "12-20 reps",
+          "stretch_emphasis": "8-12 reps with pause"
+        }
+      },
+      "safety_considerations": [
+        "Use lighter weight than pressing movements",
+        "Don't go below shoulder level",
+        "Maintain constant elbow angle",
+        "Stop if experiencing shoulder discomfort",
+        "Essential for complete upper chest development"
+      ],
+      "video_explanation_script": "The incline dumbbell fly is perfect for isolating your upper chest. Set the bench to a 30 to 45-degree incline. Get the dumbbells into position and start with them held together above your upper chest, palms facing each other. Maintain a slight bend in your elbows - this angle stays the same throughout. From here, open your arms out to the sides in a wide arc until the dumbbells are about level with your shoulders. Feel the deep stretch across your upper chest. Then squeeze your upper chest to bring the dumbbells back together above you. The incline angle specifically targets your upper pecs, and the fly motion provides that crucial stretch and contraction that builds the mind-muscle connection. This is essential for complete chest development."
+    },
+    {
+      "exercise_id": "chest_011",
+      "exercise_name": "Machine Chest Press",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major"],
+        "secondary": ["Anterior Deltoids", "Triceps"],
+        "stabilizers": ["Minimal - machine provides stability"]
+      },
+      "movement_pattern": "Horizontal Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Chest Press Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Adjust seat height so handles are at mid-chest level, sit with back against pad, grasp handles.",
+        "key_points": [
+          "Handles at mid-chest height",
+          "Back fully supported against pad",
+          "Feet flat on ground"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated in machine with back against pad, feet on ground, hands grasping handles at chest level.",
+        "body_alignment": {
+          "head": "Neutral against headrest",
+          "shoulders": "Back against pad, retracted",
+          "spine": "Neutral, full contact with pad",
+          "hips": "Seated",
+          "feet": "Flat on ground",
+          "hands": "Grasping handles at chest level"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push handles forward by extending arms",
+          "cues": [
+            "Push the handles forward",
+            "Drive through your chest",
+            "Keep back against pad",
+            "Full arm extension",
+            "Squeeze chest at full extension"
+          ],
+          "end_position": "Arms fully extended, handles pushed forward, chest contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control handles as they return to chest level",
+          "cues": [
+            "Control the return",
+            "Don't let weight pull you",
+            "Maintain chest tension",
+            "Back stays against pad"
+          ],
+          "end_position": "Handles returned to chest level, chest stretched"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during press (concentric), inhale during return (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec press, 1 sec squeeze, 2 sec return, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec press, 1 sec squeeze, 3 sec return, no pause)",
+        "strength_focus": "1-0-2-0 (1 sec press, no pause, 2 sec return, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From handles at chest to full arm extension",
+        "critical_point": "Full extension with chest squeeze, full stretch at start",
+        "avoid": "Partial reps or back coming off pad"
+      },
+      "form_cues": [
+        "The machine provides stability so you can focus purely on chest",
+        "Think about pushing through your chest, not your arms",
+        "Keep your back pressed firmly to the pad",
+        "Squeeze your chest when your arms are fully extended",
+        "Control both phases of the movement"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Back coming off pad",
+          "correction": "Keep back firmly pressed against pad throughout",
+          "why_it_matters": "Leaving pad reduces stability and can cause injury"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Full extension at front, full stretch at chest",
+          "why_it_matters": "Partial ROM limits chest development"
+        },
+        {
+          "mistake": "Using momentum or bouncing",
+          "correction": "Smooth controlled movement",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Pushing with arms instead of chest",
+          "correction": "Focus on chest contraction driving movement",
+          "why_it_matters": "Arm-dominant pressing reduces chest work"
+        },
+        {
+          "mistake": "Seat height incorrect",
+          "correction": "Adjust so handles are at mid-chest level",
+          "why_it_matters": "Improper height changes muscle emphasis"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Machine Press",
+            "description": "Use lighter weight to perfect form",
+            "when_to_use": "Learning movement or building strength"
+          },
+          {
+            "name": "Single-Arm Machine Press",
+            "description": "Press one arm at a time",
+            "when_to_use": "Addressing imbalances"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Machine Press",
+            "description": "Progressive overload safely",
+            "when_to_use": "Building chest strength"
+          },
+          {
+            "name": "Pause Machine Press",
+            "description": "Pause 2-3 seconds at full extension",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Slow Eccentric Machine Press",
+            "description": "Very slow 5-second eccentric",
+            "when_to_use": "Hypertrophy emphasis"
+          },
+          {
+            "name": "Drop Set Machine Press",
+            "description": "Immediate weight reduction to continue to failure",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Safe chest training", "Learning pressing pattern", "Training to failure safely", "Beginners and advanced"],
+        "place_in_workout": "Any point depending on goals",
+        "pairs_well_with": ["Any chest exercises", "Can be primary or accessory"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe - machine provides stability",
+        "Easy to train to failure",
+        "Good for beginners learning pressing",
+        "Excellent for those with stability issues",
+        "Can load heavy safely"
+      ],
+      "video_explanation_script": "The machine chest press is a safe and effective way to build chest strength. Adjust the seat so the handles are at about mid-chest level. Sit with your back firmly against the pad and your feet flat on the ground. Grasp the handles at chest level. From here, push the handles forward by pressing through your chest until your arms are fully extended. Squeeze your chest at the end. Then control the weight as it returns to the starting position. The machine provides stability so you can focus purely on working your chest, and you can safely train to failure. The chest press machine is excellent for beginners learning the pressing pattern and for advanced lifters wanting to load heavy without worrying about balance."
+    },
+    {
+      "exercise_id": "chest_012",
+      "exercise_name": "Cable Crossover (High-to-Low)",
+      "muscle_group_primary": "Chest",
+      "muscles_targeted": {
+        "primary": ["Pectoralis Major (Lower Emphasis)"],
+        "secondary": ["Anterior Deltoids"],
+        "stabilizers": ["Core", "Rotator Cuff"]
+      },
+      "movement_pattern": "High-to-Low Cable Fly",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Dual Pulleys", "D-Handles"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulleys to highest position, stand centered between pulleys, grasp handles with arms extended up and out, step forward into staggered stance.",
+        "key_points": [
+          "Cables set at highest position",
+          "Staggered stance for stability",
+          "Slight forward lean"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing between cables in staggered stance, slight forward lean, arms extended up and out holding handles, slight elbow bend.",
+        "body_alignment": {
+          "head": "Neutral, looking forward or slightly down",
+          "shoulders": "Retracted, chest up",
+          "spine": "Neutral with slight forward lean at hips",
+          "hips": "Hinged forward 10-20 degrees",
+          "stance": "Staggered for stability",
+          "arms": "Extended up and out, slight elbow bend, palms forward and down"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Bring handles together in downward arc to front of thighs, maintaining elbow angle",
+          "cues": [
+            "Squeeze your chest to bring handles down and together",
+            "Arc motion downward and inward",
+            "Maintain elbow angle",
+            "Cross hands slightly at bottom",
+            "Squeeze lower chest hard"
+          ],
+          "end_position": "Handles crossed in front of thighs, arms still extended with slight bend, lower chest maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control handles as they return upward and outward",
+          "cues": [
+            "Control the opening",
+            "Feel the stretch in chest",
+            "Same elbow bend maintained",
+            "Arms return to sides and up",
+            "Constant tension"
+          ],
+          "end_position": "Arms up and out to sides, chest stretched"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during bringing together (concentric), inhale during opening (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec bring together, 1 sec squeeze, 2 sec open, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec together, 2 sec squeeze, 3 sec open, 1 sec stretch)",
+        "constant_tension": "1-2-2-0 (1 sec together, 2 sec squeeze, 2 sec open, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms up and out to hands crossed in front of thighs",
+        "critical_point": "Full stretch with arms high and wide, full contraction crossed at bottom",
+        "avoid": "Going too far back or using momentum"
+      },
+      "form_cues": [
+        "The high-to-low angle emphasizes your lower chest",
+        "Think about bringing your hands down toward your opposite hip",
+        "Slight forward lean helps isolate chest",
+        "Squeeze and cross your hands at the bottom",
+        "Constant tension from cables is the advantage"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Changing elbow angle",
+          "correction": "Maintain constant slight elbow bend throughout",
+          "why_it_matters": "Changing angle removes fly stimulus"
+        },
+        {
+          "mistake": "Standing too upright",
+          "correction": "Maintain 10-20 degree forward lean",
+          "why_it_matters": "Upright reduces chest isolation"
+        },
+        {
+          "mistake": "Not crossing hands at bottom",
+          "correction": "Cross hands at bottom for maximum contraction",
+          "why_it_matters": "Full crossover maximizes lower chest activation"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Smooth controlled arc motion",
+          "why_it_matters": "Momentum removes constant tension benefit"
+        },
+        {
+          "mistake": "Cables too far behind body",
+          "correction": "Don't let cables pull you backward excessively",
+          "why_it_matters": "Excessive stretch can injure shoulder"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Cable Crossover",
+            "description": "Use very light weight",
+            "when_to_use": "Learning high-to-low fly pattern"
+          },
+          {
+            "name": "Single-Arm Cable Crossover",
+            "description": "One arm at a time",
+            "when_to_use": "Learning pattern or addressing imbalances"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Low-to-High Cable Crossover",
+            "description": "Cables low, fly motion upward",
+            "when_to_use": "Upper chest emphasis"
+          },
+          {
+            "name": "Pause Cable Crossover",
+            "description": "Pause 3-5 seconds at peak contraction",
+            "when_to_use": "Maximizing lower chest contraction"
+          },
+          {
+            "name": "Isometric Hold Crossover",
+            "description": "Hold at various points for time",
+            "when_to_use": "Building isometric strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lower chest isolation", "Constant tension", "Peak contraction", "Finishing exercise"],
+        "place_in_workout": "After pressing movements as isolation/finisher",
+        "pairs_well_with": ["Bench Press", "Incline Press", "Dips"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "isolation": "12-20 reps",
+          "finisher": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Constant tension is advantage",
+        "Don't let cables pull you backward excessively",
+        "Use lighter weight than pressing",
+        "Excellent for lower chest definition"
+      ],
+      "video_explanation_script": "The high-to-low cable crossover is excellent for targeting your lower chest. Set the pulleys at the highest position and stand in the middle with a staggered stance. Lean forward slightly from your hips. Grab the handles with your arms extended up and out to your sides with a slight bend in your elbows. From here, squeeze your lower chest to bring the handles down and together in front of you. The motion is downward and inward - aim for your hands to cross in front of your thighs. Really squeeze your lower chest at the bottom. Then control the handles as they return up and out. The downward angle from high cables emphasizes your lower chest, and the cables provide constant tension throughout the movement. This is perfect for finishing off your chest workout and getting that lower chest pump."
+    }
+  ]
+}

@@ -1,0 +1,2026 @@
+{
+  "muscle_group": "Hamstrings",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Biceps Femoris (Long Head)",
+        "function": "Knee flexion, hip extension, external rotation of knee",
+        "description": "Lateral hamstring, crosses both hip and knee joints, outer thigh"
+      },
+      {
+        "name": "Biceps Femoris (Short Head)",
+        "function": "Knee flexion, external rotation of knee",
+        "description": "Only hamstring muscle that doesn't cross hip joint, attaches to femur"
+      },
+      {
+        "name": "Semitendinosus",
+        "function": "Knee flexion, hip extension, internal rotation of knee",
+        "description": "Medial hamstring, long thin muscle on inner thigh"
+      },
+      {
+        "name": "Semimembranosus",
+        "function": "Knee flexion, hip extension, internal rotation of knee",
+        "description": "Medial hamstring, thick muscle deeper than semitendinosus"
+      }
+    ],
+    "key_concepts": {
+      "dual_function": "Hamstrings perform both knee flexion (curling) and hip extension (hip hinge movements)",
+      "training_implications": "Need both hip-dominant (RDLs, good mornings) and knee-dominant (curls) exercises for complete development"
+    }
+  },
+  "exercises": [
+    {
+      "exercise_id": "hamstring_001",
+      "exercise_name": "Romanian Deadlift (RDL)",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings", "Gluteus Maximus"],
+        "secondary": ["Erector Spinae", "Lats", "Traps"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Hip Hinge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "Lifting Straps", "Lifting Belt"]
+      },
+      "difficulty_level": "Intermediate",
+      "note": "This exercise appears in both Glutes and Hamstrings libraries as it's highly effective for both muscle groups. Hip-dominant movement pattern.",
+      "setup": {
+        "description": "Stand with feet hip-width apart, barbell in hands at hip level with overhand or mixed grip.",
+        "key_points": [
+          "Start from the top position (standing)",
+          "Bar should rest against thighs",
+          "Shoulders packed back and down"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing tall with barbell at hip level, feet hip-width apart, slight bend in knees, neutral spine.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Packed back and down, engaged lats",
+          "spine": "Neutral from head to tailbone",
+          "hips": "Level, slight anterior tilt",
+          "knees": "Soft bend, not locked",
+          "feet": "Hip-width, weight through mid-foot"
+        },
+        "grip": "Overhand (double overhand) or mixed grip, hands just outside thighs"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Push hips back while maintaining neutral spine, lowering bar down front of legs",
+          "cues": [
+            "Push your hips back like closing a car door",
+            "Keep the bar close to your legs",
+            "Maintain neutral spine throughout",
+            "Feel the stretch in your hamstrings",
+            "Soft bend in knees, don't squat down"
+          ],
+          "end_position": "Bar reaches mid-shin or just below knees, deep stretch in hamstrings and glutes"
+        },
+        "concentric_phase": {
+          "description": "Drive hips forward to return to standing position",
+          "cues": [
+            "Push the floor away",
+            "Drive hips through to standing",
+            "Squeeze glutes at the top",
+            "Keep bar path vertical and close",
+            "Stand tall, don't hyperextend"
+          ],
+          "end_position": "Standing tall, hips fully extended, glutes contracted, bar at hip level"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace at top, hold breath during descent, exhale on the way up",
+        "alternative": "Continuous breathing for lighter weights or higher reps"
+      },
+      "tempo": {
+        "standard": "3-1-1-1 (3 sec down, 1 sec pause at stretch, 1 sec up, 1 sec squeeze)",
+        "hypertrophy_focus": "4-2-2-1 (4 sec down, 2 sec pause, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-1-1 (2 sec down, no pause, 1 sec up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "Bar descends to mid-shin while maintaining neutral spine",
+        "critical_point": "Stop when you can no longer maintain neutral spine or feel deep hamstring stretch",
+        "avoid": "Rounding the back to go lower"
+      },
+      "form_cues": [
+        "Imagine dragging the bar up your legs",
+        "Keep your chest proud throughout",
+        "Think 'hips back' not 'bend forward'",
+        "Maintain tension in lats by keeping bar close",
+        "Feel the stretch in your hamstrings, not your lower back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding the back",
+          "correction": "Maintain neutral spine, stop descent when spine begins to round",
+          "why_it_matters": "Spinal flexion under load greatly increases injury risk"
+        },
+        {
+          "mistake": "Squatting down instead of hinging",
+          "correction": "Keep knees at same angle, push hips back not down",
+          "why_it_matters": "Turns the RDL into a squat, reducing hamstring and glute emphasis"
+        },
+        {
+          "mistake": "Bar drifting away from body",
+          "correction": "Engage lats, drag bar up legs, keep it close",
+          "why_it_matters": "Increases moment arm and stress on lower back"
+        },
+        {
+          "mistake": "Hyperextending at the top",
+          "correction": "Stand tall with neutral spine, squeeze glutes without leaning back",
+          "why_it_matters": "Hyperextension compresses lumbar spine unnecessarily"
+        },
+        {
+          "mistake": "Going too low beyond flexibility",
+          "correction": "Only descend as far as you can maintain neutral spine",
+          "why_it_matters": "Compensatory rounding increases injury risk"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell RDL",
+            "description": "Use dumbbells at sides instead of barbell",
+            "when_to_use": "Learning movement pattern, improving mobility"
+          },
+          {
+            "name": "Kettlebell RDL",
+            "description": "Single kettlebell held with both hands",
+            "when_to_use": "Beginners, working on hip hinge pattern"
+          },
+          {
+            "name": "Bodyweight Hip Hinge",
+            "description": "Practice hinge pattern with PVC pipe on back",
+            "when_to_use": "Teaching proper hinge mechanics"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Leg RDL",
+            "description": "Perform on one leg with opposite leg extending back",
+            "when_to_use": "Address imbalances, increase stability demands"
+          },
+          {
+            "name": "Deficit RDL",
+            "description": "Stand on platform for increased range of motion",
+            "when_to_use": "Advanced lifters with good mobility"
+          },
+          {
+            "name": "Snatch Grip RDL",
+            "description": "Use wide grip to increase range of motion and upper back work",
+            "when_to_use": "Variation for advanced trainees"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Hamstring and glute development", "Learning hip hinge pattern", "Building posterior chain strength"],
+        "place_in_workout": "Early workout as primary or secondary movement",
+        "pairs_well_with": ["Squats", "Hip Thrusts", "Leg Curls"],
+        "rep_ranges": {
+          "strength": "4-6 reps",
+          "hypertrophy": "8-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Master the hip hinge pattern with light weight first",
+        "Never sacrifice neutral spine for more range of motion",
+        "Use lifting straps if grip is limiting factor",
+        "Avoid if experiencing lower back pain without clearance",
+        "Progress weight gradually"
+      ],
+      "video_explanation_script": "The RDL is the king of hamstring exercises. Start standing tall with the bar at your hips. From here, push your hips back like you're trying to close a car door behind you. Keep your spine neutral and the bar close to your legs as you lower down. You should feel a deep stretch in your hamstrings. Only go as low as you can while keeping your back flat - typically mid-shin level. Then drive your hips forward to stand back up, squeezing your glutes at the top. This isn't a squat - your knees stay at roughly the same angle the whole time. The movement comes from your hips. The RDL is essential for building strong, powerful hamstrings."
+    },
+    {
+      "exercise_id": "hamstring_002",
+      "exercise_name": "Lying Leg Curl",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings (all four heads)"],
+        "secondary": ["Gastrocnemius (calves)"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Knee Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Lying Leg Curl Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Lie face down on leg curl machine, adjust pad to rest on back of lower legs just above heels, knees aligned with machine pivot.",
+        "key_points": [
+          "Knee joint should align with machine's pivot point",
+          "Pad should rest on lower calf/Achilles area",
+          "Hips should stay flat on pad throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying prone on machine, legs extended, pad against back of lower legs, holding handles for stability.",
+        "body_alignment": {
+          "head": "Neutral or turned to side on face pad",
+          "shoulders": "Relaxed, holding handles lightly",
+          "spine": "Neutral",
+          "hips": "Flat against pad, pressed down",
+          "knees": "Extended but not hyperextended, aligned with pivot",
+          "ankles": "Dorsiflexed (toes pulled toward shins) or neutral"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl heels toward glutes by bending knees",
+          "cues": [
+            "Pull your heels to your glutes",
+            "Squeeze your hamstrings hard",
+            "Keep hips pressed down",
+            "Don't lift your hips up",
+            "Control the movement, no swinging"
+          ],
+          "end_position": "Heels curled up as close to glutes as possible, hamstrings fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower weight with control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Don't let the weight drop",
+            "Maintain hamstring tension",
+            "Full extension at bottom"
+          ],
+          "end_position": "Return to legs extended position"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during curl (concentric), inhale during descent (eccentric)",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "eccentric_emphasis": "1-1-4-0 (1 sec up, 1 sec squeeze, 4 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full leg extension to maximum knee flexion (heels near glutes)",
+        "critical_point": "Full contraction at top with squeeze, full stretch at bottom",
+        "avoid": "Partial range of motion or hip lifting"
+      },
+      "form_cues": [
+        "Think about pulling your heels to your butt",
+        "Keep your hips glued to the pad - this isolates hamstrings",
+        "Point your toes down or keep ankles neutral for max hamstring activation",
+        "Squeeze at the top like you're trying to crack a walnut with your hamstring",
+        "This is a slow, controlled movement - no momentum"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips lifting off pad",
+          "correction": "Keep hips pressed flat against pad throughout entire movement",
+          "why_it_matters": "Hip lift reduces hamstring isolation and can strain lower back"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Use controlled tempo, reduce weight if needed",
+          "why_it_matters": "Momentum reduces muscle tension and effectiveness"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Curl all the way up until heels nearly touch glutes",
+          "why_it_matters": "Partial ROM limits hamstring development"
+        },
+        {
+          "mistake": "Excessive plantar flexion (pointing toes hard)",
+          "correction": "Keep ankles neutral or slightly dorsiflexed",
+          "why_it_matters": "Excessive toe pointing recruits calves and can cause cramping"
+        },
+        {
+          "mistake": "Dropping weight too quickly on eccentric",
+          "correction": "Control eccentric phase, take 2-3 seconds to lower",
+          "why_it_matters": "Eccentric phase is critical for hamstring hypertrophy"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Leg Lying Curl",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Addressing imbalances or as lighter variation"
+          },
+          {
+            "name": "Partial Range Lying Curl",
+            "description": "Use smaller ROM initially if full range causes cramping",
+            "when_to_use": "Building strength or managing cramp issues"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Eccentric-Emphasized Lying Curl",
+            "description": "4-6 second eccentric phase",
+            "when_to_use": "Maximizing hypertrophy"
+          },
+          {
+            "name": "Iso-Hold Lying Curl",
+            "description": "Hold at full contraction for 10-20 seconds",
+            "when_to_use": "Building peak contraction strength"
+          },
+          {
+            "name": "1.5 Rep Lying Curl",
+            "description": "Full curl up, halfway down, back up, all the way down = 1 rep",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Drop Set Lying Curl",
+            "description": "Immediate weight reduction and continued reps to failure",
+            "when_to_use": "Advanced hypertrophy technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Hamstring isolation and hypertrophy", "Knee flexion strength", "Finishing exercise after compounds", "Rehab and prehab"],
+        "place_in_workout": "After hip-dominant movements as isolation work",
+        "pairs_well_with": ["RDLs", "Squats", "Good Mornings"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-20 reps",
+          "endurance": "20-30+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Generally very safe when performed correctly",
+        "Can cause hamstring cramping - stay hydrated, don't overdo volume initially",
+        "Keep hips down to protect lower back",
+        "Start with lighter weight to assess tolerance",
+        "Excellent for hamstring isolation and development"
+      ],
+      "video_explanation_script": "The lying leg curl is a staple hamstring exercise. Lie face down on the machine with the pad resting on your lower calves, just above your heels. Make sure your knees align with the machine's pivot point. From here, curl your heels up toward your glutes by bending your knees. Really squeeze your hamstrings at the top. The critical thing is to keep your hips pressed flat against the pad throughout - don't let them lift up. Then control the weight back down to full extension. This exercise isolates the hamstrings through knee flexion, which is essential because hamstrings do more than just hip extension. The lying leg curl is perfect for building hamstring size and strength."
+    },
+    {
+      "exercise_id": "hamstring_003",
+      "exercise_name": "Seated Leg Curl",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings (especially short head of biceps femoris)"],
+        "secondary": ["Gastrocnemius"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Knee Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Seated Leg Curl Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit in machine, adjust back pad for comfort, position lower pad against back of lower legs, secure thigh pad over quads.",
+        "key_points": [
+          "Knee joint should align with machine's pivot",
+          "Lower pad on back of lower legs/Achilles",
+          "Thigh pad should secure legs without excessive pressure"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated in machine, back against pad, legs extended in front, lower pad against back of lower legs, thigh pad securing upper legs.",
+        "body_alignment": {
+          "head": "Neutral against headrest",
+          "shoulders": "Back against pad, holding handles",
+          "spine": "Neutral, full contact with back pad",
+          "hips": "Seated, secured",
+          "knees": "Extended, aligned with pivot",
+          "ankles": "Neutral or slightly dorsiflexed"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl lower legs back under seat by bending knees",
+          "cues": [
+            "Pull your heels back under you",
+            "Squeeze your hamstrings hard",
+            "Keep your back against the pad",
+            "Drive heels toward the floor",
+            "Control the movement"
+          ],
+          "end_position": "Lower legs curled back as far as possible, hamstrings fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Extend legs back to starting position with control",
+          "cues": [
+            "Control the extension",
+            "Don't let the weight pull you",
+            "Maintain hamstring tension",
+            "Full extension at top"
+          ],
+          "end_position": "Legs returned to extended position"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during curl (concentric), inhale during extension (eccentric)",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec curl, 1 sec squeeze, 2 sec extend, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec curl, 2 sec squeeze, 3 sec extend, no pause)",
+        "eccentric_emphasis": "1-1-4-0 (1 sec curl, 1 sec squeeze, 4 sec extend, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full leg extension to maximum knee flexion under seat",
+        "critical_point": "Full contraction with strong squeeze, full stretch at extension",
+        "avoid": "Partial range or torso movement"
+      },
+      "form_cues": [
+        "Think about driving your heels down toward the floor behind you",
+        "Your back should stay flat against the pad the entire time",
+        "The seated position puts more emphasis on the short head of biceps femoris",
+        "Squeeze hard at the bottom of the curl",
+        "This is controlled strength, not momentum"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Back coming off pad",
+          "correction": "Keep back pressed firmly against pad throughout",
+          "why_it_matters": "Back leaving pad reduces hamstring isolation and can cause strain"
+        },
+        {
+          "mistake": "Using momentum or bouncing",
+          "correction": "Use smooth controlled tempo throughout",
+          "why_it_matters": "Momentum reduces muscle tension and effectiveness"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Curl all the way back and extend fully at top",
+          "why_it_matters": "Partial ROM limits hamstring development"
+        },
+        {
+          "mistake": "Ankles in wrong position",
+          "correction": "Keep ankles neutral or slightly dorsiflexed (toes up)",
+          "why_it_matters": "Ankle position affects hamstring vs. calf involvement"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Control both phases of movement, pause and squeeze",
+          "why_it_matters": "Speed reduces time under tension"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Leg Seated Curl",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Addressing imbalances or as lighter variation"
+          },
+          {
+            "name": "Lighter Weight Focus",
+            "description": "Use lighter weight with perfect form",
+            "when_to_use": "Learning movement or emphasizing mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Eccentric-Emphasized Seated Curl",
+            "description": "4-6 second eccentric phase",
+            "when_to_use": "Maximizing hypertrophy"
+          },
+          {
+            "name": "Iso-Hold Seated Curl",
+            "description": "Hold at full contraction for 10-20 seconds",
+            "when_to_use": "Building peak contraction strength"
+          },
+          {
+            "name": "Pause Rep Seated Curl",
+            "description": "Pause 2-3 seconds at full contraction",
+            "when_to_use": "Increasing intensity and time under tension"
+          },
+          {
+            "name": "Cluster Set Seated Curl",
+            "description": "Heavy weight, singles or doubles with short rest between",
+            "when_to_use": "Building strength in curl pattern"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Hamstring isolation", "Short head biceps femoris emphasis", "Knee flexion strength", "Variety in hamstring training"],
+        "place_in_workout": "After hip-dominant movements as isolation work",
+        "pairs_well_with": ["RDLs", "Good Mornings", "Lying Leg Curls"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Less prone to cramping than lying leg curl",
+        "Keep back against pad to protect spine",
+        "Excellent variation for complete hamstring development",
+        "Seated position emphasizes different portion of hamstrings than lying version"
+      ],
+      "video_explanation_script": "The seated leg curl is an excellent variation for hamstring development. Sit in the machine with your back flat against the pad and the lower pad positioned against your lower calves. Secure the thigh pad over your quads. From this extended position, curl your lower legs back underneath you by bending your knees. Think about driving your heels toward the floor behind you. Squeeze your hamstrings hard when your legs are fully curled. Then extend your legs back out with control. The key is keeping your back pressed against the pad throughout. The seated position uniquely emphasizes the short head of the biceps femoris, which is why it's a great complement to other hamstring exercises."
+    },
+    {
+      "exercise_id": "hamstring_004",
+      "exercise_name": "Nordic Hamstring Curl",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings (all heads)"],
+        "secondary": ["Gluteus Maximus", "Gastrocnemius"],
+        "stabilizers": ["Core", "Erector Spinae"]
+      },
+      "movement_pattern": "Eccentric Knee Flexion",
+      "movement_type": "Bodyweight Isolation",
+      "equipment": {
+        "required": ["Partner to hold ankles OR Anchor point for feet"],
+        "optional": ["Nordic Bench", "Pad for knees", "Resistance Band for assistance"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Kneel on pad with ankles secured by partner or under fixed object, body in straight line from knees to head.",
+        "key_points": [
+          "Ankles must be firmly secured",
+          "Start on knees in tall kneeling position",
+          "Pad under knees for comfort"
+        ]
+      },
+      "starting_position": {
+        "description": "Kneeling with ankles secured, body forming straight line from knees through shoulders, arms ready to catch fall.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, body in straight line",
+          "hips": "Extended, aligned with torso and thighs",
+          "knees": "On pad, bent at 90 degrees",
+          "ankles": "Secured firmly by partner or under object"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower body forward with control while keeping hips extended, resisting with hamstrings",
+          "cues": [
+            "Lower slowly and with control",
+            "Keep your body in a straight line",
+            "Don't break at the hips",
+            "Resist the fall with your hamstrings",
+            "Go as low as you can control"
+          ],
+          "end_position": "Body lowered as far forward as possible while maintaining control, hamstrings maximally stretched"
+        },
+        "catch_and_return": {
+          "description": "Catch yourself with hands when you can no longer control descent, push off ground to return to start",
+          "cues": [
+            "Catch yourself with hands",
+            "Push off the ground to assist return",
+            "Use hamstrings to pull back up as much as possible",
+            "Return to tall kneeling position"
+          ],
+          "end_position": "Return to starting tall kneeling position"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale at top, hold or exhale during descent, breathe during push-off",
+        "alternative": "Continuous breathing for lighter variations"
+      },
+      "tempo": {
+        "eccentric_focus": "3-5+ seconds lowering (as slow as possible)",
+        "beginner": "3 seconds eccentric with significant band assistance",
+        "advanced": "5-10 seconds eccentric with minimal push-off assistance"
+      },
+      "range_of_motion": {
+        "full": "From tall kneeling to body near parallel with ground",
+        "critical_point": "Control as much of the descent as possible before catching",
+        "avoid": "Breaking at hips or uncontrolled falling"
+      },
+      "form_cues": [
+        "This is all about controlling the descent - that's where the magic happens",
+        "Keep your body in one straight line from knees to head",
+        "Think about keeping your hips extended throughout",
+        "Fight the fall as long as you can with your hamstrings",
+        "It's okay to push off the ground - most people need to initially"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Breaking at the hips",
+          "correction": "Keep hips extended, maintain straight line from knees to shoulders",
+          "why_it_matters": "Hip flexion reduces hamstring emphasis and makes exercise easier"
+        },
+        {
+          "mistake": "Falling too quickly (uncontrolled)",
+          "correction": "Resist the entire way down, use band assistance if needed",
+          "why_it_matters": "Uncontrolled descent reduces training stimulus and increases injury risk"
+        },
+        {
+          "mistake": "Not lowering far enough",
+          "correction": "Lower as far as you can control, progressively increase range",
+          "why_it_matters": "Limited range reduces effectiveness"
+        },
+        {
+          "mistake": "Ankles not secured properly",
+          "correction": "Ensure ankles are firmly held or locked in place",
+          "why_it_matters": "Unsecured ankles make exercise impossible and dangerous"
+        },
+        {
+          "mistake": "Trying to pull back up concentrically too early",
+          "correction": "Focus on the eccentric, it's okay to push off ground initially",
+          "why_it_matters": "Most people can't perform full concentric - that's normal"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Nordic Curl",
+            "description": "Loop resistance band around waist for upward assistance",
+            "when_to_use": "Learning movement or building up strength"
+          },
+          {
+            "name": "Eccentric-Only Nordic Curl",
+            "description": "Focus only on slow lowering, always push back up",
+            "when_to_use": "Building eccentric strength before attempting any concentric"
+          },
+          {
+            "name": "Partial Range Nordic Curl",
+            "description": "Start by only lowering partway down",
+            "when_to_use": "Very early progression, building confidence and strength"
+          },
+          {
+            "name": "Partner-Assisted Nordic Curl",
+            "description": "Have partner provide upward force at chest/shoulders",
+            "when_to_use": "Learning movement with assistance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Full Eccentric Nordic Curl",
+            "description": "Lower all the way to ground with maximum control",
+            "when_to_use": "Standard goal progression"
+          },
+          {
+            "name": "Eccentric + Partial Concentric Nordic",
+            "description": "Lower fully, pull back up partway before pushing",
+            "when_to_use": "Building toward full Nordic"
+          },
+          {
+            "name": "Full Nordic Curl",
+            "description": "Lower and pull back up without hands touching ground",
+            "when_to_use": "Elite level strength"
+          },
+          {
+            "name": "Weighted Nordic Curl",
+            "description": "Hold weight plate at chest",
+            "when_to_use": "Beyond elite - very rare"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Eccentric hamstring strength", "Injury prevention", "Athletic performance", "Advanced hamstring development"],
+        "place_in_workout": "Early to mid-workout when fresh, before other hamstring work",
+        "pairs_well_with": ["RDLs", "Squats", "Hip Thrusts"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "6-10 reps",
+          "note": "Quality over quantity - a few controlled reps are better than many uncontrolled"
+        }
+      },
+      "safety_considerations": [
+        "Very intense exercise - causes significant soreness",
+        "Start conservatively to avoid severe DOMS",
+        "Excellent for hamstring injury prevention",
+        "Ankles must be secured safely",
+        "Can cause hamstring cramps - stay hydrated",
+        "One of the most effective hamstring exercises for athletic performance"
+      ],
+      "video_explanation_script": "The Nordic hamstring curl is one of the most effective exercises for building bulletproof hamstrings. Kneel on a pad with your ankles secured by a partner or under a fixed object. Start in a tall kneeling position with your body forming a straight line from your knees to your head. From here, slowly lower your body forward while keeping your hips extended. Your hamstrings should be fighting to control the descent the entire way down. Lower as far as you can control, then catch yourself with your hands and push off the ground to return to the starting position. Most people can't pull themselves back up initially - that's completely normal. The eccentric phase is where the real magic happens. Nordic curls are phenomenal for building hamstring strength and preventing injuries."
+    },
+    {
+      "exercise_id": "hamstring_005",
+      "exercise_name": "Good Morning",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings", "Erector Spinae", "Gluteus Maximus"],
+        "secondary": ["Adductors"],
+        "stabilizers": ["Core", "Lats", "Upper Back"]
+      },
+      "movement_pattern": "Hip Hinge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Squat Rack"],
+        "optional": ["Weight Plates", "Safety Squat Bar", "Lifting Belt"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Position barbell on upper back in squat rack, unrack and step back into standing position.",
+        "key_points": [
+          "Bar placement similar to back squat (upper traps or rear delts)",
+          "Start with lighter weight than back squat",
+          "Feet hip to shoulder-width apart"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with barbell across upper back, feet hip to shoulder-width apart, slight knee bend.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Retracted, supporting bar",
+          "spine": "Neutral from head to tailbone",
+          "hips": "Neutral, level",
+          "knees": "Slight bend, maintained throughout",
+          "feet": "Hip to shoulder-width, toes slightly out"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Push hips back while maintaining neutral spine, hinging forward at hips",
+          "cues": [
+            "Push your hips back",
+            "Keep your spine neutral throughout",
+            "Slight knee bend stays constant",
+            "Feel the stretch in your hamstrings",
+            "Keep chest proud",
+            "Hinge until torso is near parallel or just above"
+          ],
+          "end_position": "Torso hinged forward near parallel to ground, hips pushed back, deep hamstring stretch, neutral spine maintained"
+        },
+        "concentric_phase": {
+          "description": "Drive hips forward to return to standing position",
+          "cues": [
+            "Drive your hips through",
+            "Squeeze your glutes",
+            "Maintain neutral spine",
+            "Think about standing up tall",
+            "Lead with your hips"
+          ],
+          "end_position": "Standing fully upright, hips extended, glutes contracted"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath and brace at top, hold during descent and initial ascent, exhale at top",
+        "alternative": "Valsalva maneuver for heavier loads"
+      },
+      "tempo": {
+        "standard": "2-1-1-1 (2 sec down, 1 sec pause, 1 sec up, 1 sec stand)",
+        "hypertrophy_focus": "3-2-2-1 (3 sec down, 2 sec pause, 2 sec up, 1 sec stand)",
+        "strength_focus": "2-0-1-1 (2 sec down, no pause, 1 sec up, 1 sec stand)"
+      },
+      "range_of_motion": {
+        "full": "Hinge until torso is parallel or just above parallel to ground",
+        "critical_point": "Only hinge as far as neutral spine can be maintained",
+        "avoid": "Rounding spine or hyperextending at bottom"
+      },
+      "form_cues": [
+        "This is called good morning because you look like you're bowing",
+        "Your knees should barely move - the bend stays constant",
+        "Think about pushing your butt back to touch a wall behind you",
+        "Keep your chest up throughout - imagine a proud peacock",
+        "The bar should stay over your mid-foot"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding the spine",
+          "correction": "Maintain neutral spine, only hinge as far as you can stay flat",
+          "why_it_matters": "Spinal flexion under load greatly increases injury risk"
+        },
+        {
+          "mistake": "Excessive knee bend (turning it into squat)",
+          "correction": "Keep knee angle constant with just slight bend throughout",
+          "why_it_matters": "Knee bend turns it into a squat, reducing hamstring emphasis"
+        },
+        {
+          "mistake": "Going too deep with poor form",
+          "correction": "Only hinge to where you can maintain perfect neutral spine",
+          "why_it_matters": "Ego depth with rounded back is dangerous"
+        },
+        {
+          "mistake": "Looking up excessively",
+          "correction": "Keep neck neutral in line with spine",
+          "why_it_matters": "Excessive neck extension can cause neck strain"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Good mornings require lighter weight than squats or deadlifts",
+          "why_it_matters": "Too much weight makes maintaining form impossible"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Good Morning",
+            "description": "Perform with hands behind head, no bar",
+            "when_to_use": "Learning hip hinge pattern"
+          },
+          {
+            "name": "Dumbbell Good Morning",
+            "description": "Hold dumbbell at chest",
+            "when_to_use": "Progressing from bodyweight before barbell"
+          },
+          {
+            "name": "Safety Squat Bar Good Morning",
+            "description": "Use safety squat bar",
+            "when_to_use": "Shoulder mobility issues or learning upright position"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Tempo Good Morning",
+            "description": "Slow 4-5 second eccentric",
+            "when_to_use": "Increasing time under tension"
+          },
+          {
+            "name": "Pause Good Morning",
+            "description": "Pause 2-3 seconds at bottom",
+            "when_to_use": "Building strength in stretched position"
+          },
+          {
+            "name": "Seated Good Morning",
+            "description": "Perform while seated on bench",
+            "when_to_use": "Isolating hamstrings more, removing stretch reflex"
+          },
+          {
+            "name": "Band-Resisted Good Morning",
+            "description": "Add bands for accommodating resistance",
+            "when_to_use": "Advanced strength variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Posterior chain development", "Hip hinge pattern reinforcement", "Hamstring and lower back strength", "Accessory work for deadlifts"],
+        "place_in_workout": "Early to mid-workout as primary or accessory movement",
+        "pairs_well_with": ["Squats", "Leg Curls", "Back Extensions"],
+        "rep_ranges": {
+          "strength": "5-8 reps",
+          "hypertrophy": "8-12 reps",
+          "technique": "6-10 reps"
+        }
+      },
+      "safety_considerations": [
+        "Requires good hip hinge technique before loading heavy",
+        "Never sacrifice neutral spine for depth",
+        "Start with very light weight to learn movement",
+        "Use lifting belt for heavier loads",
+        "Not ideal for those with current lower back issues",
+        "Excellent exercise when performed correctly but requires respect"
+      ],
+      "video_explanation_script": "The good morning is a classic posterior chain exercise. Set up with a barbell on your back like you would for a squat, but use lighter weight. Stand with feet hip to shoulder-width apart with a slight bend in your knees. From here, push your hips back and hinge forward at your hips while keeping your spine completely neutral. Your knees should barely move - they maintain that slight bend throughout. Hinge forward until your torso is near parallel to the ground or as far as you can go while keeping your back flat. You should feel a deep stretch in your hamstrings. Then drive your hips forward to stand back up tall. The key is maintaining that neutral spine throughout - never round your back. Good mornings are excellent for building a strong posterior chain."
+    },
+    {
+      "exercise_id": "hamstring_006",
+      "exercise_name": "Glute Ham Raise (GHR)",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings", "Gluteus Maximus"],
+        "secondary": ["Gastrocnemius", "Erector Spinae"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Hip Extension and Knee Flexion",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Glute Ham Raise (GHR) Machine or GHD"],
+        "optional": ["Weight Plate for added resistance"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Position yourself in GHR machine with ankles secured, knees on pad, body extended in line.",
+        "key_points": [
+          "Adjust ankle pad to secure ankles firmly",
+          "Knees should be just behind or on the knee pad",
+          "Start position with body in straight line from knees to head"
+        ]
+      },
+      "starting_position": {
+        "description": "Secured in GHR machine, body extended in straight line parallel to ground, ankles locked, knees on pad.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Back and down",
+          "spine": "Neutral, body forming straight line",
+          "hips": "Extended, aligned with body",
+          "knees": "On pad, bent slightly",
+          "ankles": "Secured firmly in ankle pads"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower body forward by extending knees while maintaining straight body line",
+          "cues": [
+            "Lower slowly with control",
+            "Keep your body in a straight line",
+            "Don't break at the hips",
+            "Extend your knees to lower",
+            "Control the descent with hamstrings"
+          ],
+          "end_position": "Body lowered forward, knees more extended, hamstrings stretched, still maintaining body line"
+        },
+        "concentric_phase": {
+          "description": "Pull body back up by flexing knees and extending hips",
+          "cues": [
+            "Curl with your hamstrings",
+            "Drive your toes down into the pad",
+            "Squeeze your glutes",
+            "Pull yourself back up",
+            "Return to straight body line"
+          ],
+          "end_position": "Return to starting position with body parallel to ground"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during lowering (eccentric), exhale during pull-up (concentric)",
+        "alternative": "Brace at top and hold during movement"
+      },
+      "tempo": {
+        "standard": "2-0-2-0 (2 sec down, no pause, 2 sec up, no pause)",
+        "eccentric_emphasis": "4-1-2-1 (4 sec down, 1 sec pause, 2 sec up, 1 sec at top)",
+        "strength_focus": "2-0-1-1 (2 sec down, no pause, 1 sec up, 1 sec hold)"
+      },
+      "range_of_motion": {
+        "full": "From horizontal body position to maximum knee extension that can be controlled",
+        "critical_point": "Maintain straight body line throughout, no hip breaking",
+        "avoid": "Breaking at hips or uncontrolled lowering"
+      },
+      "form_cues": [
+        "Think of your body as a rigid plank from knees to head",
+        "You're pivoting at the knee joint, not the hips",
+        "Drive your toes down hard into the ankle pad",
+        "This combines hamstring curling and hip extension",
+        "Squeeze your glutes throughout to maintain body position"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Breaking at the hips",
+          "correction": "Keep hips extended, maintain straight line from knees to head",
+          "why_it_matters": "Hip flexion makes exercise easier and reduces hamstring emphasis"
+        },
+        {
+          "mistake": "Lowering too fast or uncontrolled",
+          "correction": "Control the eccentric phase, may need assistance initially",
+          "why_it_matters": "Uncontrolled descent reduces training stimulus"
+        },
+        {
+          "mistake": "Not going through full range",
+          "correction": "Lower as far as you can control, progressively increase range",
+          "why_it_matters": "Limited range reduces effectiveness"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Smooth controlled movement throughout",
+          "why_it_matters": "Momentum reduces muscle tension"
+        },
+        {
+          "mistake": "Hyperextending back at top",
+          "correction": "Maintain neutral spine, straight body line",
+          "why_it_matters": "Hyperextension stresses lower back unnecessarily"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted GHR",
+            "description": "Loop band around torso for upward assistance",
+            "when_to_use": "Building strength toward unassisted GHR"
+          },
+          {
+            "name": "Partner-Assisted GHR",
+            "description": "Partner provides assistance at shoulders",
+            "when_to_use": "Learning movement with help"
+          },
+          {
+            "name": "Eccentric-Only GHR",
+            "description": "Focus on slow lowering, use hands to push back up",
+            "when_to_use": "Building eccentric strength before full movement"
+          },
+          {
+            "name": "Limited Range GHR",
+            "description": "Start with smaller range of motion",
+            "when_to_use": "Building up to full range"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Full Range GHR",
+            "description": "Complete movement through full ROM without assistance",
+            "when_to_use": "Standard goal"
+          },
+          {
+            "name": "Weighted GHR",
+            "description": "Hold weight plate at chest",
+            "when_to_use": "When bodyweight becomes manageable"
+          },
+          {
+            "name": "Banded GHR",
+            "description": "Add resistance band for additional resistance",
+            "when_to_use": "Advanced progression"
+          },
+          {
+            "name": "Pause GHR",
+            "description": "Pause 2-3 seconds at various points",
+            "when_to_use": "Increasing difficulty"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Complete hamstring development", "Athletic performance", "Posterior chain strength", "Advanced hamstring training"],
+        "place_in_workout": "Early to mid-workout when fresh",
+        "pairs_well_with": ["Squats", "RDLs", "Back Extensions"],
+        "rep_ranges": {
+          "strength": "4-8 reps",
+          "hypertrophy": "8-12 reps",
+          "note": "Quality over quantity - perfect form is essential"
+        }
+      },
+      "safety_considerations": [
+        "Very advanced exercise requiring significant strength",
+        "Causes substantial hamstring soreness",
+        "Ensure ankle pads are secured properly",
+        "Most people need assistance initially - that's normal",
+        "One of the best hamstring exercises but requires proper progression",
+        "Excellent for athletic performance and injury prevention"
+      ],
+      "video_explanation_script": "The glute ham raise is one of the most complete hamstring exercises you can do. Position yourself in the GHR machine with your ankles secured and knees on the pad. Start with your body in a straight line parallel to the ground. From here, lower your body forward by extending your knees, keeping your entire body rigid - don't break at the hips. Control the descent with your hamstrings. Then pull yourself back up by flexing your knees and engaging your hamstrings and glutes. Drive your toes down into the ankle pad. The GHR combines both functions of the hamstrings - knee flexion and hip extension - making it incredibly effective. Most people need assistance when starting out, and that's completely normal. This exercise builds bulletproof hamstrings."
+    },
+    {
+      "exercise_id": "hamstring_007",
+      "exercise_name": "Single-Leg Romanian Deadlift",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings", "Gluteus Maximus"],
+        "secondary": ["Erector Spinae", "Gluteus Medius", "Core"],
+        "stabilizers": ["Hip Stabilizers", "Ankle Stabilizers", "Core"]
+      },
+      "movement_pattern": "Single-Leg Hip Hinge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Dumbbell", "Kettlebell", "Barbell", "Cable"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "note": "This exercise appears in both Glutes and Hamstrings libraries as it's highly effective for both muscle groups. Single-leg variation adds stability demands.",
+      "setup": {
+        "description": "Stand on one leg holding weight in opposite hand (optional), other leg ready to extend behind.",
+        "key_points": [
+          "Start with light weight or bodyweight",
+          "Slight bend in standing knee",
+          "Core engaged"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing on one leg with slight knee bend, weight in opposite hand (if using), free leg ready to extend.",
+        "body_alignment": {
+          "head": "Neutral, looking slightly ahead and down",
+          "shoulders": "Packed back and down, level",
+          "spine": "Neutral",
+          "hips": "Level, square",
+          "standing_knee": "Slight bend, soft",
+          "standing_foot": "Flat, tripod foot position",
+          "free_leg": "Slightly behind, ready to extend"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Hinge at hip while extending free leg behind, lowering torso toward parallel",
+          "cues": [
+            "Push your hips back",
+            "Extend your back leg like kicking a door closed",
+            "Keep hips square to the ground",
+            "Lower weight toward standing foot",
+            "Feel stretch in standing leg hamstring"
+          ],
+          "end_position": "Torso parallel to ground, back leg extended in line with torso, standing leg has maintained slight knee bend"
+        },
+        "concentric_phase": {
+          "description": "Drive through standing heel to return to upright position",
+          "cues": [
+            "Push the floor away",
+            "Drive hips forward",
+            "Squeeze hamstring and glute of standing leg",
+            "Return back leg to ground",
+            "Stand tall"
+          ],
+          "end_position": "Standing upright on one leg, other foot can touch down lightly or remain elevated"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace before hinge, hold breath during descent, exhale on return",
+        "alternative": "Inhale on descent, exhale on ascent"
+      },
+      "tempo": {
+        "standard": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec balance)",
+        "hypertrophy_focus": "4-2-2-1 (4 sec down, 2 sec pause, 2 sec up, 1 sec squeeze)",
+        "balance_focus": "2-2-2-2 (2 sec down, 2 sec pause, 2 sec up, 2 sec balance)"
+      },
+      "range_of_motion": {
+        "full": "Torso reaches parallel to ground while maintaining neutral spine",
+        "critical_point": "Only go as low as you can maintain balance and neutral spine",
+        "avoid": "Rounding spine or opening hips to compensate"
+      },
+      "form_cues": [
+        "Imagine you're a teeter-totter",
+        "Back leg and torso should move as one unit",
+        "Keep both hip bones pointing down toward the ground",
+        "Think about showing the bottom of your shoe to the person behind you",
+        "Weight travels straight down toward standing foot"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips opening/rotating",
+          "correction": "Keep hips square to ground, think about keeping both hip bones level",
+          "why_it_matters": "Hip rotation reduces hamstring activation and indicates lack of stability"
+        },
+        {
+          "mistake": "Rounding the back",
+          "correction": "Only go as low as you can maintain neutral spine",
+          "why_it_matters": "Spinal flexion increases injury risk"
+        },
+        {
+          "mistake": "Bending standing knee too much",
+          "correction": "Maintain slight bend in knee, don't let it continue to bend",
+          "why_it_matters": "Excessive knee bend turns it into a squat movement"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Control both descent and ascent, pause at bottom",
+          "why_it_matters": "Momentum reduces muscle activation and balance challenge"
+        },
+        {
+          "mistake": "Not extending back leg",
+          "correction": "Extend back leg fully in line with torso",
+          "why_it_matters": "Back leg extension helps maintain hip position and balance"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Kickstand RDL",
+            "description": "Keep back toe on ground for light support",
+            "when_to_use": "Learning single-leg balance while maintaining pattern"
+          },
+          {
+            "name": "Supported Single-Leg RDL",
+            "description": "Hold onto wall or rack with free hand",
+            "when_to_use": "Building balance and strength before unsupported version"
+          },
+          {
+            "name": "Shallow Single-Leg RDL",
+            "description": "Reduce range of motion initially",
+            "when_to_use": "Building stability and strength gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Single-Leg RDL",
+            "description": "Hold dumbbell in opposite hand from standing leg",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Single-Leg RDL",
+            "description": "Hold barbell with both hands",
+            "when_to_use": "Advanced variation for increased load"
+          },
+          {
+            "name": "Deficit Single-Leg RDL",
+            "description": "Stand on small platform",
+            "when_to_use": "Advanced, increasing range of motion"
+          },
+          {
+            "name": "Single-Leg RDL to Row",
+            "description": "Add a row at bottom position",
+            "when_to_use": "Adding upper back work"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral hamstring strength", "Balance and stability", "Addressing imbalances", "Functional movement"],
+        "place_in_workout": "Mid-workout as accessory movement",
+        "pairs_well_with": ["Squats", "Lunges", "Leg Curls"],
+        "rep_ranges": {
+          "strength": "5-8 reps per leg",
+          "hypertrophy": "8-12 reps per leg",
+          "balance": "6-10 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Master bilateral RDL before attempting single-leg",
+        "Start with bodyweight or very light weight",
+        "Use support initially if needed",
+        "Stop if unable to maintain form",
+        "Not ideal during acute lower back issues"
+      ],
+      "video_explanation_script": "The single-leg RDL is one of the most challenging and rewarding exercises for your hamstrings and balance. Stand on one leg with a slight bend in your knee. From here, push your hips back as you hinge forward, extending your free leg behind you. Think of your torso and back leg as one unit - they move together. Keep your hips square to the ground; don't let them open up. Lower down until your torso is about parallel to the ground, feeling a deep stretch in your hamstring. Then drive through your heel to return to standing, squeezing your hamstring and glute at the top. This exercise builds unilateral strength, improves balance, and addresses any imbalances between legs."
+    },
+    {
+      "exercise_id": "hamstring_008",
+      "exercise_name": "Standing Leg Curl",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings (working leg)"],
+        "secondary": ["Gastrocnemius"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Standing leg muscles"]
+      },
+      "movement_pattern": "Single-Leg Knee Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Standing Leg Curl Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand in machine on one leg, position pad against back of working leg's lower calf, adjust thigh pad against front of working thigh.",
+        "key_points": [
+          "Standing leg planted firmly",
+          "Working leg's knee aligned with machine pivot",
+          "Pad positioned on lower calf of working leg"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing on one leg in machine, working leg extended behind with pad against lower calf, thigh pad supporting front of thigh.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back, holding handles for support",
+          "spine": "Neutral, upright or slight forward lean",
+          "hips": "Level, square",
+          "standing_leg": "Planted firmly, slight knee bend",
+          "working_leg": "Extended behind, pad against lower calf"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl working leg up by bending knee, bringing heel toward glute",
+          "cues": [
+            "Curl your heel to your glute",
+            "Squeeze your hamstring hard",
+            "Keep hips level and still",
+            "Don't lean or rotate",
+            "Control the movement"
+          ],
+          "end_position": "Working leg curled up with heel near glute, hamstring fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower working leg back to extended position with control",
+          "cues": [
+            "Control the descent",
+            "Don't let weight drop",
+            "Maintain hamstring tension",
+            "Full extension at bottom"
+          ],
+          "end_position": "Working leg returned to extended position"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during curl (concentric), inhale during descent (eccentric)",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "control_focus": "1-2-3-0 (1 sec up, 2 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full leg extension to maximum knee flexion",
+        "critical_point": "Full contraction with squeeze at top, complete extension at bottom",
+        "avoid": "Partial range or hip movement"
+      },
+      "form_cues": [
+        "Think about pulling your heel to your butt",
+        "Your hips should stay completely still - no swinging",
+        "The standing leg is just for balance, all work is in the curling leg",
+        "Squeeze at the top like you're trying to cramp your hamstring (but don't)",
+        "Keep your body stable - this isolates the hamstring"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hip rotation or swinging",
+          "correction": "Keep hips square and still, no body movement",
+          "why_it_matters": "Hip movement reduces hamstring isolation and uses momentum"
+        },
+        {
+          "mistake": "Leaning forward excessively",
+          "correction": "Maintain upright or slight forward lean, stay stable",
+          "why_it_matters": "Excessive lean changes exercise mechanics"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Curl all the way up and extend fully down",
+          "why_it_matters": "Partial ROM limits hamstring development"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Slow controlled movement throughout",
+          "why_it_matters": "Momentum reduces muscle tension"
+        },
+        {
+          "mistake": "Standing leg doing extra work",
+          "correction": "Keep standing leg relaxed and stable, focus on working leg",
+          "why_it_matters": "Indicates poor stability or too much weight"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Weight Standing Curl",
+            "description": "Reduce weight to perfect form",
+            "when_to_use": "Learning movement or building mind-muscle connection"
+          },
+          {
+            "name": "Supported Standing Curl",
+            "description": "Use handles for additional stability support",
+            "when_to_use": "Building balance and coordination"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Eccentric-Emphasized Standing Curl",
+            "description": "4-5 second eccentric phase",
+            "when_to_use": "Maximizing hypertrophy stimulus"
+          },
+          {
+            "name": "Pause Rep Standing Curl",
+            "description": "Pause 2-3 seconds at full contraction",
+            "when_to_use": "Increasing time under tension"
+          },
+          {
+            "name": "Iso-Hold Standing Curl",
+            "description": "Hold at various positions for 10-20 seconds",
+            "when_to_use": "Building isometric strength"
+          },
+          {
+            "name": "21s Standing Curl",
+            "description": "7 bottom half, 7 top half, 7 full range",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral hamstring isolation", "Addressing imbalances", "Variety in hamstring training", "Finishing exercise"],
+        "place_in_workout": "After compound movements as isolation work",
+        "pairs_well_with": ["RDLs", "Good Mornings", "Squats"],
+        "rep_ranges": {
+          "strength": "8-12 reps per leg",
+          "hypertrophy": "12-20 reps per leg",
+          "endurance": "20-30 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Good for identifying and addressing imbalances",
+        "Can cause hamstring cramping - stay hydrated",
+        "Keep hips stable to protect lower back",
+        "Excellent variation for complete hamstring development"
+      ],
+      "video_explanation_script": "The standing leg curl is a great unilateral variation for hamstring development. Stand in the machine on one leg with the pad positioned against your lower calf on your working leg. Hold the handles for support. From this extended position, curl your heel up toward your glute by bending your knee. Keep your hips completely still - don't rotate or swing. Squeeze your hamstring hard at the top. Then control the weight back down to full extension. The key is keeping your body stable throughout - all the movement should come from your knee flexing. This single-leg variation is excellent for identifying and fixing any imbalances between your legs."
+    },
+    {
+      "exercise_id": "hamstring_009",
+      "exercise_name": "Swiss Ball Hamstring Curl",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings"],
+        "secondary": ["Gluteus Maximus", "Calves"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Lower Back"]
+      },
+      "movement_pattern": "Knee Flexion with Hip Extension",
+      "movement_type": "Bodyweight Compound",
+      "equipment": {
+        "required": ["Swiss Ball (Stability Ball)"],
+        "optional": ["Mat for comfort"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Lie on back with heels on top of Swiss ball, arms at sides on ground for stability.",
+        "key_points": [
+          "Ball size matters - should allow knees to bend to 90 degrees when pulled in",
+          "Start with hips on ground",
+          "Arms provide stability"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on back with heels on ball, legs extended, hips lifted off ground, arms at sides palms down.",
+        "body_alignment": {
+          "head": "Neutral on ground",
+          "shoulders": "Flat on ground, arms extended at sides",
+          "spine": "Neutral, hips lifted",
+          "hips": "Lifted, forming line with torso and legs",
+          "knees": "Extended or slightly bent",
+          "heels": "On top of ball, feet flexed or neutral"
+        }
+      },
+      "execution": {
+        "bridge_and_curl": {
+          "description": "Lift hips and curl ball toward glutes by bending knees",
+          "cues": [
+            "Drive hips up first",
+            "Then curl the ball toward you with your heels",
+            "Keep hips elevated throughout",
+            "Squeeze hamstrings and glutes",
+            "Pull ball as close as possible"
+          ],
+          "end_position": "Hips high, knees bent, ball rolled close to glutes, body forming steep angle"
+        },
+        "extend": {
+          "description": "Extend legs to roll ball back out while keeping hips elevated",
+          "cues": [
+            "Control the ball as it rolls out",
+            "Keep hips up - don't let them drop",
+            "Maintain tension in hamstrings",
+            "Full extension"
+          ],
+          "end_position": "Legs extended, hips still elevated, ball rolled out"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during curl, inhale during extension",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec curl, 1 sec squeeze, 2 sec extend, 1 sec hold bridge)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec curl, 2 sec squeeze, 3 sec extend, 1 sec hold)",
+        "endurance_focus": "Quick controlled reps maintaining constant hip elevation"
+      },
+      "range_of_motion": {
+        "full": "From legs extended to ball pulled in with knees at 90 degrees or less",
+        "critical_point": "Maintain elevated hips throughout entire set",
+        "avoid": "Hips dropping during movement"
+      },
+      "form_cues": [
+        "Think about pulling the ball toward you with your heels",
+        "Your hips should stay high the entire time",
+        "Squeeze your glutes to keep hips up",
+        "The ball will want to roll away - control it",
+        "This combines hip extension and knee flexion for complete hamstring work"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips dropping during movement",
+          "correction": "Keep hips elevated throughout entire set, squeeze glutes",
+          "why_it_matters": "Dropping hips reduces hamstring and glute activation"
+        },
+        {
+          "mistake": "Using arms to push up",
+          "correction": "Arms provide stability only, not primary support",
+          "why_it_matters": "Over-relying on arms reduces leg muscle activation"
+        },
+        {
+          "mistake": "Not pulling ball close enough",
+          "correction": "Curl until knees are at 90 degrees or less",
+          "why_it_matters": "Partial range limits hamstring development"
+        },
+        {
+          "mistake": "Ball rolling side to side",
+          "correction": "Keep ball moving in straight line, both legs working evenly",
+          "why_it_matters": "Instability indicates imbalances or lack of control"
+        },
+        {
+          "mistake": "Going too fast",
+          "correction": "Control both the curl and the extension",
+          "why_it_matters": "Speed reduces muscle tension and balance challenge"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Leg Ball Bridge Hold",
+            "description": "Just hold bridge position with one leg elevated",
+            "when_to_use": "Building base strength and stability"
+          },
+          {
+            "name": "Ball Hip Thrust",
+            "description": "Just lift and lower hips without curling",
+            "when_to_use": "Learning to maintain hip elevation"
+          },
+          {
+            "name": "Bent-Knee Swiss Ball Curl",
+            "description": "Start with knees pre-bent, smaller curl range",
+            "when_to_use": "Building up to full range"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Leg Swiss Ball Curl",
+            "description": "Perform with one leg, other leg elevated",
+            "when_to_use": "Advanced unilateral variation"
+          },
+          {
+            "name": "Elevated Swiss Ball Curl",
+            "description": "Place shoulders on bench for increased range",
+            "when_to_use": "Increasing difficulty"
+          },
+          {
+            "name": "Weighted Swiss Ball Curl",
+            "description": "Place weight plate on hips",
+            "when_to_use": "Advanced loading option"
+          },
+          {
+            "name": "Swiss Ball Curl with Hip Thrust",
+            "description": "Lower and raise hips between curls",
+            "when_to_use": "Adding glute emphasis"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Hamstring and glute integration", "Core stability", "Bodyweight hamstring training", "Home workouts"],
+        "place_in_workout": "Mid to late workout as accessory or burnout work",
+        "pairs_well_with": ["RDLs", "Squats", "Planks"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Generally very safe",
+        "Requires basic core and hamstring strength",
+        "Can cause hamstring cramping - hydrate well",
+        "Ball must be properly inflated and non-slip surface",
+        "Excellent for home training and athletic development"
+      ],
+      "video_explanation_script": "The Swiss ball hamstring curl is an excellent bodyweight exercise for building strong hamstrings. Lie on your back with your heels on top of a stability ball and your arms at your sides. Start by lifting your hips off the ground, forming a straight line from your shoulders to your heels. From this elevated position, pull the ball toward you by bending your knees and curling with your heels. Your hips should stay up the entire time - don't let them drop. Pull the ball in as close as you can, squeezing your hamstrings and glutes. Then control the ball as you extend your legs back out. The instability of the ball adds a great challenge and forces your hamstrings to work hard throughout the entire range."
+    },
+    {
+      "exercise_id": "hamstring_010",
+      "exercise_name": "Stiff-Leg Deadlift",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings", "Gluteus Maximus"],
+        "secondary": ["Erector Spinae", "Lats"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Hip Hinge with Straighter Legs",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "Lifting Straps", "Platform for Deficit"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand with barbell at mid-shin height (on ground or pulling from hang), feet hip-width apart.",
+        "key_points": [
+          "Can be performed from ground (like deadlift) or from hang (like RDL)",
+          "Less knee bend than RDL",
+          "Feet hip-width apart"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing tall with barbell at hip level (from hang) or bent over to barbell on ground, minimal knee bend.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Packed back and down",
+          "spine": "Neutral",
+          "hips": "Level",
+          "knees": "Very slight bend, nearly straight",
+          "feet": "Hip-width, weight through mid-foot"
+        },
+        "grip": "Overhand or mixed grip, hands just outside thighs"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Push hips back while maintaining nearly straight legs, lowering bar toward ground",
+          "cues": [
+            "Keep legs nearly straight",
+            "Push hips way back",
+            "Feel intense hamstring stretch",
+            "Bar travels down front of legs",
+            "Maintain neutral spine"
+          ],
+          "end_position": "Torso hinged forward, bar at mid-shin or below, intense hamstring stretch, knees nearly straight"
+        },
+        "concentric_phase": {
+          "description": "Drive hips forward to return to standing",
+          "cues": [
+            "Drive hips through",
+            "Squeeze glutes at top",
+            "Keep bar close",
+            "Stand tall",
+            "Maintain minimal knee bend"
+          ],
+          "end_position": "Standing upright, hips fully extended, bar at hips"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace before descent, hold during descent, exhale on ascent",
+        "alternative": "Continuous breathing for lighter weights"
+      },
+      "tempo": {
+        "standard": "3-1-1-1 (3 sec down, 1 sec pause, 1 sec up, 1 sec stand)",
+        "hypertrophy_focus": "4-2-2-1 (4 sec down, 2 sec pause, 2 sec up, 1 sec stand)",
+        "stretch_emphasis": "3-3-2-1 (3 sec down, 3 sec hold stretch, 2 sec up, 1 sec stand)"
+      },
+      "range_of_motion": {
+        "full": "Bar descends to mid-shin or ground while maintaining neutral spine and straight legs",
+        "critical_point": "Maximum hamstring stretch with minimal knee bend",
+        "avoid": "Bending knees significantly or rounding back"
+      },
+      "form_cues": [
+        "The straighter your legs, the more hamstring stretch you'll feel",
+        "This is like an RDL with even less knee bend",
+        "You'll feel this deep in your hamstrings, especially at the insertion near the glutes",
+        "Keep the bar path vertical and close to your body",
+        "Only go as low as your hamstring flexibility allows with good form"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding the spine",
+          "correction": "Maintain neutral spine, only hinge as far as flexibility allows",
+          "why_it_matters": "Spinal flexion under load increases injury risk"
+        },
+        {
+          "mistake": "Bending knees too much",
+          "correction": "Keep knees nearly locked with just micro-bend",
+          "why_it_matters": "Excessive knee bend turns it into an RDL, reducing hamstring stretch"
+        },
+        {
+          "mistake": "Going too deep beyond flexibility",
+          "correction": "Only descend as far as you can maintain neutral spine",
+          "why_it_matters": "Compensatory rounding is dangerous"
+        },
+        {
+          "mistake": "Bar drifting away from body",
+          "correction": "Keep bar close to legs throughout movement",
+          "why_it_matters": "Bar drift increases back stress"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than RDL due to reduced mechanical advantage",
+          "why_it_matters": "Too much weight prevents proper form and stretch"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Stiff-Leg Deadlift",
+            "description": "Use dumbbells at sides",
+            "when_to_use": "Learning movement or building flexibility"
+          },
+          {
+            "name": "Slightly More Knee Bend (RDL)",
+            "description": "Allow more knee bend if hamstring flexibility is limited",
+            "when_to_use": "Working on flexibility while building strength"
+          },
+          {
+            "name": "Elevated Stiff-Leg Deadlift",
+            "description": "Start from elevated position (blocks)",
+            "when_to_use": "Reducing range for flexibility limitations"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Deficit Stiff-Leg Deadlift",
+            "description": "Stand on platform for increased range",
+            "when_to_use": "Advanced flexibility and strength"
+          },
+          {
+            "name": "Snatch Grip Stiff-Leg Deadlift",
+            "description": "Wide grip for increased range and upper back work",
+            "when_to_use": "Advanced variation"
+          },
+          {
+            "name": "Pause Stiff-Leg Deadlift",
+            "description": "Pause 3-5 seconds at maximum stretch",
+            "when_to_use": "Emphasizing stretch position"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Maximum hamstring stretch", "Hamstring flexibility and strength", "Targeting hamstring-glute tie-in", "Advanced hamstring development"],
+        "place_in_workout": "Mid-workout after primary movements",
+        "pairs_well_with": ["Squats", "Leg Curls", "Romanian Deadlifts"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "flexibility": "10-15 reps with lighter weight"
+        }
+      },
+      "safety_considerations": [
+        "Requires excellent hamstring flexibility",
+        "Use lighter weight than RDL",
+        "Never sacrifice neutral spine for depth",
+        "Not ideal for those with current lower back issues",
+        "Excellent for hamstring development when performed correctly",
+        "More advanced than RDL due to reduced mechanical advantage"
+      ],
+      "video_explanation_script": "The stiff-leg deadlift is an advanced hamstring exercise that creates an incredible stretch. The key difference from an RDL is that your legs stay nearly straight - just a micro-bend in the knees. Start standing tall with the barbell at your hips. Push your hips back as you lower the bar down the front of your legs. Keep your legs almost completely straight. You should feel an intense stretch in your hamstrings, especially where they connect to your glutes. Only go as low as you can while maintaining a flat back - typically mid-shin or below. Then drive your hips forward to stand back up. This exercise requires good hamstring flexibility and should be loaded lighter than an RDL. The increased range and reduced knee bend make it exceptional for hamstring development."
+    },
+    {
+      "exercise_id": "hamstring_011",
+      "exercise_name": "Razor Curl (Eccentric Leg Curl)",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings"],
+        "secondary": ["Gastrocnemius"],
+        "stabilizers": ["Core", "Hip Flexors"]
+      },
+      "movement_pattern": "Eccentric Knee Extension",
+      "movement_type": "Bodyweight Isolation",
+      "equipment": {
+        "required": ["Barbell in rack at ground level OR Partner to hold ankles"],
+        "optional": ["Pad for knees", "Resistance Band for assistance"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Kneel with ankles secured under loaded barbell or held by partner, start in kneeling position with hands ready to catch fall.",
+        "key_points": [
+          "Similar setup to Nordic curl but emphasizing eccentric knee extension",
+          "Ankles must be very secure",
+          "Need pad for knee comfort"
+        ]
+      },
+      "starting_position": {
+        "description": "Kneeling upright with ankles secured, hands at chest ready to catch, body forming straight line from knees to head.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back",
+          "spine": "Neutral, body in straight line",
+          "hips": "Extended, aligned with body",
+          "knees": "Bent, on pad",
+          "ankles": "Secured under bar or by partner"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "From kneeling position, slowly extend knees to lower body toward ground, resisting with hamstrings",
+          "cues": [
+            "Start in tall kneeling",
+            "Slowly extend your knees",
+            "Lower with maximum control",
+            "Resist the entire way down",
+            "Keep body in straight line",
+            "Fight the descent as long as possible"
+          ],
+          "end_position": "Body lowered toward ground, knees extended, hamstrings maximally stretched, controlled position before catching"
+        },
+        "catch_and_reset": {
+          "description": "Catch with hands when can no longer control, return to kneeling position",
+          "cues": [
+            "Catch yourself safely with hands",
+            "Return to kneeling position to reset",
+            "Prepare for next rep"
+          ],
+          "end_position": "Reset to tall kneeling position"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale before lowering, hold or exhale slowly during descent, breathe freely during reset",
+        "alternative": "Continuous controlled breathing"
+      },
+      "tempo": {
+        "eccentric_emphasis": "5-10+ seconds lowering (as slow as possible)",
+        "beginner": "3-5 seconds with band assistance",
+        "advanced": "10+ seconds pure eccentric control"
+      },
+      "range_of_motion": {
+        "full": "From tall kneeling to body fully extended/lowered toward ground",
+        "critical_point": "Control as much of the eccentric range as possible",
+        "avoid": "Uncontrolled falling or breaking at hips"
+      },
+      "form_cues": [
+        "This is the reverse of a leg curl - you're fighting to control knee extension",
+        "Every inch you can control is building strength",
+        "The goal is to lower as slowly as possible",
+        "Your hamstrings should be screaming by the end",
+        "Keep your hips extended - don't break at the hips"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Breaking at the hips",
+          "correction": "Maintain extended hips, keep body in straight line",
+          "why_it_matters": "Hip flexion makes exercise easier and reduces hamstring emphasis"
+        },
+        {
+          "mistake": "Falling too quickly",
+          "correction": "Resist maximally throughout descent, use assistance if needed",
+          "why_it_matters": "Uncontrolled descent reduces training stimulus"
+        },
+        {
+          "mistake": "Not extending knees fully",
+          "correction": "Allow knees to extend through full range",
+          "why_it_matters": "Partial range limits effectiveness"
+        },
+        {
+          "mistake": "Unsafe ankle securing",
+          "correction": "Ensure ankles are locked in place securely",
+          "why_it_matters": "Ankle slipping is dangerous"
+        },
+        {
+          "mistake": "Attempting too many reps initially",
+          "correction": "Start with very low reps (3-5), expect severe soreness",
+          "why_it_matters": "This causes extreme DOMS - must progress conservatively"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Razor Curl",
+            "description": "Use resistance band for upward assistance",
+            "when_to_use": "Building strength toward unassisted version"
+          },
+          {
+            "name": "Partial Range Razor Curl",
+            "description": "Only lower partway initially",
+            "when_to_use": "Building eccentric strength gradually"
+          },
+          {
+            "name": "Partner-Assisted Razor Curl",
+            "description": "Partner provides assistance during lowering",
+            "when_to_use": "Learning movement with help"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Full Range Razor Curl",
+            "description": "Lower all the way to ground with control",
+            "when_to_use": "Advanced goal progression"
+          },
+          {
+            "name": "Tempo Razor Curl",
+            "description": "Aim for 10+ second eccentrics",
+            "when_to_use": "Maximizing eccentric strength"
+          },
+          {
+            "name": "Weighted Razor Curl",
+            "description": "Hold light weight plate at chest",
+            "when_to_use": "Elite level progression"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Eccentric hamstring strength", "Advanced hamstring development", "Injury prevention", "Breaking through plateaus"],
+        "place_in_workout": "Early in workout when fresh, before other hamstring work",
+        "pairs_well_with": ["RDLs", "Squats", "Hip Thrusts"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "5-8 reps",
+          "note": "Very low reps, extreme eccentric focus"
+        }
+      },
+      "safety_considerations": [
+        "Extremely advanced exercise",
+        "Causes severe muscle soreness (DOMS)",
+        "Start with minimal volume (1-2 sets of 3-5 reps max)",
+        "Ankles must be extremely secure",
+        "Wait at least 7-10 days before repeating initially",
+        "Excellent for eccentric hamstring strength when progressed properly",
+        "Not for beginners under any circumstances"
+      ],
+      "video_explanation_script": "The razor curl is an extremely advanced hamstring exercise focusing on eccentric strength. Kneel with your ankles secured under a loaded barbell or held by a partner. Start in a tall kneeling position. From here, slowly extend your knees, lowering your body toward the ground. The key is to resist this descent with your hamstrings for as long as possible - fight every inch of the way down. Your hamstrings are trying to stop your knees from straightening. Lower as slowly as you can control, then catch yourself with your hands when you can't resist anymore. Return to kneeling and repeat. This exercise creates extreme hamstring soreness, so start with very low volume - maybe just 3-5 reps total. It's incredibly effective but must be progressed very carefully."
+    },
+    {
+      "exercise_id": "hamstring_012",
+      "exercise_name": "Kettlebell Swing",
+      "muscle_group_primary": "Hamstrings",
+      "muscles_targeted": {
+        "primary": ["Hamstrings", "Gluteus Maximus"],
+        "secondary": ["Erector Spinae", "Core", "Shoulders"],
+        "stabilizers": ["Lats", "Grip", "Core"]
+      },
+      "movement_pattern": "Explosive Hip Hinge",
+      "movement_type": "Compound/Power",
+      "equipment": {
+        "required": ["Kettlebell"],
+        "optional": ["Multiple kettlebell weights"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Stand with feet shoulder-width apart, kettlebell on ground slightly in front of feet.",
+        "key_points": [
+          "Start with lighter weight to learn hip snap",
+          "Feet shoulder-width or slightly wider",
+          "Kettlebell positioned 12-18 inches in front of feet"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing over kettlebell, hinged forward to grip handle with both hands, arms extended.",
+        "body_alignment": {
+          "head": "Neutral, looking forward and slightly down",
+          "shoulders": "Packed back, lats engaged",
+          "spine": "Neutral, hinged forward",
+          "hips": "Pushed back, loaded",
+          "knees": "Slight bend",
+          "feet": "Shoulder-width, firmly planted"
+        },
+        "grip": "Both hands on kettlebell handle, overhand grip"
+      },
+      "execution": {
+        "hike_and_swing": {
+          "description": "Hike kettlebell back between legs, then explosively drive hips forward to swing kettlebell up",
+          "cues": [
+            "Hike the kettlebell back like a football snap",
+            "Explosively snap your hips forward",
+            "Squeeze your glutes hard",
+            "Let the kettlebell float - don't lift with arms",
+            "Stand tall at the top",
+            "Kettlebell should reach shoulder height or eye level"
+          ],
+          "peak_position": "Standing fully upright, hips extended, glutes contracted, kettlebell floating at chest/shoulder height, arms extended"
+        },
+        "descent": {
+          "description": "Let kettlebell fall, hinge hips back to absorb momentum",
+          "cues": [
+            "Let it fall - don't pull it down",
+            "Hinge hips back to absorb the weight",
+            "Keep arms straight",
+            "Hamstrings and hips control the descent",
+            "Prepare for next rep"
+          ],
+          "end_position": "Hips hinged back, kettlebell between legs, ready for next explosive hip snap"
+        }
+      },
+      "breathing": {
+        "pattern": "Quick exhale/breath behind teeth during hip snap (power breathing), inhale during descent",
+        "alternative": "Exhale forcefully during swing, inhale during hinge"
+      },
+      "tempo": {
+        "standard": "Explosive hip snap, controlled descent, fluid continuous motion",
+        "power_focus": "Maximum explosiveness on hip drive, rhythm",
+        "endurance_focus": "Sustained pace for time or high reps"
+      },
+      "range_of_motion": {
+        "full": "From kettlebell between legs behind body to chest/shoulder height",
+        "critical_point": "Full hip extension with powerful glute squeeze at top",
+        "avoid": "Squatting down or using arms to lift"
+      },
+      "form_cues": [
+        "This is all about the hip snap - explosive hip extension",
+        "Your arms are just ropes - the power comes from your hips",
+        "Think about jumping, but your feet stay on the ground",
+        "The kettlebell should float - if you're lifting with arms, you're doing it wrong",
+        "Squeeze your glutes like you're trying to crack a walnut"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squatting instead of hinging",
+          "correction": "This is a hip hinge movement, not a squat - minimal knee bend",
+          "why_it_matters": "Squatting reduces posterior chain emphasis and power generation"
+        },
+        {
+          "mistake": "Lifting with arms/shoulders",
+          "correction": "Arms stay straight, power comes entirely from hip drive",
+          "why_it_matters": "Arm lifting reduces hamstring/glute work and can cause shoulder fatigue"
+        },
+        {
+          "mistake": "Rounding the back",
+          "correction": "Maintain neutral spine throughout, engage lats",
+          "why_it_matters": "Spinal flexion increases injury risk"
+        },
+        {
+          "mistake": "Leaning back at top",
+          "correction": "Stand tall with neutral spine, don't hyperextend",
+          "why_it_matters": "Hyperextension compresses lumbar spine"
+        },
+        {
+          "mistake": "Not using full hip extension",
+          "correction": "Snap hips fully forward, stand completely upright, squeeze glutes",
+          "why_it_matters": "Partial hip extension limits power and muscle activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Kettlebell Swing",
+            "description": "Start with lighter weight (15-20 lbs for women, 25-35 lbs for men)",
+            "when_to_use": "Learning hip hinge and explosive pattern"
+          },
+          {
+            "name": "Deadstop Kettlebell Swing",
+            "description": "Set kettlebell down between each rep",
+            "when_to_use": "Learning proper hinge position and reset"
+          },
+          {
+            "name": "Russian Kettlebell Swing",
+            "description": "Swing to chest height instead of overhead",
+            "when_to_use": "Standard swing variation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavier Kettlebell Swing",
+            "description": "Progress to heavier kettlebells",
+            "when_to_use": "Building power and strength"
+          },
+          {
+            "name": "American Kettlebell Swing",
+            "description": "Swing overhead to full lockout",
+            "when_to_use": "Advanced variation requiring more power"
+          },
+          {
+            "name": "Single-Arm Kettlebell Swing",
+            "description": "Swing with one arm at a time",
+            "when_to_use": "Adding anti-rotation and unilateral work"
+          },
+          {
+            "name": "Alternating Kettlebell Swing",
+            "description": "Switch hands at top of each swing",
+            "when_to_use": "Advanced coordination and conditioning"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Explosive hip power", "Posterior chain conditioning", "Athletic performance", "Fat loss and conditioning"],
+        "place_in_workout": "Early to mid-workout for power, or end for conditioning",
+        "pairs_well_with": ["Squats", "Deadlifts", "Carries"],
+        "rep_ranges": {
+          "power": "8-12 reps",
+          "conditioning": "15-30 reps or timed sets (30-60 seconds)",
+          "endurance": "50-100+ reps or longer timed sets"
+        }
+      },
+      "safety_considerations": [
+        "Learn proper hip hinge before adding weight",
+        "Start with lighter weight than you think",
+        "Requires good thoracic mobility",
+        "Maintain neutral spine throughout",
+        "Excellent for athletic power development",
+        "Great for conditioning with minimal impact on knees"
+      ],
+      "video_explanation_script": "The kettlebell swing is a powerful exercise for building explosive hip strength and conditioning. Set up with the kettlebell on the ground in front of you, feet about shoulder-width apart. Hinge forward and grip the kettlebell with both hands. From here, hike the kettlebell back between your legs like snapping a football. Then explosively drive your hips forward, snapping them through to standing. The kettlebell should float up to about chest or shoulder height - your arms are just along for the ride. At the top, you should be standing completely upright with your glutes squeezed hard. Let the kettlebell fall back down and hinge your hips to absorb it. This is all about explosive hip power. The swing builds powerful hamstrings and glutes while also providing an amazing conditioning workout."
+    }
+  ]
+}

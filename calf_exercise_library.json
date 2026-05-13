@@ -1,0 +1,1469 @@
+{
+  "muscle_group": "Calves",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Gastrocnemius",
+        "function": "Plantar flexion (pointing toes), knee flexion",
+        "description": "Two-headed muscle (medial and lateral heads), most visible calf muscle, crosses both ankle and knee joints"
+      },
+      {
+        "name": "Soleus",
+        "function": "Plantar flexion (pointing toes)",
+        "description": "Deeper calf muscle beneath gastrocnemius, only crosses ankle joint, highly fatigue-resistant"
+      },
+      {
+        "name": "Tibialis Anterior",
+        "function": "Dorsiflexion (pulling toes up), foot inversion",
+        "description": "Shin muscle, antagonist to calves, important for balance and injury prevention"
+      }
+    ],
+    "key_concepts": {
+      "knee_position_matters": "Straight knee emphasizes gastrocnemius (crosses knee), bent knee emphasizes soleus (doesn't cross knee)",
+      "training_implications": "Need both standing (gastroc) and seated (soleus) calf work for complete development",
+      "high_volume_responsive": "Calves respond well to high volume and frequency due to their endurance nature"
+    }
+  },
+  "exercises": [
+    {
+      "exercise_id": "calf_001",
+      "exercise_name": "Standing Calf Raise",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius"],
+        "secondary": ["Soleus"],
+        "stabilizers": ["Core", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Plantar Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Standing Calf Raise Machine OR Step/Platform"],
+        "optional": ["Dumbbells", "Barbell", "Smith Machine"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Position shoulders under pads of standing calf raise machine, or stand on elevated platform with heels hanging off edge.",
+        "key_points": [
+          "Balls of feet on platform, heels free to move through full range",
+          "Stand with feet hip-width apart, toes forward or slightly out",
+          "Knees locked or nearly locked throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with balls of feet on platform, heels dropped below level of toes in stretched position.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Under pads if using machine, or holding weights",
+          "spine": "Neutral, upright",
+          "hips": "Neutral, directly over feet",
+          "knees": "Locked or nearly locked (very slight bend acceptable)",
+          "ankles": "Dorsiflexed, heels dropped below toes"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push through balls of feet to raise heels as high as possible",
+          "cues": [
+            "Drive up onto your toes",
+            "Get as high as you can",
+            "Squeeze your calves at the top",
+            "Think about reaching for the ceiling with your heels",
+            "Hold the peak contraction"
+          ],
+          "end_position": "On highest point of toes, calves fully contracted, heels as high as possible"
+        },
+        "eccentric_phase": {
+          "description": "Lower heels back down with control to deep stretch",
+          "cues": [
+            "Control the descent",
+            "Drop your heels below the platform",
+            "Feel the stretch in your calves",
+            "Get a deep stretch at the bottom"
+          ],
+          "end_position": "Heels dropped below platform level, deep calf stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on the raise (concentric), inhale on the lower (eccentric)",
+        "alternative": "Continuous rhythmic breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "explosive": "X-1-2-1 (explosive up, 1 sec squeeze, 2 sec down, 1 sec stretch)"
+      },
+      "range_of_motion": {
+        "full": "From maximum dorsiflexion (heels below toes) to maximum plantar flexion (highest on toes)",
+        "critical_point": "Both extreme stretch at bottom and peak contraction at top are essential",
+        "avoid": "Partial range of motion or bouncing"
+      },
+      "form_cues": [
+        "Think about trying to look taller - rise up as high as possible",
+        "Pause and squeeze at the top like you're cramping your calves",
+        "The stretch at the bottom is just as important as the contraction at the top",
+        "Keep your knees locked to maximize gastrocnemius activation",
+        "This is a slow, controlled movement with extreme range"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bending knees during movement",
+          "correction": "Keep knees locked or nearly locked throughout entire set",
+          "why_it_matters": "Knee bending reduces gastrocnemius activation and shifts emphasis to soleus"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Drop heels as low as possible, rise as high as possible",
+          "why_it_matters": "Partial ROM dramatically reduces calf development"
+        },
+        {
+          "mistake": "Bouncing at the bottom",
+          "correction": "Pause briefly in stretched position, control the movement",
+          "why_it_matters": "Bouncing uses stretch reflex instead of muscle contraction"
+        },
+        {
+          "mistake": "Not pausing at the top",
+          "correction": "Hold peak contraction for 1-2 seconds, squeeze hard",
+          "why_it_matters": "Peak contraction is critical for calf development"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use weight that allows perfect form and full ROM",
+          "why_it_matters": "Ego weight prevents full range and proper execution"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Calf Raise",
+            "description": "Perform on step or ground without additional weight",
+            "when_to_use": "Learning movement pattern or as warm-up"
+          },
+          {
+            "name": "Flat Ground Calf Raise",
+            "description": "Perform on flat ground (reduced stretch)",
+            "when_to_use": "No equipment available or building base strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Leg Standing Calf Raise",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Increasing intensity and addressing imbalances"
+          },
+          {
+            "name": "Paused Standing Calf Raise",
+            "description": "Pause 3-5 seconds at top and bottom",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "1.5 Rep Calf Raise",
+            "description": "Full up, half down, full up, full down = 1 rep",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Drop Set Calf Raise",
+            "description": "Go to failure, reduce weight, continue",
+            "when_to_use": "Advanced hypertrophy technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Gastrocnemius development", "Overall calf mass", "Calf shape and definition"],
+        "place_in_workout": "Can be done early or late in workout, or on separate days",
+        "pairs_well_with": ["Seated Calf Raises", "Leg workouts", "Any training session"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-50+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise when performed correctly",
+        "Start conservatively to avoid severe calf soreness",
+        "Can cause cramping - stay hydrated",
+        "Generally safe to train frequently (3-6x per week)",
+        "Excellent for calf development and ankle stability"
+      ],
+      "video_explanation_script": "The standing calf raise is the foundation of calf training. Position yourself in the machine with your shoulders under the pads, or stand on a step holding dumbbells. Start with your heels dropped below the level of your toes to get a deep stretch in your calves. From here, drive up onto your toes as high as you possibly can. Squeeze your calves hard at the top and hold for a second. Then control the weight back down to that deep stretch position. The key is using the full range of motion - both the extreme stretch and the peak contraction. Keep your knees locked throughout to maximize gastrocnemius activation. Standing calf raises are essential for building those diamond-shaped calves."
+    },
+    {
+      "exercise_id": "calf_002",
+      "exercise_name": "Seated Calf Raise",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Soleus"],
+        "secondary": ["Gastrocnemius (minimal)"],
+        "stabilizers": []
+      },
+      "movement_pattern": "Plantar Flexion with Bent Knee",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Seated Calf Raise Machine"],
+        "optional": ["Weight Plates on Lap with Board Under Toes"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit in machine with balls of feet on platform, knees under pad, adjust pad to rest on thighs.",
+        "key_points": [
+          "Knees bent at 90 degrees throughout",
+          "Pad should rest comfortably on lower thighs, not knees",
+          "Balls of feet on platform, heels free"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated with knees bent, pad on thighs, balls of feet on platform, heels dropped below platform level.",
+        "body_alignment": {
+          "head": "Neutral",
+          "shoulders": "Relaxed",
+          "spine": "Upright or slight forward lean",
+          "hips": "Seated, 90-degree hip angle",
+          "knees": "Bent at 90 degrees, under pad",
+          "ankles": "Dorsiflexed, heels below platform"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push through balls of feet to raise heels as high as possible",
+          "cues": [
+            "Drive your heels up",
+            "Raise the pad as high as you can",
+            "Squeeze your soleus hard",
+            "Get maximum height",
+            "Hold the contraction"
+          ],
+          "end_position": "Heels raised maximally, on highest point of toes, soleus fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower heels back down with control to deep stretch",
+          "cues": [
+            "Control the descent",
+            "Drop heels below platform level",
+            "Feel the stretch in your soleus",
+            "Maximum stretch at bottom"
+          ],
+          "end_position": "Heels dropped maximally below platform, deep soleus stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on the raise, inhale on the lower",
+        "alternative": "Continuous breathing for high reps"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "pump_focus": "1-2-1-0 (1 sec up, 2 sec squeeze, 1 sec down, continuous)"
+      },
+      "range_of_motion": {
+        "full": "From maximum ankle dorsiflexion to maximum plantar flexion",
+        "critical_point": "Full stretch and full contraction are both essential",
+        "avoid": "Partial range or bouncing"
+      },
+      "form_cues": [
+        "The bent knee position takes the gastrocnemius out and isolates the soleus",
+        "Think about driving your knees up toward the ceiling",
+        "Squeeze at the top and hold it",
+        "The soleus is incredibly strong - don't be afraid of heavier weight",
+        "Focus on feeling the deeper muscle working, not the superficial calf"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not using full range of motion",
+          "correction": "Drop heels as far below platform as possible, raise as high as possible",
+          "why_it_matters": "Partial ROM severely limits soleus development"
+        },
+        {
+          "mistake": "Bouncing at the bottom",
+          "correction": "Pause in stretch position, control the movement",
+          "why_it_matters": "Bouncing uses momentum instead of muscle contraction"
+        },
+        {
+          "mistake": "Not pausing at the top",
+          "correction": "Hold peak contraction for 1-2 seconds",
+          "why_it_matters": "Soleus responds well to sustained contractions"
+        },
+        {
+          "mistake": "Straightening legs during movement",
+          "correction": "Keep knees bent at constant angle throughout",
+          "why_it_matters": "Straightening legs shifts emphasis to gastrocnemius"
+        },
+        {
+          "mistake": "Using too light weight",
+          "correction": "Soleus is very strong, use challenging weight",
+          "why_it_matters": "Soleus needs heavy loading to grow"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Seated Calf Raise",
+            "description": "Perform seated raises without external weight",
+            "when_to_use": "Learning movement or as activation work"
+          },
+          {
+            "name": "DIY Seated Calf Raise",
+            "description": "Sit with weight plates on lap, balls of feet on board/step",
+            "when_to_use": "No machine available"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Seated Calf Raise",
+            "description": "Load with challenging weight",
+            "when_to_use": "Soleus is very strong, can handle heavy loads"
+          },
+          {
+            "name": "Paused Seated Calf Raise",
+            "description": "Pause 3-5 seconds at top and bottom",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Single-Leg Seated Calf Raise",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Addressing imbalances or increasing intensity"
+          },
+          {
+            "name": "Isometric Hold Seated Calf Raise",
+            "description": "Hold at top for extended periods (30-60 seconds)",
+            "when_to_use": "Building endurance and peak contraction strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Soleus development", "Calf thickness and depth", "Complete calf training"],
+        "place_in_workout": "After standing calf raises or any point in workout",
+        "pairs_well_with": ["Standing Calf Raises", "Any leg workout"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-50+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise",
+        "Soleus can handle heavy loads safely",
+        "Less likely to cause cramping than standing raises",
+        "Can be trained frequently",
+        "Essential complement to standing calf work"
+      ],
+      "video_explanation_script": "The seated calf raise is essential for complete calf development because it targets the soleus. Sit in the machine with your knees bent at 90 degrees and the balls of your feet on the platform. The pad should rest on your lower thighs. Start with your heels dropped below the platform for a deep stretch. From here, drive your heels up as high as possible, squeezing hard at the top. Hold that contraction, then control the weight back down to a full stretch. The bent knee position takes the gastrocnemius out of the equation and isolates the soleus - the deep calf muscle. The soleus is incredibly strong and adds thickness to your calves. Don't skip this exercise - you need both standing and seated calf work for complete development."
+    },
+    {
+      "exercise_id": "calf_003",
+      "exercise_name": "Single-Leg Calf Raise",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius"],
+        "secondary": ["Soleus"],
+        "stabilizers": ["Core", "Ankle Stabilizers", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Unilateral Plantar Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Step or Platform"],
+        "optional": ["Dumbbell", "Support for Balance"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand on one leg on edge of step, ball of foot on platform with heel hanging off, hold support for balance.",
+        "key_points": [
+          "Working leg on platform, other leg bent behind",
+          "Hold wall, rack, or use opposite hand for light balance support",
+          "Can hold dumbbell in same-side hand as working leg"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing on one leg on platform, heel dropped below platform level, opposite hand holding support.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Level",
+          "spine": "Neutral, upright",
+          "hips": "Level over working leg",
+          "working_knee": "Locked or nearly locked",
+          "working_ankle": "Dorsiflexed, heel dropped",
+          "non_working_leg": "Bent, foot behind working leg"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive up through ball of foot to maximum height on toes",
+          "cues": [
+            "Drive up as high as possible",
+            "Get onto your highest toe point",
+            "Squeeze your calf hard",
+            "Balance and control throughout",
+            "Hold the peak"
+          ],
+          "end_position": "On highest point of toes, calf fully contracted, balanced"
+        },
+        "eccentric_phase": {
+          "description": "Lower heel back down with control to deep stretch",
+          "cues": [
+            "Control the descent",
+            "Drop heel as far below platform as possible",
+            "Feel the deep stretch",
+            "Maintain balance"
+          ],
+          "end_position": "Heel dropped maximally below platform, deep calf stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "balance_focus": "Slower tempo for increased stability challenge"
+      },
+      "range_of_motion": {
+        "full": "From maximum dorsiflexion to maximum plantar flexion",
+        "critical_point": "Both extreme stretch and peak contraction with single leg",
+        "avoid": "Using other leg for assistance"
+      },
+      "form_cues": [
+        "Use opposite hand for light balance support only",
+        "The working leg should do 100% of the work",
+        "Focus on staying balanced and controlled",
+        "Single-leg work reveals any imbalances between sides",
+        "You'll likely need less or no external weight compared to bilateral"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using support leg for assistance",
+          "correction": "Keep non-working leg completely relaxed and behind you",
+          "why_it_matters": "Assistance from other leg reduces training stimulus"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Drop heel as low as possible, rise as high as possible",
+          "why_it_matters": "Partial ROM limits development"
+        },
+        {
+          "mistake": "Leaning or rotating to compensate",
+          "correction": "Keep body upright and square, hips level",
+          "why_it_matters": "Compensations indicate weakness or imbalance"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Control both phases, maintain balance",
+          "why_it_matters": "Speed reduces effectiveness and balance challenge"
+        },
+        {
+          "mistake": "Using too much hand support",
+          "correction": "Use minimal support, just enough for light balance",
+          "why_it_matters": "Excessive support reduces stability demands"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Assisted Single-Leg Calf Raise",
+            "description": "Use more hand support initially",
+            "when_to_use": "Building single-leg strength and balance"
+          },
+          {
+            "name": "Partial Range Single-Leg Raise",
+            "description": "Reduce ROM initially",
+            "when_to_use": "Building up to full range"
+          },
+          {
+            "name": "Flat Ground Single-Leg Raise",
+            "description": "Perform on flat ground without elevation",
+            "when_to_use": "Building base single-leg strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Single-Leg Calf Raise",
+            "description": "Hold dumbbell in same-side hand as working leg",
+            "when_to_use": "Increasing load once bodyweight is manageable"
+          },
+          {
+            "name": "Minimal Support Single-Leg Raise",
+            "description": "Use just fingertip support for balance",
+            "when_to_use": "Maximizing balance and stability challenge"
+          },
+          {
+            "name": "Single-Leg Calf Raise to Balance Hold",
+            "description": "Hold top position for 5-10 seconds",
+            "when_to_use": "Building isometric strength and balance"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Addressing calf imbalances", "Building unilateral strength", "Improving ankle stability", "Calf development with limited equipment"],
+        "place_in_workout": "After bilateral calf work or as standalone",
+        "pairs_well_with": ["Standing Calf Raises", "Balance work", "Ankle stability exercises"],
+        "rep_ranges": {
+          "strength": "8-15 reps per leg",
+          "hypertrophy": "12-20 reps per leg",
+          "endurance": "20-30+ reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Safe when performed with proper support",
+        "Excellent for identifying imbalances",
+        "Can cause cramping - hydrate well",
+        "Requires basic balance ability",
+        "Great for ankle stability and injury prevention"
+      ],
+      "video_explanation_script": "The single-leg calf raise is excellent for addressing imbalances and building unilateral calf strength. Stand on one leg on the edge of a step with your heel hanging off. Your other leg should be bent and relaxed behind you. Use your opposite hand on a wall or rack for light balance support. From a deep stretch position with your heel dropped below the step, drive up onto your toes as high as you possibly can. Squeeze your calf at the top, then control the descent back to a full stretch. The key is making sure your working leg does all the work - don't push off with your support leg. Single-leg work will quickly reveal any differences between your calves and help you fix them."
+    },
+    {
+      "exercise_id": "calf_004",
+      "exercise_name": "Calf Press on Leg Press Machine",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius"],
+        "secondary": ["Soleus"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Plantar Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Leg Press Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit in leg press machine, extend legs fully, reposition feet so only balls of feet and toes are on bottom edge of platform.",
+        "key_points": [
+          "Legs should be fully extended (knees locked)",
+          "Only balls of feet on platform, heels hanging off",
+          "Feet hip to shoulder-width apart"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated in leg press with legs extended, only balls of feet on lower edge of platform, heels dropped back toward body.",
+        "body_alignment": {
+          "head": "Neutral against headrest",
+          "shoulders": "Against back pad",
+          "spine": "Neutral, full contact with pad",
+          "hips": "Seated, secure",
+          "knees": "Fully extended and locked",
+          "ankles": "Dorsiflexed, heels dropped toward body"
+        },
+        "foot_position": "Balls of feet on bottom edge of platform, heels hanging off"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push platform away by pointing toes, extending ankles maximally",
+          "cues": [
+            "Push the platform away with your toes",
+            "Point your feet hard",
+            "Get maximum calf contraction",
+            "Push as far as you can",
+            "Squeeze and hold"
+          ],
+          "end_position": "Ankles fully plantar flexed, platform pushed away, calves maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Allow platform to come back by flexing ankles, bringing toes toward shins",
+          "cues": [
+            "Control the platform as it comes back",
+            "Pull your toes toward your shins",
+            "Get a deep calf stretch",
+            "Maximum stretch at bottom"
+          ],
+          "end_position": "Ankles maximally dorsiflexed, deep calf stretch, platform close to starting position"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during push (concentric), inhale during stretch (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec push, 1 sec squeeze, 2 sec stretch, 1 sec hold)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec push, 2 sec squeeze, 3 sec stretch, 2 sec hold)",
+        "explosive": "X-1-2-1 (explosive push, 1 sec squeeze, 2 sec stretch, 1 sec hold)"
+      },
+      "range_of_motion": {
+        "full": "From maximum dorsiflexion (toes toward shins) to maximum plantar flexion (toes pointed)",
+        "critical_point": "Both extreme stretch and peak contraction",
+        "avoid": "Bending knees or using leg drive"
+      },
+      "form_cues": [
+        "This is just a calf exercise - your legs shouldn't move at all",
+        "All the motion comes from your ankles",
+        "Think about pushing the platform to the wall behind you",
+        "You can typically load this heavier than standing calf raises",
+        "The angle of the leg press adds unique tension to the calves"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bending knees during movement",
+          "correction": "Keep knees locked, motion only at ankles",
+          "why_it_matters": "Knee bend turns it into a leg press, not calf work"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Get full stretch and full contraction",
+          "why_it_matters": "Partial ROM limits calf development"
+        },
+        {
+          "mistake": "Feet positioned too high on platform",
+          "correction": "Only balls of feet should be on bottom edge of platform",
+          "why_it_matters": "Improper position reduces range of motion"
+        },
+        {
+          "mistake": "Bouncing or using momentum",
+          "correction": "Controlled movement with pauses at top and bottom",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Not pausing at peak contraction",
+          "correction": "Hold squeeze for 1-2 seconds at full plantar flexion",
+          "why_it_matters": "Peak contraction is critical for calf development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Calf Press",
+            "description": "Use lighter load to perfect form",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Single-Leg Calf Press",
+            "description": "Perform one leg at a time with lighter weight",
+            "when_to_use": "Addressing imbalances or building up to bilateral"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Calf Press",
+            "description": "Load with heavy weight",
+            "when_to_use": "Building maximum calf strength"
+          },
+          {
+            "name": "Paused Calf Press",
+            "description": "Pause 3-5 seconds at stretch and contraction",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Single-Leg Calf Press (Heavy)",
+            "description": "Heavy single-leg variation",
+            "when_to_use": "Advanced unilateral strength"
+          },
+          {
+            "name": "Explosive Calf Press",
+            "description": "Push platform explosively",
+            "when_to_use": "Building calf power"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Heavy calf loading", "Calf strength development", "Variety in calf training", "Training when standing machines unavailable"],
+        "place_in_workout": "After leg press or as standalone calf work",
+        "pairs_well_with": ["Leg Press", "Seated Calf Raises", "Any leg workout"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-40 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when knees stay locked",
+        "Can load heavier than most calf exercises safely",
+        "Ensure safety catches are engaged",
+        "Keep motion only at ankles",
+        "Excellent for heavy calf training"
+      ],
+      "video_explanation_script": "The calf press on the leg press is a great way to load your calves heavy. After completing your leg presses, extend your legs fully and reposition so only the balls of your feet are on the bottom edge of the platform. Your heels should be hanging off. From here, let the platform come toward you, pulling your toes toward your shins for a deep calf stretch. Then push the platform away by pointing your toes as hard as you can. Squeeze your calves at the top and hold it. Your knees should stay locked throughout - this is all ankle movement. The leg press angle allows you to really load your calves heavy, making it excellent for building calf size and strength."
+    },
+    {
+      "exercise_id": "calf_005",
+      "exercise_name": "Donkey Calf Raise",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius"],
+        "secondary": ["Soleus"],
+        "stabilizers": ["Core", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Plantar Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Donkey Calf Raise Machine OR Platform/Step"],
+        "optional": ["Weight Belt with Plates", "Partner for Resistance"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Bend forward at hips to approximately 90 degrees, hands supported on bench or handles, balls of feet on platform.",
+        "key_points": [
+          "Hip angle approximately 90 degrees",
+          "Weight or resistance on lower back/hips",
+          "Traditional version had partner sit on lower back (hence 'donkey')"
+        ]
+      },
+      "starting_position": {
+        "description": "Bent forward at hips, hands on support, balls of feet on platform, heels dropped below platform level.",
+        "body_alignment": {
+          "head": "Neutral, looking down at ground",
+          "shoulders": "Supporting upper body on bench/handles",
+          "spine": "Neutral, hinged at hips",
+          "hips": "Bent approximately 90 degrees, loaded with weight",
+          "knees": "Locked or nearly locked",
+          "ankles": "Dorsiflexed, heels below platform"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push through balls of feet to raise heels as high as possible",
+          "cues": [
+            "Drive heels up toward ceiling",
+            "Get as high on toes as possible",
+            "Squeeze calves hard at top",
+            "Maximum height and contraction",
+            "Hold the peak"
+          ],
+          "end_position": "On highest point of toes, calves maximally contracted, hips loaded"
+        },
+        "eccentric_phase": {
+          "description": "Lower heels back down with control to deep stretch",
+          "cues": [
+            "Control the descent",
+            "Drop heels below platform",
+            "Feel deep calf stretch",
+            "Maximum stretch at bottom"
+          ],
+          "end_position": "Heels dropped maximally, deep stretch in calves"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "old_school": "Continuous pumping motion for high reps"
+      },
+      "range_of_motion": {
+        "full": "From maximum dorsiflexion to maximum plantar flexion",
+        "critical_point": "Both full stretch and full contraction",
+        "avoid": "Partial range or excessive hip movement"
+      },
+      "form_cues": [
+        "The bent-over position is what makes this unique - emphasizes gastrocnemius stretch",
+        "Think about pushing your heels to the ceiling behind you",
+        "The hip angle allows for an incredible calf stretch",
+        "Keep your hips at same angle - don't straighten up during reps",
+        "This was Arnold's favorite calf exercise"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Standing up during movement",
+          "correction": "Maintain bent hip position throughout set",
+          "why_it_matters": "Standing reduces unique stretch advantage of donkey raises"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Drop heels far below platform, rise as high as possible",
+          "why_it_matters": "Partial ROM limits effectiveness"
+        },
+        {
+          "mistake": "Bending knees",
+          "correction": "Keep knees locked to maximize gastrocnemius emphasis",
+          "why_it_matters": "Knee bend reduces gastrocnemius activation"
+        },
+        {
+          "mistake": "Bouncing at bottom",
+          "correction": "Control movement with pauses at stretch and contraction",
+          "why_it_matters": "Bouncing uses momentum instead of muscle"
+        },
+        {
+          "mistake": "Improper weight positioning",
+          "correction": "Weight should rest on lower back/hips, not upper back",
+          "why_it_matters": "Improper loading can cause discomfort or poor mechanics"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Donkey Calf Raise",
+            "description": "Perform without external weight",
+            "when_to_use": "Learning movement or as activation"
+          },
+          {
+            "name": "Partner-Assisted Donkey Raise",
+            "description": "Have partner sit gently on lower back",
+            "when_to_use": "No machine available, traditional method"
+          },
+          {
+            "name": "Lighter Weight Donkey Raise",
+            "description": "Use weight belt with moderate load",
+            "when_to_use": "Building up to heavy loads"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Donkey Calf Raise",
+            "description": "Load with heavy weight on hips",
+            "when_to_use": "Building maximum calf size"
+          },
+          {
+            "name": "Single-Leg Donkey Calf Raise",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Advanced variation, addressing imbalances"
+          },
+          {
+            "name": "High Rep Donkey Raise",
+            "description": "Perform 50-100+ reps in continuous pumping motion",
+            "when_to_use": "Old-school volume approach"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Maximum gastrocnemius stretch", "Old-school calf development", "Variety in calf training", "Calf growth"],
+        "place_in_workout": "Any point in calf training",
+        "pairs_well_with": ["Seated Calf Raises", "Standing Calf Raises"],
+        "rep_ranges": {
+          "hypertrophy": "12-20 reps",
+          "old_school_volume": "30-100+ reps",
+          "strength": "8-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Safe when proper equipment or partner used",
+        "Hip angle must be comfortable",
+        "Ensure stable positioning before starting",
+        "Partner must sit gently if using bodyweight method",
+        "Classic bodybuilding exercise for calf development"
+      ],
+      "video_explanation_script": "The donkey calf raise is a classic bodybuilding exercise that was one of Arnold's favorites. Using a donkey calf raise machine or with weight on your hips, bend forward at the hips to about 90 degrees and support your upper body on a bench or handles. Position the balls of your feet on a platform with your heels hanging off. From a deep stretch with your heels dropped, drive up onto your toes as high as possible. Squeeze your calves hard at the top. The bent-over position creates a unique angle that provides an incredible stretch on the gastrocnemius. Control the descent back to a full stretch and repeat. The donkey calf raise allows for heavy loading while maintaining that stretched position that's so effective for calf growth."
+    },
+    {
+      "exercise_id": "calf_006",
+      "exercise_name": "Smith Machine Calf Raise",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius"],
+        "secondary": ["Soleus"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Plantar Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Smith Machine", "Step or Platform"],
+        "optional": []
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Position step or platform under Smith Machine bar, set bar at shoulder height, step onto platform under bar.",
+        "key_points": [
+          "Platform should be stable and centered under bar",
+          "Bar rests on upper traps/shoulders",
+          "Balls of feet on platform, heels hanging off"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing on platform under Smith Machine bar, bar across upper back, heels dropped below platform level.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Supporting bar on upper traps",
+          "spine": "Neutral, upright",
+          "hips": "Neutral, over feet",
+          "knees": "Locked or nearly locked",
+          "ankles": "Dorsiflexed, heels below platform"
+        },
+        "bar_position": "Across upper traps, similar to back squat position"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push through balls of feet to raise heels and bar as high as possible",
+          "cues": [
+            "Drive up onto your toes",
+            "Push the bar up",
+            "Get maximum height",
+            "Squeeze calves at top",
+            "Hold the contraction"
+          ],
+          "end_position": "On highest point of toes, calves fully contracted, bar raised"
+        },
+        "eccentric_phase": {
+          "description": "Lower heels back down with control to deep stretch",
+          "cues": [
+            "Control the descent",
+            "Drop heels below platform",
+            "Feel the deep stretch",
+            "Bar stays on shoulders"
+          ],
+          "end_position": "Heels dropped maximally, deep calf stretch, bar lowered"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "strength_focus": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From maximum dorsiflexion to maximum plantar flexion",
+        "critical_point": "Both extreme stretch and peak contraction",
+        "avoid": "Partial range or using momentum"
+      },
+      "form_cues": [
+        "The Smith Machine provides stability so you can focus entirely on calves",
+        "Keep your body perfectly vertical",
+        "Think about pressing through the bar toward the ceiling",
+        "The fixed bar path makes this safer than free weight for heavy loads",
+        "You can load this very heavy since balance isn't a factor"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bending knees during movement",
+          "correction": "Keep knees locked throughout",
+          "why_it_matters": "Knee bend reduces gastrocnemius emphasis"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Drop heels far below platform, rise maximally high",
+          "why_it_matters": "Partial ROM limits development"
+        },
+        {
+          "mistake": "Leaning forward or backward",
+          "correction": "Stay perfectly vertical throughout movement",
+          "why_it_matters": "Leaning changes mechanics and can cause instability"
+        },
+        {
+          "mistake": "Bouncing at bottom",
+          "correction": "Pause in stretched position",
+          "why_it_matters": "Bouncing uses momentum"
+        },
+        {
+          "mistake": "Not pausing at top",
+          "correction": "Hold peak contraction for 1-2 seconds",
+          "why_it_matters": "Peak contraction critical for calf development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Load Smith Machine Raise",
+            "description": "Use lighter weight to perfect form",
+            "when_to_use": "Learning movement"
+          },
+          {
+            "name": "Partial Range Smith Machine Raise",
+            "description": "Start with smaller ROM",
+            "when_to_use": "Building up mobility and strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Smith Machine Calf Raise",
+            "description": "Load with heavy weight",
+            "when_to_use": "The stable path allows for very heavy loading"
+          },
+          {
+            "name": "Paused Smith Machine Raise",
+            "description": "Pause 3-5 seconds at stretch and contraction",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Single-Leg Smith Machine Raise",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Advanced unilateral variation"
+          },
+          {
+            "name": "21s Smith Machine Raise",
+            "description": "7 bottom half, 7 top half, 7 full range",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Heavy calf loading", "Stable calf training", "Building maximum calf strength", "When free weight feels unstable"],
+        "place_in_workout": "Any point in calf training",
+        "pairs_well_with": ["Seated Calf Raises", "Any leg workout"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-30+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe due to fixed bar path",
+        "Easy to rack weight at any point",
+        "Allows for heavy loading safely",
+        "Ensure platform is stable and secure",
+        "Excellent for building calf strength"
+      ],
+      "video_explanation_script": "The Smith Machine calf raise is excellent for heavy, stable calf training. Set up a step or platform under the Smith Machine bar. Position yourself under the bar with it resting on your upper traps, like a squat. Stand on the platform with just the balls of your feet, heels hanging off the edge. Unrack the bar and drop your heels below the platform for a deep stretch. From here, drive up onto your toes as high as possible, squeezing your calves hard at the top. The Smith Machine's fixed path provides stability, allowing you to really load your calves heavy without worrying about balance. This makes it perfect for building maximum calf size and strength."
+    },
+    {
+      "exercise_id": "calf_007",
+      "exercise_name": "Jump Rope",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius", "Soleus"],
+        "secondary": ["Tibialis Anterior", "Ankle Stabilizers"],
+        "stabilizers": ["Core", "Shoulders", "Forearms"]
+      },
+      "movement_pattern": "Plyometric Plantar Flexion",
+      "movement_type": "Cardio/Conditioning",
+      "equipment": {
+        "required": ["Jump Rope"],
+        "optional": ["Different rope types for speed, weight, etc."]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Stand holding jump rope handles, rope behind feet, ready to swing overhead.",
+        "key_points": [
+          "Rope should be appropriate length (step on middle, handles reach armpits)",
+          "Jump on balls of feet, not flat-footed",
+          "Stay on toes throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with rope behind feet, slight bend in knees, on balls of feet.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Relaxed",
+          "elbows": "Close to sides",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "ankles": "On balls of feet"
+        }
+      },
+      "execution": {
+        "jumping_motion": {
+          "description": "Swing rope overhead and jump over it using calf spring action",
+          "cues": [
+            "Stay on the balls of your feet",
+            "Use your calves to spring up",
+            "Small, quick jumps",
+            "Land softly on toes",
+            "Quick ground contact time",
+            "Rhythm and consistency"
+          ],
+          "pattern": "Continuous jumping with rope rotating under feet, minimal ground contact time, calf-dominant spring action"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous rhythmic breathing, in sync with jumping rhythm",
+        "alternative": "Natural breathing pattern that develops with practice"
+      },
+      "tempo": {
+        "beginner": "60-80 jumps per minute, steady pace",
+        "intermediate": "100-120 jumps per minute",
+        "advanced": "140-160+ jumps per minute"
+      },
+      "range_of_motion": {
+        "full": "Minimal jump height, just enough to clear rope, emphasis on quick toe-off",
+        "critical_point": "Stay on balls of feet, quick calf contraction and relaxation cycles",
+        "avoid": "Landing flat-footed or jumping too high"
+      },
+      "form_cues": [
+        "Think light and bouncy - you're not trying to jump high",
+        "Your calves should be doing most of the work",
+        "Stay on your toes the entire time",
+        "Wrists do the rope rotation, not big arm movements",
+        "Rhythm is more important than speed initially"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Landing flat-footed",
+          "correction": "Stay on balls of feet, never let heels touch ground",
+          "why_it_matters": "Flat-footed landing removes calf emphasis and increases impact"
+        },
+        {
+          "mistake": "Jumping too high",
+          "correction": "Minimal jump height, just enough to clear rope",
+          "why_it_matters": "Excessive height wastes energy and reduces calf training frequency"
+        },
+        {
+          "mistake": "Using arms to rotate rope",
+          "correction": "Use wrist rotation primarily, elbows stay close to body",
+          "why_it_matters": "Excessive arm movement wastes energy"
+        },
+        {
+          "mistake": "Looking down at feet",
+          "correction": "Look straight ahead, develop feel for rope",
+          "why_it_matters": "Looking down disrupts posture and rhythm"
+        },
+        {
+          "mistake": "Double bouncing between jumps",
+          "correction": "Single bounce per rope rotation",
+          "why_it_matters": "Double bouncing reduces training intensity"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Jump Rope Without Rope",
+            "description": "Practice jumping motion without actual rope",
+            "when_to_use": "Learning rhythm and calf spring action"
+          },
+          {
+            "name": "Single Jumps (Basic Bounce)",
+            "description": "Standard jump rope rhythm",
+            "when_to_use": "Building base skill and endurance"
+          },
+          {
+            "name": "Slow Pace Jump Rope",
+            "description": "60-80 jumps per minute",
+            "when_to_use": "Beginners building coordination"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Fast Pace Jump Rope",
+            "description": "140-160+ jumps per minute",
+            "when_to_use": "Advanced conditioning"
+          },
+          {
+            "name": "Double Unders",
+            "description": "Rope passes under feet twice per jump",
+            "when_to_use": "Advanced skill and calf power"
+          },
+          {
+            "name": "Weighted Jump Rope",
+            "description": "Use heavier rope for more resistance",
+            "when_to_use": "Building calf strength and endurance"
+          },
+          {
+            "name": "Single-Leg Jump Rope",
+            "description": "Jump on one leg at a time",
+            "when_to_use": "Advanced unilateral calf work"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Calf endurance", "Ankle strength", "Cardiovascular conditioning", "Athletic performance", "Fat loss"],
+        "place_in_workout": "Warm-up, conditioning, or standalone cardio",
+        "pairs_well_with": ["Any workout", "Calf raises", "Conditioning work"],
+        "rep_ranges": {
+          "beginner": "1-3 minute intervals with rest",
+          "intermediate": "3-5 minute continuous",
+          "advanced": "10-30+ minutes continuous or interval training"
+        }
+      },
+      "safety_considerations": [
+        "Low impact when done correctly (on toes)",
+        "Build volume gradually to avoid calf and shin soreness",
+        "Proper footwear important (minimal cushioning best)",
+        "Excellent for calf endurance and ankle strength",
+        "Great for cardiovascular health"
+      ],
+      "video_explanation_script": "Jump rope is a phenomenal exercise for building calf endurance and conditioning. The key is staying on the balls of your feet the entire time - your heels should never touch the ground. Make small, quick jumps just high enough to let the rope pass under your feet. Your calves are constantly working to spring you off the ground and absorb the landing. Keep your elbows close to your sides and use your wrists to rotate the rope. Start with a comfortable pace and build your endurance over time. Jump rope not only builds incredible calf endurance but also improves coordination, cardiovascular fitness, and ankle strength. It's why boxers use it religiously."
+    },
+    {
+      "exercise_id": "calf_008",
+      "exercise_name": "Tibialis Raise",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Tibialis Anterior"],
+        "secondary": [],
+        "stabilizers": ["Ankle Stabilizers"]
+      },
+      "movement_pattern": "Dorsiflexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Weight Plate", "Tibialis Trainer", "Resistance Band"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Stand with back against wall or sit on bench with heels on ground.",
+        "key_points": [
+          "Heels planted, toes free to move",
+          "Can be done standing or seated",
+          "Minimal equipment needed"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with back against wall or seated, heels on ground, toes pointing forward.",
+        "body_alignment": {
+          "head": "Neutral",
+          "shoulders": "Relaxed or against wall",
+          "spine": "Neutral",
+          "hips": "Neutral, seated or standing",
+          "knees": "Extended if standing, bent if seated",
+          "ankles": "Plantar flexed (toes down)"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull toes up toward shins, dorsiflexing ankles maximally",
+          "cues": [
+            "Pull your toes up toward your shins",
+            "Flex your ankles hard",
+            "Get your toes as high as possible",
+            "Feel the front of your shins working",
+            "Hold the contraction"
+          ],
+          "end_position": "Ankles maximally dorsiflexed, toes pulled up as high as possible toward shins"
+        },
+        "eccentric_phase": {
+          "description": "Lower toes back down with control",
+          "cues": [
+            "Control the descent",
+            "Lower toes back down",
+            "Feel the stretch",
+            "Don't just drop"
+          ],
+          "end_position": "Toes lowered back to starting position or pointing down"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on pull up (concentric), inhale on lower (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec hold, 2 sec down, no pause)",
+        "endurance_focus": "1-2-1-0 (1 sec up, 2 sec hold, 1 sec down, no pause)",
+        "pump_focus": "Quick continuous reps"
+      },
+      "range_of_motion": {
+        "full": "From toes pointing down to toes pulled up maximally toward shins",
+        "critical_point": "Maximum dorsiflexion with strong contraction",
+        "avoid": "Partial range or rushing"
+      },
+      "form_cues": [
+        "This is the opposite of a calf raise - you're pulling toes up, not pushing down",
+        "You'll feel this burning in the front of your shins",
+        "The tibialis is often neglected but important for shin health",
+        "Think about trying to touch your toes to your shins",
+        "This prevents shin splints and balances calf development"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not achieving full dorsiflexion",
+          "correction": "Pull toes up as high as possible toward shins",
+          "why_it_matters": "Partial ROM limits tibialis development"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Control both phases, pause at top",
+          "why_it_matters": "Speed reduces muscle activation"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Smooth controlled movement throughout",
+          "why_it_matters": "Momentum defeats isolation purpose"
+        },
+        {
+          "mistake": "Neglecting this exercise entirely",
+          "correction": "Include in routine for balanced lower leg development",
+          "why_it_matters": "Imbalance between tibialis and calves increases injury risk"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Tibialis Raise",
+            "description": "Perform while seated for easier variation",
+            "when_to_use": "Beginners or building base strength"
+          },
+          {
+            "name": "Partial Range Tibialis Raise",
+            "description": "Use smaller ROM initially",
+            "when_to_use": "Building up strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Tibialis Raise",
+            "description": "Place weight plate on toes or use tibialis trainer",
+            "when_to_use": "When bodyweight becomes too easy"
+          },
+          {
+            "name": "Banded Tibialis Raise",
+            "description": "Loop resistance band around toes for resistance",
+            "when_to_use": "Adding progressive resistance"
+          },
+          {
+            "name": "Single-Leg Tibialis Raise",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Advanced unilateral work"
+          },
+          {
+            "name": "High Rep Tibialis Raise",
+            "description": "50-100+ reps for endurance",
+            "when_to_use": "Building shin endurance and resilience"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Tibialis anterior development", "Shin splint prevention", "Balancing calf training", "Ankle health"],
+        "place_in_workout": "Warm-up, end of workout, or separate mini-session",
+        "pairs_well_with": ["Calf Raises", "Any leg workout", "Running/cardio"],
+        "rep_ranges": {
+          "strength": "12-20 reps",
+          "endurance": "20-50 reps",
+          "prevention": "15-30 reps, 2-3 times per week"
+        }
+      },
+      "safety_considerations": [
+        "Very safe, low-injury exercise",
+        "Essential for runners and athletes",
+        "Helps prevent shin splints",
+        "Often overlooked but important for balanced lower leg",
+        "Can be done daily if needed"
+      ],
+      "video_explanation_script": "The tibialis raise targets the often-neglected muscle on the front of your shin. Stand with your back against a wall with your heels on the ground. From here, pull your toes up toward your shins as high as you can. You'll feel this burning in the front of your shins - that's your tibialis anterior working. Hold at the top, then control the descent. While this might seem like a minor exercise, training your tibialis is crucial for preventing shin splints, balancing out your calf development, and maintaining healthy ankles. If you do a lot of calf work or running, you absolutely need to include tibialis training."
+    },
+    {
+      "exercise_id": "calf_009",
+      "exercise_name": "Farmer's Walk on Toes",
+      "muscle_group_primary": "Calves",
+      "muscles_targeted": {
+        "primary": ["Gastrocnemius", "Soleus"],
+        "secondary": ["Forearms", "Traps", "Core"],
+        "stabilizers": ["Entire Body", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Loaded Carry on Toes",
+      "movement_type": "Compound/Functional",
+      "equipment": {
+        "required": ["Dumbbells, Kettlebells, or Farmer's Walk Handles"],
+        "optional": ["Various loading implements"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Pick up heavy weights in each hand, rise up onto toes before walking.",
+        "key_points": [
+          "Start with lighter weights than regular farmer's walks",
+          "Clear walking path needed",
+          "Stay on toes entire walk"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing holding heavy weights at sides, already up on toes.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down, engaged traps",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Nearly locked",
+          "ankles": "Plantar flexed, on balls of feet"
+        }
+      },
+      "execution": {
+        "walking_motion": {
+          "description": "Walk forward while staying on toes entire time, maintaining calf engagement",
+          "cues": [
+            "Stay high on your toes",
+            "Walk smoothly and controlled",
+            "Don't let heels touch ground",
+            "Keep calves engaged throughout",
+            "Maintain upright posture",
+            "Short, controlled steps"
+          ],
+          "pattern": "Continuous walking on toes for distance or time, calves under constant tension"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous rhythmic breathing throughout walk",
+        "alternative": "Natural breathing, avoid breath holding"
+      },
+      "tempo": {
+        "standard": "Steady walking pace while maintaining toe position",
+        "strength_focus": "Slower deliberate steps",
+        "endurance_focus": "Sustained pace for longer duration"
+      },
+      "range_of_motion": {
+        "full": "Maintain maximum plantar flexion throughout entire walk",
+        "critical_point": "Never let heels touch ground during set",
+        "avoid": "Coming down off toes or bouncing"
+      },
+      "form_cues": [
+        "This is a farmer's walk, but you never come off your toes",
+        "Your calves should be burning intensely",
+        "Think about walking like you're wearing high heels",
+        "Keep your steps short and controlled",
+        "The weight plus the toe position creates extreme calf demand"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Letting heels touch ground",
+          "correction": "Maintain elevated position on toes throughout entire set",
+          "why_it_matters": "Coming off toes removes constant tension from calves"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use 50-70% of regular farmer's walk weight initially",
+          "why_it_matters": "Excessive weight prevents maintaining toe position"
+        },
+        {
+          "mistake": "Taking too long steps",
+          "correction": "Shorter, controlled steps maintain better balance",
+          "why_it_matters": "Long steps increase difficulty maintaining toe position"
+        },
+        {
+          "mistake": "Leaning forward",
+          "correction": "Stay upright, core engaged",
+          "why_it_matters": "Leaning compromises form and calf emphasis"
+        },
+        {
+          "mistake": "Rushing the walk",
+          "correction": "Controlled, steady pace throughout",
+          "why_it_matters": "Speed reduces calf time under tension"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Unweighted Walk on Toes",
+            "description": "Walk on toes without carrying weight",
+            "when_to_use": "Learning movement and building base calf endurance"
+          },
+          {
+            "name": "Light Weight Toe Walk",
+            "description": "Use very light dumbbells",
+            "when_to_use": "Building up to heavier loads"
+          },
+          {
+            "name": "Shorter Distance",
+            "description": "Start with 20-30 feet walks",
+            "when_to_use": "Building calf endurance gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Farmer's Walk on Toes",
+            "description": "Progress to heavier weights",
+            "when_to_use": "Building maximum calf strength under load"
+          },
+          {
+            "name": "Longer Distance",
+            "description": "Increase to 50-100+ feet",
+            "when_to_use": "Building calf endurance"
+          },
+          {
+            "name": "Single-Arm Toe Walk",
+            "description": "Carry weight in one hand only",
+            "when_to_use": "Adding anti-lateral flexion core work"
+          },
+          {
+            "name": "Timed Toe Walks",
+            "description": "Walk for time (60-120+ seconds)",
+            "when_to_use": "Endurance emphasis"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Functional calf strength", "Calf endurance under load", "Athletic performance", "Grip and carry strength"],
+        "place_in_workout": "End of workout or as conditioning work",
+        "pairs_well_with": ["Regular Farmer's Walks", "Calf Raises", "Grip work"],
+        "rep_ranges": {
+          "strength": "3-5 sets x 30-50 feet",
+          "endurance": "3-5 sets x 50-100 feet or 60-90 seconds",
+          "conditioning": "Multiple sets with short rest"
+        }
+      },
+      "safety_considerations": [
+        "Requires good ankle stability",
+        "Clear path essential - no obstacles",
+        "Start with lighter weight than regular farmer's walks",
+        "Can cause intense calf cramping - hydrate well",
+        "Excellent functional calf builder"
+      ],
+      "video_explanation_script": "The farmer's walk on toes is a brutal but effective calf builder. Pick up heavy dumbbells or kettlebells at your sides. Before you start walking, rise up onto your toes and stay there. Now walk forward, taking short controlled steps while staying up on your toes the entire time. Your heels should never touch the ground during the set. Your calves will be under constant tension supporting your body weight plus the weights you're carrying. Start with a lighter load than you'd use for regular farmer's walks - maybe 50-70% of your usual weight. This exercise builds incredible functional calf strength and endurance while also working your grip, traps, and core."
+    }
+  ]
+}

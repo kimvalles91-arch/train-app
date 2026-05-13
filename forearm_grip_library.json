@@ -1,0 +1,1632 @@
+{
+  "muscle_group": "Forearms & Grip",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Wrist Flexors (Flexor Carpi Radialis, Flexor Carpi Ulnaris)",
+        "function": "Wrist flexion, grip strength (closing hand)",
+        "description": "Muscles on palm side of forearm, responsible for gripping and wrist flexion"
+      },
+      {
+        "name": "Wrist Extensors (Extensor Carpi Radialis, Extensor Carpi Ulnaris)",
+        "function": "Wrist extension, opening hand, forearm balance",
+        "description": "Muscles on back of forearm, crucial for wrist health and balanced forearm development"
+      },
+      {
+        "name": "Brachioradialis",
+        "function": "Elbow flexion (especially with neutral/pronated grip), forearm stability",
+        "description": "Large muscle on thumb side of forearm, most visible forearm muscle, emphasized with hammer grip"
+      },
+      {
+        "name": "Grip Muscles (Finger Flexors, Hand Intrinsics)",
+        "function": "Crushing grip, pinch grip, support grip",
+        "description": "Complex system of muscles in forearm and hand responsible for various grip types"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "forearm_001",
+      "exercise_name": "Wrist Curl (Barbell)",
+      "muscle_group_primary": "Forearms",
+      "muscles_targeted": {
+        "primary": ["Wrist Flexors", "Finger Flexors"],
+        "secondary": [],
+        "stabilizers": ["Biceps", "Forearm Pronators"]
+      },
+      "movement_pattern": "Wrist Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Barbell or EZ-Bar"],
+        "optional": ["Bench", "Dumbbells"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Sit on bench, rest forearms on thighs or bench with wrists hanging off edge, palms up, barbell in hands.",
+        "key_points": [
+          "Forearms fully supported on thighs or bench",
+          "Wrists free to move beyond edge",
+          "Palms facing up (supinated grip)"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated, forearms on thighs, wrists hanging off knees, barbell in hands with palms up, wrists extended.",
+        "body_alignment": {
+          "torso": "Upright or slight forward lean",
+          "forearms": "Flat on thighs or bench, completely supported",
+          "wrists": "Hanging off edge, extended (bent back)",
+          "hands": "Gripping barbell, palms facing up"
+        },
+        "grip": "Underhand (supinated), hands shoulder-width or narrower"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl wrists up by flexing wrists, lifting barbell",
+          "cues": [
+            "Curl your wrists up toward your forearms",
+            "Keep forearms flat on thighs - they don't move",
+            "Squeeze at the top contraction",
+            "Only your wrists and hands move",
+            "Think about bringing knuckles toward forearms"
+          ],
+          "end_position": "Wrists fully flexed, barbell curled up, forearms still on thighs"
+        },
+        "eccentric_phase": {
+          "description": "Lower barbell by extending wrists back to starting position",
+          "cues": [
+            "Lower with control",
+            "Let wrists extend back",
+            "Can let barbell roll to fingertips for extra stretch",
+            "Feel stretch in wrist flexors"
+          ],
+          "end_position": "Wrists extended, barbell can roll to fingertips"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on wrist curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "burn_focus": "1-2-2-0 (1 sec up, 2 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From wrists fully extended to fully flexed",
+        "critical_point": "Full flexion with squeeze, deep extension with stretch",
+        "avoid": "Forearms lifting off thighs"
+      },
+      "form_cues": [
+        "This is a small movement - only wrists move",
+        "Your forearms are glued to your thighs",
+        "At the stretch, you can let the bar roll to your fingertips",
+        "Squeeze hard at the top like you're crushing something",
+        "Light weight, high reps, and burn"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forearms lifting off thighs",
+          "correction": "Keep forearms completely flat and supported",
+          "why_it_matters": "Lifting forearms uses biceps instead of wrist flexors"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use light to moderate weight for 12-20+ reps",
+          "why_it_matters": "Heavy weight forces poor form and bicep involvement"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Controlled tempo, squeeze at top, stretch at bottom",
+          "why_it_matters": "Speed reduces time under tension"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Full wrist flexion at top, full extension at bottom",
+          "why_it_matters": "Partial range limits development"
+        },
+        {
+          "mistake": "Grip too wide",
+          "correction": "Hands shoulder-width or narrower",
+          "why_it_matters": "Wide grip reduces wrist flexor emphasis"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Wrist Curl",
+            "description": "Use dumbbells instead of barbell",
+            "when_to_use": "Learning movement, addressing imbalances"
+          },
+          {
+            "name": "One-Arm Wrist Curl",
+            "description": "One arm at a time with dumbbell",
+            "when_to_use": "Better focus, addressing weak side"
+          },
+          {
+            "name": "Cable Wrist Curl",
+            "description": "Use low cable with bar attachment",
+            "when_to_use": "Constant tension variation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Behind-the-Back Wrist Curl",
+            "description": "Stand holding barbell behind back, curl wrists",
+            "when_to_use": "Different angle, standing variation"
+          },
+          {
+            "name": "Wrist Curl with Pause",
+            "description": "Pause 3-5 seconds at top contraction",
+            "when_to_use": "Maximizing squeeze and contraction"
+          },
+          {
+            "name": "High-Rep Wrist Curl",
+            "description": "20-30+ rep sets for burn",
+            "when_to_use": "Forearm endurance and pump"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Wrist flexor development", "Grip strength", "Forearm mass", "Wrist health"],
+        "place_in_workout": "End of workout as forearm-specific work",
+        "pairs_well_with": ["Reverse Wrist Curls", "Farmer's Carries", "Dead Hangs"],
+        "rep_ranges": {
+          "strength": "10-15 reps",
+          "hypertrophy": "15-25 reps",
+          "endurance": "25-50 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise when performed correctly",
+        "Start light - forearms fatigue quickly",
+        "Can aggravate existing wrist issues",
+        "Stop if experiencing sharp wrist pain",
+        "High reps work better than heavy weight"
+      ],
+      "video_explanation_script": "Wrist curls are the foundational exercise for building bigger, stronger forearms. Sit on a bench and rest your forearms on your thighs with your wrists hanging off your knees. Hold a barbell with an underhand grip - palms facing up. Let your wrists extend back and the bar can even roll down to your fingertips for a full stretch. From here, curl your wrists up by flexing them, bringing your knuckles toward your forearms. Squeeze hard at the top. Your forearms never leave your thighs - only your wrists and hands move. Lower back down with control. Use relatively light weight and focus on higher reps - forearms respond better to volume than heavy weight. This builds the muscles on the palm side of your forearm that are crucial for grip strength."
+    },
+    {
+      "exercise_id": "forearm_002",
+      "exercise_name": "Reverse Wrist Curl (Barbell)",
+      "muscle_group_primary": "Forearms",
+      "muscles_targeted": {
+        "primary": ["Wrist Extensors"],
+        "secondary": ["Brachioradialis"],
+        "stabilizers": ["Forearm Supinators"]
+      },
+      "movement_pattern": "Wrist Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Barbell or EZ-Bar"],
+        "optional": ["Bench", "Dumbbells"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Sit on bench, rest forearms on thighs with wrists hanging off edge, palms down, barbell in hands.",
+        "key_points": [
+          "Forearms fully supported on thighs",
+          "Wrists free to move beyond edge",
+          "Palms facing down (pronated grip)"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated, forearms on thighs, wrists hanging off knees, barbell in hands with palms down, wrists flexed.",
+        "body_alignment": {
+          "torso": "Upright or slight forward lean",
+          "forearms": "Flat on thighs, completely supported",
+          "wrists": "Hanging off edge, flexed (bent down)",
+          "hands": "Gripping barbell, palms facing down"
+        },
+        "grip": "Overhand (pronated), hands shoulder-width or narrower"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Extend wrists up by lifting back of hands toward sky",
+          "cues": [
+            "Lift the back of your hands up",
+            "Extend your wrists as far as possible",
+            "Keep forearms flat on thighs",
+            "Squeeze extensors at top",
+            "Think about pulling knuckles back toward forearms"
+          ],
+          "end_position": "Wrists fully extended, back of hands lifted, forearms still on thighs"
+        },
+        "eccentric_phase": {
+          "description": "Lower barbell by flexing wrists down to starting position",
+          "cues": [
+            "Lower with control",
+            "Let wrists flex down",
+            "Feel stretch in wrist extensors",
+            "Maintain forearm position"
+          ],
+          "end_position": "Wrists flexed down, barbell lowered"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on wrist extension up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "extensor_focus": "3-3-3-0 (slow controlled movement with extended hold)"
+      },
+      "range_of_motion": {
+        "full": "From wrists fully flexed down to fully extended up",
+        "critical_point": "Full extension with squeeze, full flexion for stretch",
+        "avoid": "Forearms lifting off thighs"
+      },
+      "form_cues": [
+        "This is the opposite movement of regular wrist curls",
+        "You'll use much less weight than wrist curls - that's normal",
+        "Focus on the squeeze at the top",
+        "These muscles are often neglected and weak",
+        "Essential for balanced forearm development and wrist health"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use 30-50% less weight than wrist curls",
+          "why_it_matters": "Extensors are weaker than flexors, heavy weight forces poor form"
+        },
+        {
+          "mistake": "Forearms lifting off thighs",
+          "correction": "Keep forearms completely flat and supported",
+          "why_it_matters": "Lifting forearms reduces extensor isolation"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full extension at top, full flexion at bottom",
+          "why_it_matters": "Extensors need full range for development"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Controlled tempo, emphasize squeeze at top",
+          "why_it_matters": "Speed reduces effectiveness"
+        },
+        {
+          "mistake": "Neglecting this exercise entirely",
+          "correction": "Always pair with wrist curls for balance",
+          "why_it_matters": "Imbalance can cause wrist issues and tennis elbow"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Reverse Wrist Curl",
+            "description": "Use dumbbells instead of barbell",
+            "when_to_use": "Learning movement, more natural wrist position"
+          },
+          {
+            "name": "One-Arm Reverse Wrist Curl",
+            "description": "One arm at a time with dumbbell",
+            "when_to_use": "Better focus on weak side"
+          },
+          {
+            "name": "Very Light Weight High Rep",
+            "description": "Use very light weight for 20-30+ reps",
+            "when_to_use": "Building extensor endurance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Reverse Wrist Curl with Pause",
+            "description": "Pause 3-5 seconds at top extension",
+            "when_to_use": "Maximizing extensor contraction"
+          },
+          {
+            "name": "Reverse Wrist Curl Drop Set",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Maximum extensor pump"
+          },
+          {
+            "name": "Cable Reverse Wrist Curl",
+            "description": "Use low cable for constant tension",
+            "when_to_use": "Different stimulus"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Wrist extensor development", "Balanced forearm development", "Tennis elbow prevention", "Wrist health"],
+        "place_in_workout": "Immediately after wrist curls as complementary exercise",
+        "pairs_well_with": ["Wrist Curls", "Farmer's Carries", "Reverse Curls"],
+        "rep_ranges": {
+          "strength": "12-15 reps",
+          "hypertrophy": "15-25 reps",
+          "endurance": "25-50 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe and important for wrist health",
+        "Start very light - these muscles are often weak",
+        "Can help prevent tennis elbow",
+        "Stop if experiencing wrist pain",
+        "Essential counterbalance to wrist flexor work"
+      ],
+      "video_explanation_script": "Reverse wrist curls are crucial for balanced forearm development and preventing wrist issues like tennis elbow. Set up exactly like regular wrist curls - sit on a bench with your forearms resting on your thighs and wrists hanging off your knees. But this time, use an overhand grip with your palms facing down. Let your wrists flex down toward the floor. From here, extend your wrists by lifting the back of your hands up toward the sky. Squeeze your wrist extensors at the top. Lower back down with control. You'll use significantly less weight than regular wrist curls - maybe 30 to 50 percent less - and that's completely normal. The extensors on the back of your forearm are smaller and weaker than the flexors. These muscles are often neglected but they're essential for wrist health and complete forearm development."
+    },
+    {
+      "exercise_id": "forearm_003",
+      "exercise_name": "Farmer's Carry",
+      "muscle_group_primary": "Forearms & Grip",
+      "muscles_targeted": {
+        "primary": ["Finger Flexors", "Wrist Flexors", "Grip Muscles"],
+        "secondary": ["Traps", "Core", "Glutes"],
+        "stabilizers": ["Shoulders", "Obliques", "Erector Spinae", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Loaded Carry (Support Grip)",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbells, Kettlebells, or Farmer's Walk Handles"],
+        "optional": ["Trap Bar", "Weight Plates"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Stand between two heavy dumbbells or kettlebells, deadlift them up to standing position holding at sides.",
+        "key_points": [
+          "Weights should be heavy - challenge your grip",
+          "Neutral grip with weights at sides",
+          "Clear walking path ahead"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright holding heavy weights at sides, shoulders packed, core braced, ready to walk.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down and back, level",
+          "spine": "Neutral, upright, core braced",
+          "hips": "Neutral",
+          "arms": "Hanging straight down at sides, gripping weights",
+          "feet": "Hip-width apart"
+        },
+        "grip": "Crushing grip on weights, as tight as possible"
+      },
+      "execution": {
+        "movement": {
+          "description": "Walk forward in straight line with controlled steps while maintaining posture and grip",
+          "cues": [
+            "Grip the weights as hard as you can",
+            "Walk with controlled, deliberate steps",
+            "Keep your shoulders level - don't let one drop",
+            "Maintain upright posture",
+            "Breathe normally",
+            "Core stays braced the entire time",
+            "Walk until grip starts to fail"
+          ],
+          "pattern": "Walk forward for distance or time, maintaining perfect posture"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous natural breathing throughout carry",
+        "alternative": "Rhythmic breathing, don't hold breath"
+      },
+      "tempo": {
+        "standard": "Controlled walking pace, not rushed",
+        "grip_focus": "Slower pace to maximize time under tension",
+        "conditioning": "Faster walking pace for metabolic stress"
+      },
+      "range_of_motion": {
+        "distance": "Walk for 20-100+ feet depending on space and goal",
+        "time": "Or 30-60+ seconds timed carries",
+        "critical_point": "Maintaining perfect posture and tight grip throughout"
+      },
+      "form_cues": [
+        "This is one of the best full-body and grip exercises you can do",
+        "Squeeze those handles like you're trying to crush them",
+        "Stand tall and proud - chest up, shoulders back",
+        "If your shoulders are shrugging up, the weight is too heavy",
+        "Your grip should fail before your posture breaks"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Shoulders shrugging up toward ears",
+          "correction": "Pack shoulders down, maintain depression throughout",
+          "why_it_matters": "Shrugging indicates poor shoulder stability"
+        },
+        {
+          "mistake": "Leaning to one side",
+          "correction": "Keep shoulders level, engage obliques to resist lateral flexion",
+          "why_it_matters": "Leaning reduces core stability challenge"
+        },
+        {
+          "mistake": "Looking down at ground",
+          "correction": "Look forward, maintain neutral neck",
+          "why_it_matters": "Looking down causes forward lean"
+        },
+        {
+          "mistake": "Taking huge rushing steps",
+          "correction": "Controlled deliberate steps, normal walking pace",
+          "why_it_matters": "Rushing reduces stability and control"
+        },
+        {
+          "mistake": "Using too light weight",
+          "correction": "Weight should challenge your grip significantly",
+          "why_it_matters": "Too light won't build grip strength"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Farmer's Carry",
+            "description": "Use lighter weight to learn movement",
+            "when_to_use": "Learning posture and walking pattern"
+          },
+          {
+            "name": "Single-Arm Farmer's Carry",
+            "description": "Carry weight in one hand only (suitcase carry)",
+            "when_to_use": "Anti-lateral flexion emphasis, less grip demand"
+          },
+          {
+            "name": "Shorter Distance Carries",
+            "description": "Walk 20-30 feet instead of longer distances",
+            "when_to_use": "Building up grip endurance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Farmer's Carry",
+            "description": "Use very heavy weights that challenge grip maximally",
+            "when_to_use": "Advanced grip strength development"
+          },
+          {
+            "name": "Uneven Farmer's Carry",
+            "description": "Different weights in each hand",
+            "when_to_use": "Increased core stability challenge"
+          },
+          {
+            "name": "Trap Bar Carry",
+            "description": "Walk holding loaded trap bar",
+            "when_to_use": "Heavier loading option"
+          },
+          {
+            "name": "Farmer's Carry Medley",
+            "description": "Multiple trips with minimal rest",
+            "when_to_use": "Conditioning and grip endurance"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Support grip strength", "Full-body conditioning", "Functional strength", "Trap development", "Core stability"],
+        "place_in_workout": "End of workout as finisher or grip-specific work",
+        "pairs_well_with": ["Deadlifts", "Shrugs", "Wrist Curls"],
+        "distances": {
+          "strength": "20-40 feet with heavy weight",
+          "conditioning": "50-100+ feet with moderate weight",
+          "endurance": "Multiple trips totaling 200+ feet"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Ensure clear walking path",
+        "Know how to safely drop weights if grip fails",
+        "Start lighter than you think",
+        "Excellent functional exercise"
+      ],
+      "video_explanation_script": "Farmer's carries are one of the absolute best exercises for building crushing grip strength while also working your entire body. Stand between two heavy dumbbells or kettlebells and deadlift them up to a standing position. Hold them at your sides with your arms hanging straight down. Now here's what makes this effective: grip those handles as hard as you possibly can, like you're trying to crush them. Stand tall with your chest up and shoulders packed down - not shrugged up. Walk forward in a straight line with controlled, deliberate steps. Maintain that upright posture and tight grip the entire time. Walk until your grip starts to fail. This builds incredible grip strength, strengthens your traps, and challenges your entire core. The weight should be heavy enough that your grip is seriously challenged."
+    },
+    {
+      "exercise_id": "forearm_004",
+      "exercise_name": "Dead Hang",
+      "muscle_group_primary": "Forearms & Grip",
+      "muscles_targeted": {
+        "primary": ["Finger Flexors", "Grip Muscles"],
+        "secondary": ["Wrist Flexors", "Forearm Flexors"],
+        "stabilizers": ["Shoulders", "Lats", "Core"]
+      },
+      "movement_pattern": "Passive Hang (Support Grip)",
+      "movement_type": "Isometric Hold",
+      "equipment": {
+        "required": ["Pull-up Bar"],
+        "optional": ["Fat Gripz", "Towel"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Hang from pull-up bar with overhand grip, arms fully extended, feet off ground.",
+        "key_points": [
+          "Overhand (pronated) grip for maximum forearm engagement",
+          "Arms fully extended (dead hang, not active hang)",
+          "Feet together or crossed"
+        ]
+      },
+      "starting_position": {
+        "description": "Hanging from bar with overhand grip, arms fully extended, body relaxed but shoulders engaged.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Slightly engaged (not fully relaxed and shrugged up)",
+          "arms": "Fully extended, straight",
+          "body": "Hanging straight down",
+          "legs": "Extended or slightly bent, relaxed",
+          "feet": "Together or crossed"
+        },
+        "grip": "Overhand (pronated), hands shoulder-width or slightly wider, full grip around bar"
+      },
+      "execution": {
+        "hold": {
+          "description": "Hang from bar while maintaining grip for maximum time",
+          "cues": [
+            "Grip the bar as tight as you can",
+            "Keep shoulders slightly engaged, not fully relaxed",
+            "Breathe normally",
+            "Focus on maintaining grip",
+            "Hang until grip fails or time goal reached",
+            "Don't swing or use momentum"
+          ],
+          "critical_points": "Maximum effort grip, controlled breathing, slight shoulder engagement"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous natural breathing throughout hang",
+        "alternative": "Rhythmic breathing to stay relaxed"
+      },
+      "tempo": {
+        "beginner": "10-20 second hangs",
+        "intermediate": "30-45 second hangs",
+        "advanced": "60+ second hangs"
+      },
+      "range_of_motion": {
+        "position": "Static hang with full arm extension",
+        "critical_point": "Maintaining grip until voluntary or involuntary release",
+        "avoid": "Swinging or using momentum"
+      },
+      "form_cues": [
+        "This is deceptively simple but incredibly effective",
+        "Your grip should be doing all the work",
+        "Try to crush the bar with your grip",
+        "Slight shoulder engagement protects shoulder joints",
+        "When your grip fails, you're done - no cheating"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Shoulders fully relaxed and shrugged up",
+          "correction": "Maintain slight shoulder engagement, scapular stability",
+          "why_it_matters": "Full relaxation can stress shoulder joints"
+        },
+        {
+          "mistake": "Swinging or kipping",
+          "correction": "Hang completely still, no momentum",
+          "why_it_matters": "Movement reduces grip challenge"
+        },
+        {
+          "mistake": "Bending arms",
+          "correction": "Arms fully extended throughout",
+          "why_it_matters": "Arm bend uses biceps instead of pure grip"
+        },
+        {
+          "mistake": "Holding breath",
+          "correction": "Breathe continuously throughout hang",
+          "why_it_matters": "Breath holding increases blood pressure unnecessarily"
+        },
+        {
+          "mistake": "Giving up before true grip failure",
+          "correction": "Hang until grip involuntarily releases",
+          "why_it_matters": "Mental quitting prevents maximum adaptation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Foot-Assisted Dead Hang",
+            "description": "One foot lightly touching ground or box",
+            "when_to_use": "Building up to full dead hang"
+          },
+          {
+            "name": "Band-Assisted Dead Hang",
+            "description": "Loop band around bar, place foot in band for support",
+            "when_to_use": "Reducing bodyweight load on grip"
+          },
+          {
+            "name": "Short Interval Hangs",
+            "description": "Multiple 10-15 second hangs with rest",
+            "when_to_use": "Building grip endurance gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "One-Arm Dead Hang",
+            "description": "Hang from one arm only (extremely difficult)",
+            "when_to_use": "Advanced grip strength"
+          },
+          {
+            "name": "Weighted Dead Hang",
+            "description": "Add weight with belt or weighted vest",
+            "when_to_use": "When bodyweight hangs exceed 60+ seconds"
+          },
+          {
+            "name": "Towel Dead Hang",
+            "description": "Hang from towel draped over bar",
+            "when_to_use": "Increased grip difficulty"
+          },
+          {
+            "name": "Fat Grip Dead Hang",
+            "description": "Use Fat Gripz or thick bar",
+            "when_to_use": "Increased grip challenge"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Support grip strength", "Grip endurance", "Shoulder health", "Decompression"],
+        "place_in_workout": "End of workout or as grip-specific work",
+        "pairs_well_with": ["Pull-Ups", "Farmer's Carries", "Wrist Work"],
+        "hold_times": {
+          "beginner": "3-4 sets of 10-20 seconds",
+          "intermediate": "3-4 sets of 30-45 seconds",
+          "advanced": "3-4 sets of 60+ seconds"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Know how to land safely when grip fails",
+        "Don't drop from great height",
+        "Excellent for shoulder health and spinal decompression",
+        "Can be performed daily"
+      },
+      "video_explanation_script": "Dead hangs are one of the simplest yet most effective exercises for building grip strength. Find a pull-up bar and grab it with an overhand grip, hands about shoulder-width apart. Jump or step up so you're hanging with your arms fully extended and your feet off the ground. This is a dead hang - your arms are completely straight. Now just hang there and focus on maintaining your grip. Your shoulders should be slightly engaged, not fully relaxed and shrugged up to your ears. Breathe normally and grip the bar as tight as you can. Hang until your grip involuntarily fails and you have to let go. When you're starting out, even 10-20 seconds might be challenging, and that's fine. Work your way up. This builds incredible grip strength and endurance, plus it decompresses your spine and is great for shoulder health."
+    },
+    {
+      "exercise_id": "forearm_005",
+      "exercise_name": "Plate Pinch",
+      "muscle_group_primary": "Forearms & Grip",
+      "muscles_targeted": {
+        "primary": ["Thumb Flexors", "Finger Flexors", "Pinch Grip Muscles"],
+        "secondary": ["Wrist Flexors"],
+        "stabilizers": ["Forearm Muscles"]
+      },
+      "movement_pattern": "Pinch Grip Hold",
+      "movement_type": "Isometric Hold",
+      "equipment": {
+        "required": ["Weight Plates"],
+        "optional": ["Loading Pin"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Pinch two smooth-sided weight plates together with fingers on one side and thumb on the other, lift and hold.",
+        "key_points": [
+          "Plates pinched smooth side out",
+          "Fingers on one side, thumb on other",
+          "Arm hanging at side"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright, pinching two weight plates together at side, arm extended, plates lifted off ground.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Level, relaxed",
+          "torso": "Upright",
+          "arm": "Hanging straight down at side",
+          "hand": "Pinching plates - fingers on one side, thumb on other"
+        },
+        "grip": "Pinch grip - thumb opposed to fingers, squeezing plates together"
+      },
+      "execution": {
+        "hold": {
+          "description": "Maintain pinch grip and hold plates for maximum time",
+          "cues": [
+            "Squeeze the plates together as hard as you can",
+            "Your thumb does most of the work",
+            "Keep your arm hanging straight",
+            "Don't let the plates slip or separate",
+            "Breathe normally",
+            "Hold until grip fails"
+          ],
+          "critical_points": "Maximum pinch force, thumb engagement, maintaining plate contact"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous breathing throughout hold",
+        "alternative": "Natural breathing, stay relaxed"
+      },
+      "tempo": {
+        "beginner": "10-20 second holds per hand",
+        "intermediate": "20-40 second holds per hand",
+        "advanced": "40-60+ second holds per hand"
+      },
+      "range_of_motion": {
+        "position": "Static hold at side with plates pinched together",
+        "critical_point": "Maintaining pinch until plates slip or fatigue forces release",
+        "avoid": "Using momentum to lift plates"
+      },
+      "form_cues": [
+        "This targets a completely different type of grip - pinch strength",
+        "Your thumb should be working incredibly hard",
+        "Start with just one 10-pound plate if needed",
+        "Two 10s or two 25s are common starting points",
+        "Smooth plates are harder than bumper plates"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using too much weight initially",
+          "correction": "Start with single plate or light plates",
+          "why_it_matters": "Pinch grip is much weaker than crushing grip"
+        },
+        {
+          "mistake": "Curling arm or shrugging shoulder",
+          "correction": "Arm hangs straight, shoulder relaxed",
+          "why_it_matters": "Arm movement uses muscles other than pinch grip"
+        },
+        {
+          "mistake": "Plates separating during hold",
+          "correction": "Squeeze harder, use less weight if needed",
+          "why_it_matters": "Separation means insufficient pinch force"
+        },
+        {
+          "mistake": "Not using smooth side of plates",
+          "correction": "Pinch smooth sides for maximum difficulty",
+          "why_it_matters": "Textured sides are easier to grip"
+        },
+        {
+          "mistake": "Holding breath",
+          "correction": "Breathe continuously",
+          "why_it_matters": "Breath holding increases blood pressure"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single Plate Pinch",
+            "description": "Pinch just one plate",
+            "when_to_use": "Building initial pinch strength"
+          },
+          {
+            "name": "Bumper Plate Pinch",
+            "description": "Use bumper plates (textured) instead of smooth",
+            "when_to_use": "Easier grip surface"
+          },
+          {
+            "name": "Short Duration Pinches",
+            "description": "Multiple 5-10 second holds",
+            "when_to_use": "Building endurance gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavier Plate Pinch",
+            "description": "Progress to heavier plates or more plates",
+            "when_to_use": "Standard progression"
+          },
+          {
+            "name": "Pinch Grip Carry",
+            "description": "Walk while maintaining pinch grip",
+            "when_to_use": "Dynamic pinch strength"
+          },
+          {
+            "name": "Pinch Grip Lift",
+            "description": "Deadlift plates from floor using pinch grip",
+            "when_to_use": "Advanced pinch strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Pinch grip strength", "Thumb strength", "Complete grip development", "Rock climbing strength"],
+        "place_in_workout": "End of workout as grip-specific work",
+        "pairs_well_with": ["Dead Hangs", "Farmer's Carries", "Wrist Curls"],
+        "hold_times": {
+          "beginner": "3-4 sets of 10-20 seconds per hand",
+          "intermediate": "3-4 sets of 20-40 seconds per hand",
+          "advanced": "3-4 sets of 40-60+ seconds per hand"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise",
+        "Watch out for toes when grip fails",
+        "Let plates drop safely away from feet",
+        "Start light - pinch grip is surprisingly weak",
+        "Excellent for rock climbing preparation"
+      ],
+      "video_explanation_script": "Plate pinches develop a specific type of grip strength - pinch grip - which is crucial for many real-world tasks and activities like rock climbing. Take two weight plates and pinch them together with the smooth sides facing out. Your fingers go on one side and your thumb goes on the other side. Lift the plates off the ground so you're holding them at your side with your arm hanging straight down. Now just hold this position, squeezing the plates together as hard as you can. Your thumb should be working incredibly hard. Hold until your grip fails and you have to let the plates drop. Start light - maybe two 10-pound plates or even a single 10-pound plate. Pinch grip is much weaker than your regular crushing grip. This type of grip strength is often neglected but it's incredibly important for complete grip development."
+    },
+    {
+      "exercise_id": "forearm_006",
+      "exercise_name": "Wrist Roller",
+      "muscle_group_primary": "Forearms",
+      "muscles_targeted": {
+        "primary": ["Wrist Flexors", "Wrist Extensors", "Finger Flexors"],
+        "secondary": ["Brachioradialis"],
+        "stabilizers": ["Shoulders", "Biceps"]
+      },
+      "movement_pattern": "Wrist Flexion and Extension (Dynamic)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Wrist Roller Device (bar with rope and weight)"],
+        "optional": ["DIY version with PVC pipe, rope, and weight"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Hold wrist roller bar at shoulder height with arms extended, weight hanging from rope, ready to roll.",
+        "key_points": [
+          "Arms extended straight in front at shoulder height",
+          "Weight starts hanging at bottom",
+          "Overhand or underhand grip depending on direction"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with arms extended forward at shoulder height, holding wrist roller bar, weight hanging below.",
+        "body_alignment": {
+          "head": "Neutral, looking at device",
+          "shoulders": "Level, slightly fatigued from holding position",
+          "arms": "Extended straight forward, parallel to floor",
+          "torso": "Upright",
+          "feet": "Hip to shoulder-width"
+        },
+        "grip": "Overhand (pronated) for rolling up, underhand (supinated) for rolling down"
+      },
+      "execution": {
+        "roll_up": {
+          "description": "Alternately flex wrists to roll rope around bar, raising weight",
+          "cues": [
+            "Alternate rolling your wrists",
+            "One wrist flexes while other extends",
+            "Keep arms extended - don't bend elbows",
+            "Roll until weight reaches the bar",
+            "Don't use momentum - pure wrist work"
+          ],
+          "pattern": "Continuous alternating wrist flexion until weight fully rolled up"
+        },
+        "roll_down": {
+          "description": "Reverse the process, controlling weight down with wrist extension",
+          "cues": [
+            "Control the weight down",
+            "Use wrist extensors to resist",
+            "Same alternating motion in reverse",
+            "Don't let weight drop quickly"
+          ],
+          "pattern": "Controlled lowering using wrist extensors"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous breathing throughout exercise",
+        "alternative": "Natural breathing, don't hold breath"
+      },
+      "tempo": {
+        "standard": "Controlled rolling, 20-40 seconds to complete roll up and down",
+        "burn_focus": "Slower tempo for increased time under tension",
+        "endurance": "Multiple complete cycles"
+      },
+      "range_of_motion": {
+        "full": "From weight at bottom to weight touching bar",
+        "critical_point": "Complete roll up and controlled roll down",
+        "avoid": "Using arm bend or body movement"
+      },
+      "form_cues": [
+        "This is an old-school forearm builder that's incredibly effective",
+        "Your shoulders will burn from holding arms up - that's normal",
+        "Keep those arms straight and extended",
+        "The alternating wrist action hits all forearm muscles",
+        "One complete cycle up and down is one set"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bending elbows to make it easier",
+          "correction": "Keep arms fully extended throughout",
+          "why_it_matters": "Arm bend removes forearm emphasis"
+        },
+        {
+          "mistake": "Letting arms drop below shoulder height",
+          "correction": "Maintain arms parallel to floor throughout",
+          "why_it_matters": "Dropping arms makes it easier"
+        },
+        {
+          "mistake": "Using body momentum or swinging weight",
+          "correction": "Pure wrist action, controlled movement",
+          "why_it_matters": "Momentum removes forearm tension"
+        },
+        {
+          "mistake": "Letting weight drop quickly on the way down",
+          "correction": "Control descent using wrist extensors",
+          "why_it_matters": "Controlled descent works extensors"
+        },
+        {
+          "mistake": "Using too much weight initially",
+          "correction": "Start light - this exercise is very challenging",
+          "why_it_matters": "Too heavy forces poor form and arm bending"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Wrist Roller",
+            "description": "Use very light weight (2.5-5 lbs)",
+            "when_to_use": "Learning movement, building initial endurance"
+          },
+          {
+            "name": "Seated Wrist Roller",
+            "description": "Sit and rest elbows on thighs",
+            "when_to_use": "Removing shoulder fatigue factor"
+          },
+          {
+            "name": "Single Direction Only",
+            "description": "Roll up only, lower weight manually and repeat",
+            "when_to_use": "Emphasizing flexors over extensors"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavier Weight Wrist Roller",
+            "description": "Progressively increase weight",
+            "when_to_use": "Standard progression"
+          },
+          {
+            "name": "Multiple Cycles",
+            "description": "Roll up and down multiple times without rest",
+            "when_to_use": "Building endurance"
+          },
+          {
+            "name": "Slow Tempo Wrist Roller",
+            "description": "Take 60+ seconds for complete cycle",
+            "when_to_use": "Maximizing time under tension"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Complete forearm development", "Grip endurance", "Wrist strength", "Old-school mass building"],
+        "place_in_workout": "End of workout as forearm finisher",
+        "pairs_well_with": ["Wrist Curls", "Reverse Wrist Curls", "Dead Hangs"],
+        "sets": {
+          "standard": "2-3 complete cycles (up and down)",
+          "endurance": "3-5 complete cycles",
+          "burnout": "As many cycles as possible"
+        }
+      },
+      "safety_considerations": [
+        "Safe exercise when performed correctly",
+        "Shoulders may fatigue before forearms - normal",
+        "Start with very light weight",
+        "Can make your own version cheaply",
+        "Classic exercise that really works"
+      },
+      "video_explanation_script": "The wrist roller is an old-school forearm exercise that's incredibly effective. Hold the wrist roller bar with your arms extended straight out in front of you at shoulder height. A weight hangs below on a rope attached to the bar. Using an overhand grip, alternately roll your wrists to wind the rope around the bar, raising the weight. One wrist flexes while the other extends in a rolling motion. Keep your arms straight - don't bend your elbows. Roll until the weight reaches the bar. Then reverse the process, using your wrist extensors to control the weight back down. One complete cycle up and down is brutal but incredibly effective. Your shoulders will burn from holding your arms up - that's part of it. Start light, maybe 2.5 to 5 pounds, because this is much harder than it looks. This hits every muscle in your forearms."
+    },
+    {
+      "exercise_id": "forearm_007",
+      "exercise_name": "Towel Pull-Up",
+      "muscle_group_primary": "Forearms & Grip",
+      "muscles_targeted": {
+        "primary": ["Finger Flexors", "Grip Muscles", "Lats"],
+        "secondary": ["Wrist Flexors", "Biceps", "Brachialis"],
+        "stabilizers": ["Core", "Shoulders", "Middle Back"]
+      },
+      "movement_pattern": "Vertical Pulling with Compromised Grip",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Pull-up Bar", "Towel or Gi"],
+        "optional": ["Multiple Towels"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Drape towel over pull-up bar, grasp both ends of towel in each hand, hang with arms extended.",
+        "key_points": [
+          "Towel folded over bar or two towels for each hand",
+          "Grip towel ends tightly",
+          "More difficult than regular pull-ups due to grip challenge"
+        ]
+      },
+      "starting_position": {
+        "description": "Hanging from towel(s) draped over bar, arms fully extended, gripping towel ends.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Engaged, not fully relaxed",
+          "arms": "Fully extended, gripping towel",
+          "body": "Hanging straight",
+          "legs": "Straight or slightly bent"
+        },
+        "grip": "Crushing grip on towel fabric, as tight as possible"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull body up while maintaining towel grip until chin clears bar level",
+          "cues": [
+            "Crush the towel in your grip",
+            "Pull your body up",
+            "Keep squeezing the towel the entire time",
+            "Pull until chin clears bar level",
+            "Don't let grip slip"
+          ],
+          "end_position": "Chin at or above bar level, maintaining towel grip throughout"
+        },
+        "eccentric_phase": {
+          "description": "Lower body under control back to full hang",
+          "cues": [
+            "Control the descent",
+            "Maintain towel grip",
+            "Full arm extension at bottom",
+            "Reset for next rep"
+          ],
+          "end_position": "Full hang position, arms extended, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on pull up, inhale on lower",
+        "alternative": "Breath at bottom, hold during pull, exhale at top"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec pull, no pause, 2 sec lower, no pause)",
+        "grip_focus": "2-1-3-0 (2 sec pull, 1 sec hold, 3 sec lower, no pause)",
+        "strength": "X-1-2-0 (explosive pull, 1 sec hold, 2 sec lower, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From dead hang to chin over bar",
+        "critical_point": "Maintaining towel grip throughout entire range",
+        "avoid": "Partial range or losing grip"
+      },
+      "form_cues": [
+        "This is significantly harder than regular pull-ups",
+        "Your grip will fail before your back in most cases",
+        "The unstable towel makes everything harder",
+        "Crush that towel like your life depends on it",
+        "Common in martial arts training for grip strength"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Towel grip loosening during movement",
+          "correction": "Maintain maximum grip force throughout",
+          "why_it_matters": "Loose grip defeats the grip-building purpose"
+        },
+        {
+          "mistake": "Using momentum or kipping",
+          "correction": "Strict controlled pull-up",
+          "why_it_matters": "Momentum reduces grip challenge"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full range from dead hang to chin over bar",
+          "why_it_matters": "Partial range limits both back and grip development"
+        },
+        {
+          "mistake": "Not fully extending arms at bottom",
+          "correction": "Complete arm extension in hang",
+          "why_it_matters": "Partial extension reduces difficulty"
+        },
+        {
+          "mistake": "Expecting same reps as regular pull-ups",
+          "correction": "Accept significantly fewer reps initially",
+          "why_it_matters": "This variation is much harder"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Towel Pull-Up",
+            "description": "Use resistance band for assistance",
+            "when_to_use": "Building up to unassisted towel pull-ups"
+          },
+          {
+            "name": "Towel Dead Hang",
+            "description": "Just hang from towel without pulling",
+            "when_to_use": "Building initial grip strength for towel"
+          },
+          {
+            "name": "Negative Towel Pull-Ups",
+            "description": "Jump to top, lower slowly",
+            "when_to_use": "Building strength for full pull-ups"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Towel Pull-Up",
+            "description": "Add weight belt or vest",
+            "when_to_use": "Advanced grip and pulling strength"
+          },
+          {
+            "name": "Single-Towel Pull-Up",
+            "description": "Both hands on single towel",
+            "when_to_use": "Even more difficult grip challenge"
+          },
+          {
+            "name": "Thick Towel Pull-Up",
+            "description": "Use thicker towel for wider grip",
+            "when_to_use": "Increasing grip diameter and difficulty"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Advanced grip strength", "Rock climbing training", "Martial arts preparation", "Challenge variation"],
+        "place_in_workout": "Primary pulling movement or grip-specific work",
+        "pairs_well_with": ["Regular Pull-Ups", "Farmer's Carries", "Dead Hangs"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "5-10 reps",
+          "grip_focus": "As many as possible with strict form"
+        }
+      },
+      "safety_considerations": [
+        "Requires significant base pulling and grip strength",
+        "Know how to land safely if grip fails",
+        "Master regular pull-ups first",
+        "Very challenging - don't be discouraged by low rep counts",
+        "Excellent for combat sports and climbing"
+      },
+      "video_explanation_script": "Towel pull-ups are an advanced variation that builds incredible grip strength. Drape a towel over a pull-up bar and grab both ends of the towel in each hand - or use two towels, one for each hand. Hang with your arms fully extended. The towel is unstable and difficult to grip, which is the point. From this dead hang, pull yourself up just like a regular pull-up, but you have to maintain that crushing grip on the towel the entire time. Pull until your chin clears the bar, then lower under control. This is significantly harder than regular pull-ups - your grip will likely fail before your back does. You might only get a few reps at first, and that's completely normal. This variation is popular in martial arts and climbing training because it builds functional, real-world grip strength."
+    },
+    {
+      "exercise_id": "forearm_008",
+      "exercise_name": "Zottman Curl",
+      "muscle_group_primary": "Forearms & Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii", "Brachialis", "Brachioradialis"],
+        "secondary": ["Wrist Flexors", "Wrist Extensors"],
+        "stabilizers": ["Anterior Deltoids", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion with Rotation",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand with dumbbells at sides, palms facing thighs or forward, ready to curl.",
+        "key_points": [
+          "Start with neutral or supinated grip",
+          "Arms hanging at sides",
+          "Will rotate to pronated grip at top"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with dumbbells at sides, neutral or underhand grip, arms extended.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip-width apart",
+          "elbows": "At sides, arms extended"
+        },
+        "grip": "Neutral (palms facing body) or supinated (palms forward) at start"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl dumbbells up with underhand grip like standard curl",
+          "cues": [
+            "Curl the dumbbells up with palms facing up",
+            "Keep elbows at your sides",
+            "Just like a regular bicep curl",
+            "Curl to shoulder level"
+          ],
+          "end_position": "Dumbbells at shoulder level, underhand grip (palms up)"
+        },
+        "rotation": {
+          "description": "At the top, rotate wrists so palms face down",
+          "cues": [
+            "At the top, rotate your wrists",
+            "Turn palms from facing up to facing down",
+            "This rotation is what makes it unique"
+          ],
+          "end_position": "Dumbbells at shoulders, overhand grip (palms down)"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells with overhand grip, then rotate back to underhand at bottom",
+          "cues": [
+            "Lower the dumbbells with palms facing down",
+            "Control the descent - this hits your forearms hard",
+            "At the bottom, rotate palms back to starting position",
+            "Ready for next rep"
+          ],
+          "end_position": "Arms extended, dumbbells at sides, grip rotated back to underhand"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec curl, 1 sec rotate, 2 sec lower, rotate at bottom)",
+        "forearm_focus": "2-1-4-0 (2 sec curl, 1 sec rotate, 4 sec slow lower, rotate)",
+        "hypertrophy": "2-2-3-1 (2 sec curl, 2 sec hold/rotate, 3 sec lower, 1 sec reset)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to full curl, with rotation at top",
+        "critical_point": "Complete rotation at top, overhand descent emphasizes forearm extensors",
+        "avoid": "Skipping the rotation or partial range"
+      },
+      "form_cues": [
+        "This exercise hits both biceps and forearms in one movement",
+        "The underhand curl emphasizes biceps",
+        "The overhand lower hammers your forearm extensors",
+        "The rotation at top and bottom is crucial",
+        "You'll feel this in your forearms on the lowering phase"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Skipping or rushing the rotation",
+          "correction": "Deliberate rotation at top and bottom of each rep",
+          "why_it_matters": "Rotation is what makes this exercise unique"
+        },
+        {
+          "mistake": "Elbows drifting forward during curl",
+          "correction": "Keep elbows pinned at sides throughout",
+          "why_it_matters": "Elbow movement reduces effectiveness"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than standard curls",
+          "why_it_matters": "Heavy weight prevents proper rotation and controlled lowering"
+        },
+        {
+          "mistake": "Dropping weight quickly on eccentric",
+          "correction": "Control overhand descent - this is the forearm workout",
+          "why_it_matters": "Slow eccentric is crucial for forearm extensor development"
+        },
+        {
+          "mistake": "Not fully extending arms at bottom",
+          "correction": "Full arm extension before next rep",
+          "why_it_matters": "Partial range limits development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Alternating Zottman Curl",
+            "description": "One arm at a time",
+            "when_to_use": "Learning rotation pattern"
+          },
+          {
+            "name": "Seated Zottman Curl",
+            "description": "Perform seated to eliminate momentum",
+            "when_to_use": "Enforcing strict form"
+          },
+          {
+            "name": "Light Weight Zottman Curl",
+            "description": "Use very light dumbbells to perfect rotation",
+            "when_to_use": "Learning movement pattern"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Slow Eccentric Zottman Curl",
+            "description": "5-6 second lowering phase",
+            "when_to_use": "Maximizing forearm extensor work"
+          },
+          {
+            "name": "Zottman Curl with Pause",
+            "description": "Pause 2-3 seconds at top after rotation",
+            "when_to_use": "Increasing time under tension"
+          },
+          {
+            "name": "Incline Zottman Curl",
+            "description": "Perform on incline bench",
+            "when_to_use": "Different angle variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Combined bicep and forearm development", "Time-efficient arm training", "Forearm extensor strength"],
+        "place_in_workout": "Mid to end of arm workout",
+        "pairs_well_with": ["Hammer Curls", "Tricep Work", "Wrist Curls"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Safe exercise when performed correctly",
+        "Use lighter weight than standard bicep curls",
+        "Focus on rotation and controlled lowering",
+        "Can be hard on wrists if weight is too heavy",
+        "Excellent time-efficient exercise"
+      },
+      "video_explanation_script": "Zottman curls are a brilliant exercise that combines bicep and forearm training in one movement. Stand with dumbbells at your sides. Curl them up just like a regular bicep curl with your palms facing up. At the top of the movement, rotate your wrists so your palms are now facing down. Now lower the dumbbells with this overhand grip. This lowering phase with your palms down really hammers your forearm extensors - you'll feel it burning. At the bottom, rotate your wrists back to palms up and repeat. The underhand curl works your biceps, and the overhand lower works your forearms. You'll need to use lighter weight than standard curls because of that challenging lowering phase. This is one of the most efficient arm exercises you can do."
+    },
+    {
+      "exercise_id": "forearm_009",
+      "exercise_name": "Gripper Training",
+      "muscle_group_primary": "Forearms & Grip",
+      "muscles_targeted": {
+        "primary": ["Finger Flexors", "Hand Intrinsic Muscles"],
+        "secondary": ["Wrist Flexors"],
+        "stabilizers": ["Forearm Muscles"]
+      },
+      "movement_pattern": "Crushing Grip",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Hand Gripper (Captains of Crush, etc.)"],
+        "optional": ["Grippers of Various Resistance Levels"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Hold gripper in one hand with handles open, palm on one handle, fingers on other.",
+        "key_points": [
+          "Gripper positioned in hand properly",
+          "Can be done standing, sitting, anywhere",
+          "Start with appropriate resistance level"
+        ]
+      },
+      "starting_position": {
+        "description": "Gripper in hand with handles separated, ready to squeeze closed.",
+        "body_alignment": {
+          "posture": "Any position - standing, sitting, etc.",
+          "working_arm": "Can be at side, on table, anywhere comfortable",
+          "hand": "Gripping one handle in palm, other handle against fingers"
+        },
+        "grip": "Palm on fixed handle, fingers on movable handle"
+      },
+      "execution": {
+        "squeeze": {
+          "description": "Squeeze gripper handles together until they touch or as far as possible",
+          "cues": [
+            "Squeeze the gripper closed",
+            "Try to touch the handles together",
+            "Maximum crushing force",
+            "Focus on complete closure if possible",
+            "Hold the squeeze for 1-2 seconds"
+          ],
+          "end_position": "Gripper closed completely or maximally squeezed"
+        },
+        "release": {
+          "description": "Control gripper back to open position",
+          "cues": [
+            "Control the release",
+            "Don't just let it snap open",
+            "Reset for next rep"
+          ],
+          "end_position": "Gripper returned to open position"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on squeeze, inhale on release",
+        "alternative": "Natural breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec squeeze, 1 sec hold, 2 sec release, no pause)",
+        "strength_focus": "1-3-2-0 (1 sec squeeze, 3 sec hold, 2 sec release, no pause)",
+        "endurance": "1-0-1-0 (continuous squeezing)"
+      },
+      "range_of_motion": {
+        "full": "From gripper fully open to handles touching (full closure)",
+        "critical_point": "Closing gripper completely, not just partial squeezes",
+        "avoid": "Using gripper that's too hard to close properly"
+      },
+      "form_cues": [
+        "Proper gripper placement in hand is crucial",
+        "The goal is full closure - handles touching",
+        "Different gripper brands have different difficulty scales",
+        "Captains of Crush is the gold standard brand",
+        "Start with a gripper you can close 5-10 times"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using gripper that's too difficult",
+          "correction": "Start with gripper you can close completely 5-10 times",
+          "why_it_matters": "Too difficult prevents proper training and risks injury"
+        },
+        {
+          "mistake": "Improper gripper placement in hand",
+          "correction": "Palm on one handle, fingers on other, proper alignment",
+          "why_it_matters": "Wrong placement reduces effectiveness and can cause discomfort"
+        },
+        {
+          "mistake": "Only doing partial closes",
+          "correction": "Focus on complete closure with handles touching",
+          "why_it_matters": "Full closure builds maximum crushing strength"
+        },
+        {
+          "mistake": "Using momentum or jerking",
+          "correction": "Smooth controlled squeeze",
+          "why_it_matters": "Momentum increases injury risk"
+        },
+        {
+          "mistake": "Neglecting eccentric phase",
+          "correction": "Control the gripper open, don't let it snap",
+          "why_it_matters": "Controlled eccentric builds strength"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Resistance Gripper",
+            "description": "Use easier gripper resistance",
+            "when_to_use": "Building initial crushing grip strength"
+          },
+          {
+            "name": "Holds at Partial Closure",
+            "description": "Hold gripper at various points in range",
+            "when_to_use": "Building toward full closure"
+          },
+          {
+            "name": "High-Rep Light Gripper",
+            "description": "20-50+ reps with easier gripper",
+            "when_to_use": "Building grip endurance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavier Resistance Gripper",
+            "description": "Progress to more difficult gripper",
+            "when_to_use": "When current gripper becomes easy (15+ reps)"
+          },
+          {
+            "name": "Gripper Negatives",
+            "description": "Close with both hands, lower slowly with working hand",
+            "when_to_use": "Building toward closing harder gripper"
+          },
+          {
+            "name": "Timed Gripper Holds",
+            "description": "Close gripper and hold for maximum time",
+            "when_to_use": "Building isometric grip strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Crushing grip strength", "Convenient portable training", "Progressive resistance", "Specific grip sport training"],
+        "place_in_workout": "Anytime - can be done throughout the day",
+        "pairs_well_with": ["All grip training", "Can be done separately"],
+        "rep_ranges": {
+          "strength": "3-5 full closes per hand",
+          "hypertrophy": "5-12 closes per hand",
+          "endurance": "15-30+ closes per hand"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when using appropriate resistance",
+        "Don't start with gripper that's too hard",
+        "Can be done almost anywhere",
+        "Risk of overuse injury if done excessively",
+        "Excellent portable training tool"
+      },
+      "video_explanation_script": "Hand gripper training is one of the most convenient ways to build crushing grip strength. You can get quality grippers like Captains of Crush in various resistance levels. Hold the gripper in one hand with the palm on one handle and your fingers on the other. From the open position, squeeze the gripper closed until the handles touch - that's a full close. Hold it for a second, then control it back open. The goal is always to achieve full closure where the handles touch. Don't get a gripper that's too hard - start with one you can close 5 to 10 times with perfect form. As you get stronger, progress to harder grippers. This type of crushing grip strength is incredibly functional and the gripper is so portable you can train anywhere. Close it for a few sets on each hand throughout the day."
+    },
+    {
+      "exercise_id": "forearm_010",
+      "exercise_name": "Fat Grip Barbell Curl",
+      "muscle_group_primary": "Forearms & Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii", "Brachialis", "Finger Flexors"],
+        "secondary": ["Brachioradialis", "Wrist Flexors"],
+        "stabilizers": ["Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion with Increased Grip Demand",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Barbell", "Fat Gripz or Thick Bar"],
+        "optional": ["EZ-Bar with Fat Gripz"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Attach Fat Gripz to barbell or use thick bar, stand holding with underhand grip, arms extended.",
+        "key_points": [
+          "Fat Gripz increase bar diameter to 2+ inches",
+          "Makes any exercise significantly harder on grip",
+          "Setup same as regular barbell curl"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with thick bar at arm's length, underhand grip, elbows at sides.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width",
+          "elbows": "At sides, arms extended"
+        },
+        "grip": "Underhand (supinated), wider grip due to thick bar, challenging to maintain"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl thick bar up while maintaining crushing grip, keeping elbows stationary",
+          "cues": [
+            "Crush the thick bar in your grip",
+            "Curl toward shoulders",
+            "Keep elbows pinned at sides",
+            "Grip is the limiting factor",
+            "Squeeze biceps at top"
+          ],
+          "end_position": "Bar near shoulders, elbows at sides, biceps and forearms maximally engaged"
+        },
+        "eccentric_phase": {
+          "description": "Lower bar under control while maintaining grip",
+          "cues": [
+            "Control the descent",
+            "Don't lose your grip",
+            "Full arm extension",
+            "Maintain crushing grip force"
+          ],
+          "end_position": "Arms fully extended, bar at thigh level, grip maintained"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "grip_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "hypertrophy": "3-1-3-0 (3 sec up, 1 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to bar near shoulders",
+        "critical_point": "Maintaining grip throughout entire range - often the limiting factor",
+        "avoid": "Losing grip or compensating with momentum"
+      },
+      "form_cues": [
+        "Fat Gripz make any exercise brutally harder on your grip",
+        "You'll use 20-30% less weight than with regular bar",
+        "Your forearms will fatigue before your biceps",
+        "Crush the bar as hard as you can the entire set",
+        "This builds both biceps and forearms simultaneously"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using same weight as regular barbell curl",
+          "correction": "Reduce weight by 20-30% or more",
+          "why_it_matters": "Too heavy prevents maintaining grip"
+        },
+        {
+          "mistake": "Grip loosening during set",
+          "correction": "Maintain maximum crushing grip throughout entire set",
+          "why_it_matters": "Loose grip defeats the grip-building purpose"
+        },
+        {
+          "mistake": "Using momentum to compensate for weak grip",
+          "correction": "Strict controlled movement, reduce weight if needed",
+          "why_it_matters": "Momentum removes both bicep and grip tension"
+        },
+        {
+          "mistake": "Stopping set early when forearms fatigue",
+          "correction": "Push through - forearm fatigue is the point",
+          "why_it_matters": "Grip fatigue is where adaptation occurs"
+        },
+        {
+          "mistake": "Elbows drifting forward",
+          "correction": "Keep elbows pinned at sides despite grip challenge",
+          "why_it_matters": "Proper form still matters"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Fat Grip Dumbbell Curl",
+            "description": "Use Fat Gripz on dumbbells instead of barbell",
+            "when_to_use": "Less total grip demand than barbell"
+          },
+          {
+            "name": "Thinner Fat Grips",
+            "description": "Use 1.5\" grips instead of 2\" if available",
+            "when_to_use": "Building up to full thickness"
+          },
+          {
+            "name": "Alternating Fat Grip Curl",
+            "description": "One arm at a time with dumbbell",
+            "when_to_use": "Reducing total grip fatigue"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Fat Grip on All Exercises",
+            "description": "Apply Fat Gripz to all pulling and pressing movements",
+            "when_to_use": "Comprehensive grip development"
+          },
+          {
+            "name": "Fat Grip Dead Hang",
+            "description": "Hang from thick bar or Fat Gripz",
+            "when_to_use": "Pure grip endurance"
+          },
+          {
+            "name": "Thicker Bar Options",
+            "description": "Progress to 2.5\" or 3\" diameter bars",
+            "when_to_use": "Advanced grip development"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Combined bicep and forearm training", "Grip strength development", "Overcoming grip weaknesses"],
+        "place_in_workout": "Replace regular curls or as variation",
+        "pairs_well_with": ["Other Fat Grip exercises", "Grip-specific work"],
+        "rep_ranges": {
+          "strength": "5-8 reps",
+          "hypertrophy": "8-12 reps",
+          "grip_endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Safe when using appropriate weight reduction",
+        "Don't use regular curl weight - reduce significantly",
+        "Grip may fail suddenly - be prepared",
+        "Fat Gripz are affordable and attach to any bar",
+        "Excellent training tool"
+      ],
+      "video_explanation_script": "Fat grip training is a simple but brutally effective way to build grip strength - just make the bar thicker. Fat Gripz are rubber attachments that increase any barbell to about 2 inches in diameter. Attach them to a barbell and perform standard barbell curls, but here's the catch: you'll need to reduce the weight by 20 to 30 percent or more because the thick bar is so much harder to grip. Set up like a regular barbell curl with your arms extended and elbows at your sides. As you curl, you'll notice your forearms working incredibly hard just to maintain your grip on that thick bar. Crush the bar as hard as you can throughout the entire set. Your grip will likely fatigue before your biceps, and that's exactly the point. This builds both your biceps and your grip strength simultaneously. You can apply Fat Gripz to any exercise - curls, rows, deadlifts - to make grip the limiting factor."
+    }
+  ]
+}

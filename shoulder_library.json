@@ -1,0 +1,1963 @@
+{
+  "muscle_group": "Shoulders",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Anterior Deltoid",
+        "function": "Shoulder flexion, horizontal adduction, internal rotation",
+        "description": "Front portion of deltoid, primary mover in pressing movements and front raises"
+      },
+      {
+        "name": "Lateral Deltoid",
+        "function": "Shoulder abduction",
+        "description": "Middle portion of deltoid, creates shoulder width, primary mover in lateral raises"
+      },
+      {
+        "name": "Posterior Deltoid",
+        "function": "Shoulder extension, horizontal abduction, external rotation",
+        "description": "Rear portion of deltoid, involved in pulling movements and reverse fly motions"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "shoulder_001",
+      "exercise_name": "Barbell Overhead Press (Standing)",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Anterior Deltoid", "Lateral Deltoid"],
+        "secondary": ["Triceps", "Upper Chest", "Upper Trapezius"],
+        "stabilizers": ["Core", "Serratus Anterior", "Rotator Cuff"]
+      },
+      "movement_pattern": "Vertical Pressing",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Power Rack", "Weight Plates", "Lifting Belt"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand with feet hip to shoulder-width apart, barbell at upper chest/collarbone height, hands slightly wider than shoulder-width with full grip.",
+        "key_points": [
+          "Bar starts at collarbone/upper chest level",
+          "Hands just outside shoulder-width for optimal pressing angle",
+          "Elbows slightly in front of bar"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing tall with bar resting on upper chest, elbows forward, core braced, slight knee bend.",
+        "body_alignment": {
+          "head": "Neutral, chin slightly tucked",
+          "shoulders": "Packed down and back",
+          "spine": "Neutral, ribs down",
+          "hips": "Neutral, glutes engaged",
+          "knees": "Slight bend, not locked",
+          "feet": "Hip to shoulder-width, weight through mid-foot"
+        },
+        "grip": "Full grip (thumbs around bar), hands slightly wider than shoulders, forearms vertical"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Press bar straight up overhead while moving head back slightly to clear bar path",
+          "cues": [
+            "Press the bar straight up, not forward",
+            "Move your head back to clear the bar path",
+            "Once bar clears, press head through to neutral",
+            "Lock out arms fully overhead",
+            "Bar finishes directly over mid-foot",
+            "Squeeze shoulders at top"
+          ],
+          "end_position": "Arms fully locked out, bar directly overhead, head in neutral position, body in straight line"
+        },
+        "eccentric_phase": {
+          "description": "Lower bar under control back to upper chest/collarbone",
+          "cues": [
+            "Control the descent",
+            "Pull the bar down actively",
+            "Move head back as bar descends",
+            "Maintain vertical forearm position",
+            "Touch bar to upper chest"
+          ],
+          "end_position": "Bar returned to collarbone/upper chest, elbows slightly forward"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale at top or bottom, hold breath during press (Valsalva), exhale after passing sticking point",
+        "alternative": "Exhale continuously through press for lighter weights"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "strength_focus": "X-1-2-0 (explosive up, 1 sec hold, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From upper chest to full lockout overhead with bar over mid-foot",
+        "critical_point": "Full lockout with shoulders shrugged up toward ears at top",
+        "avoid": "Pressing bar forward or not achieving full lockout"
+      },
+      "form_cues": [
+        "Push the floor away with your feet",
+        "Bar travels in a straight vertical line",
+        "Head back, head through - like looking through a window",
+        "Squeeze your glutes to protect your lower back",
+        "Think about pushing yourself away from the bar",
+        "Elbows start in front of the bar, not under it"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pressing bar forward instead of straight up",
+          "correction": "Move head back first, then press straight up, bar path should be vertical",
+          "why_it_matters": "Forward bar path reduces efficiency and increases shoulder strain"
+        },
+        {
+          "mistake": "Excessive lower back arching",
+          "correction": "Brace core, squeeze glutes, keep ribs down",
+          "why_it_matters": "Hyperextension increases injury risk and indicates core weakness"
+        },
+        {
+          "mistake": "Not moving head back/through",
+          "correction": "Actively move head back to clear bar, then press head through at top",
+          "why_it_matters": "Bar will hit face or have to travel around head, reducing efficiency"
+        },
+        {
+          "mistake": "Incomplete lockout at top",
+          "correction": "Fully extend arms and shrug shoulders up at top",
+          "why_it_matters": "Partial reps limit strength development and shoulder development"
+        },
+        {
+          "mistake": "Elbows flaring too wide",
+          "correction": "Keep elbows at approximately 45 degrees from torso",
+          "why_it_matters": "Excessive flare increases shoulder impingement risk"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Barbell Overhead Press",
+            "description": "Perform seated with back support",
+            "when_to_use": "Reducing stability demands, learning movement pattern"
+          },
+          {
+            "name": "Dumbbell Overhead Press",
+            "description": "Use dumbbells instead of barbell",
+            "when_to_use": "Building up to barbell, shoulder mobility limitations"
+          },
+          {
+            "name": "Landmine Press",
+            "description": "Press barbell anchored at one end",
+            "when_to_use": "Shoulder issues, learning pressing pattern"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Push Press",
+            "description": "Use leg drive to assist press",
+            "when_to_use": "Overloading shoulders, building explosive power"
+          },
+          {
+            "name": "Behind-the-Neck Press",
+            "description": "Press from behind neck (requires excellent mobility)",
+            "when_to_use": "Advanced variation with proper shoulder mobility"
+          },
+          {
+            "name": "Paused Overhead Press",
+            "description": "Pause 2-3 seconds at sticking point",
+            "when_to_use": "Building strength through weak points"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall shoulder development", "Building pressing strength", "Anterior and lateral deltoid hypertrophy"],
+        "place_in_workout": "Early workout as primary pressing movement",
+        "pairs_well_with": ["Lateral Raises", "Face Pulls", "Bench Press"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Master the movement with lighter weight first",
+        "Ensure adequate shoulder mobility before heavy loading",
+        "Use spotter for heavy attempts",
+        "Avoid if experiencing shoulder impingement",
+        "Stop if feeling pain in lower back or shoulders"
+      ],
+      "video_explanation_script": "The standing barbell overhead press is the king of shoulder exercises. Start with the bar at your upper chest, hands just outside shoulder-width, elbows slightly forward. From here, press the bar straight up, but here's the key: you need to move your head back slightly to let the bar clear your face. Once the bar passes your forehead, press your head through to a neutral position. Lock out fully at the top with the bar directly over your mid-foot. Lower under control back to your chest. Keep your core tight and glutes squeezed throughout to protect your lower back. This exercise builds powerful, well-developed shoulders."
+    },
+    {
+      "exercise_id": "shoulder_002",
+      "exercise_name": "Dumbbell Overhead Press (Seated)",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Anterior Deltoid", "Lateral Deltoid"],
+        "secondary": ["Triceps", "Upper Trapezius"],
+        "stabilizers": ["Rotator Cuff", "Serratus Anterior", "Core"]
+      },
+      "movement_pattern": "Vertical Pressing",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbells", "Adjustable Bench"],
+        "optional": ["Back Support"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set bench to 85-90 degrees (nearly vertical), sit with back firmly against pad, dumbbells at shoulder height.",
+        "key_points": [
+          "Bench angle should be nearly vertical for true overhead press",
+          "Feet flat on floor for stability",
+          "Dumbbells start at shoulder level"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated with back against pad, dumbbells at shoulder height, palms facing forward, elbows at 45-degree angle.",
+        "body_alignment": {
+          "head": "Neutral against pad",
+          "shoulders": "Packed down, blades against pad",
+          "spine": "Neutral, back firmly against pad",
+          "hips": "Seated firmly on bench",
+          "knees": "Bent 90 degrees",
+          "feet": "Flat on floor, hip-width apart"
+        },
+        "grip": "Neutral to pronated (palms forward), dumbbells at ear level"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Press dumbbells up and slightly inward until arms are fully extended",
+          "cues": [
+            "Press up and in - dumbbells nearly touch at top",
+            "Don't clang dumbbells together",
+            "Full arm extension without aggressive lockout",
+            "Elbows stay in front of body",
+            "Maintain contact with bench back"
+          ],
+          "end_position": "Arms fully extended overhead, dumbbells nearly touching, shoulders shrugged up slightly"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to shoulder height",
+          "cues": [
+            "Control the descent",
+            "Lower to ear level or slightly below",
+            "Keep wrists stacked over elbows",
+            "Maintain back contact with pad",
+            "Feel stretch in shoulders"
+          ],
+          "end_position": "Dumbbells at shoulder/ear level, elbows at approximately 90 degrees"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale at top or bottom, hold during descent, exhale through press",
+        "alternative": "Continuous breathing for higher rep sets"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec squeeze, 3 sec down, no pause)",
+        "strength_focus": "X-1-2-0 (explosive up, 1 sec hold, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From shoulder/ear level to full overhead extension",
+        "critical_point": "Full extension at top, deep stretch at bottom",
+        "avoid": "Bouncing at bottom or not achieving full extension"
+      },
+      "form_cues": [
+        "Keep your back glued to the pad",
+        "Press up and in - think about bringing the dumbbells together",
+        "Elbows stay in front of your body, not behind",
+        "Don't let your ribs flare out",
+        "Control the weight down, explode up"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Arching lower back off bench",
+          "correction": "Keep back and shoulder blades firmly against pad, core engaged",
+          "why_it_matters": "Arching reduces shoulder emphasis and increases injury risk"
+        },
+        {
+          "mistake": "Pressing straight up instead of up and in",
+          "correction": "Dumbbells should travel in slight arc, nearly touching at top",
+          "why_it_matters": "Straight up path is less efficient for shoulder activation"
+        },
+        {
+          "mistake": "Elbows flaring too far back",
+          "correction": "Keep elbows at 45-degree angle, in front of body",
+          "why_it_matters": "Excessive flare increases shoulder impingement risk"
+        },
+        {
+          "mistake": "Bouncing dumbbells at bottom",
+          "correction": "Control the descent, pause briefly at bottom",
+          "why_it_matters": "Bouncing uses momentum and reduces time under tension"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Lower to at least ear level, press to full extension",
+          "why_it_matters": "Partial reps limit muscle development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Alternating Dumbbell Press",
+            "description": "Press one arm at a time",
+            "when_to_use": "Learning movement, building unilateral strength"
+          },
+          {
+            "name": "Neutral Grip Dumbbell Press",
+            "description": "Palms facing each other throughout",
+            "when_to_use": "Shoulder discomfort with traditional grip"
+          },
+          {
+            "name": "Lighter Weight with Pause",
+            "description": "Use lighter weight with 2-second pause at top",
+            "when_to_use": "Building mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Standing Dumbbell Press",
+            "description": "Perform standing instead of seated",
+            "when_to_use": "Increasing stability demands and core involvement"
+          },
+          {
+            "name": "Arnold Press",
+            "description": "Rotate dumbbells from palms-in to palms-forward during press",
+            "when_to_use": "Advanced variation targeting all deltoid heads"
+          },
+          {
+            "name": "Single-Arm Dumbbell Press",
+            "description": "Press one arm while other holds at shoulder",
+            "when_to_use": "Addressing imbalances, increasing core stability demands"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Building shoulder mass", "Learning pressing pattern", "Unilateral shoulder development"],
+        "place_in_workout": "Primary or secondary pressing movement",
+        "pairs_well_with": ["Lateral Raises", "Face Pulls", "Front Raises"],
+        "rep_ranges": {
+          "strength": "5-8 reps",
+          "hypertrophy": "8-12 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Easier on lower back than standing variations",
+        "Ensure bench is stable and properly adjusted",
+        "Have spotter assist with heavy dumbbells",
+        "Avoid if experiencing shoulder impingement",
+        "Start lighter than you think - dumbbells are humbling"
+      ],
+      "video_explanation_script": "The seated dumbbell overhead press is excellent for building shoulder size and strength. Set your bench to nearly vertical - about 85 to 90 degrees. Sit with your back firmly against the pad and dumbbells at shoulder height, palms facing forward. Press the dumbbells up and slightly inward so they nearly touch at the top - don't clang them together. Fully extend your arms at the top. Then lower under control back to shoulder level. The key is keeping your back against the pad throughout the entire movement. This variation allows you to focus purely on the shoulders without worrying about lower back stability."
+    },
+    {
+      "exercise_id": "shoulder_003",
+      "exercise_name": "Dumbbell Lateral Raise",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Lateral Deltoid"],
+        "secondary": ["Anterior Deltoid", "Supraspinatus"],
+        "stabilizers": ["Upper Trapezius", "Serratus Anterior", "Core"]
+      },
+      "movement_pattern": "Shoulder Abduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": ["Wrist Straps"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand with feet hip-width apart, dumbbells at sides, slight forward torso lean.",
+        "key_points": [
+          "Slight forward lean (5-10 degrees) increases lateral deltoid emphasis",
+          "Dumbbells start at sides or slightly in front of thighs",
+          "Maintain slight bend in elbows throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with slight forward lean, dumbbells at sides, elbows slightly bent, core engaged.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down, not shrugged",
+          "spine": "Neutral with 5-10 degree forward lean",
+          "hips": "Neutral, slight knee bend",
+          "knees": "Soft bend",
+          "feet": "Hip-width apart, stable base"
+        },
+        "grip": "Neutral or pronated (palms down), light grip, slight elbow bend (10-20 degrees)"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Raise dumbbells out to sides in arc motion to shoulder height",
+          "cues": [
+            "Lead with your elbows, not your hands",
+            "Raise to shoulder height (parallel to floor)",
+            "Slight internal rotation at top - pour the pitcher",
+            "Pinkies slightly higher than thumbs at top",
+            "Think about pushing dumbbells away from you"
+          ],
+          "end_position": "Arms parallel to floor, slight internal rotation, elbows slightly bent, shoulder-height"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to starting position",
+          "cues": [
+            "Control the descent, don't just drop",
+            "Resist gravity",
+            "Maintain elbow bend",
+            "Keep tension in shoulders",
+            "Don't fully rest at bottom"
+          ],
+          "end_position": "Dumbbells at sides, maintain tension, don't rest completely"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec raise, 1 sec pause, 2 sec lower, no rest)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec raise, 2 sec pause, 3 sec lower, no rest)",
+        "burn_focus": "1-3-2-0 (1 sec raise, 3 sec hold, 2 sec lower, no rest)"
+      },
+      "range_of_motion": {
+        "full": "From sides to shoulder height (arms parallel to floor)",
+        "critical_point": "Shoulder height is optimal - going higher recruits too much trap",
+        "avoid": "Raising above shoulder height or using momentum"
+      },
+      "form_cues": [
+        "Lead with your elbows like you're elbowing someone behind you",
+        "Think about pouring water from a pitcher at the top",
+        "Your pinkies should end up slightly higher than your thumbs",
+        "Don't shrug your shoulders - keep them down",
+        "Imagine your arms are long levers, not bending at the elbow"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Use controlled tempo, eliminate body English",
+          "why_it_matters": "Momentum reduces muscle activation and increases injury risk"
+        },
+        {
+          "mistake": "Shrugging shoulders at top",
+          "correction": "Keep shoulders packed down, initiate with deltoids not traps",
+          "why_it_matters": "Shrugging shifts emphasis from deltoids to traps"
+        },
+        {
+          "mistake": "Raising dumbbells too high",
+          "correction": "Stop at shoulder height (parallel to floor)",
+          "why_it_matters": "Going higher excessively recruits upper traps"
+        },
+        {
+          "mistake": "No internal rotation at top",
+          "correction": "Slight internal rotation (pinky up) maximizes lateral delt activation",
+          "why_it_matters": "Without rotation, less optimal lateral deltoid activation"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight with perfect form",
+          "why_it_matters": "Heavy weight forces compensation and momentum"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Lateral Raise",
+            "description": "Perform seated to eliminate momentum",
+            "when_to_use": "Learning strict form, preventing cheating"
+          },
+          {
+            "name": "Single-Arm Lateral Raise",
+            "description": "One arm at a time, holding support with other hand",
+            "when_to_use": "Focusing on form and mind-muscle connection"
+          },
+          {
+            "name": "Cable Lateral Raise",
+            "description": "Use cable machine for constant tension",
+            "when_to_use": "Building mind-muscle connection with steady resistance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Leaning Lateral Raise",
+            "description": "Hold support and lean away for increased range",
+            "when_to_use": "Advanced variation increasing stretch at bottom"
+          },
+          {
+            "name": "Y-Raise",
+            "description": "Raise arms at 45-degree angle in front (Y shape)",
+            "when_to_use": "Variation targeting different angle"
+          },
+          {
+            "name": "Lateral Raise with Pause",
+            "description": "Hold at top for 3-5 seconds",
+            "when_to_use": "Increasing time under tension and intensity"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lateral deltoid isolation", "Building shoulder width", "Mind-muscle connection"],
+        "place_in_workout": "After main pressing movements as accessory work",
+        "pairs_well_with": ["Overhead Press", "Front Raises", "Rear Delt Work"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Start very light - lateral raises are humbling",
+        "Focus on form over weight",
+        "Avoid if experiencing shoulder impingement",
+        "Stop if feeling pain in shoulders",
+        "One of the most commonly butchered exercises - ego check at the door"
+      ],
+      "video_explanation_script": "Lateral raises are the best exercise for building wide shoulders. Stand with a slight forward lean, dumbbells at your sides, and a slight bend in your elbows. From here, raise the dumbbells out to your sides, leading with your elbows like you're elbowing someone. At the top, your arms should be parallel to the floor - that's shoulder height. Here's a key detail: rotate your wrists slightly so your pinkies are a bit higher than your thumbs, like you're pouring water from a pitcher. This internal rotation maximizes lateral deltoid activation. Lower under control and repeat. Use lighter weight than you think you need and focus on feeling your side delts working."
+    },
+    {
+      "exercise_id": "shoulder_004",
+      "exercise_name": "Cable Lateral Raise",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Lateral Deltoid"],
+        "secondary": ["Anterior Deltoid", "Supraspinatus"],
+        "stabilizers": ["Core", "Serratus Anterior"]
+      },
+      "movement_pattern": "Shoulder Abduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Single Handle or D-Handle"],
+        "optional": ["Different Handle Attachments"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to lowest position, stand with working side away from machine, grasp handle with opposite hand across body.",
+        "key_points": [
+          "Pulley at lowest setting",
+          "Stand perpendicular or angled to machine",
+          "Cable crosses in front of body at start"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with cable handle held across body at side, slight forward lean, working arm has slight elbow bend.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down, away from ears",
+          "spine": "Neutral with slight forward lean",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip-width, stable stance"
+        },
+        "grip": "Light grip on handle, arm crosses in front of body"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Raise handle out to side in arc motion to shoulder height against cable resistance",
+          "cues": [
+            "Lead with your elbow",
+            "Pull the cable out and up to shoulder height",
+            "Maintain constant tension from cable",
+            "Slight internal rotation at top",
+            "Don't let cable pull you back at start"
+          ],
+          "end_position": "Arm parallel to floor at shoulder height, cable creates resistance throughout range"
+        },
+        "eccentric_phase": {
+          "description": "Control cable back to starting position, resisting the pull",
+          "cues": [
+            "Resist the cable pulling you back",
+            "Control the descent",
+            "Maintain tension throughout",
+            "Don't let arm drop quickly"
+          ],
+          "end_position": "Handle returned across body, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec raise, 1 sec hold, 2 sec lower, no rest)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec raise, 2 sec hold, 3 sec lower, no rest)",
+        "constant_tension": "1-1-3-0 (1 sec raise, 1 sec hold, 3 sec negative, no rest)"
+      },
+      "range_of_motion": {
+        "full": "From cable starting across body to arm parallel to floor",
+        "critical_point": "Constant tension throughout entire range unlike dumbbells",
+        "avoid": "Raising above shoulder height or losing tension at bottom"
+      },
+      "form_cues": [
+        "The cable provides constant tension - feel it throughout",
+        "Think about pulling the cable away from the machine",
+        "Your shoulder should stay packed down",
+        "Lead with your elbow like you're elbowing someone",
+        "Control the weight back, don't let it snap you"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Allowing cable to pull body back at start",
+          "correction": "Brace core, maintain stable position, resist cable pull",
+          "why_it_matters": "Losing stability reduces targeting and increases injury risk"
+        },
+        {
+          "mistake": "Shrugging shoulder at top",
+          "correction": "Keep shoulder packed down throughout movement",
+          "why_it_matters": "Shrugging shifts work to traps instead of lateral delt"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Use slow controlled tempo, resist both directions",
+          "why_it_matters": "Momentum eliminates the constant tension benefit of cables"
+        },
+        {
+          "mistake": "Bending elbow excessively during movement",
+          "correction": "Maintain constant elbow bend (10-20 degrees)",
+          "why_it_matters": "Bending elbow turns it into a curl movement"
+        },
+        {
+          "mistake": "Standing too close to machine",
+          "correction": "Position so cable has resistance even at start position",
+          "why_it_matters": "Too close means dead zone with no tension"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Weight High Rep",
+            "description": "Use very light weight for 15-20+ reps",
+            "when_to_use": "Building mind-muscle connection and learning pattern"
+          },
+          {
+            "name": "Seated Cable Lateral Raise",
+            "description": "Perform seated to eliminate body momentum",
+            "when_to_use": "Enforcing strict form"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Constant Tension Lateral Raise",
+            "description": "Don't let handle return all the way - maintain tension",
+            "when_to_use": "Advanced technique for increased intensity"
+          },
+          {
+            "name": "Cable Lateral Raise with Pause",
+            "description": "Pause 3-5 seconds at top of each rep",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Drop Set Cable Lateral Raises",
+            "description": "Reduce weight immediately after reaching failure",
+            "when_to_use": "Advanced intensity technique for hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lateral deltoid isolation with constant tension", "Mind-muscle connection", "High-rep shoulder work"],
+        "place_in_workout": "Mid to late workout as accessory isolation work",
+        "pairs_well_with": ["Dumbbell Lateral Raises", "Overhead Press", "Face Pulls"],
+        "rep_ranges": {
+          "hypertrophy": "12-20 reps per arm",
+          "endurance": "15-30 reps per arm",
+          "burnout": "20-50 reps per arm"
+        }
+      },
+      "safety_considerations": [
+        "Very low injury risk when performed correctly",
+        "Cable creates constant tension unlike dumbbells",
+        "Excellent for rehabilitation when cleared",
+        "Stop if experiencing shoulder pain",
+        "Great for high-rep work with lower joint stress"
+      ],
+      "video_explanation_script": "Cable lateral raises offer a huge advantage over dumbbells - constant tension throughout the entire range of motion. Set the cable pulley to the lowest position and stand perpendicular to the machine. Reach across your body with the hand furthest from the machine and grab the handle. From here, raise the cable out to your side, leading with your elbow, until your arm is parallel to the floor. The cable creates resistance the entire way, unlike dumbbells where tension drops off at the top. Control it back down, resisting the pull of the cable. You should feel constant tension in your side delt throughout every rep. This makes cables excellent for building that mind-muscle connection and achieving a great pump."
+    },
+    {
+      "exercise_id": "shoulder_005",
+      "exercise_name": "Dumbbell Front Raise",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Anterior Deltoid"],
+        "secondary": ["Lateral Deltoid", "Upper Chest"],
+        "stabilizers": ["Core", "Serratus Anterior"]
+      },
+      "movement_pattern": "Shoulder Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": ["Weight Plates", "Barbell", "Cable"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Stand with feet hip-width apart, dumbbells in front of thighs, palms facing thighs or each other.",
+        "key_points": [
+          "Start with dumbbells touching or near thighs",
+          "Slight forward lean optional",
+          "Core engaged, shoulders packed"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright, dumbbells in front of thighs, neutral or pronated grip, slight elbow bend.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down and back",
+          "spine": "Neutral",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip-width apart"
+        },
+        "grip": "Neutral (palms facing each other) or pronated (palms facing thighs), light grip"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Raise dumbbells forward and up to shoulder height or slightly above",
+          "cues": [
+            "Raise arms straight out in front",
+            "Keep elbows slightly bent",
+            "Lift to eye level or slightly above",
+            "Don't shrug shoulders",
+            "Control the movement, no swinging"
+          ],
+          "end_position": "Arms parallel to floor or slightly above, dumbbells at eye level"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Don't let dumbbells drop",
+            "Maintain tension in front delts",
+            "Return to thighs"
+          ],
+          "end_position": "Dumbbells returned to front of thighs"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec raise, 1 sec pause, 2 sec lower, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec raise, 2 sec pause, 3 sec lower, no pause)",
+        "strict_form": "3-1-3-0 (3 sec raise, 1 sec pause, 3 sec lower, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From thighs to eye level or slightly above (parallel to floor minimum)",
+        "critical_point": "At least shoulder height, can go slightly higher than lateral raises",
+        "avoid": "Using momentum or raising dumbbells too high overhead"
+      },
+      "form_cues": [
+        "Think about reaching forward and up, not just up",
+        "Your thumbs should point up or forward, not down",
+        "Keep your chest up throughout",
+        "Imagine pushing the dumbbells away from you as you raise",
+        "Don't let your lower back arch"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using momentum or swinging dumbbells",
+          "correction": "Use strict controlled tempo, eliminate body English",
+          "why_it_matters": "Momentum removes tension from target muscle"
+        },
+        {
+          "mistake": "Shrugging shoulders",
+          "correction": "Keep shoulders packed down, raise with deltoids not traps",
+          "why_it_matters": "Shrugging shifts work away from anterior deltoids"
+        },
+        {
+          "mistake": "Arching lower back",
+          "correction": "Brace core, keep ribs down, slight forward lean acceptable",
+          "why_it_matters": "Arching indicates weight is too heavy and increases injury risk"
+        },
+        {
+          "mistake": "Bending elbows excessively during movement",
+          "correction": "Maintain slight consistent elbow bend throughout",
+          "why_it_matters": "Excessive bending reduces range of motion and effectiveness"
+        },
+        {
+          "mistake": "Alternating arms when not necessary",
+          "correction": "Raise both arms together unless specifically doing alternating variation",
+          "why_it_matters": "Bilateral movement is more efficient for most goals"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Alternating Front Raise",
+            "description": "Raise one arm at a time",
+            "when_to_use": "Learning movement, building unilateral strength"
+          },
+          {
+            "name": "Cable Front Raise",
+            "description": "Use low cable pulley for constant tension",
+            "when_to_use": "Different resistance curve, preventing cheating"
+          },
+          {
+            "name": "Plate Front Raise",
+            "description": "Hold single weight plate with both hands",
+            "when_to_use": "Variation for different stimulus"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Barbell Front Raise",
+            "description": "Use barbell with overhand grip",
+            "when_to_use": "Heavier loading, both arms work together"
+          },
+          {
+            "name": "Front Raise to Overhead Press",
+            "description": "After raising to shoulder height, press overhead",
+            "when_to_use": "Advanced combination movement"
+          },
+          {
+            "name": "Incline Bench Front Raise",
+            "description": "Perform lying face-up on incline bench",
+            "when_to_use": "Eliminating momentum, increased difficulty"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Anterior deltoid isolation", "Building front shoulder mass", "Balanced shoulder development"],
+        "place_in_workout": "After pressing movements as accessory work",
+        "pairs_well_with": ["Lateral Raises", "Overhead Press", "Rear Delt Work"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-20 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Front delts get worked heavily in pressing movements",
+        "May not need much direct front delt work if doing lots of pressing",
+        "Use lighter weight than lateral raises",
+        "Stop if experiencing shoulder pain",
+        "Good exercise but often overused relative to rear/lateral delt work"
+      ],
+      "video_explanation_script": "Front raises directly target the front of your shoulders. Stand with dumbbells in front of your thighs, palms facing your legs or facing each other. With a slight bend in your elbows, raise the dumbbells straight out in front of you until they reach eye level or just above shoulder height. Keep your shoulders packed down - don't shrug them up. Control the weight back down to your thighs. The key is eliminating momentum and using strict form. Your front delts already get a lot of work from pressing movements, so you don't need to go heavy here. Focus on the squeeze and control."
+    },
+    {
+      "exercise_id": "shoulder_006",
+      "exercise_name": "Face Pull",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Posterior Deltoid", "Middle Trapezius", "Rhomboids"],
+        "secondary": ["Rotator Cuff", "Lower Trapezius"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Horizontal Abduction with External Rotation",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Cable Machine with Rope Attachment"],
+        "optional": ["Resistance Band"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to upper chest or face height, attach rope, stand facing machine with rope in both hands.",
+        "key_points": [
+          "Pulley at upper chest to face height",
+          "Stand arm's length or slightly farther from machine",
+          "Rope held with overhand grip, thumbs toward body"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing cable machine, rope held at arm's length, slight backward lean, feet staggered or parallel.",
+        "body_alignment": {
+          "head": "Neutral, looking at attachment point",
+          "shoulders": "Relaxed forward at start",
+          "spine": "Neutral, slight backward lean",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip-width or staggered stance for stability"
+        },
+        "grip": "Overhand grip on rope, thumbs pointing toward face"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull rope toward face while externally rotating shoulders and separating rope ends",
+          "cues": [
+            "Pull the rope toward your face",
+            "Separate the rope ends as you pull - spread it apart",
+            "Elbows should go high and out to sides",
+            "Rotate fists so thumbs point behind you at end",
+            "Squeeze shoulder blades together",
+            "Think about pulling rope apart and to your ears"
+          ],
+          "end_position": "Rope separated, hands by ears, elbows high and back, shoulders externally rotated"
+        },
+        "eccentric_phase": {
+          "description": "Control rope back to starting position, resisting cable tension",
+          "cues": [
+            "Control the return",
+            "Let arms extend fully",
+            "Feel the stretch in rear delts",
+            "Don't let cable snap arms forward"
+          ],
+          "end_position": "Arms extended, rope together, shoulders protracted slightly"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on pull, inhale on return",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec pull, 1 sec squeeze, 2 sec return, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec pull, 2 sec squeeze, 3 sec return, no pause)",
+        "control_focus": "2-3-3-0 (2 sec pull, 3 sec squeeze, 3 sec return, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms fully extended to rope separated by ears",
+        "critical_point": "Full external rotation and scapular retraction at end",
+        "avoid": "Pulling rope to chest instead of face or not separating rope"
+      },
+      "form_cues": [
+        "Imagine you're making a double bicep pose",
+        "Your upper arms should be parallel to the floor",
+        "Pull the rope apart, not just back",
+        "Thumbs should rotate to point behind you",
+        "Think about showing off your armpits at the top"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling rope to chest instead of face",
+          "correction": "Keep elbows high, pull to face level, separate rope by ears",
+          "why_it_matters": "Pulling to chest misses the rear delts and external rotation"
+        },
+        {
+          "mistake": "Not separating the rope ends",
+          "correction": "Actively pull rope apart as you pull back",
+          "why_it_matters": "Separation is key for external rotation and rear delt activation"
+        },
+        {
+          "mistake": "Elbows dropping down",
+          "correction": "Keep elbows at or above shoulder height throughout",
+          "why_it_matters": "Low elbows shift emphasis away from rear delts"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight that allows full range and separation",
+          "why_it_matters": "Too much weight prevents proper form and external rotation"
+        },
+        {
+          "mistake": "Not externally rotating shoulders",
+          "correction": "Rotate shoulders so thumbs point back at end",
+          "why_it_matters": "External rotation is critical for rotator cuff health"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band Face Pull",
+            "description": "Use resistance band attached to sturdy anchor",
+            "when_to_use": "Learning movement, at-home training"
+          },
+          {
+            "name": "Seated Face Pull",
+            "description": "Perform seated to eliminate momentum",
+            "when_to_use": "Enforcing strict form"
+          },
+          {
+            "name": "Single-Arm Face Pull",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Addressing imbalances, learning movement"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Face Pull to External Rotation",
+            "description": "Add extra external rotation hold at end",
+            "when_to_use": "Emphasizing rotator cuff work"
+          },
+          {
+            "name": "Face Pull with Pause",
+            "description": "Hold squeeze position for 3-5 seconds",
+            "when_to_use": "Maximizing rear delt and upper back contraction"
+          },
+          {
+            "name": "Wide Grip Face Pull",
+            "description": "Grip rope ends wider for increased stretch",
+            "when_to_use": "Advanced variation for more range"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Rear deltoid development", "Shoulder health and posture", "Upper back strength", "Rotator cuff health"],
+        "place_in_workout": "Mid to end of workout, multiple times per week ideal",
+        "pairs_well_with": ["All pressing movements", "Lateral Raises", "Rows"],
+        "rep_ranges": {
+          "strength": "10-15 reps",
+          "hypertrophy": "15-25 reps",
+          "posture": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "One of the safest and most beneficial shoulder exercises",
+        "Excellent for shoulder health and injury prevention",
+        "Should be performed 2-3x per week by most people",
+        "Virtually no injury risk when performed correctly",
+        "Great for counteracting forward shoulder posture"
+      ],
+      "video_explanation_script": "Face pulls are one of the most important exercises for shoulder health and development. Set a cable pulley to upper chest height with a rope attachment. Stand facing the machine and grab the rope with an overhand grip. From here, pull the rope toward your face while simultaneously separating the rope ends. Your elbows should go high and out to the sides - think about making a double bicep pose. At the end, your hands should be by your ears, the rope should be split apart, and your thumbs should be pointing behind you. Squeeze your shoulder blades together hard. This exercise builds your rear delts, improves posture, and keeps your shoulders healthy. Everyone should be doing face pulls."
+    },
+    {
+      "exercise_id": "shoulder_007",
+      "exercise_name": "Reverse Pec Deck / Reverse Fly Machine",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Posterior Deltoid"],
+        "secondary": ["Rhomboids", "Middle Trapezius"],
+        "stabilizers": ["Rotator Cuff"]
+      },
+      "movement_pattern": "Horizontal Abduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Reverse Pec Deck Machine or Rear Delt Fly Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Adjust seat height so handles are at shoulder level when seated, chest against pad, grasp handles.",
+        "key_points": [
+          "Handles should align with shoulders when seated",
+          "Chest firmly against pad",
+          "Handles can be neutral or pronated grip position"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated facing machine pad, chest against pad, arms extended forward grasping handles, slight elbow bend.",
+        "body_alignment": {
+          "head": "Neutral, looking down or forward",
+          "shoulders": "Protracted (rounded forward) at start",
+          "spine": "Neutral, chest firmly against pad",
+          "hips": "Seated firmly on bench",
+          "arms": "Extended forward, slight elbow bend"
+        },
+        "grip": "Neutral or pronated grip depending on machine, light grip"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull handles back in arc motion, leading with elbows, squeezing shoulder blades together",
+          "cues": [
+            "Lead with your elbows",
+            "Pull back as far as you can",
+            "Squeeze your shoulder blades together",
+            "Think about elbowing someone behind you",
+            "Keep chest against pad"
+          ],
+          "end_position": "Arms pulled back, elbows behind torso plane, shoulder blades fully retracted"
+        },
+        "eccentric_phase": {
+          "description": "Control handles back to starting position, allowing shoulders to protract",
+          "cues": [
+            "Control the return",
+            "Feel the stretch in rear delts",
+            "Let shoulders round forward slightly at start",
+            "Don't let weight stack crash"
+          ],
+          "end_position": "Arms extended forward, shoulders protracted, stretch in rear delts"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on pull back, inhale on return",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec pull, 1 sec squeeze, 2 sec return, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec pull, 2 sec squeeze, 3 sec return, no pause)",
+        "burn_focus": "1-3-2-0 (1 sec pull, 3 sec hold, 2 sec return, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From shoulders protracted forward to elbows pulled back behind body",
+        "critical_point": "Full scapular retraction with squeeze at end",
+        "avoid": "Using momentum or not achieving full range"
+      },
+      "form_cues": [
+        "Pretend you're trying to touch your elbows behind your back",
+        "Lead the movement with your elbows, not your hands",
+        "Your chest should stay glued to the pad",
+        "Think about pinching a pencil between your shoulder blades",
+        "Keep a slight bend in your elbows throughout"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling with arms instead of leading with elbows",
+          "correction": "Focus on moving elbows back, hands follow",
+          "why_it_matters": "Pulling with hands reduces rear delt activation"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Pull elbows as far back as possible, squeeze hard",
+          "why_it_matters": "Partial range limits rear delt development"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use weight that allows full range with control",
+          "why_it_matters": "Heavy weight prevents proper form and full contraction"
+        },
+        {
+          "mistake": "Lifting chest off pad",
+          "correction": "Keep chest firmly against pad throughout movement",
+          "why_it_matters": "Lifting chest allows other muscles to take over"
+        },
+        {
+          "mistake": "Shrugging shoulders at contraction",
+          "correction": "Keep shoulders down, squeeze shoulder blades back not up",
+          "why_it_matters": "Shrugging shifts work to traps instead of rear delts"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Weight High Rep",
+            "description": "Use very light weight for 20+ reps",
+            "when_to_use": "Learning mind-muscle connection"
+          },
+          {
+            "name": "Single-Arm Reverse Fly",
+            "description": "One arm at a time if available on machine",
+            "when_to_use": "Addressing imbalances, focusing on one side"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Paused Reverse Fly",
+            "description": "Hold squeeze position for 3-5 seconds",
+            "when_to_use": "Maximizing rear delt contraction"
+          },
+          {
+            "name": "Reverse Fly with Partial Reps",
+            "description": "After full range reps, add partials in stretched position",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Drop Set Reverse Fly",
+            "description": "Reduce weight immediately upon failure and continue",
+            "when_to_use": "Maximizing hypertrophy stimulus"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Rear deltoid isolation", "Building shoulder balance", "Posture improvement"],
+        "place_in_workout": "Mid to end of workout as accessory work",
+        "pairs_well_with": ["Pressing movements", "Face Pulls", "Rows"],
+        "rep_ranges": {
+          "strength": "10-15 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Excellent for shoulder health and balance",
+        "Good for those with shoulder issues (when cleared)",
+        "Machine provides stable resistance curve",
+        "Focus on lighter weight and perfect form"
+      ],
+      "video_explanation_script": "The reverse pec deck is one of the best machines for isolating your rear delts. Adjust the seat so the handles are at shoulder height, then sit facing the pad with your chest pressed firmly against it. Grab the handles and from here, pull them back by leading with your elbows. Think about trying to touch your elbows together behind your back. At the end, squeeze your shoulder blades together hard. Control the weight back to the starting position and feel that stretch in your rear delts. The machine makes it really easy to focus on the mind-muscle connection without worrying about balance or stabilization. This is an essential exercise for balanced shoulder development."
+    },
+    {
+      "exercise_id": "shoulder_008",
+      "exercise_name": "Dumbbell Rear Delt Fly",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Posterior Deltoid"],
+        "secondary": ["Rhomboids", "Middle Trapezius"],
+        "stabilizers": ["Erector Spinae", "Core", "Rotator Cuff"]
+      },
+      "movement_pattern": "Horizontal Abduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": ["Bench for support"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Hinge forward at hips with flat back, dumbbells hanging straight down, or sit on end of bench and lean forward.",
+        "key_points": [
+          "Torso should be close to parallel with floor",
+          "Can be performed standing bent-over or seated leaning forward",
+          "Dumbbells start hanging straight down below shoulders"
+        ]
+      },
+      "starting_position": {
+        "description": "Hinged forward at hips or seated bent forward, back flat, dumbbells hanging down, slight elbow bend.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Relaxed down, hanging toward floor",
+          "spine": "Neutral, flat back",
+          "hips": "Hinged forward, torso near parallel",
+          "knees": "Bent if standing, 90 degrees if seated",
+          "arms": "Hanging straight down, slight elbow bend"
+        },
+        "grip": "Neutral (palms facing each other) or pronated (palms back), light grip"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Raise dumbbells out to sides in arc motion, leading with elbows",
+          "cues": [
+            "Lead with your elbows",
+            "Raise arms out to sides like wings",
+            "Lift until arms are parallel to floor",
+            "Squeeze shoulder blades together",
+            "Think about pushing dumbbells away from you"
+          ],
+          "end_position": "Arms raised to sides, parallel to floor, elbows slightly bent, shoulder blades squeezed"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to hanging position",
+          "cues": [
+            "Control the descent",
+            "Don't let dumbbells drop",
+            "Feel stretch in rear delts",
+            "Maintain flat back"
+          ],
+          "end_position": "Dumbbells hanging straight down below shoulders"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on raise, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec raise, 1 sec squeeze, 2 sec lower, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec raise, 2 sec squeeze, 3 sec lower, no pause)",
+        "control_focus": "3-2-3-0 (3 sec raise, 2 sec squeeze, 3 sec lower, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From dumbbells hanging to arms parallel with floor",
+        "critical_point": "Shoulder height maximum, squeezing shoulder blades at top",
+        "avoid": "Raising arms too high or using momentum"
+      },
+      "form_cues": [
+        "Think about spreading your wings",
+        "Your back should stay flat like a table",
+        "Lead the movement with your elbows, not your hands",
+        "Imagine trying to show off your armpits",
+        "Feel this entirely in your rear delts, not your lower back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding the back",
+          "correction": "Maintain neutral spine, flat back throughout movement",
+          "why_it_matters": "Rounding reduces rear delt activation and strains lower back"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Use controlled tempo, no body English",
+          "why_it_matters": "Momentum eliminates tension on target muscle"
+        },
+        {
+          "mistake": "Raising dumbbells too high",
+          "correction": "Stop at shoulder height (arms parallel to floor)",
+          "why_it_matters": "Going higher recruits too much trap and back"
+        },
+        {
+          "mistake": "Bending elbows excessively during movement",
+          "correction": "Maintain slight consistent elbow bend throughout",
+          "why_it_matters": "Excessive bending turns it into a rowing motion"
+        },
+        {
+          "mistake": "Not squeezing at the top",
+          "correction": "Actively squeeze shoulder blades together at peak",
+          "why_it_matters": "The squeeze maximizes rear delt contraction"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Bent-Over Rear Delt Fly",
+            "description": "Sit on bench and lean forward for stability",
+            "when_to_use": "Reducing lower back strain, focusing on rear delts"
+          },
+          {
+            "name": "Incline Bench Rear Delt Fly",
+            "description": "Chest supported on incline bench",
+            "when_to_use": "Eliminating momentum and lower back involvement"
+          },
+          {
+            "name": "Single-Arm Rear Delt Fly",
+            "description": "One arm at a time, holding support with other hand",
+            "when_to_use": "Learning movement, building mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Standing Bent-Over Rear Delt Fly",
+            "description": "Perform standing hinged with no support",
+            "when_to_use": "Increasing core stability demands"
+          },
+          {
+            "name": "Cable Rear Delt Fly",
+            "description": "Use cables for constant tension",
+            "when_to_use": "Different resistance curve"
+          },
+          {
+            "name": "Rear Delt Fly with Pause",
+            "description": "Hold squeeze at top for 3-5 seconds",
+            "when_to_use": "Maximizing rear delt contraction"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Rear deltoid isolation", "Shoulder balance and health", "Posture improvement"],
+        "place_in_workout": "Mid to end of workout as accessory movement",
+        "pairs_well_with": ["Pressing movements", "Lateral Raises", "Face Pulls"],
+        "rep_ranges": {
+          "strength": "10-15 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Requires good hamstring flexibility to maintain flat back",
+        "Can strain lower back if not performed with proper form",
+        "Start very light - rear delts are small muscles",
+        "Stop if experiencing lower back discomfort",
+        "Consider chest-supported variation if lower back is fatigued"
+      ],
+      "video_explanation_script": "Bent-over rear delt flies are excellent for targeting those often-neglected rear deltoids. You can do these standing bent over or seated leaning forward - either way, your torso should be close to parallel with the floor. Let the dumbbells hang straight down with a slight bend in your elbows. From here, raise the dumbbells out to your sides, leading with your elbows. Lift until your arms are parallel to the floor and squeeze your shoulder blades together at the top. Lower under control and repeat. The key is maintaining a flat back throughout - if your back is rounding, the weight is too heavy or you need to work on your hip hinge. This exercise is crucial for balanced shoulder development and healthy shoulders."
+    },
+    {
+      "exercise_id": "shoulder_009",
+      "exercise_name": "Arnold Press",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Anterior Deltoid", "Lateral Deltoid", "Posterior Deltoid"],
+        "secondary": ["Triceps", "Upper Trapezius"],
+        "stabilizers": ["Core", "Rotator Cuff", "Serratus Anterior"]
+      },
+      "movement_pattern": "Vertical Pressing with Rotation",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": ["Adjustable Bench"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Seated or standing with dumbbells at shoulder height, palms facing toward body (supinated grip).",
+        "key_points": [
+          "Start with palms facing you, opposite of standard press",
+          "Dumbbells at shoulder height",
+          "Can be performed seated or standing"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated or standing, dumbbells at shoulder height with palms facing toward body, elbows in front of torso.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down",
+          "spine": "Neutral, upright if seated or standing",
+          "core": "Braced",
+          "arms": "Elbows forward, dumbbells at shoulder height",
+          "feet": "Flat on floor, stable base"
+        },
+        "grip": "Supinated (palms toward face) at start, will rotate to pronated (palms forward) at top"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Press dumbbells up while rotating palms from facing you to facing forward",
+          "cues": [
+            "Press up while rotating your palms outward",
+            "Start with palms facing you, end with palms facing forward",
+            "Elbows go from front to sides during rotation",
+            "Press to full extension overhead",
+            "Rotation should be smooth and continuous"
+          ],
+          "end_position": "Arms fully extended overhead, palms facing forward (pronated), dumbbells nearly touching"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells while reversing the rotation back to starting position",
+          "cues": [
+            "Reverse the movement",
+            "Rotate palms from forward to facing you",
+            "Control the descent",
+            "End with palms facing you, elbows forward"
+          ],
+          "end_position": "Dumbbells at shoulder height, palms facing body (supinated)"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale at bottom, hold during press, exhale at top or on descent",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-0-2-0 (2 sec up with rotation, no pause, 2 sec down with rotation, no pause)",
+        "hypertrophy_focus": "3-1-3-0 (3 sec up, 1 sec squeeze, 3 sec down, no pause)",
+        "control_focus": "3-2-3-0 (3 sec up, 2 sec hold, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From palms facing body at shoulders to full extension overhead with palms forward",
+        "critical_point": "Smooth rotation throughout the movement, hitting all deltoid heads",
+        "avoid": "Jerky rotation or incomplete range of motion"
+      },
+      "form_cues": [
+        "Think about unscrewing light bulbs as you press up",
+        "The rotation should be smooth and continuous, not separate",
+        "Your elbows should go from in front to out to the sides",
+        "This hits all three heads of the deltoid throughout the movement",
+        "Control the weight throughout - this isn't a pure strength move"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rotating too quickly or incompletely",
+          "correction": "Smooth continuous rotation throughout entire range",
+          "why_it_matters": "Proper rotation is what makes this exercise unique and effective"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than standard dumbbell press",
+          "why_it_matters": "Heavy weight prevents proper rotation and increases injury risk"
+        },
+        {
+          "mistake": "Separating the rotation from the press",
+          "correction": "Press and rotate simultaneously in one fluid motion",
+          "why_it_matters": "Movement should be continuous for proper muscle engagement"
+        },
+        {
+          "mistake": "Arching lower back",
+          "correction": "Keep core braced, ribs down, neutral spine",
+          "why_it_matters": "Arching indicates weight is too heavy"
+        },
+        {
+          "mistake": "Not achieving full rotation",
+          "correction": "Start palms facing you, end palms facing forward",
+          "why_it_matters": "Partial rotation misses the unique benefits of this exercise"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Arnold Press",
+            "description": "Perform seated with back support",
+            "when_to_use": "Learning movement, reducing stability demands"
+          },
+          {
+            "name": "Alternating Arnold Press",
+            "description": "One arm at a time",
+            "when_to_use": "Learning the rotation pattern"
+          },
+          {
+            "name": "Partial Range Arnold Press",
+            "description": "Reduce range of motion initially",
+            "when_to_use": "Building up to full movement"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Standing Arnold Press",
+            "description": "Perform standing without back support",
+            "when_to_use": "Increasing core stability demands"
+          },
+          {
+            "name": "Single-Arm Arnold Press",
+            "description": "One arm while other arm holds at start position",
+            "when_to_use": "Advanced unilateral variation"
+          },
+          {
+            "name": "Arnold Press with Pause",
+            "description": "Pause at various points in rotation",
+            "when_to_use": "Increasing time under tension and control"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Complete shoulder development", "Hitting all three deltoid heads", "Advanced shoulder training"],
+        "place_in_workout": "Primary or secondary pressing movement",
+        "pairs_well_with": ["Lateral Raises", "Face Pulls", "Upright Rows"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "More technical than standard dumbbell press",
+        "Use significantly lighter weight than standard press",
+        "Ensure adequate shoulder mobility before attempting",
+        "May aggravate shoulder issues in some individuals",
+        "Focus on form and rotation over weight used"
+      ],
+      "video_explanation_script": "The Arnold Press, named after Arnold Schwarzenegger, is an advanced shoulder exercise that hits all three heads of the deltoid. Start seated or standing with dumbbells at shoulder height, but here's the twist: your palms are facing toward you, not away. Press the dumbbells up while simultaneously rotating your palms outward. At the top, your palms should be facing forward just like a regular press. Lower back down while reversing the rotation, ending with palms facing you again. The rotation is what makes this special - it hits your front delts at the bottom, transitions to your side delts during the rotation, and emphasizes your front and side delts at the top. This is an advanced movement, so use lighter weight than you would for a standard press and focus on smooth, controlled rotation."
+    },
+    {
+      "exercise_id": "shoulder_010",
+      "exercise_name": "Cable Upright Row",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Lateral Deltoid", "Upper Trapezius"],
+        "secondary": ["Anterior Deltoid", "Biceps"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Vertical Pulling",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Cable Machine with Straight Bar or Rope Attachment"],
+        "optional": ["EZ-Bar Attachment"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Set cable pulley to lowest position, attach bar or rope, stand facing machine holding attachment.",
+        "key_points": [
+          "Pulley at lowest position",
+          "Stand close to machine but not touching",
+          "Grip width affects shoulder vs trap emphasis"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright facing cable machine, attachment held at arm's length in front of thighs.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down, not shrugged",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip-width apart, stable"
+        },
+        "grip": "Overhand grip, hands shoulder-width or slightly narrower for shoulder emphasis"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull attachment up along body, leading with elbows, until elbows are at or above shoulder height",
+          "cues": [
+            "Lead with your elbows - pull them up and out",
+            "Keep the attachment close to your body",
+            "Elbows should rise higher than your hands",
+            "Think about driving your elbows to the ceiling",
+            "Pull to upper chest level"
+          ],
+          "end_position": "Elbows at or above shoulder height, hands at upper chest level, attachment close to body"
+        },
+        "eccentric_phase": {
+          "description": "Lower attachment under control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Resist the cable tension",
+            "Maintain tension in shoulders",
+            "Return to full arm extension"
+          ],
+          "end_position": "Arms fully extended, attachment at thigh level"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on pull up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec pull, 1 sec squeeze, 2 sec lower, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec pull, 2 sec squeeze, 3 sec lower, no pause)",
+        "strength_focus": "1-1-2-0 (1 sec pull, 1 sec squeeze, 2 sec lower, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms fully extended to elbows at shoulder height or slightly above",
+        "critical_point": "Elbows should be at least shoulder height at top",
+        "avoid": "Pulling too high or shrugging shoulders excessively"
+      },
+      "form_cues": [
+        "Think about pulling your elbows to the sky",
+        "The bar or rope should travel straight up your body",
+        "Your elbows should flare out and up",
+        "Keep the attachment close - don't let it drift forward",
+        "Lead with elbows, not hands"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Shrugging shoulders excessively",
+          "correction": "Lead with elbows, focus on deltoid contraction not trap shrug",
+          "why_it_matters": "Excessive shrugging shifts work to traps instead of shoulders"
+        },
+        {
+          "mistake": "Pulling attachment away from body",
+          "correction": "Keep attachment close to body throughout movement",
+          "why_it_matters": "Bar drifting away reduces efficiency and shoulder activation"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight that allows full range of motion",
+          "why_it_matters": "Heavy weight prevents proper elbow height and form"
+        },
+        {
+          "mistake": "Not raising elbows high enough",
+          "correction": "Pull elbows to at least shoulder height",
+          "why_it_matters": "Partial range limits shoulder development"
+        },
+        {
+          "mistake": "Using momentum or body English",
+          "correction": "Maintain upright posture, controlled tempo",
+          "why_it_matters": "Momentum reduces muscle activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Rope Attachment Upright Row",
+            "description": "Use rope instead of bar for more natural hand position",
+            "when_to_use": "Reducing wrist and shoulder stress"
+          },
+          {
+            "name": "Wide Grip Upright Row",
+            "description": "Use wider grip to reduce shoulder internal rotation",
+            "when_to_use": "Those with shoulder discomfort in narrow grip"
+          },
+          {
+            "name": "Lighter Weight High Rep",
+            "description": "Use very light weight for 15-20+ reps",
+            "when_to_use": "Learning movement pattern"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Barbell Upright Row",
+            "description": "Use barbell instead of cable",
+            "when_to_use": "Variation with different resistance curve"
+          },
+          {
+            "name": "Single-Arm Cable Upright Row",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Addressing imbalances"
+          },
+          {
+            "name": "Upright Row with Pause",
+            "description": "Pause 2-3 seconds at top",
+            "when_to_use": "Maximizing shoulder contraction"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lateral deltoid and upper trap development", "Building shoulder width", "Shoulder and trap mass"],
+        "place_in_workout": "Mid-workout after main pressing movements",
+        "pairs_well_with": ["Overhead Press", "Lateral Raises", "Shrugs"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Controversial exercise - some avoid due to shoulder impingement concerns",
+        "Use rope or wider grip if experiencing shoulder discomfort",
+        "Don't pull elbows excessively high if feeling shoulder pain",
+        "Cable version is generally safer than barbell due to more natural path",
+        "Stop if experiencing any shoulder or wrist pain"
+      ],
+      "video_explanation_script": "Cable upright rows are great for building shoulder width and trap development. Set a cable pulley to the lowest position with a bar or rope attachment. Stand facing the machine and hold the attachment at arm's length. From here, pull the attachment straight up your body, leading with your elbows. Your elbows should rise up and out, going higher than your hands. Pull until your elbows are at least at shoulder height - that's where you get maximum shoulder activation. Control it back down and repeat. The key is leading with your elbows, not your hands. Some people experience shoulder discomfort with this exercise - if that's you, try using a rope attachment or a wider grip, or simply skip this exercise. There are plenty of other great shoulder exercises."
+    },
+    {
+      "exercise_id": "shoulder_011",
+      "exercise_name": "Landmine Press",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Anterior Deltoid", "Lateral Deltoid"],
+        "secondary": ["Triceps", "Upper Chest", "Core"],
+        "stabilizers": ["Core", "Serratus Anterior", "Rotator Cuff"]
+      },
+      "movement_pattern": "Angled Pressing",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Landmine Attachment or Corner"],
+        "optional": ["Weight Plates"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Anchor barbell in landmine attachment or corner, stand holding end of barbell at shoulder height.",
+        "key_points": [
+          "Barbell anchored at ground level",
+          "Stand with staggered stance or parallel feet",
+          "Barbell starts at shoulder height on one side"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with barbell end at shoulder height, elbow bent, staggered stance for stability.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Packed down",
+          "spine": "Neutral, slight forward lean",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Staggered or parallel stance, stable base"
+        },
+        "grip": "Hold end of barbell with one hand, or both hands for two-arm variation"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Press barbell forward and up in arc motion to full arm extension",
+          "cues": [
+            "Press the bar up and forward",
+            "Follow the natural arc path",
+            "Extend arm fully at top",
+            "Don't let your lower back arch",
+            "Core stays braced throughout"
+          ],
+          "end_position": "Arm fully extended, barbell pressed forward and up at angle"
+        },
+        "eccentric_phase": {
+          "description": "Lower barbell under control back to shoulder height",
+          "cues": [
+            "Control the descent",
+            "Return to shoulder",
+            "Maintain core stability",
+            "Follow same arc path"
+          ],
+          "end_position": "Barbell returned to shoulder height, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale at bottom, exhale during press",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec press, no pause, 2 sec lower, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec press, 1 sec hold, 3 sec lower, no pause)",
+        "explosive": "X-1-2-0 (explosive press, 1 sec hold, 2 sec lower, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From shoulder height to full arm extension following natural arc",
+        "critical_point": "Full extension at top, bar travels in natural arc path",
+        "avoid": "Arching lower back or incomplete extension"
+      },
+      "form_cues": [
+        "The bar travels in an arc - that's natural and correct",
+        "Think about pressing the bar away from you",
+        "Your core should stay tight the whole time",
+        "This is a more shoulder-friendly pressing angle",
+        "The arc path reduces shoulder impingement risk"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Arching lower back excessively",
+          "correction": "Brace core, keep ribs down, slight forward lean acceptable",
+          "why_it_matters": "Excessive arch increases injury risk and indicates weight is too heavy"
+        },
+        {
+          "mistake": "Not following natural arc path",
+          "correction": "Let bar travel in natural arc, don't try to press straight up",
+          "why_it_matters": "Fighting the arc reduces efficiency and increases strain"
+        },
+        {
+          "mistake": "Incomplete range of motion",
+          "correction": "Press to full extension at top",
+          "why_it_matters": "Partial reps limit shoulder development"
+        },
+        {
+          "mistake": "Losing core stability",
+          "correction": "Maintain braced core throughout, don't let torso rotate",
+          "why_it_matters": "Core instability reduces shoulder stimulus and increases injury risk"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use weight that allows controlled full range",
+          "why_it_matters": "Too much weight prevents proper form and core control"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Half-Kneeling Landmine Press",
+            "description": "Press from half-kneeling position",
+            "when_to_use": "Reducing stability demands, learning movement"
+          },
+          {
+            "name": "Tall-Kneeling Landmine Press",
+            "description": "Press from tall kneeling (both knees down)",
+            "when_to_use": "Further reducing stability demands"
+          },
+          {
+            "name": "Two-Arm Landmine Press",
+            "description": "Press with both hands on barbell",
+            "when_to_use": "Variation for different stimulus"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Arm Landmine Press",
+            "description": "Standard single-arm variation",
+            "when_to_use": "Standard progression, addresses imbalances"
+          },
+          {
+            "name": "Landmine Push Press",
+            "description": "Use leg drive to assist press",
+            "when_to_use": "Overloading shoulders with heavier weight"
+          },
+          {
+            "name": "Alternating Landmine Press",
+            "description": "Alternate arms without setting bar down",
+            "when_to_use": "Increasing core anti-rotation demands"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Shoulder-friendly pressing", "Core stability development", "Power development", "Injury rehabilitation"],
+        "place_in_workout": "Primary or secondary pressing movement",
+        "pairs_well_with": ["Rows", "Lateral Raises", "Face Pulls"],
+        "rep_ranges": {
+          "strength": "5-8 reps per arm",
+          "hypertrophy": "8-12 reps per arm",
+          "power": "3-6 reps per arm"
+        }
+      },
+      "safety_considerations": [
+        "One of the most shoulder-friendly pressing variations",
+        "Excellent for those with shoulder issues",
+        "Natural arc path reduces impingement risk",
+        "Good for rehabilitation when cleared",
+        "Ensure barbell is securely anchored before pressing"
+      ],
+      "video_explanation_script": "The landmine press is one of the most shoulder-friendly pressing exercises you can do. Anchor a barbell in a landmine attachment or securely in a corner. Hold the end of the bar at your shoulder and stand in a staggered stance for stability. From here, press the bar up and forward in a natural arc motion until your arm is fully extended. The arc path is what makes this so shoulder-friendly - it's a more natural pressing angle that reduces the risk of shoulder impingement. Lower under control back to your shoulder. Keep your core braced throughout to prevent your lower back from arching. This is an excellent exercise for building shoulder strength and size, especially if traditional overhead pressing bothers your shoulders."
+    },
+    {
+      "exercise_id": "shoulder_012",
+      "exercise_name": "Single-Arm Dumbbell Press",
+      "muscle_group_primary": "Shoulders",
+      "muscles_targeted": {
+        "primary": ["Anterior Deltoid", "Lateral Deltoid"],
+        "secondary": ["Triceps", "Core", "Upper Trapezius"],
+        "stabilizers": ["Core", "Obliques", "Rotator Cuff", "Serratus Anterior"]
+      },
+      "movement_pattern": "Vertical Pressing (Unilateral)",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbell"],
+        "optional": ["Bench for seated variation"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand or sit with one dumbbell at shoulder height, other arm at side or holding onto support.",
+        "key_points": [
+          "Can be performed standing or seated",
+          "Start with dumbbell at shoulder height",
+          "Non-working arm provides balance or holds support"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing or seated with one dumbbell at shoulder height, palm facing forward, other arm at side or holding support.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Level, not tilted to either side",
+          "spine": "Neutral, upright, braced against rotation",
+          "hips": "Level, facing forward",
+          "knees": "Slight bend if standing",
+          "feet": "Hip-width apart, stable base"
+        },
+        "grip": "Dumbbell held at shoulder, palm facing forward or neutral"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Press dumbbell straight up overhead to full extension while resisting torso rotation",
+          "cues": [
+            "Press straight up overhead",
+            "Don't let your torso tilt or rotate",
+            "Keep hips square and level",
+            "Full arm extension at top",
+            "Core fights to stay stable"
+          ],
+          "end_position": "Arm fully extended overhead, torso remains upright and square, no rotation"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbell under control back to shoulder height",
+          "cues": [
+            "Control the descent",
+            "Maintain core stability",
+            "Don't let torso shift",
+            "Return to shoulder height"
+          ],
+          "end_position": "Dumbbell at shoulder, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale at bottom, hold during press, exhale at top or during descent",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec hold, 3 sec down, no pause)",
+        "stability_focus": "2-2-3-0 (2 sec up, 2 sec hold, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From shoulder height to full overhead extension",
+        "critical_point": "Full extension while maintaining torso stability and square hips",
+        "avoid": "Torso leaning, rotating, or tilting to assist press"
+      },
+      "form_cues": [
+        "Imagine you're in a narrow hallway - can't lean side to side",
+        "Your hips should stay square the entire time",
+        "This challenges your core as much as your shoulder",
+        "Think about pushing the floor away with your opposite foot",
+        "Your non-working side fights to keep you stable"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Torso leaning away from working arm",
+          "correction": "Brace core hard, maintain upright torso throughout",
+          "why_it_matters": "Leaning reduces shoulder work and defeats the stability purpose"
+        },
+        {
+          "mistake": "Hips rotating or shifting",
+          "correction": "Keep hips square and level, no rotation",
+          "why_it_matters": "Hip movement indicates core instability"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than bilateral press to maintain form",
+          "why_it_matters": "Heavy weight prevents proper stability and form"
+        },
+        {
+          "mistake": "Shoulder shrugging at top",
+          "correction": "Keep shoulder packed down, press with deltoid",
+          "why_it_matters": "Shrugging shifts work to traps"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Press to full overhead extension",
+          "why_it_matters": "Partial range limits shoulder development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Single-Arm Press",
+            "description": "Perform seated for increased stability",
+            "when_to_use": "Learning movement, building up core strength"
+          },
+          {
+            "name": "Half-Kneeling Single-Arm Press",
+            "description": "Press from half-kneeling position",
+            "when_to_use": "Moderate stability challenge"
+          },
+          {
+            "name": "Supported Single-Arm Press",
+            "description": "Hold onto support with free hand",
+            "when_to_use": "Initial learning, building strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Standing Single-Arm Press",
+            "description": "Full standing variation",
+            "when_to_use": "Standard progression with full stability demands"
+          },
+          {
+            "name": "Bottoms-Up Kettlebell Press",
+            "description": "Press kettlebell with bell facing up",
+            "when_to_use": "Advanced variation with grip and stability challenge"
+          },
+          {
+            "name": "Single-Arm Press with Offset Load",
+            "description": "Hold weight in opposite hand at side",
+            "when_to_use": "Advanced anti-rotation challenge"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Core stability development", "Addressing shoulder imbalances", "Anti-rotation core strength", "Functional shoulder strength"],
+        "place_in_workout": "Mid-workout after bilateral pressing",
+        "pairs_well_with": ["Bilateral pressing", "Rows", "Lateral Raises"],
+        "rep_ranges": {
+          "strength": "5-8 reps per arm",
+          "hypertrophy": "8-12 reps per arm",
+          "stability": "6-10 reps per arm"
+        }
+      },
+      "safety_considerations": [
+        "Requires good core stability",
+        "Use lighter weight than bilateral pressing",
+        "Focus on stability over weight used",
+        "Stop if unable to maintain upright position",
+        "Excellent for addressing imbalances"
+      ],
+      "video_explanation_script": "Single-arm dumbbell presses are excellent for building shoulder strength while challenging your core stability. Stand or sit with one dumbbell at shoulder height. Here's what makes this special: as you press the dumbbell overhead, your core has to work incredibly hard to prevent your torso from leaning or rotating. Press straight up to full extension while keeping your hips square and your torso upright. It's harder than it sounds - that unilateral load wants to pull you off center. Lower under control and repeat. This exercise builds not just strong shoulders, but a rock-solid core and exposes any strength imbalances between sides. Use lighter weight than you would for a bilateral press and focus on that core stability."
+    }
+  ]
+}

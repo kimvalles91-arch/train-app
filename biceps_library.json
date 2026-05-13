@@ -1,0 +1,1986 @@
+{
+  "muscle_group": "Biceps",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Biceps Brachii (Long Head)",
+        "function": "Elbow flexion, forearm supination, shoulder flexion",
+        "description": "Outer portion of bicep, creates the bicep peak, attaches to shoulder"
+      },
+      {
+        "name": "Biceps Brachii (Short Head)",
+        "function": "Elbow flexion, forearm supination",
+        "description": "Inner portion of bicep, creates bicep thickness and width"
+      },
+      {
+        "name": "Brachialis",
+        "function": "Elbow flexion (strongest elbow flexor)",
+        "description": "Lies underneath biceps, adds thickness and pushes biceps up when developed"
+      },
+      {
+        "name": "Brachioradialis",
+        "function": "Elbow flexion, forearm stabilization",
+        "description": "Large forearm muscle, assists in elbow flexion especially with neutral/pronated grip"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "bicep_001",
+      "exercise_name": "Barbell Bicep Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Long Head)", "Biceps Brachii (Short Head)"],
+        "secondary": ["Brachialis", "Brachioradialis"],
+        "stabilizers": ["Anterior Deltoids", "Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "EZ-Curl Bar"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand with feet hip to shoulder-width apart, barbell held at arm's length with underhand grip.",
+        "key_points": [
+          "Grip slightly wider than shoulder-width",
+          "Arms fully extended at start",
+          "Elbows at sides"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with barbell at arm's length in front of thighs, underhand grip, elbows at sides.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down, not rounded forward",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width apart",
+          "elbows": "Close to sides, not flaring out"
+        },
+        "grip": "Underhand (supinated), hands slightly wider than shoulder-width"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl barbell up by flexing elbows, keeping upper arms stationary",
+          "cues": [
+            "Curl the bar up toward your shoulders",
+            "Keep your elbows pinned at your sides",
+            "Don't let your elbows drift forward",
+            "Squeeze your biceps at the top",
+            "Supinate your wrists (turn pinkies out) as you curl"
+          ],
+          "end_position": "Bar near shoulder level, elbows at sides, biceps fully contracted, forearms supinated"
+        },
+        "eccentric_phase": {
+          "description": "Lower bar under control back to starting position",
+          "cues": [
+            "Control the descent - don't just drop the weight",
+            "Resist the weight on the way down",
+            "Fully extend your arms at the bottom",
+            "Keep tension in the biceps"
+          ],
+          "end_position": "Arms fully extended, bar at thigh level, maintaining bicep tension"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "eccentric_focus": "2-1-4-0 (2 sec up, 1 sec squeeze, 4 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms fully extended to bar near shoulders",
+        "critical_point": "Full contraction at top with supination, full extension at bottom",
+        "avoid": "Partial reps or swinging the weight"
+      },
+      "form_cues": [
+        "Imagine your elbows are glued to your sides",
+        "Think about bringing your hands to your shoulders, not the bar to your chest",
+        "Squeeze your biceps like you're trying to touch them to your forearms",
+        "Your upper arms should not move - only your forearms move",
+        "Turn your pinkies out at the top for maximum contraction"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Swinging the weight with body momentum",
+          "correction": "Keep torso still, use only biceps to curl weight",
+          "why_it_matters": "Momentum reduces bicep activation and increases injury risk"
+        },
+        {
+          "mistake": "Elbows drifting forward during curl",
+          "correction": "Keep elbows pinned at sides throughout entire movement",
+          "why_it_matters": "Elbows forward shifts work to front delts"
+        },
+        {
+          "mistake": "Not fully extending arms at bottom",
+          "correction": "Allow full arm extension while maintaining tension",
+          "why_it_matters": "Partial range limits bicep development"
+        },
+        {
+          "mistake": "Leaning back during curl",
+          "correction": "Maintain upright posture, no back extension",
+          "why_it_matters": "Leaning back is cheating and reduces bicep work"
+        },
+        {
+          "mistake": "Lowering weight too quickly",
+          "correction": "Control eccentric phase, resist the weight down",
+          "why_it_matters": "Slow negatives are crucial for bicep growth"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "EZ-Bar Curl",
+            "description": "Use EZ-curl bar for more wrist-friendly angle",
+            "when_to_use": "Wrist discomfort with straight bar"
+          },
+          {
+            "name": "Seated Barbell Curl",
+            "description": "Perform seated to eliminate momentum",
+            "when_to_use": "Learning to eliminate body English"
+          },
+          {
+            "name": "Wall Barbell Curl",
+            "description": "Stand with back against wall",
+            "when_to_use": "Enforcing strict form, preventing leaning back"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Barbell Curl with Slow Eccentric",
+            "description": "4-5 second eccentric phase",
+            "when_to_use": "Increasing time under tension"
+          },
+          {
+            "name": "21s Barbell Curl",
+            "description": "7 bottom half reps, 7 top half reps, 7 full reps",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Barbell Curl with Pause",
+            "description": "Pause 2-3 seconds at top contraction",
+            "when_to_use": "Maximizing peak contraction"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall bicep mass", "Building strength in elbow flexion", "Classic bicep development"],
+        "place_in_workout": "Early in arm workout as primary movement",
+        "pairs_well_with": ["Hammer Curls", "Preacher Curls", "Tricep work"],
+        "rep_ranges": {
+          "strength": "5-8 reps",
+          "hypertrophy": "8-12 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Start with lighter weight to perfect form",
+        "Straight bar can cause wrist discomfort for some - consider EZ-bar",
+        "Avoid if experiencing elbow tendonitis",
+        "Don't hyperextend elbows at bottom",
+        "Stop if experiencing sharp pain in bicep tendon"
+      ],
+      "video_explanation_script": "The barbell bicep curl is the fundamental bicep-building exercise. Stand with a barbell in your hands using an underhand grip, arms fully extended. Your elbows should be pinned to your sides - imagine they're glued there. From here, curl the bar up toward your shoulders by bending your elbows. The key is that only your forearms move - your upper arms stay completely still. At the top, squeeze your biceps hard and think about supinating your wrists by turning your pinkies outward. Lower the weight under control, fully extending your arms at the bottom. The most common mistake is using your back or swinging the weight - if you need to do that, the weight is too heavy. Keep it strict and controlled."
+    },
+    {
+      "exercise_id": "bicep_002",
+      "exercise_name": "Dumbbell Bicep Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Long Head)", "Biceps Brachii (Short Head)"],
+        "secondary": ["Brachialis", "Brachioradialis"],
+        "stabilizers": ["Anterior Deltoids", "Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Stand with feet hip to shoulder-width apart, dumbbells at sides with neutral or supinated grip.",
+        "key_points": [
+          "Dumbbells hang at sides",
+          "Arms fully extended",
+          "Can start with palms facing thighs or forward"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with dumbbells at sides, arms fully extended, elbows close to torso.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width apart",
+          "elbows": "At sides, close to torso"
+        },
+        "grip": "Can start neutral (hammer) or supinated (palms up), or rotate during curl"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl dumbbells up by flexing elbows, can rotate from neutral to supinated during curl",
+          "cues": [
+            "Curl dumbbells up toward shoulders",
+            "Keep elbows pinned at sides",
+            "Rotate wrists outward as you curl (supinate)",
+            "Squeeze biceps at top",
+            "Both arms together or alternating"
+          ],
+          "end_position": "Dumbbells near shoulder level, full supination, elbows at sides, biceps contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Can rotate back to neutral grip",
+            "Resist the weight down",
+            "Full arm extension"
+          ],
+          "end_position": "Arms fully extended, dumbbells at sides"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "strict_form": "3-2-3-0 (3 sec up, 2 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms fully extended to dumbbells near shoulders with full supination",
+        "critical_point": "Full contraction with supination, full extension at bottom",
+        "avoid": "Partial reps or excessive momentum"
+      },
+      "form_cues": [
+        "Think about showing off your biceps at the top",
+        "Rotate your wrists outward as you curl - turn your pinkies away",
+        "Your elbows are hinges that only move in one direction",
+        "Squeeze like you're trying to touch your bicep to your forearm",
+        "Make the dumbbells feel light on the way down by controlling them"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Swinging dumbbells or using momentum",
+          "correction": "Keep torso still, use controlled tempo",
+          "why_it_matters": "Momentum reduces bicep activation"
+        },
+        {
+          "mistake": "Elbows drifting forward or out",
+          "correction": "Keep elbows pinned to sides throughout movement",
+          "why_it_matters": "Elbow movement shifts work away from biceps"
+        },
+        {
+          "mistake": "Not supinating fully at top",
+          "correction": "Actively rotate wrists outward, pinkies away from body",
+          "why_it_matters": "Supination maximizes bicep contraction"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Use deliberate tempo, especially on eccentric",
+          "why_it_matters": "Slow eccentrics are crucial for hypertrophy"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Full extension at bottom, full contraction at top",
+          "why_it_matters": "Partial range limits development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Dumbbell Curl",
+            "description": "Sit on bench with back support",
+            "when_to_use": "Eliminating momentum, learning movement"
+          },
+          {
+            "name": "Alternating Dumbbell Curl",
+            "description": "One arm at a time",
+            "when_to_use": "Better focus on each arm, preventing compensation"
+          },
+          {
+            "name": "Concentration Curl",
+            "description": "Seated, elbow braced against thigh",
+            "when_to_use": "Maximum isolation and mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Incline Dumbbell Curl",
+            "description": "Curl from incline bench for increased stretch",
+            "when_to_use": "Emphasizing long head, increasing difficulty"
+          },
+          {
+            "name": "Standing Dumbbell Curl with Rotation",
+            "description": "Emphasize rotation from neutral to supinated",
+            "when_to_use": "Maximizing bicep activation through supination"
+          },
+          {
+            "name": "Dumbbell Curl Drop Set",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Bicep mass and development", "Mind-muscle connection", "Addressing imbalances between arms"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Hammer Curls", "Cable Curls", "Preacher Curls"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Start light to perfect form",
+        "Dumbbells allow more natural wrist rotation than barbell",
+        "Stop if experiencing elbow or bicep tendon pain",
+        "Excellent for beginners"
+      ],
+      "video_explanation_script": "Dumbbell bicep curls are a classic for a reason - they allow for natural wrist rotation which maximizes bicep activation. Stand with dumbbells at your sides. You can start with your palms facing your thighs or already facing forward. As you curl the dumbbells up, rotate your wrists outward - this is called supination and it's what your biceps are designed to do. Keep your elbows pinned to your sides the entire time. At the top, squeeze your biceps hard. Lower under control, fully extending your arms. You can do both arms at once or alternate - alternating allows better focus on each arm. The key is controlling the weight and really emphasizing that wrist rotation at the top."
+    },
+    {
+      "exercise_id": "bicep_003",
+      "exercise_name": "Hammer Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Brachialis", "Brachioradialis"],
+        "secondary": ["Biceps Brachii (Long Head)", "Biceps Brachii (Short Head)"],
+        "stabilizers": ["Forearms", "Anterior Deltoids"]
+      },
+      "movement_pattern": "Elbow Flexion (Neutral Grip)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells"],
+        "optional": ["Rope Attachment on Cable"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Stand with feet hip to shoulder-width apart, dumbbells at sides with neutral grip (palms facing each other).",
+        "key_points": [
+          "Neutral grip maintained throughout movement",
+          "Arms fully extended at start",
+          "Elbows at sides"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with dumbbells at sides, arms extended, palms facing each other (neutral grip).",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width",
+          "elbows": "Close to sides"
+        },
+        "grip": "Neutral (palms facing each other) throughout entire movement - no rotation"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl dumbbells up while maintaining neutral grip, thumbs pointing up",
+          "cues": [
+            "Curl dumbbells up keeping thumbs pointing up",
+            "Maintain neutral grip - no wrist rotation",
+            "Keep elbows pinned at sides",
+            "Like you're hammering something up",
+            "Squeeze at the top"
+          ],
+          "end_position": "Dumbbells near shoulder level, thumbs up, neutral grip maintained, forearms vertical"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Keep neutral grip",
+            "Full arm extension",
+            "Maintain tension"
+          ],
+          "end_position": "Arms fully extended, dumbbells at sides, neutral grip"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "brachialis_focus": "3-2-4-0 (3 sec up, 2 sec squeeze, 4 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms fully extended to dumbbells near shoulders, neutral grip throughout",
+        "critical_point": "Maintaining neutral grip for maximum brachialis activation",
+        "avoid": "Rotating wrists or using momentum"
+      },
+      "form_cues": [
+        "Think about hammering nails toward the ceiling",
+        "Your thumbs should point up the entire time",
+        "Feel this on the outside of your biceps and into your forearms",
+        "Squeeze at the top like you're flexing",
+        "This builds thickness in your arms"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rotating wrists during movement",
+          "correction": "Maintain strict neutral grip throughout, no supination",
+          "why_it_matters": "Rotation shifts emphasis from brachialis to biceps"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Control tempo, eliminate body English",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Elbows drifting forward",
+          "correction": "Keep elbows pinned to sides",
+          "why_it_matters": "Elbow movement reduces brachialis emphasis"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full extension at bottom, full flexion at top",
+          "why_it_matters": "Partial reps limit development"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Use deliberate, controlled tempo",
+          "why_it_matters": "Brachialis responds well to slower tempos"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Seated Hammer Curl",
+            "description": "Sit on bench to eliminate momentum",
+            "when_to_use": "Learning movement, enforcing strict form"
+          },
+          {
+            "name": "Alternating Hammer Curl",
+            "description": "One arm at a time",
+            "when_to_use": "Better focus on each arm"
+          },
+          {
+            "name": "Cross-Body Hammer Curl",
+            "description": "Curl across body toward opposite shoulder",
+            "when_to_use": "Variation for different stimulus"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Cable Rope Hammer Curl",
+            "description": "Use cable machine with rope attachment",
+            "when_to_use": "Constant tension variation"
+          },
+          {
+            "name": "Incline Hammer Curl",
+            "description": "Perform on incline bench",
+            "when_to_use": "Increased stretch on long head"
+          },
+          {
+            "name": "Hammer Curl with Slow Eccentric",
+            "description": "4-5 second lowering phase",
+            "when_to_use": "Maximizing brachialis development"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Brachialis development", "Arm thickness", "Forearm development", "Elbow health"],
+        "place_in_workout": "Mid-workout after standard curls or as primary movement",
+        "pairs_well_with": ["Dumbbell Curls", "Preacher Curls", "Reverse Curls"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "10-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Easier on wrists and elbows than supinated curls",
+        "Excellent for those with wrist or elbow discomfort",
+        "Very safe exercise with low injury risk",
+        "Good for joint health due to neutral grip",
+        "Can handle more weight than supinated curls"
+      ],
+      "video_explanation_script": "Hammer curls are essential for building thick, strong arms because they target the brachialis - the muscle underneath your biceps that pushes them up and out. Stand with dumbbells at your sides, but here's the key: keep your palms facing each other in a neutral grip, thumbs pointing up. This neutral grip is maintained throughout the entire movement - no rotating. Curl the dumbbells up like you're hammering something toward the ceiling. Keep your elbows pinned at your sides and squeeze at the top. Lower under control and fully extend your arms. You should feel this on the outside of your biceps and in your forearms. Hammer curls build arm thickness and are easier on your wrists and elbows than traditional curls."
+    },
+    {
+      "exercise_id": "bicep_004",
+      "exercise_name": "Preacher Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Short Head)", "Biceps Brachii (Long Head)"],
+        "secondary": ["Brachialis"],
+        "stabilizers": ["Forearms"]
+      },
+      "movement_pattern": "Elbow Flexion (Fixed Upper Arm)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Preacher Curl Bench", "Barbell or EZ-Bar or Dumbbells"],
+        "optional": ["Cable Machine"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Sit at preacher bench, upper arms resting on pad, chest against pad, barbell or dumbbells in hands.",
+        "key_points": [
+          "Adjust seat so armpits rest at top of pad",
+          "Arms fully extended down the pad",
+          "Chest firmly against pad"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated at preacher bench, upper arms flat on pad, chest against pad, weight in hands with arms extended.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Relaxed, not shrugged",
+          "torso": "Upright, chest firmly against top of pad",
+          "arms": "Upper arms flat on pad, fully extended",
+          "grip": "Underhand (supinated) grip on bar or dumbbells"
+        },
+        "grip": "Underhand grip, hands shoulder-width or slightly narrower"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl weight up by flexing elbows while keeping upper arms flat on pad",
+          "cues": [
+            "Curl the weight up toward your face",
+            "Keep your upper arms glued to the pad",
+            "Don't let your elbows lift off the pad",
+            "Squeeze biceps hard at the top",
+            "Think about touching biceps to forearms"
+          ],
+          "end_position": "Weight curled to face level, upper arms remain on pad, biceps fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower weight under control back to full extension",
+          "cues": [
+            "Control the descent",
+            "Don't hyperextend elbows at bottom",
+            "Keep upper arms on pad",
+            "Resist the weight down",
+            "Maintain tension at bottom"
+          ],
+          "end_position": "Arms fully extended but not hyperextended, upper arms remain on pad"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "strict_form": "3-3-4-0 (3 sec up, 3 sec squeeze, 4 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to maximum elbow flexion",
+        "critical_point": "Full extension without hyperextension, maximum contraction at top",
+        "avoid": "Hyperextending elbows or lifting upper arms off pad"
+      },
+      "form_cues": [
+        "The pad eliminates cheating - you can't use momentum here",
+        "Think about bringing the weight to your face, not your chest",
+        "Your upper arms are glued to that pad",
+        "This isolates the biceps like nothing else",
+        "Squeeze and hold at the top for maximum contraction"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lifting upper arms or elbows off pad",
+          "correction": "Keep upper arms flat on pad throughout entire movement",
+          "why_it_matters": "Lifting arms defeats the isolation purpose of exercise"
+        },
+        {
+          "mistake": "Hyperextending elbows at bottom",
+          "correction": "Stop just short of full lockout to protect elbows",
+          "why_it_matters": "Hyperextension can injure elbow joint"
+        },
+        {
+          "mistake": "Not achieving full contraction at top",
+          "correction": "Curl as high as possible, squeeze hard",
+          "why_it_matters": "Partial range limits development"
+        },
+        {
+          "mistake": "Lowering weight too quickly",
+          "correction": "Control eccentric phase, resist the weight",
+          "why_it_matters": "Slow negatives are crucial for growth"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use weight that allows strict form through full range",
+          "why_it_matters": "Heavy weight forces compensation and poor form"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Arm Dumbbell Preacher Curl",
+            "description": "One arm at a time with dumbbell",
+            "when_to_use": "Learning movement, addressing imbalances"
+          },
+          {
+            "name": "Cable Preacher Curl",
+            "description": "Use cable machine for constant tension",
+            "when_to_use": "Different resistance curve, constant tension"
+          },
+          {
+            "name": "High-Rep Light Weight",
+            "description": "Use very light weight for 15-20+ reps",
+            "when_to_use": "Building mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "EZ-Bar Preacher Curl",
+            "description": "Use EZ-bar for more wrist-friendly angle",
+            "when_to_use": "Standard progression, easier on wrists"
+          },
+          {
+            "name": "Preacher Curl with Slow Eccentric",
+            "description": "5-6 second lowering phase",
+            "when_to_use": "Maximizing eccentric overload"
+          },
+          {
+            "name": "21s on Preacher Curl",
+            "description": "7 bottom-half, 7 top-half, 7 full reps",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Pure bicep isolation", "Eliminating momentum", "Building bicep peak", "Mind-muscle connection"],
+        "place_in_workout": "Mid-workout after compound movements",
+        "pairs_well_with": ["Hammer Curls", "Cable Curls", "Concentration Curls"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Be careful not to hyperextend elbows at bottom",
+        "Start with lighter weight than standing curls",
+        "Can stress elbow joint if not performed correctly",
+        "Stop if experiencing sharp elbow pain",
+        "The pad position forces strict form"
+      },
+      "video_explanation_script": "Preacher curls are the ultimate isolation exercise for your biceps. Sit at the preacher bench with your chest against the top of the pad and your upper arms resting flat on the angled surface. This setup eliminates any ability to cheat or use momentum - your biceps do all the work. Start with your arms fully extended, holding a barbell or EZ-bar. Curl the weight up toward your face, keeping your upper arms glued to the pad. Squeeze hard at the top. Lower under control, but here's important: don't hyperextend your elbows at the bottom. Stop just short of full lockout. This exercise is humbling - you'll use less weight than standing curls, but the isolation is incredible. Perfect for building that bicep peak."
+    },
+    {
+      "exercise_id": "bicep_005",
+      "exercise_name": "Concentration Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Short Head)", "Biceps Brachii (Long Head)"],
+        "secondary": ["Brachialis"],
+        "stabilizers": ["Forearms"]
+      },
+      "movement_pattern": "Elbow Flexion (Isolated)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbell", "Bench or Seat"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Sit on bench with legs spread, lean forward, elbow of working arm braced against inner thigh.",
+        "key_points": [
+          "Seated position with torso leaned forward",
+          "Elbow braced against inner thigh for stability",
+          "Arm fully extended at start"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated on bench, leaned forward, working arm extended with elbow braced against inner thigh, dumbbell hanging.",
+        "body_alignment": {
+          "head": "Neutral, looking down or forward",
+          "shoulders": "Relaxed",
+          "torso": "Leaned forward at hips",
+          "working_arm": "Elbow braced against inner thigh, arm extended",
+          "non_working_arm": "Resting on opposite thigh or knee for support",
+          "legs": "Spread wide for stability"
+        },
+        "grip": "Underhand (supinated) or neutral grip on dumbbell"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl dumbbell up by flexing elbow while keeping upper arm braced against thigh",
+          "cues": [
+            "Curl the dumbbell up toward your shoulder",
+            "Keep your elbow firmly pressed against your thigh",
+            "Only your forearm should move",
+            "Squeeze your bicep at the top",
+            "Supinate at the top if starting neutral"
+          ],
+          "end_position": "Dumbbell curled to shoulder level, elbow remains braced, bicep fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbell under control back to full extension",
+          "cues": [
+            "Control the descent",
+            "Full arm extension",
+            "Keep elbow against thigh",
+            "Maintain tension in bicep"
+          ],
+          "end_position": "Arm fully extended, dumbbell hanging, elbow still braced"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-2-2-0 (2 sec up, 2 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "3-3-3-0 (3 sec up, 3 sec squeeze, 3 sec down, no pause)",
+        "mind_muscle": "2-5-3-0 (2 sec up, 5 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to maximum elbow flexion",
+        "critical_point": "Maximum contraction with squeeze at top, full extension at bottom",
+        "avoid": "Lifting elbow off thigh or partial range"
+      },
+      "form_cues": [
+        "This is all about the mind-muscle connection",
+        "Squeeze your bicep at the top like you're flexing for a photo",
+        "Your elbow is anchored - it doesn't move",
+        "Think about quality over quantity on these",
+        "Really feel every inch of the movement"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lifting elbow off thigh during curl",
+          "correction": "Keep elbow firmly braced against inner thigh throughout",
+          "why_it_matters": "Lifting elbow allows momentum and reduces isolation"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Full extension at bottom, maximum flexion at top",
+          "why_it_matters": "Partial range limits development"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Use slow, controlled tempo with emphasis on squeeze",
+          "why_it_matters": "This exercise is about quality and connection, not speed"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight that allows perfect form",
+          "why_it_matters": "Heavy weight prevents proper isolation"
+        },
+        {
+          "mistake": "Not squeezing at peak contraction",
+          "correction": "Hold and squeeze for 1-3 seconds at top",
+          "why_it_matters": "The squeeze is where maximum growth stimulus occurs"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Weight Higher Rep",
+            "description": "Use light weight for 15-20+ reps",
+            "when_to_use": "Building mind-muscle connection"
+          },
+          {
+            "name": "Concentration Curl with Pause",
+            "description": "Pause 3-5 seconds at multiple points in range",
+            "when_to_use": "Maximizing time under tension"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Standing Concentration Curl",
+            "description": "Perform standing bent over, elbow against inner thigh",
+            "when_to_use": "Variation for different angle"
+          },
+          {
+            "name": "Cable Concentration Curl",
+            "description": "Use cable machine from low pulley",
+            "when_to_use": "Constant tension variation"
+          },
+          {
+            "name": "Concentration Curl Drop Set",
+            "description": "Reduce weight 2-3 times without rest",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Mind-muscle connection", "Bicep peak development", "Pure isolation", "Finishing exercise"],
+        "place_in_workout": "End of workout as finisher or after compound movements",
+        "pairs_well_with": ["Preacher Curls", "Cable Curls", "Any bicep work"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps per arm",
+          "pump": "12-20 reps per arm",
+          "burnout": "15-30 reps per arm"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with extremely low injury risk",
+        "Excellent for learning mind-muscle connection",
+        "Good for rehabilitation when cleared",
+        "Focus on connection over weight used",
+        "Popular finishing movement"
+      ],
+      "video_explanation_script": "Concentration curls are all about the mind-muscle connection. Sit on a bench with your legs spread wide. Lean forward and brace your working arm's elbow against your inner thigh. Let the dumbbell hang with your arm fully extended. From here, curl the dumbbell up toward your shoulder, keeping your elbow firmly pressed against your thigh. At the top, squeeze your bicep as hard as you can and hold it. This isn't about moving heavy weight - it's about feeling every inch of the movement and getting maximum contraction. Lower under control and fully extend your arm. The braced position eliminates any ability to cheat, making this one of the purest bicep isolation exercises. Perfect for finishing your arm workout."
+    },
+    {
+      "exercise_id": "bicep_006",
+      "exercise_name": "Cable Bicep Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Long Head)", "Biceps Brachii (Short Head)"],
+        "secondary": ["Brachialis", "Brachioradialis"],
+        "stabilizers": ["Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Straight Bar or EZ-Bar Attachment"],
+        "optional": ["Rope Attachment", "Single Handle"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to lowest position, attach bar, stand facing machine holding bar with underhand grip.",
+        "key_points": [
+          "Pulley at lowest setting",
+          "Stand arm's length from machine",
+          "Cable should have tension even at start"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing cable machine, bar held at arm's length with underhand grip, slight backward lean for stability.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral with slight backward lean",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width, stable stance",
+          "elbows": "At sides, slight tension in cable"
+        },
+        "grip": "Underhand (supinated), hands shoulder-width apart"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl bar up by flexing elbows while keeping upper arms stationary and resisting cable tension",
+          "cues": [
+            "Curl the bar up toward your shoulders",
+            "Keep elbows pinned at sides",
+            "Fight against the cable tension",
+            "Squeeze biceps at top",
+            "Maintain slight backward lean"
+          ],
+          "end_position": "Bar near shoulder level, elbows at sides, biceps fully contracted, constant cable tension"
+        },
+        "eccentric_phase": {
+          "description": "Lower bar under control, resisting cable tension throughout",
+          "cues": [
+            "Control the descent - fight the cable",
+            "Don't let cable pull arms down quickly",
+            "Maintain tension throughout",
+            "Full arm extension"
+          ],
+          "end_position": "Arms fully extended, cable maintains tension"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "constant_tension": "2-1-3-0 (2 sec up, 1 sec squeeze, 3 sec controlled, no rest)"
+      },
+      "range_of_motion": {
+        "full": "From arms fully extended to bar near shoulders, constant tension throughout",
+        "critical_point": "Cable provides constant tension unlike free weights",
+        "avoid": "Losing tension at bottom or using momentum"
+      },
+      "form_cues": [
+        "The cable creates constant tension - feel it throughout",
+        "Think about keeping tension on your biceps the entire set",
+        "Your elbows are hinges that don't move",
+        "Lean back slightly to create better leverage",
+        "The cable wants to pull you forward - resist it"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Allowing cable to pull body forward",
+          "correction": "Maintain slight backward lean, stable torso position",
+          "why_it_matters": "Losing position reduces tension and effectiveness"
+        },
+        {
+          "mistake": "Elbows drifting forward during curl",
+          "correction": "Keep elbows pinned at sides throughout movement",
+          "why_it_matters": "Elbow movement shifts work away from biceps"
+        },
+        {
+          "mistake": "Losing tension at bottom",
+          "correction": "Maintain tension even at full extension",
+          "why_it_matters": "Dead zone with no tension reduces effectiveness"
+        },
+        {
+          "mistake": "Standing too close to machine",
+          "correction": "Stand far enough for constant tension",
+          "why_it_matters": "Too close creates slack in cable"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Controlled tempo, eliminate body English",
+          "why_it_matters": "Momentum defeats the constant tension benefit"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Arm Cable Curl",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Better focus per arm, addressing imbalances"
+          },
+          {
+            "name": "Rope Cable Curl",
+            "description": "Use rope attachment for neutral grip option",
+            "when_to_use": "Wrist-friendly variation"
+          },
+          {
+            "name": "High Cable Curl",
+            "description": "Set pulley at high position, curl down toward head",
+            "when_to_use": "Different angle for peak contraction"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Cable Curl with Slow Eccentric",
+            "description": "4-5 second lowering phase",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "21s Cable Curl",
+            "description": "7 bottom-half, 7 top-half, 7 full reps",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Drop Set Cable Curl",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Maximum pump and hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Constant tension on biceps", "Peak contraction", "Finishing exercise", "High-rep work"],
+        "place_in_workout": "Mid to end of workout as accessory work",
+        "pairs_well_with": ["Barbell Curls", "Hammer Curls", "Preacher Curls"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "pump": "12-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Constant tension can create significant pump",
+        "Excellent for high-rep work",
+        "Easy to adjust weight quickly",
+        "Good for drop sets and intensity techniques"
+      ],
+      "video_explanation_script": "Cable bicep curls offer a huge advantage over free weights - constant tension throughout the entire range of motion. Set the cable pulley to the lowest position and attach a straight bar or EZ-bar. Stand facing the machine, holding the bar with an underhand grip. Lean back slightly to create a stable position. From here, curl the bar up toward your shoulders, keeping your elbows pinned at your sides. The key difference from dumbbells is that the cable maintains tension even at full extension. You should feel your biceps working throughout the entire rep. Lower under control, resisting the cable's pull. This constant tension is excellent for building a pump and creating metabolic stress for muscle growth."
+    },
+    {
+      "exercise_id": "bicep_007",
+      "exercise_name": "Incline Dumbbell Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Long Head)"],
+        "secondary": ["Biceps Brachii (Short Head)", "Brachialis"],
+        "stabilizers": ["Forearms", "Anterior Deltoids"]
+      },
+      "movement_pattern": "Elbow Flexion (Stretched Position)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbells", "Incline Bench"],
+        "optional": []
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Set bench to 45-60 degree incline, sit with back firmly against pad, dumbbells hanging at sides with arms fully extended.",
+        "key_points": [
+          "45-60 degree incline (45 degrees provides most stretch)",
+          "Back firmly against pad",
+          "Arms hanging perpendicular to floor"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated on incline bench, back against pad, dumbbells hanging straight down at sides with arms fully extended.",
+        "body_alignment": {
+          "head": "Neutral against pad",
+          "shoulders": "Back against pad, slightly behind body plane",
+          "torso": "Reclined on bench",
+          "back": "Firmly against pad",
+          "arms": "Hanging straight down, fully extended, behind body plane",
+          "feet": "Flat on floor"
+        },
+        "grip": "Start with neutral or supinated grip"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl dumbbells up by flexing elbows, can rotate from neutral to supinated during curl",
+          "cues": [
+            "Curl dumbbells up toward shoulders",
+            "Keep your back firmly against the pad",
+            "Don't let elbows drift forward",
+            "Rotate wrists as you curl (supinate)",
+            "Squeeze at the top"
+          ],
+          "end_position": "Dumbbells near shoulder level, full supination, elbows still slightly behind body plane"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells under control back to full extension with stretch",
+          "cues": [
+            "Control the descent",
+            "Full arm extension",
+            "Feel the stretch in your biceps",
+            "Keep back against pad",
+            "Don't let arms swing"
+          ],
+          "end_position": "Arms fully extended, hanging straight down, deep stretch in long head of biceps"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "3-2-3-2 (3 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "stretch_emphasis": "2-1-3-3 (2 sec up, 1 sec squeeze, 3 sec down, 3 sec stretch)"
+      },
+      "range_of_motion": {
+        "full": "From deep stretch with arms behind body plane to full contraction at shoulders",
+        "critical_point": "The stretch at bottom is what makes this exercise special",
+        "avoid": "Letting elbows drift forward or arching off bench"
+      },
+      "form_cues": [
+        "This puts your long head under maximum stretch",
+        "Feel that stretch at the bottom - that's the money position",
+        "Your elbows should stay back, not come forward",
+        "Think about keeping your upper arms perpendicular to the floor",
+        "The incline position targets the outer bicep head"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Allowing elbows to drift forward during curl",
+          "correction": "Keep elbows relatively stationary, slightly behind body",
+          "why_it_matters": "Elbows forward reduces stretch and long head emphasis"
+        },
+        {
+          "mistake": "Back lifting off bench",
+          "correction": "Keep back firmly pressed against pad throughout",
+          "why_it_matters": "Lifting off bench eliminates the stretched position benefit"
+        },
+        {
+          "mistake": "Not achieving full stretch at bottom",
+          "correction": "Allow full arm extension with arms hanging behind body",
+          "why_it_matters": "The stretch is what makes this exercise unique"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight than flat bench curls",
+          "why_it_matters": "Heavy weight prevents proper form and stretch"
+        },
+        {
+          "mistake": "Swinging arms",
+          "correction": "Controlled tempo, no momentum",
+          "why_it_matters": "Swinging reduces tension and increases injury risk"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Higher Incline (60 degrees)",
+            "description": "Use steeper incline for less stretch",
+            "when_to_use": "Building up to full 45-degree stretch"
+          },
+          {
+            "name": "Alternating Incline Curl",
+            "description": "One arm at a time",
+            "when_to_use": "Better focus on each arm"
+          },
+          {
+            "name": "Lighter Weight with Pause",
+            "description": "Light weight with 3-second stretch at bottom",
+            "when_to_use": "Emphasizing stretch reflex"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Lower Incline (30-45 degrees)",
+            "description": "Use lower incline for maximum stretch",
+            "when_to_use": "Advanced, maximum long head emphasis"
+          },
+          {
+            "name": "Incline Curl with Slow Eccentric",
+            "description": "4-5 second lowering phase",
+            "when_to_use": "Maximizing eccentric stress on long head"
+          },
+          {
+            "name": "Incline Curl Drop Set",
+            "description": "Reduce weight 2-3 times without rest",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Long head (outer bicep) development", "Bicep peak", "Stretch-mediated hypertrophy"],
+        "place_in_workout": "Early to mid-workout while fresh for form",
+        "pairs_well_with": ["Preacher Curls (short head)", "Hammer Curls", "Concentration Curls"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "stretch_focus": "10-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Requires good shoulder flexibility",
+        "Start lighter than flat bench curls",
+        "The stretch can be intense - progress gradually",
+        "Stop if experiencing shoulder discomfort",
+        "Not ideal if recovering from shoulder injury"
+      },
+      "video_explanation_script": "Incline dumbbell curls are one of the best exercises for building that bicep peak by targeting the long head. Set a bench to a 45-degree incline and sit with your back firmly against it. Let the dumbbells hang straight down at your sides - your arms will be behind your body plane, which creates a deep stretch in the long head of your biceps. This stretched position is what makes this exercise special. From here, curl the dumbbells up toward your shoulders, rotating your wrists as you go. Keep your back against the pad and don't let your elbows drift forward. Squeeze at the top, then lower under control back to that deep stretch. You'll need to use lighter weight than flat curls, but the stretch-mediated hypertrophy you get from this exercise is incredible for building bigger biceps."
+    },
+    {
+      "exercise_id": "bicep_008",
+      "exercise_name": "Reverse Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Brachialis", "Brachioradialis"],
+        "secondary": ["Biceps Brachii", "Wrist Extensors"],
+        "stabilizers": ["Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion (Pronated Grip)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Barbell or EZ-Bar"],
+        "optional": ["Dumbbells", "Cable Machine"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand with feet hip to shoulder-width, barbell held at arm's length with overhand (pronated) grip.",
+        "key_points": [
+          "Overhand grip (palms facing down) throughout movement",
+          "Grip width similar to bicep curl",
+          "Arms fully extended at start"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with barbell at arm's length in front of thighs, overhand grip, elbows at sides.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width",
+          "elbows": "Close to sides"
+        },
+        "grip": "Overhand (pronated), palms facing down, hands shoulder-width or slightly narrower"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl bar up by flexing elbows while maintaining pronated grip throughout",
+          "cues": [
+            "Curl the bar up keeping palms facing down",
+            "Keep elbows pinned at sides",
+            "Don't let your wrists extend backward",
+            "Squeeze forearms and brachialis at top",
+            "Upper arms don't move"
+          ],
+          "end_position": "Bar near shoulder level, overhand grip maintained, elbows at sides, forearms contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower bar under control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Maintain overhand grip",
+            "Full arm extension",
+            "Keep wrists neutral or slightly flexed"
+          ],
+          "end_position": "Arms fully extended, bar at thigh level, pronated grip maintained"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "3-2-3-0 (3 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "forearm_focus": "2-3-3-0 (2 sec up, 3 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to bar near shoulders, overhand grip throughout",
+        "critical_point": "Maintaining pronated grip throughout entire movement",
+        "avoid": "Allowing wrists to hyperextend backward"
+      },
+      "form_cues": [
+        "This builds thickness in your forearms and brachialis",
+        "Keep your wrists strong - don't let them bend backward",
+        "You'll use much less weight than regular curls",
+        "Think about curling your knuckles toward your shoulders",
+        "Feel this in the top of your forearms and under your biceps"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use 30-50% less weight than regular bicep curls",
+          "why_it_matters": "Heavy weight causes wrist hyperextension and poor form"
+        },
+        {
+          "mistake": "Wrists hyperextending backward",
+          "correction": "Keep wrists neutral or slightly flexed, strong wrist position",
+          "why_it_matters": "Hyperextension reduces forearm work and risks wrist injury"
+        },
+        {
+          "mistake": "Elbows drifting forward",
+          "correction": "Keep elbows pinned at sides throughout",
+          "why_it_matters": "Elbow movement reduces brachialis emphasis"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Strict controlled tempo, no body English",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full extension at bottom, full flexion at top",
+          "why_it_matters": "Full range maximizes development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "EZ-Bar Reverse Curl",
+            "description": "Use EZ-bar for more wrist-friendly angle",
+            "when_to_use": "Standard variation, easier on wrists"
+          },
+          {
+            "name": "Dumbbell Reverse Curl",
+            "description": "Use dumbbells with overhand grip",
+            "when_to_use": "Unilateral work, wrist comfort"
+          },
+          {
+            "name": "Lighter Weight High Rep",
+            "description": "Use very light weight for 15-20+ reps",
+            "when_to_use": "Building forearm endurance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Cable Reverse Curl",
+            "description": "Use cable machine with straight bar",
+            "when_to_use": "Constant tension variation"
+          },
+          {
+            "name": "Reverse Curl with Slow Eccentric",
+            "description": "4-5 second lowering phase",
+            "when_to_use": "Maximizing brachialis development"
+          },
+          {
+            "name": "Reverse Preacher Curl",
+            "description": "Perform on preacher bench with overhand grip",
+            "when_to_use": "Strict isolation of brachialis and forearms"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Brachialis development", "Forearm size and strength", "Grip strength", "Arm thickness"],
+        "place_in_workout": "Mid to end of workout after primary curls",
+        "pairs_well_with": ["Hammer Curls", "Wrist Curls", "Standard Curls"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-15 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Can be hard on wrists - start light",
+        "EZ-bar is generally more wrist-friendly than straight bar",
+        "Good for grip and forearm development",
+        "Expect to use much less weight than regular curls",
+        "Stop if experiencing wrist pain"
+      },
+      "video_explanation_script": "Reverse curls are essential for building overall arm mass because they target the brachialis and forearms. Stand with a barbell using an overhand grip - palms facing down. This pronated grip is what makes it different from regular curls. From here, curl the bar up toward your shoulders, keeping your palms down the entire time. Your elbows stay pinned at your sides. The key is keeping your wrists strong and neutral - don't let them bend backward. You'll use much less weight than regular curls, maybe 30-50% less, and that's normal. Lower under control and fully extend your arms. This exercise builds thickness in your forearms and the brachialis muscle underneath your biceps, which pushes your biceps up and out for bigger-looking arms overall."
+    },
+    {
+      "exercise_id": "bicep_009",
+      "exercise_name": "Spider Curl",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Short Head)"],
+        "secondary": ["Biceps Brachii (Long Head)", "Brachialis"],
+        "stabilizers": ["Forearms"]
+      },
+      "movement_pattern": "Elbow Flexion (Steep Angle)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Preacher Bench", "Barbell or EZ-Bar or Dumbbells"],
+        "optional": []
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Lean over preacher bench from top, chest against vertical side, arms hanging straight down vertical pad.",
+        "key_points": [
+          "Chest against top/back of preacher bench",
+          "Arms hanging down vertical side of pad",
+          "Creates more vertical arm angle than standard preacher curl"
+        ]
+      },
+      "starting_position": {
+        "description": "Leaning over top of preacher bench, chest against pad, arms hanging straight down with weight.",
+        "body_alignment": {
+          "head": "Neutral, looking down",
+          "torso": "Leaning over bench, chest against top pad",
+          "arms": "Hanging straight down, perpendicular to floor",
+          "shoulders": "Over or in front of elbows"
+        },
+        "grip": "Underhand (supinated) grip on bar or dumbbells"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl weight up by flexing elbows while keeping upper arms vertical and against pad",
+          "cues": [
+            "Curl the weight straight up",
+            "Keep your upper arms vertical and still",
+            "Don't let your elbows lift off the pad",
+            "Squeeze your biceps at the top",
+            "Think about bringing weight to your face"
+          ],
+          "end_position": "Weight curled to face/chin level, upper arms remain vertical, biceps fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower weight under control back to full extension",
+          "cues": [
+            "Control the descent",
+            "Full arm extension",
+            "Keep upper arms on pad",
+            "Don't hyperextend elbows"
+          ],
+          "end_position": "Arms fully extended hanging down, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "peak_contraction": "2-3-3-0 (2 sec up, 3 sec squeeze, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From arms hanging straight down to maximum elbow flexion",
+        "critical_point": "Vertical arm position creates unique contraction angle",
+        "avoid": "Lifting elbows off pad or incomplete range"
+      },
+      "form_cues": [
+        "This angle hammers the short head for bicep width",
+        "Your arms should be as vertical as possible",
+        "Think about showing off your bicep peak",
+        "The vertical position creates maximum tension at contraction",
+        "Keep your chest pressed into the pad"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lifting elbows or upper arms off pad",
+          "correction": "Keep upper arms pressed firmly against pad throughout",
+          "why_it_matters": "Lifting arms defeats the isolation purpose"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Full extension at bottom, maximum flexion at top",
+          "why_it_matters": "Partial range limits development"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight that allows strict form",
+          "why_it_matters": "Heavy weight forces compensation"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Controlled tempo with emphasis on peak contraction",
+          "why_it_matters": "This exercise is about quality contraction"
+        },
+        {
+          "mistake": "Hyperextending elbows at bottom",
+          "correction": "Stop just short of full lockout",
+          "why_it_matters": "Hyperextension can injure elbow joint"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Arm Dumbbell Spider Curl",
+            "description": "One arm at a time with dumbbell",
+            "when_to_use": "Better focus per arm"
+          },
+          {
+            "name": "EZ-Bar Spider Curl",
+            "description": "Use EZ-bar for wrist comfort",
+            "when_to_use": "Standard variation, easier on wrists"
+          },
+          {
+            "name": "Cable Spider Curl",
+            "description": "Use cable machine from low pulley",
+            "when_to_use": "Constant tension variation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Spider Curl with Peak Hold",
+            "description": "Hold contraction for 3-5 seconds",
+            "when_to_use": "Maximizing short head activation"
+          },
+          {
+            "name": "Spider Curl 21s",
+            "description": "7 bottom-half, 7 top-half, 7 full reps",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Spider Curl Drop Set",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Maximum pump and hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Short head (inner bicep) development", "Bicep width", "Peak contraction work", "Strict isolation"],
+        "place_in_workout": "Mid to end of workout as accessory work",
+        "pairs_well_with": ["Incline Curls (long head)", "Hammer Curls", "Concentration Curls"],
+        "rep_ranges": {
+          "hypertrophy": "8-15 reps",
+          "pump": "12-20 reps",
+          "peak_contraction": "10-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Be careful not to hyperextend elbows",
+        "The vertical arm angle can be intense - start light",
+        "Excellent for strict isolation",
+        "Stop if experiencing elbow discomfort",
+        "Requires preacher bench or similar setup"
+      },
+      "video_explanation_script": "Spider curls are an advanced bicep exercise that really emphasizes the short head for bicep width. Instead of sitting at the preacher bench normally, you're going to lean over the top of it so your chest is against the pad and your arms hang straight down the vertical side. This creates a much more vertical arm angle than regular preacher curls. From here, curl the weight straight up toward your face, keeping your upper arms pressed against the pad. The vertical position creates maximum tension at the peak contraction. Squeeze hard at the top, then lower under control. This exercise is called spider curls because the position looks like a spider climbing up the pad. The unique angle really hammers the short head of your biceps for that width and thickness."
+    },
+    {
+      "exercise_id": "bicep_010",
+      "exercise_name": "Barbell Curl 21s",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Long Head)", "Biceps Brachii (Short Head)"],
+        "secondary": ["Brachialis", "Brachioradialis"],
+        "stabilizers": ["Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion (Partial and Full Range)",
+      "movement_type": "Isolation - Advanced Technique",
+      "equipment": {
+        "required": ["Barbell or EZ-Bar"],
+        "optional": ["Cable Machine"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Stand with feet hip to shoulder-width, barbell held at arm's length with underhand grip - same as standard barbell curl.",
+        "key_points": [
+          "This is a rep scheme technique, not a different exercise",
+          "Performed as 7 bottom-half reps + 7 top-half reps + 7 full reps = 21 total",
+          "Use lighter weight than standard curls"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with barbell at arm's length, underhand grip, elbows at sides - standard curl position.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width",
+          "elbows": "At sides"
+        },
+        "grip": "Underhand (supinated), hands slightly wider than shoulder-width"
+      },
+      "execution": {
+        "phase_1_bottom_half": {
+          "description": "7 reps from full extension to 90 degrees (midpoint)",
+          "cues": [
+            "Start with arms fully extended",
+            "Curl to 90 degrees - forearms parallel to floor",
+            "Stop at midpoint - don't go higher",
+            "Lower back to full extension",
+            "Repeat for 7 reps in bottom half only"
+          ],
+          "focus": "Emphasizes the bottom portion of the curl where stretch occurs"
+        },
+        "phase_2_top_half": {
+          "description": "7 reps from 90 degrees (midpoint) to full contraction",
+          "cues": [
+            "Start with forearms parallel to floor (90 degrees)",
+            "Curl from midpoint to full contraction at shoulders",
+            "Squeeze hard at top",
+            "Lower back to 90 degrees only",
+            "Repeat for 7 reps in top half only"
+          ],
+          "focus": "Emphasizes peak contraction portion of the curl"
+        },
+        "phase_3_full_range": {
+          "description": "7 reps through complete range of motion",
+          "cues": [
+            "Now perform 7 full range reps",
+            "Full extension to full contraction",
+            "These will be challenging after the partials",
+            "Maintain strict form",
+            "Fight through the burn"
+          ],
+          "focus": "Complete range after pre-exhaustion from partial reps"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous breathing throughout all 21 reps",
+        "alternative": "Exhale on each curl, inhale on each lower"
+      },
+      "tempo": {
+        "standard": "1-0-1-0 for all phases (continuous movement)",
+        "controlled": "2-1-2-0 for full range phase only"
+      },
+      "range_of_motion": {
+        "phase_1": "Bottom half: full extension to 90 degrees",
+        "phase_2": "Top half: 90 degrees to full contraction",
+        "phase_3": "Full range: full extension to full contraction"
+      },
+      "form_cues": [
+        "This is a high-intensity technique for advanced trainees",
+        "The burn will be intense - that's the point",
+        "Use 60-70% of your normal curl weight",
+        "Bottom half emphasizes the stretch",
+        "Top half emphasizes the squeeze",
+        "Full reps bring it all together"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use significantly lighter weight than normal curls",
+          "why_it_matters": "Too heavy prevents completing all 21 reps with form"
+        },
+        {
+          "mistake": "Not respecting the range limits",
+          "correction": "Stop exactly at midpoint for bottom and top half sections",
+          "why_it_matters": "Going beyond the prescribed range defeats the purpose"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Maintain strict form throughout all 21 reps",
+          "why_it_matters": "Cheating reduces the intensity and effectiveness"
+        },
+        {
+          "mistake": "Resting between phases",
+          "correction": "Move immediately from one phase to the next",
+          "why_it_matters": "Continuous tension is key to this technique"
+        },
+        {
+          "mistake": "Giving up before 21 reps",
+          "correction": "Fight through the burn, use lighter weight if needed",
+          "why_it_matters": "The metabolic stress from completing all reps drives growth"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "14s (5-4-5 pattern)",
+            "description": "5 bottom, 4 top, 5 full for total of 14 reps",
+            "when_to_use": "Building up to full 21s"
+          },
+          {
+            "name": "Dumbbell 21s",
+            "description": "Perform with dumbbells",
+            "when_to_use": "Learning the technique"
+          },
+          {
+            "name": "Cable 21s",
+            "description": "Use cable machine for constant tension",
+            "when_to_use": "Different stimulus"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "28s (7-7-7-7 pattern)",
+            "description": "Add fourth phase of isometric holds",
+            "when_to_use": "Advanced, masochistic variation"
+          },
+          {
+            "name": "Slow Eccentric 21s",
+            "description": "Add 3-4 second negatives on full range phase",
+            "when_to_use": "Maximum intensity"
+          },
+          {
+            "name": "21s Drop Set",
+            "description": "Complete 21s, drop weight, repeat",
+            "when_to_use": "Extreme pump technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Advanced intensity technique", "Breaking plateaus", "Metabolic stress", "Maximum pump"],
+        "place_in_workout": "End of workout as finisher, or as only curl exercise",
+        "pairs_well_with": ["Use as standalone, or pair with hammer curls"],
+        "rep_ranges": {
+          "standard": "21 total reps (7-7-7)",
+          "frequency": "Once per week maximum, very taxing"
+        }
+      },
+      "safety_considerations": [
+        "Very high intensity - only for experienced trainees",
+        "Can cause extreme soreness",
+        "Use much lighter weight than standard curls",
+        "Not recommended more than once per week",
+        "The metabolic burn is intense - this is normal"
+      },
+      "video_explanation_script": "21s are an advanced high-intensity technique that will set your biceps on fire. You'll perform 21 total reps broken into three phases. Start with the bar at full extension. Phase one: do 7 reps in just the bottom half of the movement - from full extension to 90 degrees where your forearms are parallel to the floor. Stop right there, don't go higher. Phase two: now do 7 reps in just the top half - from that 90-degree position to full contraction at your shoulders. Finally, phase three: do 7 complete full range reps from full extension to full contraction. That's 21 total reps without rest. Use about 60-70% of what you'd normally curl because this is brutal. The bottom half emphasizes the stretch, the top half emphasizes the squeeze, and the full reps bring it all together after your biceps are already exhausted. This is an advanced technique for breaking through plateaus."
+    },
+    {
+      "exercise_id": "bicep_011",
+      "exercise_name": "Chin-Up",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Biceps Brachii (Long Head)", "Biceps Brachii (Short Head)", "Lats"],
+        "secondary": ["Brachialis", "Brachioradialis", "Middle Traps", "Rhomboids"],
+        "stabilizers": ["Core", "Forearms", "Rear Deltoids"]
+      },
+      "movement_pattern": "Vertical Pulling",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Pull-up Bar"],
+        "optional": ["Resistance Band for Assistance", "Weight Belt for Added Resistance"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Hang from pull-up bar with underhand (supinated) grip, hands shoulder-width apart, arms fully extended.",
+        "key_points": [
+          "Underhand grip (palms facing you) - this is what makes it a chin-up vs pull-up",
+          "Grip width approximately shoulder-width or slightly narrower",
+          "Dead hang with arms fully extended"
+        ]
+      },
+      "starting_position": {
+        "description": "Hanging from bar with underhand grip, arms fully extended, body straight or slight hollow position.",
+        "body_alignment": {
+          "head": "Neutral, looking forward or slightly up",
+          "shoulders": "Engaged, not relaxed/shrugged up",
+          "spine": "Neutral or slight hollow body position",
+          "hips": "Neutral or slightly flexed for hollow",
+          "legs": "Straight or slightly bent, can cross ankles",
+          "arms": "Fully extended, actively hanging"
+        },
+        "grip": "Underhand (supinated), hands shoulder-width or narrower, full grip around bar"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull body up by flexing elbows and extending shoulders until chin clears bar",
+          "cues": [
+            "Pull your elbows down toward your hips",
+            "Think about pulling the bar to your chest",
+            "Lead with your chest, not your chin",
+            "Squeeze your biceps and lats",
+            "Pull until chin clears the bar"
+          ],
+          "end_position": "Chin over bar, elbows pulled down and back, chest toward bar, biceps and lats contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower body under control back to full hang",
+          "cues": [
+            "Control the descent",
+            "Don't just drop down",
+            "Full arm extension at bottom",
+            "Reset shoulders for next rep"
+          ],
+          "end_position": "Full hang, arms extended, shoulders engaged"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on pull up, inhale on lower",
+        "alternative": "Inhale at bottom, hold during pull, exhale at top"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec pull up, no pause, 2 sec lower, no pause)",
+        "strength_focus": "X-1-2-0 (explosive up, 1 sec hold, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec hold, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full dead hang to chin clearly over bar",
+        "critical_point": "Full extension at bottom, chin over bar at top",
+        "avoid": "Partial reps or kipping (using momentum)"
+      },
+      "form_cues": [
+        "This is the best compound exercise for biceps",
+        "The underhand grip maximizes bicep involvement",
+        "Think about pulling your elbows down to your hips",
+        "Your chest should reach the bar, not just your chin",
+        "Every rep starts from a full dead hang"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not achieving full extension at bottom (partial reps)",
+          "correction": "Full dead hang with arms completely extended",
+          "why_it_matters": "Partial range limits strength and development"
+        },
+        {
+          "mistake": "Using momentum or kipping",
+          "correction": "Strict controlled movement, no leg drive",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Only getting chin barely over bar",
+          "correction": "Pull until chest approaches bar for full range",
+          "why_it_matters": "Higher pull maximizes muscle activation"
+        },
+        {
+          "mistake": "Shrugging shoulders at bottom",
+          "correction": "Keep shoulders engaged and packed even in dead hang",
+          "why_it_matters": "Relaxed shoulders can lead to injury"
+        },
+        {
+          "mistake": "Craning neck to get chin over bar",
+          "correction": "Lead with chest, chin naturally clears bar",
+          "why_it_matters": "Neck craning indicates insufficient pull height"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Chin-Up",
+            "description": "Loop resistance band around bar, kneel or stand in band",
+            "when_to_use": "Building up to bodyweight chin-ups"
+          },
+          {
+            "name": "Negative Chin-Ups",
+            "description": "Jump to top position, lower slowly over 3-5 seconds",
+            "when_to_use": "Building strength for full chin-ups"
+          },
+          {
+            "name": "Inverted Rows",
+            "description": "Horizontal pulling with bar set at waist height",
+            "when_to_use": "Building pulling strength for beginners"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Chin-Ups",
+            "description": "Add weight using belt with plates or weighted vest",
+            "when_to_use": "Once bodyweight becomes easy (10+ reps)"
+          },
+          {
+            "name": "L-Sit Chin-Ups",
+            "description": "Hold L-sit position (legs straight out) during chin-up",
+            "when_to_use": "Advanced core and pulling strength"
+          },
+          {
+            "name": "Slow Eccentric Chin-Ups",
+            "description": "5-10 second lowering phase",
+            "when_to_use": "Maximizing strength and hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall bicep and back development", "Functional pulling strength", "Relative strength", "Compound bicep work"],
+        "place_in_workout": "Early workout when fresh, or as primary pulling movement",
+        "pairs_well_with": ["Barbell Curls", "Hammer Curls", "Rows"],
+        "rep_ranges": {
+          "strength": "3-6 reps (weighted)",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-20+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Requires significant baseline strength",
+        "Can stress shoulder joints if not performed correctly",
+        "Always start from dead hang with engaged shoulders",
+        "Don't drop from bar - lower down controlled",
+        "Stop if experiencing sharp shoulder or elbow pain"
+      },
+      "video_explanation_script": "Chin-ups are one of the absolute best exercises for building big, strong biceps while also developing your back. Hang from a pull-up bar with an underhand grip - palms facing you - hands about shoulder-width apart. Start from a full dead hang with your arms completely extended. From here, pull yourself up by driving your elbows down toward your hips. Think about pulling your chest to the bar, not just getting your chin over. The underhand grip maximizes bicep involvement compared to overhand pull-ups. Pull until your chin clearly clears the bar, squeeze at the top, then lower yourself under control back to a full dead hang. If you can't do bodyweight chin-ups yet, use a resistance band for assistance or practice negative chin-ups. Once you can do 10+ reps, add weight with a belt or vest."
+    },
+    {
+      "exercise_id": "bicep_012",
+      "exercise_name": "Cable Hammer Curl (Rope Attachment)",
+      "muscle_group_primary": "Biceps",
+      "muscles_targeted": {
+        "primary": ["Brachialis", "Brachioradialis"],
+        "secondary": ["Biceps Brachii"],
+        "stabilizers": ["Forearms", "Core"]
+      },
+      "movement_pattern": "Elbow Flexion (Neutral Grip)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Rope Attachment"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to lowest position, attach rope, stand facing machine holding rope ends with neutral grip.",
+        "key_points": [
+          "Pulley at lowest setting",
+          "Rope attachment provides neutral grip",
+          "Stand close enough for constant tension"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing cable machine, rope ends held at sides with neutral grip (palms facing each other), slight backward lean.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral with slight backward lean",
+          "hips": "Neutral",
+          "knees": "Slight bend",
+          "feet": "Hip to shoulder-width, stable stance",
+          "elbows": "At sides"
+        },
+        "grip": "Neutral grip on rope ends, palms facing each other, thumbs up"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Curl rope up by flexing elbows while maintaining neutral grip throughout",
+          "cues": [
+            "Curl the rope up keeping thumbs pointing up",
+            "Maintain neutral grip throughout - no rotation",
+            "Keep elbows pinned at sides",
+            "Fight against the cable tension",
+            "Squeeze at the top"
+          ],
+          "end_position": "Rope at shoulder level, neutral grip maintained, constant cable tension"
+        },
+        "eccentric_phase": {
+          "description": "Lower rope under control, resisting cable tension",
+          "cues": [
+            "Control the descent",
+            "Resist the cable pulling you",
+            "Maintain neutral grip",
+            "Full arm extension",
+            "Keep constant tension"
+          ],
+          "end_position": "Arms fully extended, cable maintains tension, neutral grip"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on curl up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec up, 1 sec squeeze, 2 sec down, no rest)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no rest)",
+        "constant_tension": "2-1-3-0 (2 sec up, 1 sec squeeze, 3 sec controlled negative, no rest)"
+      },
+      "range_of_motion": {
+        "full": "From full extension to rope at shoulders, neutral grip and cable tension throughout",
+        "critical_point": "Constant cable tension unlike dumbbell hammer curls",
+        "avoid": "Losing tension at bottom or rotating wrists"
+      },
+      "form_cues": [
+        "The cable creates constant tension on your brachialis",
+        "Think about hammering toward the ceiling",
+        "Your thumbs stay pointing up the entire time",
+        "Resist the cable trying to pull you forward",
+        "Feel this in your forearms and outer biceps"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rotating wrists during movement",
+          "correction": "Strict neutral grip throughout, no supination",
+          "why_it_matters": "Rotation shifts emphasis from brachialis"
+        },
+        {
+          "mistake": "Cable pulling body forward",
+          "correction": "Slight backward lean, maintain stable position",
+          "why_it_matters": "Losing position reduces effectiveness"
+        },
+        {
+          "mistake": "Elbows drifting forward",
+          "correction": "Keep elbows pinned at sides",
+          "why_it_matters": "Elbow movement reduces brachialis emphasis"
+        },
+        {
+          "mistake": "Losing tension at bottom",
+          "correction": "Stand far enough for constant tension",
+          "why_it_matters": "Dead zones reduce the cable advantage"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Controlled tempo, maximize time under tension",
+          "why_it_matters": "Speed reduces the constant tension benefit"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Arm Cable Hammer Curl",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Better focus per arm, addressing imbalances"
+          },
+          {
+            "name": "Seated Cable Hammer Curl",
+            "description": "Sit on bench facing low pulley",
+            "when_to_use": "Eliminating momentum"
+          },
+          {
+            "name": "Lighter Weight High Rep",
+            "description": "Use light weight for 15-20+ reps",
+            "when_to_use": "Building endurance and mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Cable Hammer Curl with Pause",
+            "description": "Pause 2-3 seconds at top contraction",
+            "when_to_use": "Maximizing peak contraction"
+          },
+          {
+            "name": "Cross-Body Cable Hammer Curl",
+            "description": "Curl across body toward opposite shoulder",
+            "when_to_use": "Different angle variation"
+          },
+          {
+            "name": "Drop Set Cable Hammer Curl",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Maximum pump and hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Brachialis development with constant tension", "Forearm size", "Arm thickness", "Finishing exercise"],
+        "place_in_workout": "Mid to end of workout as accessory work",
+        "pairs_well_with": ["Cable Curls", "Reverse Curls", "Dumbbell Hammer Curls"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "pump": "12-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Easier on wrists than some other curl variations",
+        "Constant tension can create significant pump",
+        "Good for high-rep work",
+        "Excellent for building thick arms"
+      },
+      "video_explanation_script": "Cable hammer curls combine the brachialis-building benefits of hammer curls with the constant tension of cables. Set a cable pulley to the lowest position with a rope attachment. Stand facing the machine and grab the rope ends with a neutral grip - palms facing each other, thumbs up. Lean back slightly for stability. From here, curl the rope up toward your shoulders while maintaining that neutral grip throughout. The cable creates constant tension on your brachialis and forearms, unlike dumbbells where tension drops off at the top. Keep your elbows pinned at your sides and squeeze at the top. Control the weight back down, resisting the cable's pull. The constant tension makes this excellent for building arm thickness and getting a great pump."
+    }
+  ]
+}

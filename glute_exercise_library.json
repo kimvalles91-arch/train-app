@@ -1,0 +1,1981 @@
+{
+  "muscle_group": "Glutes",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Gluteus Maximus",
+        "function": "Hip extension, hip external rotation, hip abduction (upper fibers)",
+        "description": "Largest and most superficial glute muscle, primary hip extensor"
+      },
+      {
+        "name": "Gluteus Medius",
+        "function": "Hip abduction, hip internal rotation, pelvic stabilization",
+        "description": "Located on outer surface of pelvis, critical for single-leg stability"
+      },
+      {
+        "name": "Gluteus Minimus",
+        "function": "Hip abduction, hip internal rotation, pelvic stabilization",
+        "description": "Smallest and deepest glute muscle, works with medius for stability"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "glute_001",
+      "exercise_name": "Barbell Hip Thrust",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Adductors", "Erector Spinae"],
+        "stabilizers": ["Core", "Quadriceps"]
+      },
+      "movement_pattern": "Hip Extension",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Bench or Box"],
+        "optional": ["Barbell Pad", "Hip Thrust Pad", "Weight Plates"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Position a loaded barbell parallel to a bench. Sit on the ground with your upper back against the bench edge.",
+        "key_points": [
+          "Bench height should be approximately knee height when seated",
+          "Barbell should rest across the hip crease",
+          "Feet should be positioned flat on the ground"
+        ]
+      },
+      "starting_position": {
+        "description": "Upper back is braced against the bench, barbell across hips, knees bent at approximately 90 degrees, feet flat and hip-width apart.",
+        "body_alignment": {
+          "head": "Neutral, looking forward or slightly down",
+          "shoulders": "Blade bones anchored on bench edge",
+          "spine": "Neutral, ribs down",
+          "hips": "Flexed, glutes hovering off ground",
+          "knees": "Bent approximately 90 degrees",
+          "feet": "Flat, hip-width apart, toes slightly out"
+        },
+        "foot_position": "Feet should be positioned so that at the top of the movement, shins are vertical"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive through heels to extend hips upward, lifting the barbell",
+          "cues": [
+            "Squeeze glutes hard at the top",
+            "Drive through the heels",
+            "Push the bench away with your shoulders",
+            "Keep ribs down, don't hyperextend lower back",
+            "Maintain neutral head position"
+          ],
+          "end_position": "Body forms a straight line from shoulders to knees, hips fully extended, glutes maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower the hips back down with control",
+          "cues": [
+            "Control the descent",
+            "Maintain tension in glutes",
+            "Don't let hips drop too fast"
+          ],
+          "end_position": "Hips hover slightly above ground or touch lightly"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on the drive up (concentric), inhale on the way down (eccentric)",
+        "alternative": "Brace and hold breath at top for heavy loads (Valsalva maneuver)"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-1-2 (3 sec down, 1 sec pause at bottom, 1 sec up, 2 sec squeeze at top)",
+        "strength_focus": "1-0-X-1 (1 sec down, no pause, explosive up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "Hips extend until body forms straight line from shoulders to knees",
+        "critical_point": "Full hip extension with posterior pelvic tilt at top",
+        "avoid": "Hyperextending lower back at top position"
+      },
+      "form_cues": [
+        "Create a 'double chin' to maintain neutral neck",
+        "Feel the squeeze in your glutes, not your lower back",
+        "Shins should be vertical at the top",
+        "Push the ground away with your feet",
+        "Keep core braced throughout"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hyperextending the lower back",
+          "correction": "Focus on posterior pelvic tilt, tuck tailbone, keep ribs down",
+          "why_it_matters": "Reduces glute activation and increases injury risk to lumbar spine"
+        },
+        {
+          "mistake": "Feet too close or too far from glutes",
+          "correction": "Position feet so shins are vertical at top of movement",
+          "why_it_matters": "Improper foot placement shifts emphasis to quads or hamstrings"
+        },
+        {
+          "mistake": "Pushing through toes instead of heels",
+          "correction": "Drive through heels, can even lift toes slightly",
+          "why_it_matters": "Reduces glute activation and increases quad involvement"
+        },
+        {
+          "mistake": "Not achieving full hip extension",
+          "correction": "Squeeze glutes hard at top, think about bringing hips through",
+          "why_it_matters": "Partial range of motion limits glute development"
+        },
+        {
+          "mistake": "Looking up or craning neck",
+          "correction": "Maintain neutral spine including neck, gentle double chin",
+          "why_it_matters": "Prevents neck strain and maintains proper spinal alignment"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Glute Bridge",
+            "description": "Same movement pattern from floor without elevation",
+            "when_to_use": "Beginners or learning movement pattern"
+          },
+          {
+            "name": "Single-Leg Glute Bridge",
+            "description": "Elevated bridge with one leg extended",
+            "when_to_use": "Building up to loaded hip thrust, addressing imbalances"
+          },
+          {
+            "name": "Dumbbell Hip Thrust",
+            "description": "Use single dumbbell instead of barbell",
+            "when_to_use": "Getting comfortable with elevated hip thrust before barbell"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Banded Barbell Hip Thrust",
+            "description": "Add resistance band around knees or anchored to barbell",
+            "when_to_use": "Increase glute activation and add accommodating resistance"
+          },
+          {
+            "name": "Single-Leg Barbell Hip Thrust",
+            "description": "Perform with one leg while other is extended",
+            "when_to_use": "Advanced, address imbalances, increase difficulty"
+          },
+          {
+            "name": "Deficit Hip Thrust",
+            "description": "Elevate feet on plates for increased range of motion",
+            "when_to_use": "Advanced, increase stretch at bottom"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Glute hypertrophy", "Building hip extension strength", "Improving lockout strength for deadlifts"],
+        "place_in_workout": "Early to mid-workout as primary glute exercise",
+        "pairs_well_with": ["RDLs", "Leg Curls", "Abductor work"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Use padding on barbell to prevent bruising",
+        "Ensure bench is stable and won't slide",
+        "Load and unload barbell carefully",
+        "Start light to learn movement pattern",
+        "Avoid if experiencing lower back pain"
+      ],
+      "video_explanation_script": "Start by positioning yourself with your upper back against a bench, barbell across your hips. Your feet should be flat and positioned so that when you're at the top, your shins are vertical. From here, drive through your heels and squeeze your glutes to push your hips up. At the top, your body should form a straight line from shoulders to knees - this is where you really squeeze those glutes hard. Avoid arching your lower back; instead, think about tucking your tailbone slightly. Lower back down with control and repeat. The magic happens when you feel this entirely in your glutes, not your lower back."
+    },
+    {
+      "exercise_id": "glute_002",
+      "exercise_name": "Romanian Deadlift (RDL)",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Hamstrings"],
+        "secondary": ["Erector Spinae", "Lats", "Traps"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Hip Hinge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "Lifting Straps", "Lifting Belt"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Stand with feet hip-width apart, barbell in hands at hip level with overhand or mixed grip.",
+        "key_points": [
+          "Start from the top position (standing)",
+          "Bar should rest against thighs",
+          "Shoulders packed back and down"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing tall with barbell at hip level, feet hip-width apart, slight bend in knees, neutral spine.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Packed back and down, engaged lats",
+          "spine": "Neutral from head to tailbone",
+          "hips": "Level, slight anterior tilt",
+          "knees": "Soft bend, not locked",
+          "feet": "Hip-width, weight through mid-foot"
+        },
+        "grip": "Overhand (double overhand) or mixed grip, hands just outside thighs"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Push hips back while maintaining neutral spine, lowering bar down front of legs",
+          "cues": [
+            "Push your hips back like closing a car door",
+            "Keep the bar close to your legs",
+            "Maintain neutral spine throughout",
+            "Feel the stretch in your hamstrings",
+            "Soft bend in knees, don't squat down"
+          ],
+          "end_position": "Bar reaches mid-shin or just below knees, deep stretch in hamstrings and glutes"
+        },
+        "concentric_phase": {
+          "description": "Drive hips forward to return to standing position",
+          "cues": [
+            "Push the floor away",
+            "Drive hips through to standing",
+            "Squeeze glutes at the top",
+            "Keep bar path vertical and close",
+            "Stand tall, don't hyperextend"
+          ],
+          "end_position": "Standing tall, hips fully extended, glutes contracted, bar at hip level"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace at top, hold breath during descent, exhale on the way up",
+        "alternative": "Continuous breathing for lighter weights or higher reps"
+      },
+      "tempo": {
+        "standard": "3-1-1-1 (3 sec down, 1 sec pause at stretch, 1 sec up, 1 sec squeeze)",
+        "hypertrophy_focus": "4-2-2-1 (4 sec down, 2 sec pause, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-1-1 (2 sec down, no pause, 1 sec up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "Bar descends to mid-shin while maintaining neutral spine",
+        "critical_point": "Stop when you can no longer maintain neutral spine or feel deep hamstring stretch",
+        "avoid": "Rounding the back to go lower"
+      },
+      "form_cues": [
+        "Imagine dragging the bar up your legs",
+        "Keep your chest proud throughout",
+        "Think 'hips back' not 'bend forward'",
+        "Maintain tension in lats by keeping bar close",
+        "Feel the stretch in your hamstrings, not your lower back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding the back",
+          "correction": "Maintain neutral spine, stop descent when spine begins to round",
+          "why_it_matters": "Spinal flexion under load greatly increases injury risk"
+        },
+        {
+          "mistake": "Squatting down instead of hinging",
+          "correction": "Keep knees at same angle, push hips back not down",
+          "why_it_matters": "Turns the RDL into a squat, reducing hamstring and glute emphasis"
+        },
+        {
+          "mistake": "Bar drifting away from body",
+          "correction": "Engage lats, drag bar up legs, keep it close",
+          "why_it_matters": "Increases moment arm and stress on lower back"
+        },
+        {
+          "mistake": "Hyperextending at the top",
+          "correction": "Stand tall with neutral spine, squeeze glutes without leaning back",
+          "why_it_matters": "Hyperextension compresses lumbar spine unnecessarily"
+        },
+        {
+          "mistake": "Going too low beyond flexibility",
+          "correction": "Only descend as far as you can maintain neutral spine",
+          "why_it_matters": "Compensatory rounding increases injury risk"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell RDL",
+            "description": "Use dumbbells at sides instead of barbell",
+            "when_to_use": "Learning movement pattern, improving mobility"
+          },
+          {
+            "name": "Kettlebell RDL",
+            "description": "Single kettlebell held with both hands",
+            "when_to_use": "Beginners, working on hip hinge pattern"
+          },
+          {
+            "name": "Bodyweight Hip Hinge",
+            "description": "Practice hinge pattern with PVC pipe on back",
+            "when_to_use": "Teaching proper hinge mechanics"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Leg RDL",
+            "description": "Perform on one leg with opposite leg extending back",
+            "when_to_use": "Address imbalances, increase stability demands"
+          },
+          {
+            "name": "Deficit RDL",
+            "description": "Stand on platform for increased range of motion",
+            "when_to_use": "Advanced lifters with good mobility"
+          },
+          {
+            "name": "Snatch Grip RDL",
+            "description": "Use wide grip to increase range of motion and upper back work",
+            "when_to_use": "Variation for advanced trainees"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Hamstring and glute development", "Learning hip hinge pattern", "Building posterior chain strength"],
+        "place_in_workout": "Early workout as primary or secondary movement",
+        "pairs_well_with": ["Squats", "Hip Thrusts", "Leg Curls"],
+        "rep_ranges": {
+          "strength": "4-6 reps",
+          "hypertrophy": "8-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Master the hip hinge pattern with light weight first",
+        "Never sacrifice neutral spine for more range of motion",
+        "Use lifting straps if grip is limiting factor",
+        "Avoid if experiencing lower back pain without clearance",
+        "Progress weight gradually"
+      ],
+      "video_explanation_script": "The RDL is all about the hip hinge. Start standing tall with the bar at your hips. From here, push your hips back like you're trying to close a car door behind you. Keep your spine neutral and the bar close to your legs as you lower down. You should feel a deep stretch in your hamstrings. Only go as low as you can while keeping your back flat. Then drive your hips forward to stand back up, squeezing your glutes at the top. This isn't a squat - your knees stay at roughly the same angle the whole time. The movement comes from your hips."
+    },
+    {
+      "exercise_id": "glute_003",
+      "exercise_name": "Bulgarian Split Squat",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Quadriceps"],
+        "secondary": ["Hamstrings", "Adductors", "Gluteus Medius"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Single-Leg Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Bench or Box (knee height)"],
+        "optional": ["Dumbbells", "Barbell", "Kettlebells"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand facing away from a bench with rear foot elevated on the bench, front foot planted 2-3 feet in front.",
+        "key_points": [
+          "Bench should be approximately knee height",
+          "Front foot should be far enough forward that knee doesn't pass toes excessively",
+          "Rear foot can rest on top of foot or toes"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright in a split stance with rear foot elevated on bench behind, front foot planted firmly, torso upright.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down, chest up",
+          "spine": "Neutral, slight forward lean acceptable",
+          "hips": "Square, level, facing forward",
+          "front_knee": "Slightly bent",
+          "front_foot": "Flat, weight through mid-foot to heel",
+          "rear_foot": "Elevated on bench, laces or toes down"
+        },
+        "stance_width": "Front foot 2-3 feet from bench, hip-width side to side"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower down by bending front knee and dropping rear knee toward ground",
+          "cues": [
+            "Sit back into your front hip",
+            "Keep front knee tracking over toes",
+            "Maintain upright torso",
+            "Lower under control",
+            "Feel stretch in glute and hip flexor"
+          ],
+          "end_position": "Front thigh parallel to ground or slightly below, rear knee hovering near ground"
+        },
+        "concentric_phase": {
+          "description": "Drive through front heel to return to starting position",
+          "cues": [
+            "Push through your front heel",
+            "Drive hips forward",
+            "Squeeze glute at the top",
+            "Keep torso upright",
+            "Don't push off back leg"
+          ],
+          "end_position": "Standing upright with front knee soft, not locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on the descent, exhale on the drive up",
+        "alternative": "Brace at top, hold breath during descent and first part of ascent"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "Front thigh reaches parallel or slightly below while maintaining form",
+        "critical_point": "Depth where form can be maintained and stretch felt in glutes",
+        "avoid": "Excessive forward knee travel or losing upright torso position"
+      },
+      "form_cues": [
+        "Think of this as a single-leg squat, not a lunge",
+        "The back leg is just for balance",
+        "Keep your torso relatively upright",
+        "Drive through the heel of your front foot",
+        "Imagine pushing the floor away from you"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Front foot too close to bench",
+          "correction": "Position front foot 2-3 feet from bench",
+          "why_it_matters": "Too close causes excessive forward knee travel and quad dominance"
+        },
+        {
+          "mistake": "Pushing off back leg",
+          "correction": "Use back leg only for balance, drive entirely from front leg",
+          "why_it_matters": "Reduces training stimulus on working leg"
+        },
+        {
+          "mistake": "Torso leaning too far forward",
+          "correction": "Maintain upright torso with slight forward lean acceptable",
+          "why_it_matters": "Excessive lean reduces glute activation and increases back strain"
+        },
+        {
+          "mistake": "Hips rotating or tilting",
+          "correction": "Keep hips square and level throughout movement",
+          "why_it_matters": "Hip rotation indicates instability and reduces effectiveness"
+        },
+        {
+          "mistake": "Not going deep enough",
+          "correction": "Descend until front thigh is at least parallel to ground",
+          "why_it_matters": "Partial range of motion limits glute development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Bulgarian Split Squat",
+            "description": "Perform without external load",
+            "when_to_use": "Learning movement pattern, building stability"
+          },
+          {
+            "name": "Assisted Bulgarian Split Squat",
+            "description": "Hold TRX straps or use light support for balance",
+            "when_to_use": "Improving balance while learning movement"
+          },
+          {
+            "name": "Foot-Elevated Split Squat",
+            "description": "Elevate front foot on small plate instead of rear foot",
+            "when_to_use": "Reducing stability demands"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Bulgarian Split Squat",
+            "description": "Hold dumbbells at sides",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Bulgarian Split Squat",
+            "description": "Barbell across back",
+            "when_to_use": "Advanced, when very strong in movement"
+          },
+          {
+            "name": "Deficit Bulgarian Split Squat",
+            "description": "Front foot on small platform for increased range",
+            "when_to_use": "Advanced, with excellent mobility"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral leg strength", "Glute development", "Addressing imbalances", "Improving stability"],
+        "place_in_workout": "Mid-workout after bilateral movements",
+        "pairs_well_with": ["RDLs", "Hip Thrusts", "Leg Press"],
+        "rep_ranges": {
+          "strength": "5-8 reps per leg",
+          "hypertrophy": "8-12 reps per leg",
+          "endurance": "12-20 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Start with bodyweight to master balance",
+        "Ensure bench is stable and secure",
+        "Progress load gradually",
+        "Avoid if experiencing knee pain",
+        "May need to adjust stance based on limb lengths"
+      ],
+      "video_explanation_script": "The Bulgarian split squat is one of the best exercises for building strong, powerful glutes. Set up with your rear foot elevated on a bench behind you and your front foot planted firmly 2-3 feet in front. From here, lower down by bending your front knee and dropping your rear knee toward the ground. Think of this as a single-leg squat - your back leg is just there for balance. Keep your torso upright and make sure you're driving through that front heel. At the bottom, you should feel a great stretch in your glute and hip flexor. Then drive back up through your front heel, squeezing your glute at the top. All the work should be coming from that front leg."
+    },
+    {
+      "exercise_id": "glute_004",
+      "exercise_name": "Glute Bridge",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Erector Spinae"],
+        "stabilizers": ["Core", "Adductors"]
+      },
+      "movement_pattern": "Hip Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Barbell", "Dumbbell", "Resistance Band", "Weight Plate"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Lie on your back with knees bent, feet flat on the floor hip-width apart, arms at sides.",
+        "key_points": [
+          "Feet should be close enough that you can almost touch heels with fingertips",
+          "Feet hip-width apart, toes pointing forward or slightly out",
+          "Spine neutral against floor"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying supine on floor, knees bent at 90 degrees, feet flat, arms at sides palms down.",
+        "body_alignment": {
+          "head": "Neutral on floor, looking up",
+          "shoulders": "Flat on floor, relaxed",
+          "spine": "Neutral, natural curve maintained",
+          "hips": "On floor, relaxed",
+          "knees": "Bent approximately 90 degrees",
+          "feet": "Flat, hip-width apart, positioned near glutes"
+        },
+        "foot_position": "Heels close enough to glutes that you can almost touch them, shins nearly vertical"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive through heels to lift hips off the floor until body forms straight line",
+          "cues": [
+            "Squeeze your glutes hard",
+            "Drive through your heels",
+            "Lift hips toward ceiling",
+            "Tuck tailbone slightly at top",
+            "Create a straight line from knees to shoulders"
+          ],
+          "end_position": "Hips fully extended, body forms straight line from shoulders to knees, glutes maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower hips back to floor with control",
+          "cues": [
+            "Control the descent",
+            "Maintain glute tension",
+            "Don't drop hips quickly"
+          ],
+          "end_position": "Hips touching floor lightly or hovering just above"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on the lift (concentric), inhale on the descent (eccentric)",
+        "alternative": "Continuous rhythmic breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "1-1-1-0 (1 sec up, 1 sec squeeze, 1 sec down, no pause)",
+        "hypertrophy_focus": "2-2-2-0 (2 sec up, 2 sec squeeze, 2 sec down, no pause)",
+        "strength_focus": "1-3-1-0 (1 sec up, 3 sec squeeze, 1 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "Hips extend from floor to full extension forming straight line",
+        "critical_point": "Full hip extension with posterior pelvic tilt at top",
+        "avoid": "Hyperextending lower back or arching excessively"
+      },
+      "form_cues": [
+        "Think about bringing your hips up toward the ceiling",
+        "Squeeze your glutes like you're trying to crack a walnut",
+        "Push your knees forward slightly to keep shins vertical",
+        "Keep your ribs down, don't arch your back",
+        "Feel it entirely in your glutes, not lower back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hyperextending the lower back",
+          "correction": "Focus on tucking tailbone, keep ribs down, squeeze glutes",
+          "why_it_matters": "Reduces glute activation and can cause lower back discomfort"
+        },
+        {
+          "mistake": "Feet too far from glutes",
+          "correction": "Position feet so shins are nearly vertical at top",
+          "why_it_matters": "Feet too far reduces glute activation and increases hamstring involvement"
+        },
+        {
+          "mistake": "Pushing through toes",
+          "correction": "Drive through heels, can even lift toes slightly",
+          "why_it_matters": "Reduces glute activation"
+        },
+        {
+          "mistake": "Not achieving full hip extension",
+          "correction": "Lift hips all the way up, squeeze glutes maximally at top",
+          "why_it_matters": "Partial range limits glute development"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Control tempo, pause and squeeze at top",
+          "why_it_matters": "Moving too fast reduces time under tension and muscle activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Isometric Glute Bridge Hold",
+            "description": "Hold bridge position at top for time",
+            "when_to_use": "Building mind-muscle connection, beginners"
+          },
+          {
+            "name": "Feet Elevated Glute Bridge",
+            "description": "Place feet on elevated surface",
+            "when_to_use": "Reducing range of motion for those with mobility limitations"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Leg Glute Bridge",
+            "description": "Perform with one leg extended",
+            "when_to_use": "Increasing difficulty without adding weight"
+          },
+          {
+            "name": "Banded Glute Bridge",
+            "description": "Add resistance band around knees",
+            "when_to_use": "Adding glute medius activation"
+          },
+          {
+            "name": "Weighted Glute Bridge",
+            "description": "Add barbell, dumbbell, or weight plate across hips",
+            "when_to_use": "Progression to loaded hip thrust"
+          },
+          {
+            "name": "Elevated Glute Bridge (Hip Thrust)",
+            "description": "Elevate shoulders on bench",
+            "when_to_use": "Natural progression from floor bridge"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Learning hip extension pattern", "Glute activation", "Warm-up", "High-rep glute burnouts"],
+        "place_in_workout": "Warm-up, activation work, or end-of-workout finisher",
+        "pairs_well_with": ["Squats", "Deadlifts", "Any leg workout"],
+        "rep_ranges": {
+          "activation": "15-20 reps",
+          "hypertrophy": "15-25 reps",
+          "endurance": "25-50 reps"
+        }
+      },
+      "safety_considerations": [
+        "Safe for most people including beginners",
+        "Avoid hyperextending lower back",
+        "Can be performed daily for activation",
+        "Excellent for pregnancy and postpartum (unweighted)",
+        "Good option for those with knee issues"
+      ],
+      "video_explanation_script": "The glute bridge is a foundational movement for building strong glutes. Lie on your back with your knees bent and feet flat on the floor, positioned close to your glutes. From here, drive through your heels and squeeze your glutes to lift your hips off the floor. At the top, your body should form a straight line from your shoulders to your knees. Really focus on that glute squeeze at the top - that's where the magic happens. Avoid arching your lower back; instead, think about tucking your tailbone slightly. Lower back down with control and repeat. This exercise is perfect for learning how to engage your glutes and is great for activation before heavier lifts."
+    },
+    {
+      "exercise_id": "glute_005",
+      "exercise_name": "Cable Pull-Through",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Hamstrings"],
+        "secondary": ["Erector Spinae", "Core"],
+        "stabilizers": ["Lats", "Traps"]
+      },
+      "movement_pattern": "Hip Hinge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Cable Machine with Rope Attachment"],
+        "optional": ["Ankle Strap", "Handles"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to lowest position with rope attachment. Stand facing away from machine, straddle cable, reach between legs to grab rope.",
+        "key_points": [
+          "Walk forward 2-3 feet from machine to create tension",
+          "Stand with feet hip-width to shoulder-width apart",
+          "Hold rope between legs with both hands"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing away from cable machine, slight forward lean, rope held between legs, arms extended behind body, tension on cable.",
+        "body_alignment": {
+          "head": "Neutral, looking forward and slightly down",
+          "shoulders": "Back and down",
+          "spine": "Neutral with slight forward lean",
+          "hips": "Pushed back, loaded",
+          "knees": "Soft bend",
+          "feet": "Hip to shoulder-width, weight through mid-foot"
+        },
+        "grip": "Both hands on rope, neutral grip, arms straight"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive hips forward to standing position while pulling cable through",
+          "cues": [
+            "Drive your hips forward explosively",
+            "Squeeze your glutes hard at the top",
+            "Stand tall",
+            "Pull the cable through your legs",
+            "Think about humping the air"
+          ],
+          "end_position": "Standing fully upright, hips fully extended, glutes contracted, rope pulled through to front of body"
+        },
+        "eccentric_phase": {
+          "description": "Push hips back to return to hinged position",
+          "cues": [
+            "Push your hips back",
+            "Keep spine neutral",
+            "Feel the stretch in hamstrings and glutes",
+            "Control the cable weight",
+            "Maintain soft knees"
+          ],
+          "end_position": "Hips pushed back, torso leaned forward, rope between legs behind body, stretch in posterior chain"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during hip hinge (eccentric), exhale forcefully on hip drive (concentric)",
+        "alternative": "Rhythmic breathing matching movement cadence"
+      },
+      "tempo": {
+        "standard": "2-0-1-1 (2 sec back, no pause, 1 sec forward, 1 sec squeeze)",
+        "hypertrophy_focus": "3-1-1-2 (3 sec back, 1 sec pause, 1 sec forward, 2 sec squeeze)",
+        "power_focus": "2-0-X-1 (2 sec back, no pause, explosive forward, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From full hip hinge to complete hip extension",
+        "critical_point": "Full hip extension with strong glute contraction at top",
+        "avoid": "Rounding spine or using arms to pull weight"
+      },
+      "form_cues": [
+        "This is a hip hinge movement, not a squat",
+        "The rope is just along for the ride - power comes from hips",
+        "Think about pushing your hips back to touch a wall behind you",
+        "At the top, squeeze your glutes like you're standing at attention",
+        "Keep the cable path straight through your legs"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Squatting down instead of hinging",
+          "correction": "Push hips back while maintaining relatively straight legs",
+          "why_it_matters": "Turns it into a squat movement, reducing glute and hamstring emphasis"
+        },
+        {
+          "mistake": "Rounding the back",
+          "correction": "Maintain neutral spine throughout, stop if back begins to round",
+          "why_it_matters": "Increases injury risk to lumbar spine"
+        },
+        {
+          "mistake": "Pulling with arms",
+          "correction": "Arms stay straight, movement comes entirely from hips",
+          "why_it_matters": "Using arms reduces glute activation and defeats purpose"
+        },
+        {
+          "mistake": "Not achieving full hip extension",
+          "correction": "Drive hips all the way through, stand fully upright, squeeze glutes",
+          "why_it_matters": "Partial range limits glute development"
+        },
+        {
+          "mistake": "Standing too close to machine",
+          "correction": "Walk far enough forward to maintain constant tension",
+          "why_it_matters": "No tension means no stimulus"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Banded Pull-Through",
+            "description": "Use resistance band instead of cable",
+            "when_to_use": "Learning movement pattern, at-home training"
+          },
+          {
+            "name": "Light Weight Pull-Through",
+            "description": "Use very light weight to practice form",
+            "when_to_use": "Beginners learning hip hinge"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Arm Cable Pull-Through",
+            "description": "Perform with one arm, adding rotational stability demand",
+            "when_to_use": "Advanced variation for anti-rotation core work"
+          },
+          {
+            "name": "Single-Leg Cable Pull-Through",
+            "description": "Perform on one leg",
+            "when_to_use": "Advanced, addressing imbalances"
+          },
+          {
+            "name": "Paused Pull-Through",
+            "description": "Add 2-3 second pause at full hip extension",
+            "when_to_use": "Emphasizing glute contraction"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Learning hip hinge", "Glute activation", "Substitute for deadlifts when loading spine is contraindicated"],
+        "place_in_workout": "Early workout for activation or mid-workout as accessory",
+        "pairs_well_with": ["Squats", "Lunges", "Leg Press"],
+        "rep_ranges": {
+          "activation": "15-20 reps",
+          "hypertrophy": "12-20 reps",
+          "power": "8-12 reps"
+        }
+      },
+      "safety_considerations": [
+        "Excellent low-risk option for those with back issues",
+        "Start with light weight to master pattern",
+        "Ensure cable path is clear",
+        "Don't let cable snap back",
+        "Safe alternative to loaded hip hinges"
+      ],
+      "video_explanation_script": "The cable pull-through is fantastic for learning the hip hinge and building powerful glutes. Set the cable at the lowest setting with a rope attachment. Stand facing away from the machine and reach between your legs to grab the rope. Walk forward until you feel tension. From here, push your hips back, letting the weight pull you into a hinge position. You should feel a stretch in your hamstrings and glutes. Then explosively drive your hips forward, pulling the cable through, and squeeze your glutes hard at the top. Your arms are just holding the rope - all the power comes from your hips. This is a great teaching tool for the hip hinge pattern."
+    },
+    {
+      "exercise_id": "glute_006",
+      "exercise_name": "Step-Up",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Quadriceps"],
+        "secondary": ["Hamstrings", "Gluteus Medius", "Adductors"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Single-Leg Squat Pattern",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Box or Bench"],
+        "optional": ["Dumbbells", "Barbell", "Kettlebells", "Weight Vest"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Stand facing a box or bench, one foot planted on top of box, other foot on ground.",
+        "key_points": [
+          "Box height determines glute emphasis: higher = more glute, lower = more quad",
+          "Standard height is where thigh is parallel when foot is on box",
+          "Foot fully planted on box, not just toes"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing box with one foot fully planted on box, other foot on ground, upright torso.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright torso",
+          "hips": "Level, square to box",
+          "working_leg": "On box, knee bent, full foot planted",
+          "non_working_leg": "On ground, relaxed",
+          "weight_distribution": "Majority of weight on foot that's on box"
+        },
+        "foot_placement": "Entire foot on box, heel not hanging off edge"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive through heel of elevated foot to step up onto box",
+          "cues": [
+            "Push through your heel on the box",
+            "Drive your hip forward and up",
+            "Don't push off bottom foot",
+            "Stand tall on the box",
+            "Squeeze your glute at the top"
+          ],
+          "end_position": "Standing fully upright on box with both feet together, hips extended"
+        },
+        "eccentric_phase": {
+          "description": "Control descent back to starting position",
+          "cues": [
+            "Lower down slowly under control",
+            "Keep weight on elevated foot",
+            "Touch ground with opposite foot lightly",
+            "Maintain upright torso"
+          ],
+          "end_position": "Return to starting position with one foot on box, one on ground"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale before step, exhale during drive up, inhale on descent",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec pause, 3 sec down, no pause)",
+        "power_focus": "X-1-2-0 (explosive up, 1 sec stand, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From ground to fully standing on box",
+        "critical_point": "Full hip extension at top of movement",
+        "avoid": "Pushing off bottom foot to assist"
+      },
+      "form_cues": [
+        "Drive through the heel of the foot on the box",
+        "Think about pushing the box away from you",
+        "The foot on the ground is just for balance on the way down",
+        "Keep your torso upright throughout",
+        "Imagine you're stepping onto the box like royalty - controlled and powerful"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pushing off bottom foot",
+          "correction": "Use bottom foot only for light touch and balance, all power from top leg",
+          "why_it_matters": "Reduces training stimulus on working leg"
+        },
+        {
+          "mistake": "Leaning forward excessively",
+          "correction": "Maintain upright torso, slight forward lean acceptable",
+          "why_it_matters": "Excessive lean reduces glute activation"
+        },
+        {
+          "mistake": "Knee caving inward",
+          "correction": "Keep knee tracking over toes, push knee slightly out",
+          "why_it_matters": "Indicates weakness and increases injury risk"
+        },
+        {
+          "mistake": "Not achieving full hip extension",
+          "correction": "Stand fully upright on box, squeeze glute at top",
+          "why_it_matters": "Partial range limits glute development"
+        },
+        {
+          "mistake": "Momentum stepping",
+          "correction": "Control both the ascent and descent",
+          "why_it_matters": "Using momentum reduces muscle activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Low Box Step-Up",
+            "description": "Use lower box (6-12 inches)",
+            "when_to_use": "Beginners, learning movement pattern"
+          },
+          {
+            "name": "Bodyweight Step-Up",
+            "description": "Perform without external load",
+            "when_to_use": "Building base strength and stability"
+          },
+          {
+            "name": "Eccentric-Only Step-Up",
+            "description": "Step up with both feet, lower down on one",
+            "when_to_use": "Building strength for full step-ups"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "High Box Step-Up",
+            "description": "Use box where thigh is slightly above parallel",
+            "when_to_use": "Increasing glute emphasis and difficulty"
+          },
+          {
+            "name": "Dumbbell Step-Up",
+            "description": "Hold dumbbells at sides",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Step-Up",
+            "description": "Barbell across back",
+            "when_to_use": "Advanced strength development"
+          },
+          {
+            "name": "Crossover Step-Up",
+            "description": "Cross leg over to opposite side of box",
+            "when_to_use": "Advanced variation targeting glute medius"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral leg strength", "Glute development", "Functional movement", "Sports performance"],
+        "place_in_workout": "Early to mid-workout as primary or accessory movement",
+        "pairs_well_with": ["RDLs", "Leg Curls", "Lateral Lunges"],
+        "rep_ranges": {
+          "strength": "5-8 reps per leg",
+          "hypertrophy": "8-15 reps per leg",
+          "endurance": "15-20 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Ensure box is stable and secure",
+        "Start with lower box and progress height gradually",
+        "Entire foot should be on box",
+        "Use spotter for heavy barbell variations",
+        "Stop if experiencing knee pain"
+      ],
+      "video_explanation_script": "Step-ups are an incredibly functional exercise for building strong glutes and legs. Stand facing a box with one foot fully planted on top - make sure your whole foot is on there, not just your toes. From here, drive through the heel of your elevated foot to step up onto the box. The key is to not push off with your bottom foot - that leg is just along for the ride. All the work should come from the leg on the box. Stand tall at the top and squeeze your glute. Then control your descent back down. The higher the box, the more you'll emphasize your glutes. This exercise is fantastic for addressing imbalances between legs."
+    },
+    {
+      "exercise_id": "glute_007",
+      "exercise_name": "Curtsy Lunge",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Gluteus Medius"],
+        "secondary": ["Quadriceps", "Adductors", "Hip Abductors"],
+        "stabilizers": ["Core", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Lunge Variation",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Dumbbells", "Kettlebells", "Barbell"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Stand with feet hip-width apart, hands on hips or holding weights at sides.",
+        "key_points": [
+          "Start with feet together or hip-width",
+          "Keep torso upright",
+          "Prepare to step back and across"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with feet hip-width apart, core engaged, chest up.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Level and square",
+          "knees": "Soft, not locked",
+          "feet": "Hip-width apart"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Step one leg back and across behind the front leg, lowering into a lunge",
+          "cues": [
+            "Step back and across like a curtsy",
+            "Lower your back knee toward the ground",
+            "Keep front knee over ankle",
+            "Maintain upright torso",
+            "Feel the stretch in your glute"
+          ],
+          "end_position": "Back leg crossed behind front leg, both knees bent, front thigh near parallel, back knee near ground"
+        },
+        "concentric_phase": {
+          "description": "Push through front heel to return to standing position",
+          "cues": [
+            "Drive through your front heel",
+            "Squeeze your glute",
+            "Return to standing with control",
+            "Keep hips square"
+          ],
+          "end_position": "Return to starting position standing upright"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on the descent, exhale on the drive up",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec squeeze)",
+        "balance_focus": "2-2-2-1 (2 sec down, 2 sec pause, 2 sec up, 1 sec pause)"
+      },
+      "range_of_motion": {
+        "full": "Back knee lowers to just above ground, front thigh near parallel",
+        "critical_point": "Maintain hip stability while achieving depth",
+        "avoid": "Excessive hip rotation or knee caving"
+      },
+      "form_cues": [
+        "Imagine curtseying to royalty",
+        "Keep your hips facing forward even as leg crosses back",
+        "The deeper you go, the more glute activation",
+        "Think about sitting back into your front hip",
+        "Feel this on the outside of your front glute"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rotating hips excessively",
+          "correction": "Keep hips square and facing forward throughout movement",
+          "why_it_matters": "Hip rotation reduces stability and glute activation"
+        },
+        {
+          "mistake": "Front knee caving inward",
+          "correction": "Keep front knee tracking over toes, push knee slightly out",
+          "why_it_matters": "Knee valgus increases injury risk and reduces effectiveness"
+        },
+        {
+          "mistake": "Leaning forward",
+          "correction": "Maintain upright torso throughout movement",
+          "why_it_matters": "Forward lean reduces glute activation"
+        },
+        {
+          "mistake": "Not stepping back far enough",
+          "correction": "Take a large step back and across to achieve proper depth",
+          "why_it_matters": "Shallow range of motion limits effectiveness"
+        },
+        {
+          "mistake": "Losing balance",
+          "correction": "Start with smaller range, hold onto support if needed",
+          "why_it_matters": "Indicates need for stability work before progressing"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Assisted Curtsy Lunge",
+            "description": "Hold onto wall or TRX for balance support",
+            "when_to_use": "Learning movement, building stability"
+          },
+          {
+            "name": "Shallow Curtsy Lunge",
+            "description": "Reduce range of motion initially",
+            "when_to_use": "Building strength and stability gradually"
+          },
+          {
+            "name": "Static Curtsy Hold",
+            "description": "Hold curtsy position without moving",
+            "when_to_use": "Building isometric strength and stability"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Curtsy Lunge",
+            "description": "Hold dumbbells at sides",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Curtsy Lunge to Lateral Raise",
+            "description": "Add lateral leg raise when returning to standing",
+            "when_to_use": "Adding glute medius emphasis"
+          },
+          {
+            "name": "Walking Curtsy Lunge",
+            "description": "Alternate legs in walking pattern",
+            "when_to_use": "Advanced conditioning variation"
+          },
+          {
+            "name": "Deficit Curtsy Lunge",
+            "description": "Front foot on small platform",
+            "when_to_use": "Advanced, increasing range of motion"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Gluteus medius development", "Hip stability", "Addressing imbalances", "Variety in glute training"],
+        "place_in_workout": "Mid-workout as accessory movement",
+        "pairs_well_with": ["Hip Thrusts", "Lateral Band Walks", "Step-Ups"],
+        "rep_ranges": {
+          "stability": "6-10 reps per leg",
+          "hypertrophy": "10-15 reps per leg",
+          "endurance": "15-20 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Start with bodyweight to master balance",
+        "Progress slowly due to stability demands",
+        "May aggravate knee issues in some individuals",
+        "Focus on control over depth initially",
+        "Not ideal for those with hip impingement"
+      ],
+      "video_explanation_script": "The curtsy lunge is excellent for targeting your glutes, especially the gluteus medius on the side of your hip. Start standing with feet hip-width apart. Step one leg back and across behind your front leg, like you're doing a curtsy. Lower down until your back knee is just above the ground and your front thigh is close to parallel. The key here is to keep your hips square - don't let them rotate. You should feel a great stretch on the outside of your front glute. Push through your front heel to return to standing, squeezing your glute at the top. This exercise challenges your balance and stability while building strong, shapely glutes."
+    },
+    {
+      "exercise_id": "glute_008",
+      "exercise_name": "Single-Leg Romanian Deadlift",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Hamstrings"],
+        "secondary": ["Erector Spinae", "Gluteus Medius", "Core"],
+        "stabilizers": ["Hip Stabilizers", "Ankle Stabilizers", "Core"]
+      },
+      "movement_pattern": "Single-Leg Hip Hinge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Dumbbell", "Kettlebell", "Barbell", "Cable"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand on one leg holding weight in opposite hand (optional), other leg ready to extend behind.",
+        "key_points": [
+          "Start with light weight or bodyweight",
+          "Slight bend in standing knee",
+          "Core engaged"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing on one leg with slight knee bend, weight in opposite hand (if using), free leg ready to extend.",
+        "body_alignment": {
+          "head": "Neutral, looking slightly ahead and down",
+          "shoulders": "Packed back and down, level",
+          "spine": "Neutral",
+          "hips": "Level, square",
+          "standing_knee": "Slight bend, soft",
+          "standing_foot": "Flat, tripod foot position",
+          "free_leg": "Slightly behind, ready to extend"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Hinge at hip while extending free leg behind, lowering torso toward parallel",
+          "cues": [
+            "Push your hips back",
+            "Extend your back leg like kicking a door closed",
+            "Keep hips square to the ground",
+            "Lower weight toward standing foot",
+            "Feel stretch in standing leg glute and hamstring"
+          ],
+          "end_position": "Torso parallel to ground, back leg extended in line with torso, standing leg has maintained slight knee bend"
+        },
+        "concentric_phase": {
+          "description": "Drive through standing heel to return to upright position",
+          "cues": [
+            "Push the floor away",
+            "Drive hips forward",
+            "Squeeze glute of standing leg",
+            "Return back leg to ground",
+            "Stand tall"
+          ],
+          "end_position": "Standing upright on one leg, other foot can touch down lightly or remain elevated"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace before hinge, hold breath during descent, exhale on return",
+        "alternative": "Inhale on descent, exhale on ascent"
+      },
+      "tempo": {
+        "standard": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec balance)",
+        "hypertrophy_focus": "4-2-2-1 (4 sec down, 2 sec pause, 2 sec up, 1 sec squeeze)",
+        "balance_focus": "2-2-2-2 (2 sec down, 2 sec pause, 2 sec up, 2 sec balance)"
+      },
+      "range_of_motion": {
+        "full": "Torso reaches parallel to ground while maintaining neutral spine",
+        "critical_point": "Only go as low as you can maintain balance and neutral spine",
+        "avoid": "Rounding spine or opening hips to compensate"
+      },
+      "form_cues": [
+        "Imagine you're a teeter-totter",
+        "Back leg and torso should move as one unit",
+        "Keep both hip bones pointing down toward the ground",
+        "Think about showing the bottom of your shoe to the person behind you",
+        "Weight travels straight down toward standing foot"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips opening/rotating",
+          "correction": "Keep hips square to ground, think about keeping both hip bones level",
+          "why_it_matters": "Hip rotation reduces glute activation and indicates lack of stability"
+        },
+        {
+          "mistake": "Rounding the back",
+          "correction": "Only go as low as you can maintain neutral spine",
+          "why_it_matters": "Spinal flexion increases injury risk"
+        },
+        {
+          "mistake": "Bending standing knee too much",
+          "correction": "Maintain slight bend in knee, don't let it continue to bend",
+          "why_it_matters": "Excessive knee bend turns it into a squat movement"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Control both descent and ascent, pause at bottom",
+          "why_it_matters": "Momentum reduces muscle activation and balance challenge"
+        },
+        {
+          "mistake": "Not extending back leg",
+          "correction": "Extend back leg fully in line with torso",
+          "why_it_matters": "Back leg extension helps maintain hip position and balance"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Kickstand RDL",
+            "description": "Keep back toe on ground for light support",
+            "when_to_use": "Learning single-leg balance while maintaining pattern"
+          },
+          {
+            "name": "Supported Single-Leg RDL",
+            "description": "Hold onto wall or rack with free hand",
+            "when_to_use": "Building balance and strength before unsupported version"
+          },
+          {
+            "name": "Shallow Single-Leg RDL",
+            "description": "Reduce range of motion initially",
+            "when_to_use": "Building stability and strength gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Single-Leg RDL",
+            "description": "Hold dumbbell in opposite hand from standing leg",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Single-Leg RDL",
+            "description": "Hold barbell with both hands",
+            "when_to_use": "Advanced variation for increased load"
+          },
+          {
+            "name": "Deficit Single-Leg RDL",
+            "description": "Stand on small platform",
+            "when_to_use": "Advanced, increasing range of motion"
+          },
+          {
+            "name": "Single-Leg RDL to Row",
+            "description": "Add a row at bottom position",
+            "when_to_use": "Adding upper back work"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral glute and hamstring strength", "Balance and stability", "Addressing imbalances", "Functional movement"],
+        "place_in_workout": "Mid-workout as accessory movement",
+        "pairs_well_with": ["Bulgarian Split Squats", "Lunges", "Single-Leg Leg Press"],
+        "rep_ranges": {
+          "strength": "5-8 reps per leg",
+          "hypertrophy": "8-12 reps per leg",
+          "balance": "6-10 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Master bilateral RDL before attempting single-leg",
+        "Start with bodyweight or very light weight",
+        "Use support initially if needed",
+        "Stop if unable to maintain form",
+        "Not ideal during acute lower back issues"
+      ],
+      "video_explanation_script": "The single-leg RDL is one of the most challenging and rewarding exercises for your glutes, hamstrings, and balance. Stand on one leg with a slight bend in your knee. From here, push your hips back as you hinge forward, extending your free leg behind you. Think of your torso and back leg as one unit - they move together. Keep your hips square to the ground; don't let them open up. Lower down until your torso is about parallel to the ground, feeling a deep stretch in your glute and hamstring. Then drive through your heel to return to standing, squeezing your glute at the top. This exercise is as much about control and stability as it is about strength."
+    },
+    {
+      "exercise_id": "glute_009",
+      "exercise_name": "Sumo Deadlift",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Quadriceps", "Adductors"],
+        "secondary": ["Hamstrings", "Erector Spinae", "Lats", "Traps"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Hip Hinge with Squat Component",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "Lifting Straps", "Lifting Belt", "Chalk"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand with feet wider than shoulder-width, toes pointed out 30-45 degrees, barbell over mid-foot.",
+        "key_points": [
+          "Stance is significantly wider than conventional deadlift",
+          "Toes point out to allow knees to track properly",
+          "Barbell positioned over mid-foot"
+        ]
+      },
+      "starting_position": {
+        "description": "Wide stance with toes out, hinged down to grasp barbell with arms inside knees, chest up, hips lower than conventional deadlift.",
+        "body_alignment": {
+          "head": "Neutral or slightly looking up",
+          "shoulders": "Over or slightly behind bar, packed back",
+          "spine": "Neutral from head to tailbone",
+          "hips": "Lower than conventional deadlift, higher than squat",
+          "knees": "Tracking over toes, pushed out",
+          "feet": "Wide stance, toes out 30-45 degrees, weight through mid-foot"
+        },
+        "grip": "Arms inside knees, overhand or mixed grip, hands about shoulder-width"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive through entire foot to extend hips and knees, pulling bar up close to body",
+          "cues": [
+            "Push the floor away",
+            "Drive knees out",
+            "Keep chest up",
+            "Pull bar back into your body",
+            "Squeeze glutes at the top"
+          ],
+          "end_position": "Standing fully upright with bar at hip level, hips fully extended, shoulders back"
+        },
+        "eccentric_phase": {
+          "description": "Push hips back while bending knees to lower bar along same path",
+          "cues": [
+            "Control the descent",
+            "Push hips back first",
+            "Keep bar close",
+            "Maintain neutral spine",
+            "Lower under control"
+          ],
+          "end_position": "Bar returned to ground, same starting position maintained"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath and brace before lift, hold during ascent, exhale at top or on descent",
+        "alternative": "Valsalva maneuver for maximal loads"
+      },
+      "tempo": {
+        "standard": "1-0-1-0 (1 sec up, no pause, 1 sec down, reset)",
+        "strength_focus": "X-1-2-0 (explosive up, 1 sec stand, 2 sec down, reset)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec squeeze, 3 sec down, brief reset)"
+      },
+      "range_of_motion": {
+        "full": "From bar on ground to full hip and knee extension",
+        "critical_point": "Full hip extension without hyperextension at top",
+        "avoid": "Rounding back or excessive forward lean"
+      },
+      "form_cues": [
+        "Spread the floor with your feet",
+        "Think about pushing the ground away rather than pulling the bar up",
+        "Keep the bar as close to your body as possible",
+        "Pull your hips through to the bar at the top",
+        "Imagine zipping up a tight jacket with your lats"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rounding the back",
+          "correction": "Engage lats, keep chest up, maintain neutral spine",
+          "why_it_matters": "Spinal flexion under load greatly increases injury risk"
+        },
+        {
+          "mistake": "Knees caving inward",
+          "correction": "Actively push knees out in line with toes throughout movement",
+          "why_it_matters": "Knee valgus reduces power and increases injury risk"
+        },
+        {
+          "mistake": "Bar drifting away from body",
+          "correction": "Engage lats, pull bar back into body, keep close throughout",
+          "why_it_matters": "Bar drift increases moment arm and stress on back"
+        },
+        {
+          "mistake": "Starting with hips too low",
+          "correction": "Hips should be lower than conventional but higher than squat",
+          "why_it_matters": "Incorrect hip position reduces leverage and power"
+        },
+        {
+          "mistake": "Not achieving full lockout",
+          "correction": "Drive hips fully through, stand tall, squeeze glutes",
+          "why_it_matters": "Incomplete lockout means incomplete rep"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Sumo Deadlift",
+            "description": "Hold single dumbbell or kettlebell in sumo stance",
+            "when_to_use": "Learning sumo stance and movement pattern"
+          },
+          {
+            "name": "Deficit-Free Sumo Deadlift",
+            "description": "Use larger diameter plates to reduce range of motion",
+            "when_to_use": "Building up to full range with standard plates"
+          },
+          {
+            "name": "Block Pull Sumo Deadlift",
+            "description": "Pull from elevated blocks",
+            "when_to_use": "Reducing range of motion initially"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Deficit Sumo Deadlift",
+            "description": "Stand on low platform (1-3 inches)",
+            "when_to_use": "Advanced, increasing range of motion and difficulty"
+          },
+          {
+            "name": "Banded Sumo Deadlift",
+            "description": "Add resistance bands to barbell",
+            "when_to_use": "Accommodating resistance for lockout strength"
+          },
+          {
+            "name": "Paused Sumo Deadlift",
+            "description": "Pause 1-2 inches off floor",
+            "when_to_use": "Building strength off the floor"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Glute and adductor development", "Those with longer legs", "Powerlifting", "Overall lower body strength"],
+        "place_in_workout": "Early workout as primary movement",
+        "pairs_well_with": ["Romanian Deadlifts", "Leg Press", "Glute Bridges"],
+        "rep_ranges": {
+          "strength": "1-5 reps",
+          "hypertrophy": "6-10 reps",
+          "technique": "3-5 reps with lighter weight"
+        }
+      },
+      "safety_considerations": [
+        "Master conventional deadlift before attempting sumo",
+        "Ensure adequate hip and ankle mobility for wide stance",
+        "Progress weight gradually",
+        "Use lifting belt for heavy loads",
+        "Avoid if experiencing hip impingement or groin pain"
+      ],
+      "video_explanation_script": "The sumo deadlift is a powerful variation that emphasizes your glutes, inner thighs, and quads. Set up with a wide stance - feet well outside shoulder-width - with your toes pointed out. Hinge down to grip the bar with your hands inside your knees. From here, push your knees out, keep your chest up, and drive through the entire foot to stand up. The bar should travel straight up, close to your body. Think about pushing the floor away rather than pulling the bar up. At the top, squeeze your glutes hard and stand tall. The wider stance allows for a more upright torso and puts more emphasis on your glutes compared to conventional deadlifts."
+    },
+    {
+      "exercise_id": "glute_010",
+      "exercise_name": "Banded Lateral Walk",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Medius", "Gluteus Minimus"],
+        "secondary": ["Gluteus Maximus", "Hip Abductors"],
+        "stabilizers": ["Core", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Hip Abduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Resistance Band (loop or mini band)"],
+        "optional": ["Multiple band resistances"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Place resistance band around legs (above knees, below knees, or around ankles depending on difficulty), stand with feet hip-width apart.",
+        "key_points": [
+          "Band placement determines difficulty: around ankles is hardest, above knees is easiest",
+          "Start in athletic quarter-squat position",
+          "Create tension in band before starting"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing in quarter-squat position with band around legs, feet hip-width creating tension in band, slight forward hinge.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral with slight forward lean",
+          "hips": "Pushed back slightly, loaded",
+          "knees": "Bent in quarter-squat, pushed out against band",
+          "feet": "Hip-width or slightly wider, creating band tension"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Step laterally to the side, maintaining quarter-squat position and constant band tension",
+          "cues": [
+            "Take controlled steps to the side",
+            "Keep tension in the band the entire time",
+            "Don't let your knees cave inward",
+            "Stay low in your athletic stance",
+            "Push through the outside of your foot",
+            "Squeeze your glutes throughout"
+          ],
+          "pattern": "Step out with one leg, bring other leg to follow but maintain tension, repeat for reps or distance"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous rhythmic breathing throughout movement",
+        "alternative": "Exhale with each step"
+      },
+      "tempo": {
+        "standard": "1-0-1-0 (1 sec step out, no pause, 1 sec step in, no pause)",
+        "burn_focus": "2-1-2-0 (2 sec step out, 1 sec pause, 2 sec step in, no pause)",
+        "endurance": "Quick controlled steps maintaining constant tension"
+      },
+      "range_of_motion": {
+        "full": "Step wide enough to feel significant glute activation while maintaining position",
+        "critical_point": "Maintain constant tension in band, don't let feet come too close together",
+        "avoid": "Standing up between steps or losing quarter-squat position"
+      },
+      "form_cues": [
+        "Imagine you're a crab walking sideways",
+        "Keep your chest up and shoulders back",
+        "Feel the burn on the outside of your hips",
+        "Never let your knees cave inward toward each other",
+        "Maintain that athletic ready position the whole time"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Standing up between steps",
+          "correction": "Maintain quarter-squat position throughout entire set",
+          "why_it_matters": "Standing reduces glute medius activation"
+        },
+        {
+          "mistake": "Knees caving inward",
+          "correction": "Actively push knees out against band throughout movement",
+          "why_it_matters": "Knee valgus defeats the purpose of the exercise"
+        },
+        {
+          "mistake": "Feet coming too close together",
+          "correction": "Keep tension in band at all times, don't let feet get closer than hip-width",
+          "why_it_matters": "Losing tension means losing stimulus"
+        },
+        {
+          "mistake": "Upper body leaning excessively",
+          "correction": "Maintain upright torso with slight athletic lean",
+          "why_it_matters": "Excessive lean reduces effectiveness"
+        },
+        {
+          "mistake": "Moving too fast",
+          "correction": "Control each step, focus on muscle activation over speed",
+          "why_it_matters": "Moving too fast uses momentum instead of muscle"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Standing Lateral Walk",
+            "description": "Perform from standing position instead of quarter-squat",
+            "when_to_use": "Beginners or those building base strength"
+          },
+          {
+            "name": "Lighter Band Resistance",
+            "description": "Use lighter resistance band",
+            "when_to_use": "Learning movement pattern or building endurance"
+          },
+          {
+            "name": "Band Above Knees",
+            "description": "Place band above knees for easier variation",
+            "when_to_use": "Beginners or as activation work"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Band at Ankles",
+            "description": "Place band around ankles for maximum difficulty",
+            "when_to_use": "Advanced, maximum glute medius activation"
+          },
+          {
+            "name": "Heavier Band Resistance",
+            "description": "Use thicker, more resistant band",
+            "when_to_use": "Progressing difficulty"
+          },
+          {
+            "name": "Monster Walks",
+            "description": "Walk forward and backward with band while maintaining width",
+            "when_to_use": "Advanced variation for more dynamic movement"
+          },
+          {
+            "name": "Lateral Walk with Pulse",
+            "description": "Add small squat pulse with each step",
+            "when_to_use": "Increasing difficulty and glute max activation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Glute medius activation", "Warm-up", "Rehab and prehab", "Addressing knee valgus", "Hip stability"],
+        "place_in_workout": "Warm-up or activation before main workout, or as finisher",
+        "pairs_well_with": ["Squats", "Deadlifts", "Lunges", "Any leg workout"],
+        "rep_ranges": {
+          "activation": "10-15 steps each direction",
+          "hypertrophy": "15-25 steps each direction",
+          "endurance": "30-50 steps each direction or timed sets (30-60 seconds)"
+        }
+      },
+      "safety_considerations": [
+        "Very low injury risk",
+        "Safe for most populations including beginners",
+        "Excellent for rehabilitation",
+        "Stop if experiencing knee or hip pain",
+        "Can be performed daily for activation"
+      ],
+      "video_explanation_script": "Banded lateral walks are one of the best exercises for targeting your glute medius - the muscle on the side of your hip that's crucial for stability. Place a resistance band around your legs - above your knees for easier, around your ankles for harder. Get into an athletic quarter-squat position and create tension in the band. From here, take controlled steps to the side, maintaining that low position the entire time. The key is to keep your knees pushed out against the band - never let them cave inward. You should feel this burning on the outside of your hips. This exercise is perfect for warming up before leg day or as a finisher to really torch those glutes."
+    },
+    {
+      "exercise_id": "glute_011",
+      "exercise_name": "Frog Pump",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus"],
+        "secondary": ["Gluteus Medius"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Hip Extension with Hip Abduction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Weight Plate", "Dumbbell", "Resistance Band"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Lie on your back with soles of feet together, knees dropped out to sides in a frog-leg position.",
+        "key_points": [
+          "Feet soles together, pulled toward glutes",
+          "Knees out to sides creating diamond shape",
+          "Arms at sides or across chest"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying supine on floor, soles of feet together and pulled toward glutes, knees dropped out to sides, arms at sides.",
+        "body_alignment": {
+          "head": "Neutral on floor, looking up",
+          "shoulders": "Flat on floor, relaxed",
+          "spine": "Neutral against floor",
+          "hips": "On floor, relaxed",
+          "knees": "Dropped out to sides, creating diamond shape with legs",
+          "feet": "Soles together, heels pulled close to glutes"
+        },
+        "foot_position": "Soles pressed together, heels as close to glutes as mobility allows"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Drive through outer edges of feet to lift hips off ground, squeezing glutes",
+          "cues": [
+            "Squeeze your glutes hard",
+            "Push through the outside edges of your feet",
+            "Lift hips toward ceiling",
+            "Tuck your tailbone slightly",
+            "Really focus on that glute squeeze"
+          ],
+          "end_position": "Hips lifted as high as possible, glutes maximally contracted, body in straight line"
+        },
+        "eccentric_phase": {
+          "description": "Lower hips back to ground with control",
+          "cues": [
+            "Control the descent",
+            "Maintain glute tension",
+            "Touch down lightly or hover"
+          ],
+          "end_position": "Hips touching ground lightly or hovering just above"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on the lift (concentric), inhale on the descent (eccentric)",
+        "alternative": "Continuous rhythmic breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "1-2-1-0 (1 sec up, 2 sec squeeze, 1 sec down, no pause)",
+        "burn_focus": "1-3-2-0 (1 sec up, 3 sec squeeze, 2 sec down, no pause)",
+        "pump_focus": "Quick controlled pumps with constant tension"
+      },
+      "range_of_motion": {
+        "full": "Hips lift from floor to maximum height achievable with glute contraction",
+        "critical_point": "Full hip extension with maximum glute squeeze at top",
+        "avoid": "Hyperextending lower back"
+      },
+      "form_cues": [
+        "Think about squeezing your glutes like you're trying to crack a walnut between them",
+        "The frog-leg position puts your glutes in a shortened position for maximum contraction",
+        "Push through the outer edges of your feet, not your heels",
+        "This is all about the squeeze at the top - hold it",
+        "Keep your core engaged to protect your lower back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hyperextending the lower back",
+          "correction": "Focus on glute squeeze, tuck tailbone, keep ribs down",
+          "why_it_matters": "Reduces glute activation and can strain lower back"
+        },
+        {
+          "mistake": "Not squeezing glutes maximally",
+          "correction": "This exercise is all about the squeeze - really focus on contracting",
+          "why_it_matters": "Without maximal contraction, you miss the whole point"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Pause and squeeze at the top of each rep",
+          "why_it_matters": "Moving too fast reduces time under tension"
+        },
+        {
+          "mistake": "Feet too far from glutes",
+          "correction": "Pull heels as close to glutes as comfortable",
+          "why_it_matters": "Closer feet increase glute activation"
+        },
+        {
+          "mistake": "Not maintaining frog position",
+          "correction": "Keep knees out to sides throughout entire set",
+          "why_it_matters": "Knees coming together reduces glute medius activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Smaller Range Frog Pump",
+            "description": "Reduce range of motion initially",
+            "when_to_use": "Building mind-muscle connection"
+          },
+          {
+            "name": "Feet Farther from Glutes",
+            "description": "Start with feet farther away if mobility is limited",
+            "when_to_use": "Those with limited hip flexibility"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Frog Pump",
+            "description": "Add weight plate or dumbbell on hips",
+            "when_to_use": "Increasing resistance once bodyweight becomes easy"
+          },
+          {
+            "name": "Banded Frog Pump",
+            "description": "Add band around knees for additional glute medius work",
+            "when_to_use": "Increasing difficulty and adding lateral glute activation"
+          },
+          {
+            "name": "Elevated Frog Pump",
+            "description": "Perform with shoulders on bench",
+            "when_to_use": "Increasing range of motion"
+          },
+          {
+            "name": "Iso-Hold Frog Pump",
+            "description": "Hold at top for extended periods (20-60 seconds)",
+            "when_to_use": "Building isometric strength and endurance"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Glute pump and burnout", "Mind-muscle connection", "Finisher exercise", "High-rep glute work"],
+        "place_in_workout": "End of workout as finisher or after main glute exercises",
+        "pairs_well_with": ["Hip Thrusts", "Squats", "RDLs", "Any glute workout"],
+        "rep_ranges": {
+          "activation": "20-30 reps",
+          "pump": "30-50 reps",
+          "burnout": "50-100+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe, low-impact exercise",
+        "Safe for most populations",
+        "Excellent during pregnancy (check with doctor)",
+        "Avoid if experiencing lower back pain",
+        "Can be performed daily"
+      ],
+      "video_explanation_script": "Frog pumps are an incredible exercise for building that mind-muscle connection with your glutes and achieving an amazing pump. Lie on your back and bring the soles of your feet together, pulling them close to your glutes. Let your knees drop out to the sides - you'll look like a frog, hence the name. From here, drive through the outer edges of your feet and squeeze your glutes to lift your hips off the ground. At the top, really focus on that squeeze - hold it for a second or two. Lower back down and repeat. The frog-leg position puts your glutes in a shortened position, allowing for maximum contraction. This is perfect for high reps at the end of your workout to really finish off those glutes."
+    },
+    {
+      "exercise_id": "glute_012",
+      "exercise_name": "Deficit Reverse Lunge",
+      "muscle_group_primary": "Glutes",
+      "muscles_targeted": {
+        "primary": ["Gluteus Maximus", "Quadriceps"],
+        "secondary": ["Hamstrings", "Adductors", "Gluteus Medius"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Lunge Variation",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Platform or Weight Plates (2-4 inches high)"],
+        "optional": ["Dumbbells", "Barbell", "Kettlebells"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand on an elevated platform (2-4 inches high) with feet hip-width apart, arms at sides or holding weights.",
+        "key_points": [
+          "Platform should be stable and secure",
+          "2-4 inch elevation is standard",
+          "Stand with full foot on platform"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright on elevated platform, feet hip-width apart, chest up, core engaged.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Level, square",
+          "knees": "Soft, not locked",
+          "feet": "Hip-width on platform"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Step one leg back off platform, lowering back knee toward ground behind platform",
+          "cues": [
+            "Step back with control",
+            "Lower your back knee down",
+            "Keep front shin vertical",
+            "Feel the stretch in your front glute",
+            "Maintain upright torso"
+          ],
+          "end_position": "Back leg extended behind platform with knee near ground, front leg on platform with knee bent, deep lunge position"
+        },
+        "concentric_phase": {
+          "description": "Drive through front heel to return to standing position on platform",
+          "cues": [
+            "Push through your front heel",
+            "Drive your hips forward",
+            "Squeeze your glute at the top",
+            "Bring back foot to platform",
+            "Stand tall"
+          ],
+          "end_position": "Standing upright on platform with both feet together"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on the descent, exhale on the drive up",
+        "alternative": "Brace at top, hold breath during descent and initial ascent"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec step back and down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "Back knee lowers to just above ground, front leg achieves deep knee bend",
+        "critical_point": "Deficit allows for greater range of motion and stretch than regular reverse lunge",
+        "avoid": "Excessive forward lean or losing balance"
+      },
+      "form_cues": [
+        "The elevation gives you extra range of motion - use it",
+        "Keep your torso upright throughout",
+        "Think about dropping your back knee straight down",
+        "All the work should come from your front leg",
+        "You should feel a deep stretch in your front glute at the bottom"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Leaning forward excessively",
+          "correction": "Maintain upright torso, slight forward lean acceptable",
+          "why_it_matters": "Excessive lean reduces glute activation"
+        },
+        {
+          "mistake": "Front knee drifting forward over toes",
+          "correction": "Keep front shin more vertical, sit back into hip",
+          "why_it_matters": "Excessive knee travel increases knee stress and reduces glute emphasis"
+        },
+        {
+          "mistake": "Pushing off back leg",
+          "correction": "Use back leg only for light balance, drive entirely from front leg",
+          "why_it_matters": "Reduces training stimulus on working leg"
+        },
+        {
+          "mistake": "Not using full range of motion",
+          "correction": "Take advantage of the deficit, lower back knee fully",
+          "why_it_matters": "Defeats the purpose of the elevation"
+        },
+        {
+          "mistake": "Losing balance",
+          "correction": "Start with smaller deficit, progress gradually, use lighter weight",
+          "why_it_matters": "Indicates need to build stability first"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Regular Reverse Lunge",
+            "description": "Perform from ground level without deficit",
+            "when_to_use": "Learning movement pattern before adding deficit"
+          },
+          {
+            "name": "Smaller Deficit (1-2 inches)",
+            "description": "Use lower elevation initially",
+            "when_to_use": "Building up to full deficit gradually"
+          },
+          {
+            "name": "Assisted Deficit Reverse Lunge",
+            "description": "Hold onto support for balance",
+            "when_to_use": "Learning to manage the increased range of motion"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Deficit Reverse Lunge",
+            "description": "Hold dumbbells at sides",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Deficit Reverse Lunge",
+            "description": "Barbell across back",
+            "when_to_use": "Advanced loading option"
+          },
+          {
+            "name": "Greater Deficit (4-6 inches)",
+            "description": "Increase platform height",
+            "when_to_use": "Advanced, with excellent mobility and stability"
+          },
+          {
+            "name": "Deficit Reverse Lunge with Pulse",
+            "description": "Add small pulse at bottom before returning",
+            "when_to_use": "Increasing time under tension and difficulty"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Increased glute stretch and activation", "Building unilateral leg strength", "Improving mobility and range of motion"],
+        "place_in_workout": "Mid-workout as primary or secondary leg exercise",
+        "pairs_well_with": ["Hip Thrusts", "RDLs", "Step-Ups"],
+        "rep_ranges": {
+          "strength": "6-10 reps per leg",
+          "hypertrophy": "10-15 reps per leg",
+          "endurance": "15-20 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Ensure platform is stable and secure",
+        "Master regular reverse lunge before adding deficit",
+        "Start with smaller deficit and progress gradually",
+        "Use lighter weights initially to manage balance",
+        "Stop if experiencing knee pain"
+      ],
+      "video_explanation_script": "The deficit reverse lunge is an advanced variation that takes the regular reverse lunge to the next level. Stand on an elevated platform - 2 to 4 inches high. From here, step one leg back off the platform and lower your back knee toward the ground. The elevation allows you to get a much deeper range of motion and a better stretch in your front glute. Keep your torso upright and your front shin relatively vertical. Then drive through your front heel to return to standing on the platform, squeezing your glute at the top. This increased range of motion makes the deficit reverse lunge one of the best exercises for building powerful glutes."
+    }
+  ]
+}

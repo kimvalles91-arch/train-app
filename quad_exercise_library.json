@@ -1,0 +1,1999 @@
+{
+  "muscle_group": "Quadriceps",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Rectus Femoris",
+        "function": "Knee extension, hip flexion",
+        "description": "Only quad muscle that crosses both hip and knee joints, runs down the center of the thigh"
+      },
+      {
+        "name": "Vastus Lateralis",
+        "function": "Knee extension",
+        "description": "Largest quad muscle, located on outer thigh, gives 'sweep' appearance"
+      },
+      {
+        "name": "Vastus Medialis",
+        "function": "Knee extension, knee stability",
+        "description": "Inner thigh quad muscle, VMO (oblique portion) important for knee health and 'teardrop' shape"
+      },
+      {
+        "name": "Vastus Intermedius",
+        "function": "Knee extension",
+        "description": "Deepest quad muscle, lies beneath rectus femoris"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "quad_001",
+      "exercise_name": "Barbell Back Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps", "Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Adductors", "Erector Spinae"],
+        "stabilizers": ["Core", "Upper Back", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Squat Rack"],
+        "optional": ["Weight Plates", "Lifting Belt", "Knee Sleeves", "Squat Shoes"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Set barbell in squat rack at upper chest height. Step under bar and position on upper traps (high bar) or rear delts (low bar).",
+        "key_points": [
+          "Bar height should allow you to unrack without going on toes",
+          "High bar placement is more quad-dominant, low bar more hip-dominant",
+          "Grip width depends on shoulder mobility and bar placement"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with barbell across upper back, feet shoulder to hip-width apart, toes slightly out, core braced.",
+        "body_alignment": {
+          "head": "Neutral, looking forward and slightly down",
+          "shoulders": "Retracted, creating shelf for bar",
+          "spine": "Neutral from head to tailbone",
+          "hips": "Neutral, level",
+          "knees": "Soft, not locked",
+          "feet": "Shoulder to hip-width, toes out 5-30 degrees",
+          "weight_distribution": "Through mid-foot"
+        },
+        "bar_position": "High bar: top of traps; Low bar: rear delts/upper back"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Initiate descent by simultaneously pushing hips back and bending knees, lowering with control",
+          "cues": [
+            "Break at hips and knees together",
+            "Keep chest up",
+            "Push knees out tracking over toes",
+            "Maintain neutral spine",
+            "Control the descent",
+            "Keep bar path vertical over mid-foot"
+          ],
+          "end_position": "Hips below knee level (depth dependent on mobility and goals), thighs at or below parallel, weight through mid-foot"
+        },
+        "concentric_phase": {
+          "description": "Drive through entire foot to stand back up, maintaining bar path",
+          "cues": [
+            "Drive through the floor",
+            "Push knees out",
+            "Keep chest up",
+            "Squeeze glutes at top",
+            "Maintain core brace",
+            "Stand fully upright"
+          ],
+          "end_position": "Standing fully erect with hips and knees extended, bar over mid-foot"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath and brace at top, hold breath during descent and initial ascent, exhale at top",
+        "alternative": "Valsalva maneuver for heavy loads"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "Hips descend below knee level while maintaining neutral spine",
+        "critical_point": "Depth where form can be maintained; at minimum, thighs parallel to ground",
+        "avoid": "Buttwink (posterior pelvic tilt) or excessive forward lean"
+      },
+      "form_cues": [
+        "Imagine sitting back into a chair",
+        "Spread the floor with your feet",
+        "Keep your chest proud throughout",
+        "Think about driving your traps into the bar",
+        "The bar should move in a straight vertical line"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Knees caving inward (valgus)",
+          "correction": "Actively push knees out in line with toes throughout movement",
+          "why_it_matters": "Knee valgus increases injury risk and reduces power output"
+        },
+        {
+          "mistake": "Heels coming off ground",
+          "correction": "Keep weight through mid-foot to heel, may need ankle mobility work or heel elevation",
+          "why_it_matters": "Losing heel contact reduces stability and shifts load forward"
+        },
+        {
+          "mistake": "Excessive forward lean",
+          "correction": "Keep more upright torso (especially for high bar), work on ankle and hip mobility",
+          "why_it_matters": "Excessive lean increases back strain and reduces quad emphasis"
+        },
+        {
+          "mistake": "Buttwink at bottom",
+          "correction": "Only descend as far as you can maintain neutral spine, work on mobility",
+          "why_it_matters": "Spinal flexion under load increases injury risk"
+        },
+        {
+          "mistake": "Not hitting depth",
+          "correction": "Descend until thighs are at least parallel, film yourself to check",
+          "why_it_matters": "Partial squats limit development and strength gains"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Goblet Squat",
+            "description": "Hold dumbbell or kettlebell at chest",
+            "when_to_use": "Learning squat pattern before loading spine"
+          },
+          {
+            "name": "Box Squat",
+            "description": "Squat to a box to control depth",
+            "when_to_use": "Learning depth control and hip hinge"
+          },
+          {
+            "name": "Safety Bar Squat",
+            "description": "Use specialty bar with padded yoke",
+            "when_to_use": "Shoulder mobility limitations or learning upright positioning"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Squat",
+            "description": "Pause 2-3 seconds at bottom",
+            "when_to_use": "Building strength out of the hole, improving control"
+          },
+          {
+            "name": "Tempo Squat",
+            "description": "Slow eccentric (4-5 seconds down)",
+            "when_to_use": "Hypertrophy focus, improving technique"
+          },
+          {
+            "name": "Pin Squat",
+            "description": "Squat from dead stop on safety pins",
+            "when_to_use": "Building explosive strength from bottom position"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall leg development", "Building strength and mass", "Athletic performance", "Functional strength"],
+        "place_in_workout": "Early workout as primary movement",
+        "pairs_well_with": ["RDLs", "Leg Curls", "Calf Raises"],
+        "rep_ranges": {
+          "strength": "1-5 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Always use safety bars or spotters for heavy loads",
+        "Master bodyweight and goblet squat before loading barbell",
+        "Progress weight gradually",
+        "Avoid if experiencing knee or back pain without clearance",
+        "Use lifting belt for heavy loads"
+      ],
+      "video_explanation_script": "The barbell back squat is the king of leg exercises. Set the bar on your upper traps for high bar or your rear delts for low bar. Unrack the bar and step back with feet about shoulder-width apart, toes slightly out. Take a deep breath, brace your core hard, and begin by breaking at your hips and knees simultaneously. Descend with control, pushing your knees out and keeping your chest up. Go down until your thighs are at least parallel to the ground, deeper if you can maintain good form. Then drive through the entire foot to stand back up, keeping that bar path vertical. The squat builds strength, power, and muscle like nothing else."
+    },
+    {
+      "exercise_id": "quad_002",
+      "exercise_name": "Front Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps"],
+        "secondary": ["Gluteus Maximus", "Erector Spinae", "Upper Back"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Shoulders"]
+      },
+      "movement_pattern": "Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Squat Rack"],
+        "optional": ["Weight Plates", "Lifting Belt", "Wrist Wraps", "Squat Shoes"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Set barbell in rack at shoulder height. Position bar across front of shoulders resting on delts.",
+        "key_points": [
+          "Bar rests on front deltoids, not in hands",
+          "Elbows should be high, pointing forward",
+          "Choose clean grip or cross-arm grip based on mobility"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with barbell across front shoulders, elbows high, feet shoulder-width apart, torso more upright than back squat.",
+        "body_alignment": {
+          "head": "Neutral, looking straight ahead",
+          "shoulders": "Rounded forward slightly, supporting bar",
+          "elbows": "High, pointing forward, parallel to ground",
+          "spine": "Neutral, very upright torso",
+          "hips": "Neutral, level",
+          "knees": "Soft, not locked",
+          "feet": "Shoulder-width, toes out 5-15 degrees"
+        },
+        "bar_position": "Resting on front deltoids, fingers support from underneath (clean grip) or arms crossed holding bar (cross-arm grip)"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Descend by bending knees forward while maintaining very upright torso",
+          "cues": [
+            "Keep elbows high - don't let them drop",
+            "Stay upright, chest up",
+            "Push knees forward and out",
+            "Maintain vertical torso",
+            "Control the descent"
+          ],
+          "end_position": "Deep squat position with thighs below parallel, extremely upright torso, elbows still high"
+        },
+        "concentric_phase": {
+          "description": "Drive through entire foot to stand, leading with elbows up",
+          "cues": [
+            "Drive elbows up and forward",
+            "Push through the floor",
+            "Keep torso vertical",
+            "Stand fully upright",
+            "Don't let bar roll forward"
+          ],
+          "end_position": "Standing fully erect, bar still on front shoulders, elbows high"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath and brace at top, hold during descent and ascent, exhale at top",
+        "alternative": "Rebreathe at top between reps"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "Hips descend below knee level, thighs below parallel",
+        "critical_point": "Depth achieved while maintaining upright torso and high elbows",
+        "avoid": "Elbows dropping or torso collapsing forward"
+      },
+      "form_cues": [
+        "Think about keeping your elbows pointed at the wall in front of you",
+        "The bar position forces you to stay upright - use that",
+        "Imagine someone is pulling your elbows up with a string",
+        "Push your knees forward more than in a back squat",
+        "Keep your abs braced like you're about to be punched"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Elbows dropping during descent",
+          "correction": "Focus on keeping elbows high throughout, may need to reduce weight",
+          "why_it_matters": "Dropped elbows cause bar to roll forward and torso to collapse"
+        },
+        {
+          "mistake": "Torso leaning forward",
+          "correction": "Maintain extremely upright torso, may need ankle mobility work",
+          "why_it_matters": "Forward lean causes bar to roll off shoulders"
+        },
+        {
+          "mistake": "Poor wrist mobility causing discomfort",
+          "correction": "Use cross-arm grip or work on wrist flexibility, consider wrist wraps",
+          "why_it_matters": "Discomfort prevents proper loading and progression"
+        },
+        {
+          "mistake": "Knees not tracking forward enough",
+          "correction": "Allow knees to travel forward more than back squat, work on ankle mobility",
+          "why_it_matters": "Inadequate knee travel prevents depth with upright posture"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Front squats typically use 80-85% of back squat weight",
+          "why_it_matters": "Ego loading leads to form breakdown"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Goblet Squat",
+            "description": "Hold dumbbell or kettlebell at chest",
+            "when_to_use": "Learning front-loaded squat pattern"
+          },
+          {
+            "name": "Cross-Arm Front Squat",
+            "description": "Use cross-arm grip instead of clean grip",
+            "when_to_use": "Limited wrist mobility or learning movement"
+          },
+          {
+            "name": "Zombie Front Squat",
+            "description": "Arms extended forward, no hands on bar",
+            "when_to_use": "Teaching extreme upright position (use very light weight)"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Front Squat",
+            "description": "Pause 2-3 seconds at bottom",
+            "when_to_use": "Building bottom position strength"
+          },
+          {
+            "name": "Tempo Front Squat",
+            "description": "Slow 4-5 second eccentric",
+            "when_to_use": "Hypertrophy focus, technique refinement"
+          },
+          {
+            "name": "Front Squat with Chains/Bands",
+            "description": "Add accommodating resistance",
+            "when_to_use": "Advanced strength development"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Maximum quad emphasis", "Building upright squat pattern", "Olympic lifting preparation", "Anterior core strength"],
+        "place_in_workout": "Early workout as primary movement",
+        "pairs_well_with": ["RDLs", "Hamstring Curls", "Back Extensions"],
+        "rep_ranges": {
+          "strength": "2-5 reps",
+          "hypertrophy": "6-10 reps",
+          "technique": "3-6 reps"
+        }
+      },
+      "safety_considerations": [
+        "Easier to bail safely than back squat (drop bar forward)",
+        "Use safety bars in rack",
+        "Requires good thoracic and ankle mobility",
+        "Start lighter than back squat",
+        "May cause wrist discomfort initially"
+      ],
+      "video_explanation_script": "The front squat is the ultimate quad builder. Set the bar on your front shoulders - it should rest on your delts, not in your hands. Keep your elbows high, pointing forward. From here, descend by bending your knees forward and out while staying extremely upright. The bar position forces you to maintain perfect posture. Go down until your thighs are below parallel. Then drive through your feet, leading with your elbows high, to stand back up. The key is keeping those elbows up throughout - if they drop, the bar will roll forward. Front squats hammer your quads harder than almost any other exercise while building incredible core strength."
+    },
+    {
+      "exercise_id": "quad_003",
+      "exercise_name": "Leg Press",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps", "Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Adductors"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Leg Press",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Leg Press Machine"],
+        "optional": ["Weight Plates"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit in leg press machine with back flat against pad, feet on platform at shoulder-width.",
+        "key_points": [
+          "Foot placement determines emphasis: higher = more glutes/hams, lower = more quads",
+          "Back and hips should remain flat against pads throughout",
+          "Adjust seat so knees start at 90 degrees or less"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated in leg press with back against pad, feet on platform shoulder-width apart, knees bent at 90 degrees or less.",
+        "body_alignment": {
+          "head": "Neutral against headrest",
+          "shoulders": "Flat against back pad",
+          "spine": "Neutral, full contact with back pad",
+          "hips": "Fully seated, flat against pad",
+          "knees": "Bent at 90 degrees or slightly more",
+          "feet": "Shoulder-width on platform, mid-foot pressure"
+        },
+        "foot_position": "Mid-platform for balanced quad/glute, lower for more quad emphasis"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Push through entire foot to extend legs and drive platform away",
+          "cues": [
+            "Push through your heels and mid-foot",
+            "Drive the platform away",
+            "Keep back flat against pad",
+            "Don't lock out knees completely",
+            "Maintain even pressure through both legs"
+          ],
+          "end_position": "Legs extended with slight bend in knees, weight still engaged"
+        },
+        "eccentric_phase": {
+          "description": "Lower platform with control by bending knees toward chest",
+          "cues": [
+            "Control the descent",
+            "Bring knees toward chest",
+            "Keep back flat - don't let hips roll",
+            "Go as deep as you can without hips lifting",
+            "Maintain tension throughout"
+          ],
+          "end_position": "Knees bent deeply, as far as mobility allows without hips rolling off pad"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during press up",
+        "alternative": "Brace and hold for heavy loads"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full knee extension to maximum knee flexion without hips rolling",
+        "critical_point": "Depth where hips stay flat on pad - typically 90 degrees or more knee bend",
+        "avoid": "Hips rolling off pad (buttwink) or locking knees at top"
+      },
+      "form_cues": [
+        "Imagine pushing the earth away from you",
+        "Keep your lower back glued to the pad",
+        "Push through your whole foot, not just your toes",
+        "The deeper you go, the more quad activation (to a point)",
+        "Keep your core engaged throughout"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips rolling off pad at bottom",
+          "correction": "Only go as deep as you can while keeping hips flat on pad",
+          "why_it_matters": "Hip roll places excessive stress on lower back"
+        },
+        {
+          "mistake": "Locking out knees at top",
+          "correction": "Stop just short of lockout, maintaining tension",
+          "why_it_matters": "Full lockout places stress on knee joints and removes muscle tension"
+        },
+        {
+          "mistake": "Feet too close together",
+          "correction": "Use shoulder-width or slightly wider stance",
+          "why_it_matters": "Narrow stance limits ROM and reduces stability"
+        },
+        {
+          "mistake": "Pushing through toes only",
+          "correction": "Drive through entire foot with emphasis on heels/mid-foot",
+          "why_it_matters": "Toe-dominant push reduces quad activation and increases knee stress"
+        },
+        {
+          "mistake": "Uneven leg pressing",
+          "correction": "Focus on even pressure through both legs, reduce weight if needed",
+          "why_it_matters": "Compensations can develop imbalances and asymmetries"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Leg Leg Press",
+            "description": "Press with one leg at a time",
+            "when_to_use": "Addressing imbalances or as regression to work each leg"
+          },
+          {
+            "name": "Reduced Range Leg Press",
+            "description": "Use smaller range of motion initially",
+            "when_to_use": "Building strength or working around mobility limitations"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Leg Press",
+            "description": "Pause 2-3 seconds at bottom position",
+            "when_to_use": "Increasing difficulty and time under tension"
+          },
+          {
+            "name": "One-and-a-Half Rep Leg Press",
+            "description": "Full rep down, half up, back down, then full up = 1 rep",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Feet-High Leg Press",
+            "description": "Place feet higher on platform",
+            "when_to_use": "Emphasizing glutes and hamstrings more"
+          },
+          {
+            "name": "Feet-Low Leg Press",
+            "description": "Place feet lower on platform",
+            "when_to_use": "Maximum quad emphasis"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Quad and glute hypertrophy", "Safe heavy loading", "Training around back issues", "High-volume leg work"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["RDLs", "Leg Curls", "Leg Extensions"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Don't let hips roll off pad to avoid back strain",
+        "Keep safety catches engaged",
+        "Easier to train around back issues than squats",
+        "Can handle heavy loads safely"
+      ],
+      "video_explanation_script": "The leg press is a fantastic exercise for building quad and glute size safely. Sit in the machine with your back flat against the pad and feet on the platform about shoulder-width apart. From here, push through your entire foot to press the platform away, stopping just short of locking your knees. Then control the weight back down, bringing your knees toward your chest. The critical thing is to only go as deep as you can while keeping your hips flat against the pad. If your hips start to roll off the pad, you've gone too far. The leg press lets you load heavy and really focus on the muscle without worrying about balance or stabilization."
+    },
+    {
+      "exercise_id": "quad_004",
+      "exercise_name": "Leg Extension",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps (all four heads)"],
+        "secondary": [],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Knee Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Leg Extension Machine"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit in leg extension machine, back against pad, adjust shin pad to rest on lower shins just above ankles.",
+        "key_points": [
+          "Knee joint should align with machine's pivot point",
+          "Shin pad should rest comfortably on lower shins",
+          "Back should be fully supported against back pad"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated in machine with back against pad, knees bent at 90 degrees or slightly more, shin pad against lower shins.",
+        "body_alignment": {
+          "head": "Neutral against headrest",
+          "shoulders": "Relaxed against back pad",
+          "spine": "Neutral, full contact with back pad",
+          "hips": "Fully seated, secured under thigh pad if present",
+          "knees": "Bent at 90+ degrees, aligned with machine pivot",
+          "lower_legs": "Shin pad just above ankles"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Extend legs by contracting quads to raise shin pad upward",
+          "cues": [
+            "Squeeze your quads hard",
+            "Extend your knees fully",
+            "Point your toes up or forward",
+            "Control the movement, don't kick",
+            "Pause and squeeze at the top"
+          ],
+          "end_position": "Legs fully extended, knees locked, quads maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower weight with control back to starting position",
+          "cues": [
+            "Control the descent",
+            "Don't let the weight drop",
+            "Maintain tension in quads",
+            "Full range back to start"
+          ],
+          "end_position": "Return to starting position with knees bent at 90+ degrees"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during extension (concentric), inhale during descent (eccentric)",
+        "alternative": "Continuous rhythmic breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "burn_focus": "1-3-1-0 (1 sec up, 3 sec squeeze, 1 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From 90+ degree knee bend to full extension",
+        "critical_point": "Full knee extension with strong contraction at top",
+        "avoid": "Partial range of motion or using momentum"
+      },
+      "form_cues": [
+        "Think about kicking your toes to the ceiling",
+        "Squeeze your quads as hard as possible at the top",
+        "This is about muscle contraction, not moving weight quickly",
+        "Keep your back pressed against the pad",
+        "Focus on feeling the muscle work throughout"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using momentum or swinging weight",
+          "correction": "Use controlled tempo, reduce weight if needed",
+          "why_it_matters": "Momentum reduces muscle tension and effectiveness"
+        },
+        {
+          "mistake": "Not achieving full extension",
+          "correction": "Lock out knees completely at top, squeeze quads hard",
+          "why_it_matters": "Partial ROM limits quad development, especially VMO"
+        },
+        {
+          "mistake": "Back coming off pad",
+          "correction": "Keep back flat against pad throughout, may need to adjust seat",
+          "why_it_matters": "Back leaving pad indicates too much weight or poor positioning"
+        },
+        {
+          "mistake": "Dropping weight too quickly",
+          "correction": "Control eccentric phase, take 2-3 seconds to lower",
+          "why_it_matters": "Eccentric phase is critical for hypertrophy"
+        },
+        {
+          "mistake": "Feet turned out excessively",
+          "correction": "Keep toes pointing forward or slightly up",
+          "why_it_matters": "Excessive foot angle can stress knee joint"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Leg Extension",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Addressing imbalances or as lighter variation"
+          },
+          {
+            "name": "Partial Range Extension",
+            "description": "Use smaller ROM initially",
+            "when_to_use": "Knee rehab or cautious progression"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Iso-Hold Leg Extension",
+            "description": "Hold at full extension for 10-30 seconds",
+            "when_to_use": "Strengthening VMO, increasing intensity"
+          },
+          {
+            "name": "1.5 Rep Leg Extension",
+            "description": "Full extension, halfway down, back to full, all the way down = 1 rep",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Drop Set Leg Extension",
+            "description": "Immediate weight reduction and continued reps to failure",
+            "when_to_use": "Advanced hypertrophy technique"
+          },
+          {
+            "name": "Eccentric-Emphasized Extension",
+            "description": "4-6 second eccentric phase",
+            "when_to_use": "Maximizing hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Quad isolation and definition", "VMO development", "Finishing exercise after compounds", "Rehab and prehab"],
+        "place_in_workout": "After compound movements as isolation work",
+        "pairs_well_with": ["Squats", "Leg Press", "Lunges"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-20 reps",
+          "endurance": "20-30+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Controversial exercise - some avoid due to knee shear forces",
+        "Generally safe when performed with control and proper form",
+        "Avoid if experiencing acute knee pain",
+        "Start with lighter weight to assess tolerance",
+        "Excellent for quad isolation and VMO development when done properly"
+      ],
+      "video_explanation_script": "The leg extension is the ultimate quad isolation exercise. Sit in the machine with your back flat against the pad and adjust the shin pad so it sits comfortably just above your ankles. From here, squeeze your quads to extend your legs, bringing the pad up until your knees are fully locked out. Really focus on that squeeze at the top - this is where the magic happens. Then control the weight back down. Don't just let it drop. This exercise is all about the mind-muscle connection and really feeling your quads work. While it gets some criticism, when performed with control and good form, it's fantastic for building quad size and strength, especially that teardrop VMO muscle."
+    },
+    {
+      "exercise_id": "quad_005",
+      "exercise_name": "Goblet Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps", "Gluteus Maximus"],
+        "secondary": ["Adductors", "Hamstrings", "Erector Spinae"],
+        "stabilizers": ["Core", "Upper Back", "Shoulders"]
+      },
+      "movement_pattern": "Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbell or Kettlebell"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Hold dumbbell or kettlebell vertically at chest level with both hands, feet shoulder-width apart.",
+        "key_points": [
+          "Hold weight close to chest, elbows pointing down",
+          "Feet shoulder to slightly wider than shoulder-width",
+          "Toes pointed slightly out"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright holding weight at chest, feet shoulder-width apart, elbows pointing down, core engaged.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "elbows": "Pointing straight down, tucked close to body",
+          "spine": "Neutral, upright torso",
+          "hips": "Neutral, level",
+          "knees": "Soft, not locked",
+          "feet": "Shoulder-width or slightly wider, toes out 10-30 degrees"
+        },
+        "weight_position": "Held vertically at chest, close to body, cupped in hands"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Descend by simultaneously pushing hips back and bending knees",
+          "cues": [
+            "Keep the weight close to your chest",
+            "Sit back and down between your legs",
+            "Push knees out",
+            "Keep elbows inside your knees",
+            "Stay upright, chest proud"
+          ],
+          "end_position": "Deep squat with elbows inside knees, weight at chest, upright torso"
+        },
+        "concentric_phase": {
+          "description": "Drive through entire foot to return to standing",
+          "cues": [
+            "Push through the floor",
+            "Drive knees out",
+            "Keep chest up",
+            "Squeeze glutes at top",
+            "Stand fully upright"
+          ],
+          "end_position": "Standing fully erect with weight still at chest"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace at top, hold during descent, exhale on the way up",
+        "alternative": "Continuous breathing for lighter weights"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "learning_focus": "3-2-2-1 (3 sec down, 2 sec pause, 2 sec up, 1 sec reset)"
+      },
+      "range_of_motion": {
+        "full": "Hips descend below knee level, elbows reach inside knees",
+        "critical_point": "Depth where elbows can fit inside knees while maintaining upright torso",
+        "avoid": "Excessive forward lean or losing neutral spine"
+      },
+      "form_cues": [
+        "The weight acts as a counterbalance helping you stay upright",
+        "Think about sitting down between your legs, not back",
+        "Use your elbows to push your knees out at the bottom",
+        "Keep that weight glued to your chest",
+        "Imagine a string pulling you up from your chest"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Weight drifting away from chest",
+          "correction": "Keep weight tight to chest throughout entire movement",
+          "why_it_matters": "Weight drifting forward causes torso to lean and reduces stability"
+        },
+        {
+          "mistake": "Knees caving inward",
+          "correction": "Actively push knees out, use elbows to push knees wider at bottom",
+          "why_it_matters": "Knee valgus reduces power and increases injury risk"
+        },
+        {
+          "mistake": "Heels lifting off ground",
+          "correction": "Keep weight through mid-foot to heel throughout, work on ankle mobility",
+          "why_it_matters": "Losing heel contact reduces stability and power"
+        },
+        {
+          "mistake": "Not squatting deep enough",
+          "correction": "Descend until elbows reach inside of knees",
+          "why_it_matters": "Partial depth limits development and mobility gains"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Control tempo, this is a learning exercise",
+          "why_it_matters": "Moving too fast prevents technique development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Squat",
+            "description": "Perform squat pattern without weight",
+            "when_to_use": "Absolute beginners learning squat pattern"
+          },
+          {
+            "name": "Box Goblet Squat",
+            "description": "Squat to a box to control depth",
+            "when_to_use": "Learning depth control"
+          },
+          {
+            "name": "Goblet Squat Hold",
+            "description": "Hold bottom position for time",
+            "when_to_use": "Building mobility and position awareness"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavier Goblet Squat",
+            "description": "Progress to heavier dumbbells or kettlebells",
+            "when_to_use": "Standard progression when form is solid"
+          },
+          {
+            "name": "Tempo Goblet Squat",
+            "description": "Slow 5-second eccentric",
+            "when_to_use": "Increasing difficulty without heavier weight"
+          },
+          {
+            "name": "Pause Goblet Squat",
+            "description": "Pause 3-5 seconds at bottom",
+            "when_to_use": "Building bottom position strength"
+          },
+          {
+            "name": "Barbell Front Squat",
+            "description": "Progress to barbell once goblet is mastered",
+            "when_to_use": "Natural progression to heavier loads"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Learning squat pattern", "Quad development for beginners", "Teaching upright squat torso", "Warm-up"],
+        "place_in_workout": "Early workout for beginners, or as warm-up for advanced",
+        "pairs_well_with": ["RDLs", "Lunges", "Planks"],
+        "rep_ranges": {
+          "technique": "5-8 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "One of the safest squat variations",
+        "Perfect for beginners and teaching",
+        "Easy to bail safely by dropping weight forward",
+        "Limited by front delt and arm fatigue before leg fatigue",
+        "Excellent for all fitness levels"
+      ],
+      "video_explanation_script": "The goblet squat is the best exercise for learning how to squat properly. Hold a dumbbell or kettlebell vertically at your chest with both hands, keeping it close to your body. Stand with feet about shoulder-width apart. From here, descend by sitting back and down, pushing your knees out. The weight in front acts as a counterbalance, helping you stay upright. Go down until your elbows reach the inside of your knees - you can even use your elbows to gently push your knees out for extra depth. Then drive through your feet to stand back up. The goblet squat teaches perfect squat mechanics and is fantastic for building leg strength at any level."
+    },
+    {
+      "exercise_id": "quad_006",
+      "exercise_name": "Hack Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps"],
+        "secondary": ["Gluteus Maximus", "Adductors"],
+        "stabilizers": ["Core", "Erector Spinae"]
+      },
+      "movement_pattern": "Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Hack Squat Machine"],
+        "optional": ["Weight Plates"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Step into hack squat machine, position shoulders under pads, back against pad, feet on platform shoulder-width apart.",
+        "key_points": [
+          "Back should be flat against angled back pad",
+          "Feet position determines emphasis: lower = more quads, higher = more glutes",
+          "Shoulders secured under shoulder pads"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing in hack squat machine, back against pad, shoulders under pads, feet on platform shoulder-width apart, weight on safeties.",
+        "body_alignment": {
+          "head": "Neutral against headrest",
+          "shoulders": "Secured under shoulder pads",
+          "spine": "Neutral, flat against back pad",
+          "hips": "Against pad",
+          "knees": "Slightly bent, weight still on safeties",
+          "feet": "Shoulder-width on platform, mid to lower position"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Release safeties and lower weight by bending knees, descending along the machine's path",
+          "cues": [
+            "Control the descent",
+            "Push knees forward and out",
+            "Keep back flat against pad",
+            "Go deep while maintaining form",
+            "Maintain tension throughout"
+          ],
+          "end_position": "Knees bent deeply, thighs well below parallel or as deep as mobility allows"
+        },
+        "concentric_phase": {
+          "description": "Drive through entire foot to extend legs and push platform away",
+          "cues": [
+            "Push through the platform",
+            "Drive through your heels",
+            "Keep back pressed to pad",
+            "Don't lock out knees completely",
+            "Squeeze quads at top"
+          ],
+          "end_position": "Legs extended with slight bend in knees, weight still engaged"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during drive up",
+        "alternative": "Brace and hold for heavy loads"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From near knee extension to maximum knee flexion that maintains form",
+        "critical_point": "Deep knee bend while keeping back flat on pad",
+        "avoid": "Hips rolling off pad or knees caving inward"
+      },
+      "form_cues": [
+        "Think about pushing the platform down and away from you",
+        "Keep your back glued to the pad throughout",
+        "This machine is designed for deep squats - use the full range",
+        "Push through your whole foot, emphasizing heels",
+        "The angled path takes stress off your back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Back coming off the pad",
+          "correction": "Keep entire back pressed against pad, reduce weight if needed",
+          "why_it_matters": "Back leaving pad increases lower back strain"
+        },
+        {
+          "mistake": "Knees caving inward",
+          "correction": "Push knees out in line with toes throughout movement",
+          "why_it_matters": "Knee valgus increases injury risk"
+        },
+        {
+          "mistake": "Feet too low on platform",
+          "correction": "Position feet mid to slightly lower platform for quad emphasis",
+          "why_it_matters": "Extremely low foot position can stress knees excessively"
+        },
+        {
+          "mistake": "Not using full range of motion",
+          "correction": "Descend deeply, taking advantage of machine's design",
+          "why_it_matters": "Partial ROM limits quad development"
+        },
+        {
+          "mistake": "Locking out knees at top",
+          "correction": "Stop just short of lockout to maintain tension",
+          "why_it_matters": "Full lockout removes tension and stresses knee joints"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Reduced Range Hack Squat",
+            "description": "Use smaller ROM initially",
+            "when_to_use": "Building strength or managing mobility limitations"
+          },
+          {
+            "name": "Light Weight Hack Squat",
+            "description": "Focus on form with lighter loads",
+            "when_to_use": "Learning the machine and movement pattern"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pause Hack Squat",
+            "description": "Pause 2-3 seconds at bottom",
+            "when_to_use": "Increasing difficulty and time under tension"
+          },
+          {
+            "name": "Single-Leg Hack Squat",
+            "description": "Perform one leg at a time",
+            "when_to_use": "Advanced, addressing imbalances"
+          },
+          {
+            "name": "Feet-Lower Hack Squat",
+            "description": "Position feet lower on platform",
+            "when_to_use": "Maximum quad emphasis"
+          },
+          {
+            "name": "1.5 Rep Hack Squat",
+            "description": "Full down, half up, back down, full up = 1 rep",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Quad hypertrophy", "Safe heavy loading", "Deep squat pattern", "Alternative to barbell squats"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["RDLs", "Leg Curls", "Leg Extensions"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Generally very safe when used correctly",
+        "Back support reduces spinal loading",
+        "Easy to rack weight and exit safely",
+        "Good option for those with back concerns",
+        "Allows for deep, knee-flexion dominant squatting safely"
+      ],
+      "video_explanation_script": "The hack squat is a powerful machine for building massive quads. Step into the machine and position your back flat against the angled pad with your shoulders secured under the pads. Place your feet on the platform about shoulder-width apart, positioned mid to lower on the platform for maximum quad emphasis. Release the safeties and lower yourself down by bending your knees. The machine's angled path allows you to go very deep while keeping your back supported. Then drive through your heels to push the platform away, stopping just short of locking your knees. The hack squat lets you load heavy and squat deep without the balance demands of free weight squats, making it perfect for building quad size."
+    },
+    {
+      "exercise_id": "quad_007",
+      "exercise_name": "Walking Lunge",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps", "Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Adductors", "Gluteus Medius"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Lunge",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Dumbbells", "Barbell", "Kettlebells"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand upright with feet hip-width apart, weights at sides if using, clear walking path ahead.",
+        "key_points": [
+          "Need adequate space to walk forward (20+ feet ideal)",
+          "Start with bodyweight to learn pattern",
+          "Maintain upright torso throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright, feet hip-width apart, core engaged, arms at sides or holding weights.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral, upright",
+          "hips": "Level, square forward",
+          "knees": "Soft, not locked",
+          "feet": "Hip-width apart"
+        }
+      },
+      "execution": {
+        "step_forward_and_descent": {
+          "description": "Step forward with one leg, landing heel first, then lower back knee toward ground",
+          "cues": [
+            "Take a long stride forward",
+            "Land heel first, roll to forefoot",
+            "Lower back knee toward ground",
+            "Keep torso upright",
+            "Front knee tracks over ankle",
+            "Feel stretch in hip flexor of back leg"
+          ],
+          "end_position": "Front knee bent at 90 degrees, back knee hovering near ground, upright torso"
+        },
+        "step_through": {
+          "description": "Drive through front heel to bring back leg forward into next lunge",
+          "cues": [
+            "Push through front heel",
+            "Drive front knee up",
+            "Step through with back leg",
+            "Maintain momentum forward",
+            "Land in next lunge position"
+          ],
+          "end_position": "Alternate leg now in front, lowering into next lunge"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale as you lunge down, inhale as you step through",
+        "alternative": "Rhythmic continuous breathing"
+      },
+      "tempo": {
+        "standard": "Continuous fluid motion, 2 seconds per lunge",
+        "hypertrophy_focus": "Slower 3-second descent on each lunge",
+        "endurance_focus": "Quick continuous lunges maintaining control"
+      },
+      "range_of_motion": {
+        "full": "Back knee lowers to just above ground, front thigh parallel to ground",
+        "critical_point": "Adequate step length to achieve 90-degree angles in both knees",
+        "avoid": "Front knee traveling excessively over toes"
+      },
+      "form_cues": [
+        "Think about taking confident, long strides",
+        "Your torso should stay upright like you're walking normally",
+        "Land softly, don't crash down",
+        "Keep your shoulders over your hips",
+        "Drive through with power, don't just step through"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Steps too short",
+          "correction": "Take longer strides to achieve proper lunge position",
+          "why_it_matters": "Short steps prevent proper knee and hip angles"
+        },
+        {
+          "mistake": "Leaning forward excessively",
+          "correction": "Maintain upright torso throughout movement",
+          "why_it_matters": "Forward lean reduces quad activation and stresses lower back"
+        },
+        {
+          "mistake": "Front knee caving inward",
+          "correction": "Keep front knee tracking in line with toes",
+          "why_it_matters": "Knee valgus increases injury risk"
+        },
+        {
+          "mistake": "Crashing down into each lunge",
+          "correction": "Control descent, land softly",
+          "why_it_matters": "Crashing increases joint stress and reduces muscle tension"
+        },
+        {
+          "mistake": "Not using full range of motion",
+          "correction": "Lower back knee until it nearly touches ground",
+          "why_it_matters": "Partial depth limits development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Stationary Lunge",
+            "description": "Stay in place, alternating legs without walking",
+            "when_to_use": "Learning lunge pattern or limited space"
+          },
+          {
+            "name": "Split Squat",
+            "description": "Feet stay in split position, just go up and down",
+            "when_to_use": "Building base strength before dynamic movement"
+          },
+          {
+            "name": "Assisted Walking Lunge",
+            "description": "Use light hand support for balance",
+            "when_to_use": "Building balance and confidence"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Walking Lunge",
+            "description": "Hold dumbbells at sides",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Walking Lunge",
+            "description": "Barbell across back",
+            "when_to_use": "Advanced loading for strength"
+          },
+          {
+            "name": "Deficit Walking Lunge",
+            "description": "Step up onto small platform with front foot",
+            "when_to_use": "Increasing range and difficulty"
+          },
+          {
+            "name": "Walking Lunge with Twist",
+            "description": "Add torso twist toward front leg",
+            "when_to_use": "Adding core rotation work"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral leg strength", "Functional movement", "Conditioning", "Sports performance"],
+        "place_in_workout": "Mid-workout as accessory or conditioning work",
+        "pairs_well_with": ["Squats", "RDLs", "Step-Ups"],
+        "rep_ranges": {
+          "strength": "6-10 reps per leg",
+          "hypertrophy": "10-15 reps per leg",
+          "endurance": "20-30 reps per leg or distance (40-50 yards)"
+        }
+      },
+      "safety_considerations": [
+        "Requires good balance and coordination",
+        "Start with bodyweight to master pattern",
+        "Need adequate space with clear path",
+        "Can be challenging on knees - listen to your body",
+        "Very functional and sport-specific movement"
+      ],
+      "video_explanation_script": "Walking lunges are one of the most functional leg exercises you can do. Start standing upright. Take a long stride forward with one leg, landing heel first. Lower your back knee toward the ground until both knees are bent at about 90 degrees. Your front knee should be over your ankle, not past your toes. Keep your torso upright throughout. Then drive through your front heel to push yourself forward, bringing your back leg through into the next lunge. Keep walking forward, alternating legs. Walking lunges build leg strength, stability, and coordination while also getting your heart rate up. They're challenging but incredibly effective for building athletic legs."
+    },
+    {
+      "exercise_id": "quad_008",
+      "exercise_name": "Bulgarian Split Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps", "Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Adductors", "Gluteus Medius"],
+        "stabilizers": ["Core", "Hip Stabilizers", "Ankle Stabilizers"]
+      },
+      "movement_pattern": "Single-Leg Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Bench or Box (knee height)"],
+        "optional": ["Dumbbells", "Barbell", "Kettlebells"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "note": "This exercise appears in both the Glutes and Quadriceps libraries as it's highly effective for both muscle groups. Emphasis can be adjusted based on torso angle and foot position.",
+      "setup": {
+        "description": "Stand facing away from a bench with rear foot elevated on the bench, front foot planted 2-3 feet in front.",
+        "key_points": [
+          "Bench should be approximately knee height",
+          "Front foot should be far enough forward that knee doesn't pass toes excessively",
+          "Rear foot can rest on top of foot or toes"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright in a split stance with rear foot elevated on bench behind, front foot planted firmly, torso upright.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down, chest up",
+          "spine": "Neutral, slight forward lean acceptable",
+          "hips": "Square, level, facing forward",
+          "front_knee": "Slightly bent",
+          "front_foot": "Flat, weight through mid-foot to heel",
+          "rear_foot": "Elevated on bench, laces or toes down"
+        },
+        "stance_width": "Front foot 2-3 feet from bench, hip-width side to side"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower down by bending front knee and dropping rear knee toward ground",
+          "cues": [
+            "Sit back into your front hip",
+            "Keep front knee tracking over toes",
+            "Maintain upright torso",
+            "Lower under control",
+            "Feel stretch in quad and hip flexor"
+          ],
+          "end_position": "Front thigh parallel to ground or slightly below, rear knee hovering near ground"
+        },
+        "concentric_phase": {
+          "description": "Drive through front heel to return to starting position",
+          "cues": [
+            "Push through your front heel",
+            "Drive hips forward",
+            "Squeeze quad and glute at the top",
+            "Keep torso upright",
+            "Don't push off back leg"
+          ],
+          "end_position": "Standing upright with front knee soft, not locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on the descent, exhale on the drive up",
+        "alternative": "Brace at top, hold breath during descent and first part of ascent"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec squeeze)",
+        "strength_focus": "2-0-X-0 (2 sec down, no pause, explosive up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "Front thigh reaches parallel or slightly below while maintaining form",
+        "critical_point": "Depth where form can be maintained and stretch felt in quads",
+        "avoid": "Excessive forward knee travel or losing upright torso position"
+      },
+      "form_cues": [
+        "Think of this as a single-leg squat, not a lunge",
+        "The back leg is just for balance",
+        "Keep your torso relatively upright",
+        "Drive through the heel of your front foot",
+        "Imagine pushing the floor away from you"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Front foot too close to bench",
+          "correction": "Position front foot 2-3 feet from bench",
+          "why_it_matters": "Too close causes excessive forward knee travel and quad dominance"
+        },
+        {
+          "mistake": "Pushing off back leg",
+          "correction": "Use back leg only for balance, drive entirely from front leg",
+          "why_it_matters": "Reduces training stimulus on working leg"
+        },
+        {
+          "mistake": "Torso leaning too far forward",
+          "correction": "Maintain upright torso with slight forward lean acceptable",
+          "why_it_matters": "Excessive lean reduces quad activation and increases back strain"
+        },
+        {
+          "mistake": "Hips rotating or tilting",
+          "correction": "Keep hips square and level throughout movement",
+          "why_it_matters": "Hip rotation indicates instability and reduces effectiveness"
+        },
+        {
+          "mistake": "Not going deep enough",
+          "correction": "Descend until front thigh is at least parallel to ground",
+          "why_it_matters": "Partial range of motion limits quad development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Bulgarian Split Squat",
+            "description": "Perform without external load",
+            "when_to_use": "Learning movement pattern, building stability"
+          },
+          {
+            "name": "Assisted Bulgarian Split Squat",
+            "description": "Hold TRX straps or use light support for balance",
+            "when_to_use": "Improving balance while learning movement"
+          },
+          {
+            "name": "Foot-Elevated Split Squat",
+            "description": "Elevate front foot on small plate instead of rear foot",
+            "when_to_use": "Reducing stability demands"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dumbbell Bulgarian Split Squat",
+            "description": "Hold dumbbells at sides",
+            "when_to_use": "Standard progression from bodyweight"
+          },
+          {
+            "name": "Barbell Bulgarian Split Squat",
+            "description": "Barbell across back",
+            "when_to_use": "Advanced, when very strong in movement"
+          },
+          {
+            "name": "Deficit Bulgarian Split Squat",
+            "description": "Front foot on small platform for increased range",
+            "when_to_use": "Advanced, with excellent mobility"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral leg strength", "Quad and glute development", "Addressing imbalances", "Improving stability"],
+        "place_in_workout": "Mid-workout after bilateral movements",
+        "pairs_well_with": ["Squats", "RDLs", "Leg Press"],
+        "rep_ranges": {
+          "strength": "5-8 reps per leg",
+          "hypertrophy": "8-12 reps per leg",
+          "endurance": "12-20 reps per leg"
+        }
+      },
+      "safety_considerations": [
+        "Start with bodyweight to master balance",
+        "Ensure bench is stable and secure",
+        "Progress load gradually",
+        "Avoid if experiencing knee pain",
+        "May need to adjust stance based on limb lengths"
+      ],
+      "video_explanation_script": "The Bulgarian split squat is one of the best exercises for building strong quads and glutes. Set up with your rear foot elevated on a bench behind you and your front foot planted firmly 2-3 feet in front. From here, lower down by bending your front knee and dropping your rear knee toward the ground. Think of this as a single-leg squat - your back leg is just there for balance. Keep your torso upright and make sure you're driving through that front heel. At the bottom, you should feel a great stretch in your quad and hip flexor. Then drive back up through your front heel, squeezing your quad and glute at the top. All the work should be coming from that front leg."
+    },
+    {
+      "exercise_id": "quad_009",
+      "exercise_name": "Cyclist Squat (Heels Elevated Squat)",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps"],
+        "secondary": ["Gluteus Maximus"],
+        "stabilizers": ["Core", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Weight Plates or Wedge Platform", "Barbell or Dumbbells"],
+        "optional": ["Squat Rack", "Squat Shoes", "Smith Machine"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Place weight plates or wedge platform under heels, stand with heels elevated, toes on ground.",
+        "key_points": [
+          "Heel elevation typically 1-3 inches",
+          "Narrow to shoulder-width stance",
+          "Barbell on back or dumbbells at sides"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with heels elevated on plates or wedge, barbell across back or dumbbells at sides, narrow to shoulder-width stance.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down, supporting bar",
+          "spine": "Neutral, upright torso",
+          "hips": "Neutral, level",
+          "knees": "Soft, not locked",
+          "heels": "Elevated 1-3 inches",
+          "feet": "Narrow to shoulder-width, toes forward or slightly out"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Descend by bending knees forward, allowing knees to travel far over toes",
+          "cues": [
+            "Push knees forward over toes",
+            "Stay very upright",
+            "Sit straight down",
+            "Keep heels on elevation",
+            "Go as deep as possible"
+          ],
+          "end_position": "Deep squat with knees far forward, extremely upright torso, maximum quad stretch"
+        },
+        "concentric_phase": {
+          "description": "Drive through entire foot to extend knees and return to standing",
+          "cues": [
+            "Push through the elevated heels",
+            "Extend knees",
+            "Stay upright",
+            "Squeeze quads at top",
+            "Full knee extension"
+          ],
+          "end_position": "Standing fully erect with knees extended"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale and brace at top, hold during descent, exhale on ascent",
+        "alternative": "Controlled breathing for lighter loads"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause at bottom, 2 sec up, no pause)",
+        "quad_burn": "2-0-2-0 with 8-10 second holds at positions"
+      },
+      "range_of_motion": {
+        "full": "Descend as deep as mobility allows, typically hamstrings to calves",
+        "critical_point": "Maximize knee flexion and forward travel for maximum quad stretch",
+        "avoid": "Losing balance or heels coming off elevation"
+      },
+      "form_cues": [
+        "The heel elevation allows extreme knee forward travel - use it",
+        "Think about sitting straight down between your feet",
+        "Your knees will travel far over your toes - this is okay with heels elevated",
+        "Stay as upright as humanly possible",
+        "Feel the deep stretch in your quads at the bottom"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Leaning forward",
+          "correction": "Maintain extremely upright torso, use heel elevation advantage",
+          "why_it_matters": "Forward lean reduces quad emphasis and defeats purpose"
+        },
+        {
+          "mistake": "Heels coming off elevation",
+          "correction": "Keep heels firmly planted on plates/wedge throughout",
+          "why_it_matters": "Losing heel position removes the benefit of elevation"
+        },
+        {
+          "mistake": "Not allowing knees to travel forward",
+          "correction": "Let knees track far forward over toes, this is safe with elevation",
+          "why_it_matters": "Limited knee travel reduces quad emphasis"
+        },
+        {
+          "mistake": "Stance too wide",
+          "correction": "Use narrow to shoulder-width stance for maximum quad focus",
+          "why_it_matters": "Wide stance shifts emphasis to glutes and adductors"
+        },
+        {
+          "mistake": "Not squatting deep enough",
+          "correction": "Go as deep as mobility allows, maximizing knee flexion",
+          "why_it_matters": "Shallow depth limits quad stretch and activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Goblet Cyclist Squat",
+            "description": "Hold dumbbell at chest with heels elevated",
+            "when_to_use": "Learning movement with heel elevation"
+          },
+          {
+            "name": "Lower Heel Elevation",
+            "description": "Start with smaller elevation (0.5-1 inch)",
+            "when_to_use": "Building up ankle mobility and pattern"
+          },
+          {
+            "name": "Smith Machine Cyclist Squat",
+            "description": "Use Smith machine for stability",
+            "when_to_use": "Learning extreme upright position"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Higher Heel Elevation",
+            "description": "Increase elevation to 3-4 inches",
+            "when_to_use": "Maximum quad emphasis"
+          },
+          {
+            "name": "Tempo Cyclist Squat",
+            "description": "Very slow 5-second eccentric",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Cyclist Squat with Pause",
+            "description": "Pause 3-5 seconds at bottom",
+            "when_to_use": "Building bottom position strength"
+          },
+          {
+            "name": "1.5 Rep Cyclist Squat",
+            "description": "Full down, half up, back down, full up = 1 rep",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Maximum quad isolation and hypertrophy", "Building knee flexion strength", "Targeting quad lengthened position", "Cyclists and quad-dominant athletes"],
+        "place_in_workout": "Mid-workout as accessory quad work after main squats",
+        "pairs_well_with": ["RDLs", "Leg Curls", "Calf Raises"],
+        "rep_ranges": {
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-25 reps",
+          "burn_sets": "20-30+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Heel elevation is safe and actually reduces stress on knee joint",
+        "Start with lighter weight than regular squats",
+        "Ensure elevation platform is stable",
+        "Not ideal for those with existing knee issues - consult professional",
+        "Very quad-dominant - balance with posterior chain work"
+      ],
+      "video_explanation_script": "The cyclist squat, also called the heels-elevated squat, is designed for maximum quad development. Place weight plates or a wedge under your heels, elevating them 1-3 inches. Stand with a narrower stance than usual, holding a barbell or dumbbells. Now descend by pushing your knees forward, and I mean really forward - they'll travel way over your toes, and that's exactly what we want. The heel elevation makes this safe and allows for incredible quad stretch. Stay as upright as possible and go as deep as you can. Then drive back up through your elevated heels. This exercise puts your quads in an extremely lengthened position under load, making it one of the best movements for building massive quads."
+    },
+    {
+      "exercise_id": "quad_010",
+      "exercise_name": "Box Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps", "Gluteus Maximus"],
+        "secondary": ["Hamstrings", "Erector Spinae", "Adductors"],
+        "stabilizers": ["Core", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Squat",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Squat Rack", "Box or Bench"],
+        "optional": ["Weight Plates", "Lifting Belt"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Set up box or bench at desired height behind you, position barbell on back, stand in front of box.",
+        "key_points": [
+          "Box height determines depth: lower box = deeper squat",
+          "Common heights: parallel (thighs parallel when seated), below parallel",
+          "Box should be stable and not slide"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with barbell across back, feet slightly wider than shoulder-width, box positioned directly behind.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Retracted, supporting bar",
+          "spine": "Neutral",
+          "hips": "Neutral, level",
+          "knees": "Soft, not locked",
+          "feet": "Slightly wider than shoulder-width, toes out slightly"
+        },
+        "box_position": "Directly behind, allowing you to sit back onto it"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Sit back and down onto the box, maintaining tension and control",
+          "cues": [
+            "Sit back toward the box",
+            "Keep shins vertical or near-vertical",
+            "Maintain tension throughout descent",
+            "Touch box with glutes, don't collapse",
+            "Keep core braced"
+          ],
+          "end_position": "Seated on box momentarily, shins vertical, torso angle maintained, full body tension"
+        },
+        "concentric_phase": {
+          "description": "Explode up from the box by driving through entire foot",
+          "cues": [
+            "Drive through the floor",
+            "Explode off the box",
+            "Keep chest up",
+            "Extend hips and knees together",
+            "Stand to full extension"
+          ],
+          "end_position": "Standing fully upright with hips and knees extended"
+        }
+      },
+      "breathing": {
+        "pattern": "Deep breath and brace before descent, hold through descent and ascent, exhale at top",
+        "alternative": "Reset breath while on box for very heavy loads"
+      },
+      "tempo": {
+        "standard": "2-1-X-0 (2 sec down, 1 sec touch box, explosive up, no pause)",
+        "dynamic_effort": "Fast controlled descent, brief touch, maximal speed up",
+        "teaching_focus": "3-2-2-1 (3 sec down, 2 sec sit, 2 sec up, 1 sec reset)"
+      },
+      "range_of_motion": {
+        "full": "Descend until seated on box at predetermined depth",
+        "critical_point": "Box controls consistent depth every rep",
+        "avoid": "Collapsing onto box or bouncing off it"
+      },
+      "form_cues": [
+        "Think about sitting back into a chair, not down",
+        "The box is a guide, not a chair - stay tight when you touch it",
+        "Shins should be vertical or near-vertical when you sit",
+        "Explode off the box like it's on fire",
+        "This teaches you to sit back properly in your squat"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Collapsing onto the box",
+          "correction": "Maintain tension, sit down with control, touch lightly",
+          "why_it_matters": "Collapsing removes muscle tension and can cause injury"
+        },
+        {
+          "mistake": "Bouncing off the box",
+          "correction": "Brief controlled pause on box, then explosive ascent",
+          "why_it_matters": "Bouncing uses stretch reflex instead of muscle strength"
+        },
+        {
+          "mistake": "Rocking forward when rising",
+          "correction": "Keep weight balanced, drive straight up",
+          "why_it_matters": "Forward rock indicates poor weight distribution"
+        },
+        {
+          "mistake": "Knees caving inward",
+          "correction": "Push knees out throughout movement, especially when rising from box",
+          "why_it_matters": "Knee valgus increases injury risk"
+        },
+        {
+          "mistake": "Using box height as excuse for poor depth",
+          "correction": "Progress to lower box heights over time",
+          "why_it_matters": "Consistently shallow squats limit development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Bodyweight Box Squat",
+            "description": "Perform without barbell to learn pattern",
+            "when_to_use": "Teaching proper sitting back mechanics"
+          },
+          {
+            "name": "Goblet Box Squat",
+            "description": "Hold dumbbell at chest",
+            "when_to_use": "Learning before progressing to barbell"
+          },
+          {
+            "name": "Higher Box",
+            "description": "Use higher box (above parallel)",
+            "when_to_use": "Building confidence or working with limitations"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Lower Box Height",
+            "description": "Progress to lower boxes over time",
+            "when_to_use": "Improving depth gradually"
+          },
+          {
+            "name": "Wide Stance Box Squat",
+            "description": "Use wider stance for powerlifting style",
+            "when_to_use": "Powerlifting training or glute emphasis"
+          },
+          {
+            "name": "Dynamic Effort Box Squat",
+            "description": "Light weight (50-60% 1RM), maximal speed",
+            "when_to_use": "Building explosive power"
+          },
+          {
+            "name": "Accommodating Resistance Box Squat",
+            "description": "Add bands or chains",
+            "when_to_use": "Advanced strength training"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Teaching proper squat depth", "Building explosive power", "Powerlifting training", "Learning to sit back in squat"],
+        "place_in_workout": "Early workout as primary movement or teaching tool",
+        "pairs_well_with": ["RDLs", "Good Mornings", "Glute Ham Raises"],
+        "rep_ranges": {
+          "strength": "3-5 reps",
+          "power": "2-3 reps at 50-60% 1RM",
+          "teaching": "5-8 reps with lighter weight"
+        }
+      },
+      "safety_considerations": [
+        "Ensure box is stable and secure",
+        "Don't relax completely on box",
+        "Start with higher box and progress to lower",
+        "Excellent for teaching proper depth safely",
+        "Good option for those building confidence in squat depth"
+      ],
+      "video_explanation_script": "The box squat is an excellent tool for learning proper squat mechanics and building explosive power. Set up a box or bench behind you at your desired depth. With the barbell on your back, initiate the descent by sitting back toward the box, not just down. Your shins should stay relatively vertical. When your glutes touch the box, maintain full-body tension - don't collapse or relax. Then explosively drive through the floor to stand back up. The box provides a consistent depth target and teaches you to sit back properly, which is crucial for powerful squatting. This is a staple in powerlifting training and an excellent teaching tool for all levels."
+    },
+    {
+      "exercise_id": "quad_011",
+      "exercise_name": "Sissy Squat",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps (especially Rectus Femoris)"],
+        "secondary": [],
+        "stabilizers": ["Core", "Hip Flexors"]
+      },
+      "movement_pattern": "Knee Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["None (bodyweight)"],
+        "optional": ["Sissy Squat Machine", "Post or Rack for Support", "Weight Plate for Added Resistance"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Stand with feet hip-width apart, heels together or narrow stance, optionally hold onto post for balance.",
+        "key_points": [
+          "Narrow stance, feet close together",
+          "May need support for balance initially",
+          "Advanced bodyweight exercise"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright with feet close together, potentially holding support with one hand, core engaged.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back, chest open",
+          "spine": "Neutral to slight extension",
+          "hips": "Extended, aligned with torso and thighs",
+          "knees": "Soft, together or close",
+          "feet": "Narrow stance, heels together or close"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lean back as a unit while bending knees forward, lowering toward ground",
+          "cues": [
+            "Lean back as one straight line from knees up",
+            "Push knees forward",
+            "Keep hips extended - don't break at hips",
+            "Rise up onto toes",
+            "Control the descent",
+            "Feel intense quad stretch"
+          ],
+          "end_position": "Leaned back significantly, knees bent and forward, on toes, straight line from knees to shoulders"
+        },
+        "concentric_phase": {
+          "description": "Contract quads to pull body back to starting position",
+          "cues": [
+            "Squeeze quads to rise",
+            "Pull yourself back up",
+            "Maintain rigid torso-hip position",
+            "Return to standing"
+          ],
+          "end_position": "Back to starting position standing upright"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during descent, exhale during ascent",
+        "alternative": "Continuous controlled breathing"
+      },
+      "tempo": {
+        "standard": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "control_focus": "4-2-3-1 (4 sec down, 2 sec hold, 3 sec up, 1 sec reset)",
+        "advanced": "2-0-2-0 for continuous tension"
+      },
+      "range_of_motion": {
+        "full": "Lean back until torso is near parallel to ground or as far as strength allows",
+        "critical_point": "Maintain straight line from knees through torso, maximize quad stretch",
+        "avoid": "Breaking at hips or losing rigid body position"
+      },
+      "form_cues": [
+        "Your body should move as one rigid unit from the knees up",
+        "This is NOT a regular squat - don't sit back",
+        "Think about leaning backward while pushing knees forward",
+        "It should feel like the world's most intense quad stretch",
+        "Start with small range and progress gradually"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Breaking at the hips (regular squat pattern)",
+          "correction": "Keep hips extended, maintain straight line from knees to shoulders",
+          "why_it_matters": "Hip flexion turns this into a different movement and removes quad isolation"
+        },
+        {
+          "mistake": "Going too deep too soon",
+          "correction": "Start with small range of motion, progress gradually over weeks",
+          "why_it_matters": "This is an advanced exercise requiring significant quad strength"
+        },
+        {
+          "mistake": "Not using support when needed",
+          "correction": "Use support initially to control movement and build strength",
+          "why_it_matters": "Uncontrolled descent can lead to injury"
+        },
+        {
+          "mistake": "Feet too wide",
+          "correction": "Keep feet close together, heels touching or nearly touching",
+          "why_it_matters": "Wide stance reduces quad isolation"
+        },
+        {
+          "mistake": "Losing core tension",
+          "correction": "Maintain rigid torso position throughout",
+          "why_it_matters": "Loss of tension makes exercise less effective and potentially unsafe"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Assisted Sissy Squat with Support",
+            "description": "Hold onto sturdy object with both hands for assistance",
+            "when_to_use": "Learning movement and building initial strength"
+          },
+          {
+            "name": "Partial Range Sissy Squat",
+            "description": "Only lean back slightly, small ROM",
+            "when_to_use": "Building strength before full ROM"
+          },
+          {
+            "name": "Wall Sissy Squat",
+            "description": "Perform with back near wall for safety",
+            "when_to_use": "Learning balance and control"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Free-Standing Sissy Squat",
+            "description": "Perform without any hand support",
+            "when_to_use": "Once strong enough to control movement"
+          },
+          {
+            "name": "Weighted Sissy Squat",
+            "description": "Hold weight plate at chest",
+            "when_to_use": "Advanced, when bodyweight becomes too easy"
+          },
+          {
+            "name": "Sissy Squat on Decline",
+            "description": "Perform on sissy squat machine or decline bench",
+            "when_to_use": "Increasing range of motion"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Advanced quad isolation", "Rectus femoris emphasis", "Bodyweight quad training", "Old-school bodybuilding"],
+        "place_in_workout": "End of workout as finisher or accessory work",
+        "pairs_well_with": ["Leg Extensions", "Leg Press", "Any leg workout"],
+        "rep_ranges": {
+          "strength": "5-10 reps",
+          "hypertrophy": "8-15 reps",
+          "burnout": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Advanced exercise - not for beginners",
+        "Can be hard on knees - start conservatively",
+        "Use support initially",
+        "Build up range of motion gradually over weeks/months",
+        "Stop immediately if experiencing knee pain",
+        "Not recommended for those with existing knee issues"
+      ],
+      "video_explanation_script": "The sissy squat is an old-school bodybuilding exercise that provides incredible quad isolation. Stand with your feet close together, heels touching or nearly touching. You can hold onto a post for balance initially. From here, you're going to lean backward as one rigid unit while pushing your knees forward. This is not a regular squat - your hips stay extended the whole time. As you lean back and push your knees forward, you'll rise up onto your toes. You should feel an intense stretch in your quads. Then contract your quads to pull yourself back up to standing. Start with a small range of motion and build up gradually - this is an advanced movement that takes time to master. When done correctly, it's one of the most effective quad builders out there."
+    },
+    {
+      "exercise_id": "quad_012",
+      "exercise_name": "Spanish Squat (Poliquin Squat)",
+      "muscle_group_primary": "Quadriceps",
+      "muscles_targeted": {
+        "primary": ["Quadriceps (especially VMO)"],
+        "secondary": [],
+        "stabilizers": ["Core", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Knee Extension with Blood Flow Restriction",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Resistance Band (thick, strong band)"],
+        "optional": ["Post or Squat Rack to Anchor Band", "Light Dumbbells"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Secure thick resistance band to post at knee height, step into band loop, position band around back of knees, lean back against band tension.",
+        "key_points": [
+          "Band must be very strong and secure",
+          "Band positioned at back of knees/upper calves",
+          "Create significant backward tension by leaning back",
+          "Feet close together, heels on ground"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing with band around back of knees, leaning back against band tension, feet together or narrow, slight squat position.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back, leaning away from anchor",
+          "spine": "Neutral to slight extension",
+          "hips": "Slightly flexed, leaning back significantly",
+          "knees": "Bent, band restricting backward movement",
+          "feet": "Narrow stance, heels on ground"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Squat up and down while maintaining backward lean against band",
+          "cues": [
+            "Lean back hard into the band",
+            "Squat up and down in small range",
+            "Keep heels on ground",
+            "Push knees forward",
+            "Feel the quad burn intensify",
+            "Control both directions"
+          ],
+          "pattern": "Small-range squatting motion, typically staying in bent-knee position throughout set"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous rhythmic breathing throughout movement",
+        "alternative": "Exhale on squat up, inhale on squat down"
+      },
+      "tempo": {
+        "standard": "1-0-1-0 (1 sec up, no pause, 1 sec down, no pause)",
+        "burn_focus": "Continuous motion, 30-60 seconds per set",
+        "iso_emphasis": "Small pulses or holds in various positions"
+      },
+      "range_of_motion": {
+        "full": "Typically small range of motion, staying in constant knee flexion",
+        "critical_point": "Maintain constant tension and backward lean against band",
+        "avoid": "Standing fully upright or sitting too deep"
+      },
+      "form_cues": [
+        "Think about pulling yourself backward into the band",
+        "Your quads should start burning within 15-20 seconds",
+        "Keep constant tension - don't stand up fully",
+        "This is about time under tension and the burn, not range of motion",
+        "The band creates a unique loading angle that hammers the quads"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not leaning back hard enough",
+          "correction": "Really lean back into the band, create significant tension",
+          "why_it_matters": "Insufficient lean removes the unique stimulus"
+        },
+        {
+          "mistake": "Standing up too tall between reps",
+          "correction": "Maintain constant knee flexion throughout set",
+          "why_it_matters": "Standing up releases tension and defeats purpose"
+        },
+        {
+          "mistake": "Heels coming off ground",
+          "correction": "Keep heels firmly planted throughout",
+          "why_it_matters": "Losing heel contact reduces quad emphasis"
+        },
+        {
+          "mistake": "Using too large a range of motion",
+          "correction": "Use smaller ROM, focus on constant tension and burn",
+          "why_it_matters": "This exercise is about continuous tension, not depth"
+        },
+        {
+          "mistake": "Weak or stretchy band",
+          "correction": "Use thick, strong band that provides substantial resistance",
+          "why_it_matters": "Inadequate band tension provides insufficient stimulus"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Band Tension",
+            "description": "Stand closer to anchor or use lighter band",
+            "when_to_use": "First exposure to exercise"
+          },
+          {
+            "name": "Shorter Time Under Tension",
+            "description": "Start with 20-30 second sets",
+            "when_to_use": "Building tolerance to the intense burn"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavier Band Tension",
+            "description": "Move farther from anchor or use heavier band",
+            "when_to_use": "Increasing difficulty"
+          },
+          {
+            "name": "Weighted Spanish Squat",
+            "description": "Hold light dumbbells at sides",
+            "when_to_use": "Advanced, adding external load"
+          },
+          {
+            "name": "Extended Time Sets",
+            "description": "Increase to 90-120 second sets",
+            "when_to_use": "Advanced metabolic stress training"
+          },
+          {
+            "name": "Spanish Squat ISO Holds",
+            "description": "Hold static positions for time",
+            "when_to_use": "Isometric strength emphasis"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["VMO development", "Quad hypertrophy with minimal load", "Knee rehabilitation", "Metabolic stress training"],
+        "place_in_workout": "End of workout as finisher or accessory work",
+        "pairs_well_with": ["Leg Extensions", "Terminal Knee Extensions", "Any quad workout"],
+        "rep_ranges": {
+          "time_based": "30-90 seconds per set",
+          "rep_based": "15-30 reps (continuous motion)",
+          "iso_holds": "20-60 second holds"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Excellent for knee rehabilitation",
+        "Use strong, secure band only",
+        "Creates significant metabolic stress - expect intense burn",
+        "Actually can be therapeutic for knee issues when dosed properly"
+      ],
+      "video_explanation_script": "The Spanish squat, also called the Poliquin squat, is an incredible exercise for quad development, especially the VMO, and it's excellent for knee health. Secure a thick resistance band to a post at about knee height. Step into the loop and position it behind your knees or upper calves. Now lean back hard against the band - you should feel significant tension pulling you backward. From this position, perform small squatting motions, keeping your heels on the ground and maintaining that backward lean. You should feel your quads burning intensely within seconds. The band creates a unique loading angle that hammers the quads with minimal joint stress. This is perfect for high-rep finisher work and is actually used in knee rehabilitation."
+    }
+  ]
+}

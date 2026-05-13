@@ -1,0 +1,1916 @@
+{
+  "muscle_group": "Core",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Rectus Abdominis",
+        "function": "Spinal flexion, compression of abdominal contents, pelvic stability",
+        "description": "The 'six-pack' muscles running vertically along the front of the abdomen, primary flexor of the spine"
+      },
+      {
+        "name": "External Obliques",
+        "function": "Trunk rotation, lateral flexion, spinal flexion",
+        "description": "Outer layer of side abdominal muscles, rotate torso to opposite side when contracted unilaterally"
+      },
+      {
+        "name": "Internal Obliques",
+        "function": "Trunk rotation (same side), lateral flexion, spinal flexion",
+        "description": "Layer beneath external obliques, rotate torso to same side when contracted unilaterally"
+      },
+      {
+        "name": "Transverse Abdominis",
+        "function": "Core stabilization, increases intra-abdominal pressure, protects spine",
+        "description": "Deepest abdominal muscle layer, acts like a corset to stabilize spine and pelvis"
+      },
+      {
+        "name": "Hip Flexors (Iliopsoas, Rectus Femoris)",
+        "function": "Hip flexion, assists in trunk stability",
+        "description": "Group of muscles that flex the hip joint, bringing thigh toward torso"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "core_001",
+      "exercise_name": "Plank",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Transverse Abdominis", "Rectus Abdominis"],
+        "secondary": ["External Obliques", "Internal Obliques"],
+        "stabilizers": ["Erector Spinae", "Shoulders", "Glutes", "Quadriceps"]
+      },
+      "movement_pattern": "Anti-Extension Isometric Hold",
+      "movement_type": "Isometric/Stabilization",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Exercise Mat", "Timer"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Start on hands and knees, then extend legs behind to create straight body line from head to heels, supporting weight on forearms and toes.",
+        "key_points": [
+          "Forearms flat on ground, elbows under shoulders",
+          "Body forms straight line - no sagging or piking",
+          "Feet together or hip-width apart"
+        ]
+      },
+      "starting_position": {
+        "description": "Forearm plank position with body in straight line, weight supported on forearms and toes.",
+        "body_alignment": {
+          "head": "Neutral, looking at floor slightly ahead of hands",
+          "shoulders": "Over elbows, shoulder blades not winging",
+          "spine": "Neutral - straight line from head to tailbone",
+          "hips": "Level with shoulders and heels, not sagging or piked",
+          "legs": "Extended, quads engaged",
+          "feet": "Toes tucked under, together or hip-width"
+        },
+        "position": "Forearms parallel, elbows directly under shoulders, body rigid"
+      },
+      "execution": {
+        "hold": {
+          "description": "Maintain rigid body position while breathing steadily",
+          "cues": [
+            "Squeeze your glutes",
+            "Brace your core like someone's about to punch your stomach",
+            "Push the floor away with your forearms",
+            "Keep your body in a straight line",
+            "Breathe steadily - don't hold your breath",
+            "Engage your quads to keep legs straight"
+          ],
+          "critical_points": "No sagging hips, no piked hips, maintain neutral spine, steady breathing"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous steady breathing throughout hold",
+        "alternative": "Inhale for 3-4 seconds, exhale for 3-4 seconds, maintain rhythm"
+      },
+      "tempo": {
+        "beginner": "20-30 second holds",
+        "intermediate": "45-60 second holds",
+        "advanced": "60-90+ second holds"
+      },
+      "range_of_motion": {
+        "position": "Static hold in proper alignment",
+        "critical_point": "Maintaining straight body line without compensation",
+        "avoid": "Hips sagging toward floor or piking up toward ceiling"
+      },
+      "form_cues": [
+        "Think of your body as a rigid plank of wood",
+        "Squeeze your glutes like you're trying to crack a walnut",
+        "Pull your belly button toward your spine",
+        "Create a straight line you could balance a broomstick on",
+        "If it's too easy, you're not engaging properly"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips sagging toward floor",
+          "correction": "Engage glutes and core harder, squeeze glutes throughout",
+          "why_it_matters": "Sagging hyperextends spine and defeats the purpose"
+        },
+        {
+          "mistake": "Hips piked up toward ceiling",
+          "correction": "Lower hips to create straight line, engage core not just arms",
+          "why_it_matters": "Piking makes exercise easier and reduces core engagement"
+        },
+        {
+          "mistake": "Holding breath",
+          "correction": "Breathe steadily throughout the hold",
+          "why_it_matters": "Breath holding increases blood pressure unnecessarily"
+        },
+        {
+          "mistake": "Shoulders shrugged or blades winging",
+          "correction": "Push floor away, maintain shoulder stability",
+          "why_it_matters": "Poor shoulder position reduces effectiveness and can cause pain"
+        },
+        {
+          "mistake": "Looking forward instead of down",
+          "correction": "Look at floor to maintain neutral neck",
+          "why_it_matters": "Looking up hyperextends neck"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Plank from Knees",
+            "description": "Support weight on knees instead of toes",
+            "when_to_use": "Building up to full plank"
+          },
+          {
+            "name": "Incline Plank",
+            "description": "Hands on elevated surface (bench, wall)",
+            "when_to_use": "Learning proper position, building strength"
+          },
+          {
+            "name": "Short Hold Intervals",
+            "description": "Multiple 10-15 second holds with rest",
+            "when_to_use": "Building endurance gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "RKC Plank",
+            "description": "Maximum tension plank with posterior pelvic tilt",
+            "when_to_use": "Advanced, maximum core engagement"
+          },
+          {
+            "name": "Plank with Leg Lift",
+            "description": "Alternate lifting one leg at a time",
+            "when_to_use": "Increasing difficulty and stability demands"
+          },
+          {
+            "name": "Weighted Plank",
+            "description": "Add weight plate on upper back",
+            "when_to_use": "When bodyweight becomes too easy"
+          },
+          {
+            "name": "Plank Shoulder Taps",
+            "description": "Alternate touching hand to opposite shoulder",
+            "when_to_use": "Adding anti-rotation component"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Core stability", "Anti-extension strength", "Spinal protection", "Foundation movement"],
+        "place_in_workout": "Warm-up, as primary core exercise, or finisher",
+        "pairs_well_with": ["Dead Bugs", "Side Planks", "Bird Dogs"],
+        "hold_times": {
+          "beginner": "3-4 sets of 20-30 seconds",
+          "intermediate": "3-4 sets of 45-60 seconds",
+          "advanced": "3-4 sets of 60-90+ seconds"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Stop if experiencing lower back pain",
+        "Shorter holds with good form better than long holds with poor form",
+        "Can be performed daily",
+        "Excellent for all fitness levels"
+      ],
+      "video_explanation_script": "The plank is the foundation of core training. Start on your hands and knees, then extend your legs behind you so you're supporting your weight on your forearms and toes. Your body should form a perfectly straight line from your head to your heels - no sagging hips, no piked butt. Elbows should be directly under your shoulders. Now here's the key: squeeze your glutes hard, brace your core like someone's about to punch your stomach, and push the floor away with your forearms. Breathe steadily - don't hold your breath. The moment your form breaks - hips sag or pike up - end the set. Quality over quantity. If you can hold perfect form for 60 seconds, you're ready for progressions. This exercise teaches your core to resist extension, which is critical for protecting your spine in everything you do."
+    },
+    {
+      "exercise_id": "core_002",
+      "exercise_name": "Dead Bug",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Transverse Abdominis", "Rectus Abdominis"],
+        "secondary": ["External Obliques", "Internal Obliques", "Hip Flexors"],
+        "stabilizers": ["Erector Spinae", "Multifidus"]
+      },
+      "movement_pattern": "Anti-Extension with Limb Movement",
+      "movement_type": "Dynamic Stabilization",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Exercise Mat"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Lie on back with arms extended toward ceiling, knees bent at 90 degrees with shins parallel to floor (tabletop position).",
+        "key_points": [
+          "Lower back pressed into floor",
+          "Arms perpendicular to body pointing at ceiling",
+          "Knees at 90 degrees, shins parallel to floor"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying supine, lower back pressed to floor, arms extended toward ceiling, legs in tabletop position.",
+        "body_alignment": {
+          "head": "On floor, neutral",
+          "shoulders": "Flat on floor",
+          "lower_back": "Pressed into floor - no arch",
+          "hips": "Bent at 90 degrees",
+          "knees": "Bent at 90 degrees",
+          "shins": "Parallel to floor (tabletop)",
+          "arms": "Extended toward ceiling"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Extend opposite arm and leg while keeping lower back pressed to floor, then return and switch sides",
+          "cues": [
+            "Lower your right arm overhead and extend your left leg",
+            "Keep your lower back glued to the floor",
+            "Move slowly and with control",
+            "Don't let your back arch off the floor",
+            "Return to start and switch sides",
+            "Coordinate opposite arm and leg"
+          ],
+          "pattern": "Alternate sides in controlled fashion, lower back never leaves floor"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale as limbs extend, inhale as they return",
+        "alternative": "Continuous steady breathing, don't hold breath"
+      },
+      "tempo": {
+        "standard": "3-1-3-1 (3 sec extend, 1 sec pause, 3 sec return, 1 sec reset)",
+        "control_focus": "5-2-5-1 (5 sec extend, 2 sec hold, 5 sec return, 1 sec reset)",
+        "beginner": "2-0-2-0 (controlled movement without pauses)"
+      },
+      "range_of_motion": {
+        "full": "Limbs extend until just before lower back lifts from floor",
+        "critical_point": "Lower back stays pressed to floor throughout entire movement",
+        "avoid": "Extending so far that back arches off floor"
+      },
+      "form_cues": [
+        "Imagine you're crushing a can between your lower back and the floor",
+        "Your lower back is glued down - it never leaves the floor",
+        "Move like you're underwater - slow and controlled",
+        "If your back arches, you've gone too far",
+        "This looks easy but it's deceptively challenging"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lower back arching off floor",
+          "correction": "Don't extend limbs as far, actively press back into floor",
+          "why_it_matters": "Arching defeats the anti-extension purpose and can strain back"
+        },
+        {
+          "mistake": "Moving too quickly",
+          "correction": "Slow controlled movement, 3-5 seconds each direction",
+          "why_it_matters": "Speed reduces core engagement and coordination challenge"
+        },
+        {
+          "mistake": "Holding breath",
+          "correction": "Breathe continuously throughout movement",
+          "why_it_matters": "Breath holding increases unnecessary pressure"
+        },
+        {
+          "mistake": "Arms and legs moving at different speeds",
+          "correction": "Coordinate opposite arm and leg to move together",
+          "why_it_matters": "Poor coordination reduces effectiveness"
+        },
+        {
+          "mistake": "Extending both same-side limbs",
+          "correction": "Always opposite arm and leg (right arm with left leg)",
+          "why_it_matters": "Correct pattern challenges cross-body coordination"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single Limb Dead Bug",
+            "description": "Move only one limb at a time while other stays in tabletop",
+            "when_to_use": "Learning movement pattern, building coordination"
+          },
+          {
+            "name": "Bent Knee Dead Bug",
+            "description": "Keep knee bent as leg lowers instead of extending",
+            "when_to_use": "Easier variation while learning back position"
+          },
+          {
+            "name": "Arms Only Dead Bug",
+            "description": "Alternate lowering arms overhead while legs stay in tabletop",
+            "when_to_use": "Focusing on anti-extension without leg movement"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Dead Bug with Hold",
+            "description": "Pause 3-5 seconds at full extension",
+            "when_to_use": "Increasing time under tension"
+          },
+          {
+            "name": "Weighted Dead Bug",
+            "description": "Hold light dumbbell or ball in hands",
+            "when_to_use": "Adding resistance once movement is mastered"
+          },
+          {
+            "name": "Dead Bug with Band",
+            "description": "Hold resistance band between hands and feet",
+            "when_to_use": "Adding resistance and stability challenge"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Core stability", "Anti-extension", "Coordination", "Lower back health", "Rehabilitation"],
+        "place_in_workout": "Warm-up, primary core work, or corrective exercise",
+        "pairs_well_with": ["Planks", "Bird Dogs", "Pallof Press"],
+        "rep_ranges": {
+          "quality": "6-8 reps per side (slow tempo)",
+          "standard": "10-12 reps per side",
+          "endurance": "15-20 reps per side"
+        }
+      },
+      "safety_considerations": [
+        "Extremely safe exercise",
+        "Excellent for those with back issues",
+        "Stop if experiencing back pain",
+        "Perfect for rehabilitation when cleared",
+        "Can be performed daily"
+      ],
+      "video_explanation_script": "Dead bugs are one of the best core exercises for learning spinal stability. Lie on your back with your arms extended straight up toward the ceiling and your legs in tabletop position - knees bent at 90 degrees, shins parallel to the floor. Here's the critical part: press your lower back into the floor and keep it there the entire time. Now slowly extend your right arm overhead while simultaneously straightening your left leg, hovering it just above the floor. Your lower back should never, ever arch off the floor. Return to start and repeat on the opposite side. Move slowly and with control. This exercise teaches your core to stabilize your spine while your limbs move independently, which is exactly what happens in real life. If your back arches, you've gone too far - shorten the range and keep that back glued down."
+    },
+    {
+      "exercise_id": "core_003",
+      "exercise_name": "Hanging Leg Raise",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Rectus Abdominis", "Hip Flexors"],
+        "secondary": ["External Obliques", "Internal Obliques"],
+        "stabilizers": ["Lats", "Grip/Forearms", "Serratus Anterior"]
+      },
+      "movement_pattern": "Spinal Flexion with Hip Flexion",
+      "movement_type": "Dynamic",
+      "equipment": {
+        "required": ["Pull-up Bar"],
+        "optional": ["Ab Straps", "Captain's Chair"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Hang from pull-up bar with overhand grip, arms fully extended, body hanging straight.",
+        "key_points": [
+          "Dead hang from bar with straight arms",
+          "Shoulders engaged, not fully relaxed",
+          "Body hanging straight, no swinging"
+        ]
+      },
+      "starting_position": {
+        "description": "Hanging from bar with arms extended, shoulders engaged, legs straight or slightly bent.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Engaged, slightly depressed",
+          "spine": "Neutral, slight natural curve",
+          "hips": "Extended, body hanging straight",
+          "legs": "Straight or slightly bent, together",
+          "arms": "Fully extended, active hang"
+        },
+        "grip": "Overhand (pronated), hands shoulder-width apart"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Raise legs by flexing hips and curling pelvis up toward ribcage",
+          "cues": [
+            "Raise your legs up in front of you",
+            "Curl your pelvis up at the top",
+            "Think about bringing your hips to your ribs",
+            "Control the movement, no swinging",
+            "Squeeze your abs at the top"
+          ],
+          "end_position": "Legs raised to parallel or higher, pelvis tucked under, abs contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower legs back down with control to starting position",
+          "cues": [
+            "Control the descent",
+            "Don't just drop your legs",
+            "Prevent swinging or momentum",
+            "Maintain shoulder engagement"
+          ],
+          "end_position": "Legs returned to hanging position, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale as legs raise, inhale as legs lower",
+        "alternative": "Breath at bottom, hold during raise, exhale at top"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec raise, 1 sec hold, 2 sec lower, no swing)",
+        "control_focus": "3-2-3-0 (3 sec raise, 2 sec hold, 3 sec lower, no swing)",
+        "strength_focus": "1-1-3-0 (1 sec raise, 1 sec hold, 3 sec lower, no swing)"
+      },
+      "range_of_motion": {
+        "full": "From hanging position to legs at least parallel to floor with pelvis curl",
+        "critical_point": "Pelvis curls up at top to engage lower abs, not just hip flexion",
+        "avoid": "Swinging or using momentum, legs not reaching parallel"
+      },
+      "form_cues": [
+        "This is an ab exercise, not just a hip flexor exercise",
+        "The curl at the top is crucial - tuck your pelvis under",
+        "Think about bringing your hips to your chest, not feet to bar",
+        "No swinging - completely controlled movement",
+        "If you can't do these strict, do knee raises instead"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Swinging or using momentum",
+          "correction": "Controlled movement, eliminate all swing before starting",
+          "why_it_matters": "Momentum removes tension from abs"
+        },
+        {
+          "mistake": "Only using hip flexors without ab engagement",
+          "correction": "Curl pelvis up at top, think hips to ribs not feet to bar",
+          "why_it_matters": "Without pelvic curl, this becomes hip flexor exercise"
+        },
+        {
+          "mistake": "Not reaching parallel",
+          "correction": "Raise legs at least to parallel position",
+          "why_it_matters": "Partial range limits ab development"
+        },
+        {
+          "mistake": "Bending arms during movement",
+          "correction": "Keep arms straight, movement comes from core",
+          "why_it_matters": "Arm bending uses wrong muscles"
+        },
+        {
+          "mistake": "Dropping legs quickly",
+          "correction": "Control descent over 2-3 seconds",
+          "why_it_matters": "Eccentric phase is important for development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Hanging Knee Raise",
+            "description": "Raise knees to chest instead of straight legs",
+            "when_to_use": "Building up to straight leg raises"
+          },
+          {
+            "name": "Captain's Chair Leg Raise",
+            "description": "Use captain's chair for forearm support",
+            "when_to_use": "Grip strength limiting factor"
+          },
+          {
+            "name": "Lying Leg Raise",
+            "description": "Perform lying on floor",
+            "when_to_use": "Learning movement pattern"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Toes to Bar",
+            "description": "Raise legs all the way to touch bar",
+            "when_to_use": "Advanced, maximum range and difficulty"
+          },
+          {
+            "name": "Weighted Leg Raise",
+            "description": "Add ankle weights or hold dumbbell between feet",
+            "when_to_use": "When bodyweight becomes easy"
+          },
+          {
+            "name": "L-Sit Hold",
+            "description": "Hold legs at parallel position for time",
+            "when_to_use": "Isometric strength and endurance"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lower ab development", "Hip flexor strength", "Grip strength", "Advanced ab work"],
+        "place_in_workout": "Primary core exercise when fresh",
+        "pairs_well_with": ["Planks", "Cable Crunches", "Decline Sit-ups"],
+        "rep_ranges": {
+          "strength": "5-8 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Requires significant core and grip strength",
+        "Can stress lower back if not performed correctly",
+        "Stop if experiencing back pain",
+        "Grip may fail before abs - use straps if needed",
+        "Master knee raises before progressing to leg raises"
+      },
+      "video_explanation_script": "Hanging leg raises are one of the most effective exercises for building a strong, defined core. Hang from a pull-up bar with an overhand grip, arms fully extended. Your shoulders should be engaged - don't just hang completely relaxed. From here, raise your legs up in front of you by flexing at the hips. Here's the key that most people miss: at the top, curl your pelvis up toward your ribcage. This pelvic tilt is what really engages your lower abs. Without it, you're just doing a hip flexor exercise. Raise your legs at least to parallel, or higher if you can. Then lower them back down with control - no swinging or momentum. If straight leg raises are too difficult, bend your knees and do knee raises until you build up the strength."
+    },
+    {
+      "exercise_id": "core_004",
+      "exercise_name": "Cable Crunch",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Rectus Abdominis"],
+        "secondary": ["External Obliques", "Internal Obliques"],
+        "stabilizers": ["Hip Flexors", "Serratus Anterior"]
+      },
+      "movement_pattern": "Spinal Flexion",
+      "movement_type": "Dynamic",
+      "equipment": {
+        "required": ["Cable Machine with Rope Attachment"],
+        "optional": ["V-Bar or Straight Bar Attachment"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to high position, attach rope, kneel facing machine, hold rope ends beside head.",
+        "key_points": [
+          "Pulley at highest setting",
+          "Kneel on mat facing machine",
+          "Rope held beside or behind head"
+        ]
+      },
+      "starting_position": {
+        "description": "Kneeling facing cable machine, holding rope beside or behind head, torso upright, cable under tension.",
+        "body_alignment": {
+          "head": "Neutral, rope held beside ears or behind head",
+          "shoulders": "Retracted, not rounded forward yet",
+          "spine": "Neutral in starting position",
+          "hips": "Flexed at 90 degrees, sitting on heels or slightly raised",
+          "knees": "On floor, hip-width apart"
+        },
+        "position": "Kneel close enough to machine for constant tension"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Crunch down by flexing spine, bringing elbows toward knees",
+          "cues": [
+            "Crunch your ribcage toward your pelvis",
+            "Think about curling your spine",
+            "Drive your elbows down toward your knees",
+            "Squeeze your abs hard at the bottom",
+            "Round your spine - this is the point",
+            "Hold the squeeze for 1-2 seconds"
+          ],
+          "end_position": "Spine fully flexed, elbows near knees, abs maximally contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control return to starting position, resisting cable tension",
+          "cues": [
+            "Control the return",
+            "Resist the cable pulling you up",
+            "Don't let arms pull - core does the work",
+            "Return to neutral spine at top"
+          ],
+          "end_position": "Torso upright, neutral spine, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale forcefully on crunch down, inhale on return",
+        "alternative": "Exhale completely at bottom contraction"
+      },
+      "tempo": {
+        "standard": "2-2-2-0 (2 sec down, 2 sec squeeze, 2 sec up, no pause)",
+        "hypertrophy_focus": "2-3-3-0 (2 sec down, 3 sec squeeze, 3 sec up, no pause)",
+        "constant_tension": "2-2-2-0 with no full lockout at top"
+      },
+      "range_of_motion": {
+        "full": "From neutral spine to full spinal flexion",
+        "critical_point": "Full spinal flexion with maximum ab contraction",
+        "avoid": "Using arms to pull instead of abs contracting"
+      },
+      "form_cues": [
+        "This is the best exercise for loading your abs heavy",
+        "Think about crunching your ribcage to your pelvis",
+        "The cable provides constant tension your abs have to fight",
+        "Your arms are just holding the rope - abs do all the work",
+        "Squeeze like you're trying to fold yourself in half"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling with arms instead of crunching with abs",
+          "correction": "Arms hold position, movement comes from spinal flexion",
+          "why_it_matters": "Arm pulling removes tension from abs"
+        },
+        {
+          "mistake": "Hips moving forward/back during movement",
+          "correction": "Keep hips stationary, movement only in spine",
+          "why_it_matters": "Hip movement reduces ab isolation"
+        },
+        {
+          "mistake": "Not achieving full contraction at bottom",
+          "correction": "Full spinal flexion, maximum ab squeeze",
+          "why_it_matters": "Peak contraction is where growth happens"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use weight that allows strict form and full contraction",
+          "why_it_matters": "Too heavy forces poor form and arm pulling"
+        },
+        {
+          "mistake": "Cable pulling body up too far at top",
+          "correction": "Maintain tension at top, don't fully extend",
+          "why_it_matters": "Full extension creates dead zone"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Cable Crunch",
+            "description": "Use very light weight to perfect form",
+            "when_to_use": "Learning mind-muscle connection"
+          },
+          {
+            "name": "Standing Cable Crunch",
+            "description": "Perform standing bent over",
+            "when_to_use": "Variation for different angle"
+          },
+          {
+            "name": "Resistance Band Crunch",
+            "description": "Use resistance band instead of cable",
+            "when_to_use": "Home training alternative"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Arm Cable Crunch",
+            "description": "One arm at a time with handle",
+            "when_to_use": "Adding oblique emphasis"
+          },
+          {
+            "name": "Cable Crunch with Pause",
+            "description": "Pause 3-5 seconds at bottom contraction",
+            "when_to_use": "Maximizing peak contraction"
+          },
+          {
+            "name": "Cable Crunch Dropset",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Maximum pump and hypertrophy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Rectus abdominis hypertrophy", "Heavy loaded ab work", "Six-pack development"],
+        "place_in_workout": "Primary core exercise or after compound movements",
+        "pairs_well_with": ["Leg Raises", "Planks", "Russian Twists"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "12-20 reps",
+          "endurance": "20-30+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Don't pull with arms - can strain neck",
+        "Keep movement in spine, not hips",
+        "Easy to adjust weight between sets",
+        "Excellent for progressive overload on abs"
+      },
+      "video_explanation_script": "Cable crunches are one of the best exercises for building thick, developed abs because you can progressively overload them with weight. Set a cable pulley to the highest position and attach a rope. Kneel facing the machine and hold the rope beside or behind your head. From here, crunch down by flexing your spine, bringing your elbows toward your knees. This is not a pulling motion with your arms - your arms just hold the rope in position. The movement is pure spinal flexion, like you're trying to touch your ribcage to your pelvis. Squeeze your abs as hard as you can at the bottom and hold for a second or two. Then control the return against the cable tension. The cable creates constant tension throughout the movement, making this incredibly effective for ab development."
+    },
+    {
+      "exercise_id": "core_005",
+      "exercise_name": "Russian Twist",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["External Obliques", "Internal Obliques"],
+        "secondary": ["Rectus Abdominis", "Transverse Abdominis"],
+        "stabilizers": ["Hip Flexors", "Erector Spinae"]
+      },
+      "movement_pattern": "Trunk Rotation",
+      "movement_type": "Dynamic",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Medicine Ball", "Weight Plate", "Dumbbell"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Sit on floor with knees bent, lean back to create V-shape with torso and thighs, feet elevated or on floor.",
+        "key_points": [
+          "Torso leaned back at 45-degree angle",
+          "Knees bent, feet together",
+          "Arms extended holding weight or clasped together"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated V-position with torso leaned back, arms extended in front of chest, feet elevated or grounded.",
+        "body_alignment": {
+          "head": "Neutral, following spine",
+          "torso": "Leaned back 45 degrees from vertical",
+          "spine": "Neutral or slightly rounded",
+          "hips": "Flexed, creating V with thighs",
+          "knees": "Bent, together",
+          "feet": "Elevated off floor or heels on floor",
+          "arms": "Extended, hands together or holding weight"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Rotate torso side to side, touching hands/weight to floor beside hips",
+          "cues": [
+            "Rotate your torso from side to side",
+            "Touch the weight to the floor beside your hips",
+            "Keep your chest up and core engaged",
+            "Controlled rotation, no momentum",
+            "Your feet should stay relatively still",
+            "Full rotation each direction"
+          ],
+          "pattern": "Continuous alternating rotation, touching down on each side"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale with each rotation, or continuous breathing",
+        "alternative": "Breathe naturally throughout movement"
+      },
+      "tempo": {
+        "standard": "1-0-1-0 (1 sec each direction, continuous)",
+        "control_focus": "2-1-2-0 (2 sec rotate, 1 sec touch, 2 sec rotate back, no pause)",
+        "power": "Controlled but dynamic rotation"
+      },
+      "range_of_motion": {
+        "full": "Rotate until hands/weight touch floor beside hips on each side",
+        "critical_point": "Full rotation through torso, not just arms swinging",
+        "avoid": "Using momentum or swinging arms without torso rotation"
+      },
+      "form_cues": [
+        "Imagine you're sitting in a V-position and twisting to look behind you",
+        "The rotation comes from your obliques, not swinging your arms",
+        "Keep your chest up - don't collapse forward",
+        "Touch the weight all the way to the floor each side",
+        "Your abs should be burning - that means it's working"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Swinging arms without torso rotation",
+          "correction": "Rotate from core, arms follow torso movement",
+          "why_it_matters": "Arm swinging removes oblique engagement"
+        },
+        {
+          "mistake": "Feet rotating side to side excessively",
+          "correction": "Keep feet relatively stable, rotation in torso",
+          "why_it_matters": "Foot movement indicates lack of core control"
+        },
+        {
+          "mistake": "Collapsing torso forward",
+          "correction": "Maintain V-position, chest up throughout",
+          "why_it_matters": "Collapsing reduces oblique tension"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use light to moderate weight with full control",
+          "why_it_matters": "Heavy weight forces momentum and poor form"
+        },
+        {
+          "mistake": "Rushing through reps",
+          "correction": "Controlled rotation, pause briefly at each side",
+          "why_it_matters": "Speed reduces tension and effectiveness"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Feet on Floor Russian Twist",
+            "description": "Keep feet flat on floor for stability",
+            "when_to_use": "Building up to feet elevated version"
+          },
+          {
+            "name": "Bodyweight Russian Twist",
+            "description": "Hands clasped, no external weight",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Smaller Range Russian Twist",
+            "description": "Reduce rotation range initially",
+            "when_to_use": "Building rotational strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Feet Elevated Russian Twist",
+            "description": "Feet raised higher off floor throughout",
+            "when_to_use": "Increasing difficulty and hip flexor challenge"
+          },
+          {
+            "name": "Medicine Ball Russian Twist",
+            "description": "Hold medicine ball with arms extended",
+            "when_to_use": "Adding external load"
+          },
+          {
+            "name": "Russian Twist with Pause",
+            "description": "Pause 2-3 seconds at each side",
+            "when_to_use": "Increasing time under tension"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Oblique development", "Rotational strength", "Core endurance", "Athletic performance"],
+        "place_in_workout": "Mid to end of core workout",
+        "pairs_well_with": ["Planks", "Cable Crunches", "Side Planks"],
+        "rep_ranges": {
+          "strength": "20-30 total reps (10-15 each side)",
+          "endurance": "40-60 total reps (20-30 each side)",
+          "burnout": "60-100+ total reps"
+        }
+      },
+      "safety_considerations": [
+        "Safe when performed with control",
+        "Can stress lower back if form breaks down",
+        "Start with bodyweight before adding load",
+        "Stop if experiencing back pain",
+        "Keep movements controlled, not ballistic"
+      },
+      "video_explanation_script": "Russian twists are excellent for building strong, defined obliques. Sit on the floor and lean back to create a V-shape between your torso and thighs - about a 45-degree angle. Lift your feet slightly off the floor or keep your heels down if you need more stability. Hold your hands together in front of your chest, or hold a weight like a medicine ball or plate. From here, rotate your torso from side to side, touching your hands or the weight to the floor beside each hip. The key is that the rotation comes from your core, not from swinging your arms. Your obliques should be doing all the work. Keep your chest up and maintain that V-position throughout. This exercise burns like crazy, but that's how you build strong obliques."
+    },
+    {
+      "exercise_id": "core_006",
+      "exercise_name": "Pallof Press",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["External Obliques", "Internal Obliques", "Transverse Abdominis"],
+        "secondary": ["Rectus Abdominis"],
+        "stabilizers": ["Erector Spinae", "Glutes", "Shoulders"]
+      },
+      "movement_pattern": "Anti-Rotation",
+      "movement_type": "Isometric/Dynamic Stabilization",
+      "equipment": {
+        "required": ["Cable Machine with Handle or Band"],
+        "optional": ["Resistance Band"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to chest height, stand perpendicular to machine, hold handle at chest with both hands.",
+        "key_points": [
+          "Pulley at chest/sternum height",
+          "Stand perpendicular (sideways) to machine",
+          "Feet shoulder-width apart"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing sideways to cable machine, handle held at chest with both hands, cable under tension.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Square, facing forward (perpendicular to cable)",
+          "spine": "Neutral, upright",
+          "hips": "Square, level",
+          "feet": "Shoulder-width or slight stagger, facing forward",
+          "arms": "Bent, hands at chest holding handle",
+          "core": "Braced, resisting rotation"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Press handle straight out from chest then return, resisting cable trying to rotate body",
+          "cues": [
+            "Press the handle straight out in front of you",
+            "Don't let the cable rotate your torso",
+            "Keep your hips and shoulders square",
+            "Hold the extended position for 1-2 seconds",
+            "Return to chest and repeat",
+            "Your core fights rotation the entire time"
+          ],
+          "pattern": "Press out, hold, return, repeat - body stays square throughout"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on press out, inhale on return to chest",
+        "alternative": "Continuous braced breathing"
+      },
+      "tempo": {
+        "standard": "2-2-2-0 (2 sec press, 2 sec hold, 2 sec return, no pause)",
+        "anti_rotation_focus": "2-5-2-0 (2 sec press, 5 sec hold, 2 sec return, no pause)",
+        "dynamic": "1-1-1-0 (continuous pressing movement)"
+      },
+      "range_of_motion": {
+        "full": "From hands at chest to arms fully extended straight ahead",
+        "critical_point": "Body remains square to front throughout - no rotation",
+        "avoid": "Allowing torso to rotate toward cable"
+      },
+      "form_cues": [
+        "This is all about resisting rotation - your core fights the cable",
+        "Imagine someone's trying to pull you sideways and you're resisting",
+        "Your shoulders stay square to the front the entire time",
+        "The extended position is where the challenge peaks",
+        "You should feel this in your obliques on the side facing the cable"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Allowing torso to rotate toward cable",
+          "correction": "Brace core hard, keep shoulders and hips square",
+          "why_it_matters": "Rotation defeats the anti-rotation purpose"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight that allows no rotation",
+          "why_it_matters": "Too heavy forces rotation and compensation"
+        },
+        {
+          "mistake": "Arms doing all the work",
+          "correction": "Core creates stability, arms just press",
+          "why_it_matters": "This is a core exercise, not shoulder press"
+        },
+        {
+          "mistake": "Not fully extending arms",
+          "correction": "Press to full arm extension for maximum challenge",
+          "why_it_matters": "Extension increases rotation force core must resist"
+        },
+        {
+          "mistake": "Feet too close together",
+          "correction": "Feet shoulder-width for stable base",
+          "why_it_matters": "Narrow base makes it harder to resist rotation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Pallof Hold",
+            "description": "Press out and hold extended position for time",
+            "when_to_use": "Learning anti-rotation, building isometric strength"
+          },
+          {
+            "name": "Half-Kneeling Pallof Press",
+            "description": "Perform from half-kneeling position",
+            "when_to_use": "Reduced base of support for more challenge (actually harder)"
+          },
+          {
+            "name": "Band Pallof Press",
+            "description": "Use resistance band instead of cable",
+            "when_to_use": "Home training alternative"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Tall-Kneeling Pallof Press",
+            "description": "Perform from tall kneeling (both knees)",
+            "when_to_use": "Increased stability challenge"
+          },
+          {
+            "name": "Pallof Press with Walk",
+            "description": "Hold extended position while walking forward/back",
+            "when_to_use": "Advanced dynamic stability"
+          },
+          {
+            "name": "Overhead Pallof Press",
+            "description": "Press at angle overhead instead of straight ahead",
+            "when_to_use": "Different angle variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Anti-rotation core strength", "Functional core stability", "Oblique strength", "Athletic performance"],
+        "place_in_workout": "Early to mid core workout, or as primary core exercise",
+        "pairs_well_with": ["Planks", "Dead Bugs", "Side Planks"],
+        "rep_ranges": {
+          "quality": "8-10 reps per side (slow tempo)",
+          "standard": "10-15 reps per side",
+          "endurance": "15-20 reps per side"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Excellent for spine health and function",
+        "Good for all fitness levels",
+        "Can be performed daily",
+        "Teaches proper core bracing"
+      },
+      "video_explanation_script": "The Pallof press is one of the best core exercises most people aren't doing. Set a cable pulley to chest height and stand sideways to the machine, about an arm's length away. Hold the handle at your chest with both hands. Your feet should be shoulder-width apart, and here's the critical part: your shoulders and hips stay square to the front the entire time. From this position, press the handle straight out in front of you until your arms are fully extended. The cable is trying to rotate your body toward the machine, but you resist it. That's your obliques and deep core working. Hold for a second or two, then return to your chest. Your body should never rotate - it stays perfectly square. This anti-rotation training is incredibly functional and builds a bulletproof core. Do all your reps on one side, then switch sides."
+    },
+    {
+      "exercise_id": "core_007",
+      "exercise_name": "Side Plank",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["External Obliques", "Internal Obliques", "Transverse Abdominis"],
+        "secondary": ["Gluteus Medius", "Quadratus Lumborum"],
+        "stabilizers": ["Shoulders", "Hip Abductors", "Erector Spinae"]
+      },
+      "movement_pattern": "Anti-Lateral Flexion Isometric Hold",
+      "movement_type": "Isometric/Stabilization",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Exercise Mat"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Lie on side, prop up on forearm with elbow under shoulder, stack feet or stagger them, lift hips off floor.",
+        "key_points": [
+          "Elbow directly under shoulder",
+          "Body forms straight line from head to feet",
+          "Feet stacked (harder) or staggered (easier)"
+        ]
+      },
+      "starting_position": {
+        "description": "Side plank position on forearm, body in straight line, hips elevated, feet stacked or staggered.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Bottom shoulder over elbow, top arm on hip or reaching up",
+          "spine": "Neutral lateral alignment, no rotation",
+          "hips": "Elevated, forming straight line with body",
+          "legs": "Extended, feet stacked or bottom foot forward",
+          "top_arm": "On hip or extended toward ceiling"
+        }
+      },
+      "execution": {
+        "hold": {
+          "description": "Maintain rigid side plank position while breathing steadily",
+          "cues": [
+            "Drive your hips up toward the ceiling",
+            "Keep your body in a straight line",
+            "Don't let your hips sag toward the floor",
+            "Engage your obliques on the bottom side",
+            "Push the floor away with your forearm",
+            "Squeeze your glutes"
+          ],
+          "critical_points": "No hip sagging, no rotation, straight line maintained"
+        }
+      },
+      "breathing": {
+        "pattern": "Continuous steady breathing throughout hold",
+        "alternative": "Rhythmic breathing, don't hold breath"
+      },
+      "tempo": {
+        "beginner": "15-20 second holds per side",
+        "intermediate": "30-45 second holds per side",
+        "advanced": "45-60+ second holds per side"
+      },
+      "range_of_motion": {
+        "position": "Static hold in proper lateral alignment",
+        "critical_point": "Maintaining straight line without hip sag or pike",
+        "avoid": "Hips sagging toward floor or rotating forward/back"
+      },
+      "form_cues": [
+        "Imagine a straight line from your head through your feet",
+        "Drive your bottom hip up toward the ceiling",
+        "Think about making your body as long and straight as possible",
+        "Your obliques on the bottom side should be working hard",
+        "If your hips are sagging, the exercise isn't working"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips sagging toward floor",
+          "correction": "Drive hips up, engage obliques and glutes",
+          "why_it_matters": "Sagging removes tension from obliques"
+        },
+        {
+          "mistake": "Hips piked up too high",
+          "correction": "Lower hips to create straight line",
+          "why_it_matters": "Piking makes exercise easier"
+        },
+        {
+          "mistake": "Body rotating forward or backward",
+          "correction": "Maintain lateral alignment, stack shoulders and hips",
+          "why_it_matters": "Rotation reduces lateral stability challenge"
+        },
+        {
+          "mistake": "Elbow not under shoulder",
+          "correction": "Position elbow directly under shoulder",
+          "why_it_matters": "Poor alignment stresses shoulder"
+        },
+        {
+          "mistake": "Holding breath",
+          "correction": "Breathe steadily throughout hold",
+          "why_it_matters": "Breath holding increases blood pressure unnecessarily"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Side Plank from Knees",
+            "description": "Support on forearm and knees instead of feet",
+            "when_to_use": "Building up to full side plank"
+          },
+          {
+            "name": "Staggered Foot Side Plank",
+            "description": "Place bottom foot forward, top foot back for wider base",
+            "when_to_use": "Easier than stacked feet"
+          },
+          {
+            "name": "Short Hold Intervals",
+            "description": "Multiple 10-15 second holds with rest",
+            "when_to_use": "Building endurance gradually"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Side Plank with Hip Dip",
+            "description": "Lower hips toward floor then raise back up",
+            "when_to_use": "Adding dynamic component"
+          },
+          {
+            "name": "Side Plank with Leg Lift",
+            "description": "Raise top leg up toward ceiling",
+            "when_to_use": "Increasing difficulty and glute medius work"
+          },
+          {
+            "name": "Side Plank with Rotation",
+            "description": "Rotate torso and thread top arm under body",
+            "when_to_use": "Adding rotational component"
+          },
+          {
+            "name": "Weighted Side Plank",
+            "description": "Hold weight on top hip",
+            "when_to_use": "When bodyweight becomes too easy"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Oblique strength", "Lateral core stability", "Shoulder stability", "Preventing lateral flexion"],
+        "place_in_workout": "After regular planks, or as primary lateral core work",
+        "pairs_well_with": ["Planks", "Pallof Press", "Bird Dogs"],
+        "hold_times": {
+          "beginner": "3-4 sets of 15-20 seconds per side",
+          "intermediate": "3-4 sets of 30-45 seconds per side",
+          "advanced": "3-4 sets of 45-60+ seconds per side"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Can stress shoulder if alignment is off",
+        "Stop if experiencing shoulder or lower back pain",
+        "Quality over duration - maintain form",
+        "Can be performed daily"
+      ],
+      "video_explanation_script": "Side planks are essential for building strong obliques and lateral core stability. Lie on your side and prop yourself up on your forearm with your elbow directly under your shoulder. Stack your feet on top of each other, or if that's too difficult, stagger them with your bottom foot forward. Now lift your hips off the floor so your body forms a perfectly straight line from your head to your feet. Drive your bottom hip up toward the ceiling and engage those obliques. Your top arm can rest on your hip or reach up toward the ceiling. Hold this position while breathing steadily. Don't let your hips sag toward the floor - if they do, the exercise isn't working. This builds incredible lateral core strength that protects your spine and improves athletic performance."
+    },
+    {
+      "exercise_id": "core_008",
+      "exercise_name": "Ab Wheel Rollout",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Rectus Abdominis", "Transverse Abdominis"],
+        "secondary": ["External Obliques", "Internal Obliques"],
+        "stabilizers": ["Lats", "Shoulders", "Hip Flexors", "Erector Spinae"]
+      },
+      "movement_pattern": "Anti-Extension Dynamic",
+      "movement_type": "Dynamic Stabilization",
+      "equipment": {
+        "required": ["Ab Wheel or Barbell with Plates"],
+        "optional": ["Knee Pad or Mat"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Start on knees holding ab wheel, wheel positioned under shoulders, back straight.",
+        "key_points": [
+          "Begin from knees (standing is extremely advanced)",
+          "Ab wheel under shoulders",
+          "Core pre-braced before rolling"
+        ]
+      },
+      "starting_position": {
+        "description": "On knees, hands gripping ab wheel positioned under shoulders, torso upright, core braced.",
+        "body_alignment": {
+          "head": "Neutral, looking slightly ahead",
+          "shoulders": "Over hands/wheel",
+          "spine": "Neutral, core braced",
+          "hips": "Extended, not sitting on heels",
+          "knees": "On floor, hip-width apart",
+          "arms": "Straight, hands gripping wheel"
+        }
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Roll wheel forward, extending body while maintaining neutral spine",
+          "cues": [
+            "Roll the wheel forward slowly",
+            "Keep your core braced tight the entire time",
+            "Don't let your hips sag toward the floor",
+            "Your body should form a straight line at full extension",
+            "Only go as far as you can maintain form",
+            "Think about pushing the floor away"
+          ],
+          "end_position": "Body extended forward at an angle, wheel extended in front, spine neutral"
+        },
+        "concentric_phase": {
+          "description": "Roll wheel back toward knees by contracting abs and pulling with lats",
+          "cues": [
+            "Pull the wheel back toward your knees",
+            "Contract your abs hard",
+            "Think about crunching your ribcage to pelvis",
+            "Drive through your lats",
+            "Return to starting position"
+          ],
+          "end_position": "Returned to starting position, wheel under shoulders"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale during rollout, exhale forcefully during pull back",
+        "alternative": "Brace and hold breath during rollout, exhale on return"
+      },
+      "tempo": {
+        "standard": "3-1-2-0 (3 sec rollout, 1 sec pause, 2 sec return, no pause)",
+        "control_focus": "4-2-3-0 (4 sec rollout, 2 sec hold, 3 sec return, no pause)",
+        "beginner": "2-0-2-0 (controlled movement without pauses)"
+      },
+      "range_of_motion": {
+        "full": "From wheel under shoulders to body fully extended at angle",
+        "critical_point": "Only extend as far as you can maintain neutral spine",
+        "avoid": "Hips sagging or back hyperextending"
+      },
+      "form_cues": [
+        "This is one of the hardest core exercises - ego check at the door",
+        "Your core must prevent your back from hyperextending",
+        "Think about pulling the wheel back, not pushing up with hips",
+        "If your back arches, you've gone too far",
+        "Short range with perfect form beats full range with compensation"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lower back hyperextending (sagging)",
+          "correction": "Shorten range, brace core harder, posterior pelvic tilt",
+          "why_it_matters": "Hyperextension defeats purpose and risks back injury"
+        },
+        {
+          "mistake": "Rolling out too far beyond ability",
+          "correction": "Only roll as far as you can maintain neutral spine",
+          "why_it_matters": "Going too far forces compensation"
+        },
+        {
+          "mistake": "Using hips to return instead of core/lats",
+          "correction": "Pull wheel back with abs and lats, not hip flexion",
+          "why_it_matters": "Hip dominance reduces core work"
+        },
+        {
+          "mistake": "Arms bending during movement",
+          "correction": "Keep arms straight throughout",
+          "why_it_matters": "Arm bending changes the exercise mechanics"
+        },
+        {
+          "mistake": "Not bracing core before rolling",
+          "correction": "Pre-brace abs before initiating rollout",
+          "why_it_matters": "Poor bracing increases injury risk"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Wall Rollout",
+            "description": "Roll ab wheel up and down wall while standing",
+            "when_to_use": "Learning movement pattern safely"
+          },
+          {
+            "name": "Short Range Rollout",
+            "description": "Only roll out 12-18 inches initially",
+            "when_to_use": "Building up to full range"
+          },
+          {
+            "name": "Incline Rollout",
+            "description": "Roll onto elevated surface instead of floor",
+            "when_to_use": "Reducing difficulty"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Arm Rollout",
+            "description": "Roll with one arm (extremely advanced)",
+            "when_to_use": "Mastered double-arm rollouts"
+          },
+          {
+            "name": "Standing Ab Wheel Rollout",
+            "description": "Perform from standing position (elite level)",
+            "when_to_use": "Extremely advanced - very few can do this"
+          },
+          {
+            "name": "Rollout with Pause",
+            "description": "Pause 2-3 seconds at extended position",
+            "when_to_use": "Increasing time under tension"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Advanced core strength", "Anti-extension training", "Total core development", "Challenge"],
+        "place_in_workout": "Primary core exercise when fresh",
+        "pairs_well_with": ["Planks", "Dead Bugs", "Hanging Leg Raises"],
+        "rep_ranges": {
+          "strength": "5-8 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20+ reps"
+        }
+      },
+      "safety_considerations": [
+        "High difficulty - not for beginners",
+        "Can cause lower back injury if performed incorrectly",
+        "Master planks and dead bugs first",
+        "Start with short range and progress gradually",
+        "Stop immediately if back hyperextends or hurts"
+      ],
+      "video_explanation_script": "The ab wheel rollout is one of the most challenging core exercises you can do. Start on your knees with the ab wheel positioned under your shoulders. Your core should be braced tight before you even start moving. From here, slowly roll the wheel forward, extending your body while maintaining a neutral spine. This is crucial - do not let your hips sag or your back arch. Only roll out as far as you can while keeping perfect form. At full extension, your body should form a relatively straight line from your knees to your shoulders. Then pull the wheel back toward your knees by contracting your abs and pulling with your lats. Do not use your hip flexors to pull yourself back up. Start with a short range of motion and gradually increase as you get stronger. This exercise is humbling - most people can't do even one perfect rep initially, and that's okay."
+    },
+    {
+      "exercise_id": "core_009",
+      "exercise_name": "Bicycle Crunch",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Rectus Abdominis", "External Obliques", "Internal Obliques"],
+        "secondary": ["Hip Flexors"],
+        "stabilizers": ["Transverse Abdominis"]
+      },
+      "movement_pattern": "Trunk Flexion with Rotation",
+      "movement_type": "Dynamic",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Exercise Mat"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Lie on back, hands behind head (not pulling), knees bent, feet elevated in tabletop position.",
+        "key_points": [
+          "Lower back pressed to floor",
+          "Hands support head, don't pull on neck",
+          "Legs in tabletop or elevated"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying supine, lower back pressed to floor, hands behind head, legs in tabletop or elevated, shoulder blades off floor.",
+        "body_alignment": {
+          "head": "Supported by hands, shoulders lifted off floor",
+          "lower_back": "Pressed into floor",
+          "hands": "Behind head, elbows wide, not pulling",
+          "hips": "Bent with legs elevated",
+          "legs": "In tabletop or one extended, one bent"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Alternate bringing opposite elbow toward opposite knee while extending other leg",
+          "cues": [
+            "Bring your right elbow toward your left knee",
+            "Extend your right leg straight as left knee comes in",
+            "Rotate through your torso, not just your arms",
+            "Switch sides in a pedaling motion",
+            "Keep your lower back pressed to the floor",
+            "Don't pull on your neck with your hands"
+          ],
+          "pattern": "Continuous alternating rotation with leg extension"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale with each crunch/rotation, or continuous breathing",
+        "alternative": "Rhythmic breathing matching movement"
+      },
+      "tempo": {
+        "standard": "1-0-1-0 (continuous alternating movement)",
+        "control_focus": "2-1-2-0 (2 sec rotate, 1 sec touch, 2 sec switch, no pause)",
+        "slow_burn": "3-1-3-0 (slow controlled rotation each side)"
+      },
+      "range_of_motion": {
+        "full": "Full rotation bringing elbow toward opposite knee, leg fully extended",
+        "critical_point": "Rotation through torso, not just swinging elbows",
+        "avoid": "Pulling on neck or losing lower back contact with floor"
+      },
+      "form_cues": [
+        "Think about bringing your shoulder toward opposite knee, not elbow",
+        "The rotation is in your torso - you're twisting through your core",
+        "Your hands just support your head - don't yank on your neck",
+        "Move like you're pedaling a bicycle upside down",
+        "The slower and more controlled, the harder it is"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling on neck with hands",
+          "correction": "Hands lightly support head, no pulling force",
+          "why_it_matters": "Neck pulling can cause neck strain and removes ab tension"
+        },
+        {
+          "mistake": "Swinging elbows without torso rotation",
+          "correction": "Rotate through entire torso, shoulder to opposite knee",
+          "why_it_matters": "Without rotation, obliques aren't engaged"
+        },
+        {
+          "mistake": "Lower back arching off floor",
+          "correction": "Keep lower back pressed to floor throughout",
+          "why_it_matters": "Arching reduces ab engagement and strains back"
+        },
+        {
+          "mistake": "Moving too fast",
+          "correction": "Controlled deliberate movement each side",
+          "why_it_matters": "Speed reduces muscle activation"
+        },
+        {
+          "mistake": "Not fully extending legs",
+          "correction": "Fully extend leg on each repetition",
+          "why_it_matters": "Partial extension reduces hip flexor involvement"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Static Bicycle Hold",
+            "description": "Hold position with one elbow toward opposite knee",
+            "when_to_use": "Learning rotation pattern"
+          },
+          {
+            "name": "Bent Leg Bicycle",
+            "description": "Keep legs more bent throughout",
+            "when_to_use": "Reducing hip flexor involvement"
+          },
+          {
+            "name": "Feet on Floor Bicycle",
+            "description": "Keep feet on floor, just rotate torso",
+            "when_to_use": "Focusing on rotation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Slow Bicycle Crunch",
+            "description": "5-second rotation each side",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Bicycle Crunch with Pause",
+            "description": "Pause 2-3 seconds at each rotation",
+            "when_to_use": "Increasing intensity"
+          },
+          {
+            "name": "Extended Bicycle Crunch",
+            "description": "Legs extended lower toward floor",
+            "when_to_use": "Increasing difficulty"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall ab development", "Oblique engagement", "Coordination", "Beginner-friendly ab work"],
+        "place_in_workout": "Mid to end of core workout",
+        "pairs_well_with": ["Planks", "Russian Twists", "Cable Crunches"],
+        "rep_ranges": {
+          "standard": "20-30 total reps (10-15 per side)",
+          "endurance": "40-60 total reps (20-30 per side)",
+          "burnout": "60-100+ total reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Don't pull on neck with hands",
+        "Keep lower back on floor to protect spine",
+        "Stop if experiencing neck pain",
+        "Excellent for all fitness levels"
+      ],
+      "video_explanation_script": "Bicycle crunches are a classic ab exercise that hits both your rectus abdominis and obliques. Lie on your back with your hands behind your head - not pulling, just supporting. Lift your shoulders off the floor and bring your legs up into a tabletop position. Now alternately bring your right elbow toward your left knee while extending your right leg straight. Then switch - left elbow toward right knee while extending your left leg. The key is rotating through your entire torso, not just swinging your elbows around. Think about bringing your shoulder toward the opposite knee. Your lower back stays pressed to the floor the entire time, and your hands are just there to support your head - don't yank on your neck. Move in a smooth, controlled pedaling motion. The slower you go, the more you'll feel it working."
+    },
+    {
+      "exercise_id": "core_010",
+      "exercise_name": "Bird Dog",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Transverse Abdominis", "Erector Spinae"],
+        "secondary": ["Glutes", "External Obliques", "Internal Obliques"],
+        "stabilizers": ["Multifidus", "Shoulders", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Anti-Extension and Anti-Rotation with Limb Movement",
+      "movement_type": "Dynamic Stabilization",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Exercise Mat"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Start on hands and knees in tabletop position, hands under shoulders, knees under hips.",
+        "key_points": [
+          "Hands directly under shoulders",
+          "Knees directly under hips",
+          "Spine neutral, head aligned"
+        ]
+      },
+      "starting_position": {
+        "description": "Tabletop position on hands and knees, spine neutral, core engaged.",
+        "body_alignment": {
+          "head": "Neutral, looking at floor",
+          "shoulders": "Over hands, blades not winging",
+          "spine": "Neutral from head to tailbone",
+          "hips": "Level, directly over knees",
+          "knees": "Under hips, hip-width apart",
+          "hands": "Under shoulders, fingers spread"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Simultaneously extend opposite arm and leg while maintaining neutral spine and level hips",
+          "cues": [
+            "Extend your right arm forward and left leg backward",
+            "Keep your hips level - don't let them rotate",
+            "Maintain neutral spine - no arching or rounding",
+            "Your extended arm and leg form a straight line with your spine",
+            "Return to start and switch sides",
+            "Move slowly and with control"
+          ],
+          "pattern": "Alternate opposite arm and leg extensions with controlled movement"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale as limbs extend, inhale as they return",
+        "alternative": "Continuous steady breathing"
+      },
+      "tempo": {
+        "standard": "3-2-3-1 (3 sec extend, 2 sec hold, 3 sec return, 1 sec reset)",
+        "stability_focus": "3-5-3-1 (3 sec extend, 5 sec hold, 3 sec return, 1 sec reset)",
+        "beginner": "2-1-2-1 (controlled movement)"
+      },
+      "range_of_motion": {
+        "full": "Arm extended straight ahead, leg extended straight behind, both forming line with spine",
+        "critical_point": "Maintaining neutral spine and level hips throughout",
+        "avoid": "Hips rotating or spine hyperextending"
+      },
+      "form_cues": [
+        "Think about lengthening your body - reaching forward and back",
+        "Your hips should stay level like you're balancing a glass of water",
+        "Don't arch your back - keep spine neutral",
+        "Quality over quantity - perfect reps only",
+        "This looks easy but is deceptively challenging"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips rotating when limbs extend",
+          "correction": "Keep hips level and square to floor throughout",
+          "why_it_matters": "Rotation defeats the anti-rotation stability purpose"
+        },
+        {
+          "mistake": "Lower back hyperextending",
+          "correction": "Maintain neutral spine, engage core throughout",
+          "why_it_matters": "Hyperextension can strain lower back"
+        },
+        {
+          "mistake": "Lifting arm or leg too high",
+          "correction": "Limbs form straight line with spine, not higher",
+          "why_it_matters": "Lifting too high causes spinal hyperextension"
+        },
+        {
+          "mistake": "Moving too quickly",
+          "correction": "Slow controlled movement, 3+ seconds each direction",
+          "why_it_matters": "Speed reduces stability challenge"
+        },
+        {
+          "mistake": "Looking up instead of down",
+          "correction": "Keep neutral neck, look at floor",
+          "why_it_matters": "Looking up hyperextends neck"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single Limb Bird Dog",
+            "description": "Move only arm or only leg, not both",
+            "when_to_use": "Learning stability and coordination"
+          },
+          {
+            "name": "Bird Dog Lift-Off",
+            "description": "Just lift limbs slightly off floor without extending",
+            "when_to_use": "Building initial stability"
+          },
+          {
+            "name": "Static Bird Dog Hold",
+            "description": "Extend and hold position for time",
+            "when_to_use": "Building isometric strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Bird Dog with Crunch",
+            "description": "Bring elbow to knee under body between reps",
+            "when_to_use": "Adding dynamic component"
+          },
+          {
+            "name": "Bird Dog on Unstable Surface",
+            "description": "Perform on BOSU or stability ball",
+            "when_to_use": "Advanced stability challenge"
+          },
+          {
+            "name": "Weighted Bird Dog",
+            "description": "Hold light weight in hand or ankle weight",
+            "when_to_use": "Adding resistance"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Core stability", "Lower back health", "Coordination", "Rehabilitation", "Warm-up"],
+        "place_in_workout": "Warm-up, corrective exercise, or primary core work",
+        "pairs_well_with": ["Planks", "Dead Bugs", "Side Planks"],
+        "rep_ranges": {
+          "quality": "6-8 reps per side (slow tempo)",
+          "standard": "10-12 reps per side",
+          "endurance": "15-20 reps per side"
+        }
+      },
+      "safety_considerations": [
+        "Extremely safe exercise",
+        "Excellent for those with back issues",
+        "Can be performed daily",
+        "Perfect for rehabilitation when cleared",
+        "Good for all fitness levels"
+      },
+      "video_explanation_script": "The bird dog is a fundamental core stability exercise that's perfect for building a healthy, functional spine. Start on your hands and knees in a tabletop position with your hands under your shoulders and knees under your hips. Your spine should be neutral - not arched or rounded. From here, simultaneously extend your right arm straight forward and your left leg straight back. The key is maintaining that neutral spine and keeping your hips level - don't let them rotate. Your extended arm, spine, and leg should form one straight line. Hold for a moment, then return to start and switch sides. Move slowly and deliberately. This exercise teaches your core to stabilize your spine while your limbs move independently, which is exactly what happens in real life. It's deceptively challenging when done correctly."
+    },
+    {
+      "exercise_id": "core_011",
+      "exercise_name": "Mountain Climbers",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["Rectus Abdominis", "Hip Flexors"],
+        "secondary": ["External Obliques", "Internal Obliques", "Transverse Abdominis"],
+        "stabilizers": ["Shoulders", "Glutes", "Quadriceps"]
+      },
+      "movement_pattern": "Dynamic Hip Flexion with Anti-Extension",
+      "movement_type": "Dynamic",
+      "equipment": {
+        "required": ["None"],
+        "optional": ["Exercise Mat", "Sliders"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Start in high plank position with hands under shoulders, body in straight line.",
+        "key_points": [
+          "High plank position - straight arms",
+          "Body forms straight line from head to heels",
+          "Core engaged before starting movement"
+        ]
+      },
+      "starting_position": {
+        "description": "High plank position with hands under shoulders, body straight, weight on hands and toes.",
+        "body_alignment": {
+          "head": "Neutral, looking at floor",
+          "shoulders": "Over hands, stable",
+          "spine": "Neutral, straight line from head to heels",
+          "hips": "Level with shoulders and heels",
+          "legs": "Extended, feet together or hip-width",
+          "arms": "Straight, hands under shoulders"
+        }
+      },
+      "execution": {
+        "movement": {
+          "description": "Alternate driving knees toward chest in running motion while maintaining plank position",
+          "cues": [
+            "Drive your right knee toward your chest",
+            "Quickly switch and drive your left knee forward",
+            "Keep your hips level - don't pike them up",
+            "Maintain plank position with core braced",
+            "Move at a running pace",
+            "Land lightly on your toes"
+          ],
+          "pattern": "Continuous alternating knee drives, like running in plank position"
+        }
+      },
+      "breathing": {
+        "pattern": "Rhythmic breathing matching movement pace",
+        "alternative": "Continuous breathing, don't hold breath"
+      },
+      "tempo": {
+        "standard": "Moderate pace, 1 second per knee drive",
+        "cardio_focus": "Fast pace, maximum speed with form",
+        "control_focus": "Slow deliberate knee drives, 2-3 seconds each"
+      },
+      "range_of_motion": {
+        "full": "Knee drives from extended leg to knee near chest",
+        "critical_point": "Maintaining plank position while legs alternate",
+        "avoid": "Hips piking up or sagging down"
+      },
+      "form_cues": [
+        "This is running in a plank position",
+        "Your upper body should stay completely still",
+        "Only your legs move - everything else is frozen",
+        "The faster you go, the more it becomes cardio",
+        "Keep your butt down - don't pike your hips up"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips piking up toward ceiling",
+          "correction": "Keep hips level, maintain plank alignment",
+          "why_it_matters": "Piking makes exercise easier and reduces core work"
+        },
+        {
+          "mistake": "Hips sagging toward floor",
+          "correction": "Engage core, keep body in straight line",
+          "why_it_matters": "Sagging hyperextends spine"
+        },
+        {
+          "mistake": "Landing heavily on feet",
+          "correction": "Land lightly and quietly on toes",
+          "why_it_matters": "Heavy landing indicates lack of control"
+        },
+        {
+          "mistake": "Upper body rocking forward/back",
+          "correction": "Shoulders stay over hands, upper body stable",
+          "why_it_matters": "Rocking reduces core stability challenge"
+        },
+        {
+          "mistake": "Sacrificing form for speed",
+          "correction": "Maintain plank position even at faster speeds",
+          "why_it_matters": "Form breakdown defeats the purpose"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Slow Mountain Climbers",
+            "description": "Perform at very slow controlled pace",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Incline Mountain Climbers",
+            "description": "Hands on elevated surface",
+            "when_to_use": "Building up to floor version"
+          },
+          {
+            "name": "Marching Plank",
+            "description": "Lift one foot at a time without driving knee forward",
+            "when_to_use": "Building plank stability"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Mountain Climbers with Sliders",
+            "description": "Use sliders under feet for smoother motion",
+            "when_to_use": "Increased difficulty and speed"
+          },
+          {
+            "name": "Cross-Body Mountain Climbers",
+            "description": "Drive knee toward opposite elbow",
+            "when_to_use": "Adding oblique emphasis"
+          },
+          {
+            "name": "Spiderman Mountain Climbers",
+            "description": "Bring knee to outside of same-side elbow",
+            "when_to_use": "Increased range and difficulty"
+          },
+          {
+            "name": "Fast Mountain Climbers",
+            "description": "Maximum speed while maintaining form",
+            "when_to_use": "Conditioning and cardio emphasis"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Dynamic core work", "Cardio conditioning", "Hip flexor development", "Full-body conditioning"],
+        "place_in_workout": "Warm-up, conditioning work, or HIIT training",
+        "pairs_well_with": ["Burpees", "Planks", "Jump Rope"],
+        "rep_ranges": {
+          "strength": "20-30 total reps (10-15 per leg)",
+          "conditioning": "30-60 seconds timed sets",
+          "HIIT": "20 seconds work, 10 seconds rest intervals"
+        }
+      },
+      "safety_considerations": [
+        "Safe when performed with proper form",
+        "Can stress wrists - warm up properly",
+        "Stop if unable to maintain plank position",
+        "Start slow and build speed gradually",
+        "Good cardiovascular component"
+      },
+      "video_explanation_script": "Mountain climbers are a dynamic core exercise that also provides a great cardio workout. Start in a high plank position with your hands under your shoulders and your body in a straight line. From here, drive your right knee toward your chest, then quickly switch and drive your left knee forward while extending your right leg back. It's like running in place in a plank position. The key is keeping your hips level and your core braced throughout - don't let your butt pike up toward the ceiling. Your upper body should stay completely still, shoulders over your hands. Only your legs are moving. Start at a moderate pace until you get the movement pattern down, then you can speed it up for more of a cardio challenge. This exercise builds core strength, hip flexor strength, and cardiovascular endurance all at once."
+    },
+    {
+      "exercise_id": "core_012",
+      "exercise_name": "Cable Wood Chop",
+      "muscle_group_primary": "Core",
+      "muscles_targeted": {
+        "primary": ["External Obliques", "Internal Obliques"],
+        "secondary": ["Rectus Abdominis", "Transverse Abdominis"],
+        "stabilizers": ["Shoulders", "Hips", "Glutes"]
+      },
+      "movement_pattern": "Rotational Movement (Chopping Pattern)",
+      "movement_type": "Dynamic",
+      "equipment": {
+        "required": ["Cable Machine with Handle or Rope"],
+        "optional": ["Resistance Band"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to high position, stand perpendicular to machine, grasp handle with both hands.",
+        "key_points": [
+          "Pulley at highest setting for downward chop",
+          "Stand perpendicular (sideways) to machine",
+          "Feet shoulder-width or wider"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing sideways to cable machine, both hands on handle pulled up near high shoulder, arms extended.",
+        "body_alignment": {
+          "head": "Neutral, looking at handle",
+          "torso": "Rotated toward machine, facing cable",
+          "hips": "Slightly rotated toward machine",
+          "feet": "Wider than shoulder-width, planted firmly",
+          "arms": "Extended, holding handle near high shoulder",
+          "knees": "Slight bend, ready to rotate"
+        },
+        "grip": "Both hands on handle, top hand (closest to machine) palm down, bottom hand palm up"
+      },
+      "execution": {
+        "movement": {
+          "description": "Rotate torso and chop cable down and across body toward opposite hip",
+          "cues": [
+            "Chop the cable down and across your body",
+            "Rotate through your entire torso",
+            "The motion goes from high to low, like chopping wood",
+            "Your arms stay relatively straight",
+            "Pivot on your back foot",
+            "End with handle near opposite hip"
+          ],
+          "end_position": "Torso rotated away from machine, handle at opposite hip, full rotation achieved"
+        },
+        "return": {
+          "description": "Control cable back to starting position with control",
+          "cues": [
+            "Control the return",
+            "Rotate back to starting position",
+            "Don't let cable snap you back"
+          ]
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on chop down, inhale on return",
+        "alternative": "Continuous breathing throughout"
+      },
+      "tempo": {
+        "standard": "2-1-2-0 (2 sec chop, 1 sec pause, 2 sec return, no pause)",
+        "power_focus": "1-0-2-0 (explosive chop, no pause, 2 sec return, no pause)",
+        "control_focus": "3-2-3-0 (3 sec chop, 2 sec hold, 3 sec return, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From handle near high shoulder to handle at opposite hip",
+        "critical_point": "Full torso rotation, not just arm movement",
+        "avoid": "Using only arms without rotating torso"
+      },
+      "form_cues": [
+        "Think about swinging an axe to chop wood",
+        "Your entire body rotates - hips, torso, shoulders",
+        "The power comes from your core rotation, not arm pull",
+        "Pivot on your back foot to allow full hip rotation",
+        "End position should have you facing away from the machine"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Using only arms without rotating torso",
+          "correction": "Rotate through entire torso and hips, arms just hold handle",
+          "why_it_matters": "No rotation means no oblique work"
+        },
+        {
+          "mistake": "Feet not pivoting",
+          "correction": "Allow back foot to pivot to enable full rotation",
+          "why_it_matters": "Restricted feet prevent full rotation"
+        },
+        {
+          "mistake": "Bending arms excessively",
+          "correction": "Keep arms relatively straight, extended throughout",
+          "why_it_matters": "Arm bending turns it into arm exercise"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight that allows full controlled rotation",
+          "why_it_matters": "Too heavy forces arm pulling and poor rotation"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Full rotation from high to low across body",
+          "why_it_matters": "Partial range limits oblique development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band Wood Chop",
+            "description": "Use resistance band instead of cable",
+            "when_to_use": "Home training alternative"
+          },
+          {
+            "name": "Half-Kneeling Wood Chop",
+            "description": "Perform from half-kneeling position",
+            "when_to_use": "Learning rotation pattern with stable base"
+          },
+          {
+            "name": "Light Weight Wood Chop",
+            "description": "Use very light weight to perfect form",
+            "when_to_use": "Learning movement pattern"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Low-to-High Wood Chop (Reverse)",
+            "description": "Cable low, chop upward across body",
+            "when_to_use": "Opposite movement pattern"
+          },
+          {
+            "name": "Single-Arm Wood Chop",
+            "description": "Perform with one arm only",
+            "when_to_use": "Advanced variation"
+          },
+          {
+            "name": "Wood Chop with Step",
+            "description": "Add step forward during chop",
+            "when_to_use": "Adding dynamic component"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Rotational power", "Oblique strength", "Functional movement", "Athletic performance"],
+        "place_in_workout": "Mid-workout as primary rotational exercise",
+        "pairs_well_with": ["Pallof Press", "Russian Twists", "Side Planks"],
+        "rep_ranges": {
+          "power": "8-10 reps per side",
+          "hypertrophy": "12-15 reps per side",
+          "endurance": "15-20 reps per side"
+        }
+      },
+      "safety_considerations": [
+        "Safe when performed with proper form",
+        "Start with light weight to learn rotation pattern",
+        "Don't use excessive weight that forces poor mechanics",
+        "Good for athletic training and functional fitness",
+        "Mimics real-world rotational movements"
+      },
+      "video_explanation_script": "Cable wood chops are excellent for building rotational power through your obliques. Set a cable pulley to the highest position and stand sideways to the machine. Grab the handle with both hands and pull it up near your high shoulder with your arms extended. From here, rotate through your entire torso and chop the cable down and across your body toward your opposite hip - like you're chopping wood with an axe. The key is that this rotation comes from your core, not from pulling with your arms. Your arms just hold the handle. Pivot on your back foot to allow your hips to rotate. At the end, you should be facing away from the machine with the handle at your opposite hip. Control it back to the starting position and repeat. This exercise builds rotational strength that translates to sports, lifting, and everyday activities."
+    }
+  ]
+}

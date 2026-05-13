@@ -1,0 +1,1650 @@
+{
+  "muscle_group": "Triceps",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Triceps Brachii (Long Head)",
+        "function": "Elbow extension, shoulder extension and adduction",
+        "description": "Largest head, crosses shoulder joint, emphasized with overhead movements, creates mass on inner arm"
+      },
+      {
+        "name": "Triceps Brachii (Lateral Head)",
+        "function": "Elbow extension",
+        "description": "Outer head, creates horseshoe shape, most visible from side, emphasized with arms at sides"
+      },
+      {
+        "name": "Triceps Brachii (Medial Head)",
+        "function": "Elbow extension",
+        "description": "Deep head underneath long/lateral heads, active in all pressing movements, emphasized with reverse grip"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "exercise_id": "tricep_001",
+      "exercise_name": "Close-Grip Bench Press",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (All Three Heads)"],
+        "secondary": ["Pectoralis Major", "Anterior Deltoids"],
+        "stabilizers": ["Core", "Lats", "Rotator Cuff"]
+      },
+      "movement_pattern": "Horizontal Pressing",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell", "Flat Bench"],
+        "optional": ["Power Rack", "Spotter"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Lie on flat bench, grip barbell with hands inside shoulder-width (about 8-12 inches apart), feet flat on floor.",
+        "key_points": [
+          "Grip narrower than regular bench press but not too narrow (8-12 inches between hands)",
+          "Bar should be over eyes when racked",
+          "Feet flat on floor for stability"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on bench, barbell held at arm's length above chest with close grip, shoulders retracted.",
+        "body_alignment": {
+          "head": "Neutral on bench",
+          "shoulders": "Retracted, shoulder blades squeezed together",
+          "spine": "Natural arch in lower back",
+          "hips": "On bench",
+          "feet": "Flat on floor, leg drive ready",
+          "arms": "Extended, bar over upper chest"
+        },
+        "grip": "Overhand grip, hands 8-12 inches apart, wrists straight"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower bar to lower chest/upper abdomen while keeping elbows tucked closer to body",
+          "cues": [
+            "Lower the bar with control",
+            "Keep elbows tucked - about 45 degrees from body",
+            "Touch bar to lower chest or upper abdomen",
+            "Maintain shoulder retraction",
+            "Don't flare elbows out wide"
+          ],
+          "end_position": "Bar touching lower chest, elbows tucked at 30-45 degree angle, forearms vertical"
+        },
+        "concentric_phase": {
+          "description": "Press bar back up to starting position by extending elbows",
+          "cues": [
+            "Drive through your triceps",
+            "Press bar up and slightly back toward face",
+            "Lock out elbows at top",
+            "Squeeze triceps at lockout",
+            "Maintain tucked elbow position"
+          ],
+          "end_position": "Arms fully extended, bar over upper chest, elbows locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on descent, hold breath through sticking point, exhale after press",
+        "alternative": "Deep breath at top, hold during descent, exhale on press"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "strength_focus": "3-1-X-0 (3 sec down, 1 sec pause, explosive up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec lockout)"
+      },
+      "range_of_motion": {
+        "full": "From full elbow lockout to bar touching lower chest",
+        "critical_point": "Full lockout with tricep squeeze, controlled descent to chest",
+        "avoid": "Partial reps or bouncing bar off chest"
+      },
+      "form_cues": [
+        "This is a tricep exercise, not a chest exercise - keep elbows tucked",
+        "Think about pushing the bar back toward your face, not straight up",
+        "Your forearms should be vertical at the bottom",
+        "Squeeze your triceps hard at lockout",
+        "The close grip shifts emphasis from chest to triceps"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Grip too narrow (hands touching)",
+          "correction": "Hands should be 8-12 inches apart, not touching",
+          "why_it_matters": "Too narrow stresses wrists and reduces power"
+        },
+        {
+          "mistake": "Elbows flaring out wide",
+          "correction": "Keep elbows tucked at 30-45 degrees from body",
+          "why_it_matters": "Flaring shifts work from triceps to chest"
+        },
+        {
+          "mistake": "Lowering to wrong position (upper chest)",
+          "correction": "Lower to lower chest or upper abdomen",
+          "why_it_matters": "Wrong bar path reduces tricep involvement"
+        },
+        {
+          "mistake": "Not achieving full lockout",
+          "correction": "Fully extend elbows and squeeze triceps at top",
+          "why_it_matters": "Lockout is where triceps work hardest"
+        },
+        {
+          "mistake": "Losing shoulder retraction",
+          "correction": "Keep shoulder blades squeezed together throughout",
+          "why_it_matters": "Protects shoulders and maintains stability"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Close-Grip Press",
+            "description": "Use dumbbells with neutral grip close together",
+            "when_to_use": "More shoulder-friendly, learning movement"
+          },
+          {
+            "name": "Smith Machine Close-Grip Press",
+            "description": "Use Smith machine for guided bar path",
+            "when_to_use": "Learning movement, training without spotter"
+          },
+          {
+            "name": "Incline Close-Grip Press",
+            "description": "Perform on incline bench (15-30 degrees)",
+            "when_to_use": "Easier on shoulders, different angle"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Board Press Close-Grip",
+            "description": "Use boards on chest to work lockout",
+            "when_to_use": "Building lockout strength"
+          },
+          {
+            "name": "Paused Close-Grip Press",
+            "description": "Pause 2-3 seconds on chest",
+            "when_to_use": "Eliminating bounce, building strength off chest"
+          },
+          {
+            "name": "Tempo Close-Grip Press",
+            "description": "5-second eccentric phase",
+            "when_to_use": "Maximizing time under tension"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall tricep mass and strength", "Compound tricep development", "Heavy pressing for triceps"],
+        "place_in_workout": "Early workout as primary tricep movement",
+        "pairs_well_with": ["Overhead Extensions", "Pushdowns", "Dips"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Use spotter for heavy attempts",
+        "Don't go too narrow with grip (wrist stress)",
+        "Ensure proper warmup",
+        "Can be hard on elbows - start conservative",
+        "Bail safely if needed - roll bar down body"
+      ],
+      "video_explanation_script": "The close-grip bench press is the king of compound tricep exercises. Lie on a flat bench and grip the barbell with your hands about 8 to 12 inches apart - that's closer than a regular bench press but not so narrow that your hands are touching. Unrack the bar and hold it over your chest with arms extended. Lower the bar to your lower chest or upper abdomen, keeping your elbows tucked at about 45 degrees from your body - don't let them flare out wide. Once the bar touches your chest, press it back up, thinking about pushing it slightly back toward your face. Lock out fully at the top and squeeze your triceps. This exercise allows you to use heavy weight and builds serious tricep mass and strength."
+    },
+    {
+      "exercise_id": "tricep_002",
+      "exercise_name": "Overhead Tricep Extension (Dumbbell)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (Long Head)"],
+        "secondary": ["Triceps Brachii (Lateral Head)", "Triceps Brachii (Medial Head)"],
+        "stabilizers": ["Core", "Shoulders"]
+      },
+      "movement_pattern": "Overhead Elbow Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbell"],
+        "optional": ["Bench with Back Support"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Stand or sit holding dumbbell overhead with both hands, arms extended, dumbbell held vertically.",
+        "key_points": [
+          "Dumbbell held vertically with both hands cupping top plate",
+          "Arms fully extended overhead",
+          "Can be performed standing or seated"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing or seated upright, dumbbell held overhead with both hands, arms fully extended, elbows close to head.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Stable, not shrugging",
+          "spine": "Neutral, upright, core engaged",
+          "arms": "Overhead, elbows close to head pointing forward",
+          "elbows": "Fully extended at start, positioned close together"
+        },
+        "grip": "Both hands cupping inner side of top dumbbell plate, thumbs around handle"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower dumbbell behind head by bending elbows while keeping upper arms stationary",
+          "cues": [
+            "Lower the dumbbell behind your head",
+            "Keep your elbows pointing forward and close together",
+            "Don't let elbows flare out to sides",
+            "Upper arms stay vertical - only forearms move",
+            "Feel the stretch in your triceps"
+          ],
+          "end_position": "Dumbbell lowered behind head, upper arms vertical, elbows bent approximately 90 degrees, deep stretch in long head"
+        },
+        "concentric_phase": {
+          "description": "Extend elbows to raise dumbbell back to overhead position",
+          "cues": [
+            "Press the dumbbell back up overhead",
+            "Drive through your triceps",
+            "Keep elbows pointing forward",
+            "Fully extend your arms",
+            "Squeeze triceps at lockout"
+          ],
+          "end_position": "Arms fully extended overhead, dumbbell above head, elbows locked, triceps contracted"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on lower, exhale on press up",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec down, 1 sec stretch, 2 sec up, 1 sec squeeze)",
+        "hypertrophy_focus": "3-2-2-1 (3 sec down, 2 sec stretch, 2 sec up, 1 sec squeeze)",
+        "stretch_emphasis": "3-3-2-1 (3 sec down, 3 sec stretch, 2 sec up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From full overhead extension to dumbbell behind head with deep stretch",
+        "critical_point": "The stretch at bottom position emphasizes long head",
+        "avoid": "Elbows flaring out or not achieving full stretch"
+      },
+      "form_cues": [
+        "This is THE exercise for building the long head of your triceps",
+        "Keep your elbows pointing forward the entire time - don't let them drift out",
+        "Think about keeping your upper arms glued to your head",
+        "Feel that stretch at the bottom - that's the long head under tension",
+        "Your elbows should stay in the same position, only your forearms move"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Elbows flaring out to sides",
+          "correction": "Keep elbows pointing forward, close to head",
+          "why_it_matters": "Flaring reduces long head emphasis and increases injury risk"
+        },
+        {
+          "mistake": "Upper arms moving forward/back",
+          "correction": "Keep upper arms vertical and stationary throughout",
+          "why_it_matters": "Arm movement reduces tricep isolation"
+        },
+        {
+          "mistake": "Arching lower back excessively",
+          "correction": "Engage core, maintain neutral spine",
+          "why_it_matters": "Excessive arch indicates weight is too heavy or core is weak"
+        },
+        {
+          "mistake": "Not achieving full stretch at bottom",
+          "correction": "Lower dumbbell until deep stretch in triceps",
+          "why_it_matters": "The stretch is what makes this exercise special for long head"
+        },
+        {
+          "mistake": "Using momentum",
+          "correction": "Controlled tempo, especially on eccentric",
+          "why_it_matters": "Momentum reduces tension and effectiveness"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Two-Dumbbell Overhead Extension",
+            "description": "Hold two lighter dumbbells instead of one heavy",
+            "when_to_use": "Building up strength, easier on wrists"
+          },
+          {
+            "name": "Seated Overhead Extension",
+            "description": "Sit on bench with back support",
+            "when_to_use": "Eliminating momentum, focusing on form"
+          },
+          {
+            "name": "Cable Overhead Extension",
+            "description": "Use cable with rope attachment",
+            "when_to_use": "Constant tension variation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Single-Arm Overhead Extension",
+            "description": "One arm at a time with dumbbell",
+            "when_to_use": "Addressing imbalances, increased stretch"
+          },
+          {
+            "name": "Overhead Extension with Pause",
+            "description": "Pause 3-5 seconds at bottom stretch",
+            "when_to_use": "Maximizing stretch-mediated hypertrophy"
+          },
+          {
+            "name": "Barbell/EZ-Bar Overhead Extension",
+            "description": "Use barbell for both arms",
+            "when_to_use": "Handling heavier loads"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Long head development", "Tricep mass", "Overhead strength", "Tricep stretch and growth"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Close-Grip Press", "Pushdowns", "Dips"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "pump": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Can stress shoulder joint if mobility is limited",
+        "Start with lighter weight to learn movement",
+        "Be careful not to hit back of head with dumbbell",
+        "Stop if experiencing shoulder discomfort",
+        "Seated version is safer for beginners"
+      ],
+      "video_explanation_script": "Overhead tricep extensions are the best exercise for targeting the long head of your triceps. Hold a dumbbell with both hands, cupping the top plate, and extend your arms straight up overhead. Your elbows should be pointing forward and close to your head. From here, lower the dumbbell behind your head by bending your elbows, keeping your upper arms completely still - only your forearms move. Lower until you feel a deep stretch in your triceps. Then press the dumbbell back up overhead, fully extending your arms and squeezing your triceps at the top. The key is keeping your elbows pointing forward and not letting them flare out to the sides. The overhead position puts the long head under maximum stretch, which is crucial for building tricep mass."
+    },
+    {
+      "exercise_id": "tricep_003",
+      "exercise_name": "Tricep Pushdown (Cable)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (Lateral Head)", "Triceps Brachii (Medial Head)"],
+        "secondary": ["Triceps Brachii (Long Head)"],
+        "stabilizers": ["Core", "Shoulders"]
+      },
+      "movement_pattern": "Elbow Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Straight Bar or V-Bar Attachment"],
+        "optional": ["Rope Attachment", "Single Handle"]
+      },
+      "difficulty_level": "Beginner",
+      "setup": {
+        "description": "Set cable pulley to high position, attach bar, stand facing machine holding bar with overhand grip.",
+        "key_points": [
+          "Pulley at highest setting",
+          "Stand close to machine, slight forward lean",
+          "Elbows tucked at sides"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing cable machine, bar held at upper chest level with overhand grip, elbows tucked at sides.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral with slight forward lean (10-15 degrees)",
+          "hips": "Neutral, knees slightly bent",
+          "feet": "Hip-width or staggered stance",
+          "elbows": "Pinned at sides, bent about 90 degrees"
+        },
+        "grip": "Overhand (pronated) grip on bar, hands shoulder-width or slightly narrower"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Extend elbows to push bar down toward thighs while keeping upper arms stationary",
+          "cues": [
+            "Push the bar straight down",
+            "Keep your elbows pinned at your sides",
+            "Fully extend your arms",
+            "Squeeze your triceps at the bottom",
+            "Don't let your elbows drift forward or back"
+          ],
+          "end_position": "Arms fully extended, bar at or below hip level, elbows locked, triceps contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control bar back up to starting position, resisting cable tension",
+          "cues": [
+            "Control the return",
+            "Don't let cable pull your hands up quickly",
+            "Maintain elbow position at sides",
+            "Stop when hands reach upper chest"
+          ],
+          "end_position": "Bar at upper chest level, elbows bent about 90 degrees, ready for next rep"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on push down, inhale on return up",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec down, 1 sec squeeze, 2 sec up, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec down, 2 sec squeeze, 3 sec up, no pause)",
+        "constant_tension": "2-1-3-0 (2 sec down, 1 sec squeeze, 3 sec up, no rest at top)"
+      },
+      "range_of_motion": {
+        "full": "From elbows at 90 degrees to full elbow extension",
+        "critical_point": "Full lockout with tricep squeeze at bottom",
+        "avoid": "Partial range or allowing elbows to drift"
+      },
+      "form_cues": [
+        "Your elbows are hinges - they don't move forward or back",
+        "Think about pushing your hands toward the floor",
+        "Lock out completely at the bottom and squeeze",
+        "Keep a slight forward lean - don't stand completely upright",
+        "This is a staple tricep exercise for a reason"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Elbows drifting forward during extension",
+          "correction": "Keep elbows pinned at sides throughout entire movement",
+          "why_it_matters": "Elbow movement shifts work to shoulders"
+        },
+        {
+          "mistake": "Using momentum or swinging body",
+          "correction": "Maintain stable position, controlled tempo",
+          "why_it_matters": "Momentum reduces tricep activation"
+        },
+        {
+          "mistake": "Not achieving full lockout",
+          "correction": "Fully extend arms and squeeze triceps at bottom",
+          "why_it_matters": "Lockout is where triceps work maximally"
+        },
+        {
+          "mistake": "Standing too upright",
+          "correction": "Slight forward lean (10-15 degrees) for better leverage",
+          "why_it_matters": "Too upright reduces efficiency"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full extension at bottom, return to 90 degrees at top",
+          "why_it_matters": "Partial reps limit development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Rope Pushdown",
+            "description": "Use rope attachment, split rope at bottom",
+            "when_to_use": "Variation for lateral head emphasis"
+          },
+          {
+            "name": "Single-Arm Pushdown",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Addressing imbalances, better mind-muscle connection"
+          },
+          {
+            "name": "Resistance Band Pushdown",
+            "description": "Use resistance band anchored overhead",
+            "when_to_use": "At-home training, learning movement"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Reverse-Grip Pushdown",
+            "description": "Use underhand (supinated) grip",
+            "when_to_use": "Emphasizing medial head"
+          },
+          {
+            "name": "Pushdown with Pause",
+            "description": "Pause 2-3 seconds at full extension",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Drop Set Pushdown",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lateral and medial head development", "Tricep isolation", "High-rep work", "Beginners learning tricep work"],
+        "place_in_workout": "Mid to end of workout as accessory work",
+        "pairs_well_with": ["Overhead Extensions", "Close-Grip Press", "Dips"],
+        "rep_ranges": {
+          "strength": "8-12 reps",
+          "hypertrophy": "10-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Excellent for beginners",
+        "Easy to adjust weight quickly",
+        "Good for high-rep finishing work",
+        "Constant tension throughout movement"
+      },
+      "video_explanation_script": "Cable tricep pushdowns are a staple exercise for building triceps. Set a cable pulley to the highest position and attach a straight bar or V-bar. Stand facing the machine with a slight forward lean and grab the bar with an overhand grip. Start with your elbows tucked at your sides and bent about 90 degrees. From here, push the bar straight down by extending your elbows, keeping your upper arms completely still. Fully extend your arms at the bottom and squeeze your triceps hard. Control the cable back up to the starting position. The key is keeping your elbows pinned at your sides - they shouldn't move forward or back. The constant tension from the cable makes this excellent for really feeling your triceps work."
+    },
+    {
+      "exercise_id": "tricep_004",
+      "exercise_name": "Dips (Parallel Bars)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (All Three Heads)", "Pectoralis Major (Lower)"],
+        "secondary": ["Anterior Deltoids"],
+        "stabilizers": ["Core", "Serratus Anterior", "Lats"]
+      },
+      "movement_pattern": "Vertical Pressing",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Parallel Dip Bars or Dip Station"],
+        "optional": ["Dip Belt with Weight", "Resistance Band for Assistance"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Grip parallel bars with arms extended, supporting body weight, feet off ground.",
+        "key_points": [
+          "Bar width approximately shoulder-width (wider = more chest, narrower = more triceps)",
+          "Start from top position with arms extended",
+          "Body slightly forward lean for tricep emphasis"
+        ]
+      },
+      "starting_position": {
+        "description": "Supporting bodyweight on parallel bars, arms fully extended, slight forward lean, feet crossed or bent behind.",
+        "body_alignment": {
+          "head": "Neutral, looking forward or slightly down",
+          "shoulders": "Depressed (down), not shrugged",
+          "torso": "Slight forward lean (10-20 degrees for triceps)",
+          "hips": "Neutral",
+          "legs": "Bent or crossed behind body",
+          "arms": "Fully extended, locked out"
+        },
+        "grip": "Neutral grip on parallel bars, hands shoulder-width apart"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower body by bending elbows while maintaining slight forward lean",
+          "cues": [
+            "Lower yourself down with control",
+            "Keep elbows tracking back, not flaring wide",
+            "Descend until upper arms are parallel to floor",
+            "Maintain slight forward lean",
+            "Feel the stretch in your chest and triceps"
+          ],
+          "end_position": "Upper arms parallel to floor, elbows bent about 90 degrees, shoulders stretched"
+        },
+        "concentric_phase": {
+          "description": "Press body back up to starting position by extending elbows",
+          "cues": [
+            "Drive through your triceps and chest",
+            "Press yourself back up",
+            "Fully extend your arms at top",
+            "Squeeze triceps at lockout",
+            "Don't shrug shoulders at top"
+          ],
+          "end_position": "Arms fully extended, elbows locked, shoulders depressed"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on descent, exhale on press up",
+        "alternative": "Breath at top, hold during descent, exhale during press"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "strength_focus": "3-1-X-0 (3 sec down, 1 sec pause, explosive up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From full elbow lockout to upper arms parallel to floor (90-degree elbow bend)",
+        "critical_point": "Upper arms parallel to floor at bottom, full lockout at top",
+        "avoid": "Going too deep (past parallel) which stresses shoulders"
+      },
+      "form_cues": [
+        "Dips are the squat of upper body pressing",
+        "Keep your chest up and maintain that slight forward lean",
+        "Think about pushing the bars apart as you press",
+        "Lock out completely at the top - that's where triceps work hardest",
+        "Control the descent - don't just drop"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Descending too deep (shoulders below elbows)",
+          "correction": "Stop when upper arms are parallel to floor",
+          "why_it_matters": "Too deep stresses shoulder joint and increases injury risk"
+        },
+        {
+          "mistake": "Elbows flaring out excessively",
+          "correction": "Keep elbows tracking back, not out to sides",
+          "why_it_matters": "Excessive flare shifts work to chest and stresses shoulders"
+        },
+        {
+          "mistake": "Shrugging shoulders at top",
+          "correction": "Keep shoulders depressed (down) throughout",
+          "why_it_matters": "Shrugging reduces tricep work and stresses shoulders"
+        },
+        {
+          "mistake": "Using momentum or swinging",
+          "correction": "Controlled tempo, especially on eccentric",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Excessive forward lean",
+          "correction": "Slight lean is good, but too much shifts to chest",
+          "why_it_matters": "This should remain a tricep-focused exercise"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Dips",
+            "description": "Loop resistance band around bars, place knees or feet in band",
+            "when_to_use": "Building up to bodyweight dips"
+          },
+          {
+            "name": "Bench Dips",
+            "description": "Hands on bench behind you, feet on floor or elevated",
+            "when_to_use": "Learning dip movement pattern"
+          },
+          {
+            "name": "Negative Dips",
+            "description": "Jump to top position, lower slowly over 3-5 seconds",
+            "when_to_use": "Building strength for full dips"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Dips",
+            "description": "Add weight using dip belt with plates or weighted vest",
+            "when_to_use": "Once bodyweight becomes easy (10+ reps)"
+          },
+          {
+            "name": "Ring Dips",
+            "description": "Perform on gymnastic rings for increased instability",
+            "when_to_use": "Advanced strength and stability"
+          },
+          {
+            "name": "L-Sit Dips",
+            "description": "Hold L-sit position (legs straight out) during dips",
+            "when_to_use": "Advanced core and pressing strength"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall tricep and chest development", "Functional pressing strength", "Mass building", "Relative strength"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Overhead Extensions", "Pushdowns", "Pressing Movements"],
+        "rep_ranges": {
+          "strength": "3-6 reps (weighted)",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-20+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Can be hard on shoulders if not performed correctly",
+        "Don't go deeper than parallel (upper arms to floor)",
+        "Keep shoulders depressed to protect joints",
+        "Start with assisted variations if needed",
+        "Stop if experiencing sharp shoulder pain"
+      ],
+      "video_explanation_script": "Dips are one of the best compound exercises for building triceps and chest. Grab parallel dip bars and support yourself with arms fully extended - this is your starting position. Keep your shoulders down, not shrugged up. With a slight forward lean, lower yourself down by bending your elbows. Keep your elbows tracking back, not flaring out too wide. Descend until your upper arms are about parallel to the floor - don't go deeper than that or you'll stress your shoulders. From the bottom, press yourself back up to full arm extension, squeezing your triceps at the top. The key is controlling the descent and fully locking out at the top. Once you can do 10+ reps with bodyweight, add weight with a dip belt to continue progressing."
+    },
+    {
+      "exercise_id": "tricep_005",
+      "exercise_name": "Skull Crusher (Lying Tricep Extension)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (Long Head)", "Triceps Brachii (Lateral Head)", "Triceps Brachii (Medial Head)"],
+        "secondary": [],
+        "stabilizers": ["Shoulders", "Core"]
+      },
+      "movement_pattern": "Elbow Extension (Lying)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Flat Bench", "EZ-Bar or Barbell or Dumbbells"],
+        "optional": ["Decline Bench"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Lie on flat bench, hold EZ-bar or barbell at arm's length above chest/face with hands close together.",
+        "key_points": [
+          "Bar held above chest or face depending on variation",
+          "Arms perpendicular to body or angled slightly back",
+          "EZ-bar preferred over straight bar for wrist comfort"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on bench, bar held at arm's length above upper chest or face, elbows pointed toward ceiling.",
+        "body_alignment": {
+          "head": "On bench, neutral",
+          "shoulders": "Flat on bench",
+          "back": "Flat on bench",
+          "hips": "On bench",
+          "feet": "Flat on floor",
+          "arms": "Extended, perpendicular to body or angled slightly toward head"
+        },
+        "grip": "Overhand (pronated) grip on EZ-bar or barbell, hands closer than shoulder-width"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower bar toward forehead/top of head by bending elbows while keeping upper arms stationary",
+          "cues": [
+            "Lower the bar to your forehead or just behind your head",
+            "Keep your upper arms still - don't let them drift back",
+            "Control the descent carefully",
+            "Feel the stretch in your triceps",
+            "Elbows stay pointing toward ceiling"
+          ],
+          "end_position": "Bar at or just past forehead/top of head, elbows bent fully, upper arms still perpendicular or angled"
+        },
+        "concentric_phase": {
+          "description": "Extend elbows to press bar back to starting position",
+          "cues": [
+            "Press the bar back up",
+            "Drive through your triceps",
+            "Keep upper arms in same position",
+            "Fully extend your elbows",
+            "Squeeze triceps at lockout"
+          ],
+          "end_position": "Arms fully extended, bar over upper chest/face, elbows locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on lower, exhale on press up",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec down, 1 sec stretch, 2 sec up, 1 sec squeeze)",
+        "hypertrophy_focus": "3-2-2-1 (3 sec down, 2 sec pause, 2 sec up, 1 sec squeeze)",
+        "control_focus": "4-2-2-1 (4 sec down, 2 sec pause, 2 sec up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From full elbow extension to bar at/past forehead",
+        "critical_point": "Full extension at top, controlled descent to forehead",
+        "avoid": "Upper arms drifting back and forth"
+      },
+      "form_cues": [
+        "The name is intimidating but the exercise is safe when done correctly",
+        "Keep your upper arms in the same position - locked in space",
+        "Think about only your forearms moving",
+        "Some people lower to forehead, some behind head - both work",
+        "Control is crucial - this isn't called 'skull crusher' for nothing"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Upper arms drifting back toward head",
+          "correction": "Keep upper arms perpendicular to body or at slight angle",
+          "why_it_matters": "Drifting arms turns it into a pressing movement"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use moderate weight with strict control",
+          "why_it_matters": "Heavy weight increases injury risk and forces poor form"
+        },
+        {
+          "mistake": "Elbows flaring out to sides",
+          "correction": "Keep elbows pointing toward ceiling, close together",
+          "why_it_matters": "Flaring reduces tricep isolation"
+        },
+        {
+          "mistake": "Not controlling the descent",
+          "correction": "Slow controlled lowering, don't drop the bar",
+          "why_it_matters": "Fast descent increases face/head injury risk"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Lower bar to forehead/behind head, full extension at top",
+          "why_it_matters": "Partial reps limit development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Skull Crusher",
+            "description": "Use dumbbells for independent arm movement",
+            "when_to_use": "More natural movement, addressing imbalances"
+          },
+          {
+            "name": "Cable Lying Tricep Extension",
+            "description": "Use cable with straight bar from low pulley",
+            "when_to_use": "Constant tension variation"
+          },
+          {
+            "name": "Incline Skull Crusher",
+            "description": "Perform on incline bench (30-45 degrees)",
+            "when_to_use": "Easier on elbows, different angle"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Decline Skull Crusher",
+            "description": "Perform on decline bench for increased stretch",
+            "when_to_use": "Advanced, increased long head emphasis"
+          },
+          {
+            "name": "Skull Crusher to Press",
+            "description": "After extension, lower bar to chest then press",
+            "when_to_use": "Advanced combination movement"
+          },
+          {
+            "name": "Rolling Tricep Extension",
+            "description": "After lowering, allow upper arms to go back slightly",
+            "when_to_use": "Increased long head stretch"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Overall tricep development", "Tricep mass", "Long head emphasis with stretch"],
+        "place_in_workout": "Mid-workout as primary or secondary tricep movement",
+        "pairs_well_with": ["Close-Grip Press", "Pushdowns", "Dips"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "12-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Exercise name is scary but safe when performed correctly",
+        "Always use controlled tempo on descent",
+        "EZ-bar is more wrist-friendly than straight bar",
+        "Can be hard on elbows - start light",
+        "Have spotter for heavy attempts"
+      ],
+      "video_explanation_script": "Skull crushers, also called lying tricep extensions, are a classic mass-building tricep exercise. Lie on a flat bench holding an EZ-bar with your arms extended above your upper chest. Your hands should be closer than shoulder-width apart. Here's the key: keep your upper arms in this position - they don't move. Lower the bar toward your forehead or just past the top of your head by bending your elbows. Control this descent carefully - hence the name 'skull crusher.' Feel the stretch in your triceps at the bottom. Then press the bar back up by extending your elbows, fully locking out at the top. Only your forearms move, your upper arms stay in position. Use an EZ-bar if possible as it's easier on your wrists than a straight bar."
+    },
+    {
+      "exercise_id": "tricep_006",
+      "exercise_name": "Diamond Push-Up",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (All Three Heads)"],
+        "secondary": ["Pectoralis Major", "Anterior Deltoids"],
+        "stabilizers": ["Core", "Serratus Anterior"]
+      },
+      "movement_pattern": "Horizontal Pressing",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["None (Bodyweight)"],
+        "optional": ["Elevated Surface", "Weight Vest"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Start in push-up position with hands close together forming diamond shape with index fingers and thumbs.",
+        "key_points": [
+          "Hands positioned close together under chest",
+          "Index fingers and thumbs form diamond/triangle shape",
+          "Body in straight plank position"
+        ]
+      },
+      "starting_position": {
+        "description": "Plank position with hands close together forming diamond, body straight from head to heels, arms extended.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Over or slightly in front of hands",
+          "spine": "Neutral, straight line from head to heels",
+          "hips": "Level, not sagging or piked",
+          "legs": "Extended, feet together or hip-width",
+          "arms": "Extended, elbows locked"
+        },
+        "hand_position": "Hands close together, index fingers and thumbs touching or nearly touching to form diamond shape"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower body toward hands by bending elbows while maintaining plank position",
+          "cues": [
+            "Lower your chest toward your hands",
+            "Keep elbows tucked close to sides",
+            "Maintain straight body line",
+            "Don't let hips sag or pike up",
+            "Descend until chest nearly touches hands"
+          ],
+          "end_position": "Chest near hands, elbows bent and tucked, body straight"
+        },
+        "concentric_phase": {
+          "description": "Press body back up to starting position by extending elbows",
+          "cues": [
+            "Push yourself back up",
+            "Drive through your triceps",
+            "Maintain plank position",
+            "Fully extend arms at top",
+            "Squeeze triceps at lockout"
+          ],
+          "end_position": "Arms fully extended, body straight, elbows locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on descent, exhale on press up",
+        "alternative": "Continuous breathing for higher reps"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "hypertrophy_focus": "3-1-2-0 (3 sec down, 1 sec pause, 2 sec up, no pause)",
+        "endurance": "1-0-1-0 (continuous movement)"
+      },
+      "range_of_motion": {
+        "full": "From full elbow extension to chest nearly touching hands",
+        "critical_point": "Full extension at top, chest near hands at bottom",
+        "avoid": "Partial reps or losing plank position"
+      },
+      "form_cues": [
+        "This is the hardest push-up variation for triceps",
+        "Your elbows should stay close to your body, not flare out",
+        "Think about pushing yourself away from the floor",
+        "Keep your body rigid like a plank the entire time",
+        "Your chest should almost touch the diamond formed by your hands"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips sagging toward floor",
+          "correction": "Engage core, maintain straight line from head to heels",
+          "why_it_matters": "Sagging reduces tricep work and strains lower back"
+        },
+        {
+          "mistake": "Elbows flaring out excessively",
+          "correction": "Keep elbows tucked close to sides (30-45 degrees)",
+          "why_it_matters": "Flaring shifts work from triceps to chest"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Lower until chest nearly touches hands",
+          "why_it_matters": "Partial reps limit strength and development"
+        },
+        {
+          "mistake": "Hips piked up toward ceiling",
+          "correction": "Keep hips level with shoulders and heels",
+          "why_it_matters": "Piking makes exercise easier and reduces effectiveness"
+        },
+        {
+          "mistake": "Hands too far apart",
+          "correction": "Hands close together forming diamond shape",
+          "why_it_matters": "Wide hand position reduces tricep emphasis"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Incline Diamond Push-Up",
+            "description": "Hands on elevated surface (bench, box)",
+            "when_to_use": "Building up to floor diamond push-ups"
+          },
+          {
+            "name": "Knee Diamond Push-Up",
+            "description": "Perform from knees instead of toes",
+            "when_to_use": "Learning movement, building strength"
+          },
+          {
+            "name": "Close-Grip Push-Up",
+            "description": "Hands closer than regular push-up but not diamond",
+            "when_to_use": "Intermediate between regular and diamond"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Decline Diamond Push-Up",
+            "description": "Feet elevated on bench or box",
+            "when_to_use": "Increasing difficulty once floor version is easy"
+          },
+          {
+            "name": "Weighted Diamond Push-Up",
+            "description": "Add weight vest or plate on back",
+            "when_to_use": "Advanced, when bodyweight becomes easy (15+ reps)"
+          },
+          {
+            "name": "Diamond Push-Up with Pause",
+            "description": "Pause 2-3 seconds at bottom",
+            "when_to_use": "Increasing time under tension"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Tricep development with no equipment", "Bodyweight pressing strength", "Home workouts", "Conditioning"],
+        "place_in_workout": "Primary movement for bodyweight training, or finisher after weight training",
+        "pairs_well_with": ["Regular Push-Ups", "Pike Push-Ups", "Dips"],
+        "rep_ranges": {
+          "strength": "5-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-30+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Safe exercise when performed with proper form",
+        "Can stress wrists - warm up properly",
+        "Stop if experiencing sharp elbow or shoulder pain",
+        "Maintain plank position to protect lower back",
+        "Progress gradually from easier variations"
+      },
+      "video_explanation_script": "Diamond push-ups are the most effective bodyweight exercise for building triceps. Get into a push-up position, but bring your hands close together under your chest so your index fingers and thumbs form a diamond or triangle shape. Your body should be in a straight line from head to heels - engage your core to maintain this plank position. Lower yourself down by bending your elbows, keeping them tucked close to your sides. Descend until your chest nearly touches your hands. Then press yourself back up, fully extending your arms and squeezing your triceps at the top. The close hand position puts maximum emphasis on your triceps. If regular diamond push-ups are too difficult, start with your hands on an elevated surface or drop to your knees."
+    },
+    {
+      "exercise_id": "tricep_007",
+      "exercise_name": "Rope Overhead Tricep Extension (Cable)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (Long Head)"],
+        "secondary": ["Triceps Brachii (Lateral Head)", "Triceps Brachii (Medial Head)"],
+        "stabilizers": ["Core", "Shoulders"]
+      },
+      "movement_pattern": "Overhead Elbow Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Rope Attachment"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to lowest position, attach rope, face away from machine, hold rope overhead.",
+        "key_points": [
+          "Pulley at lowest setting",
+          "Stand facing away from machine",
+          "Rope held overhead behind head"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing away from cable machine, rope held overhead behind head, arms bent, upper arms close to head.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Stable",
+          "spine": "Neutral, upright or slight forward lean",
+          "hips": "Neutral",
+          "feet": "Staggered or hip-width stance for stability",
+          "arms": "Overhead, elbows bent, upper arms close to head"
+        },
+        "grip": "Neutral grip on rope ends, palms facing each other"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Extend elbows to press rope overhead while keeping upper arms stationary",
+          "cues": [
+            "Press the rope up and forward overhead",
+            "Keep elbows pointing forward and close together",
+            "Fully extend your arms",
+            "Spread the rope ends apart slightly at top",
+            "Squeeze your triceps at lockout"
+          ],
+          "end_position": "Arms fully extended overhead, rope spread slightly, upper arms remained stationary"
+        },
+        "eccentric_phase": {
+          "description": "Lower rope back to starting position behind head, resisting cable tension",
+          "cues": [
+            "Control the descent",
+            "Resist the cable pulling you back",
+            "Lower until deep stretch in triceps",
+            "Keep upper arms still and close to head",
+            "Maintain forward body position"
+          ],
+          "end_position": "Rope behind head, elbows bent fully, deep stretch in long head"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on press up, inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec up, 2 sec squeeze, 3 sec down, 2 sec stretch)",
+        "constant_tension": "1-1-3-1 (1 sec up, 1 sec squeeze, 3 sec down, 1 sec stretch)"
+      },
+      "range_of_motion": {
+        "full": "From rope behind head to full overhead extension",
+        "critical_point": "Full extension with rope spread, deep stretch at bottom",
+        "avoid": "Upper arms moving forward/back or losing stretch position"
+      },
+      "form_cues": [
+        "The cable creates constant tension on your long head",
+        "Think about reaching up toward the ceiling",
+        "Spread the rope apart at the top for maximum contraction",
+        "Your upper arms should stay pointing forward",
+        "Step forward away from machine for better angle"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Upper arms drifting forward",
+          "correction": "Keep upper arms close to head, pointing forward throughout",
+          "why_it_matters": "Drifting reduces long head emphasis"
+        },
+        {
+          "mistake": "Cable pulling body backward",
+          "correction": "Stand far enough forward, maintain stable position",
+          "why_it_matters": "Losing position reduces effectiveness"
+        },
+        {
+          "mistake": "Elbows flaring out to sides",
+          "correction": "Keep elbows pointing forward, close together",
+          "why_it_matters": "Flaring reduces tricep isolation"
+        },
+        {
+          "mistake": "Not achieving full stretch at bottom",
+          "correction": "Lower rope fully behind head for deep stretch",
+          "why_it_matters": "The stretch is crucial for long head development"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full extension at top, full stretch at bottom",
+          "why_it_matters": "Partial reps limit development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Single-Arm Cable Overhead Extension",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Addressing imbalances, learning movement"
+          },
+          {
+            "name": "Kneeling Cable Overhead Extension",
+            "description": "Perform from kneeling position",
+            "when_to_use": "Reducing stability demands"
+          },
+          {
+            "name": "Lighter Weight High Rep",
+            "description": "Use very light weight for 15-20+ reps",
+            "when_to_use": "Building mind-muscle connection"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Cable Overhead Extension with Pause",
+            "description": "Pause 2-3 seconds at full extension and at stretch",
+            "when_to_use": "Maximizing contraction and stretch"
+          },
+          {
+            "name": "Drop Set Cable Overhead Extension",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Advanced intensity technique"
+          },
+          {
+            "name": "Constant Tension Variation",
+            "description": "Don't fully relax at bottom, maintain tension",
+            "when_to_use": "Increasing intensity"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Long head development with constant tension", "Tricep mass", "Overhead strength", "Pump work"],
+        "place_in_workout": "Mid to end of workout as accessory work",
+        "pairs_well_with": ["Pushdowns", "Close-Grip Press", "Dips"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "pump": "12-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Can stress shoulder if mobility is limited",
+        "Constant cable tension creates significant pump",
+        "Good for high-rep work",
+        "Easy to adjust weight between sets"
+      ],
+      "video_explanation_script": "Cable rope overhead extensions are excellent for targeting the long head of your triceps with constant tension. Set a cable pulley to the lowest position and attach a rope. Face away from the machine and grab the rope ends. Step forward and bring the rope overhead so it's behind your head with your elbows bent. Your upper arms should be close to your head, elbows pointing forward. From here, press the rope up and forward overhead by extending your elbows. At the top, spread the rope ends apart slightly and fully extend your arms. Lower back down with control, feeling the deep stretch in your triceps at the bottom. The cable creates constant tension throughout the movement, and the overhead position really emphasizes the long head."
+    },
+    {
+      "exercise_id": "tricep_008",
+      "exercise_name": "Kickback (Dumbbell)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (Lateral Head)", "Triceps Brachii (Medial Head)"],
+        "secondary": ["Triceps Brachii (Long Head)"],
+        "stabilizers": ["Rear Deltoids", "Core", "Lats"]
+      },
+      "movement_pattern": "Elbow Extension (Horizontal)",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Dumbbell", "Bench or Support"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Place one hand and same-side knee on bench for support, other hand holds dumbbell, torso parallel to floor.",
+        "key_points": [
+          "Torso parallel or near-parallel to floor",
+          "Upper arm of working side parallel to torso",
+          "Opposite hand and knee on bench for stability"
+        ]
+      },
+      "starting_position": {
+        "description": "Bent over with one hand and knee on bench, working arm bent at 90 degrees with upper arm parallel to torso, dumbbell hanging.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "torso": "Parallel to floor, flat back",
+          "working_upper_arm": "Parallel to torso, tight to side",
+          "working_elbow": "Bent at 90 degrees",
+          "support_arm": "Extended on bench",
+          "support_knee": "On bench"
+        },
+        "grip": "Neutral grip on dumbbell (palm facing in)"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Extend elbow to straighten arm behind body while keeping upper arm stationary",
+          "cues": [
+            "Kick the dumbbell back by straightening your arm",
+            "Keep your upper arm glued to your side",
+            "Fully extend your arm behind you",
+            "Squeeze your tricep at full extension",
+            "Think about pushing the dumbbell back and up slightly"
+          ],
+          "end_position": "Arm fully extended behind body, upper arm remained parallel to torso, tricep contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbell back to starting position by bending elbow",
+          "cues": [
+            "Control the descent",
+            "Lower until 90-degree elbow bend",
+            "Keep upper arm still",
+            "Maintain tension in tricep"
+          ],
+          "end_position": "Elbow bent at 90 degrees, dumbbell hanging, upper arm still parallel to torso"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on extension (kickback), inhale on lower",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-2-2-0 (2 sec back, 2 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-3-3-0 (2 sec back, 3 sec squeeze, 3 sec down, no pause)",
+        "pump_focus": "1-3-2-0 (1 sec back, 3 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From 90-degree elbow bend to full arm extension behind body",
+        "critical_point": "Full extension with squeeze at end position",
+        "avoid": "Upper arm moving up/down or incomplete extension"
+      },
+      "form_cues": [
+        "This is all about the squeeze at full extension",
+        "Your upper arm is frozen in space - only your forearm moves",
+        "Think about straightening your arm as much as possible",
+        "The pump from this exercise is incredible",
+        "Focus on quality over quantity - lighter weight, perfect form"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Upper arm moving up and down",
+          "correction": "Keep upper arm locked parallel to torso throughout",
+          "why_it_matters": "Arm movement reduces tricep isolation"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight with strict form and full extension",
+          "why_it_matters": "Heavy weight prevents full extension where triceps work hardest"
+        },
+        {
+          "mistake": "Not achieving full arm extension",
+          "correction": "Fully straighten arm behind body, squeeze tricep",
+          "why_it_matters": "Partial range misses the peak contraction"
+        },
+        {
+          "mistake": "Swinging the dumbbell",
+          "correction": "Controlled tempo, no momentum",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Torso rotating or moving",
+          "correction": "Keep torso stable and parallel to floor",
+          "why_it_matters": "Torso movement reduces effectiveness"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Standing Kickback",
+            "description": "Stand bent over without bench support",
+            "when_to_use": "No bench available, home training"
+          },
+          {
+            "name": "Cable Kickback",
+            "description": "Use cable machine with single handle from low pulley",
+            "when_to_use": "Constant tension variation"
+          },
+          {
+            "name": "Two-Arm Kickback",
+            "description": "Both arms simultaneously while bent over",
+            "when_to_use": "Time efficiency, home training"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Kickback with Rotation",
+            "description": "Rotate to palm-up position at full extension",
+            "when_to_use": "Adding supination for extra contraction"
+          },
+          {
+            "name": "Kickback with Pause",
+            "description": "Pause 3-5 seconds at full extension",
+            "when_to_use": "Maximizing peak contraction"
+          },
+          {
+            "name": "Drop Set Kickback",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Maximum pump technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lateral and medial head isolation", "Peak contraction work", "Mind-muscle connection", "Finishing exercise"],
+        "place_in_workout": "End of workout as finisher or burnout",
+        "pairs_well_with": ["Pushdowns", "Overhead Extensions", "Close-Grip Press"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps per arm",
+          "pump": "12-20 reps per arm",
+          "burnout": "15-30 reps per arm"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Can stress lower back if torso position not maintained",
+        "Use light weight - this is about contraction not load",
+        "Excellent for rehabilitation when cleared",
+        "Good for high-rep pump work"
+      ],
+      "video_explanation_script": "Dumbbell kickbacks are perfect for isolating your triceps and getting an incredible pump. Place your left hand and left knee on a bench for support. Hold a dumbbell in your right hand and position your upper arm parallel to your torso - this is your locked position. Your elbow should be bent at 90 degrees. From here, straighten your arm by extending your elbow, kicking the dumbbell back behind you. The key is keeping your upper arm completely still - it stays glued to your side. Fully extend your arm and squeeze your tricep hard at the back. Control the weight back to the starting position. You won't use heavy weight on this exercise - it's all about that peak contraction and squeeze at the end. This is a perfect finisher exercise."
+    },
+    {
+      "exercise_id": "tricep_009",
+      "exercise_name": "Reverse-Grip Pushdown (Cable)",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (Medial Head)"],
+        "secondary": ["Triceps Brachii (Lateral Head)", "Triceps Brachii (Long Head)"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Elbow Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine with Straight Bar or EZ-Bar"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley to high position, attach straight bar, stand facing machine holding bar with underhand (supinated) grip.",
+        "key_points": [
+          "Pulley at highest setting",
+          "Underhand grip (palms facing up) - this is key difference from regular pushdown",
+          "Stand close to machine"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing cable machine, bar held at upper chest with underhand grip, elbows tucked at sides.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Back and down",
+          "spine": "Neutral with slight forward lean",
+          "hips": "Neutral",
+          "feet": "Hip-width or staggered stance",
+          "elbows": "Pinned at sides, bent about 90 degrees"
+        },
+        "grip": "Underhand (supinated) - palms facing up, hands shoulder-width apart"
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Extend elbows to push bar down while maintaining underhand grip and keeping upper arms stationary",
+          "cues": [
+            "Push the bar straight down",
+            "Keep your palms facing up the entire time",
+            "Elbows stay pinned at your sides",
+            "Fully extend your arms",
+            "Squeeze your triceps at the bottom"
+          ],
+          "end_position": "Arms fully extended, bar at or below hips, underhand grip maintained, triceps contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control bar back up to starting position, resisting cable tension",
+          "cues": [
+            "Control the return",
+            "Maintain underhand grip",
+            "Keep elbows at sides",
+            "Return to upper chest level"
+          ],
+          "end_position": "Bar at upper chest, elbows bent about 90 degrees"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale on push down, inhale on return",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec down, 1 sec squeeze, 2 sec up, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec down, 2 sec squeeze, 3 sec up, no pause)",
+        "medial_head_focus": "2-3-3-0 (2 sec down, 3 sec squeeze, 3 sec up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From elbows at 90 degrees to full elbow extension",
+        "critical_point": "Full lockout with underhand grip emphasizes medial head",
+        "avoid": "Losing underhand grip or allowing elbows to drift"
+      },
+      "form_cues": [
+        "The underhand grip targets the medial head underneath your tricep",
+        "Keep your palms facing up - don't let them rotate",
+        "This feels different from regular pushdowns - that's normal",
+        "You might use slightly less weight than overhand pushdowns",
+        "Focus on that squeeze at the bottom"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Grip rotating from underhand to neutral/overhand",
+          "correction": "Maintain strict underhand grip throughout movement",
+          "why_it_matters": "Grip rotation eliminates the medial head emphasis"
+        },
+        {
+          "mistake": "Elbows drifting forward",
+          "correction": "Keep elbows pinned at sides throughout",
+          "why_it_matters": "Elbow movement reduces tricep isolation"
+        },
+        {
+          "mistake": "Using momentum or body English",
+          "correction": "Controlled tempo, stable body position",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Not achieving full lockout",
+          "correction": "Fully extend arms and squeeze at bottom",
+          "why_it_matters": "Lockout is where triceps work maximally"
+        },
+        {
+          "mistake": "Partial range of motion",
+          "correction": "Full extension at bottom, return to 90 degrees at top",
+          "why_it_matters": "Partial reps limit development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight High Rep",
+            "description": "Use lighter weight for 15-20+ reps",
+            "when_to_use": "Learning the movement, building endurance"
+          },
+          {
+            "name": "Single-Arm Reverse-Grip Pushdown",
+            "description": "One arm at a time with single handle",
+            "when_to_use": "Better focus per arm, addressing imbalances"
+          },
+          {
+            "name": "Resistance Band Reverse Pushdown",
+            "description": "Use resistance band for at-home version",
+            "when_to_use": "Home training alternative"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Reverse-Grip Pushdown with Pause",
+            "description": "Pause 2-3 seconds at full extension",
+            "when_to_use": "Maximizing medial head contraction"
+          },
+          {
+            "name": "Slow Eccentric Reverse Pushdown",
+            "description": "4-5 second return phase",
+            "when_to_use": "Increasing time under tension"
+          },
+          {
+            "name": "Drop Set Reverse Pushdown",
+            "description": "Reduce weight immediately upon failure",
+            "when_to_use": "Advanced intensity technique"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Medial head development", "Complete tricep development", "Variety in tricep training", "Pump work"],
+        "place_in_workout": "Mid to end of workout as accessory variation",
+        "pairs_well_with": ["Regular Pushdowns", "Overhead Extensions", "Kickbacks"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "pump": "12-20 reps",
+          "endurance": "15-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise with low injury risk",
+        "Can be harder on wrists than overhand pushdowns",
+        "May use 10-20% less weight than overhand version",
+        "Good for complete tricep development",
+        "Excellent variation to add to routine"
+      },
+      "video_explanation_script": "Reverse-grip pushdowns are a great variation that emphasizes the medial head of your triceps. Set up exactly like regular cable pushdowns with the pulley at the top, but here's the key difference: use an underhand grip with your palms facing up. Stand facing the machine with your elbows tucked at your sides. From here, push the bar straight down by extending your elbows, keeping your palms facing up the entire time. Fully extend your arms at the bottom and squeeze your triceps. Control the bar back up to chest level. The underhand grip feels different and specifically targets that medial head underneath your triceps. You might use slightly less weight than with an overhand grip, and that's normal. This is an excellent variation to include for complete tricep development."
+    },
+    {
+      "exercise_id": "tricep_010",
+      "exercise_name": "JM Press",
+      "muscle_group_primary": "Triceps",
+      "muscles_targeted": {
+        "primary": ["Triceps Brachii (All Three Heads)"],
+        "secondary": ["Pectoralis Major", "Anterior Deltoids"],
+        "stabilizers": ["Core", "Lats"]
+      },
+      "movement_pattern": "Hybrid Press/Extension",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell or EZ-Bar", "Flat Bench"],
+        "optional": ["Power Rack"]
+      },
+      "difficulty_level": "Advanced",
+      "setup": {
+        "description": "Lie on flat bench, grip barbell slightly narrower than shoulder-width, bar held above upper chest.",
+        "key_points": [
+          "Grip slightly narrower than shoulder-width",
+          "Bar starts over upper chest/shoulders",
+          "Hybrid between skull crusher and close-grip press"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying on bench, barbell held at arm's length above upper chest/shoulders, grip narrower than shoulder-width.",
+        "body_alignment": {
+          "head": "On bench, neutral",
+          "shoulders": "Retracted, on bench",
+          "back": "Flat on bench with natural arch",
+          "hips": "On bench",
+          "feet": "Flat on floor",
+          "arms": "Extended above upper chest/shoulders"
+        },
+        "grip": "Overhand grip, hands 8-12 inches apart"
+      },
+      "execution": {
+        "eccentric_phase": {
+          "description": "Lower bar to lower neck/upper chest area in a diagonal path by bending elbows",
+          "cues": [
+            "Lower the bar toward your neck/upper chest area",
+            "Elbows stay tucked and move forward as bar descends",
+            "This is between a skull crusher and close-grip press",
+            "Control the descent carefully",
+            "Bar touches lower neck to upper chest area"
+          ],
+          "end_position": "Bar touching lower neck/upper chest, elbows bent and forward, forearms angled"
+        },
+        "concentric_phase": {
+          "description": "Press bar back up in diagonal path by extending elbows",
+          "cues": [
+            "Press the bar up and slightly back",
+            "Drive through your triceps",
+            "Follow the same diagonal path",
+            "Fully extend your arms",
+            "Lock out and squeeze triceps"
+          ],
+          "end_position": "Arms fully extended, bar over upper chest/shoulders, elbows locked"
+        }
+      },
+      "breathing": {
+        "pattern": "Inhale on descent, exhale on press",
+        "alternative": "Deep breath at top, hold through descent, exhale on press"
+      },
+      "tempo": {
+        "standard": "2-0-1-0 (2 sec down, no pause, 1 sec up, no pause)",
+        "strength_focus": "3-1-X-0 (3 sec down, 1 sec pause, explosive up, no pause)",
+        "hypertrophy_focus": "3-1-2-1 (3 sec down, 1 sec pause, 2 sec up, 1 sec squeeze)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to bar at lower neck/upper chest area",
+        "critical_point": "Diagonal bar path that's neither pure press nor pure extension",
+        "avoid": "Turning it into either a pure close-grip press or pure skull crusher"
+      },
+      "form_cues": [
+        "This exercise is named after powerlifter JM Blakley",
+        "Think of it as a skull crusher that ends at your neck instead of forehead",
+        "The bar path is diagonal - down and back",
+        "Your elbows move forward as the bar descends",
+        "This allows for heavier loads than skull crushers"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lowering bar to wrong position (chest or forehead)",
+          "correction": "Bar should touch lower neck to upper chest area",
+          "why_it_matters": "Wrong bar path makes it a different exercise"
+        },
+        {
+          "mistake": "Elbows not moving forward on descent",
+          "correction": "Allow elbows to travel forward as bar descends",
+          "why_it_matters": "Stationary elbows turn it into skull crusher"
+        },
+        {
+          "mistake": "Using momentum or bouncing bar",
+          "correction": "Controlled descent, light touch, controlled press",
+          "why_it_matters": "Momentum reduces tricep work and increases injury risk"
+        },
+        {
+          "mistake": "Grip too wide or narrow",
+          "correction": "Hands 8-12 inches apart for optimal leverage",
+          "why_it_matters": "Improper grip reduces effectiveness"
+        },
+        {
+          "mistake": "Not understanding the movement",
+          "correction": "Study proper form, start light, focus on bar path",
+          "why_it_matters": "This is a technical exercise requiring practice"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "EZ-Bar JM Press",
+            "description": "Use EZ-bar for wrist comfort",
+            "when_to_use": "Learning movement, wrist comfort"
+          },
+          {
+            "name": "Dumbbell JM Press",
+            "description": "Use dumbbells for independent arm movement",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Board Press JM Style",
+            "description": "Use boards to reduce range initially",
+            "when_to_use": "Learning bar path"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Paused JM Press",
+            "description": "Pause 1-2 seconds at bottom",
+            "when_to_use": "Building strength at weak point"
+          },
+          {
+            "name": "Tempo JM Press",
+            "description": "5-second eccentric phase",
+            "when_to_use": "Maximizing time under tension"
+          },
+          {
+            "name": "Chains or Bands",
+            "description": "Add accommodating resistance",
+            "when_to_use": "Advanced strength development"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Advanced tricep strength", "Powerlifting bench press lockout", "Maximum tricep loading", "Advanced lifters"],
+        "place_in_workout": "Early to mid-workout as primary tricep movement",
+        "pairs_well_with": ["Close-Grip Press", "Overhead Extensions", "Pushdowns"],
+        "rep_ranges": {
+          "strength": "3-6 reps",
+          "hypertrophy": "6-10 reps",
+          "technique": "8-12 reps with lighter weight"
+        }
+      },
+      "safety_considerations": [
+        "Advanced exercise requiring good technique",
+        "Start with light weight to learn bar path",
+        "Can stress elbows - progress gradually",
+        "Use spotter for heavy attempts",
+        "Not recommended for beginners"
+      ],
+      "video_explanation_script": "The JM Press is an advanced hybrid exercise that combines elements of a skull crusher and close-grip press. Lie on a flat bench holding a barbell with a close grip over your upper chest. Lower the bar in a diagonal path toward your lower neck or upper chest area - not to your forehead like a skull crusher, and not straight down like a press. As you lower, your elbows move forward. The bar should lightly touch between your lower neck and upper chest. Press the bar back up following that same diagonal path until your arms are fully extended. This exercise allows you to use heavier loads than skull crushers while still isolating the triceps. It's named after powerlifter JM Blakley who used it to build massive triceps. Start light to learn the unique bar path before adding weight."
+    }
+  ]
+}

@@ -1,0 +1,2009 @@
+{
+  "muscle_group": "Back",
+  "muscle_group_anatomy": {
+    "primary_muscles": [
+      {
+        "name": "Latissimus Dorsi (Lats)",
+        "function": "Shoulder extension, adduction, internal rotation; creates the 'V-taper'",
+        "description": "Largest back muscle, runs from armpit to lower back, responsible for pulling movements"
+      },
+      {
+        "name": "Trapezius (Upper)",
+        "function": "Scapular elevation (shrugging), neck extension",
+        "description": "Upper portion from neck to shoulders, creates 'traps' appearance"
+      },
+      {
+        "name": "Trapezius (Middle)",
+        "function": "Scapular retraction (pulling shoulder blades together)",
+        "description": "Middle portion between shoulder blades, important for posture"
+      },
+      {
+        "name": "Trapezius (Lower)",
+        "function": "Scapular depression and upward rotation",
+        "description": "Lower portion, pulls shoulder blades down and rotates them upward"
+      },
+      {
+        "name": "Rhomboids (Major and Minor)",
+        "function": "Scapular retraction and elevation, downward rotation",
+        "description": "Between shoulder blades, work with middle traps for posture and pulling"
+      },
+      {
+        "name": "Erector Spinae",
+        "function": "Spinal extension, maintaining upright posture, anti-flexion",
+        "description": "Muscles running along spine, critical for back strength and stability"
+      },
+      {
+        "name": "Teres Major",
+        "function": "Shoulder extension, adduction, internal rotation",
+        "description": "Small muscle in upper back, works with lats, called 'lat's little helper'"
+      },
+      {
+        "name": "Posterior Deltoid",
+        "function": "Shoulder horizontal abduction, external rotation, extension",
+        "description": "Rear shoulder, often trained with back, important for shoulder health and posture"
+      }
+    ],
+    "key_concepts": {
+      "vertical_vs_horizontal": "Vertical pulling (pull-ups, pulldowns) emphasizes lats; horizontal pulling (rows) emphasizes mid-back, rhomboids, and traps",
+      "grip_variations": "Grip width and style (overhand, underhand, neutral) change muscle emphasis and recruitment patterns",
+      "back_thickness_vs_width": "Width comes from vertical pulls with wide grips; thickness comes from heavy rowing movements"
+    }
+  },
+  "exercises": [
+    {
+      "exercise_id": "back_001",
+      "exercise_name": "Pull-Up",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi"],
+        "secondary": ["Biceps", "Teres Major", "Rhomboids", "Middle Traps"],
+        "stabilizers": ["Core", "Forearms", "Rear Deltoids"]
+      },
+      "movement_pattern": "Vertical Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Pull-Up Bar"],
+        "optional": ["Weight Belt", "Resistance Bands", "Assistance Machine"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Hang from pull-up bar with overhand grip, arms fully extended.",
+        "key_points": [
+          "Overhand (pronated) grip",
+          "Grip width slightly wider than shoulder-width",
+          "Full arm extension at start"
+        ]
+      },
+      "starting_position": {
+        "description": "Dead hang from bar with overhand grip, arms fully extended, body straight.",
+        "body_alignment": {
+          "head": "Neutral, looking forward or slightly up",
+          "shoulders": "Relaxed but engaged, scapulae slightly elevated",
+          "spine": "Neutral",
+          "hips": "Neutral, body straight or slight hollow body",
+          "knees": "Straight or bent, feet together or crossed",
+          "grip": "Overhand, wider than shoulders, full extension"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull body up by driving elbows down and back until chin clears bar",
+          "cues": [
+            "Pull your elbows down toward your hips",
+            "Think about pulling the bar to your chest",
+            "Lead with your chest",
+            "Squeeze your shoulder blades together at top",
+            "Get your chin over the bar"
+          ],
+          "end_position": "Chin above bar, chest near bar, elbows behind torso, lats fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower body with control back to full arm extension",
+          "cues": [
+            "Control the descent",
+            "Don't drop suddenly",
+            "Maintain tension in lats",
+            "Full arm extension at bottom"
+          ],
+          "end_position": "Return to dead hang, arms fully extended"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during pull up (concentric), inhale during lower (eccentric)",
+        "alternative": "Some prefer inhale on pull, exhale on lower"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "strength_focus": "X-1-3-0 (explosive up, 1 sec hold, 3 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-1 (2 sec up, 1 sec hold, 3 sec down, 1 sec hang)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension (dead hang) to chin over bar",
+        "critical_point": "Chin must clear bar at top, full extension at bottom",
+        "avoid": "Partial reps or kipping (swinging)"
+      },
+      "form_cues": [
+        "Think about pulling your elbows to your back pockets",
+        "Imagine trying to bend the bar in half",
+        "Your chest should move toward the bar, not just your chin",
+        "Engage your lats from the very bottom of the movement",
+        "This is a controlled pull, not a swing or jump"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Start from dead hang, pull until chin clears bar",
+          "why_it_matters": "Partial reps limit back development"
+        },
+        {
+          "mistake": "Kipping or swinging",
+          "correction": "Strict form, control both phases",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Shrugging shoulders at bottom",
+          "correction": "Maintain scapular control, don't let shoulders rise to ears",
+          "why_it_matters": "Proper scapular mechanics essential for shoulder health"
+        },
+        {
+          "mistake": "Leading with chin instead of chest",
+          "correction": "Think about bringing chest to bar, chin naturally follows",
+          "why_it_matters": "Chin-leading reduces lat activation and can strain neck"
+        },
+        {
+          "mistake": "Not going to full extension",
+          "correction": "Arms must be fully extended at bottom of each rep",
+          "why_it_matters": "Partial bottom range limits lat stretch and development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Pull-Up",
+            "description": "Loop resistance band from bar, place knees or feet in band for assistance",
+            "when_to_use": "Building strength toward unassisted pull-ups"
+          },
+          {
+            "name": "Negative Pull-Up",
+            "description": "Jump or step to top position, lower slowly (eccentric only)",
+            "when_to_use": "Building strength when cannot perform full pull-ups"
+          },
+          {
+            "name": "Inverted Row",
+            "description": "Horizontal pulling variation at lower height",
+            "when_to_use": "Building pulling strength as progression toward pull-ups"
+          },
+          {
+            "name": "Assisted Pull-Up Machine",
+            "description": "Use machine with counterweight assistance",
+            "when_to_use": "Building volume when unassisted reps are limited"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Pull-Up",
+            "description": "Add weight via belt, vest, or dumbbell between feet",
+            "when_to_use": "When bodyweight becomes manageable for 8-12 reps"
+          },
+          {
+            "name": "Chest-to-Bar Pull-Up",
+            "description": "Pull until chest touches bar instead of just chin over",
+            "when_to_use": "Increasing range and difficulty"
+          },
+          {
+            "name": "L-Sit Pull-Up",
+            "description": "Hold legs straight out at 90 degrees while pulling",
+            "when_to_use": "Advanced variation adding core challenge"
+          },
+          {
+            "name": "Archer Pull-Up",
+            "description": "Pull to one side, straightening opposite arm",
+            "when_to_use": "Progression toward one-arm pull-up"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lat width and development", "Overall back strength", "Bodyweight strength", "Athletic performance"],
+        "place_in_workout": "Early workout as primary movement when fresh",
+        "pairs_well_with": ["Rows", "Deadlifts", "Bicep work"],
+        "rep_ranges": {
+          "strength": "3-8 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-20+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Can stress shoulders if done with poor form",
+        "Build up volume gradually",
+        "Ensure bar is secure",
+        "Start with assistance if cannot perform clean reps",
+        "One of the best exercises for back development"
+      ],
+      "video_explanation_script": "The pull-up is one of the king exercises for back development. Hang from the bar with an overhand grip slightly wider than shoulder-width, arms fully extended. From this dead hang, pull yourself up by driving your elbows down toward your hips. Think about bringing your chest to the bar, not just your chin. At the top, your chin should clear the bar and your shoulder blades should be squeezed together. Then control the descent back to a full dead hang. No kipping or swinging - this is strict, controlled pulling. Pull-ups build incredible lat width and overall back strength. If you can't do them yet, use bands or negatives to build up."
+    },
+    {
+      "exercise_id": "back_002",
+      "exercise_name": "Chin-Up",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Biceps"],
+        "secondary": ["Teres Major", "Rhomboids", "Middle Traps"],
+        "stabilizers": ["Core", "Forearms", "Rear Deltoids"]
+      },
+      "movement_pattern": "Vertical Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Pull-Up Bar"],
+        "optional": ["Weight Belt", "Resistance Bands", "Assistance Machine"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Hang from pull-up bar with underhand (supinated) grip, arms fully extended.",
+        "key_points": [
+          "Underhand grip (palms facing you)",
+          "Grip width at shoulder-width or slightly narrower",
+          "Full arm extension at start"
+        ]
+      },
+      "starting_position": {
+        "description": "Dead hang from bar with underhand grip, arms fully extended, body straight.",
+        "body_alignment": {
+          "head": "Neutral, looking forward or slightly up",
+          "shoulders": "Relaxed but engaged",
+          "spine": "Neutral",
+          "hips": "Neutral, body straight",
+          "knees": "Straight or bent, feet together",
+          "grip": "Underhand, shoulder-width, full extension"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull body up until chin clears bar",
+          "cues": [
+            "Pull elbows down and slightly forward",
+            "Drive chest toward bar",
+            "Squeeze your lats and biceps",
+            "Chin over the bar",
+            "Shoulder blades down and together"
+          ],
+          "end_position": "Chin above bar, chest near bar, strong lat and bicep contraction"
+        },
+        "eccentric_phase": {
+          "description": "Lower body with control to full extension",
+          "cues": [
+            "Control the descent",
+            "Maintain muscle tension",
+            "Full arm extension at bottom",
+            "Don't drop suddenly"
+          ],
+          "end_position": "Arms fully extended, dead hang"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during pull, inhale during lower",
+        "alternative": "Inhale during pull, exhale during lower"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "strength_focus": "X-1-3-0 (explosive up, 1 sec hold, 3 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec hold, 3 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to chin over bar",
+        "critical_point": "Complete extension at bottom, chin clears bar at top",
+        "avoid": "Partial reps or momentum"
+      },
+      "form_cues": [
+        "The underhand grip recruits more biceps than pull-ups",
+        "Think about pulling the bar down to you rather than you up to the bar",
+        "Lead with your chest, chin follows naturally",
+        "Squeeze your lats at the top like you're crushing something in your armpits",
+        "Many find chin-ups easier than pull-ups due to bicep involvement"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Dead hang at bottom, chin over bar at top",
+          "why_it_matters": "Partial reps limit development"
+        },
+        {
+          "mistake": "Using momentum or kipping",
+          "correction": "Strict controlled movement only",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Excessive chin jutting",
+          "correction": "Neutral neck, bring chest to bar naturally",
+          "why_it_matters": "Chin jutting can strain neck"
+        },
+        {
+          "mistake": "Shoulders rising to ears at bottom",
+          "correction": "Maintain scapular control throughout",
+          "why_it_matters": "Proper shoulder mechanics prevent injury"
+        },
+        {
+          "mistake": "Grip too wide",
+          "correction": "Shoulder-width or slightly narrower for chin-ups",
+          "why_it_matters": "Wide grip on underhand can stress wrists and reduce effectiveness"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band-Assisted Chin-Up",
+            "description": "Use resistance band for upward assistance",
+            "when_to_use": "Building toward unassisted chin-ups"
+          },
+          {
+            "name": "Negative Chin-Up",
+            "description": "Jump to top, lower slowly",
+            "when_to_use": "Building eccentric strength"
+          },
+          {
+            "name": "Assisted Chin-Up Machine",
+            "description": "Use machine with counterweight",
+            "when_to_use": "Building volume"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Weighted Chin-Up",
+            "description": "Add weight via belt or between feet",
+            "when_to_use": "When bodyweight becomes easy"
+          },
+          {
+            "name": "Close-Grip Chin-Up",
+            "description": "Hands very close together",
+            "when_to_use": "Increasing bicep emphasis"
+          },
+          {
+            "name": "Commando Chin-Up",
+            "description": "Parallel grip, alternating sides over bar",
+            "when_to_use": "Advanced variation"
+          },
+          {
+            "name": "Typewriter Chin-Up",
+            "description": "Pull up center, move side to side at top",
+            "when_to_use": "Advanced variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lat development", "Bicep development", "Back thickness", "Building to pull-ups"],
+        "place_in_workout": "Early workout as primary movement",
+        "pairs_well_with": ["Rows", "Pulldowns", "Bicep curls"],
+        "rep_ranges": {
+          "strength": "4-8 reps",
+          "hypertrophy": "6-12 reps",
+          "endurance": "12-20+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Generally slightly easier than pull-ups",
+        "Can stress bicep tendons with excessive volume",
+        "Progress weight gradually",
+        "Ensure bar is secure",
+        "Excellent for back and bicep development"
+      ],
+      "video_explanation_script": "The chin-up is like the pull-up's slightly easier cousin, but it's incredibly effective for building back and bicep mass. Hang from the bar with an underhand grip at about shoulder-width, arms fully extended. From this dead hang, pull yourself up by driving your elbows down. The underhand grip naturally recruits more biceps than the overhand pull-up. Pull until your chin clears the bar, squeezing your lats and biceps at the top. Then control yourself back down to a full dead hang. Chin-ups are excellent for building overall pulling strength and are often easier to learn than pull-ups, making them a great starting point for vertical pulling."
+    },
+    {
+      "exercise_id": "back_003",
+      "exercise_name": "Lat Pulldown",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi"],
+        "secondary": ["Biceps", "Teres Major", "Rhomboids", "Middle Traps"],
+        "stabilizers": ["Core", "Forearms"]
+      },
+      "movement_pattern": "Vertical Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Lat Pulldown Machine", "Attachments (Wide Bar, Close Grip, etc.)"],
+        "optional": ["Various handle attachments"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit at lat pulldown machine, secure thighs under pad, reach up to grasp bar with desired grip.",
+        "key_points": [
+          "Adjust thigh pad to secure legs",
+          "Various grip options: wide overhand most common",
+          "Sit with upright posture"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated with thighs secured, arms extended overhead grasping bar, slight lean back acceptable.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Extended overhead, scapulae slightly elevated",
+          "spine": "Neutral with slight lean back (10-15 degrees)",
+          "hips": "Seated, secured under pad",
+          "grip": "Wide overhand grip (or chosen variation)"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull bar down toward upper chest by driving elbows down and back",
+          "cues": [
+            "Pull your elbows down toward your hips",
+            "Think about pulling the bar to your collarbone",
+            "Lead with your chest",
+            "Squeeze your shoulder blades together",
+            "Feel your lats contract fully"
+          ],
+          "end_position": "Bar at upper chest/collarbone, elbows behind torso, lats fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Control weight as arms extend back to overhead position",
+          "cues": [
+            "Control the return",
+            "Don't let weight pull you up suddenly",
+            "Maintain tension in lats",
+            "Full arm extension at top"
+          ],
+          "end_position": "Arms fully extended overhead, lats stretched"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during pull down (concentric), inhale during extension (eccentric)",
+        "alternative": "Continuous breathing pattern"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec down, 1 sec squeeze, 2 sec up, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec down, 2 sec squeeze, 3 sec up, no pause)",
+        "strength_focus": "1-1-2-0 (1 sec down, 1 sec squeeze, 2 sec up, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension overhead to bar at upper chest",
+        "critical_point": "Full stretch at top, full contraction with bar at chest level",
+        "avoid": "Pulling behind neck or leaning back excessively"
+      },
+      "form_cues": [
+        "Imagine trying to put your elbows in your back pockets",
+        "Your chest should rise up to meet the bar",
+        "Think about breaking the bar apart as you pull",
+        "Keep your torso relatively stable - small lean back is fine",
+        "This mirrors the pull-up but allows for controlled loading"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Pulling bar behind neck",
+          "correction": "Pull to upper chest/collarbone in front of body",
+          "why_it_matters": "Behind-neck pulling increases shoulder injury risk"
+        },
+        {
+          "mistake": "Excessive lean back/using momentum",
+          "correction": "Slight lean (10-15 degrees) acceptable, no swinging",
+          "why_it_matters": "Excessive lean turns it into a row, momentum reduces lat activation"
+        },
+        {
+          "mistake": "Pulling with arms instead of lats",
+          "correction": "Initiate pull with lat engagement, think elbows not hands",
+          "why_it_matters": "Arm-dominant pulling reduces back development"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Full extension at top, bar to upper chest at bottom",
+          "why_it_matters": "Partial ROM limits lat development"
+        },
+        {
+          "mistake": "Shrugging shoulders up during pull",
+          "correction": "Depress scapulae, pull shoulders down and back",
+          "why_it_matters": "Shrugging reduces lat activation and can cause neck strain"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Lat Pulldown",
+            "description": "Use lighter weight to perfect form",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Band-Assisted Pulldown",
+            "description": "Attach band from above for upward assistance",
+            "when_to_use": "Building strength"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Close-Grip Pulldown",
+            "description": "Use close parallel grip attachment",
+            "when_to_use": "Variation emphasizing lower lats and increased ROM"
+          },
+          {
+            "name": "Single-Arm Pulldown",
+            "description": "Pull with one arm at a time",
+            "when_to_use": "Addressing imbalances"
+          },
+          {
+            "name": "Neutral Grip Pulldown",
+            "description": "Use parallel handles",
+            "when_to_use": "Variation, often allows heavier load"
+          },
+          {
+            "name": "Underhand Grip Pulldown",
+            "description": "Supinated grip, hands shoulder-width",
+            "when_to_use": "More bicep involvement, similar to chin-ups"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lat width and development", "Learning vertical pulling", "High-volume back work", "Alternative to pull-ups"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Rows", "Pull-ups", "Deadlifts"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Never pull behind neck",
+        "Adjust thigh pad to prevent lifting off seat",
+        "Excellent for all levels",
+        "Great alternative when pull-ups are too difficult"
+      ],
+      "video_explanation_script": "The lat pulldown is a staple back exercise that mimics the pull-up but allows for controlled weight progression. Sit at the machine with your thighs secured under the pad. Reach up and grab the bar with a wide overhand grip. From this stretched position with arms fully extended, pull the bar down toward your upper chest by driving your elbows down and back. Think about pulling your elbows to your back pockets. At the bottom, squeeze your shoulder blades together and feel your lats fully contract. Then control the weight back up to full arm extension. Keep your torso relatively stable - a slight lean back is fine, but don't turn it into a rowing motion. The lat pulldown is excellent for building that V-taper back."
+    },
+    {
+      "exercise_id": "back_004",
+      "exercise_name": "Barbell Bent Over Row",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Rhomboids", "Middle Traps"],
+        "secondary": ["Rear Deltoids", "Biceps", "Erector Spinae"],
+        "stabilizers": ["Core", "Hamstrings", "Glutes", "Forearms"]
+      },
+      "movement_pattern": "Horizontal Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "Lifting Straps"]
+      },
+      "difficulty_level": "Intermediate to Advanced",
+      "setup": {
+        "description": "Stand with feet hip-width, hinge forward to approximately 45-degree torso angle (or parallel to ground), hold barbell with overhand grip.",
+        "key_points": [
+          "Hip hinge position, not squat",
+          "Torso angle 15-45 degrees from parallel (more upright = less back stress, more parallel = more lat stretch)",
+          "Neutral spine throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Hinged forward with barbell hanging at arm's length, neutral spine, knees slightly bent.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Packed, lats engaged",
+          "spine": "Neutral from head to tailbone",
+          "torso": "Hinged forward 15-45 degrees from parallel",
+          "hips": "Pushed back, loaded",
+          "knees": "Slight bend",
+          "grip": "Overhand, slightly wider than shoulder-width"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull barbell to lower chest/upper abdomen by driving elbows back",
+          "cues": [
+            "Pull your elbows straight back",
+            "Row to your lower chest or upper abs",
+            "Squeeze your shoulder blades together",
+            "Keep the bar close to your body",
+            "Don't let your torso rise up"
+          ],
+          "end_position": "Barbell touching lower chest/upper abs, elbows behind torso, scapulae retracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower barbell with control to full arm extension",
+          "cues": [
+            "Control the descent",
+            "Full arm extension at bottom",
+            "Maintain torso position",
+            "Allow slight scapular protraction"
+          ],
+          "end_position": "Arms fully extended, barbell hanging, slight lat and back stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during row (concentric), inhale during lower (eccentric)",
+        "alternative": "Brace and hold breath for heavy loads"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "strength_focus": "1-1-1-0 (1 sec up, 1 sec squeeze, 1 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to barbell touching torso",
+        "critical_point": "Full extension at bottom, bar reaches body at top",
+        "avoid": "Partial reps or excessive torso movement"
+      },
+      "form_cues": [
+        "Think about pulling the bar to your belt buckle",
+        "Imagine trying to squeeze a pencil between your shoulder blades",
+        "Your torso should stay at the same angle throughout the set",
+        "The bar should travel in a straight vertical line",
+        "Pull with your back, not your biceps - elbows drive the movement"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Standing up during the row (torso rising)",
+          "correction": "Maintain constant torso angle throughout set",
+          "why_it_matters": "Standing up uses momentum and reduces back activation"
+        },
+        {
+          "mistake": "Rounding the back",
+          "correction": "Maintain neutral spine throughout, engage core and erectors",
+          "why_it_matters": "Spinal flexion under load increases injury risk"
+        },
+        {
+          "mistake": "Rowing to chest instead of lower torso",
+          "correction": "Row to lower chest/upper abdomen",
+          "why_it_matters": "Rowing too high reduces lat activation"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use weight that allows perfect form",
+          "why_it_matters": "Excessive weight causes form breakdown and reduces effectiveness"
+        },
+        {
+          "mistake": "Pulling with arms instead of back",
+          "correction": "Initiate pull with lat and back engagement, elbows drive back",
+          "why_it_matters": "Arm-dominant rowing reduces back development"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Bent Over Row",
+            "description": "Use dumbbells instead of barbell",
+            "when_to_use": "Learning movement or working around limitations"
+          },
+          {
+            "name": "More Upright Row",
+            "description": "Use 30-45 degree torso angle instead of parallel",
+            "when_to_use": "Reducing lower back stress"
+          },
+          {
+            "name": "Chest-Supported Row",
+            "description": "Support chest on incline bench",
+            "when_to_use": "Removing lower back from equation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Pendlay Row",
+            "description": "Return barbell to floor between reps, torso parallel to ground",
+            "when_to_use": "Maximizing explosiveness and back development"
+          },
+          {
+            "name": "Underhand Barbell Row",
+            "description": "Use underhand grip",
+            "when_to_use": "Variation emphasizing biceps and lower lats"
+          },
+          {
+            "name": "Yates Row",
+            "description": "More upright torso (45 degrees), underhand grip",
+            "when_to_use": "Variation popularized by Dorian Yates"
+          },
+          {
+            "name": "Paused Barbell Row",
+            "description": "Pause 2-3 seconds at top",
+            "when_to_use": "Maximizing contraction"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Back thickness", "Overall back mass", "Strength development", "Mid-back and lat development"],
+        "place_in_workout": "Early workout as primary movement",
+        "pairs_well_with": ["Pull-ups", "Deadlifts", "Pulldowns"],
+        "rep_ranges": {
+          "strength": "4-8 reps",
+          "hypertrophy": "8-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Requires good hip hinge mechanics",
+        "Demands significant core and lower back strength",
+        "Never sacrifice neutral spine for weight",
+        "Use lifting straps if grip is limiting",
+        "One of the best mass-builders for back"
+      ],
+      "video_explanation_script": "The barbell bent over row is a cornerstone exercise for building back thickness. Start by hinging at your hips until your torso is somewhere between 15 to 45 degrees from parallel to the ground - the more horizontal you are, the more lat stretch you'll get. Hold the barbell with an overhand grip just outside shoulder-width, arms fully extended. From here, pull the bar up to your lower chest or upper abdomen by driving your elbows straight back. Squeeze your shoulder blades together at the top. Your torso should maintain the same angle throughout - don't stand up during the row. Lower the bar under control to full arm extension. The bent over row builds serious back thickness and is a staple for overall back development."
+    },
+    {
+      "exercise_id": "back_005",
+      "exercise_name": "Single-Arm Dumbbell Row",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Rhomboids", "Middle Traps"],
+        "secondary": ["Rear Deltoids", "Biceps"],
+        "stabilizers": ["Core", "Obliques", "Hip Stabilizers"]
+      },
+      "movement_pattern": "Unilateral Horizontal Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Dumbbell", "Flat Bench"],
+        "optional": ["Various support options"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Place one knee and same-side hand on bench for support, other foot on ground, dumbbell in free hand hanging at arm's length.",
+        "key_points": [
+          "Supporting knee and hand on bench",
+          "Torso roughly parallel to ground",
+          "Free foot planted firmly on ground"
+        ]
+      },
+      "starting_position": {
+        "description": "Three points of contact on bench (knee, hand, other foot on ground), torso parallel to ground, dumbbell hanging.",
+        "body_alignment": {
+          "head": "Neutral, looking down at bench",
+          "shoulders": "Level, working side slightly lower due to weight",
+          "spine": "Neutral, parallel to ground or slight angle",
+          "hips": "Level, square to ground",
+          "supporting_arm": "Extended on bench directly under shoulder",
+          "working_arm": "Fully extended with dumbbell hanging"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull dumbbell up toward hip by driving elbow back and up",
+          "cues": [
+            "Pull your elbow straight back toward ceiling",
+            "Row to your hip, not your chest",
+            "Squeeze your shoulder blade back",
+            "Keep your hips level - no rotation",
+            "Feel your lat contract fully"
+          ],
+          "end_position": "Dumbbell at hip level, elbow above torso, scapula retracted, lat fully contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbell with control back to full arm extension",
+          "cues": [
+            "Control the descent",
+            "Full arm extension at bottom",
+            "Allow slight lat stretch",
+            "Maintain torso position"
+          ],
+          "end_position": "Arm fully extended, dumbbell hanging, slight lat stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during row (concentric), inhale during lower (eccentric)",
+        "alternative": "Continuous breathing pattern"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec up, 2 sec squeeze, 3 sec down, 1 sec stretch)",
+        "explosive": "X-1-2-1 (explosive up, 1 sec squeeze, 2 sec down, 1 sec stretch)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to dumbbell at hip level",
+        "critical_point": "Full extension at bottom, maximum elbow height at top",
+        "avoid": "Hip rotation or torso twisting"
+      },
+      "form_cues": [
+        "Think about pulling your elbow to the ceiling behind you",
+        "Row toward your hip pocket, not toward your chest",
+        "Your hips should stay level - no rotation or opening up",
+        "Imagine your arm is a hook, your lat is doing the pulling",
+        "The dumbbell should travel in a slight arc toward your hip"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rotating torso/hips during row",
+          "correction": "Keep hips level and square throughout, core engaged",
+          "why_it_matters": "Rotation reduces lat activation and turns it into a rotating movement"
+        },
+        {
+          "mistake": "Pulling straight up instead of back to hip",
+          "correction": "Drive elbow back and up, row toward hip",
+          "why_it_matters": "Vertical pulling reduces lat activation"
+        },
+        {
+          "mistake": "Shrugging shoulder up",
+          "correction": "Pull shoulder blade back (retract), not up (elevate)",
+          "why_it_matters": "Shrugging reduces mid-back activation"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Full arm extension at bottom, maximal row height at top",
+          "why_it_matters": "Partial ROM limits development"
+        },
+        {
+          "mistake": "Supporting arm bent or body position unstable",
+          "correction": "Supporting arm fully extended, stable tripod position",
+          "why_it_matters": "Poor stability reduces ability to row heavy"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Lighter Weight Dumbbell Row",
+            "description": "Use lighter dumbbell to perfect form",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Both Hands on Bench Row",
+            "description": "Both hands on bench, no knee support, both feet on ground",
+            "when_to_use": "Alternative setup for balance"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Kroc Row",
+            "description": "Very heavy weight, slight body english, high reps",
+            "when_to_use": "Advanced strength and grip work"
+          },
+          {
+            "name": "Paused Dumbbell Row",
+            "description": "Pause 2-3 seconds at top",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Dead-Stop Dumbbell Row",
+            "description": "Set dumbbell on ground between reps",
+            "when_to_use": "Eliminating stretch reflex"
+          },
+          {
+            "name": "Chest-Supported Single-Arm Row",
+            "description": "Lie on incline bench for support",
+            "when_to_use": "Removing lower back from equation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Unilateral back development", "Addressing imbalances", "Back thickness", "Lat and mid-back development"],
+        "place_in_workout": "Mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Barbell Rows", "Pull-ups", "Deadlifts"],
+        "rep_ranges": {
+          "strength": "6-10 reps per arm",
+          "hypertrophy": "8-15 reps per arm",
+          "endurance": "15-20 reps per arm"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Excellent for identifying imbalances",
+        "Easier on lower back than bilateral rows",
+        "Ensure bench is stable",
+        "One of the best exercises for back development"
+      ],
+      "video_explanation_script": "The single-arm dumbbell row is a staple for building back thickness. Place one knee and the same-side hand on a bench, with your torso roughly parallel to the ground. Plant your other foot firmly on the floor. Let a dumbbell hang at arm's length from your free hand. From here, pull your elbow straight back toward the ceiling, rowing the dumbbell up to your hip. The key is keeping your hips level - no rotation. Squeeze your shoulder blade back at the top and feel your lat contract fully. Then control the dumbbell back to full arm extension. The single-arm row allows you to focus on one side at a time, making it easier to develop a strong mind-muscle connection and address any imbalances."
+    },
+    {
+      "exercise_id": "back_006",
+      "exercise_name": "Seated Cable Row",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Rhomboids", "Middle Traps"],
+        "secondary": ["Rear Deltoids", "Biceps", "Erector Spinae"],
+        "stabilizers": ["Core", "Hip Flexors"]
+      },
+      "movement_pattern": "Horizontal Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Cable Machine with Row Station", "V-Bar or Various Handles"],
+        "optional": ["Different handle attachments"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Sit at cable row station with feet on platform, grasp attachment with arms extended, slight forward lean.",
+        "key_points": [
+          "Feet firmly planted on platform",
+          "Knees slightly bent",
+          "Various handle options available"
+        ]
+      },
+      "starting_position": {
+        "description": "Seated with feet on platform, arms fully extended forward holding cable attachment, torso upright or slight forward lean.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Extended forward, slight protraction",
+          "spine": "Neutral, upright or slight forward lean",
+          "hips": "Seated, 90-degree angle or slight forward lean",
+          "knees": "Slightly bent",
+          "arms": "Fully extended"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull handle to torso by driving elbows back, lean back slightly to upright position",
+          "cues": [
+            "Pull your elbows straight back",
+            "Row to your lower chest or upper abs",
+            "Squeeze your shoulder blades together",
+            "Lean back slightly to vertical",
+            "Keep the cable path horizontal"
+          ],
+          "end_position": "Handle at lower chest/upper abdomen, torso upright or slight lean back, scapulae retracted, lats contracted"
+        },
+        "eccentric_phase": {
+          "description": "Extend arms with control, allow slight forward lean as arms extend",
+          "cues": [
+            "Control the return",
+            "Allow slight forward lean with extension",
+            "Full arm extension",
+            "Feel the lat stretch"
+          ],
+          "end_position": "Arms fully extended, slight forward lean, lats stretched"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during row (concentric), inhale during extension (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec row, 1 sec squeeze, 2 sec extend, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec row, 2 sec squeeze, 3 sec extend, 1 sec stretch)",
+        "strength_focus": "1-1-2-0 (1 sec row, 1 sec squeeze, 2 sec extend, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension with forward lean to handle at torso with upright position",
+        "critical_point": "Full extension with stretch, full contraction with retraction",
+        "avoid": "Excessive lean back or using momentum"
+      },
+      "form_cues": [
+        "Think about pulling your elbows through your torso",
+        "Squeeze your shoulder blades like you're holding a tennis ball between them",
+        "The lean forward and back should be slight - mostly arms are moving",
+        "Drive your chest forward to meet the handle",
+        "Pull with your back, not your biceps"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Excessive torso movement/swinging",
+          "correction": "Slight lean is fine, but don't turn it into a rocking motion",
+          "why_it_matters": "Excessive momentum reduces back activation"
+        },
+        {
+          "mistake": "Rounding upper back",
+          "correction": "Maintain neutral spine, chest out throughout",
+          "why_it_matters": "Rounding reduces mid-back activation and can cause injury"
+        },
+        {
+          "mistake": "Pulling with arms instead of back",
+          "correction": "Initiate pull with lat and back engagement, elbows drive movement",
+          "why_it_matters": "Arm-dominant pulling reduces back development"
+        },
+        {
+          "mistake": "Not achieving full scapular retraction",
+          "correction": "Squeeze shoulder blades together fully at end of row",
+          "why_it_matters": "Incomplete retraction limits mid-back development"
+        },
+        {
+          "mistake": "Feet slipping or knees locking",
+          "correction": "Firmly plant feet, maintain slight knee bend",
+          "why_it_matters": "Poor positioning reduces stability and power transfer"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Cable Row",
+            "description": "Use lighter weight to perfect form",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Strict Position Cable Row",
+            "description": "Maintain perfectly upright torso, no lean",
+            "when_to_use": "Focusing on strict form"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Wide Grip Cable Row",
+            "description": "Use wide bar attachment",
+            "when_to_use": "Emphasizing mid-back and rear delts"
+          },
+          {
+            "name": "Close Grip Cable Row",
+            "description": "Use close V-bar or parallel handles",
+            "when_to_use": "Increased range of motion and lower lat emphasis"
+          },
+          {
+            "name": "Single-Arm Cable Row",
+            "description": "Row with one arm at a time",
+            "when_to_use": "Addressing imbalances"
+          },
+          {
+            "name": "Paused Cable Row",
+            "description": "Pause 3-5 seconds at full contraction",
+            "when_to_use": "Maximizing mid-back activation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Back thickness", "Mid-back development", "Constant tension on back", "Safe rowing variation"],
+        "place_in_workout": "Mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Lat Pulldowns", "Pull-ups", "Rows"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "10-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Cable provides constant tension",
+        "Easier to control than free weight rows",
+        "Good for all experience levels",
+        "Excellent for back development"
+      ],
+      "video_explanation_script": "The seated cable row is a fundamental exercise for building back thickness. Sit at the cable row station with your feet on the platform and your knees slightly bent. Grab the attachment - typically a V-bar or close grip handles - and start with your arms fully extended and a slight forward lean. From here, pull the handle to your lower chest or upper abdomen by driving your elbows straight back. Lean back slightly to a vertical position as you pull. Squeeze your shoulder blades together hard at the end. Then control the weight as you extend your arms forward, allowing a slight forward lean again. The cable row provides constant tension throughout the movement and is excellent for building that thick, dense back."
+    },
+    {
+      "exercise_id": "back_007",
+      "exercise_name": "Face Pull",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Rear Deltoids", "Middle Traps", "Rhomboids"],
+        "secondary": ["Rotator Cuff", "Upper Traps"],
+        "stabilizers": ["Core"]
+      },
+      "movement_pattern": "Horizontal Pull with External Rotation",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine", "Rope Attachment"],
+        "optional": ["Band"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set cable pulley at upper chest to face height, attach rope, grasp rope ends with overhand grip.",
+        "key_points": [
+          "Cable set at face height or slightly above",
+          "Stand facing cable machine",
+          "Rope attachment allows for external rotation"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing facing cable with slight lean back, arms extended forward holding rope, slight stagger stance.",
+        "body_alignment": {
+          "head": "Neutral, looking at cable",
+          "shoulders": "Extended forward",
+          "spine": "Neutral with slight lean back for stability",
+          "hips": "Neutral",
+          "knees": "Slight bend, staggered stance",
+          "arms": "Extended forward, elbows slightly elevated"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull rope ends toward face while externally rotating shoulders, separating hands apart",
+          "cues": [
+            "Pull the rope toward your face",
+            "Pull it apart as you pull back",
+            "Elbows high, above wrists",
+            "Finish with hands beside your ears",
+            "Squeeze your shoulder blades together",
+            "Externally rotate your shoulders"
+          ],
+          "end_position": "Rope separated with hands beside ears, elbows high and back, shoulder blades retracted, rear delts and mid-back contracted"
+        },
+        "eccentric_phase": {
+          "description": "Extend arms forward with control, allowing rope ends to come together",
+          "cues": [
+            "Control the return",
+            "Allow hands to come together",
+            "Full arm extension",
+            "Feel the stretch in rear delts"
+          ],
+          "end_position": "Arms extended, rope together, slight stretch in rear delts and upper back"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during pull (concentric), inhale during extension (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-2-2-0 (1 sec pull, 2 sec squeeze, 2 sec extend, no pause)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec pull, 2 sec squeeze, 3 sec extend, 1 sec stretch)",
+        "control_focus": "2-3-2-0 (2 sec pull, 3 sec squeeze, 2 sec extend, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to hands beside ears with rope pulled apart",
+        "critical_point": "High elbows, full external rotation, strong retraction",
+        "avoid": "Elbows dropping below horizontal"
+      },
+      "form_cues": [
+        "Think about pulling the rope apart, not just back",
+        "Your elbows should stay high - at or above shoulder level",
+        "Finish like you're flexing your biceps with hands by your ears",
+        "Imagine showing your armpits to someone in front of you",
+        "This is small and controlled - not a heavy rowing movement"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Elbows dropping below shoulder level",
+          "correction": "Keep elbows high, at or above shoulder height throughout",
+          "why_it_matters": "Low elbows shifts emphasis away from rear delts"
+        },
+        {
+          "mistake": "Not pulling rope apart",
+          "correction": "Actively pull rope ends apart as you pull back",
+          "why_it_matters": "Separation creates external rotation crucial for rear delt activation"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight that allows perfect form and high elbows",
+          "why_it_matters": "Heavy weight causes elbows to drop and form to break down"
+        },
+        {
+          "mistake": "Pulling to chest instead of face",
+          "correction": "Pull rope to face level, hands finish beside ears",
+          "why_it_matters": "Lower pull shifts emphasis away from rear delts"
+        },
+        {
+          "mistake": "No external rotation",
+          "correction": "Actively externally rotate shoulders, show armpits forward",
+          "why_it_matters": "External rotation is key for rear delt activation and shoulder health"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Band Face Pull",
+            "description": "Use resistance band instead of cable",
+            "when_to_use": "At home or learning movement"
+          },
+          {
+            "name": "Very Light Weight Face Pull",
+            "description": "Use minimal weight to perfect form",
+            "when_to_use": "Learning proper mechanics"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Paused Face Pull",
+            "description": "Pause 3-5 seconds at full contraction",
+            "when_to_use": "Maximizing rear delt activation"
+          },
+          {
+            "name": "Single-Arm Face Pull",
+            "description": "Pull with one arm at a time",
+            "when_to_use": "Addressing imbalances, increased range"
+          },
+          {
+            "name": "Face Pull with Y-Raise",
+            "description": "After pulling to face, press hands up in Y position",
+            "when_to_use": "Adding lower trap work"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Rear deltoid development", "Shoulder health", "Posture correction", "Upper back and trap work"],
+        "place_in_workout": "Mid to late workout, or as warm-up for pressing",
+        "pairs_well_with": ["Any back workout", "Shoulder work", "Prehab/rehab work"],
+        "rep_ranges": {
+          "strength": "10-15 reps",
+          "hypertrophy": "15-20 reps",
+          "endurance/prehab": "20-30 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe exercise",
+        "Excellent for shoulder health and injury prevention",
+        "Should be performed regularly by anyone who presses",
+        "Use lighter weight and focus on form",
+        "Critical for balanced shoulder development"
+      },
+      "video_explanation_script": "The face pull is essential for shoulder health and rear delt development. Set a cable at face height with a rope attachment. Stand facing the cable with a slight lean back for stability. From arms extended, pull the rope toward your face while pulling it apart. Your elbows should stay high - at or above shoulder level - throughout the entire movement. As you pull, externally rotate your shoulders so your hands finish beside your ears, like you're flexing your biceps. Squeeze your shoulder blades together at the end. This exercise hits your rear delts, mid-traps, and rhomboids while promoting healthy external rotation. Everyone should be doing face pulls, especially if you do a lot of pressing."
+    },
+    {
+      "exercise_id": "back_008",
+      "exercise_name": "Barbell Shrug",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Upper Trapezius"],
+        "secondary": ["Levator Scapulae"],
+        "stabilizers": ["Forearms", "Core"]
+      },
+      "movement_pattern": "Scapular Elevation",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Barbell"],
+        "optional": ["Weight Plates", "Lifting Straps"]
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Stand holding barbell at arm's length in front of thighs with overhand grip, feet hip-width apart.",
+        "key_points": [
+          "Start position similar to top of deadlift",
+          "Overhand grip, hands shoulder-width or slightly wider",
+          "Standing upright"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright holding barbell at arm's length, shoulders in neutral position.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Neutral, neither elevated nor depressed",
+          "spine": "Neutral, upright",
+          "hips": "Neutral",
+          "knees": "Slightly bent or locked",
+          "arms": "Fully extended, holding bar"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Elevate shoulders by shrugging straight up toward ears",
+          "cues": [
+            "Shrug your shoulders straight up to your ears",
+            "Try to touch your shoulders to your ears",
+            "Don't bend your elbows",
+            "Think about squeezing your traps at the top",
+            "Straight up movement, no rolling"
+          ],
+          "end_position": "Shoulders maximally elevated, traps fully contracted, arms still straight"
+        },
+        "eccentric_phase": {
+          "description": "Lower shoulders back to neutral position with control",
+          "cues": [
+            "Control the descent",
+            "Lower shoulders all the way down",
+            "Feel the trap stretch",
+            "Full range of motion"
+          ],
+          "end_position": "Shoulders returned to neutral, slight trap stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during shrug (concentric), inhale during lower (eccentric)",
+        "alternative": "Hold breath during heavy shrugs"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec up, 2 sec squeeze, 3 sec down, 1 sec stretch)",
+        "explosive": "X-1-2-0 (explosive up, 1 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From neutral shoulders to maximum elevation",
+        "critical_point": "Full elevation and full descent for complete trap activation",
+        "avoid": "Rolling shoulders backward or forward"
+      },
+      "form_cues": [
+        "Think about shrugging straight up, not back or forward",
+        "Arms are just hooks holding the weight",
+        "Imagine trying to make your shoulders touch your ears",
+        "Don't roll your shoulders - straight up and down only",
+        "Heavy weight is good here - traps respond to heavy loads"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Rolling shoulders backward or forward",
+          "correction": "Shrug straight up and down only, no circular motion",
+          "why_it_matters": "Rolling increases shoulder injury risk without added benefit"
+        },
+        {
+          "mistake": "Bending elbows during shrug",
+          "correction": "Keep arms completely straight, only shoulders move",
+          "why_it_matters": "Arm bend turns it into an upright row, reduces trap isolation"
+        },
+        {
+          "mistake": "Not achieving full range of motion",
+          "correction": "Shrug as high as possible, lower all the way down",
+          "why_it_matters": "Partial ROM limits trap development"
+        },
+        {
+          "mistake": "Using momentum or bouncing",
+          "correction": "Control both phases of movement",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Holding breath entire set",
+          "correction": "Breathe rhythmically throughout set",
+          "why_it_matters": "Breath holding can cause dizziness with heavy weights"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Dumbbell Shrug",
+            "description": "Use dumbbells at sides instead of barbell",
+            "when_to_use": "Learning movement or alternative loading"
+          },
+          {
+            "name": "Trap Bar Shrug",
+            "description": "Use trap bar for more natural grip position",
+            "when_to_use": "Allowing heavier loads comfortably"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Barbell Shrug",
+            "description": "Load with very heavy weight",
+            "when_to_use": "Traps respond well to heavy loading"
+          },
+          {
+            "name": "Behind-the-Back Shrug",
+            "description": "Hold barbell behind body",
+            "when_to_use": "Variation emphasizing different trap portion"
+          },
+          {
+            "name": "Paused Barbell Shrug",
+            "description": "Pause 3-5 seconds at top",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Overhead Barbell Shrug",
+            "description": "Shrug with arms extended overhead",
+            "when_to_use": "Advanced, emphasizing upper trap and shoulder stability"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Upper trap development", "Building trap mass", "Neck and shoulder aesthetics", "Grip strength"],
+        "place_in_workout": "End of back workout or with trap-focused training",
+        "pairs_well_with": ["Deadlifts", "Rows", "Upright Rows"],
+        "rep_ranges": {
+          "strength": "4-8 reps",
+          "hypertrophy": "8-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Generally safe when performed correctly",
+        "Don't roll shoulders - injury risk",
+        "Use lifting straps if grip is limiting",
+        "Start lighter to assess tolerance",
+        "Excellent for trap development"
+      ],
+      "video_explanation_script": "The barbell shrug is the go-to exercise for building massive traps. Stand holding a loaded barbell at arm's length in front of your thighs, like the top of a deadlift. From here, simply shrug your shoulders straight up toward your ears as high as you can. Arms stay completely straight - they're just holding the bar. Squeeze your traps hard at the top, then control the weight back down to the starting position. The key is shrugging straight up and down - don't roll your shoulders backward or forward. Traps respond well to heavy weight, so don't be afraid to load up once your form is solid. Barbell shrugs are essential for that thick, powerful upper back and neck appearance."
+    },
+    {
+      "exercise_id": "back_009",
+      "exercise_name": "T-Bar Row",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Rhomboids", "Middle Traps"],
+        "secondary": ["Rear Deltoids", "Biceps", "Erector Spinae"],
+        "stabilizers": ["Core", "Hamstrings", "Glutes"]
+      },
+      "movement_pattern": "Horizontal Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["T-Bar Row Machine OR Barbell with Landmine Attachment"],
+        "optional": ["V-Bar Handle", "Weight Plates"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Straddle T-bar or barbell, hinge forward, grasp handles or bar, chest supported on pad if available.",
+        "key_points": [
+          "Can use chest-supported or free-standing version",
+          "Feet on platforms if chest-supported",
+          "Hip hinge position if free-standing"
+        ]
+      },
+      "starting_position": {
+        "description": "Hinged forward with handle grasped, arms extended, neutral spine.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Extended, slight protraction",
+          "spine": "Neutral",
+          "torso": "Hinged forward 15-45 degrees (or supported on pad)",
+          "hips": "Hinged back",
+          "knees": "Slight bend",
+          "arms": "Fully extended, holding handle"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull handle toward chest by driving elbows back and up",
+          "cues": [
+            "Pull your elbows back toward the ceiling",
+            "Row toward your chest or upper abs",
+            "Squeeze your shoulder blades together",
+            "Keep the weight close to your body",
+            "Drive your chest forward into the pad if supported"
+          ],
+          "end_position": "Handle at chest, elbows above torso, scapulae retracted, lats and mid-back contracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower weight with control to full arm extension",
+          "cues": [
+            "Control the descent",
+            "Full arm extension",
+            "Allow slight lat stretch",
+            "Maintain torso position"
+          ],
+          "end_position": "Arms fully extended, lats and back stretched"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during row (concentric), inhale during lower (eccentric)",
+        "alternative": "Brace and hold for heavy loads"
+      },
+      "tempo": {
+        "standard": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-2-3-0 (2 sec up, 2 sec squeeze, 3 sec down, no pause)",
+        "strength_focus": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to handle at chest",
+        "critical_point": "Full extension with stretch, full contraction at chest",
+        "avoid": "Excessive torso movement or partial range"
+      },
+      "form_cues": [
+        "Think about pulling your elbows to the ceiling behind you",
+        "Drive your chest into the pad if it's chest-supported",
+        "Squeeze your shoulder blades together like crushing a grape",
+        "The angled bar path allows for a unique pulling angle",
+        "Keep the weight close to your body throughout"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Standing up during row (if free-standing)",
+          "correction": "Maintain constant torso angle",
+          "why_it_matters": "Standing reduces back activation"
+        },
+        {
+          "mistake": "Jerking or using momentum",
+          "correction": "Smooth controlled movement throughout",
+          "why_it_matters": "Momentum reduces muscle activation"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Full extension at bottom, weight to chest at top",
+          "why_it_matters": "Partial ROM limits development"
+        },
+        {
+          "mistake": "Rounding upper back",
+          "correction": "Maintain neutral spine, chest proud",
+          "why_it_matters": "Rounding reduces effectiveness and increases injury risk"
+        },
+        {
+          "mistake": "Pulling with arms instead of back",
+          "correction": "Initiate with back, elbows drive movement",
+          "why_it_matters": "Arm-dominant pulling reduces back activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight T-Bar Row",
+            "description": "Use lighter weight to perfect form",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Chest-Supported T-Bar Row",
+            "description": "Use machine with chest support",
+            "when_to_use": "Removing lower back from equation"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy T-Bar Row",
+            "description": "Load with heavy plates",
+            "when_to_use": "Building maximum back mass"
+          },
+          {
+            "name": "Free-Standing T-Bar Row",
+            "description": "Row without chest support",
+            "when_to_use": "Adding core and lower back stability demand"
+          },
+          {
+            "name": "Paused T-Bar Row",
+            "description": "Pause 2-3 seconds at chest",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Single-Arm Landmine Row",
+            "description": "Use landmine setup with one arm",
+            "when_to_use": "Unilateral variation"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Back thickness", "Overall back mass", "Unique pulling angle", "Heavy loading safely"],
+        "place_in_workout": "Early to mid-workout as primary or secondary movement",
+        "pairs_well_with": ["Pull-ups", "Deadlifts", "Shrugs"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "8-12 reps",
+          "endurance": "12-15 reps"
+        }
+      },
+      "safety_considerations": [
+        "Chest-supported version very safe",
+        "Free-standing version demands lower back strength",
+        "Can load heavy safely",
+        "Excellent for back development",
+        "Popular bodybuilding exercise"
+      ],
+      "video_explanation_script": "The T-bar row is a classic back-building exercise. If using a chest-supported machine, position yourself with your chest against the pad and feet on the platforms. Grasp the handles with arms fully extended. From here, pull the weight toward your chest by driving your elbows back and up. Squeeze your shoulder blades together at the top. The angled bar path creates a unique pulling angle that hits your lats, mid-back, and rhomboids differently than other rows. If doing the free-standing version with a landmine, straddle the bar, hinge forward, and row just like a barbell row but with the angled path. The T-bar row is excellent for building back thickness and allows for heavy, safe loading."
+    },
+    {
+      "exercise_id": "back_010",
+      "exercise_name": "Inverted Row (Bodyweight Row)",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Rhomboids", "Middle Traps"],
+        "secondary": ["Rear Deltoids", "Biceps"],
+        "stabilizers": ["Core", "Glutes", "Entire Posterior Chain"]
+      },
+      "movement_pattern": "Horizontal Pull",
+      "movement_type": "Bodyweight Compound",
+      "equipment": {
+        "required": ["Bar at waist height (Smith Machine, Squat Rack, Rings, or TRX)"],
+        "optional": ["Weight Vest"]
+      },
+      "difficulty_level": "Beginner to Intermediate",
+      "setup": {
+        "description": "Set bar at waist to chest height, lie under bar, grasp bar with overhand grip, body in straight line from heels to head.",
+        "key_points": [
+          "Bar height determines difficulty: lower = harder",
+          "Various grip options available",
+          "Body stays rigid throughout"
+        ]
+      },
+      "starting_position": {
+        "description": "Hanging from bar at an angle, arms fully extended, body in straight line from heels to shoulders.",
+        "body_alignment": {
+          "head": "Neutral, in line with spine",
+          "shoulders": "Extended, hanging from bar",
+          "spine": "Neutral, body in straight plank position",
+          "hips": "Extended, aligned with body",
+          "knees": "Straight",
+          "heels": "On ground",
+          "grip": "Overhand, shoulder-width or wider"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull chest toward bar by driving elbows down and back, maintaining rigid body",
+          "cues": [
+            "Pull your chest to the bar",
+            "Drive your elbows down toward your hips",
+            "Squeeze your shoulder blades together",
+            "Keep your body completely straight",
+            "Touch bar to lower chest or upper abs"
+          ],
+          "end_position": "Chest touching or near bar, elbows behind torso, body still in straight line"
+        },
+        "eccentric_phase": {
+          "description": "Lower body with control back to full arm extension",
+          "cues": [
+            "Control the descent",
+            "Maintain rigid body position",
+            "Full arm extension at bottom",
+            "Don't let hips sag"
+          ],
+          "end_position": "Arms fully extended, body still in straight line"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during pull (concentric), inhale during lower (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-0-2-0 (1 sec up, no pause, 2 sec down, no pause)",
+        "hypertrophy_focus": "2-1-3-0 (2 sec up, 1 sec squeeze, 3 sec down, no pause)",
+        "strength_focus": "X-1-2-0 (explosive up, 1 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to chest touching bar",
+        "critical_point": "Chest reaches bar, full arm extension at bottom",
+        "avoid": "Hips sagging or piking up"
+      },
+      "form_cues": [
+        "Your body should be completely rigid like a plank",
+        "Imagine someone could lay a broomstick on your body from head to heels",
+        "Pull your chest to the bar, not your face",
+        "Think about pulling the bar down to you rather than you up to the bar",
+        "Squeeze your glutes to keep your body rigid"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Hips sagging toward ground",
+          "correction": "Engage core and glutes, maintain straight body line",
+          "why_it_matters": "Hip sag reduces back activation and core challenge"
+        },
+        {
+          "mistake": "Piking hips up",
+          "correction": "Keep body in straight line, don't make it easier",
+          "why_it_matters": "Piking reduces difficulty and back activation"
+        },
+        {
+          "mistake": "Not pulling to chest",
+          "correction": "Pull until chest touches or nearly touches bar",
+          "why_it_matters": "Partial range limits back development"
+        },
+        {
+          "mistake": "Shrugging shoulders up",
+          "correction": "Pull shoulder blades down and back",
+          "why_it_matters": "Shrugging reduces lat and mid-back activation"
+        },
+        {
+          "mistake": "Leading with head instead of chest",
+          "correction": "Drive chest to bar, head stays neutral",
+          "why_it_matters": "Head-leading reduces rom and effectiveness"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Elevated Bar Inverted Row",
+            "description": "Set bar higher for easier angle",
+            "when_to_use": "Building strength toward full inverted rows"
+          },
+          {
+            "name": "Bent-Knee Inverted Row",
+            "description": "Bend knees with feet flat on ground",
+            "when_to_use": "Reducing difficulty significantly"
+          },
+          {
+            "name": "Feet-Elevated-Less Inverted Row",
+            "description": "Have someone assist or use band assistance",
+            "when_to_use": "Learning movement"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Feet-Elevated Inverted Row",
+            "description": "Place feet on bench for more horizontal body angle",
+            "when_to_use": "Increasing difficulty"
+          },
+          {
+            "name": "Weighted Inverted Row",
+            "description": "Wear weight vest or place weight plate on chest",
+            "when_to_use": "When bodyweight becomes too easy"
+          },
+          {
+            "name": "Single-Arm Inverted Row",
+            "description": "Row with one arm while other arm extends out",
+            "when_to_use": "Advanced unilateral variation"
+          },
+          {
+            "name": "Paused Inverted Row",
+            "description": "Pause 3-5 seconds at top",
+            "when_to_use": "Increasing time under tension"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Building to pull-ups", "Bodyweight back training", "Horizontal pulling strength", "At-home training"],
+        "place_in_workout": "Early to mid-workout as primary movement or high-rep finisher",
+        "pairs_well_with": ["Push-ups", "Pull-ups", "Core work"],
+        "rep_ranges": {
+          "strength": "5-10 reps",
+          "hypertrophy": "10-15 reps",
+          "endurance": "15-25+ reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Excellent progression toward pull-ups",
+        "Ensure bar is secure",
+        "Good for all fitness levels",
+        "Great at-home back exercise"
+      ],
+      "video_explanation_script": "The inverted row is an excellent bodyweight exercise for building back strength. Set a bar at about waist to chest height - the lower it is, the harder the exercise. Lie under the bar and grab it with an overhand grip about shoulder-width apart. Extend your body into a straight line from your heels to your head, hanging from the bar. From this position, pull your chest to the bar by driving your elbows down and back. The key is maintaining a completely rigid body throughout - your body should move as one unit. Squeeze your shoulder blades together at the top, then control yourself back down to full arm extension. The inverted row is perfect for building horizontal pulling strength and is an excellent stepping stone toward pull-ups."
+    },
+    {
+      "exercise_id": "back_011",
+      "exercise_name": "Straight Arm Pulldown",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi"],
+        "secondary": ["Teres Major", "Long Head Triceps"],
+        "stabilizers": ["Core", "Rear Deltoids"]
+      },
+      "movement_pattern": "Shoulder Extension",
+      "movement_type": "Isolation",
+      "equipment": {
+        "required": ["Cable Machine", "Straight Bar or Rope Attachment"],
+        "optional": ["Various handle attachments"]
+      },
+      "difficulty_level": "Intermediate",
+      "setup": {
+        "description": "Stand facing cable machine with high pulley, grasp bar with overhand grip, arms extended overhead, step back slightly.",
+        "key_points": [
+          "Pulley set high",
+          "Overhand grip on straight bar or hold rope ends",
+          "Stand far enough back for constant tension"
+        ]
+      },
+      "starting_position": {
+        "description": "Standing upright or slight forward lean, arms extended overhead holding attachment, slight elbow bend.",
+        "body_alignment": {
+          "head": "Neutral, looking forward",
+          "shoulders": "Extended overhead",
+          "spine": "Neutral with slight forward lean at hips",
+          "hips": "Hinged forward slightly (15-30 degrees)",
+          "knees": "Slight bend",
+          "arms": "Extended overhead with slight elbow bend maintained throughout"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull bar down in arc motion to thighs by extending shoulders, keeping arms nearly straight",
+          "cues": [
+            "Keep your arms almost straight throughout",
+            "Think about pulling with your lats, not your arms",
+            "Arc the bar down to your thighs",
+            "Squeeze your lats at the bottom",
+            "Slight forward lean helps"
+          ],
+          "end_position": "Bar at thighs, arms still nearly straight, lats fully contracted, slight forward lean"
+        },
+        "eccentric_phase": {
+          "description": "Control bar as arms return overhead in arc motion",
+          "cues": [
+            "Control the return",
+            "Allow arms to rise back up",
+            "Feel the lat stretch",
+            "Maintain slight elbow bend"
+          ],
+          "end_position": "Arms back overhead, lats stretched"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during pulldown (concentric), inhale during return (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "2-1-2-1 (2 sec down, 1 sec squeeze, 2 sec up, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-2 (2 sec down, 2 sec squeeze, 3 sec up, 2 sec stretch)",
+        "lat_stretch": "2-1-3-2 (2 sec down, 1 sec squeeze, 3 sec up, 2 sec stretch)"
+      },
+      "range_of_motion": {
+        "full": "From arms overhead to bar at thighs",
+        "critical_point": "Maintain nearly straight arms throughout entire movement",
+        "avoid": "Bending elbows significantly"
+      },
+      "form_cues": [
+        "This is lat extension, not arm flexion - arms stay nearly straight",
+        "Think about the motion of swinging an axe downward",
+        "Your lats should be doing all the work",
+        "A slight forward lean helps lat engagement",
+        "Imagine pulling the bar down with your armpits"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Bending elbows significantly",
+          "correction": "Maintain nearly straight arms with just slight bend",
+          "why_it_matters": "Elbow bending turns it into a pulldown, removes lat isolation"
+        },
+        {
+          "mistake": "Using too much weight",
+          "correction": "Use lighter weight that allows straight-arm form",
+          "why_it_matters": "Heavy weight forces elbow bend and poor form"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Full stretch overhead, bar to thighs at bottom",
+          "why_it_matters": "Partial ROM limits lat development"
+        },
+        {
+          "mistake": "Excessive forward lean or using momentum",
+          "correction": "Slight forward lean acceptable, no swinging",
+          "why_it_matters": "Momentum reduces lat isolation"
+        },
+        {
+          "mistake": "Shrugging shoulders",
+          "correction": "Keep shoulders down and back throughout",
+          "why_it_matters": "Shrugging reduces lat activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Straight Arm Pulldown",
+            "description": "Use very light weight to learn movement",
+            "when_to_use": "Learning lat isolation with straight arms"
+          },
+          {
+            "name": "Band Straight Arm Pulldown",
+            "description": "Use resistance band",
+            "when_to_use": "At home or learning movement"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Rope Straight Arm Pulldown",
+            "description": "Use rope attachment",
+            "when_to_use": "Variation allowing different hand position"
+          },
+          {
+            "name": "Single-Arm Straight Arm Pulldown",
+            "description": "Perform one arm at a time",
+            "when_to_use": "Addressing imbalances, increased lat stretch"
+          },
+          {
+            "name": "Kneeling Straight Arm Pulldown",
+            "description": "Perform from kneeling position",
+            "when_to_use": "Variation changing angle"
+          },
+          {
+            "name": "Paused Straight Arm Pulldown",
+            "description": "Pause 3-5 seconds at bottom",
+            "when_to_use": "Maximizing lat contraction"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Lat isolation", "Learning lat engagement", "Finishing exercise", "Lat width"],
+        "place_in_workout": "Mid to late workout as accessory or finisher",
+        "pairs_well_with": ["Pull-ups", "Rows", "Lat Pulldowns"],
+        "rep_ranges": {
+          "hypertrophy": "10-15 reps",
+          "isolation": "12-20 reps",
+          "finisher": "15-25 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe when performed correctly",
+        "Excellent for learning lat engagement",
+        "Use lighter weight than other back exercises",
+        "Good for mind-muscle connection",
+        "Excellent lat isolation exercise"
+      ],
+      "video_explanation_script": "The straight arm pulldown is a unique exercise that isolates your lats. Stand facing a cable machine with the pulley set high. Grab the straight bar with an overhand grip and step back with your arms extended overhead. From here, keeping your arms nearly straight with just a slight bend in your elbows, pull the bar down in an arc until it reaches your thighs. Think about pulling with your lats, not your arms. Squeeze your lats at the bottom, then control the bar back up overhead. A slight forward lean at your hips can help with lat engagement. The key is maintaining those straight arms throughout - if you're bending your elbows significantly, you're using too much weight. This exercise teaches you what true lat engagement feels like."
+    },
+    {
+      "exercise_id": "back_012",
+      "exercise_name": "Chest-Supported Dumbbell Row",
+      "muscle_group_primary": "Back",
+      "muscles_targeted": {
+        "primary": ["Latissimus Dorsi", "Rhomboids", "Middle Traps"],
+        "secondary": ["Rear Deltoids", "Biceps"],
+        "stabilizers": ["Forearms"]
+      },
+      "movement_pattern": "Horizontal Pull",
+      "movement_type": "Compound",
+      "equipment": {
+        "required": ["Incline Bench", "Dumbbells"],
+        "optional": []
+      },
+      "difficulty_level": "Beginner to Advanced",
+      "setup": {
+        "description": "Set incline bench to 30-45 degrees, lie chest-down on bench, dumbbells hanging at arm's length.",
+        "key_points": [
+          "Bench angle 30-45 degrees (lower = more lat, higher = more mid-back)",
+          "Chest supported throughout",
+          "Feet on ground or on bench for support"
+        ]
+      },
+      "starting_position": {
+        "description": "Lying prone on incline bench, chest supported, dumbbells hanging at arm's length.",
+        "body_alignment": {
+          "head": "Neutral or looking down",
+          "chest": "Supported on bench",
+          "spine": "Neutral",
+          "hips": "On or above bench",
+          "feet": "On ground or bench for support",
+          "arms": "Fully extended, dumbbells hanging"
+        }
+      },
+      "execution": {
+        "concentric_phase": {
+          "description": "Pull dumbbells up toward hips/sides by driving elbows back and up",
+          "cues": [
+            "Pull your elbows straight back toward the ceiling",
+            "Row to your hips or lower ribs",
+            "Squeeze your shoulder blades together",
+            "Keep chest pressed to bench",
+            "Don't let momentum swing the weights"
+          ],
+          "end_position": "Dumbbells at hip/torso level, elbows above torso, scapulae retracted"
+        },
+        "eccentric_phase": {
+          "description": "Lower dumbbells with control to full arm extension",
+          "cues": [
+            "Control the descent",
+            "Full arm extension",
+            "Feel the lat stretch",
+            "Maintain chest pressure on bench"
+          ],
+          "end_position": "Arms fully extended, dumbbells hanging, slight lat stretch"
+        }
+      },
+      "breathing": {
+        "pattern": "Exhale during row (concentric), inhale during lower (eccentric)",
+        "alternative": "Continuous breathing"
+      },
+      "tempo": {
+        "standard": "1-1-2-1 (1 sec up, 1 sec squeeze, 2 sec down, 1 sec stretch)",
+        "hypertrophy_focus": "2-2-3-1 (2 sec up, 2 sec squeeze, 3 sec down, 1 sec stretch)",
+        "strength_focus": "1-1-2-0 (1 sec up, 1 sec squeeze, 2 sec down, no pause)"
+      },
+      "range_of_motion": {
+        "full": "From full arm extension to dumbbells at torso",
+        "critical_point": "Full extension with stretch, full contraction at top",
+        "avoid": "Excessive body movement or momentum"
+      },
+      "form_cues": [
+        "The chest support removes your lower back from the equation",
+        "This allows pure back work without fatigue from stabilization",
+        "Think about driving your elbows to the ceiling behind you",
+        "Squeeze your shoulder blades like you're crushing a grape between them",
+        "Row toward your hips for more lat, toward ribs for more mid-back"
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Lifting chest off bench during row",
+          "correction": "Keep chest pressed firmly to bench throughout",
+          "why_it_matters": "Lifting chest turns it into free-standing row, defeats purpose"
+        },
+        {
+          "mistake": "Using momentum or swinging weights",
+          "correction": "Smooth controlled movement, no body english",
+          "why_it_matters": "Momentum reduces back activation"
+        },
+        {
+          "mistake": "Not achieving full range",
+          "correction": "Full arm extension at bottom, dumbbells to torso at top",
+          "why_it_matters": "Partial ROM limits development"
+        },
+        {
+          "mistake": "Pulling with arms instead of back",
+          "correction": "Initiate with back, elbows drive movement",
+          "why_it_matters": "Arm-dominant pulling reduces back work"
+        },
+        {
+          "mistake": "Shrugging shoulders up",
+          "correction": "Pull shoulder blades back (retract), not up",
+          "why_it_matters": "Shrugging reduces mid-back activation"
+        }
+      ],
+      "modifications": {
+        "regressions": [
+          {
+            "name": "Light Weight Chest-Supported Row",
+            "description": "Use lighter dumbbells to perfect form",
+            "when_to_use": "Learning movement pattern"
+          },
+          {
+            "name": "Higher Bench Angle",
+            "description": "Set bench more upright (45-60 degrees)",
+            "when_to_use": "Reducing range or emphasizing upper back"
+          }
+        ],
+        "progressions": [
+          {
+            "name": "Heavy Chest-Supported Row",
+            "description": "Progressive overload with heavier dumbbells",
+            "when_to_use": "Building back mass"
+          },
+          {
+            "name": "Paused Chest-Supported Row",
+            "description": "Pause 3-5 seconds at top",
+            "when_to_use": "Maximizing contraction"
+          },
+          {
+            "name": "Lower Bench Angle",
+            "description": "Set bench to 15-30 degrees",
+            "when_to_use": "Emphasizing lats more"
+          },
+          {
+            "name": "Alternating Chest-Supported Row",
+            "description": "Row one arm at a time",
+            "when_to_use": "Variation, more core demand"
+          }
+        ]
+      },
+      "coaching_context": {
+        "best_for": ["Pure back work without lower back fatigue", "Back thickness", "High-volume back training", "Those with lower back issues"],
+        "place_in_workout": "Mid to late workout as accessory",
+        "pairs_well_with": ["Pull-ups", "Deadlifts", "Other rows"],
+        "rep_ranges": {
+          "strength": "6-10 reps",
+          "hypertrophy": "10-15 reps",
+          "endurance": "15-20 reps"
+        }
+      },
+      "safety_considerations": [
+        "Very safe, excellent for lower back issues",
+        "Removes lower back from equation entirely",
+        "Can train back to failure safely",
+        "Ensure bench is stable",
+        "Excellent for pure back isolation"
+      ],
+      "video_explanation_script": "The chest-supported dumbbell row is perfect for isolating your back without lower back fatigue. Set an incline bench to about 30-45 degrees and lie face-down with your chest against the pad. Let dumbbells hang at arm's length. From here, pull the dumbbells up toward your hips by driving your elbows back and up. Squeeze your shoulder blades together at the top. Your chest should stay pressed against the bench the entire time - this removes your lower back and allows you to focus purely on your back muscles. Control the dumbbells back down to full arm extension. This exercise is excellent for high-rep back work and is great for anyone who wants to train their back hard without taxing their lower back."
+    }
+  ]
+}
