@@ -492,7 +492,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple
   </div>
 
   <div id="status-error" style="display:none;flex-direction:column;align-items:center;gap:16px;margin-top:8px">
-    <p style="font-size:14px;color:#ef4444;text-align:center">Something went wrong sending your profile. Please try again.</p>
+    <p id="error-msg" style="font-size:14px;color:#ef4444;text-align:center">Something went wrong sending your profile. Please try again.</p>
     <button class="btn btn-primary" onclick="retrySend()">Try Again</button>
   </div>
 </div>
@@ -505,7 +505,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple
 // 4. Go to Account > API Keys → copy your Public Key
 const EMAILJS_PUBLIC_KEY  = 'kEkUQQISB5kC7fLEd';
 const EMAILJS_SERVICE_ID  = 'service_v56cwc7';
-const EMAILJS_TEMPLATE_ID = 'template_kh00n3h';
+const EMAILJS_TEMPLATE_ID = 'template_nm4yria';
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
 const TOTAL_STEPS = 11;
@@ -721,6 +721,12 @@ function renderSummary() {
 
 // ── EMAIL SEND ──
 function sendEmail() {
+  if (typeof emailjs === 'undefined') {
+    document.getElementById('error-msg').textContent = 'EmailJS SDK failed to load. Check your internet connection and try again.';
+    document.getElementById('status-sending').style.display = 'none';
+    document.getElementById('status-error').style.display = 'flex';
+    return;
+  }
   const d = formData;
   const params = {
     to_email:              'TRAIN@kimvallescoaching.com',
@@ -751,6 +757,8 @@ function sendEmail() {
     })
     .catch((err) => {
       console.error('EmailJS error:', err);
+      const detail = err?.text || err?.message || JSON.stringify(err) || 'Unknown error';
+      document.getElementById('error-msg').textContent = `Send failed: ${detail}`;
       document.getElementById('status-sending').style.display = 'none';
       document.getElementById('status-error').style.display = 'flex';
     });
