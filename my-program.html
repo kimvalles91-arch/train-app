@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kim Valles — 8-Week TRAIN Program</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+:root {
+  --bg:#07080a; --surface:#0f1012; --surface2:#161719; --border:#1e2022;
+  --accent:#00d4be; --accent-dim:rgba(0,212,190,0.12); --accent-border:rgba(0,212,190,0.22);
+  --text:#f0f0f0; --dim:#8a8a8a; --muted:#454545;
+  --p1:#3b82f6; --p2:#8b5cf6; --p3:#f59e0b; --p4:#ef4444;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a1210 0%,var(--bg) 60%);border-bottom:1px solid var(--border);padding:64px 32px 48px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,190,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);padding:5px 14px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-size:clamp(40px,7vw,68px);font-weight:900;line-height:1.0;letter-spacing:-2.5px;margin-bottom:10px}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:16px;color:var(--dim);margin-bottom:36px;max-width:560px}
+.stats-row{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat-val{font-size:18px;font-weight:700}
+.stat-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.divider{width:1px;height:36px;background:var(--border)}
+
+/* LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
+.section{padding:48px 0}
+.section-title{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+
+/* PHASES */
+.phases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.phase-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;position:relative;overflow:hidden}
+.phase-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.p1::after{background:var(--p1)}.p2::after{background:var(--p2)}.p3::after{background:var(--p3)}.p4::after{background:var(--p4)}
+.phase-num{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.p1 .phase-num{color:var(--p1)}.p2 .phase-num{color:var(--p2)}.p3 .phase-num{color:var(--p3)}.p4 .phase-num{color:var(--p4)}
+.phase-name{font-size:18px;font-weight:800;margin-bottom:2px;letter-spacing:-0.5px}
+.phase-weeks{font-size:12px;color:var(--muted);margin-bottom:10px}
+.phase-badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:12px}
+.p1 .phase-badge{background:rgba(59,130,246,.12);color:#7bb3ff}
+.p2 .phase-badge{background:rgba(139,92,246,.12);color:#c4a6ff}
+.p3 .phase-badge{background:rgba(245,158,11,.12);color:#fcd060}
+.p4 .phase-badge{background:rgba(239,68,68,.12);color:#ff9a9a}
+.phase-focus{font-size:12px;color:var(--dim);line-height:1.5;margin-bottom:14px}
+.phase-specs{display:flex;gap:16px;padding-top:14px;border-top:1px solid var(--border)}
+.ps{display:flex;flex-direction:column;gap:2px}
+.ps-val{font-size:15px;font-weight:700}
+.ps-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+
+/* WEEK NAV */
+.week-nav{position:sticky;top:0;z-index:100;background:rgba(7,8,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px}
+.week-nav-inner{max-width:1100px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:10px 0}
+.week-nav-inner::-webkit-scrollbar{display:none}
+.wtab{flex-shrink:0;padding:7px 14px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;font-family:inherit;white-space:nowrap}
+.wtab:hover{color:var(--text);background:var(--surface)}
+.wtab.active{color:var(--accent);background:var(--accent-dim);border-color:var(--accent-border)}
+.wdot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;vertical-align:middle}
+
+/* WEEK CONTENT */
+.week-panel{display:none;padding:40px 0 80px}
+.week-panel.active{display:block}
+
+/* WEEK HEADER */
+.week-header{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:26px 28px;margin-bottom:28px;display:flex;gap:24px;align-items:flex-start}
+.week-badge{flex-shrink:0;width:54px;height:54px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:22px;line-height:1}
+.week-badge-sub{font-size:8px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.week-info{flex:1}
+.week-info h2{font-size:20px;font-weight:800;margin-bottom:4px;letter-spacing:-0.5px}
+.week-phase-tag{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.week-note{font-size:13px;color:var(--dim);line-height:1.75;font-style:italic;border-left:2px solid var(--accent-border);padding-left:14px}
+
+/* DAY CARDS */
+.schedule-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.day-grid{display:flex;flex-direction:column;gap:16px}
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.day-head{padding:18px 22px;border-bottom:1px solid transparent;display:flex;align-items:center;gap:14px;cursor:pointer;user-select:none;transition:background .15s}
+.day-head:hover{background:var(--surface2)}
+.day-card.open .day-head{border-bottom-color:var(--border)}
+.day-abbr{width:38px;height:38px;border-radius:9px;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0}
+.day-head-info{flex:1}
+.day-head-title{font-size:15px;font-weight:700;line-height:1.2}
+.day-head-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.day-caret{color:var(--muted);font-size:16px;transition:transform .2s;flex-shrink:0}
+.day-card.open .day-caret{transform:rotate(180deg)}
+.day-body{display:none}
+.day-card.open .day-body{display:block}
+.warmup-box{padding:14px 22px;background:rgba(0,212,190,.04);border-bottom:1px solid var(--border);font-size:12px;color:var(--dim);line-height:1.7;white-space:pre-line}
+.warmup-box strong{color:var(--accent);font-weight:600}
+
+/* EXERCISE TABLE */
+.ex-table{width:100%;border-collapse:collapse}
+.ex-table thead tr{background:var(--surface2)}
+.ex-table th{padding:9px 16px;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-align:left;border-bottom:1px solid var(--border)}
+.ex-table td{padding:13px 16px;font-size:13px;border-bottom:1px solid rgba(30,32,34,.7);vertical-align:top}
+.ex-table tr:last-child td{border-bottom:none}
+.ex-table tr:hover td{background:rgba(255,255,255,.015)}
+.ex-name{font-weight:600;color:var(--text)}
+.ex-cue{font-size:11.5px;color:var(--muted);font-style:italic;line-height:1.55;margin-top:3px}
+.ex-sets{font-weight:800;color:var(--accent);white-space:nowrap}
+.ex-reps{font-weight:600;white-space:nowrap}
+.ex-rest{color:var(--dim);white-space:nowrap;font-size:12px}
+.superset-tag{display:inline-block;background:rgba(245,158,11,.12);color:#fcd060;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+
+/* REST / PASSIVE CARDS */
+.rest-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start}
+.rest-icon{width:38px;height:38px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.rest-body h3{font-size:14px;font-weight:700;margin-bottom:3px}
+.rest-body p{font-size:12px;color:var(--dim);line-height:1.55}
+
+/* APPENDIX */
+.appendix{background:var(--surface);border-top:1px solid var(--border);padding:60px 32px}
+.appendix-inner{max-width:1100px;margin:0 auto}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:24px}
+.app-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:22px}
+.app-card h3{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.mob-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.mob-list li{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;padding:9px 0;border-bottom:1px solid rgba(30,32,34,.8)}
+.mob-list li:last-child{border-bottom:none}
+.mob-name{color:var(--text);font-weight:500}
+.mob-dur{color:var(--accent);font-weight:700;font-size:12px}
+.cardio-row{display:flex;flex-direction:column;gap:10px}
+.cardio-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.cardio-item strong{display:block;font-size:13px;font-weight:700;margin-bottom:2px}
+.cardio-item span{font-size:12px;color:var(--dim)}
+.nutr-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nutr-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px}
+.nutr-item .n-val{font-size:20px;font-weight:800;color:var(--accent)}
+.nutr-item .n-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.nutr-item .n-note{font-size:11px;color:var(--dim);margin-top:4px}
+
+/* LETTER */
+.letter-section{border-top:1px solid var(--border);padding:64px 32px}
+.letter-inner{max-width:660px;margin:0 auto}
+.letter-section .section-title{text-align:center;margin-bottom:32px}
+.letter-body{font-size:14.5px;line-height:1.9;color:var(--dim)}
+.letter-body p{margin-bottom:18px}
+.letter-body p:last-child{margin-bottom:0}
+.letter-body em{color:var(--text);font-style:normal;font-weight:600}
+.letter-sig{margin-top:28px;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);font-style:italic}
+.letter-sig strong{color:var(--accent);font-style:normal}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border);padding:24px 32px;text-align:center}
+.footer-logo{font-size:18px;font-weight:900;letter-spacing:-0.5px;color:var(--accent);margin-bottom:6px}
+.footer-text{font-size:12px;color:var(--muted)}
+
+/* PRINT */
+@media print{
+  .week-nav{position:static}
+  .week-panel{display:block!important}
+  .day-body{display:block!important}
+  .wtab{display:none}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero,.container,.week-nav,.appendix,.letter-section{padding-left:20px;padding-right:20px}
+  .hero{padding-top:40px;padding-bottom:32px}
+  .week-header{flex-direction:column;gap:14px;padding:18px 20px}
+  .stats-row{gap:18px}
+  .ex-table th:nth-child(4),.ex-table td:nth-child(4){display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">TRAIN &middot; 8-Week Personalized Program</div>
+    <h1>Kim <span>Valles</span></h1>
+    <p class="hero-sub">Body Recomp &amp; Lean Muscle &middot; Advanced &middot; 4 Days / Week &middot; Full Gym</p>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-val">34</span><span class="stat-lbl">Age</span></div>
+      <div class="divider"></div>
+      <div class="stat"><span class="stat-val">5'3"</span><span class="stat-lbl">Height</span></div>
+      <div class="divider"></div>
+      <div class="stat"><span class="stat-val">127 lbs</span><span class="stat-lbl">Weight</span></div>
+      <div class="divider"></div>
+      <div class="stat"><span class="stat-val">Recomp</span><span class="stat-lbl">Goal</span></div>
+      <div class="divider"></div>
+      <div class="stat"><span class="stat-val">Advanced</span><span class="stat-lbl">Level</span></div>
+      <div class="divider"></div>
+      <div class="stat"><span class="stat-val">3 Years</span><span class="stat-lbl">Consistent</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <section class="section">
+    <div class="section-title">Program Phases</div>
+    <div class="phases-grid" id="phases-grid"></div>
+  </section>
+</div>
+
+<div class="week-nav">
+  <div class="week-nav-inner" id="week-nav"></div>
+</div>
+
+<div id="week-panels"></div>
+
+<div class="appendix">
+  <div class="appendix-inner">
+    <div class="section-title">Appendix</div>
+    <div class="app-grid">
+
+      <div class="app-card">
+        <h3>&#9632; Saturday Hip Mobility Routine</h3>
+        <ul class="mob-list">
+          <li><span class="mob-name">Pigeon Pose</span><span class="mob-dur">2 min / side</span></li>
+          <li><span class="mob-name">90/90 Hip Stretch</span><span class="mob-dur">90 sec / position</span></li>
+          <li><span class="mob-name">Figure-4 Stretch</span><span class="mob-dur">90 sec / side</span></li>
+          <li><span class="mob-name">Couch Stretch</span><span class="mob-dur">90 sec / side</span></li>
+          <li><span class="mob-name">Butterfly Stretch</span><span class="mob-dur">2 min</span></li>
+          <li><span class="mob-name">Hip Circles (standing)</span><span class="mob-dur">30 reps / direction</span></li>
+          <li><span class="mob-name">Lateral Leg Swings</span><span class="mob-dur">20 reps / side</span></li>
+          <li><span class="mob-name">Middle Splits Progressive Hold</span><span class="mob-dur">3 &times; 30 sec</span></li>
+        </ul>
+        <p style="font-size:11px;color:var(--muted);margin-top:14px;line-height:1.5">All 8 weeks. Non-negotiable for your splits goal. Use props. Breathe into the stretch. This is training — not just stretching.</p>
+      </div>
+
+      <div class="app-card">
+        <h3>&#9632; Cardio Prescription</h3>
+        <div class="cardio-row">
+          <div class="cardio-item">
+            <strong>Tuesday — Post-Lift Cardio</strong>
+            <span>Stairmaster Level 8–10 · 20 min steady state<br>OR Incline Treadmill · 12% grade · 3.5 mph · 20 min</span>
+          </div>
+          <div class="cardio-item">
+            <strong>Friday — Post-Lift Cardio</strong>
+            <span>Same as Tuesday · OR Hill Runs · moderate effort · 20–25 min</span>
+          </div>
+          <div class="cardio-item">
+            <strong>Wednesday — Optional Active Recovery</strong>
+            <span>30 min easy walk · yoga flow · or full rest. Listen to your body.</span>
+          </div>
+          <div class="cardio-item">
+            <strong>Cardio Intensity Note</strong>
+            <span>Weeks 1–4: moderate effort (can hold conversation). Weeks 5–8: push the pace — you've built the aerobic base.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <h3>&#9632; Nutrition Targets</h3>
+        <div class="nutr-grid">
+          <div class="nutr-item">
+            <div class="n-val">~2,000</div>
+            <div class="n-lbl">Calories / day</div>
+            <div class="n-note">Training days. Slight surplus for recomp.</div>
+          </div>
+          <div class="nutr-item">
+            <div class="n-val">150g+</div>
+            <div class="n-lbl">Protein / day</div>
+            <div class="n-note">~1.2g / lb bodyweight. Non-negotiable.</div>
+          </div>
+          <div class="nutr-item">
+            <div class="n-val">~1,800</div>
+            <div class="n-lbl">Rest day calories</div>
+            <div class="n-note">Slight deficit on rest days. Still hit protein.</div>
+          </div>
+          <div class="nutr-item">
+            <div class="n-val">180–220g</div>
+            <div class="n-lbl">Carbs (training)</div>
+            <div class="n-note">Front-load around workouts.</div>
+          </div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:14px;line-height:1.5">Recomp works on consistency over perfection. Hit protein every day. Sleep 7–8 hours. Everything else is optimization.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="letter-section">
+  <div class="letter-inner">
+    <div class="section-title">A Note From Your Coach</div>
+    <div class="letter-body">
+      <p>Kim — you didn't come here as a beginner looking for a starting point. You came as someone who has <em>already done the work</em>. Three years of consistent, disciplined training isn't a background detail — it's the entire reason this program is designed the way it is. You have the neural patterns, the tissue integrity, and the body awareness to handle what's in here.</p>
+      <p>Your goal isn't to get smaller. It's to get <em>more of what you already are</em> — leaner, stronger, more athletic. That distinction matters for how you train and how you eat. Body recomp at your level requires high training volume, high protein, and the patience to let the process work across a full 8-week cycle. Not one week. Eight.</p>
+      <p>The program is built around your split preference: two lower days with a glute-quad split, two upper days with vertical and horizontal emphasis, and your cardio embedded into upper days so it doesn't eat into recovery. Your <em>yoga practice on Sundays</em> is written into this plan as a recovery session — not optional, not extra credit. It's part of the program architecture. Same for Saturday's hip mobility work — that's your middle splits goal being trained, even when it doesn't feel like lifting.</p>
+      <p>Weeks 5 and 6 are the hardest. That's by design. The load goes up, the reps come down, and your body will want to negotiate. Don't negotiate. That's where structural change happens. Everything before it was preparation. Everything after it is expression.</p>
+      <p>Log your weights from Week 1. By Week 8, you'll have a paper trail of what you're capable of. That list becomes the baseline for Cycle 2 — and Cycle 2 is going to be built on numbers you don't have yet. You'll have them on Day 1 of this.</p>
+      <p>You said you're already in the best shape of your life. Let's find out what the next version of that looks like.</p>
+    </div>
+    <div class="letter-sig">Generated by <strong>TRAIN</strong> &middot; Personalized for Kim Valles &middot; May 2026</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-logo">TRAIN</div>
+  <div class="footer-text">Kim Valles &middot; 8-Week Body Recomp Program &middot; Generated May 2026</div>
+</footer>
+
+<script>
+const PHASES = [
+  {id:1,cls:'p1',label:'Foundation',weeks:'Weeks 1–2',intensity:'LOW–MODERATE',sets:'3',reps:'10–12',rest:'60–90s',rpe:'6–7',focus:'Motor pattern refinement, tissue preparation, baseline load assessment. Feel the movement, not just lift the weight.'},
+  {id:2,cls:'p2',label:'Hypertrophy',weeks:'Weeks 3–4',intensity:'MODERATE',sets:'4',reps:'8–12',rest:'75–90s',rpe:'7–8',focus:'Maximum volume for muscle growth. Metabolic stress and mechanical tension working together.'},
+  {id:3,cls:'p3',label:'Strength–Hypertrophy',weeks:'Weeks 5–6',intensity:'MODERATE–HIGH',sets:'4–5',reps:'6–10',rest:'90–120s',rpe:'8–9',focus:'Progressive overload on all compounds. Strength and size simultaneously. The hardest block.'},
+  {id:4,cls:'p4',label:'Peak',weeks:'Weeks 7–8',intensity:'HIGH',sets:'4–5',reps:'5–8',rest:'2–3 min',rpe:'9–10',focus:'Maximum intensity. Personal records. Full expression of 8 weeks of accumulated work.'}
+];
+
+const WEEK_NOTES = [
+  'Week 1 — Welcome to your program. These weights should feel like work, not war. Spend this week dialing in your technique cues on every movement. Connection over load: can you feel your glutes firing at the top of every hip thrust? That is the goal this week.',
+  'Week 2 — Add 5–10 lbs to your main compounds where last week felt controlled. Keep the same weights on isolation work for now. Notice what your body responded to. Your hip mobility work this week matters as much as your lifts.',
+  'Week 3 — Volume goes up. Four working sets now. This is where body recomp lives — high volume at moderate intensity taxes muscle without destroying recovery. Eat close to maintenance on training days. Prioritize your protein. You should feel a pump by the third set.',
+  'Week 4 — Deep in the hypertrophy block. The accumulated fatigue is real — that is the stimulus working. Keep your sleep consistent. If a compound lift feels off, drop 10% and add a drop set at the end. Chase stimulus, not ego.',
+  'Week 5 — The weight gets heavier. Rest the full time between compound sets — not a suggestion. This week and next are where structural changes happen. Your 3 years of training built the capacity for this. Use it.',
+  'Week 6 — Peak of the strength-hypertrophy block. These are the hardest sessions of the program. Compounds should feel genuinely heavy. Yoga on Sunday is not optional this week — your body needs the parasympathetic signal.',
+  'Week 7 — Final phase. Each session is designed to extract maximum performance from everything you have built. Start logging your weights if you have not been — these are the numbers you will beat in Cycle 2.',
+  'Week 8 — Last week. Every set has a purpose. Leave absolutely nothing on the table. On Sunday after yoga, write out every PR you hit this cycle. That list is your proof of work. It becomes the baseline for what comes next.'
+];
+
+const PHASE_FOR_WEEK = [0,0,1,1,2,2,3,3]; // 0-indexed phase index per week (week 1 = index 0)
+
+const DAYS = [
+  {
+    key:'mon', abbr:'MON', label:'Lower A', sub:'Glute & Posterior Chain Focus',
+    warmup:'WARMUP (5 min)\nHip circles × 30 each direction · 90/90 hip rotation × 5 breaths/side · Banded lateral walk 2×15/side · Glute bridge × 15 slow',
+    phases:[
+      [
+        {name:'Barbell Hip Thrust',sets:'3',reps:'12',rest:'75s',cue:'Drive through heels. Full hip extension — hold 1 sec at top. Bar pad on hips. Control the descent.'},
+        {name:'Romanian Deadlift',sets:'3',reps:'10',rest:'75s',cue:'Hip hinge — not a squat. Feel the hamstring load at the bottom. Soft knee bend throughout.'},
+        {name:'Bulgarian Split Squat (DB)',sets:'3',reps:'10/leg',rest:'60s',cue:'Front foot flat on floor. Back knee points straight down. Don\'t let front knee cave.'},
+        {name:'Cable Pull-Through',sets:'3',reps:'12',rest:'60s',cue:'Hinge at the hip, not the low back. Squeeze glutes hard at full lockout.'},
+        {name:'Lying Leg Curl',sets:'3',reps:'12',rest:'60s',cue:'Full range of motion. Pause at peak contraction. Don\'t jerk the weight up.'},
+        {name:'Banded Lateral Walk',sets:'3',reps:'15/side',rest:'45s',cue:'Mini-band above knees. Stay low — don\'t stand up between steps. Glute med burn.'}
+      ],[
+        {name:'Barbell Hip Thrust',sets:'4',reps:'10',rest:'75s',cue:'+5–10 lbs from Phase 1. Four working sets now. Feel the difference in total stimulus.'},
+        {name:'Romanian Deadlift',sets:'4',reps:'10',rest:'75s',cue:'Push the floor away at the top. Own the hip hinge. Lats tight to control the bar path.'},
+        {name:'Bulgarian Split Squat (DB)',sets:'4',reps:'10/leg',rest:'75s',cue:'Controlled 3-second eccentric. Let yourself feel it. This is your glute-quad crossover movement.'},
+        {name:'Cable Pull-Through',sets:'3',reps:'12',rest:'60s',cue:'Slightly higher cable setting. Really feel the hip fold at the bottom.'},
+        {name:'Lying Leg Curl',sets:'3',reps:'12',rest:'60s',cue:'Slow eccentric (3 sec down). If 12 feels easy, add a plate.'},
+        {name:'Banded Lateral Walk',sets:'3',reps:'15/side',rest:'45s',cue:'Superset after leg curls — no rest between. Keep glute med in the picture.'}
+      ],[
+        {name:'Barbell Hip Thrust',sets:'4',reps:'8',rest:'90s',cue:'Heavier. Full hip lockout every rep. No half reps — they don\'t count. Belt if needed.'},
+        {name:'Romanian Deadlift',sets:'4',reps:'8',rest:'90s',cue:'Load is up. Brace hard before the hinge. Straps if grip is the limiter, not your posterior chain.'},
+        {name:'Bulgarian Split Squat (DB)',sets:'4',reps:'8/leg',rest:'90s',cue:'Heavy DBs. This is your hardest lower body isolation. Earn every rep.'},
+        {name:'Cable Pull-Through',sets:'4',reps:'12',rest:'60s',cue:'Pause 1 sec at full hip extension. Really load the posterior chain.'},
+        {name:'Lying Leg Curl',sets:'4',reps:'10',rest:'75s',cue:'Heavier. Slow 3s eccentric, fast concentric. Add load if last 2 reps aren\'t a grind.'},
+        {name:'Hip 90/90 Flow',sets:'—',reps:'5 transitions',rest:'—',cue:'Cooldown mobility. Move with breath — transition every exhale. This is for your splits goal.'}
+      ],[
+        {name:'Barbell Hip Thrust',sets:'5',reps:'6–8',rest:'2 min',cue:'Peak week. Heaviest you have gone. These are PR sets. Log the weight.'},
+        {name:'Romanian Deadlift',sets:'4',reps:'6–8',rest:'2 min',cue:'Max controlled effort. Grip matters — use straps. Log this number.'},
+        {name:'Bulgarian Split Squat (DB)',sets:'4',reps:'8/leg',rest:'90s',cue:'Heaviest split squat you have done. Trust your knees — they are strong.'},
+        {name:'Cable Pull-Through',sets:'4',reps:'12',rest:'60s',cue:'Even in peak week, isolation stays at volume. Hip extension quality over weight.'},
+        {name:'Lying Leg Curl',sets:'4',reps:'8–10',rest:'75s',cue:'Heavy. Full range always. Posterior chain finish to a great block.'},
+        {name:'Banded Lateral Walk',sets:'3',reps:'15/side',rest:'45s',cue:'Active finisher. Keep glute med working even in peak week.'}
+      ]
+    ]
+  },
+  {
+    key:'tue', abbr:'TUE', label:'Upper A', sub:'Horizontal Push/Pull + Cardio',
+    warmup:'CARDIO FIRST — 20 min:\nStairmaster Level 8–10 steady state\nOR Incline Treadmill: 12% grade · 3.5 mph\nOR Hill Runs: 20 min moderate effort\n\nThen: 5 min shoulder CARs + band pull-aparts × 20',
+    phases:[
+      [
+        {name:'DB Bench Press',sets:'3',reps:'12',rest:'75s',cue:'Full chest stretch at the bottom. Don\'t bounce. Controlled descent, explosive press.'},
+        {name:'Lat Pulldown',sets:'3',reps:'12',rest:'75s',cue:'Pull to upper chest. Elbows drive down and back. Full stretch at top — don\'t shortchange it.'},
+        {name:'Incline DB Press (30°)',sets:'3',reps:'12',rest:'75s',cue:'Slight incline targets upper chest. Slow descent, explosive press.'},
+        {name:'Seated Cable Row',sets:'3',reps:'12',rest:'60s',cue:'Elbows close to body. Squeeze rhomboids at the end. Neutral spine — don\'t round forward.'},
+        {name:'DB Lateral Raise',sets:'3',reps:'15',rest:'45s',cue:'Slight forward lean. Lead with elbows, not hands. Stop at shoulder height.'},
+        {name:'Face Pull (Cable)',sets:'3',reps:'15',rest:'45s',cue:'External rotation at the end — thumbs behind ears. Your rotator cuff\'s best friend.'}
+      ],[
+        {name:'DB Bench Press',sets:'4',reps:'10',rest:'75s',cue:'+5 lbs from Phase 1. Four sets — the extra set is where growth happens.'},
+        {name:'Lat Pulldown',sets:'4',reps:'10',rest:'75s',cue:'Overhand grip today. Full stretch at top — don\'t shorten the eccentric.'},
+        {name:'Incline DB Press (30°)',sets:'4',reps:'10',rest:'75s',cue:'More volume = more upper chest stimulus. The fourth set is the one that counts.'},
+        {name:'Seated Cable Row',sets:'4',reps:'10',rest:'60s',cue:'Neutral spine. Heavier cable. Full scapular retraction at the end position.'},
+        {name:'DB Lateral Raise',sets:'3',reps:'15',rest:'45s',cue:'Same weight or slightly heavier. Can superset with face pulls to save time.'},
+        {name:'Face Pull (Cable)',sets:'3',reps:'15',rest:'45s',cue:'Never skip this. Your rotator cuff is a long-term investment.'}
+      ],[
+        {name:'DB Bench Press',sets:'4',reps:'8',rest:'90s',cue:'Heavier. 3-second eccentric. Pause 1 sec at chest. Explosive concentric.'},
+        {name:'Lat Pulldown',sets:'4',reps:'8',rest:'90s',cue:'Full stretch — don\'t lose the contraction at the top. Load is up.'},
+        {name:'Incline DB Press (30°)',sets:'4',reps:'8',rest:'90s',cue:'Fewer reps, more load. Upper chest and front delt working together.'},
+        {name:'Seated Cable Row',sets:'4',reps:'8',rest:'90s',cue:'Heavier cable. Single-arm variation option for Week 6 — more ROM.'},
+        {name:'DB Lateral Raise',sets:'4',reps:'12',rest:'60s',cue:'Slight weight drop for clean form over the extra set. Quality reps.'},
+        {name:'Face Pull (Cable)',sets:'4',reps:'12',rest:'60s',cue:'External rotation cue every single rep. Thumbs behind ears at end range.'}
+      ],[
+        {name:'DB Bench Press',sets:'4',reps:'6–8',rest:'2 min',cue:'Peak load. Spotter if available. Log your PR.'},
+        {name:'Lat Pulldown',sets:'4',reps:'6–8',rest:'2 min',cue:'Heavy. Treat it like a compound — it is one. Full ROM every rep.'},
+        {name:'Incline DB Press (30°)',sets:'4',reps:'8',rest:'90s',cue:'Don\'t sacrifice range for weight. If form breaks, drop 5 lbs.'},
+        {name:'Seated Cable Row',sets:'4',reps:'8',rest:'90s',cue:'Full scapular retraction. Squeeze hard. Your back is a strength asset.'},
+        {name:'DB Lateral Raise',sets:'4',reps:'12',rest:'60s',cue:'Volume hold — shoulders respond to volume even in peak week.'},
+        {name:'Face Pull (Cable)',sets:'4',reps:'15',rest:'45s',cue:'Always high reps. Shoulder health is non-negotiable in any phase.'}
+      ]
+    ]
+  },
+  {
+    key:'thu', abbr:'THU', label:'Lower B', sub:'Quad & Knee Dominant Focus',
+    warmup:'WARMUP (5 min)\nLeg swings front/back × 20/side · Lateral leg swings × 20/side · Goblet squat hold 20 sec × 2 · Bodyweight squat × 15 full depth',
+    phases:[
+      [
+        {name:'Back Squat',sets:'3',reps:'10',rest:'2 min',cue:'Brace before you unrack. Chest up, knees tracking toes. Break parallel — you\'re an advanced lifter, parallel is the floor.'},
+        {name:'Leg Press (mid-high foot)',sets:'3',reps:'12',rest:'90s',cue:'Full range — don\'t lock out at top to keep tension. Quad-dominant foot position.'},
+        {name:'Leg Extension',sets:'3',reps:'15',rest:'60s',cue:'Slow 3-sec eccentric. VMO focus — the inner quad teardrop. Squeeze at the top.'},
+        {name:'Walking Lunge (DB)',sets:'3',reps:'12/leg',rest:'60s',cue:'Medium stride length — balanced glute and quad stimulus. Chest tall.'},
+        {name:'Seated Leg Curl',sets:'3',reps:'12',rest:'60s',cue:'Squeeze at peak contraction. Slow release. Full hamstring range.'},
+        {name:'Standing Calf Raise',sets:'4',reps:'15',rest:'45s',cue:'Full stretch at bottom — heel drops below platform. Pause 2 sec at top.'}
+      ],[
+        {name:'Back Squat',sets:'4',reps:'10',rest:'2 min',cue:'+5–10 lbs. Four sets. Your squat is your lower body\'s north star.'},
+        {name:'Leg Press',sets:'4',reps:'10',rest:'90s',cue:'Going deeper now. Full quad stretch at the bottom — own the range.'},
+        {name:'Leg Extension',sets:'4',reps:'15',rest:'60s',cue:'Four sets. Consider a drop set on your last set to 60% for 15 more reps.'},
+        {name:'Walking Lunge (DB)',sets:'3',reps:'12/leg',rest:'60s',cue:'Heavier DBs. Keep chest tall. This is your single-leg strength.'},
+        {name:'Seated Leg Curl',sets:'3',reps:'12',rest:'60s',cue:'Add weight if 12 feels controlled. Hamstring gets volume here.'},
+        {name:'Standing Calf Raise',sets:'4',reps:'15',rest:'45s',cue:'Pause 2 sec at top. Full stretch at bottom. Calves respond to consistency.'}
+      ],[
+        {name:'Back Squat',sets:'4',reps:'8',rest:'2.5 min',cue:'Heavier. These sets should feel like they matter. They do. Brace harder. Go deeper.'},
+        {name:'Leg Press',sets:'4',reps:'10',rest:'90s',cue:'Load is up. Full ROM. Control the descent — don\'t let the seat pop at the bottom.'},
+        {name:'Leg Extension',sets:'4',reps:'12',rest:'60s',cue:'Add weight. Slow 3s eccentric. VMO is where the detail lives.'},
+        {name:'Walking Lunge (DB)',sets:'4',reps:'10/leg',rest:'75s',cue:'Same weight or heavier. Control on the way down.'},
+        {name:'Seated Leg Curl',sets:'4',reps:'10',rest:'75s',cue:'Heavier. Quality contraction at peak every single rep.'},
+        {name:'Standing Calf Raise',sets:'4',reps:'15',rest:'45s',cue:'Never skip. Calves grow slowly — consistency is the only variable.'}
+      ],[
+        {name:'Back Squat',sets:'5',reps:'5–6',rest:'3 min',cue:'5×5. This is a milestone. Heaviest squats of the program. Log every rep.'},
+        {name:'Leg Press',sets:'4',reps:'8–10',rest:'90s',cue:'Back off leg press slightly so squats can be peak effort. Smart programming.'},
+        {name:'Leg Extension',sets:'4',reps:'12',rest:'60s',cue:'Isolation stays at volume even in peak week. The detail work still matters.'},
+        {name:'Walking Lunge (DB)',sets:'4',reps:'10/leg',rest:'75s',cue:'Heaviest you\'ve gone. You\'ve earned this weight over 8 weeks.'},
+        {name:'Seated Leg Curl',sets:'4',reps:'8–10',rest:'75s',cue:'Heavy. Full range always. Don\'t shortchange yourself.'},
+        {name:'Standing Calf Raise',sets:'5',reps:'15',rest:'45s',cue:'5 sets in peak week. You\'ve been doing the work.'}
+      ]
+    ]
+  },
+  {
+    key:'fri', abbr:'FRI', label:'Upper B + Core', sub:'Vertical Push/Pull · Arms · Core · Cardio',
+    warmup:'CORE CIRCUIT FIRST (15 min) — before main lifts:\n• Dead Bug: 3×10/side — lower back pressed to floor, slow and controlled\n• Pallof Press: 3×12/side — resist rotation, core braced the whole time\n• Hanging Leg Raise: 3×10 — full hang, controlled hip flexion\n• Plank: 3×45 sec — elbows under shoulders, hips level, breathe\n\nCardio (20 min) at session END: Stairmaster / Incline Treadmill / Hill Runs',
+    phases:[
+      [
+        {name:'Barbell OHP',sets:'3',reps:'10',rest:'2 min',cue:'Press straight up — not forward. Bar travels vertical. Lock out fully at the top.'},
+        {name:'Pull-Up (or Lat Pulldown)',sets:'3',reps:'8–10',rest:'90s',cue:'Full dead hang start. Chest approaches bar. Minimize kipping. Band-assist with minimal help.'},
+        {name:'Arnold Press (DB)',sets:'3',reps:'10',rest:'75s',cue:'Rotate through the press — palms face you at bottom, away at top. Full delt development.'},
+        {name:'Chest-Supported DB Row',sets:'3',reps:'12',rest:'75s',cue:'Belly on bench pad. Elbows drive back and up. No momentum. The support removes the cheat.'},
+        {name:'Tricep Pushdown (Cable)',sets:'3',reps:'12',rest:'—',cue:'SUPERSET with curls — no rest between. Full lockout at bottom.',super:true},
+        {name:'DB Bicep Curl',sets:'3',reps:'12',rest:'60s',cue:'SUPERSET. Slow 3s eccentric. Elbows pinned at your side.',super:true}
+      ],[
+        {name:'Barbell OHP',sets:'4',reps:'10',rest:'2 min',cue:'+5 lbs. Brace your core like you\'re about to take a punch. The press starts from the floor up.'},
+        {name:'Pull-Up (or Weighted)',sets:'4',reps:'8',rest:'90s',cue:'4 sets. Add a plate between feet if bodyweight feels controlled. You\'re ready.'},
+        {name:'Arnold Press (DB)',sets:'4',reps:'10',rest:'75s',cue:'Controlled rotation every rep. Don\'t let it become a regular press.'},
+        {name:'Chest-Supported DB Row',sets:'4',reps:'12',rest:'75s',cue:'Heavier DBs. Squeeze at the top — hold 1 sec.'},
+        {name:'Tricep Pushdown (Cable)',sets:'3',reps:'12',rest:'—',cue:'SUPERSET. Heavier cable if 12 feels easy.',super:true},
+        {name:'DB Bicep Curl',sets:'3',reps:'12',rest:'60s',cue:'SUPERSET. Elbows stay pinned. Slow down the negative.',super:true}
+      ],[
+        {name:'Barbell OHP',sets:'4',reps:'8',rest:'2 min',cue:'Strength phase OHP. Heavy. Brace from the floor up. For Week 6, try a push-press warm-up set.'},
+        {name:'Pull-Up (Weighted)',sets:'4',reps:'6–8',rest:'90s',cue:'Belt + plate or hold a DB between feet. Log the weight. This is a milestone lift.'},
+        {name:'Arnold Press (DB)',sets:'4',reps:'8',rest:'75s',cue:'Heavier. Slower rotation. The rotation IS the stimulus — don\'t rush it.'},
+        {name:'Chest-Supported DB Row',sets:'4',reps:'10',rest:'90s',cue:'Single-arm option for Week 6 — better range of motion, more unilateral focus.'},
+        {name:'Tricep Pushdown (Cable)',sets:'4',reps:'10',rest:'—',cue:'SUPERSET. Heavier cable. Full lockout at bottom.',super:true},
+        {name:'DB Bicep Curl',sets:'4',reps:'10',rest:'60s',cue:'SUPERSET. Heavier. Controlled all the way down.',super:true}
+      ],[
+        {name:'Barbell OHP',sets:'4',reps:'6–8',rest:'2.5 min',cue:'Peak OHP. Log this weight. This is where you find out what 8 weeks built.'},
+        {name:'Pull-Up (Weighted)',sets:'4',reps:'6',rest:'90s',cue:'Weighted pull-up PR. This is the set. Leave everything here.'},
+        {name:'Arnold Press (DB)',sets:'4',reps:'8',rest:'75s',cue:'Heavy and controlled. High quality shoulder volume in peak week.'},
+        {name:'Chest-Supported DB Row',sets:'4',reps:'8',rest:'90s',cue:'Strict and heavy. No momentum. Your back is a strength asset.'},
+        {name:'Tricep Pushdown (Cable)',sets:'4',reps:'12',rest:'—',cue:'SUPERSET. Volume arms even in peak week — arms respond to volume best.',super:true},
+        {name:'DB Bicep Curl',sets:'4',reps:'12',rest:'60s',cue:'SUPERSET. Peak at the top. Leave with a pump. You earned it.',super:true}
+      ]
+    ]
+  }
+];
+
+function renderPhases() {
+  const grid = document.getElementById('phases-grid');
+  grid.innerHTML = PHASES.map(p => `
+    <div class="phase-card ${p.cls}">
+      <div class="phase-num">Phase ${p.id}</div>
+      <div class="phase-name">${p.label}</div>
+      <div class="phase-weeks">${p.weeks}</div>
+      <div class="phase-badge">${p.intensity}</div>
+      <div class="phase-focus">${p.focus}</div>
+      <div class="phase-specs">
+        <div class="ps"><span class="ps-val">${p.sets}</span><span class="ps-lbl">Sets</span></div>
+        <div class="ps"><span class="ps-val">${p.reps}</span><span class="ps-lbl">Reps</span></div>
+        <div class="ps"><span class="ps-val">${p.rest}</span><span class="ps-lbl">Rest</span></div>
+        <div class="ps"><span class="ps-val">${p.rpe}</span><span class="ps-lbl">RPE</span></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+const PHASE_COLORS = ['#3b82f6','#8b5cf6','#f59e0b','#ef4444'];
+const PHASE_LABELS = ['Foundation','Hypertrophy','Strength–Hypertrophy','Peak'];
+
+function renderWeekNav() {
+  const nav = document.getElementById('week-nav');
+  nav.innerHTML = Array.from({length:8},(_,i) => {
+    const w = i+1;
+    const pi = PHASE_FOR_WEEK[i];
+    const col = PHASE_COLORS[pi];
+    return `<button class="wtab" data-week="${w}"><span class="wdot" style="background:${col}"></span>Week ${w}</button>`;
+  }).join('');
+}
+
+function renderExTable(exercises) {
+  const rows = exercises.map(ex => `
+    <tr>
+      <td><div class="ex-name">${ex.name}${ex.super ? '<span class="superset-tag">Superset</span>' : ''}</div><div class="ex-cue">${ex.cue}</div></td>
+      <td class="ex-sets">${ex.sets}</td>
+      <td class="ex-reps">${ex.reps}</td>
+      <td class="ex-rest">${ex.rest}</td>
+    </tr>
+  `).join('');
+  return `<table class="ex-table">
+    <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Rest</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function renderDayCard(day, phaseIdx) {
+  const exs = day.phases[phaseIdx];
+  return `
+    <div class="day-card open">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-abbr">${day.abbr}</div>
+        <div class="day-head-info">
+          <div class="day-head-title">${day.label}</div>
+          <div class="day-head-sub">${day.sub}</div>
+        </div>
+        <span class="day-caret">&#8964;</span>
+      </div>
+      <div class="day-body">
+        <div class="warmup-box"><strong>&#9632; ${day.key === 'fri' ? 'CORE + WARMUP + CARDIO GUIDE' : 'WARMUP'}</strong>\n${day.warmup}</div>
+        ${renderExTable(exs)}
+      </div>
+    </div>
+  `;
+}
+
+function renderRestCard(abbr, icon, title, note) {
+  return `<div class="rest-card">
+    <div class="rest-icon">${icon}</div>
+    <div class="rest-body"><h3>${abbr} — ${title}</h3><p>${note}</p></div>
+  </div>`;
+}
+
+function renderWeekPanels() {
+  const container = document.getElementById('week-panels');
+  container.innerHTML = Array.from({length:8},(_,i) => {
+    const w = i+1;
+    const pi = PHASE_FOR_WEEK[i];
+    const phase = PHASES[pi];
+    const col = PHASE_COLORS[pi];
+    const note = WEEK_NOTES[i];
+
+    const headerBg = `rgba(${pi===0?'59,130,246':pi===1?'139,92,246':pi===2?'245,158,11':'239,68,68'},.12)`;
+    const weekBadgeStyle = `background:${headerBg};color:${col}`;
+
+    const days = DAYS.map(d => renderDayCard(d, pi)).join('');
+
+    return `
+    <div class="week-panel${w===1?' active':''}" id="week-${w}">
+      <div class="container">
+        <div class="week-header">
+          <div class="week-badge" style="${weekBadgeStyle}">
+            <span>${w}</span>
+            <span class="week-badge-sub">WEEK</span>
+          </div>
+          <div class="week-info">
+            <h2>Week ${w} — Phase ${phase.id}: ${phase.label}</h2>
+            <div class="week-phase-tag" style="color:${col}">${phase.intensity} &middot; ${phase.sets} Sets &middot; ${phase.reps} Reps &middot; RPE ${phase.rpe}</div>
+            <div class="week-note">${note}</div>
+          </div>
+        </div>
+
+        <div class="schedule-lbl">Training Schedule</div>
+        <div class="day-grid">
+          ${days.split('</div>\n    </div>').slice(0,2).join('</div>\n    </div>') + '</div>\n    </div>'}
+          ${renderRestCard('WED','&#127774;','Rest / Active Recovery','Full rest or 30 min easy walk. No lifting. This is when adaptation happens — protect it.')}
+          ${days.split('</div>\n    </div>').slice(2,4).join('</div>\n    </div>') + '</div>\n    </div>'}
+          ${renderRestCard('SAT','&#9679;','Hip Mobility','See Appendix for full routine. 20–30 min. Pigeon, 90/90, butterfly, middle splits progression. This is training for your flexibility goal.')}
+          ${renderRestCard('SUN','&#9787;','Yoga','Your ritual. Keep it sacred. This is parasympathetic recovery — it is part of the program.')}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // The day-splitting above is messy. Let me fix this with a cleaner render approach.
+  // Re-render cleanly
+  container.innerHTML = '';
+  for(let i=0;i<8;i++){
+    const w=i+1, pi=PHASE_FOR_WEEK[i], phase=PHASES[pi], col=PHASE_COLORS[pi];
+    const headerBg=`rgba(${pi===0?'59,130,246':pi===1?'139,92,246':pi===2?'245,158,11':'239,68,68'},.12)`;
+    const panel=document.createElement('div');
+    panel.className='week-panel'+(w===1?' active':'');
+    panel.id='week-'+w;
+    panel.innerHTML=`
+      <div class="container">
+        <div class="week-header">
+          <div class="week-badge" style="background:${headerBg};color:${col}">
+            <span>${w}</span><span class="week-badge-sub">WEEK</span>
+          </div>
+          <div class="week-info">
+            <h2>Week ${w} &mdash; Phase ${phase.id}: ${phase.label}</h2>
+            <div class="week-phase-tag" style="color:${col}">${phase.intensity} &middot; ${phase.sets} Sets &middot; ${phase.reps} Reps &middot; RPE ${phase.rpe}</div>
+            <div class="week-note">${WEEK_NOTES[i]}</div>
+          </div>
+        </div>
+        <div class="schedule-lbl">Training Schedule</div>
+        <div class="day-grid" id="days-w${w}"></div>
+      </div>`;
+    container.appendChild(panel);
+
+    const grid=document.getElementById('days-w'+w);
+    // Mon
+    grid.appendChild(makeDayCard(DAYS[0],pi));
+    // Tue
+    grid.appendChild(makeDayCard(DAYS[1],pi));
+    // Wed rest
+    grid.appendChild(makeRestCard('WED','&#127774;','Rest / Active Recovery','Full rest or 30 min easy walk. No lifting. Adaptation happens here — protect it.'));
+    // Thu
+    grid.appendChild(makeDayCard(DAYS[2],pi));
+    // Fri
+    grid.appendChild(makeDayCard(DAYS[3],pi));
+    // Sat
+    grid.appendChild(makeRestCard('SAT','&#9679;','Hip Mobility','See Appendix for full routine. 20–30 min. Pigeon, 90/90, butterfly, middle splits progression. This is training for your flexibility goal — not optional.'));
+    // Sun
+    grid.appendChild(makeRestCard('SUN','&#9787;','Yoga','Your ritual. Keep it sacred. Parasympathetic recovery is part of the program architecture.'));
+  }
+}
+
+function makeDayCard(day, phaseIdx) {
+  const exs = day.phases[phaseIdx];
+  const card = document.createElement('div');
+  card.className = 'day-card open';
+  const rows = exs.map(ex => `
+    <tr>
+      <td><div class="ex-name">${ex.name}${ex.super ? '<span class="superset-tag">Superset</span>' : ''}</div><div class="ex-cue">${ex.cue}</div></td>
+      <td class="ex-sets">${ex.sets}</td>
+      <td class="ex-reps">${ex.reps}</td>
+      <td class="ex-rest">${ex.rest}</td>
+    </tr>`).join('');
+  const warmupLabel = day.key === 'fri' ? 'CORE + WARMUP + CARDIO' : 'WARMUP';
+  card.innerHTML = `
+    <div class="day-head">
+      <div class="day-abbr">${day.abbr}</div>
+      <div class="day-head-info">
+        <div class="day-head-title">${day.label}</div>
+        <div class="day-head-sub">${day.sub}</div>
+      </div>
+      <span class="day-caret">&#8964;</span>
+    </div>
+    <div class="day-body">
+      <div class="warmup-box"><strong>&#9632; ${warmupLabel}</strong>\n${day.warmup}</div>
+      <table class="ex-table">
+        <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Rest</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  card.querySelector('.day-head').addEventListener('click', function(){
+    const c = this.closest('.day-card');
+    c.classList.toggle('open');
+  });
+  return card;
+}
+
+function makeRestCard(abbr, icon, title, note) {
+  const div = document.createElement('div');
+  div.className = 'rest-card';
+  div.innerHTML = `
+    <div class="rest-icon">${icon}</div>
+    <div class="rest-body"><h3>${abbr} &mdash; ${title}</h3><p>${note}</p></div>`;
+  return div;
+}
+
+function toggleDay(el) {
+  el.closest('.day-card').classList.toggle('open');
+}
+
+function activateWeek(w) {
+  document.querySelectorAll('.week-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.wtab').forEach(t => t.classList.remove('active'));
+  const panel = document.getElementById('week-'+w);
+  if(panel) panel.classList.add('active');
+  const tab = document.querySelector(`.wtab[data-week="${w}"]`);
+  if(tab) tab.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  renderPhases();
+  renderWeekNav();
+  renderWeekPanels();
+  activateWeek(1);
+  document.getElementById('week-nav').addEventListener('click', function(e){
+    const tab = e.target.closest('.wtab');
+    if(tab) activateWeek(parseInt(tab.dataset.week));
+  });
+});
+</script>
+</body>
+</html>
