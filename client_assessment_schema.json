@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "title": "Client Assessment Schema",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Standardized client profile for Claude Code to read and generate personalized fitness programs. Populated from client onboarding intake.",
+    "last_updated": "May 2026",
+    "instructions_for_claude": "Read this schema in full before generating any program. Every field informs programming decisions. Cross-reference goal_mapping to select the correct program file. Flag any injury_limitations and cross-reference injury_navigation.json. Apply population_flags if present — these override standard programming rules."
+  },
+
+  "schema_template": {
+
+    "client_info": {
+      "full_name": "",
+      "age": null,
+      "sex": "",
+      "height": "",
+      "weight_lbs": null
+    },
+
+    "primary_goal": {
+      "selected": "",
+      "goal_mapping": {
+        "Fat Loss": "fat_loss_programs.json",
+        "Muscle Gain": "muscle_growth_programs.json",
+        "Performance": "athletic_performance_programs.json",
+        "General Health": "functional_fitness.json"
+      },
+      "notes": "If client goal does not map cleanly, cross-reference client_program_goals.json for best fit secondary match."
+    },
+
+    "secondary_goals": {
+      "selected": [],
+      "options": [
+        "Mobility & Flexibility",
+        "Stress & Recovery",
+        "Confidence Building",
+        "Competition Prep",
+        "Weight Maintenance",
+        "Postural Correction",
+        "Injury Navigation"
+      ],
+      "notes": "Secondary goals layer on top of primary program. Do not replace primary structure — modify and supplement it."
+    },
+
+    "experience_level": {
+      "selected": "",
+      "options": ["Beginner", "Intermediate", "Advanced"],
+      "definitions": {
+        "Beginner": "Less than 1 year of consistent training, or returning after a long break",
+        "Intermediate": "1-3 years of training, comfortable with most movements",
+        "Advanced": "3+ years, strong technique, familiar with periodization"
+      },
+      "programming_impact": {
+        "Beginner": "Prioritize movement quality, lower complexity, higher success rate exercises, 2-3 days/week minimum, longer warm-ups",
+        "Intermediate": "Introduce periodization, supersets, and moderate complexity, 3-5 days/week",
+        "Advanced": "Full periodization, advanced techniques (drop sets, tempo, RIR), 4-6 days/week"
+      }
+    },
+
+    "training_schedule": {
+      "days_per_week": null,
+      "session_length_minutes": null,
+      "programming_notes": "Never exceed available days. Build program around session length — a 30-min session looks very different from a 90-min session. Prioritize compound movements when session length is under 45 minutes."
+    },
+
+    "equipment_access": {
+      "selected": "",
+      "options": ["Full Gym", "Home Gym", "Minimal", "Mixed"],
+      "equipment_definitions": {
+        "Full Gym": "All equipment available — barbells, cables, machines, dumbbells, racks",
+        "Home Gym": "Dumbbells, some machines, limited cable access",
+        "Minimal": "Bodyweight and resistance bands only",
+        "Mixed": "Varies week to week — build program with minimal equipment as baseline, note full gym upgrades"
+      },
+      "programming_impact": "Filter all exercise selections through available equipment. Never program equipment the client does not have access to."
+    },
+
+    "health_and_lifestyle": {
+      "injuries_and_limitations": {
+        "description": "",
+        "flag_for_injury_navigation": false,
+        "notes": "If any injury or limitation is listed, set flag_for_injury_navigation to true and cross-reference injury_navigation.json before finalizing exercise selection."
+      },
+      "sleep_quality": {
+        "selected": "",
+        "options": ["Poor", "Inconsistent", "OK", "Good", "Great"],
+        "programming_impact": {
+          "Poor": "Reduce volume and intensity. Prioritize recovery. Flag for stress and recovery secondary goal.",
+          "Inconsistent": "Moderate volume. Build in deload awareness. Note in program.",
+          "OK": "Standard programming. Monitor recovery.",
+          "Good": "Standard programming.",
+          "Great": "Can support higher volume and intensity."
+        }
+      },
+      "stress_levels": {
+        "selected": "",
+        "options": ["Low", "Moderate", "High", "Very High"],
+        "programming_impact": {
+          "Low": "Standard programming.",
+          "Moderate": "Standard programming. Monitor adherence.",
+          "High": "Reduce session complexity. Shorter sessions. More low-impact options. Flag stress and recovery secondary goal.",
+          "Very High": "Prioritize parasympathetic training. Lower intensity. Shorter sessions. Consider mind-body integration programming."
+        }
+      }
+    },
+
+    "population_flags": {
+      "is_prenatal": false,
+      "is_postpartum": false,
+      "is_active_aging": false,
+      "notes": "Population flags override standard programming rules. If is_prenatal is true, load prenatal_fitness_program.json and apply all special considerations. If is_postpartum is true, load postpartum_enhanced.json. If is_active_aging is true, load active_aging_program.json. These flags take priority over primary goal selection."
+    },
+
+    "client_story": {
+      "fitness_history": {
+        "response": "",
+        "coaching_notes": "Use to understand training background, identify gaps, and inform periodization starting point."
+      },
+      "what_has_worked": {
+        "response": "",
+        "coaching_notes": "Use to mirror successful training styles where possible. If client responded well to circuits, incorporate. If client thrived with heavy lifting, reflect that."
+      },
+      "consistency_blockers": {
+        "response": "",
+        "coaching_notes": "Use to build program around known obstacles. If time is a blocker, keep sessions shorter. If boredom is a blocker, build in variety. If injury is a blocker, prioritize injury navigation."
+      },
+      "current_physical_state": {
+        "response": "",
+        "coaching_notes": "Use to set realistic starting intensity. If client reports low energy or persistent discomfort, start conservative and build."
+      },
+      "deeper_why": {
+        "response": "",
+        "coaching_notes": "This is the motivational anchor. Reference this when the program needs to connect to meaning beyond aesthetics. Not directly used in exercise selection but informs tone and program framing."
+      }
+    },
+
+    "program_output_instructions": {
+      "step_1": "Read client_info for baseline context",
+      "step_2": "Read primary_goal and use goal_mapping to select correct program file",
+      "step_3": "Read secondary_goals and layer modifications on top of primary structure",
+      "step_4": "Read experience_level and apply appropriate complexity and volume",
+      "step_5": "Read training_schedule — build program within days and session length available",
+      "step_6": "Read equipment_access — filter all exercises through available equipment",
+      "step_7": "Read health_and_lifestyle — adjust volume and intensity for sleep and stress. If injury flag is true, cross-reference injury_navigation.json",
+      "step_8": "Check population_flags — if any are true, override primary program with population-specific file",
+      "step_9": "Read client_story — use to personalize tone, structure, and exercise selection",
+      "step_10": "Generate program — structured by day, week, and phase. Include sets, reps, tempo, rest periods, and coaching cues."
+    }
+  },
+
+  "example_completed_client": {
+    "client_info": {
+      "full_name": "Sarah M.",
+      "age": 34,
+      "sex": "Female",
+      "height": "5'5\" (165 cm)",
+      "weight_lbs": 158
+    },
+    "primary_goal": {
+      "selected": "Fat Loss",
+      "mapped_program_file": "fat_loss_programs.json"
+    },
+    "secondary_goals": {
+      "selected": ["Mobility & Flexibility", "Stress & Recovery"]
+    },
+    "experience_level": {
+      "selected": "Intermediate"
+    },
+    "training_schedule": {
+      "days_per_week": 4,
+      "session_length_minutes": 45
+    },
+    "equipment_access": {
+      "selected": "Full Gym"
+    },
+    "health_and_lifestyle": {
+      "injuries_and_limitations": {
+        "description": "Right knee discomfort with heavy squatting",
+        "flag_for_injury_navigation": true
+      },
+      "sleep_quality": {
+        "selected": "Inconsistent"
+      },
+      "stress_levels": {
+        "selected": "High"
+      }
+    },
+    "population_flags": {
+      "is_prenatal": false,
+      "is_postpartum": false,
+      "is_active_aging": false
+    },
+    "client_story": {
+      "fitness_history": {
+        "response": "Was very active in my 20s, ran half marathons. Stopped when I had kids. Did some home workouts during COVID but nothing consistent."
+      },
+      "what_has_worked": {
+        "response": "Group fitness classes kept me accountable. I liked having structure and not having to think about what to do."
+      },
+      "consistency_blockers": {
+        "response": "Time is the biggest one. I have two kids and a full-time job. When life gets busy the gym is the first thing to go."
+      },
+      "current_physical_state": {
+        "response": "Energy is low most days. Feel strong enough but carry tension in my hips and shoulders."
+      },
+      "deeper_why": {
+        "response": "I want to feel like myself again. I want my kids to see me prioritizing my health. And honestly I just want to feel strong and confident."
+      }
+    }
+  }
+}
