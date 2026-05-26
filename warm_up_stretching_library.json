@@ -1,0 +1,532 @@
+{
+  "metadata": {
+    "title": "Warm-Up & Stretching Library",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Defines warm-up and stretching protocols matched to session type. Claude uses this file to build the warm-up and cooldown blocks of every TRAIN session. Dynamic stretching always precedes training. Static stretching always follows training.",
+    "last_updated": "May 2026",
+    "version": "1.0",
+    "critical_rule": "Dynamic warm-up BEFORE training. Static stretching AFTER training only. Static stretching before training temporarily reduces force output and increases injury risk.",
+    "cross_references": [
+      "movement_categories.json",
+      "injury_navigation.json",
+      "programming_variables.json",
+      "client_assessment_schema.json"
+    ]
+  },
+
+  "instructions_for_claude": {
+    "step_1": "Identify session type from the program (lower body, upper body, full body, push, pull, legs, or performance)",
+    "step_2": "Select the matching warm_up_protocol from this file and place it at the start of the session",
+    "step_3": "Select the matching cooldown_and_stretching protocol and place it at the end of the session",
+    "step_4": "Apply mobility_flags from client_assessment_schema.json — add any targeted mobility work for flagged limitations",
+    "step_5": "Apply injury modifications from injury_navigation.json — replace any contraindicated warm-up movements",
+    "step_6": "For postpartum clients — use postpartum_warm_up protocol only until cleared for full programming",
+    "time_guidance": {
+      "warm_up": "8–12 minutes — never skip, never rush",
+      "cooldown_and_stretching": "5–10 minutes — essential for recovery and flexibility",
+      "coaching_note": "The warm-up and cooldown are not optional extras — they are part of the program. A client who skips warm-ups accumulates injury risk. A client who skips cooldowns accumulates tightness and reduces recovery quality."
+    }
+  },
+
+  "warm_up_principles": {
+    "purpose": [
+      "Increase core temperature and blood flow to working muscles",
+      "Activate the nervous system for the demands of the session",
+      "Improve range of motion dynamically before loading",
+      "Mentally prepare the client — the warm-up is the transition from life to training",
+      "Reduce injury risk by preparing joints and connective tissue"
+    ],
+    "dynamic_vs_static": {
+      "dynamic": "Active movements through range of motion — used in warm-up. Increases temperature, activates muscles, prepares movement patterns.",
+      "static": "Held stretches — used in cooldown ONLY. Improves flexibility, promotes relaxation, aids recovery. Never before training.",
+      "kim_coaching_note": "Think of the warm-up as waking the body up — and the cooldown as letting it land softly. Both matter. Both are intentional."
+    }
+  },
+
+  "warm_up_protocols": {
+
+    "lower_body": {
+      "session_types": ["Lower Body", "Legs Day (PPL)", "Glute Focus", "Hamstring Focus", "Quad Focus"],
+      "duration": "8–10 minutes",
+      "focus": "Hip mobility, glute activation, knee tracking, ankle dorsiflexion, posterior chain prep",
+      "sequence": [
+        {
+          "order": 1,
+          "name": "World's Greatest Stretch",
+          "sets_reps": "5 reps per side",
+          "duration_seconds": 60,
+          "description": "Lunge forward, place same-side hand on floor, rotate opposite arm to ceiling. Hold 2 seconds at top. Return and repeat.",
+          "targets": ["Hip flexors", "Thoracic spine", "Hamstrings", "Glutes", "Ankle dorsiflexion"],
+          "cue": "Try to show me the ceiling with your top hand. Feel the hip open and the spine rotate.",
+          "coaching_note": "The single most efficient warm-up movement — covers almost every lower body limitation in one exercise. Always include."
+        },
+        {
+          "order": 2,
+          "name": "Hip Circle",
+          "sets_reps": "10 circles each direction per side",
+          "duration_seconds": 45,
+          "description": "Standing, lift one knee to hip height and draw large slow circles — forward then backward.",
+          "targets": ["Hip joint", "Hip flexors", "Glute medius", "Adductors"],
+          "cue": "Make the circle as big as you can. Feel the hip socket moving freely.",
+          "coaching_note": "Lubricates the hip joint before loading. Essential for squat and hinge patterns."
+        },
+        {
+          "order": 3,
+          "name": "Glute Bridge (Activation)",
+          "sets_reps": "2 x 15 reps",
+          "duration_seconds": 60,
+          "description": "Lie on back, feet flat, drive hips to ceiling, squeeze glutes hard at top, lower controlled.",
+          "targets": ["Glutes", "Hamstrings", "Core"],
+          "cue": "Squeeze your glutes at the top like you're trying to crack a walnut. Hold 1 second.",
+          "coaching_note": "Activates glutes before compound loading — clients who skip this often compensate with lower back in squats and deadlifts."
+        },
+        {
+          "order": 4,
+          "name": "Lateral Band Walk",
+          "sets_reps": "2 x 15 steps each direction",
+          "duration_seconds": 60,
+          "description": "Band around ankles or above knees, slight squat position, step laterally — keep tension in band throughout.",
+          "targets": ["Glute medius", "Hip abductors", "TFL"],
+          "cue": "Stay low. Keep your toes forward. Feel the outside of your hip working.",
+          "coaching_note": "Activates glute medius — the most underworked glute muscle. Directly prevents knee cave in squats and lunges.",
+          "equipment_required": "Resistance band",
+          "no_band_substitute": "Bodyweight lateral squat walk — same pattern, less resistance"
+        },
+        {
+          "order": 5,
+          "name": "Leg Swing (Forward/Back)",
+          "sets_reps": "10 swings each direction per leg",
+          "duration_seconds": 45,
+          "description": "Hold wall for balance. Swing leg forward and back in a controlled arc — increase range gradually.",
+          "targets": ["Hip flexors", "Hamstrings", "Hip joint"],
+          "cue": "Let momentum build the range — don't force it. By rep 10 you should have full range."
+        },
+        {
+          "order": 6,
+          "name": "Bodyweight Squat (Movement Prep)",
+          "sets_reps": "2 x 10 reps — slow and controlled",
+          "duration_seconds": 45,
+          "description": "Full depth bodyweight squat. Pause 1 second at bottom. Focus on depth and alignment.",
+          "targets": ["Quads", "Glutes", "Hip mobility", "Ankle mobility"],
+          "cue": "Sit into it. Chest up, knees tracking toes. This is the movement we're about to load — make it perfect here.",
+          "coaching_note": "Final movement prep — mirrors the primary session movements at zero load."
+        }
+      ],
+      "mobility_additions": {
+        "tight_hips": "Add: 90/90 Hip Stretch — 60 seconds per side before sequence",
+        "ankle_restriction": "Add: Ankle Dorsiflexion Mobilization — 10 reps per side before squats",
+        "hamstring_tightness": "Add: Lying Hamstring Stretch (dynamic) — 10 leg raises per side",
+        "knee_issues": "Replace Lateral Band Walk with Seated Clamshell — same glute medius activation, zero knee stress"
+      }
+    },
+
+    "upper_body": {
+      "session_types": ["Upper Body", "Push Day (PPL)", "Pull Day (PPL)", "Chest Focus", "Back Focus", "Shoulder Focus"],
+      "duration": "8–10 minutes",
+      "focus": "Shoulder mobility, scapular activation, thoracic rotation, rotator cuff prep, wrist and elbow readiness",
+      "sequence": [
+        {
+          "order": 1,
+          "name": "Arm Circle",
+          "sets_reps": "10 circles each direction",
+          "duration_seconds": 30,
+          "description": "Stand tall, arms out to sides. Draw large slow circles forward, then reverse. Increase range gradually.",
+          "targets": ["Shoulder joint", "Rotator cuff", "Scapular stabilizers"],
+          "cue": "Start small and let the circles get bigger. Feel the shoulder warming up."
+        },
+        {
+          "order": 2,
+          "name": "Band Pull-Apart",
+          "sets_reps": "3 x 15 reps",
+          "duration_seconds": 60,
+          "description": "Hold band at chest width with both hands, arms straight. Pull band apart until arms are wide, squeeze rear delts. Return controlled.",
+          "targets": ["Rear deltoids", "Rhomboids", "Rotator cuff", "Scapular retractors"],
+          "cue": "Think about pinching a pencil between your shoulder blades at the end of every rep.",
+          "coaching_note": "The most important upper body warm-up exercise — activates rear delts and scapular stabilizers that protect the shoulder on all pressing and pulling movements. Never skip.",
+          "equipment_required": "Resistance band",
+          "no_band_substitute": "Prone Y-T-W on floor — same activation, no equipment"
+        },
+        {
+          "order": 3,
+          "name": "Wall Slide",
+          "sets_reps": "2 x 10 reps",
+          "duration_seconds": 45,
+          "description": "Stand with back against wall, arms in goal-post position. Slide arms overhead keeping contact with wall throughout. Lower back down.",
+          "targets": ["Serratus anterior", "Lower trapezius", "Scapular upward rotation", "Shoulder mobility"],
+          "cue": "Keep your lower back, arms, and wrists all touching the wall the entire time. It's harder than it looks.",
+          "coaching_note": "Identifies and corrects scapular dysfunction immediately. If client can't keep arms on wall — reduce range until mobility improves."
+        },
+        {
+          "order": 4,
+          "name": "Thoracic Rotation (Half-Kneeling)",
+          "sets_reps": "8 reps per side",
+          "duration_seconds": 45,
+          "description": "Half-kneeling position, hands behind head. Rotate upper body toward front knee. Hold 1 second. Return. Keep hips square.",
+          "targets": ["Thoracic spine", "Obliques", "Scapular mobility"],
+          "cue": "Your hips stay square — only your upper back rotates. Lead with your elbow to the ceiling."
+        },
+        {
+          "order": 5,
+          "name": "Scapular Push-Up",
+          "sets_reps": "2 x 10 reps",
+          "duration_seconds": 45,
+          "description": "Plank position, arms straight. Without bending elbows, let chest sink between shoulder blades (protract), then push back up (retract). Small controlled movement.",
+          "targets": ["Serratus anterior", "Scapular stabilizers", "Rotator cuff"],
+          "cue": "Don't bend your elbows at all — this is pure shoulder blade movement. In and out.",
+          "coaching_note": "Directly prepares the shoulder for pressing movements. Clients with shoulder impingement especially benefit from this."
+        },
+        {
+          "order": 6,
+          "name": "External Rotation (Band or Light DB)",
+          "sets_reps": "2 x 15 reps per side",
+          "duration_seconds": 60,
+          "description": "Elbow at 90 degrees at side. Rotate forearm outward away from body. Return controlled. Keep elbow pinned at side.",
+          "targets": ["Infraspinatus", "Teres Minor", "Rotator cuff"],
+          "cue": "Elbow stays glued to your side. Just the forearm rotates — like opening a door.",
+          "coaching_note": "Rotator cuff activation before heavy pressing is non-negotiable for shoulder health. This is preventive medicine."
+        },
+        {
+          "order": 7,
+          "name": "Wrist Circle and Wrist Mobility",
+          "sets_reps": "10 circles each direction, then 10 wrist extensions and flexions",
+          "duration_seconds": 30,
+          "description": "Rotate wrists slowly in both directions. Then press palms together in prayer position and lower hands to stretch wrist extensors.",
+          "targets": ["Wrist joint", "Forearm flexors and extensors"],
+          "cue": "Take your time here — wrists take a beating in pressing work.",
+          "coaching_note": "Include for all upper body sessions. Essential for clients with wrist discomfort flag."
+        }
+      ],
+      "push_day_additions": [
+        "Add: 1-2 light warm-up sets on primary pressing movement at 40-50% working load before working sets"
+      ],
+      "pull_day_additions": [
+        "Add: Dead Hang from pull-up bar — 2 x 20-30 seconds for shoulder decompression"
+      ],
+      "mobility_additions": {
+        "limited_shoulder": "Add: Doorway Pec Stretch — 30 seconds per side before pressing work",
+        "thoracic_stiffness": "Add: Foam Roller Thoracic Extension — 60 seconds before sequence",
+        "wrist_discomfort": "Add: Extended wrist mobility sequence — fist circles, prayer stretch, reverse prayer — before any pressing"
+      }
+    },
+
+    "full_body": {
+      "session_types": ["Full Body", "General Health", "Beginner Program"],
+      "duration": "10–12 minutes",
+      "focus": "Total body activation — combine lower and upper body preparation in a flowing sequence",
+      "sequence": [
+        {
+          "order": 1,
+          "name": "March in Place",
+          "sets_reps": "60 seconds",
+          "duration_seconds": 60,
+          "description": "Walk or march in place, driving knees up to hip height. Swing arms naturally.",
+          "targets": ["Cardiovascular system", "Hip flexors", "Full body temperature"],
+          "cue": "Start easy and build your pace. Get the blood moving.",
+          "coaching_note": "Simple, accessible, zero equipment. Sets the tone for the session."
+        },
+        {
+          "order": 2,
+          "name": "World's Greatest Stretch",
+          "sets_reps": "5 reps per side",
+          "duration_seconds": 75,
+          "description": "Lunge forward, place same-side hand on floor, rotate opposite arm to ceiling. Hold 2 seconds at top.",
+          "targets": ["Hip flexors", "Thoracic spine", "Hamstrings", "Glutes", "Shoulder mobility"],
+          "cue": "This one movement warms up almost everything. Move slowly and intentionally."
+        },
+        {
+          "order": 3,
+          "name": "Band Pull-Apart",
+          "sets_reps": "2 x 15 reps",
+          "duration_seconds": 45,
+          "description": "Pull band from chest width to fully open. Squeeze rear delts at end range.",
+          "targets": ["Rear deltoids", "Scapular stabilizers", "Rotator cuff"],
+          "cue": "Pinch the shoulder blades together at the end of every rep."
+        },
+        {
+          "order": 4,
+          "name": "Hip Circle",
+          "sets_reps": "10 each direction per side",
+          "duration_seconds": 45,
+          "description": "Standing hip circles — forward and backward. Full range of motion.",
+          "targets": ["Hip joint", "Hip flexors", "Glute medius"]
+        },
+        {
+          "order": 5,
+          "name": "Glute Bridge (Activation)",
+          "sets_reps": "2 x 12 reps",
+          "duration_seconds": 45,
+          "description": "Drive hips to ceiling, 1-second squeeze at top, lower controlled.",
+          "targets": ["Glutes", "Hamstrings", "Core"],
+          "cue": "Wake those glutes up. Every rep — squeeze and hold."
+        },
+        {
+          "order": 6,
+          "name": "Arm Circle + Thoracic Rotation Combo",
+          "sets_reps": "8 reps each",
+          "duration_seconds": 45,
+          "description": "5 arm circles each direction, then 8 thoracic rotations (hands behind head, rotate upper body side to side).",
+          "targets": ["Shoulder joint", "Thoracic spine", "Scapular mobility"]
+        },
+        {
+          "order": 7,
+          "name": "Bodyweight Squat to Overhead Reach",
+          "sets_reps": "2 x 10 reps",
+          "duration_seconds": 45,
+          "description": "Squat down fully, arms in front for balance. As you stand, reach both arms overhead. Lower arms on descent.",
+          "targets": ["Full body", "Hip mobility", "Shoulder mobility", "Core"],
+          "cue": "Sit deep into the squat — reach tall as you stand. Full range, every rep.",
+          "coaching_note": "The ideal full body warm-up finisher — integrates lower and upper body in one movement."
+        }
+      ]
+    },
+
+    "push_day": {
+      "session_types": ["Push Day (PPL)", "Chest and Triceps", "Shoulder Press Focus"],
+      "duration": "8–10 minutes",
+      "focus": "Chest, anterior deltoid, and tricep activation. Scapular stability for pressing.",
+      "sequence": [
+        {"order": 1, "name": "Arm Circle", "sets_reps": "10 each direction", "targets": ["Shoulder joint"]},
+        {"order": 2, "name": "Band Pull-Apart", "sets_reps": "3 x 15", "targets": ["Rear delts", "Scapular stabilizers"], "coaching_note": "Always pull before you push — activates the muscles that stabilize the shoulder during pressing"},
+        {"order": 3, "name": "Scapular Push-Up", "sets_reps": "2 x 10", "targets": ["Serratus anterior", "Scapular control"]},
+        {"order": 4, "name": "Wall Slide", "sets_reps": "2 x 10", "targets": ["Shoulder mobility", "Scapular upward rotation"]},
+        {"order": 5, "name": "External Rotation (Band)", "sets_reps": "2 x 12 per side", "targets": ["Rotator cuff"]},
+        {"order": 6, "name": "Wrist Mobility", "sets_reps": "30 seconds", "targets": ["Wrists"]},
+        {"order": 7, "name": "Light Pressing Warm-Up Sets", "sets_reps": "2 sets at 40-50% working load", "targets": ["Chest", "Deltoids", "Triceps"], "coaching_note": "Always ramp up to working weight on primary pressing movement before first working set"}
+      ]
+    },
+
+    "pull_day": {
+      "session_types": ["Pull Day (PPL)", "Back and Biceps", "Row Focus"],
+      "duration": "8–10 minutes",
+      "focus": "Lat activation, scapular retraction, bicep tendon prep, dead hang decompression",
+      "sequence": [
+        {"order": 1, "name": "Arm Circle", "sets_reps": "10 each direction", "targets": ["Shoulder joint"]},
+        {"order": 2, "name": "Dead Hang", "sets_reps": "2 x 20-30 seconds", "targets": ["Lats", "Shoulder decompression", "Grip"], "coaching_note": "Decompresses the shoulder and activates the lats before pulling. One of the most underrated warm-up movements for back training.", "equipment_required": "Pull-up bar"},
+        {"order": 3, "name": "Band Pull-Apart", "sets_reps": "3 x 15", "targets": ["Rear delts", "Rhomboids"]},
+        {"order": 4, "name": "Scapular Pull-Up (or Scapular Depression on Bar)", "sets_reps": "2 x 8", "targets": ["Lower trapezius", "Lat activation"], "description": "Hang from bar, arms straight. Without bending elbows, depress shoulder blades (pull them down). Return.", "coaching_note": "Teaches the lat activation pattern before loaded pulling"},
+        {"order": 5, "name": "Thoracic Rotation (Half-Kneeling)", "sets_reps": "8 per side", "targets": ["Thoracic spine", "Scapular mobility"]},
+        {"order": 6, "name": "Light Row Warm-Up Sets", "sets_reps": "2 sets at 40-50% working load", "targets": ["Lats", "Rhomboids", "Biceps"]}
+      ]
+    },
+
+    "performance_and_athletic": {
+      "session_types": ["Performance", "Athletic", "Sport Specific"],
+      "duration": "12–15 minutes",
+      "focus": "CNS activation, explosive readiness, full body preparation, proprioception",
+      "sequence": [
+        {"order": 1, "name": "Light Jog or Jump Rope", "sets_reps": "2–3 minutes", "targets": ["Cardiovascular system", "Full body temperature", "CNS activation"]},
+        {"order": 2, "name": "World's Greatest Stretch", "sets_reps": "5 reps per side", "targets": ["Full body mobility"]},
+        {"order": 3, "name": "Lateral Shuffle", "sets_reps": "3 x 10 yards each direction", "targets": ["Lateral movement prep", "Hip abductors", "Ankle stability"]},
+        {"order": 4, "name": "High Knee March", "sets_reps": "2 x 10 yards", "targets": ["Hip flexors", "Core", "Coordination"]},
+        {"order": 5, "name": "Glute Bridge", "sets_reps": "2 x 12", "targets": ["Glute activation", "Posterior chain"]},
+        {"order": 6, "name": "Band Pull-Apart", "sets_reps": "2 x 15", "targets": ["Shoulder stability"]},
+        {"order": 7, "name": "Bodyweight Squat Jump (Sub-Maximal)", "sets_reps": "2 x 5 — 50% effort", "targets": ["CNS activation", "Power readiness", "Tendon prep"], "coaching_note": "Sub-maximal jumps before explosive work prime the CNS without accumulating fatigue"},
+        {"order": 8, "name": "Hip Circle + Leg Swing", "sets_reps": "8 each per side", "targets": ["Hip joint", "Full lower body mobility"]}
+      ]
+    },
+
+    "active_recovery_and_mobility": {
+      "session_types": ["Active Recovery Day", "Deload Week", "Mind-Body Session"],
+      "duration": "15–20 minutes (this IS the session)",
+      "focus": "Nervous system downregulation, full body mobility, breath work",
+      "sequence": [
+        {"order": 1, "name": "Diaphragmatic Breathing", "sets_reps": "5 slow breaths — 4 count in, hold 2, 6 count out", "targets": ["Nervous system", "Parasympathetic activation"], "coaching_note": "Start here. Shifts the client from stress mode to recovery mode before any movement."},
+        {"order": 2, "name": "Cat-Cow", "sets_reps": "10 slow reps", "targets": ["Spinal mobility", "Core"]},
+        {"order": 3, "name": "Child's Pose", "sets_reps": "60 seconds", "targets": ["Hip flexors", "Lats", "Thoracic spine"]},
+        {"order": 4, "name": "World's Greatest Stretch", "sets_reps": "5 reps per side — extra slow", "targets": ["Full body mobility"]},
+        {"order": 5, "name": "90/90 Hip Stretch", "sets_reps": "60 seconds per side", "targets": ["Hip internal and external rotation"]},
+        {"order": 6, "name": "Thread the Needle", "sets_reps": "8 reps per side", "targets": ["Thoracic rotation", "Shoulder"], "description": "On all fours, thread one arm under the body and rotate. Follow hand with eyes."},
+        {"order": 7, "name": "Pigeon Pose", "sets_reps": "90 seconds per side", "targets": ["Hip external rotators", "Glutes", "Hip flexors"]},
+        {"order": 8, "name": "Supine Twist", "sets_reps": "60 seconds per side", "targets": ["Thoracic and lumbar rotation", "Piriformis"]}
+      ]
+    }
+  },
+
+  "cooldown_and_stretching_protocols": {
+
+    "lower_body_cooldown": {
+      "duration": "8–10 minutes",
+      "timing": "Immediately after the final working set — while muscles are warm",
+      "sequence": [
+        {
+          "order": 1,
+          "name": "Standing Quad Stretch",
+          "hold": "45–60 seconds per side",
+          "description": "Stand on one leg, pull opposite foot to glute. Keep knees together, stand tall.",
+          "targets": ["Quadriceps", "Hip flexors"],
+          "cue": "Keep the knee pointing straight down — not flaring out to the side."
+        },
+        {
+          "order": 2,
+          "name": "Standing Hip Flexor Stretch (Kneeling Lunge)",
+          "hold": "60 seconds per side",
+          "description": "Kneeling lunge position. Shift hips forward gently until stretch is felt in front of back hip. Keep torso tall.",
+          "targets": ["Hip flexors", "Psoas", "Rectus femoris"],
+          "cue": "Don't lean forward — stay tall. The stretch should be at the front of the back hip, not the knee.",
+          "coaching_note": "Most clients who train lower body are tight through the hip flexors. This is essential every session."
+        },
+        {
+          "order": 3,
+          "name": "Seated Hamstring Stretch",
+          "hold": "60 seconds per side",
+          "description": "Sit on floor, one leg extended. Reach toward foot with flat back. Hold.",
+          "targets": ["Hamstrings", "Calf", "Lower back"],
+          "cue": "Hinge at the hip, not the waist. Keep your back flat — not rounded."
+        },
+        {
+          "order": 4,
+          "name": "Pigeon Pose (or Figure Four on Back)",
+          "hold": "90 seconds per side",
+          "description": "Pigeon: front shin parallel, back leg long behind. Fold forward gently. Figure Four (easier): lie on back, cross ankle over opposite knee, pull thigh toward chest.",
+          "targets": ["Glutes", "Piriformis", "Hip external rotators"],
+          "cue": "Breathe into the tightest part of the stretch. Let it release with each exhale.",
+          "coaching_note": "The most important lower body cooldown stretch. Glutes tighten significantly during heavy lower body work — always include."
+        },
+        {
+          "order": 5,
+          "name": "Calf Stretch (Wall)",
+          "hold": "45 seconds per side",
+          "description": "Hands on wall, one foot forward, one back. Press back heel into floor. Keep back leg straight for gastrocnemius, slight knee bend for soleus.",
+          "targets": ["Gastrocnemius", "Soleus", "Achilles tendon"]
+        },
+        {
+          "order": 6,
+          "name": "Supine Hamstring Stretch",
+          "hold": "45 seconds per side",
+          "description": "Lie on back, loop band or towel around foot. Straighten leg toward ceiling gently. Keep opposite leg flat.",
+          "targets": ["Hamstrings", "Sciatic nerve mobility"],
+          "coaching_note": "Use after deadlift or RDL days especially — hammers right into the belly of the hamstring."
+        },
+        {
+          "order": 7,
+          "name": "Child's Pose",
+          "hold": "60 seconds",
+          "description": "Kneel and sit back on heels, reach arms long in front, forehead to floor.",
+          "targets": ["Hip flexors", "Lats", "Thoracic spine", "Lower back"],
+          "cue": "Let everything go. Breathe slowly. The work is done.",
+          "coaching_note": "Closes the session with a moment of intentional rest. Aligns with Kim's mind-body philosophy."
+        }
+      ]
+    },
+
+    "upper_body_cooldown": {
+      "duration": "6–8 minutes",
+      "sequence": [
+        {
+          "order": 1,
+          "name": "Cross-Body Shoulder Stretch",
+          "hold": "45 seconds per side",
+          "description": "Pull one arm across the body at shoulder height. Use opposite hand to gently increase stretch. Keep shoulder down.",
+          "targets": ["Posterior deltoid", "Rhomboids", "Rotator cuff"]
+        },
+        {
+          "order": 2,
+          "name": "Doorway Pec Stretch",
+          "hold": "45–60 seconds per side",
+          "description": "Stand in doorway, arm at 90 degrees on frame. Gently rotate body away until stretch is felt across chest. Hold.",
+          "targets": ["Pectorals", "Anterior deltoid", "Bicep tendon"],
+          "cue": "Don't force it — gentle rotation. You should feel this across your chest, not in your shoulder joint.",
+          "coaching_note": "Most pressing-dominant clients are tight through the pec. Essential after push days."
+        },
+        {
+          "order": 3,
+          "name": "Overhead Tricep Stretch",
+          "hold": "30 seconds per side",
+          "description": "Raise one arm overhead, bend elbow, reach hand down back. Use opposite hand to gently push elbow back.",
+          "targets": ["Triceps", "Long head attachment"]
+        },
+        {
+          "order": 4,
+          "name": "Bicep Wall Stretch",
+          "hold": "30 seconds per side",
+          "description": "Place palm flat on wall at shoulder height, fingers pointing down or back. Gently rotate body away.",
+          "targets": ["Biceps", "Anterior deltoid", "Wrist flexors"],
+          "coaching_note": "Include after any pulling-heavy session — biceps shorten significantly during curl and row work."
+        },
+        {
+          "order": 5,
+          "name": "Neck Side Stretch",
+          "hold": "30 seconds per side",
+          "description": "Gently tilt ear toward shoulder. Hold with light hand pressure. Never force.",
+          "targets": ["Upper trapezius", "Levator scapulae", "Sternocleidomastoid"],
+          "cue": "No pulling — just weight of the hand. This is gentle."
+        },
+        {
+          "order": 6,
+          "name": "Sleeper Stretch",
+          "hold": "45 seconds per side",
+          "description": "Lie on side on floor with arm at 90 degrees. Use opposite hand to gently press wrist toward floor. Keep shoulder pinned.",
+          "targets": ["Posterior rotator cuff", "Internal rotation mobility"],
+          "coaching_note": "Highly effective for shoulder health after heavy pressing. Include after push days for any client with shoulder tightness."
+        },
+        {
+          "order": 7,
+          "name": "Thread the Needle",
+          "hold": "45 seconds per side",
+          "description": "On all fours, slide one arm under body and rest on that shoulder. Other arm reaches to ceiling optionally.",
+          "targets": ["Thoracic spine", "Shoulder", "Obliques"],
+          "cue": "Let gravity do the work. Breathe and release."
+        }
+      ]
+    },
+
+    "full_body_cooldown": {
+      "duration": "8–10 minutes",
+      "sequence": [
+        {"order": 1, "name": "Standing Quad Stretch", "hold": "45 seconds per side", "targets": ["Quadriceps"]},
+        {"order": 2, "name": "Hip Flexor Stretch (Kneeling)", "hold": "60 seconds per side", "targets": ["Hip flexors"]},
+        {"order": 3, "name": "Doorway Pec Stretch", "hold": "45 seconds per side", "targets": ["Chest", "Anterior deltoid"]},
+        {"order": 4, "name": "Seated Hamstring Stretch", "hold": "45 seconds per side", "targets": ["Hamstrings"]},
+        {"order": 5, "name": "Cross-Body Shoulder Stretch", "hold": "30 seconds per side", "targets": ["Posterior deltoid"]},
+        {"order": 6, "name": "Pigeon Pose or Figure Four", "hold": "60 seconds per side", "targets": ["Glutes", "Hip rotators"]},
+        {"order": 7, "name": "Child's Pose", "hold": "60 seconds", "targets": ["Full body release"], "cue": "Let everything settle. The work is done. Breathe slowly."}
+      ]
+    },
+
+    "performance_cooldown": {
+      "duration": "10–12 minutes",
+      "note": "Athletes accumulate more systemic fatigue — longer cooldown is warranted",
+      "sequence": [
+        {"order": 1, "name": "Light Walk", "duration": "2–3 minutes", "targets": ["Heart rate lowering", "Blood lactate clearance"]},
+        {"order": 2, "name": "Hip Flexor Stretch", "hold": "60 seconds per side", "targets": ["Hip flexors"]},
+        {"order": 3, "name": "Pigeon Pose", "hold": "90 seconds per side", "targets": ["Glutes", "Hip rotators"]},
+        {"order": 4, "name": "Doorway Pec Stretch", "hold": "45 seconds per side", "targets": ["Chest"]},
+        {"order": 5, "name": "Hamstring Stretch (Supine)", "hold": "60 seconds per side", "targets": ["Hamstrings"]},
+        {"order": 6, "name": "Calf Stretch", "hold": "45 seconds per side", "targets": ["Calves", "Achilles"]},
+        {"order": 7, "name": "Supine Twist", "hold": "60 seconds per side", "targets": ["Thoracic rotation", "Piriformis"]},
+        {"order": 8, "name": "Diaphragmatic Breathing", "duration": "5 slow breaths", "targets": ["Nervous system recovery"], "coaching_note": "Close every performance session with intentional breathing — brings the nervous system down from fight-or-flight"}
+      ]
+    }
+  },
+
+  "injury_modified_warm_ups": {
+    "lower_back": {
+      "remove": ["Any loaded warm-up movements", "Leg raises"],
+      "add": ["Cat-Cow — 10 slow reps", "Bird Dog — 2 x 8 per side", "Glute Bridge — 2 x 15", "Child's Pose — 60 seconds"],
+      "note": "Keep all movements gentle and unloaded. Build core stability before any loading."
+    },
+    "knee": {
+      "remove": ["Lateral Band Walk (acute)", "Jump prep"],
+      "add": ["Straight Leg Raise — 3 x 15", "Terminal Knee Extension (band) — 2 x 15", "Clamshell — 2 x 15 per side"],
+      "note": "Activate VMO and glute medius before any knee-loaded movement."
+    },
+    "shoulder": {
+      "remove": ["Heavy band pull-apart if acute", "Overhead movements"],
+      "add": ["Gentle arm circles only", "External Rotation (very light band) — 2 x 12", "Wall Slide — 2 x 8"],
+      "note": "Rotator cuff activation must precede any pressing or pulling."
+    },
+    "postpartum": {
+      "use_only": ["Diaphragmatic Breathing", "Pelvic Floor Activation", "Cat-Cow", "Glute Bridge (bodyweight)", "Bird Dog"],
+      "note": "Reference injury_navigation.json postpartum protocol for phase-appropriate warm-up."
+    }
+  },
+
+  "coaching_language_for_warm_up": {
+    "opening": "Before we get into the work — let's prepare the body. This isn't just a formality. The warm-up is where we wake up and arrive.",
+    "during": "Notice how your body is feeling right now. The warm-up is information — tight hips, stiff shoulders, low energy. We adjust from here.",
+    "closing_warm_up": "Your body is ready. Let's train.",
+    "opening_cooldown": "You did the work. Now let's let the body land. This is where recovery begins.",
+    "during_cooldown": "Breathe into the stretch. Each exhale — release a little more. The work is done. This is the reward.",
+    "closing_cooldown": "Session complete. Every rep today was a choice to show up for yourself. That matters."
+  }
+}
