@@ -1,0 +1,515 @@
+{
+  "metadata": {
+    "title": "Programming Variables",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Defines all training variables Claude uses to build and progress TRAIN programs. Every set, rep, tempo, rest period, and progression decision references this file.",
+    "last_updated": "May 2026",
+    "version": "1.0",
+    "credit": "Draft foundation by Johnny — expanded for Claude integration",
+    "cross_references": [
+      "movement_categories.json",
+      "client_assessment_schema.json",
+      "client_program_goals.json",
+      "periodization.json"
+    ]
+  },
+
+  "instructions_for_claude": {
+    "step_1": "Identify client goal from client_program_goals.json — this sets the base variable ranges",
+    "step_2": "Apply experience level modifier from client_assessment_schema.json",
+    "step_3": "Apply recovery modifier (sleep + stress + recent_frequency from onboarding)",
+    "step_4": "Select rep range, sets, tempo, and rest from the goal-specific presets below",
+    "step_5": "Assign session position (Primary / Accessory / Finisher) to determine variable tier",
+    "step_6": "Build week-over-week progression using the progressive_overload section",
+    "step_7": "Schedule deload using deload_protocols — default every 4th week"
+  },
+
+  "volume": {
+    "definition": "Total training stimulus — the combination of sets, reps, and load that drives adaptation.",
+    "components": {
+
+      "sets": {
+        "definition": "Number of working sets per exercise, excluding warm-up sets",
+        "by_session_position": {
+          "primary": "3–5 working sets",
+          "accessory": "2–4 working sets",
+          "finisher": "1–3 working sets"
+        },
+        "by_goal": {
+          "fat_loss": "2–3 sets per exercise — higher exercise variety, lower per-exercise volume",
+          "muscle_gain": "3–5 sets per exercise — higher per-exercise volume for hypertrophy stimulus",
+          "performance": "3–5 sets — heavier load, full recovery between sets",
+          "general_health": "2–3 sets — sustainable, not exhausting"
+        },
+        "by_experience": {
+          "beginner": "2–3 sets — adaptation comes from frequency, not volume",
+          "intermediate": "3–4 sets — can handle increased per-exercise volume",
+          "advanced": "4–5 sets — requires high volume to drive further adaptation"
+        },
+        "warm_up_sets": "Always include 1–2 progressive warm-up sets before working sets on primary compound movements. These do not count toward working set total."
+      },
+
+      "reps": {
+        "definition": "Number of repetitions per set — determines the training stimulus (strength, hypertrophy, or endurance)",
+        "ranges": {
+          "strength": {
+            "rep_range": "1–5",
+            "load": "85–100% 1RM",
+            "stimulus": "Neural — max force production",
+            "use_for": "Performance and Strength & Power goals. Advanced clients only."
+          },
+          "hypertrophy_heavy": {
+            "rep_range": "6–8",
+            "load": "75–85% 1RM",
+            "stimulus": "Mechanical tension — primary driver of muscle growth",
+            "use_for": "Muscle gain primary compound movements"
+          },
+          "hypertrophy_moderate": {
+            "rep_range": "8–12",
+            "load": "65–75% 1RM",
+            "stimulus": "Balanced tension and metabolic stress",
+            "use_for": "Most goals — the universal hypertrophy range"
+          },
+          "hypertrophy_high": {
+            "rep_range": "12–20",
+            "load": "50–65% 1RM",
+            "stimulus": "Metabolic stress and muscle damage",
+            "use_for": "Fat loss, accessory work, isolation finishers"
+          },
+          "endurance": {
+            "rep_range": "20–30+",
+            "load": "Under 50% 1RM or bodyweight",
+            "stimulus": "Muscular endurance and local fatigue",
+            "use_for": "General health finishers, active recovery, corrective work"
+          }
+        },
+        "by_goal_default": {
+          "fat_loss": "12–15 primary, 15–20 accessory",
+          "muscle_gain": "6–8 primary compound, 8–12 accessory, 12–15 isolation",
+          "performance": "3–5 strength, 6–8 power, 10–15 conditioning",
+          "general_health": "10–15 across the board"
+        }
+      },
+
+      "weekly_volume_per_muscle_group": {
+        "definition": "Total number of hard sets per muscle group per week — the primary driver of hypertrophy over time",
+        "minimum_effective_volume": {
+          "large_muscle_groups": "10 sets per week (back, chest, quads, glutes)",
+          "small_muscle_groups": "6 sets per week (biceps, triceps, calves, rear delts)"
+        },
+        "maximum_adaptive_volume": {
+          "large_muscle_groups": "20 sets per week — beyond this, recovery suffers",
+          "small_muscle_groups": "12–16 sets per week"
+        },
+        "by_goal": {
+          "fat_loss": "10–14 sets per large muscle group — enough to preserve muscle",
+          "muscle_gain": "14–20 sets per large muscle group — push volume progressively",
+          "performance": "10–16 sets — quality over quantity",
+          "general_health": "8–12 sets — consistency is the priority"
+        },
+        "by_experience": {
+          "beginner": "Start at minimum effective volume. Add volume only after 3–4 weeks of consistency.",
+          "intermediate": "Mid-range. Progress volume week over week within the mesocycle.",
+          "advanced": "Upper range. Requires careful deload programming to avoid overtraining."
+        },
+        "coaching_note": "Track weekly sets per muscle group in the program. If a muscle is appearing less than minimum effective volume, add an accessory exercise or increase sets."
+      }
+    }
+  },
+
+  "intensity": {
+    "definition": "How hard each set is — expressed as absolute load, RPE, or RIR. The primary driver of strength adaptation.",
+    "components": {
+
+      "load": {
+        "definition": "The absolute weight used — expressed as percentage of 1 Rep Max (1RM) or as a practical descriptor",
+        "practical_descriptors": {
+          "light": "Could do many more reps — RPE 5–6",
+          "moderate": "Challenging but form is solid — RPE 7",
+          "heavy": "Hard, 1–3 reps left in the tank — RPE 8–9",
+          "maximal": "Near failure or at failure — RPE 9–10"
+        },
+        "by_goal_default": {
+          "fat_loss": "Light to moderate — preserve muscle without taxing recovery",
+          "muscle_gain": "Moderate to heavy — mechanical tension drives growth",
+          "performance": "Heavy to maximal on primary lifts",
+          "general_health": "Light to moderate — sustainability over intensity"
+        }
+      },
+
+      "RPE": {
+        "name": "Rate of Perceived Exertion",
+        "scale": "1–10",
+        "definition": "How hard a set feels — 10 is absolute maximum effort, 1 is no effort",
+        "guide": {
+          "RPE_5": "Very easy. Could do 5+ more reps. Warm-up territory.",
+          "RPE_6": "Easy. 4–5 more reps available.",
+          "RPE_7": "Moderate. 3 reps left in the tank. This is the minimum for a productive working set.",
+          "RPE_8": "Hard. 2 reps left. Most working sets should land here.",
+          "RPE_9": "Very hard. 1 rep left. Primary compound heavy sets.",
+          "RPE_10": "Max effort. Nothing left. Use rarely — 1RM testing or true failure sets only."
+        },
+        "by_goal_target": {
+          "fat_loss": "RPE 7–8 across most sets",
+          "muscle_gain": "RPE 7–8 accessory, RPE 8–9 primary compound",
+          "performance": "RPE 8–9 primary strength, RPE 7 conditioning",
+          "general_health": "RPE 6–7 — effort without excessive fatigue"
+        },
+        "coaching_note": "RPE is the most practical intensity tool for most clients. Teach it early — ask 'how many more reps could you have done?' after every set."
+      },
+
+      "RIR": {
+        "name": "Reps in Reserve",
+        "definition": "The number of reps a client could have done before reaching failure — the inverse of RPE",
+        "guide": {
+          "RIR_4_plus": "Too easy. Increase load or reps.",
+          "RIR_3": "Moderate. Acceptable for warm-up or deload sets.",
+          "RIR_2": "Good working set intensity. Most accessory work lives here.",
+          "RIR_1": "Hard. Primary compound working sets.",
+          "RIR_0": "Failure. Use sparingly — isolation finishers only."
+        },
+        "progression_trigger": "When a client consistently hits RIR 3+ on their working sets, increase load by the minimum increment (2.5–5 lbs).",
+        "coaching_note": "RIR is often easier for beginners to understand than RPE — 'how many more could you do?' is a more concrete question than 'how hard was that on a scale of 10?'"
+      }
+    }
+  },
+
+  "tempo": {
+    "definition": "The speed of each phase of a movement — written as a 4-number code: Eccentric–Pause–Concentric–Reset",
+    "format": {
+      "notation": "X-X-X-X",
+      "position_1": "Eccentric (lowering phase) — seconds",
+      "position_2": "Pause at bottom — seconds",
+      "position_3": "Concentric (lifting phase) — seconds (use 'X' for explosive)",
+      "position_4": "Reset at top — seconds"
+    },
+    "examples": {
+      "standard": {
+        "code": "2-0-2-0",
+        "description": "2 seconds down, no pause, 2 seconds up, no pause at top",
+        "use_for": "Most working sets — basic tempo control"
+      },
+      "hypertrophy": {
+        "code": "3-1-2-0",
+        "description": "3 seconds down, 1 second pause at bottom, 2 seconds up",
+        "use_for": "Muscle gain primary goal — maximizes time under tension"
+      },
+      "eccentric_focus": {
+        "code": "4-1-2-0",
+        "description": "4 second slow lowering, 1 second pause, 2 seconds up",
+        "use_for": "Advanced hypertrophy — eccentric overload drives significant muscle damage and growth"
+      },
+      "pause_rep": {
+        "code": "2-2-2-0",
+        "description": "2 seconds down, 2 second dead-stop pause, 2 seconds up",
+        "use_for": "Eliminating stretch-reflex, building strength from dead positions, squat and bench"
+      },
+      "explosive": {
+        "code": "2-0-X-0",
+        "description": "2 seconds down, no pause, explosive concentric",
+        "use_for": "Power and performance — Olympic movements, jumps, throws"
+      },
+      "controlled": {
+        "code": "2-1-2-1",
+        "description": "2 seconds down, 1 pause bottom, 2 seconds up, 1 pause top",
+        "use_for": "Beginners learning movement patterns — slows everything down for technique"
+      }
+    },
+    "by_goal_default": {
+      "fat_loss": "2-0-2-0 standard — keep density high",
+      "muscle_gain": "3-1-2-0 hypertrophy — maximize time under tension",
+      "performance": "2-0-X-0 explosive on power work, 2-0-2-0 strength",
+      "general_health": "2-1-2-0 — controlled throughout for safety and awareness"
+    },
+    "coaching_note": "Never assign tempo to beginners in the first 2 weeks — focus on learning the pattern. Introduce tempo once the movement is solid. The eccentric phase is where the most muscle damage (and therefore growth) occurs — always cue clients to control the lowering phase."
+  },
+
+  "rest": {
+    "definition": "Recovery time between sets — determines readiness for the next set and influences the training stimulus",
+    "by_goal": {
+      "fat_loss": {
+        "primary_compound": "45–60 seconds",
+        "accessory": "30–45 seconds",
+        "finisher": "15–30 seconds or no rest (circuit)",
+        "note": "Shorter rest increases metabolic demand and caloric burn"
+      },
+      "muscle_gain": {
+        "primary_compound": "90–180 seconds",
+        "accessory": "60–90 seconds",
+        "finisher": "45–60 seconds",
+        "note": "Longer rest allows full CNS recovery for maximum mechanical tension"
+      },
+      "performance": {
+        "strength_work": "3–5 minutes",
+        "power_work": "2–3 minutes full recovery",
+        "conditioning": "Work-to-rest ratio (e.g. 1:2 or 1:3)",
+        "note": "Power and strength require full recovery to maintain output quality"
+      },
+      "general_health": {
+        "all_exercises": "60–90 seconds",
+        "note": "Standard rest — enough to recover, not so long the session drags"
+      }
+    },
+    "between_exercises": "90–120 seconds when transitioning between different movement patterns. Less when supersetting opposing muscle groups.",
+    "superset_rest": {
+      "antagonist_superset": "Rest 30–45 seconds between exercises within the superset. Rest 60–90 seconds after completing both exercises.",
+      "same_muscle_superset": "No rest between exercises. 90–120 seconds after completing both."
+    },
+    "coaching_note": "Rest periods are a programming variable — treat them with the same intention as sets and reps. Cutting rest too short on heavy compound sets reduces performance and increases injury risk."
+  },
+
+  "session_structure": {
+    "definition": "How exercises are ordered and grouped within a session — determines efficiency, safety, and stimulus quality",
+
+    "session_position": {
+      "primary": {
+        "definition": "The main compound movements — highest neural demand, done first when energy is fresh",
+        "order": "First in session",
+        "examples": ["Barbell Squat", "Deadlift", "Bench Press", "Pull-Up", "Overhead Press"],
+        "sets_reps_guide": "3–5 sets, 4–8 reps, heavy to moderate load"
+      },
+      "accessory": {
+        "definition": "Secondary movements supporting the primary — address weak links and add volume",
+        "order": "After primary movements",
+        "examples": ["Romanian Deadlift", "Dumbbell Row", "Bulgarian Split Squat", "Incline Press"],
+        "sets_reps_guide": "3–4 sets, 8–12 reps, moderate load"
+      },
+      "finisher": {
+        "definition": "High-rep isolation or conditioning work — accumulates volume and creates metabolic demand",
+        "order": "Last in session",
+        "examples": ["Cable Curl", "Lateral Raise", "Glute Kickback", "Farmer Carry", "Band Pull-Apart"],
+        "sets_reps_guide": "2–3 sets, 12–20+ reps, light to moderate load"
+      }
+    },
+
+    "superset_pairing": {
+      "definition": "Performing two exercises back-to-back with minimal rest between them",
+      "types": {
+        "antagonist_superset": {
+          "definition": "Pairing opposing muscle groups — one rests while the other works",
+          "examples": ["Biceps Curl + Tricep Pressdown", "Chest Press + Cable Row", "Leg Extension + Leg Curl"],
+          "benefit": "Saves time, maintains strength output, increases session density",
+          "best_for": "Fat loss, muscle gain accessory work"
+        },
+        "compound_superset": {
+          "definition": "Two compound movements for the same muscle group",
+          "examples": ["Squat + Romanian Deadlift", "Bench Press + Dumbbell Fly"],
+          "benefit": "Massive volume accumulation — use for advanced clients",
+          "caution": "Fatiguing — do not use on primary strength movements for beginners"
+        },
+        "unrelated_superset": {
+          "definition": "Pairing two exercises that don't interfere with each other",
+          "examples": ["Dumbbell Row + Calf Raise", "Leg Press + Bicep Curl"],
+          "benefit": "Time efficiency — one muscle rests while another works",
+          "best_for": "Time-restricted sessions (30–45 min)"
+        }
+      }
+    },
+
+    "circuit": {
+      "definition": "3+ exercises performed consecutively with minimal rest — high metabolic demand",
+      "use_for": "Fat loss finishers, general health clients, time-limited sessions",
+      "structure": "3–5 exercises, 12–15 reps each, 30–60 seconds rest after full circuit, repeat 2–4 rounds",
+      "caution": "Do not use circuits for primary compound strength work — fatigue compromises form and reduces strength output"
+    }
+  },
+
+  "progressive_overload": {
+    "definition": "The systematic increase of training demand over time — the single most important principle in programming. Without progression, there is no adaptation.",
+    "methods": {
+      "add_reps": {
+        "description": "Perform more reps with the same weight",
+        "when": "Client hits the top of their rep range at RIR 2+",
+        "example": "Target 3x8. Client hits 3x10 with 2 reps in reserve → add weight next session",
+        "best_for": "Beginners and intermediate — simplest progression method"
+      },
+      "add_weight": {
+        "description": "Increase load while maintaining rep range",
+        "increments": {
+          "upper_body": "2.5–5 lbs per session or per week",
+          "lower_body": "5–10 lbs per session or per week",
+          "isolation": "2.5 lbs — small muscles require small jumps"
+        },
+        "when": "Client consistently hits rep range top with RIR 2+ across 2 consecutive sessions",
+        "best_for": "Intermediate and advanced on compound movements"
+      },
+      "add_sets": {
+        "description": "Increase total working sets per exercise or per muscle group",
+        "when": "Client has been at same rep and weight for 2+ weeks with no fatigue issues",
+        "increment": "Add 1 set at a time — never jump more than 1 set per week per exercise",
+        "best_for": "Muscle gain — volume is the primary driver of hypertrophy over time"
+      },
+      "reduce_rest": {
+        "description": "Decrease rest periods while maintaining load and reps",
+        "when": "Client is recovering well and sessions feel too easy",
+        "increment": "Reduce by 10–15 seconds at a time",
+        "best_for": "Fat loss and general health — increases density and metabolic demand"
+      },
+      "increase_tempo": {
+        "description": "Slow down the eccentric or add pauses to increase time under tension",
+        "when": "Client has mastered standard tempo and needs more challenge without adding weight",
+        "example": "2-0-2-0 → 3-1-2-0 → 4-1-2-0",
+        "best_for": "Muscle gain — excellent intermediate progression before adding load"
+      },
+      "increase_range_of_motion": {
+        "description": "Gradually increase depth or range as mobility improves",
+        "when": "Client was limited by mobility at program start — now capable of fuller range",
+        "example": "Elevated heel squat → flat foot squat → ATG squat (over months)",
+        "best_for": "All goals — more ROM = more muscle activation = better results"
+      },
+      "increase_frequency": {
+        "description": "Train a muscle group more times per week",
+        "when": "Client has fully recovered from previous sessions and volume ceiling has been reached at current frequency",
+        "increment": "Add 1 session per week — never jump from 2x to 4x per week",
+        "best_for": "Muscle gain intermediate to advanced"
+      }
+    },
+
+    "progression_decision_tree": {
+      "week_1_to_2": "Establish baseline. Do not progress — focus on movement quality and learning the program.",
+      "week_3": "If RPE is consistently below 7 → increase reps (stay in same set range). If RPE is 7–8 → maintain.",
+      "week_4": "If rep range top is consistently hit with RIR 2+ → add weight. If not → maintain reps and load.",
+      "week_5_to_7": "Continue add-reps or add-weight progression every 1–2 weeks based on RIR.",
+      "week_8": "Deload. Reassess. Begin next mesocycle at slightly higher baseline."
+    },
+
+    "coaching_note": "Progressive overload is non-negotiable. A program that doesn't progress is just exercise — not training. Always track what the client did last session and ensure this session is slightly harder in at least one variable."
+  },
+
+  "deload_protocols": {
+    "definition": "A planned reduction in training volume and/or intensity to allow full recovery and supercompensation — NOT a rest week",
+    "frequency": {
+      "default": "Every 4th week (3 weeks accumulation, 1 week deload)",
+      "high_stress_clients": "Every 3rd week — if sleep=poor or stress=very_high in onboarding",
+      "advanced_clients": "Every 4th–6th week — higher work capacity, slower fatigue accumulation",
+      "beginner_clients": "Every 5th–6th week — accumulate fatigue slowly, deload less frequently"
+    },
+    "methods": {
+      "volume_deload": {
+        "description": "Reduce sets by 40–50%, maintain load and reps",
+        "example": "4x8 working sets → 2x8 at same weight",
+        "best_for": "Most clients — preserves strength while reducing fatigue"
+      },
+      "intensity_deload": {
+        "description": "Reduce load by 40–50%, maintain sets and reps",
+        "example": "4x8 at 100 lbs → 4x8 at 60 lbs",
+        "best_for": "Clients with joint fatigue or accumulated soreness"
+      },
+      "combined_deload": {
+        "description": "Reduce both volume and intensity by 30–40%",
+        "example": "4x8 at 100 lbs → 3x8 at 70 lbs",
+        "best_for": "Advanced clients with high accumulated fatigue"
+      }
+    },
+    "what_deload_is_not": "A deload is NOT a rest week. Clients still train — they just train at reduced demand. Complete rest is only appropriate for illness or acute injury.",
+    "signs_a_deload_is_needed_early": [
+      "Performance is declining despite consistent sleep and nutrition",
+      "Persistent joint aching or soreness that doesn't resolve within 48 hours",
+      "Client reports feeling drained before sessions start",
+      "Mood and motivation have dropped significantly",
+      "Sleep quality has worsened despite no life changes"
+    ],
+    "coaching_note": "Frame deloads positively — 'This week we recover so the next 3 weeks can be even stronger.' Clients often resist deloads. Remind them: supercompensation happens during recovery, not during training."
+  },
+
+  "frequency": {
+    "definition": "How often a muscle group is trained per week — independent of training days per week",
+
+    "by_goal": {
+      "fat_loss": {
+        "recommended": "Each muscle group 2x per week minimum",
+        "rationale": "Frequency maintains muscle while creating caloric demand across the week"
+      },
+      "muscle_gain": {
+        "recommended": "Each muscle group 2–3x per week",
+        "rationale": "Muscle protein synthesis peaks 24–48 hours post-session — training more frequently maximizes total weekly stimulus"
+      },
+      "performance": {
+        "recommended": "2–3x per week for primary patterns, 1x for accessory",
+        "rationale": "Skill and strength acquisition require frequent practice"
+      },
+      "general_health": {
+        "recommended": "2x per week per muscle group minimum",
+        "rationale": "Consistency builds the habit — frequency over intensity"
+      }
+    },
+
+    "training_splits": {
+      "full_body_3x": {
+        "frequency_per_muscle": "3x per week",
+        "best_for": "Beginners, fat loss, general health, 3-day schedules",
+        "structure": "A/B/A one week, B/A/B the next — alternate movement emphasis"
+      },
+      "upper_lower_4x": {
+        "frequency_per_muscle": "2x per week",
+        "best_for": "Intermediate, muscle gain, fat loss, 4-day schedules",
+        "structure": "Upper / Lower / Rest / Upper / Lower"
+      },
+      "push_pull_legs_6x": {
+        "frequency_per_muscle": "2x per week",
+        "best_for": "Intermediate to advanced, muscle gain, 5–6 day schedules",
+        "structure": "Push / Pull / Legs / Push / Pull / Legs"
+      },
+      "full_body_2x": {
+        "frequency_per_muscle": "2x per week",
+        "best_for": "Busy clients, beginners, general health, 2-day schedules",
+        "structure": "2 full body sessions with 48+ hours between"
+      }
+    },
+
+    "minimum_recovery_between_sessions": {
+      "same_muscle_group": "48 hours minimum — never train the same muscle group on back-to-back days",
+      "full_body": "48 hours between full body sessions",
+      "upper_lower": "24 hours acceptable — upper and lower don't directly compete for recovery",
+      "exception": "Advanced clients with high work capacity may tolerate 24-hour turnaround on same muscle — monitor carefully"
+    }
+  },
+
+  "variable_presets_by_goal": {
+    "description": "Complete variable packages for each goal — Claude applies these as starting templates, then adjusts per client modifiers",
+
+    "fat_loss_preset": {
+      "sets": "2–3 primary, 2–3 accessory",
+      "reps": "12–15 primary, 15–20 accessory, 20+ finisher",
+      "tempo": "2-0-2-0",
+      "rest": "45–60s primary, 30–45s accessory, 15–30s finisher",
+      "RPE_target": "7–8",
+      "progression": "Add reps first, then reduce rest, then add weight",
+      "weekly_sets_per_muscle": "10–14",
+      "deload_frequency": "Every 4 weeks"
+    },
+
+    "muscle_gain_preset": {
+      "sets": "3–5 primary, 3–4 accessory, 2–3 finisher",
+      "reps": "6–8 primary compound, 8–12 accessory, 12–15 isolation",
+      "tempo": "3-1-2-0",
+      "rest": "90–180s primary, 60–90s accessory, 45–60s finisher",
+      "RPE_target": "8–9 primary, 7–8 accessory",
+      "progression": "Add weight when RIR 2+ consistently, then add sets over mesocycle",
+      "weekly_sets_per_muscle": "14–20",
+      "deload_frequency": "Every 4 weeks"
+    },
+
+    "performance_preset": {
+      "sets": "4–5 primary strength, 3–4 accessory",
+      "reps": "3–5 strength, 6–8 power, 10–15 conditioning",
+      "tempo": "2-0-X-0 power, 2-1-2-0 strength",
+      "rest": "3–5 min strength, 2–3 min power, 60s conditioning",
+      "RPE_target": "8–9 primary, 7 conditioning",
+      "progression": "Linear load progression on primary lifts weekly",
+      "weekly_sets_per_muscle": "10–16",
+      "deload_frequency": "Every 4 weeks or pre-competition"
+    },
+
+    "general_health_preset": {
+      "sets": "2–3 all exercises",
+      "reps": "10–15 all exercises",
+      "tempo": "2-1-2-0",
+      "rest": "60–90s all exercises",
+      "RPE_target": "6–7",
+      "progression": "Add reps, then add sets — load progression secondary",
+      "weekly_sets_per_muscle": "8–12",
+      "deload_frequency": "Every 5–6 weeks"
+    }
+  }
+}
