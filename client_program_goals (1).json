@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "title": "Client & Program Goals",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Reference file for fitness programming and Claude Code integration",
+    "last_updated": "May 2026",
+    "version": "2.1"
+  },
+
+  "onboarding_goal_crosswalk": {
+    "description": "Maps the 4 onboarding goal selections to the full primary_goals list. Claude reads this first to know which goal IDs to activate.",
+    "fat_loss": {
+      "primary_goal_ids": [1],
+      "secondary_consideration": "If client is intermediate+ and protein-aware, consider ID 3 (Body Recomp) instead",
+      "notes": "Default to ID 1. Upgrade to ID 3 only if experience=intermediate or advanced AND protein_awareness=intentional"
+    },
+    "muscle_gain": {
+      "primary_goal_ids": [2],
+      "secondary_consideration": "If client also wants fat loss and is intermediate+, layer ID 3 (Body Recomp)",
+      "notes": "Default to ID 2 for pure hypertrophy. ID 3 for simultaneous fat loss."
+    },
+    "performance": {
+      "primary_goal_ids": [4, 5],
+      "secondary_consideration": "Use ID 4 for strength-focused, ID 5 for sport/athleticism-focused. Check goal_detail from onboarding to decide.",
+      "notes": "If goal_detail mentions a sport or event → ID 5. If it mentions lifting numbers or strength → ID 4."
+    },
+    "general_health": {
+      "primary_goal_ids": [7, 9, 10],
+      "secondary_consideration": "ID 7 for most clients. ID 9 if age 55+. ID 10 if motivation_style=feeling_energy and stress=high or very_high.",
+      "notes": "General health clients benefit most from functional movement and mind-body integration layers."
+    },
+    "special_population_flags": {
+      "description": "These override the above if present in client profile",
+      "prenatal": "If client notes pregnancy in injuries or current_physical_state → activate ID 11. Require OB clearance note.",
+      "postpartum": "If client notes recent childbirth → activate ID 8. Require medical clearance note.",
+      "active_aging": "If age >= 55 → layer ID 9 considerations regardless of primary goal"
+    }
+  },
+
+  "instructions_for_claude": {
+    "step_1": "Read onboarding_goal_crosswalk to identify which primary_goal_ids to activate based on client's selected goal",
+    "step_2": "Check special_population_flags — these override everything if triggered",
+    "step_3": "Identify Secondary Goals from client profile and layer modifications on top",
+    "step_4": "Apply new_onboarding_field_integrations to adjust coaching language and programming per client's motivation_style, struggle_style, mobility_limitations, and body_awareness",
+    "step_5": "Check for contraindications and cross-reference injury_navigation.json if injuries field is non-empty",
+    "step_6": "Output program structured by session, week, and phase"
+  },
+
+  "new_onboarding_field_integrations": {
+    "description": "How the new onboarding fields (steps 5, 8, 9, 10, 15) modify goal programming and coaching approach",
+
+    "motivation_style": {
+      "performance_data": {
+        "program_notes_tone": "Lead with metrics. Frame every session in terms of output — weight moved, reps completed, time under tension.",
+        "progress_framing": "Week-over-week numbers. PR tracking. Quantified milestones.",
+        "applies_to_goals": "all"
+      },
+      "feeling_energy": {
+        "program_notes_tone": "Lead with identity and sensation. Frame sessions around how they will feel — strong, aligned, energized.",
+        "progress_framing": "Energy improvements, confidence shifts, how clothes fit, mood changes.",
+        "applies_to_goals": "all"
+      },
+      "both": {
+        "program_notes_tone": "Alternate — metrics one week, feeling-based the next. Both lanes matter.",
+        "progress_framing": "Blend numbers with feeling check-ins.",
+        "applies_to_goals": "all"
+      }
+    },
+
+    "struggle_style": {
+      "reminder_why": {
+        "coaching_trigger": "When client misses sessions or checks in low — pull their vision and identity_statement from onboarding. Reconnect before adjusting program.",
+        "language": "Reference Kim's system prompt affirmation language. 'You told me you wanted to feel ___. That version of you is still here.'"
+      },
+      "simplify": {
+        "coaching_trigger": "When struggling — immediately reduce program to 1 exercise, 1 set, just show up.",
+        "language": "No big picture. One thing. Today only."
+      },
+      "accountability": {
+        "coaching_trigger": "Direct check-in. Name the pattern without shame. Hold the standard.",
+        "language": "Firm warmth. 'We said ___ days this week. What happened? Let's fix it together.'"
+      },
+      "space": {
+        "coaching_trigger": "Acknowledge and step back. No pressure check-in. Let client lead return.",
+        "language": "'I'm here when you're ready. No judgment. Just come back.'"
+      }
+    },
+
+    "mobility_limitations": {
+      "description": "Layer mobility modifications on top of goal programming. Cross-reference client_assessment_schema.json for specific exercise substitutions.",
+      "tight_hips": "Add hip mobility to every warm-up. Substitute squat patterns as needed.",
+      "limited_shoulder": "Modify all overhead and pressing work. Add shoulder mobility to warm-up.",
+      "ankle_restriction": "Heel elevation on squats. Add ankle mobility drills.",
+      "thoracic_stiffness": "Add thoracic extension to warm-up. Cue bracing on pressing.",
+      "hamstring_tightness": "Limit hinge range initially. Add hamstring work post-session.",
+      "wrist_discomfort": "Neutral grip alternatives. Wrist warm-up mandatory.",
+      "none": "No modifications needed."
+    },
+
+    "body_awareness": {
+      "low": "Include mind-muscle cues in every exercise description. Recommend lighter load to establish connection. Reference mind_muscle_connection.json.",
+      "moderate": "Standard cues. Reinforce connection on isolation work.",
+      "high": "Minimal cueing. Can introduce advanced techniques — pause reps, slow eccentrics, blood flow restriction."
+    },
+
+    "recent_training_and_frequency": {
+      "description": "Adjusts starting volume regardless of stated experience level",
+      "rarely_or_nothing": "Start at 60% of target volume. Build over 2 weeks.",
+      "1_2x_per_week": "Start at 75% of target volume.",
+      "3_4x_per_week": "Start at full target volume.",
+      "5x_plus": "Can push to upper range of target volume from week 1."
+    },
+
+    "nutrition_context": {
+      "not_tracking_protein": {
+        "program_note": "Gently surface protein importance in week 1 program notes. Simple — not prescriptive. 'Fueling well supports your recovery and results.'",
+        "applies_to_goals": ["fat_loss", "muscle_gain", "performance"]
+      },
+      "low_meal_frequency_high_volume": {
+        "flag": "If meal_frequency=1-2 AND days_per_week >= 4 → flag energy availability concern in program notes. Suggest eating before training.",
+        "applies_to_goals": "all"
+      }
+    },
+
+    "identity_statement": {
+      "description": "The single most powerful coaching tool in the profile. Pull client's own words.",
+      "use_when": [
+        "Client misses workouts",
+        "Client expresses doubt or wants to quit",
+        "At start of each new program phase",
+        "At milestone completions"
+      ],
+      "how": "Quote directly. 'You told me that the version of you who is consistent is someone who [identity_statement]. That person is still you.'"
+    }
+  },
+
+  "primary_goals": [
+    {
+      "id": 1,
+      "name": "Fat Loss",
+      "definition": "Reducing overall body fat percentage while preserving as much lean muscle as possible",
+      "programming_priorities": ["Caloric expenditure", "Metabolic conditioning", "Muscle preservation", "Adherence"],
+      "typical_rep_range": "10-15+",
+      "load": "Moderate",
+      "rest_periods": "30-60 seconds",
+      "session_style": ["Circuit", "Superset", "Moderate density training"],
+      "mapped_program_file": "fat_loss_programs.json"
+    },
+    {
+      "id": 2,
+      "name": "Muscle Growth (Hypertrophy)",
+      "definition": "Increasing muscle size through progressive overload and sufficient volume",
+      "programming_priorities": ["Volume", "Mechanical tension", "Metabolic stress", "Recovery"],
+      "typical_rep_range": "6-12",
+      "load": "Moderate to heavy",
+      "rest_periods": "60-90 seconds",
+      "session_style": ["Traditional sets", "Supersets", "Isolation finishers"],
+      "mapped_program_file": "muscle_growth_programs.json"
+    },
+    {
+      "id": 3,
+      "name": "Body Recomposition",
+      "definition": "Simultaneously reducing body fat and building lean muscle — typically for intermediate+ clients",
+      "programming_priorities": ["Balanced fat loss and hypertrophy stimulus", "Nutrition alignment critical"],
+      "typical_rep_range": "8-12",
+      "load": "Varied intensity",
+      "rest_periods": "45-75 seconds",
+      "session_style": ["Compound-first", "Isolation second", "Moderate cardio integration"],
+      "mapped_program_file": "body_recomp_programs.json"
+    },
+    {
+      "id": 4,
+      "name": "Strength & Power",
+      "definition": "Maximizing force production for maximal strength or explosive power output",
+      "programming_priorities": ["Progressive overload on primary lifts", "CNS recovery", "Specificity"],
+      "typical_rep_range": {
+        "strength": "1-5",
+        "power": "3-6 with intent"
+      },
+      "load": "Heavy",
+      "rest_periods": "2-5 minutes",
+      "session_style": ["Linear or block periodization", "Compound movement priority"],
+      "mapped_program_file": "strength_power_programs.json"
+    },
+    {
+      "id": 5,
+      "name": "Athletic Performance",
+      "definition": "Improving sport-specific physical qualities — speed, agility, power, coordination, endurance",
+      "programming_priorities": ["Sport demands", "Energy system specificity", "Injury prevention", "Peak timing"],
+      "typical_rep_range": "Varies by quality trained",
+      "load": "Varies by quality trained",
+      "rest_periods": "Full recovery for power/speed; short for conditioning",
+      "session_style": ["Periodized blocks", "Integrated athletic qualities"],
+      "mapped_program_file": "athletic_performance_programs.json"
+    },
+    {
+      "id": 6,
+      "name": "Cardio & Endurance",
+      "definition": "Building aerobic capacity, cardiovascular efficiency, and stamina for sustained effort",
+      "programming_priorities": ["Aerobic base", "Zone training", "Progressive distance or time"],
+      "typical_rep_range": "N/A — time or distance based",
+      "load": "Low to moderate",
+      "rest_periods": "Active or full depending on zone",
+      "session_style": ["Steady state", "Intervals", "HIIT", "Race prep"],
+      "mapped_program_file": "cardio_endurance_programs.json"
+    },
+    {
+      "id": 7,
+      "name": "Functional Fitness",
+      "definition": "Improving movement quality, coordination, and strength for real-life tasks and daily activities",
+      "programming_priorities": ["Multi-planar movement", "Stability", "Mobility", "Functional patterns"],
+      "typical_rep_range": "8-15",
+      "load": "Bodyweight to moderate",
+      "rest_periods": "45-60 seconds",
+      "session_style": ["Circuit", "Movement flow based"],
+      "mapped_program_file": "functional_fitness.json"
+    },
+    {
+      "id": 8,
+      "name": "Postpartum Recovery & Enhancement",
+      "definition": "Supporting the physical recovery and return to training after childbirth",
+      "programming_priorities": ["Pelvic floor awareness", "Core reconnection", "Diastasis recti screening", "Gradual load progression"],
+      "typical_rep_range": "10-15",
+      "load": "Low load, high control",
+      "rest_periods": "As needed",
+      "session_style": ["Progressive phase-based return to movement"],
+      "special_considerations": [
+        "Always confirm medical clearance before programming",
+        "Flag any symptoms (leaking, prolapse, pain) — refer out immediately",
+        "Do not progress load until foundational core and pelvic floor are established"
+      ],
+      "mapped_program_file": "postpartum_enhanced.json"
+    },
+    {
+      "id": 9,
+      "name": "Active Aging",
+      "definition": "Maintaining and improving strength, mobility, balance, and independence for clients 55+",
+      "programming_priorities": ["Fall prevention", "Bone density", "Joint health", "Functional movement", "Consistency"],
+      "typical_rep_range": "10-15",
+      "load": "Light to moderate, controlled tempo",
+      "rest_periods": "60-90 seconds",
+      "session_style": ["Low-impact", "Stability-focused", "Seated modifications available"],
+      "mapped_program_file": "active_aging_program.json"
+    },
+    {
+      "id": 10,
+      "name": "Mind-Body Integration",
+      "definition": "Training that emphasizes the connection between mental and physical wellness — breathwork, mobility, mindfulness in movement",
+      "programming_priorities": ["Nervous system regulation", "Intentional movement", "Stress reduction", "Body awareness"],
+      "typical_rep_range": "Flow-based, breath-led",
+      "load": "Low intensity",
+      "rest_periods": "Built into movement",
+      "session_style": ["Yoga-influenced", "Pilates-based", "Somatic", "Mobility flow"],
+      "mapped_program_file": "mind_body_integration.json"
+    },
+    {
+      "id": 11,
+      "name": "Prenatal Fitness",
+      "definition": "Safe, trimester-aware exercise programming for pregnant clients",
+      "programming_priorities": ["Baby and mother safety above all", "Trimester-specific modifications", "Pelvic floor health"],
+      "typical_rep_range": "10-15",
+      "load": "Moderate, no straining",
+      "rest_periods": "Generous",
+      "session_style": ["Low-impact", "Progressive modification as pregnancy advances"],
+      "special_considerations": [
+        "Always confirm OB clearance before programming",
+        "Avoid supine position after first trimester",
+        "Avoid breath-holding and Valsalva maneuver",
+        "Avoid high impact movements",
+        "Avoid deep core compression",
+        "Avoid extreme heat environments"
+      ],
+      "mapped_program_file": "prenatal_fitness_program.json"
+    }
+  ],
+
+  "secondary_goals": [
+    {
+      "name": "Injury Navigation",
+      "description": "Client has a current or past injury limiting movement",
+      "programming_impact": "Modify exercises, avoid loaded ranges, cross-reference injury_navigation.json"
+    },
+    {
+      "name": "Mobility & Flexibility",
+      "description": "Client wants to improve range of motion",
+      "programming_impact": "Add warm-up and cooldown mobility work, prioritize joint prep"
+    },
+    {
+      "name": "Stress & Recovery",
+      "description": "Client is high-stress or under-recovered",
+      "programming_impact": "Reduce intensity, prioritize parasympathetic training, shorter sessions"
+    },
+    {
+      "name": "Confidence Building",
+      "description": "New to training, needs wins and momentum",
+      "programming_impact": "Lower complexity, higher success rate exercises, celebrate progression"
+    },
+    {
+      "name": "Competition Prep",
+      "description": "Client is preparing for an event or competition",
+      "programming_impact": "Peak programming, taper planning, sport-specific final phase"
+    },
+    {
+      "name": "Weight Maintenance",
+      "description": "Client is at goal weight and wants to sustain",
+      "programming_impact": "Balanced stimulus, no aggressive cut or bulk"
+    },
+    {
+      "name": "Postural Correction",
+      "description": "Client has imbalances such as anterior pelvic tilt or rounded shoulders",
+      "programming_impact": "Corrective exercise integration, antagonist strengthening"
+    }
+  ]
+}
