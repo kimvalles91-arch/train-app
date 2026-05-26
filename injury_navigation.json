@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "title": "Injury Navigation",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Safety and modification reference for TRAIN. Claude reads this file whenever a client flags an injury, limitation, or health condition in onboarding. This file defines what to avoid, how to modify, when to refer out, and how to coach around limitations with compassion.",
+    "last_updated": "May 2026",
+    "version": "1.0",
+    "critical_disclaimer": "TRAIN is a fitness coaching AI, not a medical provider. This file guides exercise modification — it does not diagnose, treat, or replace professional medical advice. When in doubt, refer out.",
+    "cross_references": [
+      "client_assessment_schema.json",
+      "movement_categories.json",
+      "exercise_libraries (all muscle groups)",
+      "programming_variables.json",
+      "system_prompt.md"
+    ]
+  },
+
+  "instructions_for_claude": {
+    "step_1": "Check client onboarding field: injuries, mobility_limitations, current_physical_state",
+    "step_2": "Match keywords to the appropriate injury category below",
+    "step_3": "Apply all contraindicated_movements exclusions — remove these from the program entirely",
+    "step_4": "Replace with safe_substitutions from the same movement category (reference movement_categories.json)",
+    "step_5": "Apply coaching_language guidelines — acknowledge with Kim's voice before moving forward",
+    "step_6": "Flag refer_out conditions — if present, include a referral note in the program",
+    "step_7": "Add mobility_and_prehab recommendations to warm-up and cooldown",
+    "step_8": "Note the injury in program header so Kim can see it at a glance when reviewing"
+  },
+
+  "global_rules": {
+    "never_do": [
+      "Never ignore an injury field — if it's non-empty, always cross-reference this file",
+      "Never program through acute pain — if client mentions current sharp or acute pain, flag for medical clearance before starting",
+      "Never diagnose — describe modifications only, never suggest what the injury 'is'",
+      "Never shame or minimize — a limitation is not a weakness, it is information",
+      "Never remove all lower body or all upper body work — always find what CAN be done"
+    ],
+    "always_do": [
+      "Acknowledge the limitation in the program notes using Kim's coaching voice",
+      "Provide a complete substitution for every contraindicated movement",
+      "Include prehab and mobility work targeting the affected area in warm-up",
+      "Flag the limitation in the program header for Kim's review",
+      "Build toward recovery — program should progress toward full movement over time"
+    ],
+    "refer_out_triggers": [
+      "Client mentions current acute pain (sharp, sudden, or worsening)",
+      "Client mentions a recent surgery (within 6 months) without confirmed clearance",
+      "Client mentions neurological symptoms (numbness, tingling, radiating pain)",
+      "Client mentions dizziness, chest pain, or shortness of breath during exercise",
+      "Client mentions an autoimmune flare or active disease episode",
+      "Client mentions pregnancy (require OB clearance — reference prenatal goal ID 11)",
+      "Client mentions recent fracture without confirmed healing",
+      "Any condition Claude cannot confidently modify around"
+    ],
+    "refer_out_language": "Your body is communicating something important here. Before we build your program, I want to make sure we have the green light from your doctor or physical therapist on [specific area]. This isn't a barrier — it's how we make sure everything we do together is safe and effective. Once you have that clearance, we're ready to go."
+  },
+
+  "injuries": [
+
+    {
+      "id": "INJ-01",
+      "name": "Lower Back Pain",
+      "keywords": ["lower back", "lumbar", "back pain", "herniated disc", "bulging disc", "sciatica", "L4", "L5", "S1", "back spasm", "bad back"],
+      "prevalence": "Most common injury in the general population. High likelihood of appearing in client profiles.",
+      "sub_types": {
+        "muscular": "Tightness, spasm, general soreness — usually addressable through programming modifications",
+        "disc_related": "Herniation, bulge, sciatica — requires more conservative approach and medical clearance",
+        "acute": "Recent flare or injury — refer out before starting"
+      },
+      "contraindicated_movements": [
+        "Heavy barbell back squat (high spinal load)",
+        "Barbell deadlift from floor (if disc-related)",
+        "Good mornings",
+        "Jefferson curl",
+        "Loaded spinal flexion (sit-ups, crunches with weight)",
+        "Heavy leg press with excessive lumbar flexion",
+        "Box jumps and high-impact landing (acute phase)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Barbell Back Squat", "replace_with": "Goblet Squat or Leg Press (controlled depth)"},
+        {"avoid": "Barbell Deadlift", "replace_with": "Hip Thrust or Trap Bar Deadlift (more upright torso)"},
+        {"avoid": "Good Morning", "replace_with": "45-degree Back Extension (light) or Bird Dog"},
+        {"avoid": "Loaded Sit-Up", "replace_with": "Dead Bug or Pallof Press"}
+      ],
+      "prehab_and_mobility": [
+        "Cat-Cow — 10 reps, slow and controlled (warm-up)",
+        "Child's Pose — 60 seconds (warm-up and cooldown)",
+        "90/90 Hip Stretch — 60 seconds per side (warm-up)",
+        "Dead Bug — 3x8 per side (accessory — anti-extension core)",
+        "Bird Dog — 3x10 per side (accessory — spinal stabilization)",
+        "Glute Bridge — 3x15 (accessory — activate glutes to unload lower back)",
+        "Hip Flexor Stretch — 60 seconds per side (cooldown)"
+      ],
+      "programming_modifications": {
+        "load": "Reduce all lower body loading by 30–40% initially",
+        "tempo": "Slow eccentric on all lower body — 3-1-2-0 minimum",
+        "core_priority": "Anti-extension and anti-rotation core work is now a priority — not optional",
+        "progression": "Progress range of motion before adding load"
+      },
+      "coaching_language": "Your body is communicating — not betraying you. We're going to work around your lower back, not through it. Every exercise we choose will either be neutral for your spine or actively helping it get stronger. This is part of the program, not separate from it.",
+      "refer_out": "If client mentions radiating pain down the leg (sciatica), numbness, tingling, or loss of bladder/bowel control — refer immediately. Do not program."
+    },
+
+    {
+      "id": "INJ-02",
+      "name": "Knee Pain & Injuries",
+      "keywords": ["knee pain", "ACL", "MCL", "LCL", "PCL", "meniscus", "patellar tendon", "runner's knee", "patellofemoral", "knee surgery", "knee replacement", "knee injury", "bad knee"],
+      "sub_types": {
+        "ligament": "ACL, MCL, LCL, PCL — varies by which ligament and whether surgical or conservative",
+        "meniscus": "Tear or degeneration — avoid compression and rotation under load",
+        "patellofemoral": "Runner's knee — avoid high-volume knee flexion, especially downhill or stairs",
+        "post_surgical": "Requires medical clearance — timeline depends on surgery type"
+      },
+      "contraindicated_movements": [
+        "Deep barbell back squat (excessive knee flexion under load)",
+        "Leg Extension machine (shear force on ACL)",
+        "Running and high-impact plyometrics (acute or post-surgical)",
+        "Lunges with excessive forward knee travel",
+        "Full range leg press with heavy load",
+        "Jump squats and box jumps (acute phase)",
+        "Pivoting movements (ACL specific)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Barbell Back Squat", "replace_with": "Box Squat (controlled depth) or Leg Press (partial range)"},
+        {"avoid": "Leg Extension", "replace_with": "Terminal Knee Extension (band) or Step-Up (low box)"},
+        {"avoid": "Lunge (forward knee travel)", "replace_with": "Reverse Lunge (less knee stress) or Step-Up"},
+        {"avoid": "Box Jump", "replace_with": "Step-Up or Glute Bridge for power development"}
+      ],
+      "prehab_and_mobility": [
+        "Straight Leg Raise — 3x15 (VMO activation without knee flexion)",
+        "Terminal Knee Extension (band) — 3x15 (patellar tracking)",
+        "Clamshell — 3x15 per side (glute medius for knee stability)",
+        "Lateral Band Walk — 2x20 steps each way (hip abductor strength)",
+        "Ankle Mobility Drill — 2x10 per side (ankle affects knee mechanics)",
+        "Wall Sit (partial range) — 30–45 seconds (quad strengthening without full flexion)"
+      ],
+      "programming_modifications": {
+        "depth": "Limit squat depth to pain-free range only — box squats are ideal",
+        "load": "Reduce lower body load significantly — build volume first, load later",
+        "unilateral": "Introduce unilateral work cautiously — start with step-ups before split squats",
+        "hip_dominant": "Shift program bias toward hip-dominant movements (RDL, hip thrust, glute bridge) — less knee stress"
+      },
+      "coaching_language": "We're going to protect that knee and build the muscles around it so it feels more supported every week. Hip-dominant movements are your best friend right now — they strengthen the glutes and hamstrings that take load off the knee. We'll earn our way back to full depth over time.",
+      "refer_out": "Post-surgical ACL or meniscus repair — require physical therapy clearance and timeline before programming any lower body work. Do not assume cleared without confirmation."
+    },
+
+    {
+      "id": "INJ-03",
+      "name": "Shoulder Pain & Injuries",
+      "keywords": ["shoulder pain", "rotator cuff", "shoulder impingement", "shoulder surgery", "labrum", "SLAP tear", "shoulder instability", "AC joint", "bursitis", "frozen shoulder", "shoulder injury", "bad shoulder"],
+      "sub_types": {
+        "rotator_cuff": "Tear or tendinopathy — avoid loaded internal rotation and heavy overhead",
+        "impingement": "Pain with overhead movements — modify angle and load",
+        "instability": "Labrum or ligament — avoid extremes of range under load",
+        "post_surgical": "Requires clearance — minimum 3–6 months post-op before loading"
+      },
+      "contraindicated_movements": [
+        "Barbell overhead press (heavy load overhead)",
+        "Behind-the-neck press or pull (extreme shoulder position)",
+        "Barbell back squat (bar on traps can aggravate shoulder)",
+        "Upright row (internal rotation under load)",
+        "Dips (shoulder extension under bodyweight)",
+        "Wide grip bench press (rotator cuff stress)",
+        "Kipping pull-ups (uncontrolled shoulder loading)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Barbell Overhead Press", "replace_with": "Dumbbell Shoulder Press (neutral or slight angle) or Landmine Press"},
+        {"avoid": "Barbell Back Squat", "replace_with": "Goblet Squat or Safety Bar Squat"},
+        {"avoid": "Upright Row", "replace_with": "Face Pull or Band Pull-Apart (external rotation)"},
+        {"avoid": "Wide Grip Bench", "replace_with": "Neutral Grip Dumbbell Press or Close Grip Bench"},
+        {"avoid": "Dips", "replace_with": "Tricep Pressdown or Overhead Tricep Extension (seated)"}
+      ],
+      "prehab_and_mobility": [
+        "Band Pull-Apart — 3x20 (rear delt and external rotation)",
+        "Face Pull — 3x15 (rotator cuff health — mandatory for shoulder clients)",
+        "Wall Slide — 2x10 (scapular mobility)",
+        "Shoulder Circle — 10 slow circles each direction (warm-up)",
+        "Sleeper Stretch — 60 seconds per side (internal rotation mobility, cooldown)",
+        "External Rotation (band) — 3x15 per side (rotator cuff strengthening)",
+        "Chest Doorway Stretch — 60 seconds (pec stretch, cooldown)"
+      ],
+      "programming_modifications": {
+        "pressing_angle": "Favor incline and neutral grip over flat and pronated grip",
+        "overhead": "Avoid or severely limit overhead work until shoulder is assessed — landmine press is the safest overhead option",
+        "rear_delt_priority": "Always include face pulls and band pull-aparts — weak rear delts are a root cause of most shoulder issues",
+        "scapular_control": "Cue and reinforce scapular retraction and depression before every pressing movement"
+      },
+      "coaching_language": "Shoulder health is built from the back — most shoulder issues come from weak rear delts and poor scapular control. We're going to strengthen everything behind the shoulder while we let the front recover. You're going to feel more stable in that shoulder than you have in years.",
+      "refer_out": "Acute pain, severe loss of range of motion, or clicking and locking — refer to orthopedic or physical therapy before programming. Post-surgical shoulder requires PT clearance."
+    },
+
+    {
+      "id": "INJ-04",
+      "name": "Hip Pain & Injuries",
+      "keywords": ["hip pain", "hip impingement", "FAI", "hip labrum", "hip replacement", "hip surgery", "hip flexor", "IT band", "hip bursitis", "groin pull", "groin strain", "hip injury"],
+      "contraindicated_movements": [
+        "Deep squat below parallel (FAI and labrum)",
+        "Heavy hip flexion under load (hip flexor strain)",
+        "Extreme hip external rotation under load (labrum)",
+        "High-impact plyometrics (hip replacement)",
+        "Loaded hip adduction machine (groin strain acute phase)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Deep Squat", "replace_with": "Box Squat (above parallel) or Leg Press"},
+        {"avoid": "Barbell Hip Thrust (acute)", "replace_with": "Glute Bridge (bodyweight or light band)"},
+        {"avoid": "Loaded Lunge (hip flexor)", "replace_with": "Step-Up or Reverse Lunge (shorter stride)"}
+      ],
+      "prehab_and_mobility": [
+        "90/90 Hip Stretch — 60 seconds per side",
+        "Hip Flexor Stretch (kneeling) — 60 seconds per side",
+        "Clamshell — 3x15 per side",
+        "Hip Circle — 10 slow rotations each direction (warm-up)",
+        "Pigeon Pose — 60 seconds per side (cooldown)",
+        "Lateral Band Walk — 2x20 steps (hip abductor activation)"
+      ],
+      "programming_modifications": {
+        "squat_depth": "Pain-free range only — box squat to control depth",
+        "hip_hinge": "Hip hinge is generally safe and should be maintained — keep it in the program",
+        "unilateral": "Introduce cautiously — step-up before split squat"
+      },
+      "coaching_language": "The hip is one of the most coachable joints in the body — we have a lot of tools to work around it and build strength that actually supports it. Let's find your pain-free range and start there. We'll expand it every week.",
+      "refer_out": "Post hip replacement — require orthopedic clearance. FAI with severe symptoms — refer to sports medicine before programming squats or loaded hip flexion."
+    },
+
+    {
+      "id": "INJ-05",
+      "name": "Wrist & Elbow Pain",
+      "keywords": ["wrist pain", "wrist injury", "tennis elbow", "golfer's elbow", "elbow pain", "lateral epicondylitis", "medial epicondylitis", "carpal tunnel", "wrist sprain", "elbow injury"],
+      "contraindicated_movements": [
+        "Barbell curl (wrist strain with straight bar)",
+        "Barbell bench press (wrist extension under load)",
+        "Wrist-loaded push-up variations (acute wrist)",
+        "Reverse curl (lateral epicondylitis aggravation)",
+        "Heavy farmer carry (elbow tendinopathy aggravation)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Barbell Curl", "replace_with": "EZ-Bar Curl or Dumbbell Hammer Curl (neutral grip)"},
+        {"avoid": "Barbell Bench Press", "replace_with": "Dumbbell Press (neutral grip) or Machine Chest Press"},
+        {"avoid": "Push-Up (wrist pain)", "replace_with": "Push-Up on Fists or on Dumbbells (neutral wrist)"}
+      ],
+      "prehab_and_mobility": [
+        "Wrist Circle — 10 rotations each direction (warm-up)",
+        "Wrist Flexor Stretch — 30 seconds each side (cooldown)",
+        "Wrist Extensor Stretch — 30 seconds each side (cooldown)",
+        "Forearm Massage or Foam Roll — pre-session",
+        "Finger Extension (band) — 3x15 (wrist balance and tendon health)"
+      ],
+      "programming_modifications": {
+        "grip": "Always favor neutral grip — reduces wrist and elbow stress significantly",
+        "load": "Reduce all grip-intensive exercises — farmer carries, rows, deadlifts may need straps",
+        "wrist_wraps": "Recommend wrist wraps for pressing movements during recovery"
+      },
+      "coaching_language": "A neutral grip is going to be our best friend here — it takes the torque off the wrist and elbow and lets us keep training without aggravating things. Small equipment change, big difference.",
+      "refer_out": "Carpal tunnel with numbness or tingling — refer to physician. Acute tennis or golfer's elbow with significant daily pain — refer to physical therapy before high-volume training."
+    },
+
+    {
+      "id": "INJ-06",
+      "name": "Neck Pain & Cervical Issues",
+      "keywords": ["neck pain", "cervical", "neck injury", "whiplash", "neck stiffness", "cervical herniation", "neck surgery", "bad neck"],
+      "contraindicated_movements": [
+        "Barbell back squat (bar pressure on cervical spine)",
+        "Behind-the-neck press",
+        "Behind-the-neck pull-down",
+        "Heavy shrugs (cervical compression)",
+        "Any exercise requiring head to be in sustained flexion or extension under load"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Barbell Back Squat", "replace_with": "Goblet Squat, Front Squat, or Leg Press"},
+        {"avoid": "Behind-Neck Press", "replace_with": "Dumbbell Shoulder Press (in front)"},
+        {"avoid": "Heavy Shrug", "replace_with": "Band Pull-Apart or Light Dumbbell Shrug"}
+      ],
+      "prehab_and_mobility": [
+        "Chin Tuck — 3x10 (cervical alignment)",
+        "Neck Side Stretch — 30 seconds each side (gentle, no force)",
+        "Thoracic Extension over Foam Roller — 60 seconds (relieves cervical tension)",
+        "Upper Trap Stretch — 30 seconds each side (cooldown)"
+      ],
+      "coaching_language": "We're keeping all loading away from the neck and keeping your spine in a neutral, supported position throughout every exercise. Thoracic mobility work is going to help here too — tight upper back pulls on the neck.",
+      "refer_out": "Cervical herniation with radiating arm pain or numbness — refer to physician or physical therapy before any upper body loading."
+    },
+
+    {
+      "id": "INJ-07",
+      "name": "Ankle & Foot Issues",
+      "keywords": ["ankle pain", "ankle sprain", "plantar fasciitis", "achilles tendon", "achilles pain", "ankle injury", "flat feet", "foot pain", "ankle instability"],
+      "contraindicated_movements": [
+        "Jump training and plyometrics (acute ankle sprain)",
+        "Heavy calf raises from deficit (achilles tendinopathy)",
+        "High-impact cardio — running, jumping (plantar fasciitis acute)",
+        "Deep squat without heel elevation (limited dorsiflexion)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Box Jump", "replace_with": "Step-Up (low box, controlled)"},
+        {"avoid": "Deep Squat", "replace_with": "Heel-Elevated Goblet Squat"},
+        {"avoid": "Running", "replace_with": "Cycling or Swimming (low ankle stress)"},
+        {"avoid": "Deficit Calf Raise", "replace_with": "Seated Calf Raise or Flat Calf Raise"}
+      ],
+      "prehab_and_mobility": [
+        "Ankle Circle — 10 rotations each direction (warm-up)",
+        "Banded Ankle Dorsiflexion Mobilization — 2x10 per side",
+        "Single-Leg Balance — 3x30 seconds (proprioception and stability)",
+        "Calf Stretch (wall) — 60 seconds per side (cooldown)",
+        "Arch Activation — Towel Scrunch or Short Foot — 2x15"
+      ],
+      "programming_modifications": {
+        "heel_elevation": "Use heel elevation on all squat patterns until dorsiflexion improves",
+        "impact": "Zero impact in acute phase — all lower body work is controlled and ground-based",
+        "stability": "Single-leg balance work is essential — ankle stability comes from proprioception training"
+      },
+      "coaching_language": "We're giving that ankle a stable foundation to recover from. Single-leg balance work might feel simple but it's genuinely rebuilding the stability system — this is real training, not just rehab filler.",
+      "refer_out": "Suspected fracture or complete ligament rupture — refer immediately. Achilles tendon rupture — medical emergency, do not program."
+    },
+
+    {
+      "id": "INJ-08",
+      "name": "Postpartum",
+      "keywords": ["postpartum", "after baby", "after pregnancy", "c-section", "cesarean", "diastasis recti", "pelvic floor", "after giving birth", "new mom", "recently gave birth"],
+      "refer_out_first": true,
+      "refer_out_language": "Before we build your program, we want to make sure you have medical clearance from your OB or midwife — especially if it's been less than 6 weeks postpartum or you had a C-section. This is the most important first step. Once you're cleared, we have a full return-to-training approach designed specifically for you.",
+      "contraindicated_movements": [
+        "Heavy loaded compound lifting before pelvic floor is assessed",
+        "High-impact cardio before 12 weeks minimum",
+        "Sit-ups, crunches, or loaded spinal flexion (diastasis recti risk)",
+        "Leg raises (intra-abdominal pressure — diastasis risk)",
+        "Heavy valsalva breathing under load",
+        "Running before pelvic floor cleared (leaking = stop)"
+      ],
+      "safe_substitutions": [
+        {"avoid": "Sit-Up / Crunch", "replace_with": "Dead Bug or Diaphragmatic Breathing"},
+        {"avoid": "Heavy Squat", "replace_with": "Bodyweight Squat or Mini Band Squat"},
+        {"avoid": "Running", "replace_with": "Walking (progressive distance)"}
+      ],
+      "phased_return": {
+        "phase_1_weeks_0_to_6": "Diaphragmatic breathing, pelvic floor activation, gentle walking only. No resistance training without clearance.",
+        "phase_2_weeks_6_to_12": "Bodyweight movement reintroduction. Glute bridges, clamshells, bird dog, wall sits. No impact.",
+        "phase_3_weeks_12_plus": "Progressive loading begins. Light resistance, full body, low impact. Reassess pelvic floor before adding load.",
+        "phase_4_weeks_20_plus": "Return to full programming. Cleared for running and impact if pelvic floor asymptomatic."
+      },
+      "prehab_and_mobility": [
+        "360-Degree Diaphragmatic Breathing — every session",
+        "Pelvic Floor Activation (Kegel + Reverse Kegel) — daily",
+        "Cat-Cow — 10 reps (gentle spinal mobility)",
+        "Glute Bridge — 3x15 (posterior chain without abdominal pressure)",
+        "Child's Pose — 60 seconds (hip and back mobility)"
+      ],
+      "coaching_language": "Your body just did something extraordinary. This phase of training is about reconnecting — not rushing. Every session is building the foundation that makes everything else possible. There's no timeline to rush back to — we're building something sustainable.",
+      "flag_for_kim": true
+    },
+
+    {
+      "id": "INJ-09",
+      "name": "Autoimmune Conditions",
+      "keywords": ["autoimmune", "lupus", "MS", "multiple sclerosis", "rheumatoid arthritis", "fibromyalgia", "hashimoto", "Crohn's", "IBD", "psoriatic arthritis", "ankylosing spondylitis", "chronic fatigue", "CFS", "ME/CFS", "chronic illness", "inflammatory condition"],
+      "critical_note": "Autoimmune conditions are highly individual. Programming must be built around the client's current energy and symptom state — not a fixed template. Flare days and high-energy days require completely different approaches.",
+      "programming_philosophy": {
+        "primary_principle": "Train to the energy available today — not to the plan on paper",
+        "flare_protocol": "On flare days: movement is optional. If the client wants to move, gentle walking or stretching only. Never push through a flare.",
+        "energy_management": "Program shorter sessions (30–45 min max) with built-in flexibility — client can stop early without guilt",
+        "consistency_over_intensity": "3 sessions of 20 minutes done consistently beats 1 session of 60 minutes followed by 3 days of crash"
+      },
+      "contraindicated_approaches": [
+        "High intensity training on unknown days — always check in first",
+        "Training to failure — recovery is compromised, failure sets cause excessive fatigue",
+        "Two-a-days or back-to-back high intensity sessions",
+        "Ignoring fatigue signals — autoimmune fatigue is physiological, not motivational",
+        "Heavy loaded compound work during flare"
+      ],
+      "safe_programming_framework": {
+        "session_length": "30–45 minutes maximum",
+        "intensity": "RPE 5–7 — never push to RPE 8+ on uncertain energy days",
+        "volume": "Conservative — start at 60% of standard volume",
+        "rest": "Extended rest between sets — 90–120 seconds minimum",
+        "movement_selection": "Favor bodyweight, machines, and cables over free weights during uncertain periods — less coordination demand"
+      },
+      "condition_specific": {
+        "rheumatoid_arthritis": {
+          "joint_considerations": "Avoid high-impact and heavy loading on affected joints. Warm up longer — joints need more time. Aquatic exercise is excellent.",
+          "grip": "Use straps and padded grips — grip strength is often compromised during flares"
+        },
+        "fibromyalgia": {
+          "approach": "Very gradual volume increase. Sleep and recovery are training variables — track both. Exercise is medicine but must be dosed carefully.",
+          "avoid": "HIIT and high-volume sessions — can trigger post-exertional malaise"
+        },
+        "MS_multiple_sclerosis": {
+          "heat_sensitivity": "Many MS clients experience Uhthoff's phenomenon — symptoms worsen with heat. Train in cool environments. Avoid hot yoga or outdoor heat.",
+          "balance_and_coordination": "Include balance work but provide support options. Falls risk is real — always have a wall or bench nearby.",
+          "fatigue_management": "MS fatigue is neurological — respect it completely"
+        },
+        "lupus": {
+          "sun_exposure": "Flag outdoor training — UV exposure can trigger flares",
+          "joint_protection": "Avoid high-impact during flares. Swimming is ideal.",
+          "medication_awareness": "Corticosteroids affect bone density — weight-bearing exercise is beneficial but avoid high-load impact"
+        },
+        "hashimoto_thyroid": {
+          "energy_variability": "Energy fluctuates with thyroid function. Build flexibility into the program.",
+          "avoid": "Extreme caloric restriction combined with high training volume — worsens thyroid stress",
+          "approach": "Moderate intensity, consistent frequency, prioritize sleep as a training variable"
+        }
+      },
+      "check_in_protocol": "For autoimmune clients, always begin every session with an energy check-in (1–10). Scale session to match. 1–4: gentle movement only. 5–7: standard modified program. 8–10: full session.",
+      "coaching_language": "Your training has to work with your body, not against it. Some days we go, some days we adapt, and some days we rest — and all three of those are the right choice depending on what your body is telling us. Listening is a skill and we're going to build it together.",
+      "flag_for_kim": true,
+      "refer_out": "Active flare with significant symptoms — encourage rest and physician contact before training. New diagnosis without established treatment plan — refer to rheumatologist before beginning program."
+    },
+
+    {
+      "id": "INJ-10",
+      "name": "Left vs Right Imbalances",
+      "keywords": ["left side weaker", "right side weaker", "one side stronger", "muscle imbalance", "asymmetry", "dominant side", "compensation", "scoliosis", "leg length discrepancy"],
+      "programming_philosophy": "Imbalances are addressed through unilateral work — always start with the weaker side and match reps exactly. Never let the stronger side compensate.",
+      "assessment_flags": [
+        "Client mentions one side is weaker or in more pain than the other",
+        "Client mentions previous injury on one specific side",
+        "Client mentions scoliosis or leg length difference"
+      ],
+      "programming_approach": {
+        "unilateral_priority": "Include at least 2 unilateral exercises per session — one upper, one lower",
+        "weaker_side_first": "Always train weaker side first — it sets the rep/load standard",
+        "no_compensation": "Stronger side cannot add reps or weight to compensate — match exactly",
+        "bilateral_caution": "Be aware that bilateral exercises mask imbalances — the stronger side takes over",
+        "scoliosis_note": "For scoliosis clients, favor exercises that allow the spine to find its natural position. Avoid heavy asymmetrical loading. Include thoracic mobility."
+      },
+      "exercises_to_prioritize": [
+        "Single-Leg RDL",
+        "Bulgarian Split Squat",
+        "Single-Arm Dumbbell Row",
+        "Single-Arm Dumbbell Press",
+        "Single-Leg Glute Bridge",
+        "Step-Up",
+        "Single-Arm Cable Row",
+        "Pallof Press (both sides)"
+      ],
+      "coaching_language": "We're going to give your weaker side some extra attention — not to punish the stronger one, but to bring everything into balance. You'll actually feel stronger overall as that gap closes. This is one of the most valuable things we can do for your long-term progress and injury prevention.",
+      "refer_out": "Leg length discrepancy greater than 1cm — refer to physical therapist for orthotic assessment before heavy bilateral loading."
+    },
+
+    {
+      "id": "INJ-11",
+      "name": "Past Surgeries (General)",
+      "keywords": ["surgery", "operation", "surgical", "procedure", "reconstruction", "repair", "replacement"],
+      "critical_note": "All post-surgical programming requires confirmed medical clearance. Timeline and restrictions vary by surgery type, surgeon protocol, and individual healing.",
+      "general_rules": {
+        "timeline_minimum": "Do not assume cleared for training less than 6 weeks post-surgery without explicit confirmation",
+        "clearance_required": "Always ask for and note medical clearance before programming the affected area",
+        "conservative_start": "Even with clearance — start at 50% of standard programming volume and progress slowly",
+        "scar_tissue": "Scar tissue can limit range of motion — respect it, don't force through it"
+      },
+      "common_surgeries": {
+        "ACL_reconstruction": "Typically 9–12 months full return to sport. Programming must follow PT protocol phases.",
+        "meniscus_repair": "6–12 weeks for partial, longer for full repair. Avoid deep knee flexion until cleared.",
+        "hip_replacement": "6–12 weeks minimum. Avoid hip flexion past 90 degrees initially. No crossing legs.",
+        "shoulder_surgery": "Rotator cuff: 4–6 months. Labrum: 3–6 months. Avoid overhead until cleared.",
+        "spinal_surgery": "Highly variable — always require surgeon clearance before any loading.",
+        "hernia_repair": "6–8 weeks minimum. No heavy intra-abdominal pressure — avoid heavy compound lifts until cleared."
+      },
+      "coaching_language": "Surgery is a reset, not an end point. We build back carefully and intentionally — and the clients who do this right come back stronger than before because they learn to train smarter. I'm here for every step of that process.",
+      "flag_for_kim": true,
+      "refer_out": "Any surgery within 6 months without confirmed clearance — do not program the affected area. Flag for Kim's review."
+    }
+  ],
+
+  "keyword_matching_guide": {
+    "description": "Quick reference for Claude to match client injury text to the correct INJ category. Use this when the client's injury description is ambiguous.",
+    "back_pain": "INJ-01",
+    "knee": "INJ-02",
+    "shoulder": "INJ-03",
+    "hip": "INJ-04",
+    "wrist_elbow": "INJ-05",
+    "neck": "INJ-06",
+    "ankle_foot": "INJ-07",
+    "postpartum_pregnancy": "INJ-08",
+    "autoimmune_chronic": "INJ-09",
+    "imbalance_asymmetry": "INJ-10",
+    "surgery_general": "INJ-11",
+    "multiple_injuries": "Apply all relevant categories. Flag for Kim review. Build conservative full-body program addressing each."
+  },
+
+  "program_header_template": {
+    "description": "When a client has injuries, include this block at the top of their generated program so Kim sees it immediately",
+    "template": {
+      "injury_flags": "[List all flagged injuries from INJ categories]",
+      "contraindicated_movements": "[All movements excluded from this program]",
+      "substitutions_applied": "[List of substitution pairs used]",
+      "refer_out_required": "[Yes/No — if yes, state condition and what clearance is needed]",
+      "kim_review_notes": "[Anything that requires Kim's personal attention before client starts]"
+    }
+  }
+}
