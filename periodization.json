@@ -1,0 +1,434 @@
+{
+  "metadata": {
+    "title": "Periodization",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Defines how TRAIN programs are structured over time — how weeks build on each other, when to push, when to deload, and how to progress from phase to phase. This is the architecture that turns a collection of workouts into a real training system.",
+    "last_updated": "May 2026",
+    "version": "1.0",
+    "cross_references": [
+      "programming_variables.json",
+      "movement_categories.json",
+      "client_program_goals.json",
+      "client_assessment_schema.json",
+      "injury_navigation.json"
+    ]
+  },
+
+  "instructions_for_claude": {
+    "step_1": "Identify client goal and experience level — these determine which periodization model to use",
+    "step_2": "Select the appropriate model: Linear (beginner), Undulating (intermediate), or Block (advanced/performance)",
+    "step_3": "Map client's available weeks to the correct mesocycle template below",
+    "step_4": "Assign weekly focus (accumulation, intensification, realization, deload) using the week_by_week_structure",
+    "step_5": "Apply volume and intensity progressions from programming_variables.json within each week",
+    "step_6": "Set deload week — default week 4 of every mesocycle",
+    "step_7": "Define what the next mesocycle looks like at the end — TRAIN programs never just stop, they transition"
+  },
+
+  "core_concepts": {
+    "mesocycle": {
+      "definition": "A training block of 4–8 weeks with a specific focus — the primary unit of TRAIN programming",
+      "standard_length": "4 weeks (3 weeks accumulation + 1 week deload)",
+      "extended_length": "6 weeks (4 weeks accumulation + 1 week intensification + 1 week deload) — intermediate and advanced",
+      "coaching_note": "Every client program is built in mesocycles. A client asking for an '8-week program' is asking for 2 mesocycles. Always think in blocks, not individual weeks."
+    },
+    "macrocycle": {
+      "definition": "The full training year or multi-month plan — made up of multiple mesocycles",
+      "standard_for_train": "3–6 month macrocycle (2–4 mesocycles) — appropriate for most clients",
+      "coaching_note": "Most TRAIN clients won't need macrocycle planning initially. Focus on delivering the first mesocycle excellently, then transition into the next."
+    },
+    "microcycle": {
+      "definition": "A single training week — the smallest repeating unit",
+      "standard": "7 days",
+      "coaching_note": "Each week within a mesocycle has a specific intensity and volume target. Weeks are not interchangeable — they build on each other."
+    },
+    "supercompensation": {
+      "definition": "The physiological process by which the body adapts to training stress and comes back stronger — only occurs during recovery, not during training itself",
+      "implication": "Training causes fatigue. Rest and deload cause adaptation. Both are required. A client who never rests never fully adapts.",
+      "coaching_language": "The gains happen when you rest — not when you lift. The training is just the signal. Your body does the real work between sessions."
+    },
+    "fatigue_fitness_relationship": {
+      "definition": "Both fitness and fatigue accumulate during training. Fitness persists longer than fatigue. Deloading removes fatigue and reveals the fitness underneath.",
+      "practical_application": "A client who feels flat or stale before their deload week will often feel significantly stronger and more capable in week 5 (first week of next mesocycle). This is the system working correctly.",
+      "coaching_language": "If you're feeling a little tired going into deload week — that's exactly right. That means the training did its job. Week 5 is going to feel like a different body."
+    }
+  },
+
+  "periodization_models": {
+
+    "linear_periodization": {
+      "best_for": ["beginners", "returning_clients", "general_health", "first_mesocycle_of_any_goal"],
+      "description": "Volume starts moderate and decreases over the mesocycle. Intensity starts moderate and increases over the mesocycle. Simple, predictable, effective for anyone new to structured training.",
+      "principle": "One variable changes at a time — load increases as reps decrease. Easy to understand, easy to track.",
+      "weekly_progression": {
+        "week_1": {
+          "focus": "Foundation",
+          "volume": "Moderate (start at 60-70% of target volume)",
+          "intensity": "Moderate — RPE 6-7",
+          "rep_range_example": "3x12-15",
+          "purpose": "Learn the program, establish movement patterns, build work capacity"
+        },
+        "week_2": {
+          "focus": "Accumulation",
+          "volume": "Moderate-High (70-80% of target volume)",
+          "intensity": "Moderate-Hard — RPE 7-8",
+          "rep_range_example": "3x10-12",
+          "purpose": "Add volume, increase load slightly, build on week 1 foundation"
+        },
+        "week_3": {
+          "focus": "Intensification",
+          "volume": "High (80-90% of target volume)",
+          "intensity": "Hard — RPE 8-9",
+          "rep_range_example": "4x8-10",
+          "purpose": "Peak training stress — this is the hardest week, drive adaptation"
+        },
+        "week_4": {
+          "focus": "Deload",
+          "volume": "Low (40-50% of week 3 volume)",
+          "intensity": "Easy — RPE 5-6",
+          "rep_range_example": "2x10-12 (same movements, reduced load)",
+          "purpose": "Remove fatigue, allow supercompensation, prepare for next mesocycle"
+        }
+      },
+      "load_progression_example": {
+        "week_1": "Squat 3x12 at 100 lbs",
+        "week_2": "Squat 3x10 at 110 lbs",
+        "week_3": "Squat 4x8 at 120 lbs",
+        "week_4": "Squat 2x12 at 80 lbs (deload)",
+        "week_5_new_mesocycle": "Squat 3x12 at 110 lbs (start next block above week 1 baseline)"
+      },
+      "coaching_note": "Linear periodization is the most powerful tool for beginners because they respond to almost any progressive stimulus. Don't overcomplicate it — consistent load increases week over week is all that's needed."
+    },
+
+    "undulating_periodization": {
+      "best_for": ["intermediate", "muscle_gain", "fat_loss_with_muscle_preservation", "clients_who_plateau_on_linear"],
+      "description": "Volume and intensity vary within the week — different sessions have different rep ranges and focuses. More stimuli = more adaptation pathways = continued progress when linear has stalled.",
+      "types": {
+        "daily_undulating": {
+          "name": "DUP — Daily Undulating Periodization",
+          "description": "Each session in the week has a different rep range and intensity focus",
+          "example_upper_lower_week": {
+            "monday_upper": "Strength focus — 4x5-6, heavy load, long rest",
+            "tuesday_lower": "Hypertrophy focus — 4x8-12, moderate load, moderate rest",
+            "thursday_upper": "Endurance/Volume focus — 3x15-20, light-moderate load, short rest",
+            "friday_lower": "Hypertrophy focus — 4x8-12, moderate load, moderate rest"
+          },
+          "advantage": "Each muscle group experiences multiple rep ranges per week — maximizes both strength and hypertrophy adaptations"
+        },
+        "weekly_undulating": {
+          "name": "WUP — Weekly Undulating Periodization",
+          "description": "Each week of the mesocycle has a different focus — week rotates between strength, hypertrophy, and volume",
+          "example_4_week": {
+            "week_1": "Hypertrophy — 4x8-12, RPE 7-8",
+            "week_2": "Strength — 5x4-6, RPE 8-9",
+            "week_3": "Volume — 3x15-20, RPE 7",
+            "week_4": "Deload — 2x10, RPE 5-6"
+          },
+          "advantage": "Simpler to manage than DUP — good transition from linear for intermediate clients"
+        }
+      },
+      "mesocycle_structure": {
+        "weeks_1_to_2": "Establish the undulating pattern — clients need 2 weeks to adapt to the variable stimulus",
+        "weeks_3_to_4": "Push each session's intensity to its target range",
+        "weeks_5_to_6": "Intensification — hit the higher end of each rep range with heavier loads",
+        "week_6_or_7": "Deload — full recovery before next mesocycle"
+      },
+      "coaching_note": "DUP is the most evidence-supported periodization model for simultaneous strength and hypertrophy development. It feels more complex initially but clients quickly adapt to the variety. The different stimuli each session is what breaks plateaus."
+    },
+
+    "block_periodization": {
+      "best_for": ["advanced", "performance", "competition_prep", "athletes", "clients_with_specific_peak_date"],
+      "description": "Training is organized into sequential specialized blocks — each block has one primary focus. Accumulation (volume) → Intensification (strength) → Realization (peaking) → Deload. Not used for beginners.",
+      "blocks": {
+        "accumulation_block": {
+          "duration": "3-4 weeks",
+          "focus": "Volume — build work capacity and muscle",
+          "intensity": "Moderate — RPE 6-8",
+          "rep_ranges": "10-15 primary, 15-20 accessory",
+          "goal": "Build the foundation of volume that intensification and realization will be built on"
+        },
+        "intensification_block": {
+          "duration": "3-4 weeks",
+          "focus": "Intensity — increase load, reduce volume",
+          "intensity": "High — RPE 8-9",
+          "rep_ranges": "5-8 primary, 8-12 accessory",
+          "goal": "Convert volume adaptations into strength — heavier weights, fewer reps"
+        },
+        "realization_block": {
+          "duration": "1-2 weeks",
+          "focus": "Peak — express maximum strength and performance",
+          "intensity": "Maximum — RPE 9-10",
+          "rep_ranges": "1-5 primary lifts",
+          "goal": "Test strength, compete, or set PRs — remove fatigue while maintaining intensity",
+          "volume": "Significantly reduced — 50-60% of accumulation block"
+        },
+        "deload_transition": {
+          "duration": "1 week",
+          "focus": "Full recovery before next macrocycle or mesocycle",
+          "intensity": "Very low — RPE 5",
+          "purpose": "Remove all accumulated fatigue before the next training block begins"
+        }
+      },
+      "coaching_note": "Block periodization is powerful but requires advanced clients who can tolerate high volume in the accumulation block. Do not apply to beginners or general health clients — linear or undulating will serve them better."
+    }
+  },
+
+  "mesocycle_templates": {
+    "description": "Ready-to-use mesocycle structures for each goal. Claude fills in the exercises from the exercise libraries.",
+
+    "fat_loss_4_week": {
+      "model": "Linear",
+      "goal": "Fat Loss",
+      "experience": "All levels",
+      "structure": {
+        "week_1_foundation": {
+          "sets_per_exercise": "2-3",
+          "reps": "12-15",
+          "rest": "45-60s",
+          "RPE": "6-7",
+          "session_density": "Moderate — straight sets",
+          "cardio_addition": "2x20-30 min moderate steady state"
+        },
+        "week_2_accumulation": {
+          "sets_per_exercise": "3",
+          "reps": "12-15",
+          "rest": "45s",
+          "RPE": "7-8",
+          "session_density": "Higher — introduce supersets on accessory work",
+          "cardio_addition": "2-3x25-30 min or 1x HIIT session"
+        },
+        "week_3_intensification": {
+          "sets_per_exercise": "3-4",
+          "reps": "10-15",
+          "rest": "30-45s",
+          "RPE": "8",
+          "session_density": "High — supersets on most accessory and finisher work",
+          "cardio_addition": "3x30 min or 2x HIIT"
+        },
+        "week_4_deload": {
+          "sets_per_exercise": "2",
+          "reps": "12-15",
+          "rest": "60s",
+          "RPE": "5-6",
+          "session_density": "Low — straight sets only, no supersets",
+          "cardio_addition": "2x20 min easy walking or light cardio only"
+        }
+      },
+      "mesocycle_2_adjustment": "Increase week 1 baseline above previous week 1. Add one additional superset per session. Increase cardio by 5-10 min per session."
+    },
+
+    "muscle_gain_4_week": {
+      "model": "Linear → Undulating (by mesocycle 2)",
+      "goal": "Muscle Gain",
+      "experience": "Beginner to Intermediate",
+      "structure": {
+        "week_1_foundation": {
+          "sets_per_exercise": "3",
+          "reps": "10-12",
+          "rest": "90s",
+          "RPE": "7",
+          "tempo": "3-1-2-0",
+          "purpose": "Establish mind-muscle connection with new program"
+        },
+        "week_2_accumulation": {
+          "sets_per_exercise": "3-4",
+          "reps": "8-10",
+          "rest": "90s",
+          "RPE": "7-8",
+          "tempo": "3-1-2-0",
+          "purpose": "Increase load slightly — same rep range, heavier weight"
+        },
+        "week_3_intensification": {
+          "sets_per_exercise": "4",
+          "reps": "6-8",
+          "rest": "90-120s",
+          "RPE": "8-9",
+          "tempo": "3-1-2-0",
+          "purpose": "Peak load — maximum mechanical tension"
+        },
+        "week_4_deload": {
+          "sets_per_exercise": "2",
+          "reps": "10-12",
+          "rest": "90s",
+          "RPE": "5-6",
+          "tempo": "2-0-2-0",
+          "purpose": "Full recovery — reduce load by 40%, maintain movement patterns"
+        }
+      },
+      "mesocycle_2_adjustment": "Introduce weekly undulating periodization — rotate hypertrophy, strength, and volume weeks. Add 1 set per primary exercise across the board."
+    },
+
+    "muscle_gain_6_week": {
+      "model": "Undulating",
+      "goal": "Muscle Gain",
+      "experience": "Intermediate to Advanced",
+      "structure": {
+        "week_1_hypertrophy": {"sets": "4", "reps": "8-12", "rest": "90s", "RPE": "7-8"},
+        "week_2_strength": {"sets": "5", "reps": "4-6", "rest": "180s", "RPE": "8-9"},
+        "week_3_volume": {"sets": "3", "reps": "15-20", "rest": "60s", "RPE": "7"},
+        "week_4_hypertrophy_plus": {"sets": "4-5", "reps": "8-10", "rest": "90s", "RPE": "8-9"},
+        "week_5_strength_plus": {"sets": "5", "reps": "3-5", "rest": "180-240s", "RPE": "9"},
+        "week_6_deload": {"sets": "2-3", "reps": "10-12", "rest": "90s", "RPE": "5-6"}
+      }
+    },
+
+    "performance_8_week": {
+      "model": "Block",
+      "goal": "Performance / Athletic",
+      "experience": "Intermediate to Advanced",
+      "structure": {
+        "weeks_1_to_3_accumulation": {
+          "focus": "Volume and work capacity",
+          "sets": "4-5",
+          "reps": "8-12 strength, 10-15 accessory",
+          "rest": "90-120s",
+          "RPE": "7-8",
+          "explosive_work": "Include 2-3 power exercises per session at session start"
+        },
+        "weeks_4_to_6_intensification": {
+          "focus": "Strength and power development",
+          "sets": "4-5",
+          "reps": "4-6 primary, 6-8 accessory",
+          "rest": "180-240s",
+          "RPE": "8-9",
+          "explosive_work": "Increase explosive work intensity — box jumps, medicine ball, sprint work"
+        },
+        "weeks_7_peak": {
+          "focus": "Express strength — test PRs or competition performance",
+          "sets": "3-4",
+          "reps": "2-4 primary",
+          "rest": "3-5 min",
+          "RPE": "9-10",
+          "volume": "Reduced significantly — quality over quantity"
+        },
+        "week_8_deload": {
+          "focus": "Full recovery",
+          "sets": "2",
+          "reps": "8-10",
+          "rest": "90s",
+          "RPE": "5"
+        }
+      }
+    },
+
+    "general_health_4_week": {
+      "model": "Linear (conservative)",
+      "goal": "General Health",
+      "experience": "Beginner to Intermediate",
+      "philosophy": "Consistency is the goal. Every week should feel challenging but doable. The client should finish each session feeling accomplished, not destroyed.",
+      "structure": {
+        "week_1": {"sets": "2", "reps": "12-15", "rest": "75s", "RPE": "6", "note": "Ease in — form and confidence first"},
+        "week_2": {"sets": "2-3", "reps": "12-15", "rest": "75s", "RPE": "6-7", "note": "Add one set to primary movements"},
+        "week_3": {"sets": "3", "reps": "10-12", "rest": "60s", "RPE": "7", "note": "Slight increase in load and density"},
+        "week_4": {"sets": "2", "reps": "12-15", "rest": "90s", "RPE": "5-6", "note": "Deload — feel the recovery"}
+      }
+    }
+  },
+
+  "week_by_week_coaching": {
+    "description": "What TRAIN communicates to the client each week — grounded in Kim's voice and the periodization phase",
+
+    "week_1": {
+      "phase": "Foundation",
+      "client_expectation": "This week may feel easier than expected. That's intentional. We're building the foundation, not burning it down on day one.",
+      "coach_focus": "Movement quality, mind-muscle connection, program familiarity",
+      "kim_language": "Week one isn't about going hard — it's about going smart. Learn the program this week. Feel every movement. We're building something real here."
+    },
+    "week_2": {
+      "phase": "Accumulation",
+      "client_expectation": "Things will start to feel more challenging. You'll notice muscle soreness earlier in the week.",
+      "coach_focus": "Confirm progression — are RPEs climbing appropriately? Adjust if needed.",
+      "kim_language": "You should be feeling it now. That's your body adapting. Keep showing up exactly like you did this week — the work is accumulating even when you can't see it yet."
+    },
+    "week_3": {
+      "phase": "Intensification",
+      "client_expectation": "This is the hardest week of the mesocycle. Fatigue will be higher. Performance may feel slightly off near the end of the week — that's normal.",
+      "coach_focus": "Watch for form breakdown under fatigue. Monitor recovery signals.",
+      "kim_language": "Week three is where it gets real. You're going to have to dig a little deeper this week — and you can. This is what you've been building toward. One more push, then we recover."
+    },
+    "week_4": {
+      "phase": "Deload",
+      "client_expectation": "Sessions will feel significantly easier. Some clients feel restless or like they're 'not doing enough.' That feeling is the system working.",
+      "coach_focus": "Hold the client to the deload — do not let them add volume or intensity.",
+      "kim_language": "I know this week feels light. It's supposed to. The gains happen in recovery — not in the gym. Your body is doing more this week than it did in week three. Trust the process. Week five is going to feel incredible."
+    },
+    "week_5_new_mesocycle": {
+      "phase": "New Mesocycle — Foundation 2",
+      "client_expectation": "Most clients feel noticeably stronger and more capable at the start of a new mesocycle. This is supercompensation — it's real and it's earned.",
+      "coach_focus": "Set new baseline above previous mesocycle week 1. Acknowledge the progress.",
+      "kim_language": "Feel that? That's what we've been building. Your new starting point is above where you were 5 weeks ago. That's progress you can feel. Now let's build again."
+    }
+  },
+
+  "plateau_management": {
+    "definition": "When progress stalls — performance doesn't improve week over week for 2+ consecutive weeks despite consistent training and recovery",
+    "assessment_checklist": [
+      "Is the client actually tracking and progressing load week over week?",
+      "Is sleep quality sufficient? (Poor sleep = stalled recovery = stalled progress)",
+      "Is stress chronically high? (High cortisol impairs adaptation)",
+      "Is nutrition adequate? (Extreme deficit + high volume = plateau)",
+      "Has the client been on the same program for more than 8 weeks? (Neural adaptation — needs new stimulus)",
+      "Is the client training near failure consistently, or coasting at RPE 6?"
+    ],
+    "solutions": {
+      "deload_and_reset": "If client has been pushing hard for 6+ weeks without a deload — insert an immediate deload week before progressing",
+      "change_rep_range": "Shift to a different rep range for 4 weeks — if on hypertrophy (8-12), shift to strength (4-6) then return",
+      "change_exercise_variation": "Swap primary movement for a variation — barbell squat → Bulgarian split squat, barbell bench → dumbbell press",
+      "add_volume": "If RPE has been consistently under 7 — add 1 set per primary exercise",
+      "address_recovery": "If sleep or stress are the issue — reduce volume, prioritize recovery, address root cause first",
+      "change_periodization_model": "If on linear for 2+ mesocycles — transition to undulating. More stimulus variety breaks adaptation plateaus."
+    },
+    "coaching_language": "Plateaus are not failures — they're feedback. Your body has adapted to the current stimulus and is asking for something different. This is actually a sign of progress. Let's look at what the data is telling us and adjust."
+  },
+
+  "transition_between_mesocycles": {
+    "description": "How TRAIN programs the bridge from one mesocycle to the next — programs never just end",
+    "rules": {
+      "new_baseline": "Week 1 of mesocycle 2 always starts above week 1 of mesocycle 1 — this is the proof of progress",
+      "keep_what_works": "Exercises that drove the most progress stay in the program. Exercises that felt neutral rotate out.",
+      "introduce_variation": "Swap 1-2 exercises per session to provide new stimulus without completely changing the program",
+      "increase_complexity": "If client has mastered all movements — introduce more complex variations or periodization models",
+      "reassess_goal": "At each mesocycle transition, check in on goal alignment — has the client's goal evolved?"
+    },
+    "mesocycle_progression_by_experience": {
+      "beginner": {
+        "mesocycle_1": "Linear 4-week — full body, foundational movements",
+        "mesocycle_2": "Linear 4-week — same split, heavier baseline, 1-2 new exercise variations",
+        "mesocycle_3": "Linear or intro to weekly undulating — introduce split if ready"
+      },
+      "intermediate": {
+        "mesocycle_1": "Linear or weekly undulating — establish new baseline",
+        "mesocycle_2": "Undulating (DUP or WUP) — increase stimulus variety",
+        "mesocycle_3": "Undulating with higher volume ceiling"
+      },
+      "advanced": {
+        "mesocycle_1": "Block — accumulation phase",
+        "mesocycle_2": "Block — intensification phase",
+        "mesocycle_3": "Block — realization + transition to next macrocycle"
+      }
+    }
+  },
+
+  "periodization_by_life_context": {
+    "description": "Real clients have real lives. Periodization must adapt to context — not just physiology.",
+    "high_stress_period": {
+      "trigger": "Client reports very high stress, major life event, illness",
+      "adjustment": "Insert an extra deload week or reduce volume by 30% for 1-2 weeks. Do not push accumulation during life stress.",
+      "coaching_language": "Life is part of training. When life gets heavy, we lighten the load in the gym — so you have energy for what matters most. We'll push again when you're ready."
+    },
+    "travel_weeks": {
+      "trigger": "Client is traveling or has limited equipment access",
+      "adjustment": "Swap to minimal equipment program for the week. Maintain frequency — 2-3 sessions of bodyweight or hotel gym work.",
+      "coaching_language": "Travel doesn't stop training — it just changes the tools. We're keeping you consistent this week, not perfect."
+    },
+    "holiday_and_social_events": {
+      "trigger": "Client has upcoming social events, holidays, reduced schedule",
+      "adjustment": "Treat as deload week if timing aligns. If not — reduce to 2 sessions of full body work.",
+      "coaching_language": "Life is meant to be lived. A week of reduced training won't erase progress — but burning out trying to maintain perfection might. Let's be smart about this."
+    },
+    "competition_or_event_prep": {
+      "trigger": "Client has a specific event — race, photo shoot, wedding, competition",
+      "adjustment": "Back-plan from event date. Insert realization phase 1-2 weeks before event. Deload the week of event.",
+      "coaching_language": "We're building toward your date. Everything from now until then has a purpose — we're peaking you at exactly the right moment."
+    }
+  }
+}
