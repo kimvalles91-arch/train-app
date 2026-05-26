@@ -1,0 +1,531 @@
+{
+  "metadata": {
+    "title": "Movement Categories",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Defines the movement skeleton that every TRAIN session is built on. Claude uses this to balance session structure, select exercises from the exercise libraries, and ensure no muscle group or pattern is over or under-trained.",
+    "last_updated": "May 2026",
+    "version": "1.0",
+    "cross_references": [
+      "biceps_library.json",
+      "triceps_library.json",
+      "back_exercise_library.json",
+      "chest_exercise_library.json",
+      "shoulder_library.json",
+      "glute_exercise_library.json",
+      "hamstring_exercise_library.json",
+      "quad_exercise_library.json",
+      "core_library.json",
+      "calf_exercise_library.json",
+      "forearm_grip_library.json",
+      "programming_variables.json",
+      "client_assessment_schema.json"
+    ]
+  },
+
+  "instructions_for_claude": {
+    "step_1": "Identify client goal from client_program_goals.json and map to recommended category balance below",
+    "step_2": "Select session structure (how many exercises, what categories) based on session_length from onboarding",
+    "step_3": "Fill each category slot with exercises from the appropriate exercise library",
+    "step_4": "Check movement_type tags in each exercise (Compound / Isolation / Unilateral) to ensure correct session balance",
+    "step_5": "Apply equipment filter — only select exercises the client can perform with their available equipment",
+    "step_6": "Apply mobility and injury filters from client_assessment_schema.json before finalizing",
+    "step_7": "Use session_position (Primary / Accessory / Finisher) to order exercises correctly within each session"
+  },
+
+  "movement_categories": [
+
+    {
+      "id": "MC-01",
+      "name": "Compound Push",
+      "movement_type": "Compound",
+      "plane_of_motion": "Sagittal / Transverse",
+      "definition": "Multi-joint pressing movements where force is directed away from the body. Recruits chest, shoulders, and triceps simultaneously.",
+      "primary_muscles": ["Chest", "Anterior Deltoids", "Triceps"],
+      "secondary_muscles": ["Serratus Anterior", "Core stabilizers"],
+      "movement_patterns": ["Horizontal Press", "Incline Press", "Overhead Press", "Decline Press"],
+      "exercise_examples": {
+        "full_gym": ["Barbell Bench Press", "Incline Barbell Press", "Overhead Press", "Dumbbell Bench Press"],
+        "home_gym": ["Dumbbell Bench Press", "Dumbbell Shoulder Press", "Push-Up variations"],
+        "minimal": ["Push-Up", "Pike Push-Up", "Diamond Push-Up", "Decline Push-Up"]
+      },
+      "session_position": "Primary",
+      "when_to_program": "Every upper body push session. First or second exercise.",
+      "goal_priority": {
+        "fat_loss": "Medium — include 1 per upper session in superset",
+        "muscle_gain": "High — anchor of every push day",
+        "performance": "High — primary strength driver",
+        "general_health": "Medium — include 1 per session, moderate load"
+      },
+      "coaching_notes": "The foundation of upper body pushing strength. Always cue scapular retraction before any pressing movement. Never program two heavy horizontal pressing movements in the same session without a deload.",
+      "common_pairing": "Compound Pull (antagonist superset)"
+    },
+
+    {
+      "id": "MC-02",
+      "name": "Compound Pull",
+      "movement_type": "Compound",
+      "plane_of_motion": "Sagittal / Frontal",
+      "definition": "Multi-joint pulling movements where force is directed toward the body. Recruits back, biceps, and rear delts simultaneously.",
+      "primary_muscles": ["Latissimus Dorsi", "Rhomboids", "Trapezius", "Biceps"],
+      "secondary_muscles": ["Rear Deltoids", "Forearms", "Core"],
+      "movement_patterns": ["Vertical Pull", "Horizontal Pull", "Row variations"],
+      "exercise_examples": {
+        "full_gym": ["Barbell Row", "Cable Row", "Lat Pulldown", "Pull-Up", "Chin-Up", "T-Bar Row"],
+        "home_gym": ["Dumbbell Row", "Resistance Band Row", "Pull-Up (if bar available)"],
+        "minimal": ["Resistance Band Row", "Bodyweight Row (TRX or table)", "Band Lat Pulldown"]
+      },
+      "session_position": "Primary",
+      "when_to_program": "Every upper body pull session. Balance volume with push movements 1:1 or slightly higher pull.",
+      "goal_priority": {
+        "fat_loss": "Medium — include 1 per upper session in superset with push",
+        "muscle_gain": "High — back width and thickness anchor",
+        "performance": "High — critical for athletic force transfer",
+        "general_health": "High — most people are pull-deficient. Prioritize."
+      },
+      "coaching_notes": "Most clients are push-dominant and pull-deficient from daily posture. Always match or exceed push volume with pull volume. Vertical pulls (pull-ups, pulldowns) develop lat width. Horizontal pulls (rows) develop thickness and posture.",
+      "common_pairing": "Compound Push (antagonist superset)"
+    },
+
+    {
+      "id": "MC-03",
+      "name": "Hip Hinge",
+      "movement_type": "Compound",
+      "plane_of_motion": "Sagittal",
+      "definition": "Movements initiated by pushing the hips back while maintaining a neutral spine. The most important posterior chain pattern in programming.",
+      "primary_muscles": ["Glutes", "Hamstrings", "Erector Spinae"],
+      "secondary_muscles": ["Core", "Adductors", "Lats (bracing)"],
+      "movement_patterns": ["Deadlift", "Romanian Deadlift", "Good Morning", "Hip Thrust", "Kettlebell Swing", "Single-Leg RDL"],
+      "exercise_examples": {
+        "full_gym": ["Barbell Deadlift", "Romanian Deadlift", "Barbell Hip Thrust", "Good Morning", "Trap Bar Deadlift"],
+        "home_gym": ["Dumbbell RDL", "Dumbbell Hip Thrust", "Single-Leg RDL", "Kettlebell Swing"],
+        "minimal": ["Bodyweight Hip Thrust", "Single-Leg Hip Hinge", "Resistance Band RDL", "Glute Bridge"]
+      },
+      "session_position": "Primary",
+      "when_to_program": "Every lower body session. The most undertrained pattern for most clients.",
+      "goal_priority": {
+        "fat_loss": "High — massive caloric demand from posterior chain",
+        "muscle_gain": "High — glute and hamstring mass builder",
+        "performance": "Critical — foundation of athletic power",
+        "general_health": "High — essential for back health and daily movement"
+      },
+      "coaching_notes": "Hip hinge is the pattern most clients have never been properly taught. Spend time here. Key cue: 'Push the floor away with your hips, not your back.' Deadlifts and RDLs are different movements — deadlift from the floor, RDL from the hip. Hip thrust is the king of glute isolation within a hinge pattern.",
+      "mobility_flags": {
+        "hamstring_tightness": "Limit range on RDL. Soft knee. Build range over time.",
+        "lower_back_issues": "Begin with hip thrust and glute bridge only. Progress to RDL before deadlift."
+      },
+      "common_pairing": "Quad Dominant (lower body balance)"
+    },
+
+    {
+      "id": "MC-04",
+      "name": "Quad Dominant (Squat Pattern)",
+      "movement_type": "Compound",
+      "plane_of_motion": "Sagittal",
+      "definition": "Knee-dominant movements where the quads drive force into the ground. Balances the posterior chain emphasis of the hip hinge.",
+      "primary_muscles": ["Quadriceps", "Glutes"],
+      "secondary_muscles": ["Hamstrings", "Adductors", "Core", "Calves"],
+      "movement_patterns": ["Back Squat", "Front Squat", "Goblet Squat", "Leg Press", "Bulgarian Split Squat", "Step-Up"],
+      "exercise_examples": {
+        "full_gym": ["Barbell Back Squat", "Front Squat", "Leg Press", "Hack Squat", "Bulgarian Split Squat"],
+        "home_gym": ["Goblet Squat", "Dumbbell Bulgarian Split Squat", "Dumbbell Step-Up", "Dumbbell Front Squat"],
+        "minimal": ["Bodyweight Squat", "Jump Squat", "Bulgarian Split Squat (bodyweight)", "Wall Sit", "Reverse Lunge"]
+      },
+      "session_position": "Primary",
+      "when_to_program": "Every lower body session. Pair with hip hinge for complete lower body stimulus.",
+      "goal_priority": {
+        "fat_loss": "High — squat pattern burns significant calories and preserves muscle",
+        "muscle_gain": "High — quad and glute mass builder",
+        "performance": "Critical — foundation of lower body power",
+        "general_health": "High — functional movement for daily life"
+      },
+      "coaching_notes": "Squat pattern requires more mobility than hinge. Check ankle and hip mobility before loading. Goblet squat is the universal starting point for beginners — it self-corrects posture. Bulgarian split squat is the single best unilateral quad exercise when ready.",
+      "mobility_flags": {
+        "tight_hips": "Goblet squat with heel elevation. Widen stance.",
+        "ankle_restriction": "Heel elevation (plates under heels or heel-elevated variation). Build ankle mobility.",
+        "knee_issues": "Reduce depth. Box squat to control range. Leg press as substitute."
+      },
+      "common_pairing": "Hip Hinge (lower body balance)"
+    },
+
+    {
+      "id": "MC-05",
+      "name": "Unilateral Lower Body",
+      "movement_type": "Unilateral",
+      "plane_of_motion": "Sagittal / Frontal",
+      "definition": "Single-leg movements that address left/right imbalances, improve stability, and increase core demand. Never skip — most clients have significant asymmetries.",
+      "primary_muscles": ["Glutes", "Quadriceps", "Hamstrings"],
+      "secondary_muscles": ["Hip Abductors", "Core", "Stabilizers"],
+      "movement_patterns": ["Lunge", "Split Squat", "Step-Up", "Single-Leg RDL", "Single-Leg Press", "Skater Squat"],
+      "exercise_examples": {
+        "full_gym": ["Bulgarian Split Squat", "Walking Lunge", "Single-Leg Leg Press", "Single-Leg RDL", "Reverse Lunge"],
+        "home_gym": ["Dumbbell Reverse Lunge", "Dumbbell Bulgarian Split Squat", "Single-Leg RDL", "Lateral Lunge"],
+        "minimal": ["Bodyweight Reverse Lunge", "Lateral Lunge", "Single-Leg Glute Bridge", "Step-Up (low box)"]
+      },
+      "session_position": "Accessory",
+      "when_to_program": "Every lower body session. At least 1 unilateral movement per session.",
+      "goal_priority": {
+        "fat_loss": "High — high caloric demand, core engagement",
+        "muscle_gain": "High — eliminates dominant-side compensation",
+        "performance": "Critical — all sport is unilateral",
+        "general_health": "High — balance, stability, injury prevention"
+      },
+      "coaching_notes": "Always note if client flags left/right imbalance in onboarding. Program unilateral work with weaker side going first. Never let the stronger side compensate for the weaker — match reps exactly. Single-leg RDL is the most functional exercise most clients never do.",
+      "mobility_flags": {
+        "knee_issues": "Avoid forward knee travel. Step further forward in lunge. Hip-dominant cuing.",
+        "balance_issues": "Use TRX or wall for support initially. Build balance progressively."
+      },
+      "common_pairing": "Core (functional stability combination)"
+    },
+
+    {
+      "id": "MC-06",
+      "name": "Unilateral Upper Body",
+      "movement_type": "Unilateral",
+      "plane_of_motion": "Sagittal / Transverse",
+      "definition": "Single-arm pressing or pulling movements. Address shoulder imbalances, increase core anti-rotation demand, and expose weaknesses hidden by bilateral movements.",
+      "primary_muscles": ["Chest", "Back", "Shoulders", "Biceps", "Triceps"],
+      "secondary_muscles": ["Core", "Rotator Cuff", "Stabilizers"],
+      "movement_patterns": ["Single-Arm Row", "Single-Arm Press", "Single-Arm Pulldown", "Single-Arm Cable variations"],
+      "exercise_examples": {
+        "full_gym": ["Single-Arm Dumbbell Row", "Single-Arm Cable Row", "Single-Arm Dumbbell Press", "Single-Arm Lat Pulldown"],
+        "home_gym": ["Single-Arm Dumbbell Row", "Single-Arm Dumbbell Press", "Single-Arm Band Row"],
+        "minimal": ["Single-Arm Band Row", "Single-Arm Band Press", "Archer Push-Up"]
+      },
+      "session_position": "Accessory",
+      "when_to_program": "Include at least once per week per upper body session. Essential for clients with shoulder asymmetry.",
+      "goal_priority": {
+        "fat_loss": "Medium — include for functional balance",
+        "muscle_gain": "High — eliminates dominant side compensation in upper body",
+        "performance": "High — sport demands unilateral upper body strength",
+        "general_health": "Medium — functional and corrective value"
+      },
+      "coaching_notes": "Most clients have a dominant arm that takes over in bilateral pressing and rowing. Single-arm work exposes this immediately. Always start with the weaker arm. Note: single-arm dumbbell row is one of the highest-value exercises for back development.",
+      "common_pairing": "Core Anti-Rotation"
+    },
+
+    {
+      "id": "MC-07",
+      "name": "Isolation — Upper Body",
+      "movement_type": "Isolation",
+      "plane_of_motion": "Sagittal / Transverse",
+      "definition": "Single-joint movements targeting a specific muscle with minimal secondary recruitment. Used to address weak links, add volume, and create detail in the muscle.",
+      "primary_muscles": ["Biceps", "Triceps", "Deltoids", "Rear Delts", "Chest (fly movements)"],
+      "secondary_muscles": ["Minimal — by design"],
+      "movement_patterns": [
+        "Elbow Flexion (curls)",
+        "Elbow Extension (pressdowns, extensions)",
+        "Shoulder Abduction (lateral raises)",
+        "Shoulder Flexion (front raises)",
+        "Horizontal Shoulder Abduction (rear delt fly)",
+        "Chest Fly"
+      ],
+      "exercise_examples": {
+        "full_gym": ["Barbell Curl", "Tricep Pressdown", "Lateral Raise", "Rear Delt Fly", "Cable Fly", "Preacher Curl"],
+        "home_gym": ["Dumbbell Curl", "Skull Crusher", "Dumbbell Lateral Raise", "Bent-Over Rear Delt Fly"],
+        "minimal": ["Band Curl", "Band Tricep Extension", "Band Lateral Raise", "Band Pull-Apart"]
+      },
+      "session_position": "Accessory or Finisher",
+      "when_to_program": "After compound movements. Never before — isolation pre-fatigue wastes compound movement potential.",
+      "goal_priority": {
+        "fat_loss": "Low — prioritize compound. Include 1-2 max per session.",
+        "muscle_gain": "High — 2-4 isolation exercises per session for detail and volume",
+        "performance": "Low — only when addressing specific weak link",
+        "general_health": "Low to Medium — include for shoulder health (rear delt, rotator cuff)"
+      },
+      "coaching_notes": "Isolation exercises are finishing work — they add volume and detail, they don't build the foundation. The exception: rear delt and rotator cuff isolation work is essential for shoulder health in almost every client. Lateral raises and rear delt flies should appear in nearly every upper body session regardless of goal.",
+      "common_pairing": "Paired with opposite isolation in superset (biceps + triceps, chest fly + rear delt)"
+    },
+
+    {
+      "id": "MC-08",
+      "name": "Isolation — Lower Body",
+      "movement_type": "Isolation",
+      "plane_of_motion": "Sagittal / Frontal",
+      "definition": "Single-joint lower body movements targeting specific muscles. Used to address weak links, add glute/hamstring/quad detail, and round out lower body sessions.",
+      "primary_muscles": ["Glutes", "Hamstrings", "Quadriceps", "Calves", "Hip Abductors", "Hip Adductors"],
+      "secondary_muscles": ["Minimal — by design"],
+      "movement_patterns": [
+        "Knee Flexion (leg curl)",
+        "Knee Extension (leg extension)",
+        "Hip Abduction (cable kickback, abduction machine)",
+        "Hip Adduction",
+        "Plantar Flexion (calf raise)",
+        "Glute Isolation (donkey kick, fire hydrant)"
+      ],
+      "exercise_examples": {
+        "full_gym": ["Leg Curl", "Leg Extension", "Hip Abduction Machine", "Cable Glute Kickback", "Calf Raise Machine", "Adductor Machine"],
+        "home_gym": ["Dumbbell Leg Curl", "Band Glute Kickback", "Band Hip Abduction", "Standing Calf Raise", "Donkey Kick"],
+        "minimal": ["Band Glute Kickback", "Donkey Kick", "Fire Hydrant", "Standing Calf Raise (bodyweight)", "Band Lateral Walk"]
+      },
+      "session_position": "Accessory or Finisher",
+      "when_to_program": "After compound lower body movements. Essential glute isolation for fat loss and muscle gain clients.",
+      "goal_priority": {
+        "fat_loss": "Medium — glute isolation finishers add volume without heavy loading",
+        "muscle_gain": "High — isolation needed to maximize glute and hamstring detail",
+        "performance": "Low to Medium — hip abduction work for injury prevention",
+        "general_health": "Medium — hip abductor and adductor work for joint health"
+      },
+      "coaching_notes": "Glute isolation work (kickbacks, abductions) is consistently underestimated. For most female clients, glute isolation finishers are essential — the compound movements alone don't provide enough targeted glute stimulus. Leg curl is the most important and most skipped hamstring isolation exercise.",
+      "common_pairing": "Glute isolation pairs well with core work in superset"
+    },
+
+    {
+      "id": "MC-09",
+      "name": "Core — Anti-Extension",
+      "movement_type": "Compound",
+      "plane_of_motion": "Sagittal",
+      "definition": "Core movements that resist the spine being pulled into extension. The most functional core pattern — protects the low back in all pressing, hinging, and carrying movements.",
+      "primary_muscles": ["Rectus Abdominis", "Transverse Abdominis", "Obliques"],
+      "secondary_muscles": ["Hip Flexors", "Lats"],
+      "movement_patterns": ["Plank", "Ab Wheel Rollout", "Dead Bug", "Hollow Body Hold", "Cable Crunch"],
+      "exercise_examples": {
+        "full_gym": ["Ab Wheel Rollout", "Cable Crunch", "Plank", "Hanging Knee Raise", "Pallof Press"],
+        "home_gym": ["Ab Wheel Rollout", "Plank", "Dead Bug", "Hollow Body Hold"],
+        "minimal": ["Plank", "Dead Bug", "Hollow Body Hold", "Slider Pike"]
+      },
+      "session_position": "Accessory or Finisher",
+      "when_to_program": "2-3x per week. Essential for beginners learning to brace. Ab wheel rollout is one of the most effective core exercises available.",
+      "goal_priority": {
+        "fat_loss": "High — core engagement in all movements",
+        "muscle_gain": "Medium — foundational for all heavy compound lifts",
+        "performance": "Critical — all force transfer goes through the core",
+        "general_health": "High — back health and posture"
+      },
+      "coaching_notes": "Anti-extension work is more functional than crunches or sit-ups. Teach clients to brace (360-degree pressure, like bracing for a punch) before loading any compound movement. This pattern directly protects the low back.",
+      "postpartum_flag": "Avoid until diastasis recti is assessed and cleared. Start with dead bug only."
+    },
+
+    {
+      "id": "MC-10",
+      "name": "Core — Anti-Rotation",
+      "movement_type": "Compound",
+      "plane_of_motion": "Transverse",
+      "definition": "Core movements that resist rotational forces. Trains the obliques and deep stabilizers. Essential for athletic performance and spinal health.",
+      "primary_muscles": ["Obliques", "Transverse Abdominis", "Glute Medius"],
+      "secondary_muscles": ["Erector Spinae", "Hip stabilizers"],
+      "movement_patterns": ["Pallof Press", "Single-Arm Carry", "Landmine Rotation", "Cable Chop", "Copenhagen Plank"],
+      "exercise_examples": {
+        "full_gym": ["Pallof Press", "Cable Chop", "Landmine Anti-Rotation", "Single-Arm Farmer Carry"],
+        "home_gym": ["Band Pallof Press", "Single-Arm Dumbbell Carry", "Suitcase Carry"],
+        "minimal": ["Band Pallof Press", "Single-Arm Carry (any load)", "Side Plank"]
+      },
+      "session_position": "Accessory",
+      "when_to_program": "1-2x per week. Often overlooked — essential for athletic populations and anyone with low back history.",
+      "goal_priority": {
+        "fat_loss": "Low — include occasionally",
+        "muscle_gain": "Medium — oblique and deep core development",
+        "performance": "Critical — rotational force is foundational to all sport",
+        "general_health": "High — spinal health and posture correction"
+      },
+      "coaching_notes": "The Pallof press is the most underrated core exercise in existence. Simple, safe, and directly trains the anti-rotation pattern that protects the spine under load. Include for any client with low back history.",
+      "common_pairing": "Pairs well with unilateral lower body"
+    },
+
+    {
+      "id": "MC-11",
+      "name": "Core — Anti-Lateral Flexion",
+      "movement_type": "Compound",
+      "plane_of_motion": "Frontal",
+      "definition": "Core movements that resist side-bending forces. Develops the lateral stabilizers — essential for hip stability and reducing low back asymmetries.",
+      "primary_muscles": ["Obliques", "Quadratus Lumborum", "Glute Medius"],
+      "secondary_muscles": ["Transverse Abdominis", "Adductors"],
+      "movement_patterns": ["Side Plank", "Suitcase Carry", "Lateral Band Walk", "Copenhagen Plank"],
+      "exercise_examples": {
+        "full_gym": ["Suitcase Carry", "Copenhagen Plank", "Side Plank with Row", "Cable Side Bend"],
+        "home_gym": ["Side Plank", "Suitcase Carry (dumbbell)", "Lateral Band Walk"],
+        "minimal": ["Side Plank", "Lateral Band Walk", "Side-Lying Hip Abduction"]
+      },
+      "session_position": "Finisher or Warm-Up",
+      "when_to_program": "1-2x per week. Often appears in warm-up for hip activation.",
+      "goal_priority": {
+        "fat_loss": "Low",
+        "muscle_gain": "Low to Medium",
+        "performance": "High — lateral stability is critical for sport",
+        "general_health": "Medium — hip and low back health"
+      },
+      "coaching_notes": "Lateral band walks and side planks are some of the best glute medius exercises available. Weak glute medius is a root cause of knee cave in squats and lunges — address early with beginners."
+    },
+
+    {
+      "id": "MC-12",
+      "name": "Carry & Loaded Movement",
+      "movement_type": "Compound",
+      "plane_of_motion": "Multi-planar",
+      "definition": "Moving with load — the most functional strength pattern. Farmer carries, suitcase carries, overhead carries. Develops grip, core, posture, and full-body stability simultaneously.",
+      "primary_muscles": ["Trapezius", "Core", "Forearms", "Glutes"],
+      "secondary_muscles": ["Full body stabilizers"],
+      "movement_patterns": ["Farmer Carry", "Suitcase Carry", "Overhead Carry", "Waiter Carry", "Bear Crawl"],
+      "exercise_examples": {
+        "full_gym": ["Farmer Carry (heavy)", "Suitcase Carry", "Overhead Carry", "Trap Bar Carry"],
+        "home_gym": ["Dumbbell Farmer Carry", "Dumbbell Suitcase Carry"],
+        "minimal": ["Any loaded carry", "Backpack carry", "Heavy bag carry"]
+      },
+      "session_position": "Finisher",
+      "when_to_program": "1-2x per week as finisher. Excellent metabolic conditioning tool.",
+      "goal_priority": {
+        "fat_loss": "High — excellent metabolic finisher",
+        "muscle_gain": "Medium — grip and trap development",
+        "performance": "High — foundational athletic movement",
+        "general_health": "High — most functional exercise pattern for daily life"
+      },
+      "coaching_notes": "Carries are criminally underused. A heavy 30-second farmer carry at the end of a session is one of the best finishers available — full body, grip, core, posture, and metabolic demand all in one. Start light and focus on posture — tall spine, shoulders back, controlled breath."
+    },
+
+    {
+      "id": "MC-13",
+      "name": "Explosive & Power",
+      "movement_type": "Compound",
+      "plane_of_motion": "Multi-planar",
+      "definition": "High-velocity movements developing power, rate of force development, and neuromuscular efficiency. Not appropriate for beginners until movement foundations are solid.",
+      "primary_muscles": ["Full posterior chain", "Glutes", "Quads", "Core"],
+      "secondary_muscles": ["Full body"],
+      "movement_patterns": ["Jump Squat", "Box Jump", "Kettlebell Swing", "Medicine Ball Slam", "Broad Jump", "Power Clean"],
+      "exercise_examples": {
+        "full_gym": ["Box Jump", "Power Clean", "Medicine Ball Slam", "Barbell Jump Squat"],
+        "home_gym": ["Jump Squat", "Broad Jump", "Medicine Ball Slam", "Dumbbell Swing"],
+        "minimal": ["Jump Squat", "Broad Jump", "Tuck Jump", "Lateral Bound"]
+      },
+      "session_position": "Primary (before strength work) or Conditioning Finisher",
+      "when_to_program": "Performance and athletic clients primarily. Include for intermediate+ general clients who are cleared and mobile.",
+      "experience_requirement": "Intermediate to Advanced. Do not program for beginners or clients with joint issues.",
+      "goal_priority": {
+        "fat_loss": "Medium — metabolic conditioning value",
+        "muscle_gain": "Low — not primary stimulus for hypertrophy",
+        "performance": "Critical — foundational to athleticism",
+        "general_health": "Low — include only when client is fully cleared and mobile"
+      },
+      "coaching_notes": "Power before strength — always. If including explosive work in a session, it goes first when the CNS is fresh. Never program explosive work when a client is fatigued from heavy compound work.",
+      "contraindications": ["Current joint injuries", "Postpartum (cleared first)", "Active bone stress", "Beginner experience level"]
+    },
+
+    {
+      "id": "MC-14",
+      "name": "Mobility & Flexibility",
+      "movement_type": "Accessory",
+      "plane_of_motion": "Multi-planar",
+      "definition": "Deliberate range of motion work — dynamic in warm-up, static in cooldown. Not optional — integrated into every session.",
+      "primary_focus": ["Hip flexors", "Thoracic spine", "Ankle dorsiflexion", "Shoulder external rotation", "Hamstrings"],
+      "movement_patterns": [
+        "Dynamic warm-up (leg swings, hip circles, arm circles, world's greatest stretch)",
+        "Static stretching (cooldown only)",
+        "Foam rolling / myofascial release",
+        "PNF stretching (advanced)"
+      ],
+      "session_position": "Warm-Up (dynamic) and Cooldown (static)",
+      "when_to_program": "Every single session. Non-negotiable.",
+      "goal_priority": {
+        "fat_loss": "Medium — keep warm-up brief, prioritize session time",
+        "muscle_gain": "Medium — joint prep for heavy loading",
+        "performance": "High — full range of motion required for athletic output",
+        "general_health": "High — often the primary limiting factor for this population"
+      },
+      "coaching_notes": "Dynamic mobility in warm-up, static stretching in cooldown only. Static stretching before training temporarily reduces force output. The world's greatest stretch is the single most efficient warm-up movement — covers hip flexor, thoracic rotation, ankle, and hamstring in one flow.",
+      "mobility_driven_programming": "For clients with flagged mobility limitations in onboarding, add 5-10 minutes of targeted mobility to warm-up and program corrective work as accessory movements."
+    }
+
+  ],
+
+  "session_structure_templates": {
+    "description": "How to combine categories into a complete session based on split type and session length. Claude uses these as building blocks.",
+
+    "full_body": {
+      "recommended_for": ["2-3 days/week", "beginners", "general_health", "fat_loss"],
+      "session_order": [
+        "Mobility & Flexibility (warm-up)",
+        "Explosive or Power (if applicable — performance clients only)",
+        "Compound Push OR Compound Pull (alternate each session)",
+        "Hip Hinge OR Quad Dominant (alternate each session)",
+        "Unilateral Lower Body",
+        "Unilateral Upper Body OR Isolation Upper Body",
+        "Core (Anti-Extension, Anti-Rotation, or Anti-Lateral)",
+        "Carry OR Isolation Finisher",
+        "Mobility & Flexibility (cooldown)"
+      ],
+      "exercise_count_by_time": {
+        "30_min": "4-5 exercises — skip finisher and accessory isolation",
+        "45_min": "5-6 exercises — include 1 core and 1 isolation",
+        "60_min": "7-8 exercises — full template above",
+        "75_plus_min": "8-10 exercises — full template with extra isolation or carry"
+      }
+    },
+
+    "upper_lower": {
+      "recommended_for": ["4 days/week", "intermediate", "muscle_gain", "fat_loss"],
+      "upper_day_order": [
+        "Mobility & Flexibility (warm-up — shoulder and thoracic focus)",
+        "Compound Push (primary)",
+        "Compound Pull (primary — superset with push)",
+        "Unilateral Upper Body",
+        "Isolation Upper Body (2-3 exercises)",
+        "Core Anti-Rotation",
+        "Mobility & Flexibility (cooldown)"
+      ],
+      "lower_day_order": [
+        "Mobility & Flexibility (warm-up — hip, ankle, hamstring focus)",
+        "Quad Dominant (primary)",
+        "Hip Hinge (primary)",
+        "Unilateral Lower Body",
+        "Isolation Lower Body (2-3 exercises)",
+        "Core Anti-Extension",
+        "Carry Finisher (optional)",
+        "Mobility & Flexibility (cooldown)"
+      ]
+    },
+
+    "push_pull_legs": {
+      "recommended_for": ["5-6 days/week", "intermediate to advanced", "muscle_gain"],
+      "push_day_order": [
+        "Mobility (shoulder warm-up)",
+        "Compound Push — Horizontal (primary)",
+        "Compound Push — Vertical / Overhead (secondary)",
+        "Unilateral Push",
+        "Isolation — Triceps (2 exercises)",
+        "Isolation — Lateral and Rear Delt",
+        "Core Anti-Extension"
+      ],
+      "pull_day_order": [
+        "Mobility (shoulder and lat warm-up)",
+        "Compound Pull — Vertical (primary)",
+        "Compound Pull — Horizontal (secondary)",
+        "Unilateral Pull",
+        "Isolation — Biceps (2 exercises)",
+        "Isolation — Rear Delt",
+        "Core Anti-Rotation"
+      ],
+      "legs_day_order": [
+        "Mobility (hip, ankle, hamstring warm-up)",
+        "Explosive or Power (performance clients)",
+        "Quad Dominant (primary)",
+        "Hip Hinge (primary)",
+        "Unilateral Lower Body",
+        "Isolation — Lower Body (glutes, hamstrings, calves)",
+        "Core Anti-Lateral Flexion",
+        "Carry Finisher"
+      ]
+    }
+  },
+
+  "goal_category_priority_matrix": {
+    "description": "Quick reference for Claude — which movement categories get the most volume per goal",
+    "fat_loss": {
+      "must_include": ["MC-01", "MC-02", "MC-03", "MC-04", "MC-09"],
+      "high_value": ["MC-05", "MC-12"],
+      "de_emphasize": ["MC-07", "MC-08", "MC-13"]
+    },
+    "muscle_gain": {
+      "must_include": ["MC-01", "MC-02", "MC-03", "MC-04", "MC-07", "MC-08"],
+      "high_value": ["MC-05", "MC-06"],
+      "de_emphasize": ["MC-12", "MC-13"]
+    },
+    "performance": {
+      "must_include": ["MC-03", "MC-04", "MC-05", "MC-09", "MC-10", "MC-13"],
+      "high_value": ["MC-01", "MC-02", "MC-12"],
+      "de_emphasize": ["MC-07", "MC-08"]
+    },
+    "general_health": {
+      "must_include": ["MC-03", "MC-04", "MC-09", "MC-14"],
+      "high_value": ["MC-01", "MC-02", "MC-05", "MC-11"],
+      "de_emphasize": ["MC-13"]
+    }
+  }
+}
