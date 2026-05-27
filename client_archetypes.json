@@ -1,0 +1,502 @@
+{
+  "metadata": {
+    "title": "Client Archetypes & Sample Programs",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Reference profiles showing Claude exactly what a finished TRAIN program looks like for different client types. These are not real clients — they are programming templates. Claude uses these as blueprints when generating personalized programs.",
+    "last_updated": "May 2026",
+    "version": "1.0",
+    "how_to_use": "When generating a new client program, identify which archetype(s) the client most closely matches. Use that archetype's program structure as the foundation, then personalize using the client's actual onboarding data.",
+    "output_note": "Each real client receives their own generated file: program_[clientname].html — never overwrite another client's file."
+  },
+
+  "archetypes": [
+
+    {
+      "id": "ARCH-01",
+      "name": "The Returning Mom",
+      "description": "Was active before kids, took 2-5 years off, wants to feel like herself again. Motivated but time-constrained. High emotional investment in her body changing.",
+      "typical_profile": {
+        "age": "28-40",
+        "experience": "beginner (returning)",
+        "goal": "fat_loss + general_health",
+        "days_per_week": 3,
+        "session_length": 45,
+        "equipment": "home_gym or full_gym",
+        "sleep": "inconsistent",
+        "stress": "high",
+        "recent_training": ["walking", "nothing"],
+        "recent_frequency": "rarely",
+        "motivation_style": "feeling_energy",
+        "struggle_style": "simplify",
+        "mobility_limitations": ["tight_hips", "hamstring_tightness"],
+        "body_awareness": "moderate"
+      },
+      "programming_approach": {
+        "split": "Full Body 3x/week",
+        "periodization": "Linear 4-week mesocycle",
+        "starting_volume": "Conservative — 60% of standard. Build habits first.",
+        "intensity": "RPE 6-7 weeks 1-2, RPE 7-8 weeks 3-4",
+        "tone": "Warm, encouraging, celebrate every win. Frame sessions around energy and feeling, not aesthetics."
+      },
+      "week_1_sample": {
+        "sessions_per_week": 3,
+        "session_A": {
+          "label": "Full Body A",
+          "warm_up": "Lower body protocol — 8 min",
+          "exercises": [
+            {"order": 1, "name": "Goblet Squat", "category": "Quad Dominant", "sets": 3, "reps": "10-12", "tempo": "2-1-2-0", "rest": "75s", "cue": "Chest tall, sit into your hips"},
+            {"order": 2, "name": "Dumbbell Romanian Deadlift", "category": "Hip Hinge", "sets": 3, "reps": "10-12", "tempo": "3-1-2-0", "rest": "75s", "cue": "Push hips back, soft knee, feel the hamstring load"},
+            {"order": 3, "name": "Dumbbell Row (single arm)", "category": "Compound Pull", "sets": 3, "reps": "10 per side", "tempo": "2-1-2-0", "rest": "60s", "cue": "Drive elbow to hip, not ceiling"},
+            {"order": 4, "name": "Dumbbell Shoulder Press", "category": "Compound Push", "sets": 3, "reps": "10-12", "tempo": "2-0-2-0", "rest": "60s", "cue": "Core braced, don't arch the lower back"},
+            {"order": 5, "name": "Glute Bridge", "category": "Isolation Lower", "sets": 3, "reps": "15", "tempo": "2-1-2-0", "rest": "45s", "cue": "Squeeze hard at top, hold 1 second"},
+            {"order": 6, "name": "Dead Bug", "category": "Core Anti-Extension", "sets": 2, "reps": "8 per side", "tempo": "slow", "rest": "45s", "cue": "Lower back stays pressed to floor the entire time"}
+          ],
+          "cooldown": "Full body cooldown — 8 min"
+        },
+        "session_B": {
+          "label": "Full Body B",
+          "warm_up": "Full body protocol — 10 min",
+          "exercises": [
+            {"order": 1, "name": "Reverse Lunge", "category": "Unilateral Lower", "sets": 3, "reps": "10 per side", "tempo": "2-1-2-0", "rest": "75s", "cue": "Step back, lower straight down"},
+            {"order": 2, "name": "Dumbbell Hip Thrust", "category": "Hip Hinge", "sets": 3, "reps": "12-15", "tempo": "2-1-2-0", "rest": "60s", "cue": "Drive through heels, full glute squeeze at top"},
+            {"order": 3, "name": "Dumbbell Chest Press", "category": "Compound Push", "sets": 3, "reps": "10-12", "tempo": "2-0-2-0", "rest": "60s", "cue": "Lower to chest, press up and slightly in"},
+            {"order": 4, "name": "Band Pull-Apart", "category": "Isolation Upper", "sets": 3, "reps": "15", "tempo": "2-0-2-0", "rest": "45s", "cue": "Pinch shoulder blades together at end"},
+            {"order": 5, "name": "Lateral Band Walk", "category": "Isolation Lower", "sets": 2, "reps": "15 each way", "tempo": "controlled", "rest": "45s", "cue": "Stay low, toes forward, feel the outer hip"},
+            {"order": 6, "name": "Pallof Press", "category": "Core Anti-Rotation", "sets": 2, "reps": "10 per side", "tempo": "2-1-2-0", "rest": "45s", "cue": "Press out, hold 1 second, resist rotation"}
+          ],
+          "cooldown": "Lower body cooldown — 8 min"
+        }
+      },
+      "mesocycle_progression": {
+        "week_2": "Add 1 set to primary compound movements. RPE climbs to 7-8.",
+        "week_3": "Add weight where RIR allows. RPE 8. Introduce 1 superset pairing.",
+        "week_4": "Deload — drop to 2 sets, reduce load 40%, same movements.",
+        "mesocycle_2": "Increase baseline. Add 1 exercise per session. Consider upper/lower split if schedule allows."
+      },
+      "kim_program_note": "You showed up. That's the hardest part — and you did it. This program is built around your life, not against it. Three days is enough to change everything when you're consistent. Let's go."
+    },
+
+    {
+      "id": "ARCH-02",
+      "name": "The Returning Athlete",
+      "description": "Played sports in college or high school, hasn't trained seriously in years. High body awareness, competitive mindset, needs to be reigned in early to prevent injury from going too hard too fast.",
+      "typical_profile": {
+        "age": "25-38",
+        "experience": "intermediate (returning)",
+        "goal": "muscle_gain or performance",
+        "days_per_week": 4,
+        "session_length": 60,
+        "equipment": "full_gym",
+        "sleep": "good",
+        "stress": "moderate",
+        "recent_training": ["cardio", "nothing"],
+        "recent_frequency": "1-2x",
+        "motivation_style": "performance_data",
+        "struggle_style": "accountability",
+        "mobility_limitations": ["thoracic_stiffness", "ankle_restriction"],
+        "body_awareness": "high"
+      },
+      "programming_approach": {
+        "split": "Upper/Lower 4x/week",
+        "periodization": "Linear → Undulating (mesocycle 2)",
+        "starting_volume": "75% of target — hold them back early, let them earn the volume",
+        "intensity": "RPE 7 weeks 1-2, RPE 8 weeks 3-4. They will want to go harder — hold the line.",
+        "tone": "Data-driven. Give them numbers to chase. PRs, weekly load targets, performance metrics."
+      },
+      "week_1_sample": {
+        "sessions_per_week": 4,
+        "session_A_upper": {
+          "label": "Upper Body A — Push Focus",
+          "warm_up": "Upper body protocol — 10 min",
+          "exercises": [
+            {"order": 1, "name": "Barbell Bench Press", "category": "Compound Push", "sets": 4, "reps": "8-10", "tempo": "3-1-2-0", "rest": "90s", "RPE": 7},
+            {"order": 2, "name": "Barbell Row", "category": "Compound Pull", "sets": 4, "reps": "8-10", "tempo": "2-1-2-0", "rest": "90s", "RPE": 7, "superset_with": "Bench Press — antagonist pairing"},
+            {"order": 3, "name": "Dumbbell Shoulder Press", "category": "Compound Push", "sets": 3, "reps": "10-12", "tempo": "2-0-2-0", "rest": "75s"},
+            {"order": 4, "name": "Single Arm Dumbbell Row", "category": "Unilateral Upper", "sets": 3, "reps": "10 per side", "tempo": "2-1-2-0", "rest": "60s"},
+            {"order": 5, "name": "Lateral Raise", "category": "Isolation Upper", "sets": 3, "reps": "12-15", "tempo": "2-0-2-0", "rest": "45s"},
+            {"order": 6, "name": "Tricep Pressdown", "category": "Isolation Upper", "sets": 3, "reps": "12-15", "tempo": "2-1-2-0", "rest": "45s"},
+            {"order": 7, "name": "Face Pull", "category": "Isolation Upper", "sets": 3, "reps": "15", "tempo": "2-1-2-0", "rest": "45s", "cue": "Rotator cuff health — never skip this"}
+          ],
+          "cooldown": "Upper body cooldown — 7 min"
+        },
+        "session_B_lower": {
+          "label": "Lower Body A — Quad Focus",
+          "warm_up": "Lower body protocol — 10 min",
+          "exercises": [
+            {"order": 1, "name": "Barbell Back Squat", "category": "Quad Dominant", "sets": 4, "reps": "6-8", "tempo": "3-1-2-0", "rest": "120s", "RPE": 7, "note": "Heel elevation if ankle restriction — earn the depth over weeks"},
+            {"order": 2, "name": "Romanian Deadlift", "category": "Hip Hinge", "sets": 4, "reps": "8-10", "tempo": "3-1-2-0", "rest": "90s"},
+            {"order": 3, "name": "Bulgarian Split Squat", "category": "Unilateral Lower", "sets": 3, "reps": "8 per side", "tempo": "2-1-2-0", "rest": "90s", "cue": "Weaker leg first — match reps exactly"},
+            {"order": 4, "name": "Leg Curl", "category": "Isolation Lower", "sets": 3, "reps": "12-15", "tempo": "3-1-2-0", "rest": "60s"},
+            {"order": 5, "name": "Calf Raise", "category": "Isolation Lower", "sets": 3, "reps": "15-20", "tempo": "2-2-2-0", "rest": "45s"},
+            {"order": 6, "name": "Ab Wheel Rollout", "category": "Core Anti-Extension", "sets": 3, "reps": "8-10", "tempo": "slow", "rest": "60s"}
+          ],
+          "cooldown": "Lower body cooldown — 8 min"
+        }
+      },
+      "mesocycle_progression": {
+        "week_2": "Add 5 lbs to all compound movements where RPE allows. RPE 8.",
+        "week_3": "Add 1 set to primary compounds. RPE 8-9. This is the hardest week.",
+        "week_4": "Deload — 2 sets, 60% load, same movements.",
+        "mesocycle_2": "Switch to weekly undulating — rotate hypertrophy, strength, and volume weeks."
+      },
+      "kim_program_note": "Your body remembers more than you think. Muscle memory is real — but we build back smart, not fast. Trust the process for 4 weeks and your numbers will surprise you."
+    },
+
+    {
+      "id": "ARCH-03",
+      "name": "The Complete Beginner",
+      "description": "Little to no training history. May be nervous or intimidated. Needs wins early, movement pattern education, and a program that feels achievable.",
+      "typical_profile": {
+        "age": "18-45",
+        "experience": "beginner",
+        "goal": "general_health or fat_loss",
+        "days_per_week": 3,
+        "session_length": 30,
+        "equipment": "minimal or home_gym",
+        "sleep": "ok",
+        "stress": "moderate",
+        "recent_training": ["nothing", "walking"],
+        "recent_frequency": "rarely",
+        "motivation_style": "feeling_energy",
+        "struggle_style": "simplify",
+        "mobility_limitations": ["tight_hips"],
+        "body_awareness": "low"
+      },
+      "programming_approach": {
+        "split": "Full Body 3x/week — A/B rotation",
+        "periodization": "Linear 4-week — conservative start",
+        "starting_volume": "Minimum effective volume — 2 sets only. Add sets in week 3.",
+        "intensity": "RPE 5-6 weeks 1-2. They need to feel capable, not destroyed.",
+        "tone": "Patient, educational, celebrate every single session. Explain everything. No assumed knowledge.",
+        "special_note": "Include detailed mind-muscle cues on every exercise. Tempo is introduced week 3 only."
+      },
+      "week_1_sample": {
+        "sessions_per_week": 3,
+        "session_A": {
+          "label": "Full Body — Session A",
+          "warm_up": "Full body protocol — 10 min (take extra time here)",
+          "exercises": [
+            {"order": 1, "name": "Bodyweight Squat", "category": "Quad Dominant", "sets": 2, "reps": "12", "tempo": "2-1-2-0", "rest": "90s", "cue": "Feet shoulder width, sit back like there's a chair behind you, chest stays up"},
+            {"order": 2, "name": "Glute Bridge", "category": "Hip Hinge", "sets": 2, "reps": "15", "tempo": "2-1-2-0", "rest": "75s", "cue": "Drive through your heels. Squeeze your glutes at the top — hold for 1 full second"},
+            {"order": 3, "name": "Dumbbell Row (light)", "category": "Compound Pull", "sets": 2, "reps": "10 per side", "tempo": "2-1-2-0", "rest": "75s", "cue": "Pull your elbow toward your hip. Think about squeezing the muscle between your shoulder blades"},
+            {"order": 4, "name": "Push-Up (on knees if needed)", "category": "Compound Push", "sets": 2, "reps": "8-10", "tempo": "2-0-2-0", "rest": "75s", "cue": "Body in a straight line. Lower your chest to the floor, push back up"},
+            {"order": 5, "name": "Dead Bug", "category": "Core Anti-Extension", "sets": 2, "reps": "6 per side", "tempo": "slow", "rest": "60s", "cue": "Lower back must stay flat on the floor the whole time. This is the only rule."}
+          ],
+          "cooldown": "Full body cooldown — 8 min"
+        }
+      },
+      "mesocycle_progression": {
+        "week_2": "Same exercises, aim for top of rep range. Add bodyweight awareness.",
+        "week_3": "Add 1 set to all exercises. Introduce light dumbbells where bodyweight was used. Introduce tempo.",
+        "week_4": "Deload — back to 2 sets, lighter load. Celebrate the full month.",
+        "mesocycle_2": "Introduce dumbbell loading across all movements. Add 1 exercise per session."
+      },
+      "kim_program_note": "Starting is the hardest rep you'll ever do — and you already did it. Everything from here is momentum. You don't need to be perfect. You just need to show up three times a week and follow the plan. That's it. Let's go."
+    },
+
+    {
+      "id": "ARCH-04",
+      "name": "The Intermediate Female — Body Recomp",
+      "description": "1-3 years of training, consistent but plateaued. Wants to lose fat and gain muscle simultaneously. Needs more stimulus variety and progressive overload structure she hasn't had.",
+      "typical_profile": {
+        "age": "25-40",
+        "experience": "intermediate",
+        "goal": "muscle_gain (body recomp)",
+        "days_per_week": 4,
+        "session_length": 60,
+        "equipment": "full_gym",
+        "sleep": "good",
+        "stress": "moderate",
+        "recent_training": ["strength", "cardio"],
+        "recent_frequency": "3-4x",
+        "motivation_style": "both",
+        "struggle_style": "reminder_why",
+        "mobility_limitations": ["none"],
+        "body_awareness": "high",
+        "protein_awareness": "somewhat"
+      },
+      "programming_approach": {
+        "split": "Upper/Lower 4x/week with DUP",
+        "periodization": "Daily Undulating Periodization — different rep ranges each session",
+        "starting_volume": "Full target volume — she can handle it",
+        "intensity": "RPE 7-8 accessory, RPE 8-9 primary compound",
+        "tone": "Balanced — give her data and feeling. She responds to both. Reference her why when pushing."
+      },
+      "week_1_sample": {
+        "sessions_per_week": 4,
+        "session_A_upper_hypertrophy": {
+          "label": "Upper — Hypertrophy Focus",
+          "rep_range_note": "8-12 across the board today",
+          "warm_up": "Upper body protocol — 10 min",
+          "exercises": [
+            {"order": 1, "name": "Dumbbell Bench Press", "category": "Compound Push", "sets": 4, "reps": "8-12", "tempo": "3-1-2-0", "rest": "90s", "RPE": 8},
+            {"order": 2, "name": "Cable Row", "category": "Compound Pull", "sets": 4, "reps": "8-12", "tempo": "2-1-2-0", "rest": "90s", "RPE": 8},
+            {"order": 3, "name": "Incline Dumbbell Press", "category": "Compound Push", "sets": 3, "reps": "10-12", "tempo": "3-1-2-0", "rest": "75s"},
+            {"order": 4, "name": "Lat Pulldown", "category": "Compound Pull", "sets": 3, "reps": "10-12", "tempo": "2-1-2-0", "rest": "75s"},
+            {"order": 5, "name": "Lateral Raise", "category": "Isolation Upper", "sets": 3, "reps": "12-15", "tempo": "2-0-2-0", "rest": "45s"},
+            {"order": 6, "name": "Dumbbell Curl", "category": "Isolation Upper", "sets": 3, "reps": "12-15", "tempo": "2-1-2-0", "rest": "45s"},
+            {"order": 7, "name": "Tricep Overhead Extension", "category": "Isolation Upper", "sets": 3, "reps": "12-15", "tempo": "2-1-2-0", "rest": "45s"}
+          ],
+          "cooldown": "Upper body cooldown — 7 min"
+        },
+        "session_B_lower_strength": {
+          "label": "Lower — Strength Focus",
+          "rep_range_note": "4-6 on primary, 8-10 accessory",
+          "warm_up": "Lower body protocol — 10 min",
+          "exercises": [
+            {"order": 1, "name": "Barbell Hip Thrust", "category": "Hip Hinge", "sets": 5, "reps": "4-6", "tempo": "2-1-2-0", "rest": "180s", "RPE": 9, "cue": "This is your strength movement — load it heavy"},
+            {"order": 2, "name": "Bulgarian Split Squat", "category": "Unilateral Lower", "sets": 4, "reps": "6-8 per side", "tempo": "2-1-2-0", "rest": "120s"},
+            {"order": 3, "name": "Leg Curl", "category": "Isolation Lower", "sets": 3, "reps": "8-10", "tempo": "3-1-2-0", "rest": "75s"},
+            {"order": 4, "name": "Cable Glute Kickback", "category": "Isolation Lower", "sets": 3, "reps": "12 per side", "tempo": "2-1-2-0", "rest": "60s"},
+            {"order": 5, "name": "Pallof Press", "category": "Core Anti-Rotation", "sets": 3, "reps": "10 per side", "tempo": "2-1-2-0", "rest": "45s"}
+          ],
+          "cooldown": "Lower body cooldown — 8 min"
+        }
+      },
+      "mesocycle_progression": {
+        "week_2": "Add weight where RIR 2+ consistently. RPE climbs to 8.",
+        "week_3": "Add 1 set to primary compounds. RPE 8-9. Hardest week.",
+        "week_4": "Deload.",
+        "mesocycle_2": "Shift DUP rotation — add volume week, reduce strength week frequency."
+      },
+      "kim_program_note": "You've been consistent — now let's make the program match your capacity. This structure is going to feel different from what you've been doing. That difference is the point. Your body needed a new signal. This is it."
+    },
+
+    {
+      "id": "ARCH-05",
+      "name": "The Autoimmune Client",
+      "description": "Managing a chronic condition (fibromyalgia, lupus, rheumatoid arthritis, MS, Hashimoto's, etc.). Energy is variable. Flare days are real. Needs a flexible, compassionate program that adapts to how she feels.",
+      "typical_profile": {
+        "age": "30-60",
+        "experience": "beginner to intermediate",
+        "goal": "general_health",
+        "days_per_week": 3,
+        "session_length": 30,
+        "equipment": "home_gym or full_gym",
+        "sleep": "poor or inconsistent",
+        "stress": "high",
+        "motivation_style": "feeling_energy",
+        "struggle_style": "space",
+        "body_awareness": "moderate"
+      },
+      "programming_approach": {
+        "split": "Full Body 3x/week — flexible",
+        "periodization": "Linear conservative — deload every 3 weeks not 4",
+        "starting_volume": "60% of minimum effective volume. Build trust with the body first.",
+        "intensity": "RPE 5-7 MAX. Never push to failure. Never.",
+        "energy_check_in": "Always check energy (1-10) before session. Scale accordingly.",
+        "tone": "Gentle, non-pressuring. Honor the body. Celebrate showing up — not performance.",
+        "flag_for_kim": true
+      },
+      "session_scaling": {
+        "energy_1_to_4": "Rest or gentle walk only. No training.",
+        "energy_5_to_6": "Half session — 2-3 exercises only, RPE 5, focus on feel-good movement",
+        "energy_7_to_10": "Full session as programmed"
+      },
+      "week_1_sample": {
+        "sessions_per_week": "2-3 (flexible)",
+        "session_A": {
+          "label": "Full Body — Energy Permitting",
+          "warm_up": "Active recovery protocol — 10 min (gentle)",
+          "exercises": [
+            {"order": 1, "name": "Goblet Squat (light)", "sets": 2, "reps": "10-12", "RPE": 5, "rest": "90s", "cue": "Move with intention. Feel each muscle. No rushing."},
+            {"order": 2, "name": "Glute Bridge", "sets": 2, "reps": "12", "RPE": 5, "rest": "75s"},
+            {"order": 3, "name": "Dumbbell Row (light)", "sets": 2, "reps": "10 per side", "RPE": 5, "rest": "75s"},
+            {"order": 4, "name": "Wall Push-Up or Knee Push-Up", "sets": 2, "reps": "8-10", "RPE": 4, "rest": "75s"},
+            {"order": 5, "name": "Dead Bug", "sets": 2, "reps": "6 per side", "RPE": 4, "rest": "60s"}
+          ],
+          "cooldown": "Active recovery protocol — 15 min (extended for this client)"
+        }
+      },
+      "mesocycle_progression": {
+        "week_2": "Only progress if energy has been consistently 7+. If not — maintain.",
+        "week_3": "Deload regardless of how good she feels.",
+        "mesocycle_2": "Assess. If energy patterns have improved, consider adding 1 exercise. Never rush volume."
+      },
+      "kim_program_note": "Your body is not your enemy — it's communicating. This program is built to listen. Some days we train hard. Some days we move gently. Some days we rest. All three are the right answer. I'm here for every version of you."
+    },
+
+    {
+      "id": "ARCH-06",
+      "name": "The Post-Injury Client",
+      "description": "Recovering from or working around a specific injury (knee, shoulder, lower back, hip). Has clearance to train but needs full modification of affected area.",
+      "typical_profile": {
+        "age": "25-55",
+        "experience": "intermediate (limited by injury)",
+        "goal": "general_health or fat_loss",
+        "days_per_week": 3,
+        "session_length": 45,
+        "equipment": "full_gym or home_gym",
+        "injuries": "varies — cross-reference injury_navigation.json",
+        "motivation_style": "performance_data",
+        "struggle_style": "accountability"
+      },
+      "programming_approach": {
+        "principle": "Never remove all training — always find what CAN be done. Injury is not an excuse to stop — it's a reason to get smarter.",
+        "cross_reference": "injury_navigation.json — apply all contraindications and substitutions for the specific injury",
+        "volume": "Reduce affected area volume by 50%. Maintain or increase volume for unaffected areas.",
+        "tone": "Empowering. Redirect focus to what the body CAN do. Reframe injury as information.",
+        "flag_for_kim": true
+      },
+      "lower_back_example_week_1": {
+        "session_A": {
+          "label": "Full Body — Lower Back Modified",
+          "warm_up": "Lower body protocol modified — Cat-Cow, Bird Dog, Glute Bridge, Hip Circle (no loaded movements)",
+          "exercises": [
+            {"order": 1, "name": "Leg Press (moderate depth)", "category": "Quad Dominant", "sets": 3, "reps": "12-15", "note": "Replaces squat — less spinal load"},
+            {"order": 2, "name": "Barbell Hip Thrust", "category": "Hip Hinge", "sets": 3, "reps": "12-15", "note": "Safe hip hinge — minimal spinal compression"},
+            {"order": 3, "name": "Dumbbell Row", "category": "Compound Pull", "sets": 3, "reps": "10 per side"},
+            {"order": 4, "name": "Dumbbell Chest Press", "category": "Compound Push", "sets": 3, "reps": "10-12"},
+            {"order": 5, "name": "Dead Bug", "category": "Core Anti-Extension", "sets": 3, "reps": "8 per side", "note": "Core stability is the priority for lower back clients"},
+            {"order": 6, "name": "Bird Dog", "category": "Core Anti-Extension", "sets": 3, "reps": "8 per side"}
+          ],
+          "cooldown": "Lower body cooldown with extra hip flexor and child's pose emphasis — 10 min"
+        }
+      },
+      "kim_program_note": "Your body is communicating — not betraying you. We adjust, we don't abandon. There is always a way to train. Let's find yours."
+    },
+
+    {
+      "id": "ARCH-07",
+      "name": "The Busy Professional",
+      "description": "High achiever, inconsistent schedule, travels frequently. Wants results but can only commit to 2-3 short sessions. Needs maximum efficiency — no fluff.",
+      "typical_profile": {
+        "age": "28-45",
+        "experience": "intermediate",
+        "goal": "fat_loss or general_health",
+        "days_per_week": 3,
+        "session_length": 30,
+        "equipment": "mixed",
+        "sleep": "inconsistent",
+        "stress": "very_high",
+        "recent_training": ["strength", "cardio"],
+        "recent_frequency": "1-2x",
+        "motivation_style": "performance_data",
+        "struggle_style": "simplify",
+        "body_awareness": "moderate"
+      },
+      "programming_approach": {
+        "split": "Full Body 3x/week — superset heavy for time efficiency",
+        "periodization": "Linear 4-week — deload every 4 weeks or during heavy travel weeks",
+        "volume": "Lower per session, higher density — supersets throughout",
+        "intensity": "RPE 7-8 — short on time doesn't mean easy",
+        "session_structure": "Every exercise paired in superset. Zero wasted time. 30 min is enough.",
+        "travel_protocol": "Bodyweight session available for hotel or travel weeks — same movements, zero equipment"
+      },
+      "week_1_sample": {
+        "session_A": {
+          "label": "Full Body — 30 Min Maximum",
+          "warm_up": "Full body protocol — abbreviated 6 min",
+          "structure_note": "All exercises in superset pairs — minimal rest between pairs",
+          "superset_pairs": [
+            {
+              "pair": "A",
+              "exercise_1": {"name": "Goblet Squat", "sets": 3, "reps": "12", "rest_between": "0s"},
+              "exercise_2": {"name": "Dumbbell Row", "sets": 3, "reps": "10 per side", "rest_after_pair": "60s"}
+            },
+            {
+              "pair": "B",
+              "exercise_1": {"name": "Romanian Deadlift", "sets": 3, "reps": "12", "rest_between": "0s"},
+              "exercise_2": {"name": "Push-Up or Dumbbell Press", "sets": 3, "reps": "10-12", "rest_after_pair": "60s"}
+            },
+            {
+              "pair": "C",
+              "exercise_1": {"name": "Reverse Lunge", "sets": 3, "reps": "10 per side", "rest_between": "0s"},
+              "exercise_2": {"name": "Dead Bug", "sets": 3, "reps": "8 per side", "rest_after_pair": "45s"}
+            }
+          ],
+          "finisher": "Farmer Carry — 3 x 30 seconds heavy",
+          "cooldown": "Full body cooldown — abbreviated 5 min"
+        }
+      },
+      "travel_session": {
+        "label": "Hotel / No Equipment Session",
+        "exercises": [
+          {"name": "Bodyweight Squat", "sets": 3, "reps": "15"},
+          {"name": "Push-Up", "sets": 3, "reps": "10-12"},
+          {"name": "Reverse Lunge", "sets": 3, "reps": "10 per side"},
+          {"name": "Glute Bridge", "sets": 3, "reps": "20"},
+          {"name": "Plank", "sets": 3, "duration": "30-45 seconds"}
+        ],
+        "note": "Same session quality, zero equipment. Consistency over conditions."
+      },
+      "kim_program_note": "30 minutes of focused, intentional work beats 90 minutes of distracted training every time. You're not short on time — you're short on wasted movement. This program has none."
+    },
+
+    {
+      "id": "ARCH-08",
+      "name": "The Advanced Female — Performance",
+      "description": "3+ years of consistent training, strong movement literacy, wants to push performance. Needs periodization, heavy compound work, and a program that matches her capacity.",
+      "typical_profile": {
+        "age": "22-40",
+        "experience": "advanced",
+        "goal": "performance or muscle_gain",
+        "days_per_week": 5,
+        "session_length": 75,
+        "equipment": "full_gym",
+        "sleep": "good",
+        "stress": "low to moderate",
+        "recent_training": ["strength", "hiit"],
+        "recent_frequency": "5x+",
+        "motivation_style": "performance_data",
+        "struggle_style": "accountability",
+        "body_awareness": "high"
+      },
+      "programming_approach": {
+        "split": "Push/Pull/Legs — 5 days with active recovery day 6",
+        "periodization": "Block periodization — accumulation mesocycle first",
+        "starting_volume": "Upper range — she can handle it and needs it",
+        "intensity": "RPE 8-9 primary compounds, RPE 7-8 accessory",
+        "tone": "Direct, data-focused, performance-framed. Give her PRs to chase."
+      },
+      "week_1_sample": {
+        "sessions_per_week": 5,
+        "session_A_push": {
+          "label": "Push Day",
+          "warm_up": "Push day protocol — 10 min",
+          "exercises": [
+            {"order": 1, "name": "Barbell Bench Press", "sets": 5, "reps": "5-6", "tempo": "3-1-2-0", "rest": "180s", "RPE": 8},
+            {"order": 2, "name": "Incline Dumbbell Press", "sets": 4, "reps": "8-10", "tempo": "3-1-2-0", "rest": "90s"},
+            {"order": 3, "name": "Overhead Press (barbell or dumbbell)", "sets": 4, "reps": "8-10", "tempo": "2-1-2-0", "rest": "90s"},
+            {"order": 4, "name": "Cable Lateral Raise", "sets": 4, "reps": "12-15", "tempo": "2-0-2-0", "rest": "45s"},
+            {"order": 5, "name": "Tricep Pressdown", "sets": 3, "reps": "12-15", "tempo": "2-1-2-0", "rest": "45s"},
+            {"order": 6, "name": "Overhead Tricep Extension", "sets": 3, "reps": "12-15", "tempo": "2-1-2-0", "rest": "45s"},
+            {"order": 7, "name": "Face Pull", "sets": 3, "reps": "15-20", "tempo": "2-1-2-0", "rest": "45s", "note": "Non-negotiable rotator cuff health"}
+          ],
+          "cooldown": "Upper body cooldown — 7 min"
+        },
+        "session_B_legs": {
+          "label": "Legs Day",
+          "warm_up": "Lower body protocol — 12 min",
+          "exercises": [
+            {"order": 1, "name": "Barbell Back Squat", "sets": 5, "reps": "4-6", "tempo": "3-1-2-0", "rest": "240s", "RPE": 8},
+            {"order": 2, "name": "Romanian Deadlift", "sets": 4, "reps": "6-8", "tempo": "3-1-2-0", "rest": "120s"},
+            {"order": 3, "name": "Bulgarian Split Squat", "sets": 4, "reps": "8 per side", "tempo": "2-1-2-0", "rest": "120s"},
+            {"order": 4, "name": "Leg Curl", "sets": 4, "reps": "10-12", "tempo": "3-1-2-0", "rest": "75s"},
+            {"order": 5, "name": "Cable Glute Kickback", "sets": 3, "reps": "12-15 per side", "tempo": "2-1-2-0", "rest": "60s"},
+            {"order": 6, "name": "Calf Raise", "sets": 4, "reps": "15-20", "tempo": "2-2-2-0", "rest": "45s"},
+            {"order": 7, "name": "Copenhagen Plank", "sets": 3, "duration": "20-30 seconds per side", "rest": "60s"}
+          ],
+          "cooldown": "Lower body cooldown — 10 min"
+        }
+      },
+      "mesocycle_progression": {
+        "week_2": "Add weight on all compounds where RPE allows. RPE 8-9.",
+        "week_3": "Add 1 set to primary compounds. RPE 9 on primary lifts. Hardest week.",
+        "week_4": "Deload.",
+        "mesocycle_2": "Intensification block — reduce volume, increase load. 4-6 rep primary work."
+      },
+      "kim_program_note": "You've put in the time. Now let's see what you're actually made of. This program is going to challenge you in ways your current training hasn't. That's exactly the point. Trust the structure. Log everything. Let's set some PRs."
+    }
+  ],
+
+  "how_claude_uses_archetypes": {
+    "step_1": "Read client onboarding data fully",
+    "step_2": "Identify primary archetype match — which profile is closest?",
+    "step_3": "Note any secondary archetype overlaps (e.g. Returning Mom with injury = ARCH-01 + ARCH-06)",
+    "step_4": "Use matched archetype's programming structure as the template",
+    "step_5": "Replace archetype's sample exercises with personalized selections from exercise libraries based on client's actual goal, equipment, and limitations",
+    "step_6": "Apply client's exact onboarding data — their identity statement, vision, and motivation style to the program notes",
+    "step_7": "Generate output as program_[clientname].html — never overwrite another client's file"
+  }
+}
