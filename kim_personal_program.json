@@ -1,0 +1,617 @@
+{
+  "metadata": {
+    "title": "Kim Valles Personal Training Program",
+    "organization": "Kim Valles Coaching, LLC",
+    "purpose": "Kim's actual current training program — the gold standard reference for TRAIN. When a client profile closely matches Kim's (intermediate-advanced female, body recomp, upper/lower split, full gym, 4 days/week), this program serves as the primary blueprint.",
+    "program_type": "4-Day Upper/Lower Split — Body Recomposition",
+    "experience_level": "Intermediate to Advanced",
+    "goal": "Body Recomposition",
+    "days_per_week": 4,
+    "plus_active_days": true,
+    "equipment": "Full Gym",
+    "last_updated": "June 2026",
+    "version": "3.0"
+  },
+
+  "weekly_structure": {
+    "monday": "Glute focused lower body + Stairmaster",
+    "tuesday": "Upper body strength focused + Core",
+    "wednesday": "Active recovery — Reformer class, Hot Pilates, Hike, Reservoir, or Rest",
+    "thursday": "Quad focused lower body + Sled Pushes",
+    "friday": "Upper body hypertrophy + Battle Ropes + Stairmaster",
+    "saturday": "Full Rest",
+    "sunday": "Hot Pilates + Yoga"
+  },
+
+  "weekly_volume_summary": {
+    "pull_to_push_ratio": "1.5:1",
+    "muscle_groups": {
+      "glutes":     {"weekly_sets": 24, "target": "14-20", "status": "Elite — primary focus"},
+      "hamstrings": {"weekly_sets": 19, "target": "10-20", "status": "Strong"},
+      "quads":      {"weekly_sets": 16, "target": "10-20", "status": "Strong"},
+      "back":       {"weekly_sets": 16, "target": "10-20", "status": "Balanced"},
+      "chest":      {"weekly_sets": 13, "target": "10-20", "status": "Good"},
+      "shoulders":  {"weekly_sets": 14, "target": "10-16", "status": "Great"},
+      "triceps":    {"weekly_sets": 9,  "target": "6-12",  "status": "Good"},
+      "biceps":     {"weekly_sets": 6,  "target": "6-12",  "status": "Minimum — intensity compensates via failure sets and static holds"},
+      "calves":     {"weekly_sets": 8,  "target": "6-12",  "status": "Good — split across both lower days"},
+      "core":       {"weekly_sets": 9,  "target": "6-10",  "status": "High intensity circuit"}
+    }
+  },
+
+  "days": {
+
+    "monday": {
+      "name": "Monday — Glute Focused Lower Body + Cardio",
+      "focus": "Glute dominant — hip hinge and isolation priority",
+      "session_length": "70-80 minutes",
+      "warm_up": {
+        "protocol": "lower_body from warm_up_stretching_library.json",
+        "duration": "10 minutes",
+        "exercises": [
+          "Air squats",
+          "Hinges",
+          "Reverse lunges",
+          "Hamstring scoops",
+          "Hip openers",
+          "Leg swings",
+          "Lying hip bridges",
+          "Rock the boat"
+        ]
+      },
+      "exercises": [
+        {
+          "order": 1,
+          "name": "Hip Thrusts — TRISET",
+          "variation": "Full drive (2 sec hold at top) → Pulses → Static hold",
+          "sets": 4,
+          "reps": "8-10 each variation within same set",
+          "tempo": "2-2-2-0",
+          "rest": "90s",
+          "RPE": 9,
+          "category": "Hip Hinge — Primary",
+          "muscle_primary": ["Glutes"],
+          "muscle_secondary": ["Hamstrings", "Core"],
+          "cue": "Full drive with 2 second hold at top. Pulses keep tension constant. Static hold is peak contraction — breathe through it.",
+          "kim_note": "The anchor of the session. The TRISET format (full, pulses, static) creates massive glute stimulus in one exercise."
+        },
+        {
+          "order": 2,
+          "name": "Romanian Deadlift — Glute Focused",
+          "sets": 4,
+          "reps": "10-12",
+          "tempo": "3-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Hip Hinge — Primary",
+          "muscle_primary": ["Glutes", "Hamstrings"],
+          "cue": "Push hips back, not down. Feel the glute stretch at the bottom. Drive hips forward at the top, squeeze hard."
+        },
+        {
+          "order": 3,
+          "name": "Bulgarian Split Squat",
+          "sets": 4,
+          "reps": "10-12 per side",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Unilateral Lower — Primary",
+          "muscle_primary": ["Glutes", "Quads"],
+          "cue": "Weaker leg first. Slight forward torso lean to bias glutes. Lower straight down, drive through front heel."
+        },
+        {
+          "order": 4,
+          "name": "Hamstring Curl — Single Leg Lying",
+          "sets": 4,
+          "reps": "10-12 per side",
+          "tempo": "3-1-2-0",
+          "rest": "75s",
+          "RPE": 8,
+          "category": "Isolation Lower — Accessory",
+          "muscle_primary": ["Hamstrings"],
+          "cue": "Slow eccentric — 3 seconds down. Squeeze hamstring at peak contraction."
+        },
+        {
+          "order": 5,
+          "name": "Glute Medius Cable Kickbacks",
+          "sets": 4,
+          "reps": "10-12 per side",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "RPE": 7,
+          "category": "Isolation Lower — Finisher",
+          "muscle_primary": ["Glute Medius", "Glutes"],
+          "cue": "Hips square. Feel the outside of the glute. Full range, squeeze at end.",
+          "kim_note": "Cable adds constant tension throughout the range — better glute medius stimulus than bodyweight."
+        },
+        {
+          "order": 6,
+          "name": "Seated Calf Raise → Standing Calf Raise Pulses (bodyweight)",
+          "sets": 4,
+          "reps": "10-12 seated + pulses to finish",
+          "tempo": "2-2-2-0",
+          "rest": "45s",
+          "RPE": 7,
+          "category": "Isolation Lower — Finisher",
+          "muscle_primary": ["Soleus (seated)", "Gastrocnemius (standing pulses)"],
+          "cue": "Seated hits soleus deep. Standing pulses finish the gastroc. Full range on both.",
+          "kim_note": "The combo hits both heads of the calf — seated for soleus depth, pulses for gastroc burn."
+        }
+      ],
+      "cardio_finisher": {
+        "name": "Stairmaster",
+        "duration": "20-30 minutes",
+        "purpose": "Posterior chain conditioning, caloric expenditure, glute endurance"
+      },
+      "cooldown": {
+        "protocol": "lower_body_cooldown from warm_up_stretching_library.json",
+        "duration": "8-10 minutes",
+        "priority_stretches": ["Pigeon Pose 90s per side", "Hip Flexor Stretch 60s per side", "Hamstring Stretch 60s per side", "Child's Pose 60s"]
+      }
+    },
+
+    "tuesday": {
+      "name": "Tuesday — Upper Body Strength Focused + Core",
+      "focus": "Strength stimulus — heavier loads, 6-8 rep ranges on primary movements",
+      "session_length": "70-80 minutes",
+      "warm_up": {
+        "protocol": "upper_body from warm_up_stretching_library.json",
+        "duration": "10 minutes",
+        "exercises": [
+          "Cat cow",
+          "Reach one arm up chest opener → Thread the needle",
+          "Arm circles",
+          "Banded overhead",
+          "SKI machine — 1 min"
+        ]
+      },
+      "exercises": [
+        {
+          "order": 1,
+          "name": "DB Shoulder Press",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "2-1-2-0",
+          "rest": "120s",
+          "RPE": 8,
+          "category": "Compound Push — Primary",
+          "muscle_primary": ["Anterior Deltoid", "Lateral Deltoid", "Triceps"],
+          "cue": "Core braced. Don't arch lower back. Full lockout at top."
+        },
+        {
+          "order": 2,
+          "name": "Assisted Pull-Ups",
+          "variation": "2 sets close grip + 2 sets wide grip",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Compound Pull — Primary",
+          "muscle_primary": ["Lats", "Biceps", "Rhomboids"],
+          "cue": "Initiate from the lats. Drive elbows to hips. Dead hang at bottom, chin over bar at top.",
+          "kim_note": "Heavier than previous version — 6-8 reps for strength stimulus. Close grip = lower lats + biceps. Wide grip = upper lat width."
+        },
+        {
+          "order": 3,
+          "name": "Smith Machine Incline Chest Press",
+          "sets": 4,
+          "reps": "6-8",
+          "tempo": "3-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Compound Push — Primary",
+          "muscle_primary": ["Upper Chest", "Anterior Deltoid", "Triceps"],
+          "cue": "3-second eccentric is the work. Lower to upper chest, press up and slightly in.",
+          "kim_note": "Now 6-8 reps — strength focused to match the day's intent."
+        },
+        {
+          "order": 4,
+          "name": "Upright Cable Rear Delt Rows — Elbows Flared",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "RPE": 7,
+          "category": "Compound Pull — Accessory",
+          "muscle_primary": ["Rear Deltoids", "Upper Traps", "Rhomboids"],
+          "cue": "Elbows drive up and wide — not straight up. Flared position targets rear delt and upper back.",
+          "kim_note": "Replaced T-Bar rows here. Upright cable row with elbows flared is an elite rear delt builder."
+        },
+        {
+          "order": 5,
+          "name": "DB Lateral Raises",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-0-2-0",
+          "rest": "60s",
+          "RPE": 7,
+          "category": "Isolation Upper — Accessory",
+          "muscle_primary": ["Lateral Deltoid"],
+          "cue": "Lead with elbows. Slight forward lean. Feel the lateral head — not the traps."
+        },
+        {
+          "order": 6,
+          "name": "Lat Pulldowns",
+          "sets": 3,
+          "reps": "8-10",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "RPE": 7,
+          "category": "Compound Pull — Accessory",
+          "muscle_primary": ["Lats", "Biceps"],
+          "cue": "Pull to upper chest. Slight lean back. Feel the lats — not the arms."
+        },
+        {
+          "order": 7,
+          "name": "Cable Tricep Extensions",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "RPE": 7,
+          "category": "Isolation Upper — Finisher",
+          "muscle_primary": ["Triceps"],
+          "cue": "Elbows locked in place — only forearms move. Full extension at bottom.",
+          "kim_note": "Cable version — constant tension throughout the range vs dumbbell."
+        },
+        {
+          "order": 8,
+          "name": "Cable Bicep Curls",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-1-2-0",
+          "rest": "60s",
+          "RPE": 8,
+          "category": "Isolation Upper — Finisher",
+          "muscle_primary": ["Biceps"],
+          "cue": "Full range. Squeeze at peak. Cable maintains tension at the bottom — don't lose it.",
+          "kim_note": "Cable version — constant tension at the bottom where dumbbells go slack."
+        }
+      ],
+      "core_workout": {
+        "name": "Core Circuit",
+        "sets": 3,
+        "format": "3 supersets — complete all 6 exercises as a circuit, rest 60s, repeat",
+        "reps": "8-10 per exercise",
+        "rest_between_circuits": "60s",
+        "RPE": 9,
+        "exercises": [
+          "1a. Reverse Crunches (decline bench)",
+          "1b. Weighted Decline Sit-Ups",
+          "2a. Weighted Side Plank Hip Dips",
+          "2b. Bodyweight Side Plank Hip Dips",
+          "3a. Controlled Commandos",
+          "3b. Low Plank Hold → Rainbow Hip Taps (3b: 10 sec hold → fail)"
+        ],
+        "kim_note": "This circuit is hard. By round 3 you should be fighting for every rep. Moved to Tuesday — upper body strength day so lower body is fully recovered."
+      },
+      "cooldown": {
+        "protocol": "upper_body_cooldown from warm_up_stretching_library.json",
+        "duration": "7-8 minutes"
+      }
+    },
+
+    "wednesday": {
+      "name": "Wednesday — Active Recovery",
+      "options": [
+        "Reformer Pilates class",
+        "Hot Pilates class",
+        "Hike",
+        "Reservoir walk",
+        "General recovery",
+        "Rest"
+      ],
+      "intensity": "Low — conversational pace",
+      "kim_note": "Wednesday is intentional recovery. The variety of options means it never feels like a chore. Movement clears energy and supports recovery so Thursday is powerful."
+    },
+
+    "thursday": {
+      "name": "Thursday — Quad Focused Lower Body + Sled Pushes",
+      "focus": "Quad dominant with hamstring and posterior chain support",
+      "session_length": "70-80 minutes",
+      "warm_up": {
+        "protocol": "lower_body from warm_up_stretching_library.json",
+        "duration": "10 minutes",
+        "exercises": [
+          "Air squats",
+          "Hinges",
+          "Reverse lunges",
+          "Hamstring scoops",
+          "Hip openers",
+          "Leg swings",
+          "Lying hip bridges",
+          "Rock the boat"
+        ]
+      },
+      "exercises": [
+        {
+          "order": 1,
+          "name": "Goblet Squat — Drop Set",
+          "variation": "2 sets weighted + 1 set bodyweight",
+          "sets": 3,
+          "reps": "8-10 weighted then bodyweight to failure",
+          "tempo": "3-1-2-0",
+          "rest": "120s",
+          "RPE": 9,
+          "category": "Quad Dominant — Primary",
+          "muscle_primary": ["Quads", "Glutes"],
+          "cue": "Sit deep — chest tall, elbows inside knees. Drop set: no rest between weight reductions.",
+          "kim_note": "Drop set structure: 2 heavy weighted sets then strip to bodyweight and go to failure. Quad and glute burner."
+        },
+        {
+          "order": 2,
+          "name": "Straight Leg RDLs — Hamstring Focused",
+          "sets": 4,
+          "reps": "10-12",
+          "tempo": "3-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Hip Hinge — Primary",
+          "muscle_primary": ["Hamstrings", "Glutes"],
+          "cue": "Legs straighter than standard RDL. Deep hamstring stretch at the bottom. Drive hips through at top."
+        },
+        {
+          "order": 3,
+          "name": "Smith Machine Reverse Lunges",
+          "sets": 4,
+          "reps": "10-12 per side",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Unilateral Lower — Primary",
+          "muscle_primary": ["Quads", "Glutes"],
+          "cue": "Smith machine guides the path — focus on depth and front heel drive. Step back, lower straight down.",
+          "kim_note": "Smith machine allows heavier loading on reverse lunge with guided stability."
+        },
+        {
+          "order": 4,
+          "name": "Leg Press",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "3-1-2-0",
+          "rest": "90s",
+          "RPE": 8,
+          "category": "Quad Dominant — Accessory",
+          "muscle_primary": ["Quads", "Glutes"],
+          "cue": "Feet hip width. Don't lock knees at top — constant tension. Control descent."
+        },
+        {
+          "order": 5,
+          "name": "Single Leg Extensions",
+          "sets": 3,
+          "reps": "10-12 per side",
+          "tempo": "2-1-3-0",
+          "rest": "60s",
+          "RPE": 7,
+          "category": "Isolation Lower — Accessory",
+          "muscle_primary": ["Quadriceps"],
+          "cue": "Full lockout — squeeze quad hard at top. 3-second slow lowering. Single leg keeps both sides equal."
+        },
+        {
+          "order": 6,
+          "name": "Hyperextensions — Posterior Chain Focused",
+          "sets": 3,
+          "reps": "10-12",
+          "tempo": "2-1-2-0",
+          "rest": "75s",
+          "RPE": 7,
+          "category": "Hip Hinge — Accessory",
+          "muscle_primary": ["Erector Spinae", "Glutes", "Hamstrings"],
+          "cue": "Hinge at hip — not lower back. Feel glute and hamstring doing the work. Don't hyperextend at top."
+        },
+        {
+          "order": 7,
+          "name": "Seated Calf Raise → Standing Calf Raise Pulses (bodyweight)",
+          "sets": 4,
+          "reps": "10-12 seated + pulses to finish",
+          "tempo": "2-2-2-0",
+          "rest": "45s",
+          "RPE": 7,
+          "category": "Isolation Lower — Finisher",
+          "muscle_primary": ["Soleus (seated)", "Gastrocnemius (standing pulses)"],
+          "cue": "Same protocol as Monday — full range seated, then standing pulses to burn out."
+        }
+      ],
+      "conditioning_finisher": {
+        "name": "Sled Pushes",
+        "rounds": "6-8",
+        "distance": "15-20 yards per round",
+        "load": "Heavy — explosive effort",
+        "rest": "60-90 seconds between rounds",
+        "kim_note": "Explosive. Drive from hips and legs. Stay low. Leave everything on the last round."
+      },
+      "cooldown": {
+        "protocol": "lower_body_cooldown from warm_up_stretching_library.json",
+        "duration": "8-10 minutes",
+        "priority_stretches": ["Quad Stretch 45s per side", "Hamstring Stretch 60s per side", "Pigeon Pose 90s per side", "Calf Stretch 45s per side", "Child's Pose 60s"]
+      }
+    },
+
+    "friday": {
+      "name": "Friday — Upper Body Hypertrophy + Battle Ropes + Stairmaster",
+      "focus": "Higher reps, drop sets, supersets — metabolic stress and time under tension",
+      "session_length": "75-90 minutes",
+      "warm_up": {
+        "protocol": "upper_body from warm_up_stretching_library.json",
+        "duration": "10 minutes",
+        "exercises": [
+          "Cat cow",
+          "Heart opener",
+          "Thread the needle",
+          "Arm circles",
+          "Banded overhead pull overs/thru",
+          "SKI machine — 1 min"
+        ]
+      },
+      "exercises": [
+        {
+          "order": 1,
+          "name": "Lateral Raises — Drop Set",
+          "sets": 2,
+          "reps": "10-15 then drop and continue",
+          "tempo": "2-0-2-0",
+          "rest": "90s",
+          "RPE": 9,
+          "category": "Isolation Upper — Primary",
+          "muscle_primary": ["Lateral Deltoid"],
+          "cue": "Lead with elbows. Full drop set — no rest between weight reductions.",
+          "drop_set_note": "3 weighted sets within each drop set"
+        },
+        {
+          "order": 2,
+          "name": "T-Bar Row — Drop Set",
+          "sets": 2,
+          "reps": "10-15 then drop and continue",
+          "tempo": "2-1-2-0",
+          "rest": "90s",
+          "RPE": 9,
+          "category": "Compound Pull — Primary",
+          "muscle_primary": ["Lats", "Rhomboids", "Rear Deltoids"],
+          "cue": "Drive elbows back. Squeeze shoulder blades at end. Drop set — strip weight and keep going.",
+          "drop_set_note": "3 weighted sets within each drop set",
+          "kim_note": "New addition on Friday — T-bar drop set as an opener hits back with massive volume before supersets."
+        },
+        {
+          "order": 3,
+          "name": "SUPERSET A — Close Grip Chest Press + Diamond Push-Up",
+          "superset": true,
+          "rest_between": "0s",
+          "rest_after": "90s",
+          "exercises": [
+            {
+              "name": "Close Grip Chest Press",
+              "sets": 3,
+              "reps": "10-12",
+              "tempo": "3-1-2-0",
+              "RPE": 8,
+              "muscle_primary": ["Chest", "Triceps"],
+              "cue": "Hands closer than shoulder width. Lower to mid-chest. Inner chest and triceps."
+            },
+            {
+              "name": "Diamond Push-Up (use bench or assisted if needed)",
+              "sets": 3,
+              "reps": "To failure",
+              "RPE": 9,
+              "muscle_primary": ["Triceps", "Inner Chest"],
+              "cue": "Hands in diamond. Lower all the way. Push to full extension. True failure."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "SUPERSET B — Seated Cable Row + DB Pullover",
+          "superset": true,
+          "rest_between": "0s",
+          "rest_after": "90s",
+          "exercises": [
+            {
+              "name": "Seated Cable Row or Row Machine",
+              "sets": 3,
+              "reps": "10-12",
+              "tempo": "2-1-2-0",
+              "RPE": 8,
+              "muscle_primary": ["Lats", "Rhomboids", "Biceps"],
+              "cue": "Drive elbows back. Squeeze shoulder blades together. Control the return."
+            },
+            {
+              "name": "Dumbbell Pullover",
+              "sets": 3,
+              "reps": "10-12",
+              "tempo": "3-1-2-0",
+              "RPE": 7,
+              "muscle_primary": ["Chest", "Lats", "Serratus"],
+              "cue": "Lower dumbbell overhead with slight elbow bend — feel the chest and lat stretch. Press back to start.",
+              "kim_note": "Pullover bridges the chest and back in one movement. Adds chest volume while complementing the row. Helps thoracic mobility and shoulder health."
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "SUPERSET C — Seated Dip Machine + Single Arm Supported Bicep Curls",
+          "superset": true,
+          "rest_between": "0s",
+          "rest_after": "90s",
+          "exercises": [
+            {
+              "name": "Seated Dip Machine",
+              "sets": 3,
+              "reps": "10-12",
+              "tempo": "2-1-2-0",
+              "RPE": 8,
+              "muscle_primary": ["Triceps", "Chest"],
+              "cue": "Full extension at bottom. Control the return. Tricep doing the work."
+            },
+            {
+              "name": "Single Arm Supported Bicep Curls",
+              "sets": 3,
+              "reps": "To failure",
+              "tempo": "2-2-2-0",
+              "RPE": 10,
+              "muscle_primary": ["Biceps"],
+              "execution_note": "Support removes all cheat momentum — pure bicep. Go to true failure every set.",
+              "cue": "Arm supported — zero swinging. Curl to peak, hold 2 seconds. Lower slow. Fight for every rep."
+            }
+          ]
+        }
+      ],
+      "conditioning_finishers": [
+        {
+          "name": "Battle Ropes",
+          "rounds": 8,
+          "protocol": "20 seconds on — 40 seconds rest",
+          "duration": "8 minutes",
+          "variations": "Alternating waves, double waves, slams, circles",
+          "kim_note": "Arms are already fatigued — the ropes finish them. 20 on, 40 off keeps every round maximal."
+        },
+        {
+          "name": "Stairmaster",
+          "duration": "20-30 minutes",
+          "purpose": "Conditioning and caloric expenditure post-session"
+        }
+      ],
+      "cooldown": {
+        "protocol": "upper_body_cooldown from warm_up_stretching_library.json",
+        "duration": "8 minutes",
+        "priority_stretches": ["Doorway Pec Stretch 60s per side", "Overhead Tricep Stretch 30s per side", "Bicep Wall Stretch 30s per side", "Cross-Body Shoulder Stretch 45s per side", "Sleeper Stretch 45s per side"]
+      }
+    },
+
+    "saturday": {
+      "name": "Saturday — Full Rest",
+      "kim_note": "Complete rest. No training, no cardio. Let the body recover and supercompensate."
+    },
+
+    "sunday": {
+      "name": "Sunday — Hot Pilates + Yoga",
+      "kim_note": "Hot pilates and yoga close the week. Mobility, core stability, nervous system reset. The perfect complement to 4 days of heavy training."
+    }
+  },
+
+  "progression_guide": {
+    "week_1_to_2": "Establish movements. RPE 7-8. Learn the drop set and triset formats.",
+    "week_3": "Add weight on all primary compound movements where RIR allows. RPE 8-9.",
+    "week_4": "Deload — reduce sets by 40%, maintain load.",
+    "week_5_new_mesocycle": "New baseline above week 1. Add 1 set to primary compounds on Monday and Thursday.",
+    "ongoing": "Track every weight. Beat last week somewhere every session."
+  },
+
+  "how_claude_uses_this_program": {
+    "matching_criteria": {
+      "experience": "intermediate or advanced",
+      "goal": "body_recomp",
+      "days_per_week": "4",
+      "equipment": "full_gym",
+      "sex": "F"
+    },
+    "personalization_steps": [
+      "Keep the 4-day split structure — Mon lower glute, Tue upper strength, Thu lower quad, Fri upper hypertrophy",
+      "Adjust exercises for client equipment if different from full gym",
+      "Apply injury modifications from injury_navigation.json",
+      "Scale volume to client experience level",
+      "Adjust conditioning finishers based on client cardio preference",
+      "Replace active recovery options with client's preferred movement",
+      "Write all notes in Kim's voice referencing client identity statement and vision"
+    ]
+  }
+}
