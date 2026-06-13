@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAIN — Kamryn Lee | 8-Week Fat Loss</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F0EFED;--surface:#E8E6E3;--surface2:#DDDBD8;--border:#D0CEC9;--border2:#A8A5A0;
+  --text:#1A1A1A;--text2:#2C2C2C;--muted:#4A4845;--muted2:#8A8680;
+  --cobalt:oklch(0.55 0.12 252);--cobalt-faint:oklch(0.55 0.12 252 / 0.10);--cobalt-mid:oklch(0.55 0.12 252 / 0.18);--cobalt-light:oklch(0.55 0.12 252 / 0.06);
+}
+body{background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',sans-serif;font-weight:400;min-height:100vh;}
+.page{max-width:900px;margin:0 auto;padding:60px 32px 100px;}
+.program-header{text-align:center;padding:60px 0 40px;}
+.header-eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.46em;text-transform:uppercase;color:var(--muted2);margin-bottom:20px;}
+.program-name{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text);margin-bottom:8px;}
+.program-tagline{font-size:15px;font-weight:300;color:var(--muted2);margin-bottom:32px;}
+.program-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:32px;margin-top:24px;}
+.meta-item{text-align:center;}
+.meta-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:6px;font-weight:500;}
+.meta-value{font-size:14px;font-weight:500;color:var(--text);}
+.client-note{background:var(--cobalt-faint);border-left:3px solid var(--cobalt);padding:24px 28px;margin:40px 0;font-size:14px;line-height:1.9;color:var(--text2);}
+.client-note-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:10px;display:block;font-weight:500;}
+.week-nav{display:flex;gap:2px;margin:40px 0 0;overflow-x:auto;padding-bottom:1px;}
+.week-tab{flex-shrink:0;padding:10px 20px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--muted);transition:all .2s;}
+.week-tab:hover{border-color:var(--cobalt);color:var(--cobalt);}
+.week-tab.active{background:var(--cobalt);color:#fff;border-color:var(--cobalt);}
+.week-tab.deload{border-style:dashed;}
+.week-content{display:none;}
+.week-content.active{display:block;}
+.week-header{padding:28px 0 20px;margin-bottom:4px;}
+.week-phase{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:8px;font-weight:500;}
+.week-title{font-size:32px;font-weight:600;color:var(--text);margin-bottom:6px;letter-spacing:-0.02em;}
+.week-note{font-size:14px;color:var(--muted);line-height:1.8;max-width:560px;font-weight:400;}
+.weekly-coach-note{background:var(--cobalt-faint);border-left:3px solid var(--cobalt);padding:16px 22px;margin-bottom:16px;}
+.wcn-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:8px;font-weight:500;}
+.ss-tag{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);background:var(--cobalt-faint);padding:2px 7px;display:inline-block;margin-bottom:4px;font-weight:500;}
+.weekly-coach-note textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--border2);font-family:'Hanken Grotesk',sans-serif;font-size:13px;color:var(--text);resize:none;outline:none;padding:4px 0;line-height:1.8;min-height:52px;}
+.weekly-coach-note textarea:focus{border-bottom-color:var(--cobalt);}
+.weekly-coach-note textarea::placeholder{color:var(--muted2);font-style:italic;}
+.wednesday-rest-inline{background:var(--surface);border:1px dashed var(--cobalt-mid);padding:16px 22px;margin:12px 0;font-size:13px;color:var(--muted);line-height:1.8;}
+.wed-inline-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:6px;font-weight:500;}
+.wednesday-rest{background:var(--surface);border:1px dashed var(--border2);padding:16px 22px;margin-bottom:16px;font-size:13px;color:var(--muted);line-height:1.8;}
+.wednesday-rest .wed-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text2);display:block;margin-bottom:6px;font-weight:600;}
+.session{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--cobalt);margin-bottom:12px;}
+.session-header{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:background .15s;}
+.session-header:hover{background:var(--surface2);}
+.session-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt);font-weight:500;}
+.session-title{font-size:17px;font-weight:500;color:var(--text);margin-top:4px;}
+.session-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
+.session-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);}
+.session-progress{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--cobalt);font-weight:500;}
+.session-toggle{font-size:16px;color:var(--cobalt);transition:transform .2s;margin-top:4px;}
+.session.open .session-toggle{transform:rotate(180deg);}
+.session-body{display:none;padding:0;}
+.session.open .session-body{display:block;}
+.session-prog-bar{height:2px;background:var(--border2);margin:0;}
+.session-prog-fill{height:100%;background:var(--cobalt);transition:width .3s;width:0%;}
+.protocol-block{background:var(--cobalt-light);padding:14px 22px;margin:0;border-bottom:1px solid var(--border);border-left:2px solid var(--cobalt);}
+.protocol-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:8px;font-weight:500;}
+.protocol-list{list-style:none;}
+.protocol-list li{font-size:12px;color:var(--muted);padding:3px 0;display:flex;justify-content:space-between;}
+.protocol-list li span{color:var(--muted2);font-size:11px;font-family:'JetBrains Mono',monospace;}
+.exercise-table{width:100%;border-collapse:collapse;}
+.exercise-table th{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);font-weight:500;}
+.exercise-table th.center{text-align:center;}
+.ex-row{border-bottom:1px solid var(--border);}
+.ex-row:last-child{border-bottom:none;}
+.ex-row.completed .ex-name{color:var(--muted2);text-decoration:line-through;}
+.ex-row td{padding:16px 14px;vertical-align:top;}
+.ex-name{font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:3px;transition:color .15s;}
+.ex-detail{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cobalt);display:block;margin-bottom:4px;font-weight:500;}
+.ex-cue{font-size:12px;color:var(--muted);font-style:italic;display:block;line-height:1.6;margin-top:4px;}
+.ex-cat{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted2);display:block;margin-top:2px;}
+.sets-col{width:280px;}
+.set-row{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+.set-row:last-child{margin-bottom:0;}
+.set-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);width:30px;flex-shrink:0;}
+.weight-input{width:58px;font-family:'JetBrains Mono',monospace;font-size:13px;padding:5px 6px;border:1px solid var(--border2);background:var(--bg);color:var(--text);text-align:center;outline:none;transition:border-color .15s;border-radius:0;}
+.weight-input:focus{border-color:var(--cobalt);box-shadow:0 0 0 2px var(--cobalt-faint);}
+.reps-input{width:46px;font-family:'JetBrains Mono',monospace;font-size:13px;padding:5px 6px;border:1px solid var(--border2);background:var(--bg);color:var(--text);text-align:center;outline:none;transition:border-color .15s;border-radius:0;}
+.reps-input:focus{border-color:var(--cobalt);box-shadow:0 0 0 2px var(--cobalt-faint);}
+.unit{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+.sep{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+.export-bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;margin:24px 0 0;border-top:1px solid var(--border);}
+.export-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.05em;}
+.export-btn{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 20px;border:1px solid var(--cobalt);background:transparent;color:var(--cobalt);cursor:pointer;transition:all .15s;}
+.export-btn:hover{background:var(--cobalt);color:#fff;}
+.check-col{width:48px;text-align:center;}
+.check-wrap{display:flex;align-items:center;justify-content:center;padding-top:4px;}
+.custom-check{width:20px;height:20px;border:1.5px solid var(--border2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;background:transparent;}
+.custom-check:hover{border-color:var(--cobalt);}
+.custom-check.done{background:var(--cobalt);border-color:var(--cobalt);}
+.custom-check.done::after{content:'';width:10px;height:6px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translateY(-1px);display:block;}
+.notes-row{background:var(--surface2);border-bottom:1px solid var(--border);}
+.notes-row:last-child{border-bottom:none;}
+.notes-row td{padding:10px 14px;}
+.notes-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:6px;font-weight:500;}
+.notes-input{width:100%;font-size:13px;font-weight:400;color:var(--text);background:transparent;border:none;border-bottom:1px solid var(--border2);padding:4px 0;font-family:'Hanken Grotesk',sans-serif;resize:none;outline:none;transition:border-color .15s;}
+.notes-input:focus{border-bottom-color:var(--cobalt);}
+.notes-input::placeholder{color:var(--muted2);font-style:italic;}
+.session-footer{padding:12px 22px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--cobalt-light);}
+.complete-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
+.complete-count .done-num{color:var(--cobalt);font-weight:600;}
+.save-note{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+.progression-block{border:1px solid var(--cobalt-mid);border-left:3px solid var(--cobalt);padding:18px 22px;margin:16px 22px;background:var(--cobalt-faint);}
+.progression-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:8px;font-weight:500;}
+.progression-text{font-size:13px;color:var(--text2);line-height:1.8;font-weight:400;}
+.deload-banner{background:var(--cobalt-faint);border:1px dashed var(--cobalt-mid);padding:24px;margin-bottom:12px;text-align:center;}
+.deload-title{font-size:20px;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:-0.02em;}
+.deload-text{font-size:13px;color:var(--muted);line-height:1.8;max-width:480px;margin:0 auto;font-weight:400;}
+.program-close{text-align:center;padding:48px 0 40px;margin-top:48px;}
+.close-text{font-size:clamp(15px,2.5vw,20px);font-weight:300;color:var(--muted);max-width:480px;margin:0 auto 16px;line-height:1.7;}
+.close-sig{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);}
+@media print{.week-nav,.session-toggle,.session-footer{display:none!important;}.week-content{display:block!important;}.session-body{display:block!important;}.weight-input,.reps-input{border:1px solid #ccc;}}
+@media(max-width:600px){.page{padding:40px 16px 80px;}.sets-col{width:200px;}.weight-input{width:48px;}.reps-input{width:40px;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="program-header">
+  <div class="header-eyebrow">Kim Valles Coaching &nbsp;·&nbsp; TRAIN</div>
+  <div class="program-name">FAT LOSS</div>
+  <div class="program-tagline">8-Week Fat Loss · Intermediate · Glute / Upper / Quad Split</div>
+  <div class="program-meta">
+    <div class="meta-item"><div class="meta-label">Client</div><div class="meta-value">Kamryn Lee</div></div>
+    <div class="meta-item"><div class="meta-label">Goal</div><div class="meta-value">Fat Loss</div></div>
+    <div class="meta-item"><div class="meta-label">Split</div><div class="meta-value">Glute / Upper / Quad</div></div>
+    <div class="meta-item"><div class="meta-label">Days / Week</div><div class="meta-value">4</div></div>
+    <div class="meta-item"><div class="meta-label">Session Length</div><div class="meta-value">60 min</div></div>
+    <div class="meta-item"><div class="meta-label">Equipment</div><div class="meta-value">Full Gym</div></div>
+  </div>
+</div>
+
+<div style="width:100%;height:1px;background:var(--border);margin-bottom:40px;"></div>
+
+<div class="client-note">
+  <span class="client-note-label">A note from Coach Kim</span>
+  Kam — you already know that when you show up consistently and eat consistently, results follow. This program is built around that truth. Four days a week, 60 minutes — Monday is glutes and core at Big Back. Tuesday and Friday are upper body days with treadmill cardio sessions at your home gym. Thursday is quads and sled at UFC. Wednesday is your active rest day — get outside, go on a long hike, put your headphones in and listen to good music, just get mindful and intentional movement in. Every session in here is designed to fit inside the hour and progress over these eight weeks and we will assess as you go. You're going to crush this program, you have already come so far on your fitness journey. I have seen your growth and I am very proud of you. Excited to see what goals you are going to accomplish next. — Kim
+</div>
+
+<div style="width:100%;height:1px;background:var(--border);margin:0 0 0;"></div>
+
+<div class="week-nav" id="week-nav">
+  <button class="week-tab active" onclick="showWeek(1)">Week 1</button>
+  <button class="week-tab" onclick="showWeek(2)">Week 2</button>
+  <button class="week-tab" onclick="showWeek(3)">Week 3</button>
+  <button class="week-tab" onclick="showWeek(4)">Week 4</button>
+  <button class="week-tab" onclick="showWeek(5)">Week 5</button>
+  <button class="week-tab deload" onclick="showWeek(6)">Week 6 — Deload</button>
+  <button class="week-tab" onclick="showWeek(7)">Week 7</button>
+  <button class="week-tab" onclick="showWeek(8)">Week 8</button>
+</div>
+
+<div id="week-1" class="week-content active">
+  <div class="week-header">
+    <div class="week-phase">Week 1 — Foundation</div>
+    <div class="week-title">Foundation</div>
+    <div class="week-note">Week 1 isn't about going hard — it's about going smart. This week is about learning the program, dialing in your form, and building a strong foundation. Slow down, be present, and pay attention to what each movement feels like. Ask yourself: What muscles are working? Where should I be feeling this exercise? Don't worry about lifting your heaviest weights yet. Focus on quality over quantity. Master the movement patterns, establish consistency, and trust the process. We're not chasing quick results — we're building something real, something sustainable. Every rep this week is an investment in the strength, confidence, and progress that's coming. Let's get to work.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div id="week-1-sessions"></div>
+</div>
+
+<div id="week-2" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 2 — Accumulation</div>
+    <div class="week-title">Accumulation</div>
+    <div class="week-note">Week 2 is where we start building momentum. By now, you should be feeling the effects of your training — and that's a good thing. Your body is adapting, getting stronger, and preparing for what's next. This week, aim to work toward the top of your prescribed rep ranges. If you reach the upper end of the range and still feel like you have 2 or more reps left in the tank, it's time to increase the weight. Be intentional. Track every set, every rep, and every load. The numbers you record this week will become the foundation for your progress moving forward. Remember: we're not just completing workouts — we're collecting data, building strength, and creating measurable progress. Stay focused, trust the process, and keep showing up. Let's keep stacking wins.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week's note from Coach Kim</span><textarea rows="8" data-key="coach_note_w2">Week 1 is done and you showed up for every single session — that’s not small, that’s everything. Week 2 I made a few updates to keep things progressing. On Monday at Big Back, I added battle ropes as a superset directly after your calf raises — no rest between, just flow right into 20 seconds of alternating waves, then take your 60 seconds. It’s a finisher that’s going to elevate your heart rate and add real conditioning to glute day, so embrace it. On Thursday at UFC, I added 15 minutes on the Stairmaster before you hit your quad work — it’s a warm-up, not cardio punishment, but quad day is a demanding session so check in with your energy as you go and move smart. I also swapped DB bench press for DB incline chest press on Friday — better upper pec emphasis and it pairs cleaner with the rest of your push work this cycle. Same movement pattern, slightly better angle for your goals. You came in Week 1 and did the work. Now let’s build on it. So proud of you — time to crush Week 2.</textarea></div>
+  <div id="week-2-sessions"></div>
+</div>
+
+<div id="week-3" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 3 — Intensification</div>
+    <div class="week-title">Intensification</div>
+    <div class="week-note">Week 3 is where it starts to get real. Over the past two weeks, you've built the foundation. You've learned the movements, established consistency, and gathered the data. Now it's time to turn that foundation into progress. This week, challenge yourself to dig a little deeper. Approach each set with intention and confidence. Trust the strength you've built and don't be afraid to push yourself when the opportunity is there. Your goal isn't to be reckless — it's to be resilient. Stay disciplined with your form, embrace the discomfort that comes with growth, and remember that progress often lives just outside of your comfort zone. Keep tracking your weights, reps, and performance. Small improvements compound quickly, and every workout is another opportunity to become stronger than you were last week. This is what you've been building toward. Let's see what you're capable of.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week’s note from Coach Kim</span><textarea rows="2" placeholder="Kim will add a personal note here each week based on how your last session went…" data-key="coach_note_w3"></textarea></div>
+  <div id="week-3-sessions"></div>
+</div>
+
+<div id="week-4" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 4 — Performance</div>
+    <div class="week-title">Performance Week</div>
+    <div class="week-note">Take a moment to appreciate what you've accomplished. Four weeks ago, this program was brand new. Today, you're moving with more confidence, more strength, and a deeper understanding of your body. The work you've put in is starting to show. This week is about performance. Not perfection. Not proving anything. Performance. Challenge yourself to match or exceed the numbers you've recorded over the past few weeks. Lean into your strength, trust your preparation, and give yourself permission to see what you're capable of. Progress isn't always measured by the scale or the mirror. Sometimes it's the extra rep, the heavier dumbbell, the improved form, or the confidence that comes from doing hard things consistently. One month down. Countless opportunities ahead. Finish this phase strong — you've earned it.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week’s note from Coach Kim</span><textarea rows="2" placeholder="Kim will add a personal note here each week based on how your last session went…" data-key="coach_note_w4"></textarea></div>
+  <div id="week-4-sessions"></div>
+</div>
+
+<div id="week-5" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 5 — New Baseline</div>
+    <div class="week-title">New Baseline</div>
+    <div class="week-note">Take a moment to recognize how far you've come. Five weeks ago, you were learning the movements, building confidence, and establishing new habits. Today, you're stronger, more skilled, and more capable than when you started. What once felt challenging is now your baseline. This week marks the beginning of a new phase. You'll see some new exercise variations and progressions designed to keep you moving forward. Remember: we're not starting over — we're building from a stronger foundation. Approach these new movements with the same intention and focus that got you here. Stay patient as you learn, trust the process, and continue tracking your progress. The goal isn't to be perfect, it's to keep moving forward.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week’s note from Coach Kim</span><textarea rows="2" placeholder="Kim will add a personal note here each week based on how your last session went…" data-key="coach_note_w5"></textarea></div>
+  <div id="week-5-sessions"></div>
+</div>
+
+<div id="week-6" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 6 — Recovery Week</div>
+    <div class="week-title">Recovery Week</div>
+    <div class="week-note">You've spent the last five weeks building strength, accumulating volume, and pushing your body to adapt. But progress isn't just built through hard training — it's built through recovery. This week is your recommended deload, and it's one of the most important weeks of the entire program. By now, fatigue has accumulated. Your muscles, joints, and nervous system have been working hard, and this week gives your body the opportunity to absorb all of that work and come back stronger. Remember: you don't grow during training — you grow from recovering from training. We'll keep the same movements this week, but reduce the demands. Perform just 2 working sets per exercise and decrease your loads to roughly 60% of what you've been using. Move with intention, focus on quality, and enjoy the opportunity to train without having to push. Think of this week as an investment, not a step backward. Recovery isn't a reward you earn — it's part of the process. Trust it. The strength you've been building doesn't disappear here. In fact, some of your biggest gains are waiting on the other side of this week. Recover well. The next phase is coming. 💪</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week’s note from Coach Kim</span><textarea rows="2" placeholder="Kim will add a personal note here each week based on how your last session went…" data-key="coach_note_w6"></textarea></div>
+  <div id="week-6-sessions"></div>
+  <div class="deload-banner">
+    <div class="deload-title">Recovery week</div>
+    <div class="deload-text">Same movements. 2 sets. 60% of your best loads. No treadmill — optional gentle walk only. Supercompensation happens right here — let it work.</div>
+  </div>
+</div>
+
+<div id="week-7" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 7 — Peak Week</div>
+    <div class="week-title">Peak Week</div>
+    <div class="week-note">This is your strongest week yet. Over the last six weeks, you've laid the foundation, built momentum, pushed your limits, recovered with intention, and prepared your body for this moment. Peak Week is where all of that work comes together. You should be feeling refreshed, confident, and ready to perform. This week, we're turning the dial up. Push your primary lifts to an RPE of 8–9–10 (meaning your sets should feel challenging, with about 2 reps left in the tank at an RPE 8, 1 rep left at an RPE 9, and no reps left at an RPE 10). Trust the numbers you've built, trust your technique, and don't be afraid to challenge yourself. Remember, intensity doesn't mean sacrificing form. Stay disciplined, move with purpose, and make every rep count. Quality always comes first. This is your opportunity to showcase the strength you've earned. The weight you're lifting today isn't random — it's the result of weeks of consistency, patience, and effort. Be present. Be confident. Be proud of how far you've come. You've earned every rep. Now go get it.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week’s note from Coach Kim</span><textarea rows="2" placeholder="Kim will add a personal note here each week based on how your last session went…" data-key="coach_note_w7"></textarea></div>
+  <div id="week-7-sessions"></div>
+</div>
+
+<div id="week-8" class="week-content">
+  <div class="week-header">
+    <div class="week-phase">Week 8 — Finish Strong</div>
+    <div class="week-title">Finish Strong</div>
+    <div class="week-note">Eight weeks ago, you made a commitment to yourself — and you honored it. Through every phase of this program, you've shown up. You learned the movements, built momentum, pushed your limits, recovered with intention, and discovered just how strong you're capable of becoming. This week isn't about chasing perfection. It's about finishing with purpose. As you move through your workouts, take time to reflect on how far you've come. Compare your Week 1 numbers to where you are today. Those improvements didn't happen by accident — they were earned through consistency, patience, and showing up week after week. That gap between where you started and where you are today? That's yours. Push hard this week, but don't forget to appreciate the process that got you here. Strength isn't built in a single workout. It's built through the hundreds of reps, the small decisions, and the promises you've kept to yourself along the way. When this week is complete, don't just move on. Pause. Assess. Reflect. Celebrate. What got stronger? What felt better? Where did you surprise yourself? What do you want to accomplish next? Because this isn't the end. It's your new beginning. You've built something real over these last eight weeks. Now let's build the next chapter.</div>
+  </div>
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+  <div class="weekly-coach-note"><span class="wcn-label">This week’s note from Coach Kim</span><textarea rows="2" placeholder="Kim will add a personal note here each week based on how your last session went…" data-key="coach_note_w8"></textarea></div>
+  <div id="week-8-sessions"></div>
+</div>
+
+
+<div style="margin-top:48px;border-top:1px solid var(--border);padding:32px 0;">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:12px;font-weight:500;">Saturday — Weekly Check-In</div>
+  <div style="font-size:14px;color:var(--muted);line-height:1.9;">Take a moment to check in with yourself. How did this week feel? Were the sessions hard in the right way? Did you get outside on Wednesday? How is your energy, your sleep, your stress? Please journal weekly feedback for better data feedback at the end of the 8 week program.</div>
+</div>
+
+<div style="margin-top:24px;padding:24px 0;border-top:1px solid var(--border);">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt);margin-bottom:12px;font-weight:500;">Sunday</div>
+  <div style="font-size:14px;color:var(--muted);line-height:1.9;">Meal prep and progress pictures reminder.</div>
+</div>
+<div style="width:100%;height:1px;background:var(--border);margin-top:48px;"></div>
+
+<div class="export-bar">
+  <span class="export-label">Weights, reps and notes save automatically in this browser</span>
+  <button class="export-btn" onclick="exportCSV()">Export progress CSV</button>
+</div>
+
+<div class="program-close">
+  <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 28px;">
+    <path d="M10 2 C10 16, 30 24, 30 32 C30 40, 10 48, 10 62" stroke="rgba(63,63,63,0.25)" stroke-width="1.2" fill="none"/>
+    <path d="M30 2 C30 16, 10 24, 10 32 C10 40, 30 48, 30 62" stroke="rgba(63,63,63,0.25)" stroke-width="1.2" fill="none"/>
+    <line x1="10" y1="8" x2="30" y2="8" stroke="rgba(63,63,63,0.12)" stroke-width="1"/>
+    <line x1="13" y1="16" x2="27" y2="16" stroke="rgba(63,63,63,0.16)" stroke-width="1"/>
+    <line x1="18" y1="24" x2="22" y2="24" stroke="rgba(63,63,63,0.20)" stroke-width="1"/>
+    <line x1="20" y1="32" x2="20" y2="32" stroke="rgba(63,63,63,0.24)" stroke-width="1"/>
+    <line x1="18" y1="40" x2="22" y2="40" stroke="rgba(63,63,63,0.20)" stroke-width="1"/>
+    <line x1="13" y1="48" x2="27" y2="48" stroke="rgba(63,63,63,0.16)" stroke-width="1"/>
+    <line x1="10" y1="56" x2="30" y2="56" stroke="rgba(63,63,63,0.12)" stroke-width="1"/>
+    <circle r="2" fill="oklch(0.60 0.105 252)" opacity="0.6">
+      <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#close-path-k"/></animateMotion>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.9;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <defs><path id="close-path-k" d="M10 2 C10 16, 30 24, 30 32 C30 40, 10 48, 10 62"/></defs>
+  </svg>
+  <div class="close-text">"You are powerful. You are aligned. You are becoming. And you've already begun."</div>
+  <div class="close-sig" style="margin-top:16px;">TRAIN &nbsp;·&nbsp; Kim Valles Coaching</div>
+</div>
+
+</div><!-- end .page -->
+
+<script>
+const STORAGE_KEY = 'train_program_' + (window.location.pathname.split('/').pop() || 'kamrynlee');
+
+function showWeek(n) {
+  document.querySelectorAll('.week-content').forEach(w => w.classList.remove('active'));
+  document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('week-' + n).classList.add('active');
+  document.querySelectorAll('.week-tab')[n-1].classList.add('active');
+  window.scrollTo({top: document.querySelector('.week-nav').offsetTop - 20, behavior:'smooth'});
+}
+
+document.addEventListener('click', function(e) {
+  const header = e.target.closest('.session-header');
+  if (header && !e.target.closest('.custom-check')) {
+    header.closest('.session').classList.toggle('open');
+  }
+});
+
+function toggleCheck(el, sessionId, exIdx) {
+  el.classList.toggle('done');
+  const row = document.getElementById('ex-row-' + sessionId + '-' + exIdx);
+  if (row) row.classList.toggle('completed');
+  updateSessionProgress(sessionId);
+  saveData();
+}
+
+function updateSessionProgress(sessionId) {
+  const session = document.getElementById('session-' + sessionId);
+  if (!session) return;
+  const checks = session.querySelectorAll('.custom-check');
+  const done = session.querySelectorAll('.custom-check.done').length;
+  const total = checks.length;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  const fill = session.querySelector('.session-prog-fill');
+  if (fill) fill.style.width = pct + '%';
+  const prog = session.querySelector('.session-progress');
+  if (prog) prog.textContent = done + ' / ' + total + ' done';
+  const count = session.querySelector('.complete-count');
+  if (count) count.innerHTML = '<span class="done-num">' + done + '</span> of ' + total + ' exercises complete';
+}
+
+function saveData() {
+  const data = {};
+  document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.notes-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.custom-check.done').forEach(ch => {
+    if (ch.dataset.key) data[ch.dataset.key] = '1';
+  });
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+}
+
+function loadData() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.notes-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.custom-check').forEach(ch => {
+      if (ch.dataset.key && data[ch.dataset.key]) {
+        ch.classList.add('done');
+        const row = document.getElementById(ch.dataset.rowId);
+        if (row) row.classList.add('completed');
+      }
+    });
+    document.querySelectorAll('.session').forEach(s => {
+      const id = s.id.replace('session-','');
+      if (id) updateSessionProgress(id);
+    });
+  } catch(e) {}
+}
+
+function exportCSV() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    const rows = [['Week','Session','Exercise','Set','Weight (lbs)','Reps','Notes','Completed']];
+    const parsed = {};
+    Object.keys(data).forEach(k => {
+      const base = k.replace(/_w$|_r$|_note$|_done$/, '');
+      if (!parsed[base]) parsed[base] = {};
+      if (k.endsWith('_w')) parsed[base].weight = data[k];
+      if (k.endsWith('_r')) parsed[base].reps = data[k];
+      if (k.endsWith('_note')) parsed[base].note = data[k];
+      if (k.endsWith('_done')) parsed[base].done = '✓';
+    });
+    const setKeys = Object.keys(parsed).filter(k => k.match(/_set\d+$/));
+    const exKeys = [...new Set(setKeys.map(k => k.replace(/_set\d+$/, '')))];
+    exKeys.forEach(exKey => {
+      const weekMatch = exKey.match(/^w(\d+)/);
+      const week = weekMatch ? 'Week ' + weekMatch[1] : '?';
+      const sessionPart = exKey.replace(/^w\d+_/, '').replace(/_ex\d+$/, '').replace(/_/g,' ');
+      const exMatch = exKey.match(/_ex(\d+)$/);
+      const exIdx = exMatch ? exMatch[1] : '?';
+      setKeys.filter(k => k.startsWith(exKey + '_set')).forEach(setKey => {
+        const setMatch = setKey.match(/_set(\d+)$/);
+        const setNum = setMatch ? (parseInt(setMatch[1]) + 1) : '?';
+        const d = parsed[setKey] || {};
+        const noteKey = exKey + '_note';
+        const doneKey = exKey + '_done';
+        rows.push([week, sessionPart, 'Exercise ' + (parseInt(exIdx)+1), 'Set ' + setNum, d.weight||'', d.reps||'', data[noteKey]||'', data[doneKey]?'✓':'']);
+      });
+    });
+    const csv = rows.map(r => r.map(c => '"' + String(c).replace(/"/g,'""') + '"').join(',')).join('\n');
+    const blob = new Blob([csv], {type:'text/csv'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'train_kamrynlee_progress_' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click(); URL.revokeObjectURL(url);
+  } catch(e) { alert('Export failed — try again.'); }
+}
+
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('weight-input') || e.target.classList.contains('reps-input') || e.target.classList.contains('notes-input')) saveData();
+});
+
+// ─── BUILD SESSION ────────────────────────────────────────────────────────────
+
+function buildSession(weekNum, session) {
+  const container = document.getElementById('week-' + weekNum + '-sessions');
+  if (!container) return;
+  const sessionId = 'w' + weekNum + '_' + (session.id || '').replace(/\s+/g,'_').toLowerCase();
+  const warmUpItems = (session.warm_up_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.sets_reps || e.duration || ''}</span></li>`).join('');
+  const cooldownItems = (session.cooldown_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.hold || e.duration || ''}</span></li>`).join('');
+
+  const exerciseRows = (session.exercises || []).map((e, idx) => {
+    const numSets = parseInt(e.sets) || 3;
+    const name = e.name || '';
+    const repsStr = e.reps || '';
+    const cat = e.category || '';
+
+    const isTreadmill  = cat.includes('TREADMILL');
+    const isStairmaster= name.includes('Stairmaster') && cat.includes('MINUTES_CALORIES');
+    const isHipThrustTriset = cat.includes('TRISET_HT');
+    const isUnilateral = repsStr.includes('L + R') || repsStr.includes('L+R');
+    const isWeightOnly = name.includes('Sled');
+    const isRepsOnly   = cat.includes('REPS_ONLY');
+    const isNoTracking = cat.includes('NO_TRACKING');
+    const isDropset4   = cat.includes('DROPSET_4');
+
+    let setRows = '';
+
+    if (isNoTracking) {
+      // Section header — no tracking fields at all
+      setRows = '';
+    } else if (isDropset4) {
+      // 4-drop tracking: Drop 1 weight+reps, Drop 2, Drop 3, BW finish reps
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Round ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-bottom:2px;">Drop 1 — heaviest</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_d1w" style="width:64px;"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_d1r" style="width:48px;"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:4px;margin-bottom:2px;">Drop 2</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_d2w" style="width:64px;"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_d2r" style="width:48px;"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:4px;margin-bottom:2px;">Drop 3</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_d3w" style="width:64px;"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_d3r" style="width:48px;"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:4px;margin-bottom:2px;">Bodyweight finish — to fatigue</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_bwr" style="width:48px;"><span class="unit">reps</span>
+        </div>`;
+      }).join('');
+    } else if (isTreadmill) {
+      const key = `${sessionId}_ex${idx}_cardio`;
+      setRows = `<div class="set-row" style="flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+        <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-bottom:2px;">Time completed</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_min" style="width:60px;"><span class="unit">min</span>
+        <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:8px;margin-bottom:2px;">Intervals completed</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_rounds" style="width:60px;"><span class="unit">rounds</span>
+      </div>`;
+    } else if (isStairmaster) {
+      const key = `${sessionId}_ex${idx}_stair`;
+      setRows = `<div class="set-row" style="flex-wrap:wrap;gap:6px;margin-bottom:8px;">
+        <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-bottom:2px;">Session total</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_min" style="width:60px;"><span class="unit">min</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_cal" style="width:60px;"><span class="unit">cals</span>
+      </div>`;
+    } else if (isHipThrustTriset) {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Set ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-bottom:2px;">Weight</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_w" style="width:72px;"><span class="unit">lbs</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:6px;margin-bottom:2px;">Full Drive reps</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_full"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:4px;margin-bottom:2px;">Pulses reps</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_pulse"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:4px;margin-bottom:2px;">Static Hold</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_hold"><span class="unit">secs</span>
+        </div>`;
+      }).join('');
+    } else if (isUnilateral) {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:12px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Set ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-bottom:2px;">Left</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_lw"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_lr"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt);width:100%;margin-top:4px;margin-bottom:2px;">Right</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_rw"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_rr"><span class="unit">reps</span>
+        </div>`;
+      }).join('');
+    } else if (isWeightOnly) {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row"><span class="set-num">Round ${i+1}</span><input class="weight-input" type="text" placeholder="—" data-key="${key}_w"><span class="unit">lbs on sled</span></div>`;
+      }).join('');
+    } else if (isRepsOnly) {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row"><span class="set-num">Set ${i+1}</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_r"><span class="unit">reps</span></div>`;
+      }).join('');
+    } else {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row"><span class="set-num">Set ${i+1}</span><input class="weight-input" type="text" placeholder="—" data-key="${key}_w"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_r"><span class="unit">reps</span></div>`;
+      }).join('');
+    }
+
+    const checkKey = `${sessionId}_ex${idx}_done`;
+    const rowId = `ex-row-${sessionId}-${idx}`;
+    const isSsStart = cat.includes('SS_CORE_A_START') || cat.includes('SS_CORE_B_START') || cat.includes('SS_CORE_C_START') || cat.includes('SS_CALF_START');
+    const isSsEnd   = cat.includes('SS_CORE_A_END')   || cat.includes('SS_CORE_B_END')   || cat.includes('SS_CORE_C_END')   || cat.includes('SS_CALF_END');
+    const ssLabel   = cat.includes('SS_CALF') ? 'Superset — Calf + Battle Ropes' : (cat.includes('_A_') ? 'Superset A' : cat.includes('_B_') ? 'Superset B' : 'Superset C');
+    const ssStyle   = (isSsStart || isSsEnd) ? 'border-left:3px solid var(--cobalt);padding-left:12px;' : '';
+    const cleanName = e.name.replace(/CORE CIRCUIT — /, '');
+    return `
+      <tr class="ex-row" id="${rowId}" style="${ssStyle}">
+        <td>
+          ${isSsStart ? `<span class="ss-tag">\u21ba ${ssLabel} \u2014 no rest between</span>` : ''}
+          ${isSsEnd   ? `<span class="ss-tag">\u21ba ${ssLabel} \u2014 rest after this</span>` : ''}
+          <span class="ex-name">${cleanName}</span>
+          ${e.category ? `<span class="ex-cat">${e.category.split(' · ')[0]}</span>` : ''}
+          <span class="ex-detail">${e.sets || '—'} × ${e.reps || e.duration || '—'}${e.tempo && e.tempo !== '—' ? ' · ' + e.tempo : ''}${e.rest && e.rest !== '—' ? ' · rest ' + e.rest : ''}${e.RPE ? ' · RPE ' + e.RPE : ''}</span>
+          ${e.cue ? `<span class="ex-cue">${e.cue}</span>` : ''}
+          ${e.note ? `<span class="ex-cue" style="font-style:normal;color:var(--cobalt);font-size:11px;">${e.note}</span>` : ''}
+        </td>
+        <td class="sets-col">${setRows}</td>
+        <td class="check-col">${isNoTracking ? '' : `<div class="check-wrap"><div class="custom-check" onclick="toggleCheck(this,'${sessionId}',${idx})" data-key="${checkKey}" data-row-id="${rowId}"></div></div>`}</td>
+      </tr>
+      ${isNoTracking ? '' : `<tr class="notes-row">
+        <td colspan="3">
+          <div class="notes-label">Session notes</div>
+          <input class="notes-input" type="text" placeholder="How it felt, what to adjust, anything to remember next week…" data-key="${sessionId}_ex${idx}_note">
+        </td>
+      </tr>`}`;
+  }).join('');
+
+  const html = `
+    <div class="session" id="session-${sessionId}">
+      <div class="session-header">
+        <div>
+          <div class="session-label">${session.label || 'Session'}</div>
+          <div class="session-title">${session.title || 'Training Session'}</div>
+        </div>
+        <div class="session-right">
+          <div class="session-meta">${session.duration || ''}</div>
+          <div class="session-progress">0 / ${(session.exercises||[]).length} done</div>
+          <div class="session-toggle">↓</div>
+        </div>
+      </div>
+      <div class="session-prog-bar"><div class="session-prog-fill"></div></div>
+      <div class="session-body">
+        ${warmUpItems ? `<div class="protocol-block"><div class="protocol-label">Warm-up · ${session.warm_up_duration||'8–10 min'}</div><ul class="protocol-list">${warmUpItems}</ul></div>` : ''}
+        <table class="exercise-table">
+          <thead><tr>
+            <th>Exercise</th>
+            <th class="sets-col">Sets · weight · reps</th>
+            <th class="center check-col">Done</th>
+          </tr></thead>
+          <tbody>${exerciseRows}</tbody>
+        </table>
+        ${cooldownItems ? `<div class="protocol-block"><div class="protocol-label">Cooldown &amp; stretch · ${session.cooldown_duration||'6–8 min'}</div><ul class="protocol-list">${cooldownItems}</ul></div>` : ''}
+        ${session.progression_note ? `<div class="progression-block"><div class="progression-label">Progression focus — this week</div><div class="progression-text">${session.progression_note}</div></div>` : ''}
+        <div class="session-footer">
+          <span class="complete-count"><span class="done-num">0</span> of ${(session.exercises||[]).length} exercises complete</span>
+          <span class="save-note">weights save automatically</span>
+        </div>
+      </div>
+    </div>`;
+  container.insertAdjacentHTML('beforeend', html);
+  updateSessionProgress(sessionId);
+}
+
+// ─── WARM-UP / COOLDOWN ───────────────────────────────────────────────────────
+
+const lowerWarmUp = [
+  {name: 'Hip Circles', sets_reps: '30 sec / side'},
+  {name: 'Glute Bridge Activation (BW) — 1-sec hold at top', sets_reps: '2 × 12'},
+  {name: 'Lateral Band Walk', sets_reps: '15 steps each direction'},
+  {name: 'Hip Flexor Lunge + Reach', sets_reps: '8 reps / side'},
+  {name: 'Leg Swings — Front / Back', sets_reps: '10 / leg'},
+  {name: 'Bodyweight Squat — Movement Prep', sets_reps: '2 × 10 slow'},
+  {name: 'Single-Leg Balance Hold', sets_reps: '20 sec / side'},
+];
+
+const upperWarmUp = [
+  {name: 'Cat-Cow', sets_reps: '10 slow reps'},
+  {name: 'Arm Circle', sets_reps: '10 each direction'},
+  {name: 'Band Pull-Apart', sets_reps: '2 × 15'},
+  {name: 'Wall Slide', sets_reps: '2 × 10'},
+  {name: 'External Rotation — Band', sets_reps: '2 × 12 / side'},
+  {name: 'Inchworm to Push-Up', sets_reps: '5 reps'},
+  {name: 'Light Cable Row — Activation', sets_reps: '2 × 10 — feel the lats'},
+];
+
+const lowerCooldown = [
+  {name: 'Pigeon Pose', hold: '60 sec / side'},
+  {name: 'Hip Flexor Stretch — Kneeling Lunge', hold: '60 sec / side'},
+  {name: 'Seated Hamstring Stretch — flat back', hold: '60 sec / side'},
+  {name: 'Supine Hamstring Stretch', hold: '45 sec / side'},
+  {name: 'Figure-4 Glute Stretch', hold: '45 sec / side'},
+  {name: "Child's Pose", hold: '60 sec — let everything go'},
+];
+
+const upperCooldown = [
+  {name: 'Doorway Pec Stretch', hold: '45 sec / side'},
+  {name: 'Cross-Body Shoulder Stretch', hold: '45 sec / side'},
+  {name: 'Overhead Tricep Stretch', hold: '30 sec / side'},
+  {name: 'Lat Stretch — Rack or Wall', hold: '45 sec / side'},
+  {name: 'Bicep Wall Stretch', hold: '30 sec / side'},
+  {name: "Child's Pose — arms extended", hold: '60 sec'},
+];
+
+// ─── WEEK VARIABLES ───────────────────────────────────────────────────────────
+
+function getWeekVars(w) {
+  const isDeload = (w === 6);
+  const isM2     = (w >= 5);
+  const isPeak   = (w === 7 || w === 8);
+  const sets_p   = isDeload ? '2' : (w >= 3 ? '4' : '3');
+  const sets_a   = isDeload ? '2' : '3';
+  const rpe_p    = isDeload ? '5' : isPeak ? '8–9' : (w === 4 ? '8' : w >= 2 ? '7–8' : '6–7');
+  const rpe_a    = isDeload ? '4–5' : isPeak ? '7–8' : (w >= 2 ? '7' : '6');
+  return { isDeload, isM2, isPeak, sets_p, sets_a, rpe_p, rpe_a };
+}
+
+// ─── TREADMILL HELPER ─────────────────────────────────────────────────────────
+
+function getTreadmill(w) {
+  const isDeload = (w === 6);
+  if (isDeload) {
+    return {
+      name: 'Treadmill — Optional Gentle Walk Only',
+      category: 'Conditioning · TREADMILL',
+      sets: '1', reps: 'Optional — easy walk 15–20 min if you go, incline 5–6',
+      tempo: '—', rest: '—', RPE: '3–4',
+      cue: 'This week is recovery. If you come in, a slow walk is more than enough. If you skip cardio entirely this week — that\'s the right call too. Your body needs the rest.',
+      note: 'No intervals this week. Deload means deload.'
+    };
+  }
+  const intervalDesc = w <= 2
+    ? 'Walk 3 min / Run 1 min — repeat 5 rounds'
+    : w <= 4
+    ? 'Walk 2 min / Run 2 min — repeat 6 rounds'
+    : 'Walk 1 min / Run 3 min — repeat 6 rounds';
+  const duration = w <= 2 ? '20 min' : w <= 4 ? '24 min' : w <= 6 ? '24 min' : '30 min';
+  const intervalDescPeak = 'Walk 1 min / Run 4 min — repeat 6 rounds';
+  const finalIntervals = (w === 7 || w === 8) ? intervalDescPeak : intervalDesc;
+  const cue = w <= 2
+    ? 'Incline 10–12. This is not punishment — it is a tool that works for you. Walk confidently, run with your chest up. Every interval is a deposit.'
+    : w <= 4
+    ? 'Incline 10–12. The runs are getting longer. Your body is ready for it — you\'ve been building since Week 1. Walk with purpose, run with intention.'
+    : (w === 7 || w === 8)
+    ? 'Incline 10–12. Walk 1 / Run 4 — this is peak cardio. 30 minutes. You know what you\'re capable of now. You built this. Go prove it.'
+    : 'Incline 10–12. Walk 1 / Run 3 — this is a real progression shift. Your legs have been building endurance for four weeks. Trust them.';
+  const finalDuration = (w === 7 || w === 8) ? '30 min' : duration;
+  return {
+    name: `Treadmill — Incline 10–12 · ${finalDuration}`,
+    category: 'Conditioning · TREADMILL',
+    sets: '1', reps: finalIntervals,
+    tempo: '—', rest: '—', RPE: w <= 2 ? '5–6' : w <= 4 ? '6–7' : '7–8',
+    cue,
+    note: 'Track total time + number of intervals completed. Compare Week 1 vs Week 8 — that gap is yours.'
+  };
+}
+
+// ─── MONDAY — GLUTES + CORE ───────────────────────────────────────────────────
+
+function monExercises(w) {
+  const { isDeload, isM2, isPeak, sets_p, sets_a, rpe_p, rpe_a } = getWeekVars(w);
+
+  const htName = isM2
+    ? 'Hip Thrust — TRISET (Smith Machine)'
+    : 'Hip Thrust — Smith Machine';
+  const htCat = isM2
+    ? 'Hip Hinge · Primary · M_Glutes · TRISET_HT'
+    : 'Hip Hinge · Primary · M_Glutes';
+  const htReps = isM2
+    ? (isDeload ? '8 full / 8 pulses / 10 sec hold' : '10 full drive / 10 pulses / 15 sec hold')
+    : (isDeload ? '12 reps' : (w === 1 ? '12 reps — find your weight' : '12–15 reps'));
+  const htCue = isM2
+    ? 'Full Drive (heels pressing, squeeze hard at top, 1-sec hold) → Pulses (stay near the top, short range, constant glute tension) → Static Hold (full extension, breathe through it). All three = one set. Rest 75s between sets.'
+    : 'Drive through heels, chin tucked, ribs down. Squeeze hard at the top — hold 1 second before lowering. This is your primary glute builder — feel every single rep.';
+  const htNote = isDeload
+    ? 'Deload: 60% of your best load. Quality over weight — connection over contraction.'
+    : isM2
+    ? (isPeak ? 'Peak week: Heaviest TRISET of the program. RPE 8–9. Full drive at peak load, pulses at constant tension, hold until your glutes are shaking.' : 'M2 TRISET: The three-part format builds time-under-tension you can\'t get from standard sets. Start 10–15% lighter than your M1 working weight and build through M2.')
+    : (w === 1 ? 'Week 1: Find a moderate working weight — one where you feel the glute, not just the movement. Log it. We beat it next week.' : (isPeak ? 'Peak week: Your heaviest hip thrust of Mesocycle 1. RPE 8–9. Push to the top of your range.' : 'Beat last week\'s weight where RPE allows.'));
+
+  const coreSets = isDeload ? '2' : '3';
+  const coreNote = isDeload ? 'Deload: 2 rounds. Controlled and light — just move.' : (w === 1 ? 'Week 1: 3 rounds. 20 sec between each exercise within a round. Rest 45–60 sec between full rounds. This is a circuit — keep the density.' : '3 rounds. Shrink rest between exercises as weeks progress. The core circuit is conditioning too.');
+
+  return [
+    {
+      name: htName, category: htCat,
+      sets: sets_p, reps: htReps, tempo: '2-0-2-1', rest: '75s', RPE: rpe_p,
+      cue: htCue, note: htNote
+    },
+    {
+      name: 'DB Romanian Deadlift',
+      category: 'Hip Hinge · Primary · DB_Hamstrings',
+      sets: sets_p, reps: isDeload ? '12' : '12–15', tempo: '3-0-2-0', rest: '60s', RPE: rpe_p,
+      cue: 'Push hips BACK — not down. Soft knee. Feel the hamstring load before you drive. 3-second eccentric every single rep — that\'s where the work happens.',
+      note: isDeload ? 'Deload: 60% load. Hip hinge pattern focus — quality over load.' : (w === 1 ? 'Week 1: Nail the pattern here. Push hips back until you feel the hamstring tension, then drive forward. Start moderate — the tempo is the challenge, not the weight.' : 'Slow eccentric is non-negotiable. Feel the hamstring tension at the bottom before you drive.')
+    },
+    {
+      name: 'Smith Machine Reverse Lunge',
+      category: 'Unilateral Lower · Accessory · SM_Quads · L_R_SPLIT',
+      sets: sets_a, reps: (isDeload ? '10' : '10–12') + ' / side · track L + R separately', tempo: '2-1-2-0', rest: '45s', RPE: rpe_a,
+      cue: 'Smith machine guides the path — step back, lower straight down. Front heel drives you back up. Torso slightly upright for quad focus. Track weight AND reps for each leg individually.',
+      note: isDeload ? 'Deload: 60% load. Weaker leg first — match reps exactly both sides.' : (w === 1 ? 'Week 1: Smith machine gives you stability to dial in depth. Weaker leg first every set.' : 'Log Left leg weight + reps, Right leg weight + reps every set. Asymmetry shows up here first.')
+    },
+    {
+      name: 'Cable Kickback',
+      category: 'Isolation Lower · Accessory · CBL_Glutes',
+      sets: sets_a, reps: (isDeload ? '15' : '15–20') + ' / side · track L + R', tempo: '2-0-1-0', rest: '30s', RPE: rpe_a,
+      cue: 'Hinge slightly at the hip. Squeeze the glute BEFORE you extend — this is a squeeze, not a kick. No momentum. Feel it.',
+      note: ''
+    },
+    {
+      name: 'Smith Machine Calf Raise → Standing Calf Raise Pulses',
+      category: 'Isolation Lower · Finisher · M_Calves · SS_CALF_START',
+      sets: sets_a, reps: isDeload ? '10-12 seated + pulses' : '12–15 seated + pulses to finish', tempo: '2-2-2-0', rest: '0s', RPE: rpe_a,
+      cue: 'Seated calf raise: log weight + reps. Standing bodyweight pulses: log reps only — no weight needed. Full range on both — all the way up, all the way down. Move straight to battle ropes after pulses.',
+      note: 'Seated: weight + reps per set. Standing pulses: reps only (bodyweight). No rest before battle ropes.'
+    },
+    {
+      name: 'Battle Ropes — Alternating Waves',
+      category: 'Conditioning · Finisher · BW · REPS_ONLY · SS_CALF_END',
+      sets: sets_a, reps: isDeload ? '15 sec on' : '20 sec on', tempo: '—', rest: '60s', RPE: isDeload ? '5' : '7–8',
+      cue: 'Full power — drive each arm up and down independently, creating continuous waves to the anchor. Stay in an athletic stance, slight hinge at the hip. This is a sprint, not a jog. 20 seconds of real effort.',
+      note: isDeload ? 'Deload: 15 sec only. Easy effort — just move.' : 'Superset with calf raises: calf raise → pulses → battle ropes → 60s rest. That\'s one round. Log rounds completed.'
+    },
+    // CORE CIRCUIT
+    {
+      name: '— CORE CIRCUIT —',
+      category: 'Core · Section Header · NO_TRACKING',
+      sets: '0', reps: '3 rounds · 5 exercises · 60s rest between rounds', tempo: '—', rest: '—', RPE: '—',
+      cue: 'Complete all 5 exercises back to back with minimal rest between movements. Rest 60 seconds between full rounds. This circuit is intentionally hard — embrace it.',
+      note: 'This is your core section. 3 rounds of 5 exercises. The sequence matters — follow it in order.'
+    },
+    {
+      name: 'Reverse Crunch (Decline Bench)',
+      category: 'Core · Anti-Extension · BW · REPS_ONLY · SS_CORE_A_START',
+      sets: coreSets, reps: '8–10 reps', tempo: '2-0-2-0', rest: '0s', RPE: '6',
+      cue: 'Flatten your lower back into the mat before you curl the hips up. Control the descent — don\'t let gravity drop them.',
+      note: coreNote
+    },
+    {
+      name: 'Weighted Decline Sit-Up',
+      category: 'Core · Anti-Extension · DB · SS_CORE_A_END',
+      sets: coreSets, reps: '8–10 reps', tempo: '2-0-2-0', rest: '20s', RPE: '6',
+      cue: 'Hold a light plate or DB at your chest. All the way down, all the way up — full range. No half reps.',
+      note: ''
+    },
+    {
+      name: 'Weighted Side Plank Hip Dips',
+      category: 'Core · Anti-Lateral Flexion · DB · SS_CORE_B_START',
+      sets: coreSets, reps: '8–10 reps / side', tempo: '—', rest: '0s', RPE: '6',
+      cue: 'Hold a DB on your hip. Full hip drop to the floor, full hip lift at the top. Keep your plank line straight — no sagging at the waist. Switch sides between sets.',
+      note: ''
+    },
+    {
+      name: 'Bodyweight Side Plank Hip Dips',
+      category: 'Core · Anti-Lateral Flexion · BW · REPS_ONLY · SS_CORE_B_END',
+      sets: coreSets, reps: '8–10 reps / side', tempo: '—', rest: '20s', RPE: '6',
+      cue: 'Switch sides from the weighted version. Full range. This is the drop set — same movement, no additional load.',
+      note: 'Bodyweight only — log reps only, no weight.'
+    },
+    {
+      name: 'Controlled Commandos',
+      category: 'Core · Anti-Extension · BW · REPS_ONLY · SS_CORE_C_START',
+      sets: coreSets, reps: '8–10 reps / side', tempo: '—', rest: '0s', RPE: '6',
+      cue: 'Down to elbows, up to hands — alternate the leading arm each rep. Hips stay level throughout — no rocking side to side. Controlled the whole way.',
+      note: ''
+    },
+    {
+      name: 'Low Plank Hold → Rainbow Hip Taps',
+      category: 'Core · Anti-Rotation · BW · REPS_ONLY · SS_CORE_C_END',
+      sets: coreSets, reps: '10 reps / side', tempo: '—', rest: '45s between rounds', RPE: '6',
+      cue: 'From forearm plank — tap each hip to the floor in a slow arc, then return through center. Controlled. This is the finisher. Leave it all here.',
+      note: ''
+    }
+  ];
+}
+
+// ─── TUESDAY — UPPER BODY + TREADMILL ─────────────────────────────────────────
+
+function tueExercises(w) {
+  const { isDeload, isM2, isPeak, sets_p, sets_a, rpe_p, rpe_a } = getWeekVars(w);
+
+  const pressName = isM2 ? 'Arnold Press — DB' : 'DB Shoulder Press';
+  const pressCue  = isM2
+    ? 'Start with palms facing you, rotate out as you press — full arc. Reverse on the way down. Slower than you think. Own every degree of the rotation.'
+    : 'Neutral spine, core tight. Full range — elbows to 90° at the bottom, full extension at the top. Control the descent. Don\'t let the DBs drop.';
+  const pressNote = isDeload
+    ? 'Deload: 60% load. Full shoulder range — feel the rotation, not the weight.'
+    : isM2
+    ? 'M2: Arnold Press hits the anterior delt and rotator cuff through the rotation — start 5–10% lighter than your regular shoulder press and build through M2.'
+    : (w === 1 ? 'Week 1: Establish your shoulder press baseline here. Form over load — if the last 2 reps break down, drop weight.' : '');
+
+  return [
+    {
+      name: pressName, category: 'Compound Push · Primary · DB_Shoulders',
+      sets: sets_p, reps: isDeload ? '10' : '12–15', tempo: '2-0-2-0', rest: '60s', RPE: rpe_p,
+      cue: pressCue, note: pressNote
+    },
+    {
+      name: 'Assisted Pull-Up' + (isM2 ? ' — reduce assistance' : ''),
+      category: 'Compound Pull · Primary · BW_Back',
+      sets: sets_p, reps: isDeload ? '8–10' : '10–12', tempo: '2-1-2-0', rest: '60s', RPE: rpe_p,
+      cue: 'Dead hang at the bottom — full lat stretch. Initiate by driving elbows DOWN and BACK, not by pulling with the hands. Chin clears the bar at the top.',
+      note: isDeload
+        ? 'Deload: Max assistance. Full range — dead hang to chin over bar. Quality only.'
+        : isM2
+        ? 'M2: Reduce your assistance by 5–10 lbs from your M1 working weight. If no pull-up machine, use close-grip lat pulldown.'
+        : (w === 1 ? 'Week 1: Use as much assistance as you need for full range reps. Log your assistance weight — we reduce it each mesocycle.' : 'Reduce assistance by 2.5–5 lbs from last week if RPE allows.')
+    },
+    {
+      name: 'DB Incline Press',
+      category: 'Compound Push · Primary · DB_Chest',
+      sets: sets_p, reps: isDeload ? '12' : '12–15', tempo: '2-0-2-0', rest: '60s', RPE: rpe_p,
+      cue: 'Bench at 30–45°. Scapulae pinched and pulled down. Lower to chest — feel the pec stretch at the bottom. Press up and slightly in.',
+      note: isDeload ? 'Deload: 60% load. Full pec stretch at the bottom.' : (w === 1 ? 'Week 1: Find your incline working weight. Shoulder blades retracted and depressed on the bench throughout.' : '')
+    },
+    {
+      name: 'Seated Cable Row',
+      category: 'Compound Pull · Accessory · CBL_Back',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-1-2-0', rest: '45s', RPE: rpe_a,
+      cue: 'Sit tall — no rounding. Pull to your lower sternum. Squeeze shoulder blades together hard at peak. 2-second hold before releasing forward.',
+      note: ''
+    },
+    {
+      name: 'Lateral Raise — DB',
+      category: 'Isolation · Accessory · DB_Shoulders',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-0-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Slight forward lean. Raise to just below shoulder height. Pinkies slightly up. Slow negative — that\'s half the exercise.',
+      note: ''
+    },
+    {
+      name: 'Face Pull — Cable Rope',
+      category: 'Isolation · Accessory · CBL_RearDelts',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-1-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Pull to your face. Elbows high and wide. External rotation at the end of the movement. This keeps your shoulders healthy through all the pressing. Never skip it.',
+      note: ''
+    },
+    {
+      name: 'Cable Tricep Pushdown — Rope',
+      category: 'Isolation · Accessory · CBL_Triceps',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-0-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Elbows fixed at sides. Flare the handles apart at the bottom — fully extend the tricep. Lock out every rep.',
+      note: ''
+    },
+    {
+      name: 'DB Hammer Curl',
+      category: 'Isolation · Accessory · DB_Biceps',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-0-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Neutral grip. Elbows pinned at your sides — no swinging. Squeeze the peak, control the negative all the way down.',
+      note: ''
+    },
+    getTreadmill(w)
+  ];
+}
+
+// ─── THURSDAY — QUADS + SLED ──────────────────────────────────────────────────
+
+function thuExercises(w) {
+  const { isDeload, isM2, isPeak, sets_p, sets_a, rpe_p, rpe_a } = getWeekVars(w);
+
+  const squatName = isM2 ? 'Heel Elevated Goblet Squat — Drop Set' : 'Heel Elevated Goblet Squat — Drop Set';
+  const squatCue  = 'Place plates or a small wedge under your heels (1–2 inches). Hold a DB at your chest. Feet shoulder-width, chest tall. 3-second eccentric — sit all the way in, knees track over toes.';
+  const squatNote = isDeload
+    ? 'Deload: Bodyweight only. Focus on depth and control — no load this week.'
+    : 'DROP SET — follow this sequence every set: (1) Start with your heaviest weight and perform 8–10 reps. (2) Immediately lower the weight and complete another 8–10 reps. (3) Lower the weight again and perform another 8–10 reps. (4) Finish with bodyweight reps to fatigue — focus on control and depth. Rest fully after completing all four rounds. Track each drop weight + reps separately.';
+
+  const lungeName = isM2 ? 'DB Walking Lunge' : 'DB Reverse Lunge';
+  const lungeCue  = isM2
+    ? 'Step forward, lower with control, drive through front heel, step forward again — alternate legs down the floor. Hips level throughout. No lateral swinging.'
+    : 'Step back and lower with control. Front knee tracks over toes — not caving in. Drive through the front heel to return. Weaker leg first.';
+  const lungeNote = isM2
+    ? (isDeload ? 'Deload: Light DBs, 2 rounds.' : 'M2: Walking lunge challenges balance and hip stability more than reverse lunge. Use the same weight as your reverse lunge to start.')
+    : (isDeload ? 'Deload: Light load, pattern focus.' : (w === 1 ? 'Week 1: Weaker leg first. Use rack for balance if needed.' : ''));
+
+  const sledRounds = isDeload ? '2' : (isPeak ? '5' : '3');
+  const sledNote   = isDeload
+    ? 'Deload: Light sled, 2 easy rounds. Just move.'
+    : isPeak
+    ? 'Peak week: 5 rounds. Full effort every push. Rest 75s between rounds. This is your hardest conditioning finish of the program.'
+    : (w === 1 ? 'Week 1: Load the sled lighter than you think. Hips low, drive from the floor, explosive. This is your cardio replacement on Thursday — push hard.' : '3 rounds. Full effort. Rest 60–75 sec between rounds.');
+
+  const stairDuration = w <= 2 ? '15 min' : w <= 4 ? '20 min' : w <= 6 ? '25 min' : '30 min';
+  const stairLevel = w <= 2 ? 'Level 5–6' : w <= 4 ? 'Level 6–7' : w <= 6 ? 'Level 7–8' : 'Level 8–9';
+  const stairNote = isDeload
+    ? 'Deload: 10 min easy walk. Level 4–5. This is just to warm up — not conditioning.'
+    : `${stairDuration} · ${stairLevel} · Steady pace. This is your quad day warm-up — gets the blood moving and the legs firing before the heavy work.`;
+
+  return [
+    {
+      name: 'Stairmaster — Quad Day Warm-Up',
+      category: 'Cardio Warm-Up · MINUTES_CALORIES',
+      sets: '1', reps: `${stairDuration} · ${stairLevel}`, rest: '—', RPE: isDeload ? '4' : '6',
+      cue: 'Steady pace — this is a warm-up, not a sprint. Get the legs moving, elevate the heart rate, and prepare your quads and glutes for the heavy work ahead.',
+      note: stairNote
+    },
+    {
+      name: squatName, category: 'Quad Dominant · Primary · DB_Quads · DROPSET_4',
+      sets: sets_p, reps: isDeload ? '12 · bodyweight only' : '8–10 each drop · 3 weights + bodyweight finish', tempo: '3-1-2-0', rest: '90s after full sequence', RPE: rpe_p,
+      cue: squatCue, note: squatNote
+    },
+    {
+      name: 'Leg Press — Machine',
+      category: 'Quad Dominant · Primary · M_Quads',
+      sets: sets_p, reps: isDeload ? '15' : '15–20', tempo: '2-1-2-0', rest: '60s', RPE: rpe_p,
+      cue: 'Feet shoulder-width, mid-plate. Lower to 90° — don\'t let your lower back peel off the pad. Press through your entire foot, not just the toes.',
+      note: isDeload ? 'Deload: 60% load.' : (w === 1 ? 'Week 1: Higher rep range than you\'re used to on leg press. Keep RPE at 6–7 — establish your starting weight.' : '')
+    },
+    {
+      name: lungeName, category: 'Unilateral Lower · Accessory · DB_Quads',
+      sets: sets_a, reps: (isDeload ? '10' : '12') + ' / side · track L + R', tempo: '2-0-2-0', rest: '45s', RPE: rpe_a,
+      cue: lungeCue, note: lungeNote
+    },
+    {
+      name: 'Leg Extension — Machine',
+      category: 'Isolation Lower · Accessory · M_Quads',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-1-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Full extension — lock the knee out at the top and hold 1 second. Slow on the way down. Quad finisher — keep tension throughout the full range.',
+      note: ''
+    },
+    {
+      name: 'Seated Leg Curl — Machine',
+      category: 'Isolation Lower · Accessory · M_Hamstrings',
+      sets: sets_a, reps: isDeload ? '15' : '15–20', tempo: '2-1-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Curl to full flexion, squeeze hard at peak contraction. Controlled return — don\'t let it snap forward.',
+      note: ''
+    },
+    {
+      name: 'Calf Raise — Seated + Standing',
+      category: 'Isolation Lower · Accessory · M_Calves',
+      sets: sets_a, reps: isDeload ? '15' : '15–20 each variation', tempo: '2-1-2-0', rest: '30s', RPE: rpe_a,
+      cue: 'Seated first, then standing. Full drop at the bottom — let the heel sink. Full rise at the top. The deep stretch at the bottom is what makes calves respond.',
+      note: ''
+    },
+    {
+      name: 'Sled Push',
+      category: 'Loaded Movement · Finisher · BS_Conditioning',
+      sets: sledRounds, reps: '20–30 meters / round', tempo: '—', rest: '75s between rounds', RPE: isPeak ? '9' : '8',
+      cue: 'Hips low, arms extended, drive from the floor with your legs. This isn\'t a walk. Push hard, breathe through it, finish each length.',
+      note: sledNote
+    }
+  ];
+}
+
+// ─── FRIDAY — UPPER BODY + TREADMILL ─────────────────────────────────────────
+
+function friExercises(w) {
+  const { isDeload, isM2, isPeak, sets_p, sets_a, rpe_p, rpe_a } = getWeekVars(w);
+
+  const benchNote = isDeload
+    ? 'Deload: 60% load. Full pec stretch at the bottom — quality over load.'
+    : isM2
+    ? 'M2: On your final set, immediately drop weight 20% and continue to failure (rest-pause drop set). This is the M2 intensification technique for chest.'
+    : (w === 1 ? 'Week 1: Establish your DB incline press baseline. Bench at 30–45°. Scapulae pinched on the pad throughout — don\'t let the shoulders wing forward.' : '');
+
+  const tricepName = isM2 ? 'Tricep Overhead Extension — Cable' : 'Tricep Pushdown — EZ Bar';
+  const tricepCue  = isM2
+    ? 'Cable set high, face away from the stack. Elbows close to your head. Full extension overhead — stretch the long head of the tricep at peak. The long head doesn\'t get hit with pushdowns — this is your M2 variation.'
+    : 'EZ bar at the cable, close grip. Elbows fixed at sides. Full lock-out every rep. 15–20 reps is a burn — lean into it.';
+
+  const curlName = isM2 ? 'Cable Curl — Single Arm' : 'EZ Bar Curl';
+  const curlCue  = isM2
+    ? 'Single arm on the low cable pulley. Isolates each bicep — no dominant arm compensation. Squeeze hard at peak, 1-sec hold, slow negative.'
+    : 'EZ bar, supinated grip. Full hang at the bottom — stretch the bicep. Curl to full contraction. No swinging the elbows forward.';
+
+  const dropSetNote = w >= 3 && !isDeload
+    ? 'On your final set: hit your target reps, strip 20% of the weight, go immediately to failure. No rest between the drop.'
+    : (w < 3 ? 'Starting Week 3, your final set becomes a drop set. Find your working weight here so you know what to drop from.' : '');
+
+  return [
+    {
+      name: isDeload ? 'DB Lateral Raise' : 'DB Lateral Raise — Drop Set',
+      category: 'Isolation · Accessory · DB_Shoulders',
+      sets: sets_a, reps: isDeload ? '15' : '15–20 + drop to failure', tempo: '2-0-2-0', rest: '45s', RPE: rpe_a,
+      cue: 'Raise to shoulder height. Pinkies slightly up. Slow negative — 2 full seconds down. The negative IS the exercise. Every session from Week 1: final set, drop 20%, go immediately to failure.',
+      note: isDeload ? 'Deload: No drop set. 2 straight sets at 60% load.' : 'Drop set every session from Week 1. Hit your reps, strip 20% immediately, continue to failure. No rest between the drop.'
+    },
+    {
+      name: 'Chest Supported DB Row',
+      category: 'Compound Pull · Accessory · DB_Back',
+      sets: sets_a, reps: isDeload ? '12' : '12–15', tempo: '2-1-2-0', rest: '45s', RPE: rpe_a,
+      cue: 'Chest on the incline bench — no lower back involvement at all. Pull elbows straight back, squeeze shoulder blades hard at peak. Full hang at the bottom. This is pure back.',
+      note: isDeload ? 'Deload: Light load. Focus on the squeeze and full range of motion.' : 'Chest support eliminates all cheating — the back does all the work. This is why it hits differently.'
+    },
+    {
+      name: 'SUPERSET A — Movement 1: DB Incline Chest Press',
+      category: 'Compound Push · Primary · DB_Chest · SUPERSET_A_1',
+      sets: sets_p, reps: isDeload ? '12' : '12–15', tempo: '3-1-2-0', rest: '0s', RPE: rpe_p,
+      cue: 'Bench at 30–45°. Scapulae pinched and pulled down. Lower DBs to chest — feel the upper pec stretch at the bottom. Press up and slightly in at the top. Control the descent every rep.',
+      note: isDeload ? 'Deload: 60% load. Full pec stretch at the bottom.' : (isM2 ? 'M2: Final set — drop weight 20% and go to failure immediately.' : 'No rest after this — move straight to Lat Pulldown. Log weight + reps here.')
+    },
+    {
+      name: 'SUPERSET A — Movement 2: Lat Pulldown Wide Grip',
+      category: 'Compound Pull · Primary · CBL_Back · SUPERSET_A_2',
+      sets: sets_p, reps: isDeload ? '12' : '12–15', tempo: '2-1-2-0', rest: '75s', RPE: rpe_p,
+      cue: 'Slight lean back. Pull to upper chest — lead with elbows, not hands. Squeeze lats hard at the bottom and hold 1 second before slowly returning.',
+      note: isDeload ? 'Deload: Light load. Full lat stretch at the top of every rep.' : (isM2 ? 'M2: Final set — switch to close grip attachment.' : 'Rest 75s after this before next superset round. Log weight + reps separately from bench.')
+    },
+    {
+      name: 'SUPERSET B — Movement 1: Close Grip Chest Press',
+      category: 'Compound Push · Accessory · DB_Chest · SUPERSET_B_1',
+      sets: sets_a, reps: isDeload ? '10' : '10–12', tempo: '3-1-2-0', rest: '0s', RPE: rpe_a,
+      cue: 'Hands shoulder-width or slightly closer. Lower to mid-chest — triceps and inner chest doing the work. Full extension at the top. Move straight to diamond push-ups after this.',
+      note: isDeload ? 'Deload: Chest press only — skip the push-ups this week.' : 'Zero rest after — go straight to the floor for diamond push-ups. Log weight + reps here.'
+    },
+    {
+      name: 'SUPERSET B — Movement 2: Diamond Push-Up to Failure',
+      category: 'Compound Push · Accessory · BW_Triceps · SUPERSET_B_2 · REPS_ONLY',
+      sets: sets_a, reps: isDeload ? '5 reps · bodyweight' : 'to failure · bodyweight', tempo: '2-0-2-0', rest: '75s', RPE: isDeload ? '6' : '9–10',
+      cue: 'Hands in diamond under sternum. All the way down — chest touches hands. Push to full extension. True failure — fight for every single rep. Arms are pre-fatigued from the press.',
+      note: isDeload ? 'Deload: 5 controlled reps only.' : 'Bodyweight only — log reps only, no weight. Rest 75s after before next set.'
+    },
+    {
+      name: 'SUPERSET C — Movement 1: ' + tricepName,
+      category: 'Isolation · Accessory · CBL_Triceps · SUPERSET_C_1',
+      sets: sets_a, reps: isDeload ? '12' : '12–15', tempo: '2-0-2-0', rest: '0s', RPE: rpe_a,
+      cue: tricepCue + ' Move straight to bicep curls after this — no rest.',
+      note: isDeload ? 'Deload: Light load, full tricep extension.' : (isM2 ? 'M2: Overhead extension — recruits the long head that pushdowns miss.' : 'Log weight + reps here. Zero rest before curls.')
+    },
+    {
+      name: 'SUPERSET C — Movement 2: ' + curlName,
+      category: 'Isolation · Accessory · CBL_Biceps · SUPERSET_C_2',
+      sets: sets_a, reps: isDeload ? '12' : '12–15', tempo: '2-0-2-0', rest: '45s', RPE: rpe_a,
+      cue: curlCue + ' Rest 45s after this before the next superset round.',
+      note: isDeload ? 'Deload: Light load, full bicep range.' : (isM2 ? 'M2: Single arm cable curl — squeeze hard at peak, 1-sec hold.' : 'Log weight + reps separately from tricep. Rest 45s after.')
+    },
+    getTreadmill(w)
+  ]}
+
+// ─── PROGRESSION NOTES ────────────────────────────────────────────────────────
+
+function monProgNote(w) {
+  const notes = {
+    1: 'Log your hip thrust weight and your RDL load today — these are your Week 2 targets. Show up, feel the patterns, and leave knowing you started. That\'s the whole job. New today: calf raises superset directly into 20 sec battle ropes — no rest between, 60s after. Feel what that does.',
+    2: 'Beat your Week 1 weights somewhere. Not everywhere — somewhere. One lift up is a win. Track everything.',
+    3: '4 sets on hip thrust and RDL today. More volume means more stimulus means more change. You\'ve been building to this. The core circuit is getting tighter too — notice it.',
+    4: 'Full push. This is Mesocycle 1\'s final Monday. Come with everything you have — your mental state changes when you move. Prove it today.',
+    5: 'M2 begins on your hardest day. TRISET hip thrust is a new challenge — start lighter and build. The glute work today is the best it\'s been in this program.',
+    6: '2 sets, 60% loads. Move with intention and let the recovery happen. You don\'t have to earn this week — you already did.',
+    7: 'Peak Monday. Heaviest hip thrust of the program. Your best RDL. Your deepest split squat. Everything you built over 6 weeks shows up today.',
+    8: 'Final Monday. Log your weights and compare them to Week 1 when you\'re done. That gap between then and now — that\'s yours. You built it.'
+  };
+  return notes[w] || '';
+}
+
+function tueProgNote(w) {
+  const notes = {
+    1: 'Log your shoulder press, your incline, and your pull-up assistance weight. These are the numbers we\'ll beat next week. Treadmill at the end — incline 10–12, walk 3 / run 1. You\'ve got this.',
+    2: 'Your upper body baseline is set. Push to RPE 7–8 today — if the last rep feels like a 5, add load. Treadmill: same format, beat last week\'s interval count.',
+    3: '4 sets on your three primary lifts today. The density is higher — your body will feel it. This is Week 3. Come with intention and finish the treadmill.',
+    4: 'Full push — no backup plan. Your shoulder press and incline are the heaviest they\'ve been. Leave everything in the session before you step on the treadmill.',
+    5: 'Arnold Press debuts today. It\'s harder than it looks — own the rotation. Reduce assistance on pull-ups if you can. Treadmill progresses to walk 1 / run 3.',
+    6: '2 sets, moderate load. Treadmill is optional today — gentle walk only if you go. Let this week be easy.',
+    7: 'Peak upper day. RPE 8–9 on all primaries. 30-minute treadmill. Walk 1 / run 4. This is what the whole program built toward — go prove it.',
+    8: 'Final Tuesday. Give your shoulder press, incline, and treadmill everything. When the intervals are done, you\'re almost there.'
+  };
+  return notes[w] || '';
+}
+
+function thuProgNote(w) {
+  const notes = {
+    1: 'Log your goblet squat and leg press starting weights today. Sled at the end — load it lighter than you think and push hard. 3 rounds. This is your Thursday cardio replacement.',
+    2: 'Beat your leg press and goblet squat from last week. Sled: try 5–10 lbs more than Week 1. 3 rounds, full effort.',
+    3: '4 sets on goblet and leg press today. More quad volume means more stimulus. Leg extension and curl are your finishers — push them. Sled rounds stay at 3 but push harder.',
+    4: 'Final Thursday of Mesocycle 1. Heaviest quad session yet. Sled rounds 3 — full effort. Leave it all on the floor.',
+    5: 'Heel-elevated goblet squat debuts. Start lighter and feel the quad emphasis — it\'s a different movement than flat goblet. Walking lunges replace reverse. Same DB weight to start.',
+    6: '2 sets, 60% loads. 2 sled rounds — easy effort. This is recovery. Move well and leave.',
+    7: 'Peak Thursday — 5 sled rounds. 4 sets on squats and leg press. RPE 8–9. Your quads have been building for 6 weeks. Show up for them today.',
+    8: 'Final Thursday. 5 sled rounds at full effort. Compare your goblet squat weight and leg press load to Week 1. That progress is real.'
+  };
+  return notes[w] || '';
+}
+
+function friProgNote(w) {
+  const notes = {
+    1: 'Log your bench and pulldown starting weights. Drop set on lateral raises starts Week 3 — for now, find your working weight. Treadmill finishes the week: walk 3 / run 1, 20 minutes.',
+    2: 'Beat your bench and pulldown from Week 1. Treadmill: beat your Week 1 interval count by even one round. Progress is progress.',
+    3: 'Drop set debuts on lateral raises today — hit your reps, drop 20%, go to failure. 4 sets on bench, pulldown, and incline. Treadmill: walk 2 / run 2, 24 minutes.',
+    4: 'Final Friday of Mesocycle 1. Heaviest bench and pulldown of M1. Drop set on laterals. Finish the week strong on the treadmill — you\'ve earned the weekend.',
+    5: 'M2 Friday. DB bench drop set on the final set. Overhead tricep extension instead of pushdown — start light. Cable single-arm curl instead of EZ bar. New stimulus, same output.',
+    6: '2 sets, 60% loads. Optional treadmill — gentle walk only. Celebrate making it to Week 6. That alone is something.',
+    7: 'Peak Friday. 4 sets on everything. Drop set on bench final set + lateral raises. 30-minute treadmill to close. Walk 1 / run 4. This is peak week. Finish it.',
+    8: 'Final Friday. Final treadmill. Walk 1 / run 4, 30 minutes. When those last intervals are done — you finished. Eight weeks. You showed up. Now we build what\'s next.'
+  };
+  return notes[w] || '';
+}
+
+// ─── BUILD ALL 32 SESSIONS ────────────────────────────────────────────────────
+
+for (let w = 1; w <= 8; w++) {
+  buildSession(w, {
+    id: 'mon', label: 'Monday · Glutes + Core', title: 'Glute Day',
+    duration: '55–60 min', warm_up_exercises: lowerWarmUp, warm_up_duration: '8–10 min',
+    exercises: monExercises(w), cooldown_exercises: lowerCooldown, cooldown_duration: '6–8 min',
+    progression_note: monProgNote(w)
+  });
+  buildSession(w, {
+    id: 'tue', label: 'Tuesday · Upper Body + Cardio', title: 'Upper Strength',
+    duration: '55–60 min', warm_up_exercises: upperWarmUp, warm_up_duration: '8–10 min',
+    exercises: tueExercises(w), cooldown_exercises: upperCooldown, cooldown_duration: '6 min',
+    progression_note: tueProgNote(w)
+  });
+
+  // Inject Wednesday between Tuesday and Thursday
+  const wedContainer = document.getElementById('week-' + w + '-sessions');
+  if (wedContainer) {
+    const wedNotes = {
+      1: '<strong>Get outside. A hike, a long walk, good music, fresh air.</strong> This is not skipping the gym — this is part of the program. Your body recovers here. Your mind resets here.',
+      2: '<strong>Outside. Moving. Music on.</strong> Mid-week momentum — a walk or hike keeps energy flowing without draining recovery. This is the day that makes Thursday better.',
+      3: '<strong>You\u2019re in the hardest week of Mesocycle 1. Today is required recovery.</strong> Get outside, walk, decompress. You will train harder Thursday because you rested today.',
+      4: '<strong>You\u2019re four weeks in and your body is working hard. Go outside today.</strong> Hike, walk, breathe. Let the work from Mon/Tue land before you go again Thursday.',
+      5: '<strong>Outside. This is a gift, not an obligation.</strong> Halfway through. A hike or long walk today is the best thing you can do for your muscles, mind, and motivation.',
+      6: '<strong>Deload week — this rest day is intentional recovery.</strong> If the couch is calling, answer it guilt-free. A gentle walk counts. Let your nervous system breathe.',
+      7: '<strong>Peak week — this rest day is not optional.</strong> Get outside — a long walk, a hike, whatever sounds good. Let your legs recover so Thursday and Friday are your best.',
+      8: '<strong>Final Wednesday of this program.</strong> Go outside. Walk somewhere you love. Listen to music that makes you feel like yourself. You\u2019ve shown up every week — this counts too.'
+    };
+    const wedDiv = document.createElement('div');
+    wedDiv.className = 'wednesday-rest-inline';
+    wedDiv.innerHTML = '<span class="wed-inline-label">Wednesday — Active Rest</span>' + (wedNotes[w] || '');
+    wedContainer.appendChild(wedDiv);
+  }
+
+  buildSession(w, {
+    id: 'thu', label: 'Thursday · Quads + Conditioning', title: 'Quad Day',
+    duration: '55–60 min', warm_up_exercises: lowerWarmUp, warm_up_duration: '8–10 min',
+    exercises: thuExercises(w), cooldown_exercises: lowerCooldown, cooldown_duration: '6–8 min',
+    progression_note: thuProgNote(w)
+  });
+  buildSession(w, {
+    id: 'fri', label: 'Friday · Upper Body + Cardio', title: 'Upper Hypertrophy',
+    duration: '55–60 min', warm_up_exercises: upperWarmUp, warm_up_duration: '8–10 min',
+    exercises: friExercises(w), cooldown_exercises: upperCooldown, cooldown_duration: '6 min',
+    progression_note: friProgNote(w)
+  });
+}
+
+loadData();
+</script>
+</body>
+</html>
