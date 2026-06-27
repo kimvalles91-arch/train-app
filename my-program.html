@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAIN — Your Program</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F5F1EC;
+  --surface:#EDE6DB;
+  --surface2:#E3D9C8;
+  --border:#D9CCB6;
+  --border2:#BFA98A;
+  --text:#3A2E22;
+  --text2:#4A3C2C;
+  --muted:#6B5D49;
+  --muted2:#9C8B72;
+  --cobalt:oklch(0.78 0.06 235);
+  --cobalt-faint:oklch(0.78 0.06 235 / 0.18);
+  --cobalt-mid:oklch(0.78 0.06 235 / 0.32);
+  --cobalt-light:oklch(0.78 0.06 235 / 0.10);
+  --cobalt-text:oklch(0.52 0.07 235);
+  --radius:10px;
+  --radius-sm:6px;
+}
+body{background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',sans-serif;font-weight:400;min-height:100vh;}
+.page{max-width:900px;margin:0 auto;padding:60px 32px 100px;}
+
+/* HEADER */
+.program-header{text-align:center;padding:60px 0 40px;}
+.header-eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.46em;text-transform:uppercase;color:var(--muted2);margin-bottom:20px;}
+.program-name{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text);margin-bottom:8px;}
+.program-tagline{font-size:15px;font-weight:300;color:var(--muted2);margin-bottom:32px;}
+.program-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:32px;margin-top:24px;}
+.meta-item{text-align:center;}
+.meta-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px;}
+.meta-value{font-size:14px;font-weight:500;color:var(--text);}
+
+/* CLIENT NOTE */
+.client-note{background:var(--cobalt-light);border-left:4px solid var(--cobalt);padding:24px 28px;margin:40px 0;font-size:14px;line-height:1.9;color:var(--text2);border-radius:var(--radius);}
+.client-note-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:10px;display:block;font-weight:600;}
+
+/* INJURY FLAG */
+.injury-flag{background:rgba(192,57,43,0.05);border-left:2px solid #c0392b;padding:16px 20px;margin:20px 0;font-size:13px;color:#c0392b;line-height:1.7;}
+.injury-flag strong{display:block;margin-bottom:4px;letter-spacing:.5px;}
+
+/* WEEK TABS */
+.week-nav{display:flex;gap:2px;margin:40px 0 0;overflow-x:auto;padding-bottom:1px;}
+.week-tab{flex-shrink:0;padding:10px 20px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:1px solid var(--border2);background:var(--surface);color:var(--muted);transition:all .2s;border-radius:var(--radius-sm);}
+.week-tab:hover{border-color:var(--cobalt);color:var(--cobalt-text);background:var(--cobalt-light);}
+.week-tab.active{background:var(--cobalt);color:var(--text);border-color:var(--cobalt);font-weight:600;}
+.week-tab.deload{border-style:dashed;}
+.week-content{display:none;}
+.week-content.active{display:block;}
+
+/* WEEK HEADER */
+.week-header{padding:28px 0 20px;margin-bottom:4px;}
+.week-phase{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:8px;font-weight:600;}
+.week-title{font-size:32px;font-weight:600;color:var(--text);margin-bottom:6px;letter-spacing:-0.02em;}
+.week-note{font-size:14px;color:var(--muted);line-height:1.8;max-width:560px;font-weight:400;}
+
+/* SESSION CARD */
+.session{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--cobalt);margin-bottom:14px;border-radius:var(--radius);overflow:hidden;}
+.session-header{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:background .15s;}
+.session-header:hover{background:var(--surface2);}
+.session-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt-text);font-weight:600;}
+.session-title{font-size:17px;font-weight:500;color:var(--text);margin-top:4px;}
+.session-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
+.session-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);}
+.session-progress{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--cobalt-text);font-weight:600;}
+.session-toggle{font-size:16px;color:var(--cobalt-text);transition:transform .2s;margin-top:4px;}
+.session.open .session-toggle{transform:rotate(180deg);}
+.session-body{display:none;padding:0;}
+.session.open .session-body{display:block;}
+
+/* PROGRESS BAR */
+.session-prog-bar{height:3px;background:var(--border);margin:0;border-radius:0 0 0 0;}
+.session-prog-fill{height:100%;background:var(--cobalt);transition:width .3s;width:0%;}
+
+/* WARM UP / COOLDOWN */
+.protocol-block{background:var(--cobalt-light);padding:14px 22px;margin:0;border-bottom:1px solid var(--border);border-left:3px solid var(--cobalt);}
+.protocol-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:8px;font-weight:600;}
+.protocol-list{list-style:none;}
+.protocol-list li{font-size:12px;color:var(--muted);padding:3px 0;display:flex;justify-content:space-between;}
+.protocol-list li span{color:var(--muted2);font-size:11px;font-family:'JetBrains Mono',monospace;}
+
+/* EXERCISE TABLE */
+.exercise-table{width:100%;border-collapse:collapse;}
+.exercise-table th{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;}
+.exercise-table th.center{text-align:center;}
+.ex-row{border-bottom:1px solid var(--border);}
+.ex-row:last-child{border-bottom:none;}
+.ex-row.completed .ex-name{color:var(--muted2);text-decoration:line-through;}
+.ex-row td{padding:16px 14px;vertical-align:top;}
+.ex-name{font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:3px;transition:color .15s;}
+.ex-detail{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cobalt-text);display:block;margin-bottom:4px;font-weight:600;}
+.ex-cue{font-size:12px;color:var(--muted);font-style:italic;display:block;line-height:1.6;margin-top:4px;}
+.ex-cat{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted2);display:block;margin-top:2px;}
+
+/* SETS TRACKING COLUMN */
+.sets-col{width:240px;}
+.set-row{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+.set-row:last-child{margin-bottom:0;}
+.set-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);width:30px;flex-shrink:0;}
+.weight-input{width:60px;font-family:'JetBrains Mono',monospace;font-size:13px;padding:6px 8px;border:1px solid var(--border2);background:var(--bg);color:var(--text);text-align:center;outline:none;transition:all .15s;border-radius:var(--radius-sm);}
+.weight-input:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-faint);}
+.reps-input{width:48px;font-family:'JetBrains Mono',monospace;font-size:13px;padding:6px 8px;border:1px solid var(--border2);background:var(--bg);color:var(--text);text-align:center;outline:none;transition:all .15s;border-radius:var(--radius-sm);}
+.reps-input:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-faint);}
+.unit{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+.sep{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+
+/* EXPORT BUTTON */
+.export-btn{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;border:1px solid var(--border2);background:transparent;color:var(--muted2);cursor:pointer;transition:all .15s;border-radius:var(--radius-sm);}
+.export-btn:hover{border-color:var(--cobalt);color:var(--cobalt-text);}
+
+/* CHECK COLUMN */
+.check-col{width:48px;text-align:center;}
+.check-wrap{display:flex;align-items:center;justify-content:center;padding-top:4px;}
+.custom-check{width:20px;height:20px;border:1.5px solid var(--border2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;background:transparent;border-radius:5px;}
+.custom-check:hover{border-color:var(--cobalt);}
+.custom-check.done{background:var(--cobalt);border-color:var(--cobalt);}
+.custom-check.done::after{content:'';width:10px;height:6px;border-left:2px solid var(--text);border-bottom:2px solid var(--text);transform:rotate(-45deg) translateY(-1px);display:block;}
+
+/* NOTES ROW */
+.notes-row{background:var(--surface2);border-bottom:1px solid var(--border);}
+.notes-row:last-child{border-bottom:none;}
+.notes-row td{padding:10px 14px;}
+.notes-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:6px;font-weight:600;}
+.notes-input{width:100%;font-size:13px;font-weight:400;color:var(--text);background:transparent;border:none;border-bottom:1px solid var(--border2);padding:4px 0;font-family:'Hanken Grotesk',sans-serif;resize:none;outline:none;transition:border-color .15s;}
+.notes-input:focus{border-bottom-color:var(--cobalt);}
+.notes-input::placeholder{color:var(--muted2);font-style:italic;}
+
+/* SESSION FOOTER */
+.session-footer{padding:12px 22px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--cobalt-light);}
+.complete-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
+.complete-count .done-num{color:var(--cobalt-text);font-weight:600;}
+.save-note{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+
+/* EXPORT BAR */
+.export-bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;margin:24px 0 0;border-top:1px solid var(--border);}
+.export-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.05em;}
+.export-btn{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:10px 22px;border:1px solid var(--cobalt);background:transparent;color:var(--cobalt-text);cursor:pointer;transition:all .15s;border-radius:var(--radius-sm);}
+.export-btn:hover{background:var(--cobalt);color:var(--text);}
+
+/* PROGRESSION */
+.progression-block{border:1px solid var(--cobalt-mid);border-left:4px solid var(--cobalt);padding:18px 22px;margin:16px 22px;background:var(--cobalt-light);border-radius:var(--radius-sm);}
+.progression-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:8px;font-weight:600;}
+.progression-text{font-size:13px;color:var(--text2);line-height:1.8;font-weight:400;}
+
+/* DELOAD */
+.deload-banner{background:var(--cobalt-light);border:1px dashed var(--cobalt-mid);padding:24px;margin-bottom:12px;text-align:center;border-radius:var(--radius);}
+.deload-title{font-size:20px;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:-0.02em;}
+.deload-text{font-size:13px;color:var(--muted);line-height:1.8;max-width:480px;margin:0 auto;font-weight:400;}
+
+/* CLOSE */
+.program-close{text-align:center;padding:48px 0 40px;margin-top:48px;}
+.close-text{font-size:clamp(15px,2.5vw,20px);font-weight:300;color:var(--muted);max-width:480px;margin:0 auto 16px;line-height:1.7;}
+.close-sig{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);}
+
+/* PRINT */
+@media print{
+  .week-nav,.session-toggle,.session-footer{display:none!important;}
+  .week-content{display:block!important;}
+  .session-body{display:block!important;}
+  .weight-input{border:1px solid #ccc;}
+}
+@media(max-width:600px){
+  .page{padding:40px 16px 80px;}
+  .sets-col{width:200px;}
+  .weight-input{width:48px;}
+  .reps-input{width:40px;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="program-header">
+    <div class="header-eyebrow">Kim Valles Coaching &nbsp;·&nbsp; TRAIN</div>
+    <div class="program-name" id="program-name">Your 8-Week Program</div>
+    <div class="program-tagline" id="program-tagline">Personalized for you and your goals.</div>
+    <div class="program-meta">
+      <div class="meta-item"><div class="meta-label">Client</div><div class="meta-value" id="meta-client">—</div></div>
+      <div class="meta-item"><div class="meta-label">Goal</div><div class="meta-value" id="meta-goal">—</div></div>
+      <div class="meta-item"><div class="meta-label">Split</div><div class="meta-value" id="meta-split">—</div></div>
+      <div class="meta-item"><div class="meta-label">Days / Week</div><div class="meta-value" id="meta-days">—</div></div>
+      <div class="meta-item"><div class="meta-label">Session Length</div><div class="meta-value" id="meta-duration">—</div></div>
+      <div class="meta-item"><div class="meta-label">Equipment</div><div class="meta-value" id="meta-equipment">—</div></div>
+    </div>
+  </div>
+
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:40px;"></div>
+
+  <div class="injury-flag" id="injury-flag" style="display:none">
+    <strong>Injury modifications applied</strong>
+    <span id="injury-flag-text"></span>
+  </div>
+
+  <div class="client-note">
+    <span class="client-note-label">A note from TRAIN</span>
+    <span id="client-note-text">Your program is ready. Every session was built around your goal, your body, and your life. Show up, follow the plan, and trust the process. You've already done the hardest part — you started.</span>
+  </div>
+
+  <div style="width:100%;height:1px;background:var(--border);margin:32px 0 0;"></div>
+
+  <!-- WEEK TABS -->
+  <div class="week-nav" id="week-nav">
+    <button class="week-tab active" onclick="showWeek(1)">Week 1</button>
+    <button class="week-tab" onclick="showWeek(2)">Week 2</button>
+    <button class="week-tab" onclick="showWeek(3)">Week 3</button>
+    <button class="week-tab" onclick="showWeek(4)">Week 4</button>
+    <button class="week-tab" onclick="showWeek(5)">Week 5</button>
+    <button class="week-tab deload" onclick="showWeek(6)">Week 6 — Recovery</button>
+    <button class="week-tab" onclick="showWeek(7)">Week 7</button>
+    <button class="week-tab" onclick="showWeek(8)">Week 8</button>
+  </div>
+
+  <!-- WEEKS -->
+  <div id="week-1" class="week-content active">
+    <div class="week-header">
+      <div class="week-phase">Mesocycle 1 — Week 1</div>
+      <div class="week-title">Foundation</div>
+      <div class="week-note">Week 1 isn't about going hard — it's about going smart. This week is about learning the program, dialing in your form, and building a strong foundation. Slow down, be present, and pay attention to what each movement feels like. Ask yourself: What muscles are working? Where should I be feeling this exercise? Don't worry about lifting your heaviest weights yet. Focus on quality over quantity. Master the movement patterns, establish consistency, and trust the process. We're not chasing quick results — we're building something real, something sustainable. Every rep this week is an investment in the strength, confidence, and progress that's coming. Let's get to work.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-1-sessions"></div>
+  </div>
+
+  <div id="week-2" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Mesocycle 1 — Week 2</div>
+      <div class="week-title">Accumulation</div>
+      <div class="week-note">Week 2 is where we start building momentum. By now, you should be feeling the effects of your training — and that's a good thing. Your body is adapting, getting stronger, and preparing for what's next. This week, aim to work toward the top of your prescribed rep ranges. If you reach the upper end of the range and still feel like you have 2 or more reps left in the tank, it's time to increase the weight. Be intentional. Track every set, every rep, and every load. The numbers you record this week will become the foundation for your progress moving forward. Remember: we're not just completing workouts — we're collecting data, building strength, and creating measurable progress. Stay focused, trust the process, and keep showing up. Let's keep stacking wins.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-2-sessions"></div>
+  </div>
+
+  <div id="week-3" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Mesocycle 1 — Week 3</div>
+      <div class="week-title">Intensification</div>
+      <div class="week-note">Week 3 is where it starts to get real. Over the past two weeks, you've built the foundation. You've learned the movements, established consistency, and gathered the data. Now it's time to turn that foundation into progress. This week, challenge yourself to dig a little deeper. Approach each set with intention and confidence. Trust the strength you've built and don't be afraid to push yourself when the opportunity is there. Your goal isn't to be reckless — it's to be resilient. Stay disciplined with your form, embrace the discomfort that comes with growth, and remember that progress often lives just outside of your comfort zone. Keep tracking your weights, reps, and performance. Small improvements compound quickly, and every workout is another opportunity to become stronger than you were last week. This is what you've been building toward. Let's see what you're capable of.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-3-sessions"></div>
+  </div>
+
+  <div id="week-4" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Week 4 — Performance</div>
+      <div class="week-title">Performance Week</div>
+      <div class="week-note">Take a moment to appreciate what you've accomplished. Four weeks ago, this program was brand new. Today, you're moving with more confidence, more strength, and a deeper understanding of your body. The work you've put in is starting to show. This week is about performance. Not perfection. Not proving anything. Performance. Challenge yourself to match or exceed the numbers you've recorded over the past few weeks. Lean into your strength, trust your preparation, and give yourself permission to see what you're capable of. Progress isn't always measured by the scale or the mirror. Sometimes it's the extra rep, the heavier dumbbell, the improved form, or the confidence that comes from doing hard things consistently. One month down. Countless opportunities ahead. Finish this phase strong — you've earned it.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-4-sessions"></div>
+  </div>
+
+  <div id="week-5" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Week 5 — New Baseline</div>
+      <div class="week-title">New Baseline</div>
+      <div class="week-note">Take a moment to recognize how far you've come. Five weeks ago, you were learning the movements, building confidence, and establishing new habits. Today, you're stronger, more skilled, and more capable than when you started. What once felt challenging is now your baseline. This week marks the beginning of a new phase. You'll see some new exercise variations and progressions designed to keep you moving forward. Remember: we're not starting over — we're building from a stronger foundation. Approach these new movements with the same intention and focus that got you here. Stay patient as you learn, trust the process, and continue tracking your progress. The goal isn't to be perfect, it's to keep moving forward.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-5-sessions"></div>
+  </div>
+
+  <div id="week-6" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Week 6 — Recommended Deload</div>
+      <div class="week-title">Recovery Week</div>
+      <div class="week-note">You've spent the last five weeks building strength, accumulating volume, and pushing your body to adapt. But progress isn't just built through hard training — it's built through recovery. This week is your recommended deload, and it's one of the most important weeks of the entire program. By now, fatigue has accumulated. Your muscles, joints, and nervous system have been working hard, and this week gives your body the opportunity to absorb all of that work and come back stronger. Remember: you don't grow during training — you grow from recovering from training. We'll keep the same movements this week, but reduce the demands. Perform just 2 working sets per exercise and decrease your loads to roughly 60% of what you've been using. Move with intention, focus on quality, and enjoy the opportunity to train without having to push. Think of this week as an investment, not a step backward. Recovery isn't a reward you earn — it's part of the process. Trust it. The strength you've been building doesn't disappear here. In fact, some of your biggest gains are waiting on the other side of this week. Recover well. The next phase is coming. 💪</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div class="deload-banner">
+      <div class="deload-title">Recovery week</div>
+      <div class="deload-text">Same movements. 2 sets. 60% of your best loads. No conditioning finishers. Supercompensation happens right here — let it.</div>
+    </div>
+    <div id="week-6-sessions"></div>
+  </div>
+
+  <div id="week-7" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Week 7 — Peak Week</div>
+      <div class="week-title">Peak Week</div>
+      <div class="week-note">This is your strongest week yet. Over the last six weeks, you've laid the foundation, built momentum, pushed your limits, recovered with intention, and prepared your body for this moment. Peak Week is where all of that work comes together. You should be feeling refreshed, confident, and ready to perform. This week, we're turning the dial up. Push your primary lifts to an RPE of 8–9–10 (meaning your sets should feel challenging, with about 2 reps left in the tank at an RPE 8, 1 rep left at an RPE 9, and no reps left at an RPE 10). Trust the numbers you've built, trust your technique, and don't be afraid to challenge yourself. Remember, intensity doesn't mean sacrificing form. Stay disciplined, move with purpose, and make every rep count. Quality always comes first. This is your opportunity to showcase the strength you've earned. The weight you're lifting today isn't random — it's the result of weeks of consistency, patience, and effort. Be present. Be confident. Be proud of how far you've come. You've earned every rep. Now go get it.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-7-sessions"></div>
+  </div>
+
+  <div id="week-8" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Week 8 — Finish Strong</div>
+      <div class="week-title">Finish Strong</div>
+      <div class="week-note">Eight weeks ago, you made a commitment to yourself — and you honored it. Through every phase of this program, you've shown up. You learned the movements, built momentum, pushed your limits, recovered with intention, and discovered just how strong you're capable of becoming. This week isn't about chasing perfection. It's about finishing with purpose. As you move through your workouts, take time to reflect on how far you've come. Compare your Week 1 numbers to where you are today. Those improvements didn't happen by accident — they were earned through consistency, patience, and showing up week after week. That gap between where you started and where you are today? That's yours. Push hard this week, but don't forget to appreciate the process that got you here. Strength isn't built in a single workout. It's built through the hundreds of reps, the small decisions, and the promises you've kept to yourself along the way. When this week is complete, don't just move on. Pause. Assess. Reflect. Celebrate. What got stronger? What felt better? Where did you surprise yourself? What do you want to accomplish next? Because this isn't the end. It's your new beginning. You've built something real over these last eight weeks. Now let's build the next chapter.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-8-sessions"></div>
+  </div>
+
+  <!-- EXPORT BAR -->
+  <div class="export-bar">
+    <span class="export-label">All weights, reps and notes save automatically in this browser</span>
+    <button class="export-btn" onclick="exportCSV()">Export progress CSV</button>
+  </div>
+
+  <!-- CLOSE -->
+  <div style="width:100%;height:1px;background:var(--border);margin-top:48px;"></div>
+  <div class="program-close">
+    <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 28px;">
+      <path d="M10 2 C10 16, 30 24, 30 32 C30 40, 10 48, 10 62" stroke="rgba(63,63,63,0.25)" stroke-width="1.2" fill="none"/>
+      <path d="M30 2 C30 16, 10 24, 10 32 C10 40, 30 48, 30 62" stroke="rgba(63,63,63,0.25)" stroke-width="1.2" fill="none"/>
+      <line x1="10" y1="8" x2="30" y2="8" stroke="rgba(63,63,63,0.12)" stroke-width="1"/>
+      <line x1="13" y1="16" x2="27" y2="16" stroke="rgba(63,63,63,0.16)" stroke-width="1"/>
+      <line x1="18" y1="24" x2="22" y2="24" stroke="rgba(63,63,63,0.20)" stroke-width="1"/>
+      <line x1="20" y1="32" x2="20" y2="32" stroke="rgba(63,63,63,0.24)" stroke-width="1"/>
+      <line x1="18" y1="40" x2="22" y2="40" stroke="rgba(63,63,63,0.20)" stroke-width="1"/>
+      <line x1="13" y1="48" x2="27" y2="48" stroke="rgba(63,63,63,0.16)" stroke-width="1"/>
+      <line x1="10" y1="56" x2="30" y2="56" stroke="rgba(63,63,63,0.12)" stroke-width="1"/>
+      <circle r="2" fill="oklch(0.60 0.105 252)" opacity="0.6">
+        <animateMotion dur="3s" repeatCount="indefinite">
+          <mpath href="#close-path"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.9;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <defs><path id="close-path" d="M10 2 C10 16, 30 24, 30 32 C30 40, 10 48, 10 62"/></defs>
+    </svg>
+    <div class="close-sig" style="margin-top:16px;">TRAIN &nbsp;·&nbsp; Kim Valles Coaching</div>
+  </div>
+
+</div>
+
+<script>
+const STORAGE_KEY = 'train_program_' + (window.location.pathname.split('/').pop() || 'default');
+
+function showWeek(n) {
+  document.querySelectorAll('.week-content').forEach(w => w.classList.remove('active'));
+  document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('week-' + n).classList.add('active');
+  document.querySelectorAll('.week-tab')[n-1].classList.add('active');
+  window.scrollTo({top: document.querySelector('.week-nav').offsetTop - 20, behavior:'smooth'});
+}
+
+document.addEventListener('click', function(e) {
+  const header = e.target.closest('.session-header');
+  if (header && !e.target.closest('.custom-check')) {
+    header.closest('.session').classList.toggle('open');
+  }
+});
+
+function toggleCheck(el, sessionId, exIdx) {
+  el.classList.toggle('done');
+  const row = document.getElementById('ex-row-' + sessionId + '-' + exIdx);
+  if (row) row.classList.toggle('completed');
+  updateSessionProgress(sessionId);
+  saveData();
+}
+
+function updateSessionProgress(sessionId) {
+  const session = document.getElementById('session-' + sessionId);
+  if (!session) return;
+  const checks = session.querySelectorAll('.custom-check');
+  const done = session.querySelectorAll('.custom-check.done').length;
+  const total = checks.length;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  const fill = session.querySelector('.session-prog-fill');
+  if (fill) fill.style.width = pct + '%';
+  const prog = session.querySelector('.session-progress');
+  if (prog) prog.textContent = done + ' / ' + total + ' done';
+  const count = session.querySelector('.complete-count');
+  if (count) count.innerHTML = '<span class="done-num">' + done + '</span> of ' + total + ' exercises complete';
+}
+
+function saveData() {
+  const data = {};
+  document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.notes-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.custom-check.done').forEach(ch => {
+    if (ch.dataset.key) data[ch.dataset.key] = '1';
+  });
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+}
+
+function loadData() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.notes-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.custom-check').forEach(ch => {
+      if (ch.dataset.key && data[ch.dataset.key]) {
+        ch.classList.add('done');
+        const row = document.getElementById(ch.dataset.rowId);
+        if (row) row.classList.add('completed');
+      }
+    });
+    document.querySelectorAll('.session').forEach(s => {
+      const id = s.id.replace('session-','');
+      if (id) updateSessionProgress(id);
+    });
+  } catch(e) {}
+}
+
+function exportCSV() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    const rows = [['Week', 'Session', 'Exercise', 'Set', 'Weight (lbs)', 'Reps', 'Notes', 'Completed']];
+    const keys = Object.keys(data);
+
+    const parsed = {};
+    keys.forEach(k => {
+      const parts = k.split('_');
+      if (k.endsWith('_w') || k.endsWith('_r') || k.endsWith('_note') || k.endsWith('_done')) {
+        const base = k.replace(/_w$|_r$|_note$|_done$/, '');
+        if (!parsed[base]) parsed[base] = {};
+        if (k.endsWith('_w')) parsed[base].weight = data[k];
+        if (k.endsWith('_r')) parsed[base].reps = data[k];
+        if (k.endsWith('_note')) parsed[base].note = data[k];
+        if (k.endsWith('_done')) parsed[base].done = '✓';
+      }
+    });
+
+    const setKeys = Object.keys(parsed).filter(k => k.match(/_set\d+$/));
+    const exKeys = [...new Set(setKeys.map(k => k.replace(/_set\d+$/, '')))];
+
+    exKeys.forEach(exKey => {
+      const weekMatch = exKey.match(/^w(\d+)/);
+      const week = weekMatch ? weekMatch[1] : '?';
+      const sessionPart = exKey.replace(/^w\d+_/, '').replace(/_ex\d+$/, '');
+      const exMatch = exKey.match(/_ex(\d+)$/);
+      const exIdx = exMatch ? exMatch[1] : '?';
+
+      const setNums = setKeys.filter(k => k.startsWith(exKey + '_set'));
+      setNums.forEach(setKey => {
+        const setMatch = setKey.match(/_set(\d+)$/);
+        const setNum = setMatch ? (parseInt(setMatch[1]) + 1) : '?';
+        const d = parsed[setKey] || {};
+        const noteKey = exKey + '_note';
+        const doneKey = exKey + '_done';
+        rows.push([
+          'Week ' + week,
+          sessionPart.replace(/_/g, ' '),
+          'Exercise ' + (parseInt(exIdx) + 1),
+          'Set ' + setNum,
+          d.weight || '',
+          d.reps || '',
+          data[noteKey] || '',
+          data[doneKey] ? '✓' : ''
+        ]);
+      });
+    });
+
+    const csv = rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(',')).join('\n');
+    const blob = new Blob([csv], {type: 'text/csv'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'train_progress_' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch(e) { alert('Export failed — try again.'); }
+}
+
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('weight-input') || e.target.classList.contains('reps-input') || e.target.classList.contains('notes-input')) saveData();
+});
+
+function buildSession(weekNum, session) {
+  const container = document.getElementById('week-' + weekNum + '-sessions');
+  if (!container) return;
+  const sessionId = 'w' + weekNum + '_' + (session.id || session.title || '').replace(/\s+/g,'_').toLowerCase();
+
+  const warmUpItems = (session.warm_up_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.sets_reps || e.duration || ''}</span></li>`).join('');
+
+  const cooldownItems = (session.cooldown_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.hold || e.duration || ''}</span></li>`).join('');
+
+  const exerciseRows = (session.exercises || []).map((e, idx) => {
+    const numSets = parseInt(e.sets) || 3;
+    const setRows = Array.from({length: numSets}, (_, i) => {
+      const key = `${sessionId}_ex${idx}_set${i}`;
+      return `<div class="set-row">
+        <span class="set-num">Set ${i+1}</span>
+        <input class="weight-input" type="text" placeholder="—" data-key="${key}_w" aria-label="Weight set ${i+1}">
+        <span class="unit">lbs</span>
+        <span class="sep">×</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_r" aria-label="Reps set ${i+1}">
+        <span class="unit">reps</span>
+      </div>`;
+    }).join('');
+
+    const checkKey = `${sessionId}_ex${idx}_done`;
+    const rowId = `ex-row-${sessionId}-${idx}`;
+    return `
+      <tr class="ex-row" id="${rowId}">
+        <td>
+          <span class="ex-name">${e.name}</span>
+          ${e.category ? `<span class="ex-cat">${e.category}</span>` : ''}
+          <span class="ex-detail">${e.sets || '—'} × ${e.reps || e.duration || '—'}${e.tempo ? ' · ' + e.tempo : ''}${e.rest ? ' · rest ' + e.rest : ''}${e.RPE ? ' · RPE ' + e.RPE : ''}</span>
+          ${e.cue ? `<span class="ex-cue">${e.cue}</span>` : ''}
+          ${e.note ? `<span class="ex-cue">${e.note}</span>` : ''}
+        </td>
+        <td class="sets-col">${setRows}</td>
+        <td class="check-col">
+          <div class="check-wrap">
+            <div class="custom-check" onclick="toggleCheck(this,'${sessionId}',${idx})" data-key="${checkKey}" data-row-id="${rowId}" aria-label="Mark complete"></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="notes-row">
+        <td colspan="3">
+          <div class="notes-label">Session notes</div>
+          <input class="notes-input" type="text" placeholder="How it felt, what to adjust, anything to remember next week…" data-key="${sessionId}_ex${idx}_note">
+        </td>
+      </tr>`;
+  }).join('');
+
+  const html = `
+    <div class="session" id="session-${sessionId}">
+      <div class="session-header">
+        <div>
+          <div class="session-label">${session.label || 'Session'}</div>
+          <div class="session-title">${session.title || 'Training Session'}</div>
+        </div>
+        <div class="session-right">
+          <div class="session-meta">${session.duration || ''}</div>
+          <div class="session-progress">0 / ${(session.exercises||[]).length} done</div>
+          <div class="session-toggle">↓</div>
+        </div>
+      </div>
+      <div class="session-prog-bar"><div class="session-prog-fill"></div></div>
+      <div class="session-body">
+        ${warmUpItems ? `<div class="protocol-block"><div class="protocol-label">Warm-up · ${session.warm_up_duration||'8–10 min'}</div><ul class="protocol-list">${warmUpItems}</ul></div>` : ''}
+        <table class="exercise-table">
+          <thead><tr>
+            <th>Exercise</th>
+            <th class="sets-col">Sets · weight · reps</th>
+            <th class="center check-col">Done</th>
+          </tr></thead>
+          <tbody>${exerciseRows}</tbody>
+        </table>
+        ${cooldownItems ? `<div class="protocol-block"><div class="protocol-label">Cooldown &amp; stretch · ${session.cooldown_duration||'8 min'}</div><ul class="protocol-list">${cooldownItems}</ul></div>` : ''}
+        ${session.progression_note ? `<div class="progression-block"><div class="progression-label">Progression this week</div><div class="progression-text">${session.progression_note}</div></div>` : ''}
+        <div class="session-footer">
+          <span class="complete-count"><span class="done-num">0</span> of ${(session.exercises||[]).length} exercises complete</span>
+          <span class="save-note">saves automatically</span>
+        </div>
+      </div>
+    </div>`;
+
+  container.insertAdjacentHTML('beforeend', html);
+  updateSessionProgress(sessionId);
+}
+
+window.addEventListener('load', loadData);
+
+window.addEventListener('load', loadData);
+
+const programData = {};
+
+const programData = {};
+</script>
+</body>
+</html>
