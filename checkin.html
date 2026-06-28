@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAIN — Weekly Check-In</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F0EFED;
+  --surface:#E8E6E3;
+  --surface2:#DDDBD8;
+  --border:#D0CEC9;
+  --border2:#A8A5A0;
+  --text:#1A1A1A;
+  --text2:#2C2C2C;
+  --muted:#4A4845;
+  --muted2:#8A8680;
+  --cobalt:oklch(0.55 0.12 252);
+  --cobalt-faint:oklch(0.55 0.12 252 / 0.08);
+  --cobalt-mid:oklch(0.55 0.12 252 / 0.15);
+  --error:#c0392b;
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',sans-serif;font-weight:400;min-height:100vh;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;z-index:100;background:linear-gradient(to bottom,var(--bg) 60%,transparent);}
+.nav-brand{text-decoration:none;}
+.nav-wordmark{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--text);}
+.nav-sub{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted2);margin-top:2px;}
+
+/* HERO */
+.hero{padding:120px 40px 60px;max-width:760px;margin:0 auto;}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--cobalt);margin-bottom:16px;font-weight:500;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cobalt);}
+.hero-title{font-size:clamp(36px,5vw,56px);font-weight:700;color:var(--text);letter-spacing:-0.03em;line-height:1;margin-bottom:16px;}
+.hero-sub{font-size:15px;color:var(--muted);line-height:1.8;max-width:520px;}
+
+/* FORM */
+.form-wrap{max-width:760px;margin:0 auto;padding:0 40px 100px;}
+
+/* SECTION */
+.form-section{margin-bottom:48px;}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--cobalt);margin-bottom:20px;font-weight:500;display:flex;align-items:center;gap:12px;}
+.section-label::before{content:'';width:16px;height:1px;background:var(--cobalt);}
+.section-divider{width:100%;height:1px;background:var(--border);margin-bottom:32px;}
+
+/* FIELD */
+.field{margin-bottom:24px;}
+.field-label{font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px;display:block;}
+.field-hint{font-size:12px;color:var(--muted2);margin-bottom:8px;display:block;font-style:italic;}
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="url"],
+.field textarea,
+.field select{
+  width:100%;
+  font-family:'Hanken Grotesk',sans-serif;
+  font-size:14px;
+  color:var(--text);
+  background:var(--surface);
+  border:1px solid var(--border2);
+  padding:12px 14px;
+  outline:none;
+  transition:border-color .15s;
+  border-radius:0;
+  -webkit-appearance:none;
+}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--cobalt);background:var(--bg);}
+.field textarea{resize:vertical;min-height:80px;line-height:1.7;}
+.field select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8680' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+::placeholder{color:var(--muted2);}
+
+/* GRID */
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+
+/* SESSIONS LIST */
+.sessions-list{display:flex;flex-direction:column;gap:8px;margin-bottom:8px;}
+.session-row{display:flex;align-items:center;gap:14px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);transition:all .15s;}
+.session-row.checked{background:var(--cobalt-faint);border-color:var(--cobalt);}
+.session-check{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;flex-shrink:0;width:92px;}
+.session-check-day{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);}
+.session-row.checked .session-check-day{color:var(--cobalt);font-weight:500;}
+.session-check-box{width:18px;height:18px;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;}
+.session-row.checked .session-check-box{background:var(--cobalt);border-color:var(--cobalt);}
+.session-row.checked .session-check-box::after{content:'';width:8px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translateY(-1px);display:block;}
+.session-workout-input{flex:1;min-width:0;font-family:'Hanken Grotesk',sans-serif;font-size:13px;color:var(--text);background:var(--bg);border:1px solid var(--border2);padding:8px 10px;outline:none;transition:border-color .15s,opacity .15s;border-radius:0;display:none;}
+.session-row.checked .session-workout-input{display:block;}
+.session-workout-input:focus{border-color:var(--cobalt);}
+@media(max-width:600px){
+  .session-row{flex-wrap:wrap;}
+  .session-check{width:auto;}
+  .session-workout-input{width:100%;flex-basis:100%;}
+}
+
+/* RATING */
+.rating-row{display:flex;gap:8px;}
+.rating-btn{flex:1;padding:10px 4px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;border:1px solid var(--border2);background:transparent;color:var(--muted2);cursor:pointer;transition:all .15s;text-align:center;}
+.rating-btn:hover{border-color:var(--cobalt);color:var(--cobalt);}
+.rating-btn.selected{background:var(--cobalt);border-color:var(--cobalt);color:#fff;}
+.rating-label{display:flex;justify-content:space-between;margin-top:6px;}
+.rating-label span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+
+/* PHOTO LINK */
+.photo-box{background:var(--cobalt);border:none;padding:36px 24px;text-align:center;}
+.photo-box-title{font-size:22px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:-0.01em;text-transform:uppercase;}
+.photo-box-sub{font-size:14px;color:rgba(255,255,255,0.9);line-height:1.7;font-weight:500;}
+
+/* SUBMIT */
+.submit-section{border-top:1px solid var(--border);padding-top:32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.submit-btn{font-family:'Hanken Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;background:var(--cobalt);color:#fff;padding:16px 40px;border:none;cursor:pointer;transition:opacity .2s;flex-shrink:0;}
+.submit-btn:hover{opacity:.85;}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed;}
+.submit-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);}
+.status-msg{font-family:'JetBrains Mono',monospace;font-size:10px;padding:10px 14px;display:none;}
+.status-msg.success{background:var(--cobalt-faint);border-left:2px solid var(--cobalt);color:var(--cobalt);}
+.status-msg.error{background:rgba(192,57,43,0.06);border-left:2px solid var(--error);color:var(--error);}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{padding:16px 20px;}
+  .hero{padding:100px 20px 40px;}
+  .form-wrap{padding:0 20px 80px;}
+  .field-row,.field-row-3{grid-template-columns:1fr;}
+  .sessions-grid{grid-template-columns:repeat(2,1fr);}
+  .rating-btn{font-size:10px;padding:8px 2px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-wordmark">TRAIN</div>
+    <div class="nav-sub">Kim Valles Coaching</div>
+  </a>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">Weekly Check-In</div>
+  <h1 class="hero-title">How did this week go?</h1>
+  <p class="hero-sub">Fill this out before your check-in call with Coach Kim. Be honest — the more you share, the better we can coach you.</p>
+</div>
+
+<div class="form-wrap">
+
+  <!-- IDENTITY -->
+  <div class="form-section">
+    <div class="section-label">Your Info</div>
+    <div class="section-divider"></div>
+    <div class="field-row">
+      <div class="field">
+        <label class="field-label">Your name</label>
+        <input type="text" id="client_name" placeholder="First + last name">
+      </div>
+      <div class="field">
+        <label class="field-label">Week number</label>
+        <select id="week_number">
+          <option value="">Select week</option>
+          <option>Week 1</option><option>Week 2</option><option>Week 3</option>
+          <option>Week 4</option><option>Week 5</option><option>Week 6</option>
+          <option>Week 7</option><option>Week 8</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAINING RECAP -->
+  <div class="form-section">
+    <div class="section-label">Training Recap</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">Walk through your week, day by day</label>
+      <span class="field-hint">Check off each day you trained (or rested intentionally) and note what you did.</span>
+      <div class="sessions-list" id="sessions-list">
+        <div class="session-row" data-day="Monday">
+          <div class="session-check" onclick="toggleSession(this,'Monday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Monday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Upper body strength" oninput="updateSessions()">
+        </div>
+        <div class="session-row" data-day="Tuesday">
+          <div class="session-check" onclick="toggleSession(this,'Tuesday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Tuesday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Lower body strength" oninput="updateSessions()">
+        </div>
+        <div class="session-row" data-day="Wednesday">
+          <div class="session-check" onclick="toggleSession(this,'Wednesday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Wednesday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Active rest — hike" oninput="updateSessions()">
+        </div>
+        <div class="session-row" data-day="Thursday">
+          <div class="session-check" onclick="toggleSession(this,'Thursday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Thursday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Full body strength" oninput="updateSessions()">
+        </div>
+        <div class="session-row" data-day="Friday">
+          <div class="session-check" onclick="toggleSession(this,'Friday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Friday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Upper body strength" oninput="updateSessions()">
+        </div>
+        <div class="session-row" data-day="Saturday">
+          <div class="session-check" onclick="toggleSession(this,'Saturday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Saturday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Long walk" oninput="updateSessions()">
+        </div>
+        <div class="session-row" data-day="Sunday">
+          <div class="session-check" onclick="toggleSession(this,'Sunday')">
+            <div class="session-check-box"></div>
+            <span class="session-check-day">Sunday</span>
+          </div>
+          <input type="text" class="session-workout-input" placeholder="What did you do? e.g. Full rest day" oninput="updateSessions()">
+        </div>
+      </div>
+      <input type="hidden" id="sessions_completed">
+    </div>
+    <div class="field">
+      <label class="field-label">Did you miss any sessions?</label>
+      <span class="field-hint">If yes — what got in the way?</span>
+      <textarea id="missed_sessions" placeholder="e.g. Missed Friday — work ran late. Made it up Saturday."></textarea>
+    </div>
+  </div>
+
+  <!-- HOW WORKOUTS FELT -->
+  <div class="form-section">
+    <div class="section-label">How Workouts Felt</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">Overall intensity this week</label>
+      <span class="field-hint">1 = too easy &nbsp;·&nbsp; 5 = just right &nbsp;·&nbsp; 10 = too hard</span>
+      <div class="rating-row" id="intensity-rating"></div>
+      <div class="rating-label"><span>Too easy</span><span>Just right</span><span>Too hard</span></div>
+      <input type="hidden" id="intensity_rating">
+    </div>
+    <div class="field">
+      <label class="field-label">Any exercises that felt particularly hard or off?</label>
+      <textarea id="hard_exercises" placeholder="e.g. Hip thrusts felt weak on Monday. Bulgarian split squats were hard on the left side."></textarea>
+    </div>
+    <div class="field">
+      <label class="field-label">Any exercises you crushed or felt strong on?</label>
+      <textarea id="strong_exercises" placeholder="e.g. Hit a new PR on lat pulldown. RDLs felt really controlled this week."></textarea>
+    </div>
+  </div>
+
+  <!-- BODY METRICS -->
+  <div class="form-section">
+    <div class="section-label">Body Metrics</div>
+    <div class="section-divider"></div>
+    <div class="field-row-3">
+      <div class="field">
+        <label class="field-label">Weight (lbs)</label>
+        <input type="number" id="weight" placeholder="e.g. 131">
+      </div>
+      <div class="field">
+        <label class="field-label">Waist (inches)</label>
+        <input type="number" id="waist" placeholder="optional" step="0.1">
+      </div>
+      <div class="field">
+        <label class="field-label">Hips (inches)</label>
+        <input type="number" id="hips" placeholder="optional" step="0.1">
+      </div>
+    </div>
+    <div class="field">
+      <label class="field-label">How does your body feel overall this week?</label>
+      <textarea id="body_feel" placeholder="e.g. Feeling leaner. Legs are sore. Clothes fitting differently."></textarea>
+    </div>
+  </div>
+
+  <!-- ENERGY SLEEP STRESS -->
+  <div class="form-section">
+    <div class="section-label">Energy · Sleep · Stress</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">Average sleep this week</label>
+      <select id="sleep">
+        <option value="">Select one</option>
+        <option>Less than 5 hours</option>
+        <option>5–6 hours</option>
+        <option>6–7 hours</option>
+        <option>7–8 hours</option>
+        <option>8+ hours</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="field-label">Energy levels this week</label>
+      <div class="rating-row" id="energy-rating"></div>
+      <div class="rating-label"><span>Depleted</span><span>Steady</span><span>Energized</span></div>
+      <input type="hidden" id="energy_rating">
+    </div>
+    <div class="field">
+      <label class="field-label">Stress levels this week</label>
+      <div class="rating-row" id="stress-rating"></div>
+      <div class="rating-label"><span>Very low</span><span>Moderate</span><span>Very high</span></div>
+      <input type="hidden" id="stress_rating">
+    </div>
+    <div class="field">
+      <label class="field-label">Anything affecting your energy or recovery this week?</label>
+      <textarea id="recovery_notes" placeholder="e.g. Work was really stressful. Didn't sleep well mid-week. Feeling good overall."></textarea>
+    </div>
+  </div>
+
+  <!-- NUTRITION -->
+  <div class="form-section">
+    <div class="section-label">Nutrition</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">How was your nutrition this week?</label>
+      <select id="nutrition_overall">
+        <option value="">Select one</option>
+        <option>On point — hit my goals</option>
+        <option>Pretty good — minor slips</option>
+        <option>Mixed — some good days, some rough ones</option>
+        <option>Struggled this week</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="field-label">Were you intentional about protein?</label>
+      <select id="protein">
+        <option value="">Select one</option>
+        <option>Yes — hit my target most days</option>
+        <option>Some days yes, some days no</option>
+        <option>Not really this week</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="field-label">Any nutrition challenges this week?</label>
+      <textarea id="nutrition_challenges" placeholder="e.g. Ate out a lot. In-N-Out twice. Skipped breakfast a few times."></textarea>
+    </div>
+  </div>
+
+  <!-- WINS -->
+  <div class="form-section">
+    <div class="section-label">Wins of the Week</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">What went well this week?</label>
+      <span class="field-hint">Big or small — it all counts. Showing up is a win.</span>
+      <textarea id="wins" placeholder="e.g. Hit all 4 sessions. PR on hip thrust. Chose a walk over the couch on Wednesday. Cooked more meals at home."></textarea>
+    </div>
+  </div>
+
+  <!-- STRUGGLES -->
+  <div class="form-section">
+    <div class="section-label">Struggles of the Week</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">What felt hard or off this week?</label>
+      <span class="field-hint">Be honest — this is how we fix it.</span>
+      <textarea id="struggles" placeholder="e.g. Motivation was low mid-week. Nutrition fell apart Thursday. Left leg feels weaker on lunges."></textarea>
+    </div>
+  </div>
+
+  <!-- GOALS -->
+  <div class="form-section">
+    <div class="section-label">Goals for Next Week</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">What do you want to focus on next week?</label>
+      <textarea id="next_week_goals" placeholder="e.g. Hit all 4 sessions. Increase hip thrust weight. Meal prep Sunday. Get outside Wednesday."></textarea>
+    </div>
+  </div>
+
+  <!-- JOURNAL -->
+  <div class="form-section">
+    <div class="section-label">Open Journal</div>
+    <div class="section-divider"></div>
+    <div class="field">
+      <label class="field-label">Anything else you want Coach Kim to know?</label>
+      <span class="field-hint">How you're feeling mentally. Life stuff. Anything on your mind.</span>
+      <textarea id="journal" placeholder="This is your space. Write whatever feels relevant — nothing is too small." style="min-height:120px;"></textarea>
+    </div>
+  </div>
+
+  <!-- PROGRESS PHOTOS -->
+  <div class="form-section">
+    <div class="section-label">Progress Photos</div>
+    <div class="section-divider"></div>
+    <div class="photo-box">
+      <div class="photo-box-title">📸 Don't forget your progress photos!</div>
+      <div class="photo-box-sub">Front, side, and back — same lighting, same spot, every week.<br>Upload to your personal Google Drive folder.</div>
+    </div>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="submit-section">
+    <button class="submit-btn" id="submit-btn" onclick="submitCheckin()">Send to Coach Kim</button>
+    <span class="submit-note">Submits directly to TRAIN@kimvallescoaching.com</span>
+  </div>
+  <div class="status-msg" id="status-msg"></div>
+
+</div>
+
+<script>
+  // ── EmailJS ──────────────────────────────────────────────────────────────────
+  (function(){ emailjs.init('kEkUQQISB5kC7fLEd'); })();
+
+  // ── SESSION CHECKBOXES ───────────────────────────────────────────────────────
+  const checkedDays = new Set();
+  function toggleSession(el, day) {
+    const row = el.closest('.session-row');
+    row.classList.toggle('checked');
+    if (row.classList.contains('checked')) {
+      checkedDays.add(day);
+      const input = row.querySelector('.session-workout-input');
+      if (input) setTimeout(() => input.focus(), 50);
+    } else {
+      checkedDays.delete(day);
+    }
+    updateSessions();
+  }
+
+  function updateSessions() {
+    const rows = document.querySelectorAll('.session-row');
+    const parts = [];
+    rows.forEach(row => {
+      const day = row.getAttribute('data-day');
+      if (checkedDays.has(day)) {
+        const workout = (row.querySelector('.session-workout-input').value || '').trim();
+        parts.push(workout ? `${day} (${workout})` : day);
+      }
+    });
+    document.getElementById('sessions_completed').value = parts.join(', ') || 'None';
+  }
+
+  // ── RATING BUTTONS ───────────────────────────────────────────────────────────
+  function buildRating(containerId, inputId, count) {
+    const container = document.getElementById(containerId);
+    for (let i = 1; i <= count; i++) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'rating-btn';
+      btn.textContent = i;
+      btn.onclick = function() {
+        container.querySelectorAll('.rating-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        document.getElementById(inputId).value = i;
+      };
+      container.appendChild(btn);
+    }
+  }
+  buildRating('intensity-rating', 'intensity_rating', 10);
+  buildRating('energy-rating', 'energy_rating', 10);
+  buildRating('stress-rating', 'stress_rating', 10);
+
+  // ── SUBMIT ───────────────────────────────────────────────────────────────────
+  function val(id) {
+    const el = document.getElementById(id);
+    return el ? (el.value || '').trim() : '';
+  }
+
+  function submitCheckin() {
+    const btn = document.getElementById('submit-btn');
+    const status = document.getElementById('status-msg');
+
+    if (!val('client_name')) { showStatus('error', 'Please enter your name before submitting.'); return; }
+    if (!val('week_number')) { showStatus('error', 'Please select your week number.'); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const params = {
+      client_name:        val('client_name'),
+      week_number:        val('week_number'),
+      submitted_at:       new Date().toLocaleDateString('en-US', {weekday:'long',year:'numeric',month:'long',day:'numeric'}),
+      sessions_completed: val('sessions_completed') || 'Not selected',
+      missed_sessions:    val('missed_sessions') || '—',
+      intensity_rating:   val('intensity_rating') || '—',
+      hard_exercises:     val('hard_exercises') || '—',
+      strong_exercises:   val('strong_exercises') || '—',
+      weight:             val('weight') || '—',
+      waist:              val('waist') || '—',
+      hips:               val('hips') || '—',
+      body_feel:          val('body_feel') || '—',
+      sleep:              val('sleep') || '—',
+      energy_rating:      val('energy_rating') || '—',
+      stress_rating:      val('stress_rating') || '—',
+      recovery_notes:     val('recovery_notes') || '—',
+      nutrition_overall:  val('nutrition_overall') || '—',
+      protein:            val('protein') || '—',
+      nutrition_challenges: val('nutrition_challenges') || '—',
+      wins:               val('wins') || '—',
+      struggles:          val('struggles') || '—',
+      next_week_goals:    val('next_week_goals') || '—',
+      journal:            val('journal') || '—',
+    };
+
+    emailjs.send('service_v56cwc7', 'template_duv8kui', params)
+      .then(() => {
+        showStatus('success', `Check-in submitted! See you on the call, ${params.client_name.split(' ')[0]}.`);
+        btn.textContent = 'Submitted ✓';
+      })
+      .catch(() => {
+        showStatus('error', 'Something went wrong. Please try again or email TRAIN@kimvallescoaching.com directly.');
+        btn.disabled = false;
+        btn.textContent = 'Send to Coach Kim';
+      });
+  }
+
+  function showStatus(type, msg) {
+    const el = document.getElementById('status-msg');
+    el.className = `status-msg ${type}`;
+    el.textContent = msg;
+    el.style.display = 'block';
+    el.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+</script>
+</body>
+</html>
