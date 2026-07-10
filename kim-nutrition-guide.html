@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition Guide — Kim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#EAF3FA;
+  --paper:#12161D;
+  --panel:#1A2029;
+  --panel-raised:#1F2733;
+  --line:#2B3542;
+  --muted:#8496A8;
+  --sky:#8FC7E8;
+  --sky-deep:#5FA3C9;
+  --sky-dim:#3E5A6D;
+  --accent:#E8A87C;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:780px;margin:0 auto;padding:0 0 100px;}
+
+.hero{background:linear-gradient(180deg,#0D1015 0%,#12161D 100%);color:var(--ink);padding:44px 28px 32px;border-bottom:1px solid var(--line);}
+.hero .eyebrow{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-deep);}
+.hero h1{font-family:'Jost',sans-serif;font-weight:700;font-size:44px;text-transform:uppercase;letter-spacing:.06em;margin:8px 0 4px;color:var(--sky);}
+.hero .sub{font-family:'Jost',sans-serif;font-weight:400;font-size:15px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);opacity:.85;margin-bottom:14px;}
+.hero .goal-line{font-size:15px;color:#B7C6D4;letter-spacing:.02em;}
+.hero .goal-line strong{color:var(--sky);}
+
+.macro-strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--panel);border-bottom:1px solid var(--line);}
+.macro-cell{padding:18px 10px;text-align:center;border-right:1px solid var(--line);}
+.macro-cell:last-child{border-right:none;}
+.macro-cell .num{font-family:'Space Mono',monospace;font-size:26px;font-weight:700;color:var(--sky);}
+.macro-cell .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:4px;}
+.macro-cell .pct{font-family:'Space Mono',monospace;font-size:11px;color:var(--sky-deep);margin-top:3px;}
+
+.intro{padding:24px 28px 4px;font-size:14px;line-height:1.6;color:var(--ink);opacity:.92;}
+.intro strong{color:var(--sky);}
+
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin:20px 28px 0;border:1px solid var(--line);}
+.why-cell{background:var(--panel);padding:16px 14px;}
+.why-cell h4{font-family:'Jost',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 6px;font-weight:600;color:var(--accent);}
+.why-cell p{font-size:12.5px;line-height:1.55;margin:0;color:var(--ink);opacity:.85;}
+
+.tab-bar{display:flex;gap:0;margin:24px 28px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.tab-btn{flex:1;min-width:90px;background:none;border:none;font-family:'Jost',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.08em;font-size:13px;padding:14px 4px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px;}
+.tab-btn.active{color:var(--sky);border-bottom-color:var(--sky);}
+.tab-panel{display:none;padding:20px 28px 8px;}
+.tab-panel.active{display:block;}
+
+.meal-card{border:1px solid var(--line);background:var(--panel);margin-bottom:16px;border-radius:6px;overflow:hidden;}
+.meal-card-head{display:flex;justify-content:space-between;align-items:baseline;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-raised);}
+.meal-card-head h3{font-family:'Jost',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:.03em;margin:0;font-weight:500;color:var(--sky);}
+.meal-card-head .macro-tag{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);}
+.meal-card-body{padding:12px 16px;font-size:14px;line-height:1.6;}
+.meal-card-body ul{margin:0;padding-left:18px;}
+.meal-card-body li{margin-bottom:4px;}
+.swap-note{font-size:12px;color:var(--muted);margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;}
+.flag-note{font-size:11.5px;color:var(--accent);margin-top:6px;}
+
+.shop-group{margin-bottom:18px;}
+.shop-group h3{font-family:'Jost',sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.08em;font-weight:500;border-bottom:2px solid var(--sky-deep);padding-bottom:6px;margin:0 0 10px;color:var(--sky);}
+.copy-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  background:var(--sky-deep);color:#0D1015;border:none;border-radius:4px;
+  font-family:'Jost',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.05em;
+  padding:13px 16px;margin-bottom:16px;cursor:pointer;transition:opacity .15s;
+}
+.copy-btn:active{opacity:.8;}
+.copy-btn.copied{background:#6FA87E;}
+.shop-list{list-style:none;margin:0;padding:0;}
+.shop-list li{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:14px;border-bottom:1px solid var(--line);}
+.shop-list li input[type=checkbox]{width:16px;height:16px;accent-color:var(--sky);flex-shrink:0;}
+.shop-list li .qty{font-family:'Space Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto;}
+
+.guide-footer{padding:28px 28px 10px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:20px;line-height:1.6;}
+.guide-footer strong{color:var(--ink);}
+
+@media (max-width:520px){
+  .hero h1{font-size:32px;}
+  .macro-strip{grid-template-columns:repeat(2,1fr);}
+  .macro-cell:nth-child(2){border-right:none;}
+  .tab-btn{font-size:11px;padding:12px 2px;}
+  .why-grid{grid-template-columns:1fr;}
+}
+.deficit-table{border-collapse:collapse;margin:20px 28px 0;width:calc(100% - 56px);border:1px solid var(--line);}
+.deficit-table th{font-family:'Jost',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:10px 12px;text-align:left;background:var(--panel-raised);color:var(--sky);font-weight:500;}
+.deficit-table td{padding:12px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink);}
+.deficit-table tr:last-child td{border-bottom:none;}
+.deficit-table .num{font-family:'Space Mono',monospace;font-weight:700;color:var(--sky);}
+.deficit-table tr.current{background:var(--panel);}
+.deficit-table tr.current td:first-child{border-left:3px solid var(--accent);}
+.tag{display:inline-block;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.05em;background:var(--accent);color:#0D1015;padding:2px 7px;border-radius:3px;margin-left:6px;}
+@media (max-width:520px){
+  .deficit-table{font-size:12px;margin:16px 16px 0;width:calc(100% - 32px);}
+  .deficit-table th,.deficit-table td{padding:8px 8px;}
+}
+.editable{outline:1px dashed var(--sky-dim);outline-offset:2px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Train With Kim</div>
+    <h1>Kim</h1>
+    <div class="sub">Nutrition Guide</div>
+    <div class="goal-line">Goal: <strong>Body Recomposition</strong> · Built around my own training, schedule, and food preferences.</div>
+  </div>
+
+  <div class="macro-strip">
+    <div class="macro-cell"><div class="num">1650</div><div class="lbl">Calories</div></div>
+    <div class="macro-cell"><div class="num">144g</div><div class="lbl">Protein</div><div class="pct">35%</div></div>
+    <div class="macro-cell"><div class="num">144g</div><div class="lbl">Carbs</div><div class="pct">35%</div></div>
+    <div class="macro-cell"><div class="num">55g</div><div class="lbl">Fat</div><div class="pct">30%</div></div>
+  </div>
+  <div style="font-size:11px;color:var(--muted);text-align:center;padding:8px 28px 0;font-family:'Space Mono',monospace;">% = share of daily calories — set it up this way in MyFitnessPal's custom macro goals</div>
+
+  <div class="intro" style="padding-top:20px;">
+    <strong>My estimated maintenance is ~1,900 calories/day</strong> — that's roughly what my body burns in a day at my current size and activity level, the number where weight stays the same. To recomp, I need a modest deficit while keeping protein high enough to hold onto muscle. That gap between maintenance and what I actually eat is my <strong>calorie deficit</strong> — the thing that drives fat loss — while protein, food choice, and timing determine how good I feel and how much muscle I keep while it happens.
+  </div>
+
+  <table class="deficit-table">
+    <thead><tr><th>Level</th><th>Daily Calories</th><th>Deficit</th><th>Est. Weekly Change</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Maintenance</td>
+        <td class="num">~1,900</td>
+        <td>—</td>
+        <td>Weight stays the same</td>
+      </tr>
+      <tr class="current">
+        <td>Moderate deficit <span class="tag">my plan</span></td>
+        <td class="num">~1,650</td>
+        <td>-250 cal</td>
+        <td>~0.5 lb/week</td>
+      </tr>
+      <tr>
+        <td>Aggressive deficit</td>
+        <td class="num">~1,400</td>
+        <td>-500 cal</td>
+        <td>~1 lb/week</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="intro">
+    Starting at the <strong>moderate -250 deficit (~1,650 cal)</strong>, not the aggressive one. A smaller deficit is easier to hit my 144g protein floor on, easier to recover from training on, and easier to actually stick to. A bigger deficit drops the scale faster on paper but raises the risk of losing muscle along with fat — working against the "gain muscle" half of recomp. If progress stalls a few weeks in, I can step toward the -500 range then. Not starting there.
+  </div>
+
+  <div class="intro">
+    These numbers are daily targets, not a strict meal plan. <strong>144g protein is the floor, not the ceiling.</strong> Structure it around however many meals + shakes actually fit my day — consistency beats a "perfect" structure I won't stick to.
+  </div>
+
+  <div class="why-grid">
+    <div class="why-cell">
+      <h4>Protein</h4>
+      <p>Repairs and builds the muscle tissue broken down in training — without enough, the body pulls from muscle for energy in a deficit, working against the "gain muscle" half of recomp. Also the most filling macro, which helps manage cravings.</p>
+    </div>
+    <div class="why-cell">
+      <h4>Carbs</h4>
+      <p>Primary fuel for training output and recovery — they replenish glycogen so strength sessions don't feel flat, and they directly support brain function and mood.</p>
+    </div>
+    <div class="why-cell">
+      <h4>Fat</h4>
+      <p>Drives hormone production, supports brain health, and helps absorb fat-soluble vitamins from vegetables. Don't cut it too low.</p>
+    </div>
+  </div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="breakfast">Breakfast/Shake</button>
+    <button class="tab-btn" data-tab="lunch">Meal 1</button>
+    <button class="tab-btn" data-tab="dinner">Meal 2</button>
+    <button class="tab-btn" data-tab="snacks">Snacks</button>
+    <button class="tab-btn" data-tab="shopping">Shopping List</button>
+  </div>
+
+  <!-- SHAKE -->
+  <div class="tab-panel active" data-tab="breakfast">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Protein Shake</h3><span class="macro-tag editable">~[—] kcal · [—]P / [—]C / [—]F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[1.5–2 scoops protein powder]</li>
+          <li>[1 cup milk or milk alternative]</li>
+          <li>[1 banana or ½ cup berries]</li>
+          <li>[1 tbsp nut butter]</li>
+        </ul>
+        <div class="swap-note">Swap: [note preferred swaps here]</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>[Savory breakfast option]</h3><span class="macro-tag editable">~[—] kcal · [—]P / [—]C / [—]F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Ingredient]</li>
+          <li>[Ingredient]</li>
+          <li>[Ingredient]</li>
+        </ul>
+        <div class="swap-note">Swap: [note preferred swaps here]</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MEAL 1 -->
+  <div class="tab-panel" data-tab="lunch">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>[Meal name]</h3><span class="macro-tag editable">~[—] kcal · [—]P / [—]C / [—]F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Protein source + amount]</li>
+          <li>[Carb source]</li>
+          <li>[Veg]</li>
+          <li>[Fat source]</li>
+        </ul>
+        <div class="swap-note">Swap: [note preferred swaps here]</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>[Meal name]</h3><span class="macro-tag editable">~[—] kcal · [—]P / [—]C / [—]F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Protein source + amount]</li>
+          <li>[Carb source]</li>
+          <li>[Veg]</li>
+          <li>[Fat source]</li>
+        </ul>
+        <div class="swap-note">Swap: [note preferred swaps here]</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MEAL 2 -->
+  <div class="tab-panel" data-tab="dinner">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>[Meal name]</h3><span class="macro-tag editable">~[—] kcal · [—]P / [—]C / [—]F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Protein source + amount]</li>
+          <li>[Carb source]</li>
+          <li>[Veg]</li>
+          <li>[Fat source]</li>
+        </ul>
+        <div class="swap-note">Swap: [note preferred swaps here]</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>[Meal name]</h3><span class="macro-tag editable">~[—] kcal · [—]P / [—]C / [—]F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Protein source + amount]</li>
+          <li>[Carb source]</li>
+          <li>[Veg]</li>
+          <li>[Fat source]</li>
+        </ul>
+        <div class="swap-note">Swap: [note preferred swaps here]</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SNACKS -->
+  <div class="tab-panel" data-tab="snacks">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Protein-Forward</h3><span class="macro-tag editable">~[—] kcal · [—]P</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Snack idea]</li>
+          <li>[Snack idea]</li>
+          <li>[Snack idea]</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Quick & Easy</h3><span class="macro-tag editable">~[—] kcal</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>[Snack idea]</li>
+          <li>[Snack idea]</li>
+          <li>[Snack idea]</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SHOPPING LIST -->
+  <div class="tab-panel" data-tab="shopping">
+
+    <div class="intro" style="padding:0 0 16px;">Check off what's needed this week, swap in extras as I go.</div>
+
+    <button class="copy-btn" id="copy-shop-btn" onclick="copyShoppingList()">📋 Copy List to Clipboard</button>
+
+    <div class="shop-group">
+      <h3>Protein</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Carbs — Starchy</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Carbs — Veg & Fibrous</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Fats</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Fruit</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Extras</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> [Item] <span class="qty">[qty]</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="guide-footer">
+    My own plan — update it as tolerance, schedule, or preferences change. <strong>Fill in the bracketed placeholders with real numbers once calculated.</strong>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b===btn));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active', p.dataset.tab===tab));
+  });
+});
+
+function copyShoppingList(){
+  const groups = document.querySelectorAll('[data-tab="shopping"] .shop-group');
+  let lines = ["Kim's Shopping List"];
+  groups.forEach(group => {
+    const heading = group.querySelector('h3').textContent.trim();
+    const items = [];
+    group.querySelectorAll('.shop-list li').forEach(li => {
+      const checkbox = li.querySelector('input[type=checkbox]');
+      if (checkbox && checkbox.checked) return;
+      const qtyEl = li.querySelector('.qty');
+      const qty = qtyEl ? qtyEl.textContent.trim() : '';
+      let text = li.textContent.trim();
+      if (qty) text = text.replace(qty, '').trim();
+      items.push('- ' + text + (qty ? ' ' + qty : ''));
+    });
+    if (items.length){
+      lines.push('', heading.toUpperCase());
+      lines = lines.concat(items);
+    }
+  });
+  const fullText = lines.join('\n');
+  const btn = document.getElementById('copy-shop-btn');
+
+  function showCopied(){
+    const original = btn.textContent;
+    btn.textContent = '✓ Copied — paste into Notes';
+    btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent = original; btn.classList.remove('copied'); }, 2200);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(fullText).then(showCopied).catch(()=>fallbackCopy(fullText, showCopied));
+  } else {
+    fallbackCopy(fullText, showCopied);
+  }
+}
+
+function fallbackCopy(text, cb){
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) { alert('Could not copy automatically — long-press to select and copy the list manually.'); }
+  document.body.removeChild(ta);
+}
+
+</script>
+</body>
+</html>
