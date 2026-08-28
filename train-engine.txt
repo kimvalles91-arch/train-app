@@ -1,0 +1,1004 @@
+// ═══════════════════════════════════════════════════════════════════════════
+// TRAIN — Shared Engine (Kim Valles Coaching)
+// One engine, referenced by every client's program file via <script src>.
+// Update logic here once — every client file that includes this picks it up
+// automatically. Do NOT put client-specific data (exercises, program meta,
+// API keys) in this file — that stays in each client's own HTML file.
+// ═══════════════════════════════════════════════════════════════════════════
+
+function showWeek(n) {
+  const loading = document.getElementById('week-loading');
+  if (loading) loading.style.display = 'none';
+  document.querySelectorAll('.week-content').forEach(w => w.classList.remove('active'));
+  document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('week-' + n).classList.add('active');
+  document.querySelectorAll('.week-tab')[n-1].classList.add('active');
+  window.scrollTo({top: document.querySelector('.week-nav').offsetTop - 20, behavior:'smooth'});
+}
+
+// NOTE: week-tab "crossed" (completed) status is set manually — see the
+// week-nav buttons in the HTML — and is not auto-derived from checked-off
+// exercises, so it stays put regardless of how much of a given week's
+// workouts have been logged.
+
+function toggleWarmup(btn) {
+  btn.classList.toggle('open');
+  const drawer = btn.nextElementSibling;
+  drawer.classList.toggle('open');
+}
+
+function toggleCheck(el, sessionId, exIdx) {
+  const detail = document.getElementById('detail-' + sessionId);
+  const beforeDone = detail ? detail.querySelectorAll('.mark-done-btn.done').length : 0;
+  const beforeTotal = detail ? detail.querySelectorAll('.mark-done-btn').length : 0;
+  const wasComplete = beforeTotal > 0 && beforeDone === beforeTotal;
+
+  el.classList.toggle('done');
+  const row = document.getElementById('ex-row-' + sessionId + '-' + exIdx);
+  if (row) row.classList.toggle('completed');
+  updateSessionProgress(sessionId);
+  saveData();
+
+  const afterDone = detail ? detail.querySelectorAll('.mark-done-btn.done').length : 0;
+  const afterTotal = detail ? detail.querySelectorAll('.mark-done-btn').length : 0;
+  const isComplete = afterTotal > 0 && afterDone === afterTotal;
+
+  if (isComplete && !wasComplete) {
+    onSessionCompleted(sessionId);
+  } else if (isComplete) {
+    updateVolumeBanner(sessionId);
+  } else if (wasComplete && !isComplete) {
+    hideVolumeBanner(sessionId);
+  }
+}
+
+
+
+function updateSessionProgress(sessionId) {
+  const detail = document.getElementById('detail-' + sessionId);
+  if (!detail) return;
+  const btns = detail.querySelectorAll('.mark-done-btn');
+  const done = detail.querySelectorAll('.mark-done-btn.done').length;
+  const total = btns.length;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  const fill = document.getElementById('fill-' + sessionId);
+  if (fill) fill.style.width = pct + '%';
+  const prog = document.getElementById('progress-' + sessionId);
+  if (prog) prog.textContent = done + ' / ' + total + ' done';
+  const count = document.getElementById('count-' + sessionId);
+  if (count) count.innerHTML = '<span class="done-num">' + done + '</span> of ' + total + ' exercises complete';
+}
+
+function saveData() {
+  let data = {};
+  try { data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) {}
+  document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.notes-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.mark-done-btn.done').forEach(btn => {
+    if (btn.dataset.key) data[btn.dataset.key] = '1';
+  });
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+  queueSync();
+}
+
+function getStoredData() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) { return {}; }
+}
+
+function setStoredValue(key, value) {
+  const data = getStoredData();
+  data[key] = value;
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+  queueSync();
+}
+
+function calcSessionVolume(sessionId) {
+  const detail = document.getElementById('detail-' + sessionId);
+  if (!detail) return 0;
+  let total = 0;
+  // Scope pairing to each exercise's own sets-col so a reps-only exercise
+  // (no weight-inputs) never shifts the weight/reps alignment for exercises
+  // that come after it in the session.
+  detail.querySelectorAll('.sets-col').forEach(col => {
+    const weights = Array.from(col.querySelectorAll('.weight-input'));
+    const reps = Array.from(col.querySelectorAll('.reps-input'));
+    const n = Math.min(weights.length, reps.length);
+    for (let i = 0; i < n; i++) {
+      const w = parseFloat(weights[i].value);
+      const r = parseFloat(reps[i].value);
+      if (!isNaN(w) && !isNaN(r)) total += w * r;
+    }
+  });
+  return Math.round(total);
+}
+
+function updateVolumeBanner(sessionId, volumeOverride) {
+  const banner = document.getElementById('volume-banner-' + sessionId);
+  if (!banner) return;
+  const volume = (volumeOverride !== undefined) ? volumeOverride : calcSessionVolume(sessionId);
+  banner.style.display = 'flex';
+  const valEl = document.getElementById('volume-value-' + sessionId);
+  if (valEl) valEl.textContent = volume.toLocaleString() + ' lbs';
+}
+
+function hideVolumeBanner(sessionId) {
+  const banner = document.getElementById('volume-banner-' + sessionId);
+  if (banner) banner.style.display = 'none';
+}
+
+function getCompletedSessionIds() {
+  const data = getStoredData();
+  return Object.keys(data).filter(k => k.indexOf('_completed_') === 0).map(k => k.replace('_completed_', ''));
+}
+
+function isWeekFullyComplete(weekNum) {
+  // Session detail divs live in #offscreen-details (and get moved into the
+  // modal only while open), never inside the #week-N container — so this
+  // has to search the whole document, not scope to the week div.
+  const sessionDetails = document.querySelectorAll('[id^="detail-w' + weekNum + '_"]');
+  if (!sessionDetails.length) return false;
+  const completed = getCompletedSessionIds();
+  return Array.from(sessionDetails).every(d => completed.indexOf(d.id.replace('detail-', '')) !== -1);
+}
+
+function getCurrentWeekStreak() {
+  let streak = 0;
+  for (let w = 1; w <= 8; w++) {
+    if (isWeekFullyComplete(w)) streak++; else break;
+  }
+  return streak;
+}
+
+const BADGE_DEFS = {
+  first_workout: { label: 'First Workout', desc: 'You completed your first session — that\'s the hardest one to start.' },
+  week1_streak:  { label: '1-Week Streak', desc: 'Every session in Week 1, done.' },
+  week2_streak:  { label: '2-Week Streak', desc: 'Two weeks back to back — the habit is forming.' },
+  week4_streak:  { label: '4-Week Streak', desc: 'Halfway through the block, fully on track.' },
+  week8_streak:  { label: '8-Week Streak', desc: 'The entire 8-week block, complete. That\'s the whole point.' },
+  workouts_10:   { label: '10 Workouts', desc: '10 sessions logged.' },
+  workouts_25:   { label: '25 Workouts', desc: '25 sessions logged — real consistency.' },
+};
+
+function evaluateBadges() {
+  const data = getStoredData();
+  let earned = [];
+  try { earned = JSON.parse(data._badges || '[]'); } catch(e) {}
+  const earnedSet = new Set(earned);
+  const completedCount = getCompletedSessionIds().length;
+  const streak = getCurrentWeekStreak();
+  const newly = [];
+  function award(id) { if (!earnedSet.has(id)) { earnedSet.add(id); newly.push(id); } }
+
+  if (completedCount >= 1) award('first_workout');
+  if (completedCount >= 10) award('workouts_10');
+  if (completedCount >= 25) award('workouts_25');
+  if (streak >= 1) award('week1_streak');
+  if (streak >= 2) award('week2_streak');
+  if (streak >= 4) award('week4_streak');
+  if (streak >= 8) award('week8_streak');
+
+  if (newly.length) setStoredValue('_badges', JSON.stringify(Array.from(earnedSet)));
+  return newly;
+}
+
+function renderBadgesShelf() {
+  const data = getStoredData();
+  let earned = [];
+  try { earned = JSON.parse(data._badges || '[]'); } catch(e) {}
+  const earnedSet = new Set(earned);
+  document.querySelectorAll('.badge-pill').forEach(pill => {
+    const id = pill.dataset.badge;
+    pill.classList.toggle('earned', earnedSet.has(id));
+    pill.title = BADGE_DEFS[id] ? BADGE_DEFS[id].desc : '';
+  });
+}
+
+function showBadgeToast(badgeId) {
+  const def = BADGE_DEFS[badgeId];
+  if (!def) return;
+  const container = document.getElementById('badge-toast-container');
+  if (!container) return;
+  const toast = document.createElement('div');
+  toast.className = 'badge-toast';
+  toast.innerHTML = '<span class="badge-toast-icon">🎖️</span><span class="badge-toast-text">Badge earned — <strong>' + def.label + '</strong></span>';
+  container.appendChild(toast);
+  requestAnimationFrame(() => { toast.classList.add('show'); });
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 350);
+  }, 3200);
+}
+
+function onSessionCompleted(sessionId) {
+  const volume = calcSessionVolume(sessionId);
+  const data = getStoredData();
+  if (!data['_completed_' + sessionId]) {
+    setStoredValue('_completed_' + sessionId, new Date().toISOString());
+  }
+  setStoredValue('_volume_' + sessionId, volume);
+  updateVolumeBanner(sessionId, volume);
+  const newBadges = evaluateBadges();
+  renderBadgesShelf();
+  newBadges.forEach((id, i) => setTimeout(() => showBadgeToast(id), i * 600));
+}
+
+// ── Backend sync: pulls this client's saved bundle on load, pushes it after every save ──
+let syncTimer = null;
+let syncStatusEl = null;
+
+function queueSync() {
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(pushRemoteState, 1200);
+}
+
+function setSyncStatus(text, ok) {
+  if (!syncStatusEl) syncStatusEl = document.getElementById('sync-status');
+  if (syncStatusEl) {
+    syncStatusEl.textContent = text;
+    syncStatusEl.style.color = ok === true ? 'var(--cobalt-text)' : (ok === false ? '#E8776B' : 'var(--muted2)');
+  }
+}
+
+async function pushRemoteState() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    setSyncStatus('Saving…', null);
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ secret: API_SECRET, action: 'setState', client_id: CLIENT_ID, state: data })
+    });
+    const json = await res.json();
+    if (json && json.success) {
+      setSyncStatus('Saved ✓', true);
+    } else {
+      setSyncStatus('Not saved — ' + (json && json.error ? json.error : 'unknown error'), false);
+      console.error('Sync failed:', json);
+    }
+  } catch (e) {
+    setSyncStatus('Not saved — connection error', false);
+    console.error('Sync error:', e);
+  }
+}
+
+async function mergeRemoteState() {
+  try {
+    const res = await fetch(`${API_URL}?action=getState&client_id=${encodeURIComponent(CLIENT_ID)}`);
+    const json = await res.json();
+    if (json && json.state && Object.keys(json.state).length) {
+      const local = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      const merged = Object.assign({}, local, json.state); // remote is source of truth across devices
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+    }
+  } catch (e) {
+    // offline or first load — fall back to whatever's already in this browser
+  }
+}
+
+// ── Auto-detect current week from program_start_date, lock past AND future weeks, render real dates ──
+const LOCKED_WEEKS = [];
+
+function getWeek1Monday(startDateStr) {
+  if (!startDateStr) return null;
+  const start = new Date(startDateStr + 'T00:00:00');
+  if (isNaN(start.getTime())) return null;
+  const day = start.getDay();
+  const diffToMonday = (day === 0) ? -6 : (1 - day);
+  const monday = new Date(start);
+  monday.setDate(start.getDate() + diffToMonday);
+  return monday;
+}
+
+function formatDateShort(d) {
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return months[d.getMonth()] + ' ' + d.getDate();
+}
+
+function renderWeekDates(startDateStr) {
+  const monday = getWeek1Monday(startDateStr);
+  if (!monday) return;
+  for (let w = 1; w <= 8; w++) {
+    const weekStart = new Date(monday);
+    weekStart.setDate(monday.getDate() + (w - 1) * 7);
+    const weekEnd = new Date(weekStart);
+    weekEnd.setDate(weekStart.getDate() + 6);
+    const rangeText = formatDateShort(weekStart) + '–' + formatDateShort(weekEnd);
+    const tabEl = document.getElementById('week-dates-' + w);
+    if (tabEl) tabEl.textContent = rangeText;
+    const headerEl = document.getElementById('week-header-dates-' + w);
+    if (headerEl) headerEl.textContent = '· ' + rangeText;
+  }
+}
+
+function computeCurrentWeek(startDateStr) {
+  const monday = getWeek1Monday(startDateStr);
+  if (!monday) return null;
+  const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+  const elapsed = Math.floor((new Date() - monday) / msPerWeek);
+  return Math.min(8, Math.max(1, elapsed + 1));
+}
+
+function applyClientMeta(client) {
+  if (!client) return;
+  const setIfPresent = (id, val) => { if (val) { const el = document.getElementById(id); if (el) el.textContent = val; } };
+  setIfPresent('meta-client', client.name);
+  setIfPresent('meta-goal', client.goal);
+  setIfPresent('meta-days', client.days_per_week);
+  setIfPresent('meta-equipment', client.equipment);
+  setIfPresent('client-note-text', client.client_note);
+  if (client.injury_flag) {
+    const flag = document.getElementById('injury-flag');
+    const flagText = document.getElementById('injury-flag-text');
+    if (flag && flagText) { flagText.textContent = client.injury_flag; flag.style.display = 'block'; }
+  }
+}
+
+async function determineCurrentWeek() {
+  try {
+    const res = await fetch(`${API_URL}?action=getClient&client_id=${encodeURIComponent(CLIENT_ID)}`);
+    const json = await res.json();
+    const client = json && json.client;
+    const startDate = (client && client.program_start_date) || DEFAULT_START_DATE;
+    renderWeekDates(startDate);
+    applyClientMeta(client);
+    return computeCurrentWeek(startDate);
+  } catch (e) {
+    renderWeekDates(DEFAULT_START_DATE);
+    return computeCurrentWeek(DEFAULT_START_DATE);
+  }
+}
+
+// A past week only locks once every exercise in it is actually marked done —
+// calendar date alone shouldn't lock her out of catching up on a week she missed.
+function isWeekComplete(weekNum) {
+  const details = document.querySelectorAll('[id^="detail-w' + weekNum + '_"]');
+  if (details.length === 0) return false;
+  let allDone = true;
+  details.forEach(detail => {
+    const btns = detail.querySelectorAll('.mark-done-btn');
+    const done = detail.querySelectorAll('.mark-done-btn.done').length;
+    if (btns.length === 0 || done < btns.length) allDone = false;
+  });
+  return allDone;
+}
+
+function applyCurrentWeek(week) {
+  LOCKED_WEEKS.length = 0;
+  for (let w = 1; w <= 8; w++) {
+    const tab = document.querySelectorAll('.week-tab')[w - 1];
+    if (w < week) {
+      if (isWeekComplete(w)) {
+        if (tab) tab.classList.add('crossed');
+        LOCKED_WEEKS.push(w);
+        lockWeek(w, 'complete');
+      }
+      // else: leave this past week fully open — she can still go back and log what was missed
+    } else if (w > week) {
+      if (tab) tab.classList.add('future-locked');
+      lockWeek(w, 'upcoming');
+      addFutureLockBanner(w);
+    }
+  }
+  showWeek(week);
+}
+
+function addFutureLockBanner(weekNum) {
+  const el = document.getElementById('week-' + weekNum);
+  if (!el || el.querySelector('.future-lock-banner')) return;
+  const dateEl = document.getElementById('week-dates-' + weekNum);
+  const startDateText = dateEl && dateEl.textContent ? dateEl.textContent.split('–')[0].trim() : '';
+  const banner = document.createElement('div');
+  banner.className = 'future-lock-banner';
+  banner.textContent = '🔒 This week isn\'t open yet' + (startDateText ? ' — starts ' + startDateText : '') + '. Feel free to look ahead, but tracking unlocks once the week actually begins.';
+  el.insertBefore(banner, el.firstChild);
+}
+
+function loadData() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.notes-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.mark-done-btn').forEach(btn => {
+      if (btn.dataset.key && data[btn.dataset.key]) {
+        btn.classList.add('done');
+        const row = document.getElementById(btn.dataset.rowId);
+        if (row) row.classList.add('completed');
+      }
+    });
+    // Populate prev-week reference rows
+    document.querySelectorAll('.prev-week-ref').forEach(ref => {
+      const currentKey = ref.id.replace('prev-', '');
+      const prevKey = ref.dataset.prevKey;
+      if (!prevKey) return;
+      const isDeload = ref.dataset.deload === '1';
+      const w = data[prevKey + '_w'];
+      const r = data[prevKey + '_r'];
+      if (w || r) {
+        const wEl = document.getElementById('prev-w-' + currentKey);
+        const rEl = document.getElementById('prev-r-' + currentKey);
+        if (wEl) {
+          if (isDeload && w && !isNaN(parseFloat(w))) {
+            const num = parseFloat(w);
+            const lo = Math.round(num * 0.5);
+            const hi = Math.round(num * 0.6);
+            wEl.textContent = lo + '\u2013' + hi + ' (50-60%)';
+          } else {
+            wEl.textContent = w || '—';
+          }
+        }
+        if (rEl) rEl.textContent = r || '—';
+        ref.classList.remove('prev-week-empty');
+      }
+    });
+    document.querySelectorAll('.session-detail').forEach(s => {
+      const id = s.id.replace('detail-','');
+      if (id) updateSessionProgress(id);
+    });
+    // Restore volume banners for already-completed sessions, and reflect earned badges
+    getCompletedSessionIds().forEach(id => {
+      const vol = data['_volume_' + id];
+      if (vol !== undefined) updateVolumeBanner(id, parseFloat(vol));
+    });
+    renderBadgesShelf();
+  } catch(e) {}
+}
+
+function exportCSV() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    const rows = [['Week', 'Session', 'Exercise', 'Set', 'Weight (lbs)', 'Reps', 'Notes', 'Completed']];
+    const keys = Object.keys(data);
+
+    const parsed = {};
+    keys.forEach(k => {
+      const parts = k.split('_');
+      if (k.endsWith('_w') || k.endsWith('_r') || k.endsWith('_note') || k.endsWith('_done')) {
+        const base = k.replace(/_w$|_r$|_note$|_done$/, '');
+        if (!parsed[base]) parsed[base] = {};
+        if (k.endsWith('_w')) parsed[base].weight = data[k];
+        if (k.endsWith('_r')) parsed[base].reps = data[k];
+        if (k.endsWith('_note')) parsed[base].note = data[k];
+        if (k.endsWith('_done')) parsed[base].done = '✓';
+      }
+    });
+
+    const setKeys = Object.keys(parsed).filter(k => k.match(/_set\d+$/));
+    const exKeys = [...new Set(setKeys.map(k => k.replace(/_set\d+$/, '')))];
+
+    exKeys.forEach(exKey => {
+      const weekMatch = exKey.match(/^w(\d+)/);
+      const week = weekMatch ? weekMatch[1] : '?';
+      const sessionPart = exKey.replace(/^w\d+_/, '').replace(/_ex\d+$/, '');
+      const exMatch = exKey.match(/_ex(\d+)$/);
+      const exIdx = exMatch ? exMatch[1] : '?';
+
+      const setNums = setKeys.filter(k => k.startsWith(exKey + '_set'));
+      setNums.forEach(setKey => {
+        const setMatch = setKey.match(/_set(\d+)$/);
+        const setNum = setMatch ? (parseInt(setMatch[1]) + 1) : '?';
+        const d = parsed[setKey] || {};
+        const noteKey = exKey + '_note';
+        const doneKey = exKey + '_done';
+        rows.push([
+          'Week ' + week,
+          sessionPart.replace(/_/g, ' '),
+          'Exercise ' + (parseInt(exIdx) + 1),
+          'Set ' + setNum,
+          d.weight || '',
+          d.reps || '',
+          data[noteKey] || '',
+          data[doneKey] ? '✓' : ''
+        ]);
+      });
+    });
+
+    const csv = rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(',')).join('\n');
+    const blob = new Blob([csv], {type: 'text/csv'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'train_progress_' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch(e) { alert('Export failed — try again.'); }
+}
+
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('weight-input') || e.target.classList.contains('reps-input') || e.target.classList.contains('notes-input')) saveData();
+});
+
+const sessionDetails = {};
+
+// Pulls YouTube's auto-generated thumbnail straight from the video ID in a link —
+// works for /shorts/, /watch?v=, and youtu.be links. No manual screenshots needed.
+// ═══════════════════════════════════════════════════════════════════════════
+// AUTO PROGRESSION ENGINE — Coach's Note
+// Reads last week's logged weight/reps for each exercise, compares against
+// this week's prescribed rep range for that same exercise slot, and drafts a
+// plain-language progression note. Fully automatic — no approval step.
+//
+// Scope (V1):
+//   - Only standard weight+reps exercises with a numeric rep range (e.g. '8-10')
+//   - Unilateral (L + R), loaded carries, and rotational/cable work are excluded
+//     — flagged for manual review rather than auto-progressed
+//   - Deload weeks (week 6) never generate progression suggestions — the point
+//     of a deload is reduced load, not "you're ready to add more"
+// ═══════════════════════════════════════════════════════════════════════════
+
+const PROGRESSION_INCREMENTS = {
+  barbell: '+5 lbs',
+  machine: '+5–10 lbs',
+  accessory: '+2.5–5 lbs'
+};
+
+function classifyMovementForProgression(e) {
+  const name = (e.name || '').toLowerCase();
+  const cat = e.category || '';
+  const reps = e.reps || '';
+  if (cat.includes('NO_TRACKING')) return 'skip';
+  if (reps.includes('L + R') || reps.includes('L+R')) return 'skip'; // unilateral — manual review
+  if (name.includes('carry')) return 'skip';
+  if (cat.includes('Rotational') || cat.includes('Loaded Carry')) return 'skip';
+  if (name.includes('barbell') || name.includes('trap bar')) return 'barbell';
+  if (name.includes('machine')) return 'machine';
+  if (cat.includes('Accessory')) return 'accessory';
+  return 'machine'; // safe default when unclear
+}
+
+function parseRepRange(repsStr) {
+  if (!repsStr) return null;
+  const m = repsStr.match(/(\d+)\s*-\s*(\d+)/);
+  if (!m) return null;
+  return { min: parseInt(m[1]), max: parseInt(m[2]) };
+}
+
+function evaluateExerciseProgression(prevSessionId, idx, exercise) {
+  if (!prevSessionId) return null; // Week 1 — nothing to compare against
+  const type = classifyMovementForProgression(exercise);
+  if (type === 'skip') return null;
+  const range = parseRepRange(exercise.reps);
+  if (!range) return null;
+
+  const stored = getStoredData();
+  const numSets = parseInt(exercise.sets) || 3;
+  let loggedSets = 0, atCeiling = 0, underRange = 0, lastWeight = null;
+  for (let i = 0; i < numSets; i++) {
+    const wVal = parseFloat(stored[`${prevSessionId}_ex${idx}_set${i}_w`]);
+    const rVal = parseFloat(stored[`${prevSessionId}_ex${idx}_set${i}_r`]);
+    if (!isNaN(wVal) && !isNaN(rVal)) {
+      loggedSets++;
+      lastWeight = wVal;
+      if (rVal >= range.max) atCeiling++;
+      if (rVal < range.min) underRange++;
+    }
+  }
+  if (loggedSets === 0) return null; // nothing logged — skip silently, don't clutter the report
+
+  const name = exercise.name;
+  if (atCeiling === loggedSets) {
+    return {
+      name, status: 'progress',
+      message: `Hit the top of the rep range (${range.max}) on every logged set last week at ${lastWeight} lbs. Try ${PROGRESSION_INCREMENTS[type]} this week.`
+    };
+  }
+  if (atCeiling > 0) {
+    return {
+      name, status: 'partial',
+      message: `Hit the ceiling on some sets at ${lastWeight} lbs, not all. Hold this week's weight and aim for the top of the range across every set before adding load.`
+    };
+  }
+  if (underRange > 0) {
+    return {
+      name, status: 'under',
+      message: `Came in under the prescribed rep range at ${lastWeight} lbs last week. Worth checking in on before this session — form, rest, or fatigue could be a factor.`
+    };
+  }
+  return {
+    name, status: 'hold',
+    message: `Within range but not yet at the ceiling. Same weight this week — aim for more reps.`
+  };
+}
+
+function renderProgressionInsights(prevSessionId, exercises, weekNum) {
+  if (!prevSessionId || weekNum === 6) return ''; // no baseline yet, or this is the deload week
+  const notes = (exercises || []).map((e, idx) => {
+    if (e.divider) return null;
+    return evaluateExerciseProgression(prevSessionId, idx, e);
+  }).filter(Boolean);
+  if (!notes.length) return '';
+
+  const rows = notes.map(n => {
+    const color = n.status === 'progress' ? 'var(--cobalt-text)' : (n.status === 'under' ? '#E8A89B' : 'var(--text2)');
+    const icon = n.status === 'progress' ? '📈' : (n.status === 'under' ? '⚠️' : '➡️');
+    return `<div style="margin-bottom:10px;line-height:1.6;"><strong style="color:${color};">${icon} ${n.name}</strong> — <span style="color:var(--text2);">${n.message}</span></div>`;
+  }).join('');
+
+  return `<div class="progression-block" style="border-color:var(--cobalt-mid);">
+    <div class="progression-label">Coach's Note — auto progression (from last week's data)</div>
+    ${rows}
+  </div>`;
+}
+
+function getYouTubeThumb(url) {
+  if (!url) return null;
+  const patterns = [
+    /youtube\.com\/shorts\/([a-zA-Z0-9_-]{6,})/,
+    /youtube\.com\/watch\?v=([a-zA-Z0-9_-]{6,})/,
+    /youtu\.be\/([a-zA-Z0-9_-]{6,})/
+  ];
+  for (const p of patterns) {
+    const m = url.match(p);
+    if (m) return `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg`;
+  }
+  return null;
+}
+
+function buildSession(weekNum, session) {
+  const container = document.getElementById('week-' + weekNum + '-sessions');
+  if (!container) return;
+  const sessionId = 'w' + weekNum + '_' + (session.id || '').replace(/\s+/g,'_').toLowerCase();
+  // Week 7 (peak) references Week 5 instead of Week 6 — Week 6 is a deliberate deload,
+  // so it's not a meaningful baseline to build peak-week loads from.
+  const prevWeekNum = weekNum === 7 ? 5 : weekNum - 1;
+  const prevSessionId = weekNum > 1 ? 'w' + prevWeekNum + '_' + (session.id || '').replace(/\s+/g,'_').toLowerCase() : null;
+
+  const warmUpItems = (session.warm_up_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.sets_reps || e.duration || ''}</span></li>`).join('');
+  const cooldownItems = (session.cooldown_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.hold || e.duration || ''}</span></li>`).join('');
+
+  const exerciseRows = (session.exercises || []).map((e, idx) => {
+    if (e.divider) {
+      return `<tr><td colspan="2" style="padding-top:20px;padding-bottom:6px;"><div style="font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt-text);border-top:1px solid var(--border);padding-top:14px;">${e.divider}</div></td></tr>`;
+    }
+    const numSets = parseInt(e.sets) || 3;
+    const name = e.name || '';
+    const repsStr = e.reps || '';
+    const cat = e.category || '';
+
+    // Detect tracking type from name/category/reps
+    const isUnilateral = repsStr.includes('L + R') || repsStr.includes('L+R');
+    const isWeightOnly = name.includes('Sled');
+    const isRepsOnly = repsStr.includes('reps only') || name.includes('Diamond Push') || cat.includes('REPS_ONLY');
+    const isTriset = repsStr.includes('3 weights') || name.includes('Triset');
+    const isCalf = name.includes('Calf Raise') && name.includes('→');
+    const isStairmaster = name.includes('Stairmaster') && cat.includes('MINUTES_CALORIES');
+    const isPullupSplit = cat.includes('PULLUP_SPLIT');
+    const isHipThrustTriset = cat.includes('TRISET_HT');
+    const isNoTracking = cat.includes('NO_TRACKING');
+
+    // Previous-week reference (standard weight+reps sets only — this is the
+    // one tracking pattern where a straight numeric comparison is meaningful)
+    // ID is based on the CURRENT week's own key (always unique) rather than the
+    // previous-week key — necessary now that Week 6 and Week 7 can both reference
+    // Week 5, which would otherwise produce duplicate element IDs on the page.
+    const prevRef = (key) => {
+      if (!prevSessionId) return '';
+      const prevKey = key.replace(sessionId, prevSessionId);
+      const isDeloadTarget = (weekNum === 6);
+      return `<div class="prev-week-ref prev-week-empty" id="prev-${key}" data-prev-key="${prevKey}" data-deload="${isDeloadTarget ? '1' : '0'}">
+        <span class="prev-week-label">${isDeloadTarget ? 'Deload target' : 'Wk' + prevWeekNum}</span>
+        <span class="prev-week-val" id="prev-w-${key}">—</span>
+        <span class="prev-week-val" style="opacity:0.4">lbs ×</span>
+        <span class="prev-week-val" id="prev-r-${key}">—</span>
+        <span class="prev-week-val" style="opacity:0.4">reps</span>
+      </div>`;
+    };
+
+    let setRows = '';
+
+    if (isStairmaster) {
+      // Stairmaster: minutes + calories only
+      const key = `${sessionId}_ex${idx}_stair`;
+      setRows = `<div class="set-row" style="flex-wrap:wrap;gap:6px;margin-bottom:8px;">
+        <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-bottom:2px;">Session total</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_min" style="width:60px;"><span class="unit">min</span>
+        <input class="reps-input" type="text" placeholder="—" data-key="${key}_cal" style="width:60px;"><span class="unit">cals burned</span>
+      </div>`;
+    } else if (isHipThrustTriset) {
+      // Hip Thrust Triset/Quad-set: weight per set + Full reps / Pulses reps / Static Hold secs
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Set ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-bottom:2px;">Weight</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_w" style="width:72px;"><span class="unit">lbs</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:6px;margin-bottom:2px;">Full Drive</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_full" style="width:52px;"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:4px;margin-bottom:2px;">Pulses</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_pulse" style="width:52px;"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:4px;margin-bottom:2px;">Static Hold</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_hold" style="width:52px;"><span class="unit">secs</span>
+        </div>`;
+      }).join('');
+    } else if (isPullupSplit) {
+      // Pull-ups: 2 sets close grip + 2 sets wide grip — each set tracked individually
+      setRows = ['Close Grip — Set 1', 'Close Grip — Set 2', 'Wide Grip — Set 1', 'Wide Grip — Set 2'].map((label, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:10px;">
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-bottom:2px;">${label}</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_assist"><span class="unit">assist lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_r"><span class="unit">reps</span>
+        </div>`;
+      }).join('');
+    } else if (isTriset) {
+      // Triset: 3 drop weights + reps each, per set
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:12px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Set ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-bottom:2px;">Drop 1</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_d1w"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_d1r"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:4px;margin-bottom:2px;">Drop 2</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_d2w"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_d2r"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:4px;margin-bottom:2px;">Drop 3</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_d3w"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_d3r"><span class="unit">reps</span>
+        </div>`;
+      }).join('');
+    } else if (isUnilateral) {
+      // Left + Right leg tracking with weight + reps each
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:12px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Set ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-bottom:2px;">Left</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_lw"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_lr"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:4px;margin-bottom:2px;">Right</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_rw"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_rr"><span class="unit">reps</span>
+        </div>`;
+      }).join('');
+    } else if (isCalf) {
+      // Calf: seated weight+reps, standing reps only
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row" style="flex-wrap:wrap;gap:4px;margin-bottom:12px;">
+          <span class="set-num" style="width:100%;margin-bottom:4px;">Set ${i+1}</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-bottom:2px;">Seated</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_sw"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_sr"><span class="unit">reps</span>
+          <span class="unit" style="font-size:9px;color:var(--cobalt-text);width:100%;margin-top:4px;margin-bottom:2px;">Standing (bodyweight)</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_bwr"><span class="unit">reps</span>
+        </div>`;
+      }).join('');
+    } else if (isWeightOnly) {
+      // Sled: weight only, no reps
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row"><span class="set-num">Round ${i+1}</span><input class="weight-input" type="text" placeholder="—" data-key="${key}_w" aria-label="Sled weight round ${i+1}"><span class="unit">lbs</span></div>`;
+      }).join('');
+    } else if (isRepsOnly) {
+      // Diamond push-up: reps only
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row"><span class="set-num">Set ${i+1}</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_r" aria-label="Reps set ${i+1}"><span class="unit">reps</span></div>`;
+      }).join('');
+    } else if (isNoTracking) {
+      // Follow-along sessions (e.g. Mat Pilates) — nothing to log, just watch and go
+      setRows = `<div style="font-size:12px;color:var(--muted2);font-style:italic;">No tracking needed — just follow along.</div>`;
+    } else {
+      // Standard: weight + reps
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        return `<div class="set-row"><span class="set-num">Set ${i+1}</span><input class="weight-input" type="text" placeholder="—" data-key="${key}_w" aria-label="Weight set ${i+1}"><span class="unit">lbs</span><span class="sep">×</span><input class="reps-input" type="text" placeholder="—" data-key="${key}_r" aria-label="Reps set ${i+1}"><span class="unit">reps</span></div>${prevRef(key)}`;
+      }).join('');
+    }
+
+    const checkKey = `${sessionId}_ex${idx}_done`;
+    const rowId = `ex-row-${sessionId}-${idx}`;
+    const isSsStart = cat.includes('SS_CORE_A_START') || cat.includes('SS_CORE_B_START') || cat.includes('SS_CORE_C_START') || cat.includes('SS_TRI_START') || cat.includes('SS_BI_START');
+    const isSsEnd   = cat.includes('SS_CORE_A_END')   || cat.includes('SS_CORE_B_END')   || cat.includes('SS_CORE_C_END')   || cat.includes('SS_TRI_END')   || cat.includes('SS_BI_END');
+    const ssLabel   = cat.includes('SS_TRI') ? 'Triceps Superset' : cat.includes('SS_BI') ? 'Biceps Superset' : cat.includes('_A_') ? 'Superset A' : cat.includes('_B_') ? 'Superset B' : 'Superset C';
+    const ssStyle   = (isSsStart || isSsEnd) ? 'border-left:3px solid var(--cobalt);padding-left:12px;' : '';
+    const cleanName = e.name.replace(/CORE CIRCUIT — /, '');
+
+    return `
+      <tr class="ex-row" id="${rowId}" style="${ssStyle}">
+        <td>
+          ${isSsStart ? `<span class="ss-tag">⟳ ${ssLabel} — no rest between</span>` : ''}
+          ${isSsEnd   ? `<span class="ss-tag">⟳ ${ssLabel} — rest after this</span>` : ''}
+          <span class="ex-name-row">
+            ${e.videoUrl ? (function() {
+              const thumb = getYouTubeThumb(e.videoUrl);
+              return thumb ? `<a href="${e.videoUrl}" target="_blank" rel="noopener" class="ex-thumb" aria-label="Watch form video"><img src="${thumb}" alt=""><span class="play-badge">\u25b6</span></a>` : '';
+            })() : ''}
+            <span class="ex-name">${cleanName}</span>
+          </span>
+          ${e.category ? `<span class="ex-cat">${e.category.split(' · ')[0]}</span>` : ''}
+          ${!isNoTracking ? `<span class="ex-detail">${e.sets || '—'} × ${e.reps || e.duration || '—'}${e.tempo ? ' · ' + e.tempo : ''}${e.rest ? ' · rest ' + e.rest : ''}${e.RPE ? ' · RPE ' + e.RPE : ''}</span>` : ''}
+          ${e.cue ? `<span class="ex-cue">${e.cue}</span>` : ''}
+          ${e.note ? `<span class="ex-cue">${e.note}</span>` : ''}
+        </td>
+        <td class="sets-col">${setRows}</td>
+      </tr>
+      <tr class="mark-done-row" id="done-row-${rowId}">
+        <td colspan="2">
+          <div class="mark-done-btn" onclick="toggleCheck(this,'${sessionId}',${idx})" data-key="${checkKey}" data-row-id="${rowId}" aria-label="Mark complete">
+            <span class="mark-done-check"></span>
+            <span class="mark-done-text">Mark done</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="notes-row">
+        <td colspan="2">
+          <div class="notes-label">Session notes</div>
+          <input class="notes-input" type="text" placeholder="How it felt, what to adjust, anything to remember next week…" data-key="${sessionId}_ex${idx}_note">
+        </td>
+      </tr>`;
+  }).join('');
+
+  const exerciseCount = (session.exercises || []).length;
+
+  const cardHtml = `
+    <div class="session-card" id="card-${sessionId}" onclick="openSessionModal('${sessionId}')">
+      <div class="session-card-top">
+        <div>
+          <div class="session-label">${session.label || 'Session'}</div>
+          <div class="session-title">${session.title || 'Training Session'}</div>
+        </div>
+        <div class="session-meta">${session.duration || ''}</div>
+      </div>
+      <div class="session-prog-bar"><div class="session-prog-fill" id="fill-${sessionId}"></div></div>
+      <div class="session-card-bottom">
+        <span class="session-progress" id="progress-${sessionId}">0 / ${exerciseCount} done</span>
+        <span class="session-view">View workout →</span>
+      </div>
+    </div>`;
+
+  const detailHtml = `
+    <div id="detail-${sessionId}" class="session-detail">
+      ${warmUpItems ? `
+      <div style="padding:0 20px;">
+        <button class="warmup-toggle" onclick="toggleWarmup(this)" type="button">
+          <div class="warmup-toggle-left">
+            <span class="warmup-toggle-icon">🔥</span>
+            <div>
+              <div class="warmup-toggle-text">Warm-up · ${session.warm_up_duration||'10 min'}</div>
+              <div class="warmup-toggle-sub">Don't skip — tap to view</div>
+            </div>
+          </div>
+          <span class="warmup-toggle-arrow">▼</span>
+        </button>
+        <div class="warmup-drawer">
+          <ul class="protocol-list">${warmUpItems}</ul>
+        </div>
+      </div>` : ''}
+      ${renderProgressionInsights(prevSessionId, session.exercises, weekNum)}
+      ${session.progression_note ? `<div class="progression-block"><div class="progression-label">Progression focus — this week</div><div class="progression-text">${session.progression_note}</div></div>` : ''}
+      <table class="exercise-table">
+        <thead><tr>
+          <th>Exercise</th>
+          <th class="sets-col">Sets · weight · reps</th>
+        </tr></thead>
+        <tbody>${exerciseRows}</tbody>
+      </table>
+      ${cooldownItems ? `<div class="protocol-block"><div class="protocol-label">Cooldown &amp; stretch · ${session.cooldown_duration||'8–10 min'}</div><ul class="protocol-list">${cooldownItems}</ul></div>` : ''}
+      <div class="session-footer">
+        <span class="complete-count" id="count-${sessionId}"><span class="done-num">0</span> of ${exerciseCount} exercises complete</span>
+        <span class="save-note">weights save automatically</span>
+      </div>
+      <div class="volume-banner" id="volume-banner-${sessionId}">
+        <div class="volume-banner-left"><span class="volume-banner-icon">🎉</span><span class="volume-banner-text">Session complete — total volume</span></div>
+        <span class="volume-banner-value" id="volume-value-${sessionId}">0 lbs</span>
+      </div>
+    </div>`;
+
+  container.insertAdjacentHTML('beforeend', cardHtml);
+  sessionDetails[sessionId] = {
+    label: session.label || 'Session',
+    title: session.title || 'Training session',
+    html: detailHtml
+  };
+  // Render the detail off-screen once so its inputs exist and can be
+  // restored by loadData() even before the modal is first opened.
+  const offscreen = document.getElementById('offscreen-details');
+  offscreen.insertAdjacentHTML('beforeend', detailHtml);
+  updateSessionProgress(sessionId);
+}
+
+function openSessionModal(sessionId) {
+  const detail = document.getElementById('detail-' + sessionId);
+  const modalBody = document.getElementById('modal-body');
+  const info = sessionDetails[sessionId];
+  if (!detail || !modalBody || !info) return;
+  document.getElementById('modal-label').textContent = info.label;
+  document.getElementById('modal-title').textContent = info.title;
+  modalBody.innerHTML = '';
+  modalBody.appendChild(detail);
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modalBody = document.getElementById('modal-body');
+  const detail = modalBody ? modalBody.firstElementChild : null;
+  if (detail) document.getElementById('offscreen-details').appendChild(detail);
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ─── PROGRAM META ──────────────────────────────────────────────────────────
+function renderMeta() {
+  const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+  set('program-name', programMeta.programName);
+  set('program-tagline', programMeta.tagline);
+  set('meta-client', programMeta.client);
+  set('meta-goal', programMeta.goal);
+  set('meta-split', programMeta.split);
+  set('meta-days', programMeta.daysPerWeek);
+  set('meta-duration', programMeta.duration);
+  set('meta-equipment', programMeta.equipment);
+}
+
+// ─── SHARED WARM-UP / COOLDOWN DATA ───────────────────────────────────────────
+
+function progressionNote(w) {
+  if (w === 1) return 'Establish your baseline loads this week — these numbers are what you\'ll beat starting Week 2.';
+  if (w === 2) return 'Beat last week\'s loads where RPE allows.';
+  if (w === 3) return 'Heaviest week of the mesocycle so far — push here.';
+  if (w === 4) return 'Match or beat your Week 3 numbers. Same set structure, no reduction.';
+  if (w === 5) return 'New mesocycle. Your baseline today should sit above Week 1 across the board.';
+  if (w === 6) return 'Deload week — everything drops to roughly 60% load. This is recovery, not a step backward.';
+  if (w === 7) return 'Peak week. Heaviest loads of the block. Leave nothing in reserve.';
+  if (w === 8) return 'Final week — full sets, full loads. Compare Week 1 to today.';
+}
+
+function injectRestDays() {
+  // No-op — the old scaffold auto-injected its own separate "Mat Pilates" card here,
+  // which duplicated/conflicted with the real Day 4 built into the weekly loop above.
+  // Left as an empty function rather than removed, since the load handler still calls it.
+}
+
+// ─── WEEK LOCKING ──────────────────────────────────────────────────────────
+// Weeks in here are fully wrapped up — inputs, notes, and mark-done buttons
+// are disabled so no new data can be entered, while everything she already
+// logged stays visible for reference.
+function lockWeek(weekNum, reason) {
+  const weekContainer = document.getElementById('week-' + weekNum + '-sessions');
+  if (!weekContainer) return;
+  const badgeText = reason === 'upcoming' ? '🔒 Locked — upcoming week' : '🔒 Locked — week complete';
+
+  weekContainer.querySelectorAll('.session-card').forEach(card => {
+    card.classList.add('card-locked');
+    const existing = card.querySelector('.locked-badge');
+    if (existing) {
+      existing.textContent = badgeText;
+    } else {
+      card.insertAdjacentHTML('beforeend', `<div class="locked-badge">${badgeText}</div>`);
+    }
+  });
+
+  const prefix = 'detail-w' + weekNum + '_';
+  document.querySelectorAll('[id^="' + prefix + '"]').forEach(detail => {
+    detail.classList.add('week-locked');
+    detail.querySelectorAll('input').forEach(inp => { inp.disabled = true; });
+    detail.querySelectorAll('.mark-done-btn').forEach(btn => {
+      btn.classList.add('locked-btn');
+      btn.setAttribute('onclick', 'return false;');
+    });
+  });
+}
+
+window.addEventListener('load', async function() {
+  renderMeta();
+  // Run both backend calls at the same time instead of one after the other — cuts real wait time roughly in half
+  const [, detectedWeek] = await Promise.all([mergeRemoteState(), determineCurrentWeek()]);
+  loadData();
+  if (detectedWeek) {
+    applyCurrentWeek(detectedWeek);
+  } else {
+    showWeek(1); // no start date on file yet — default to Week 1
+  }
+  setTimeout(function() {
+    injectRestDays();
+  }, 150);
+});
