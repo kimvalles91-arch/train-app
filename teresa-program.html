@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAIN — Teresa G</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#15161A;
+  --bg-glow:#1B1D22;
+  --surface:#1E2025;
+  --surface2:#272A30;
+  --surface3:#30343B;
+  --border:#2C2F35;
+  --border2:#454952;
+  --text:#F1F1F0;
+  --text2:#DADBDC;
+  --muted:#9A9DA5;
+  --muted2:#6E7178;
+  --cobalt:#8FD0F0;
+  --cobalt-bright:#B9E3F6;
+  --cobalt-faint:rgba(143,208,240,0.10);
+  --cobalt-mid:rgba(143,208,240,0.26);
+  --cobalt-light:rgba(143,208,240,0.07);
+  --cobalt-text:#8FD0F0;
+  --on-cobalt:#0E2733;
+  --glow:rgba(143,208,240,0.30);
+  --shadow-card:0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28);
+  --shadow-modal:0 24px 64px rgba(0,0,0,0.55);
+  --radius:14px;
+  --radius-sm:9px;
+  --radius-lg:20px;
+}
+body{
+  background:
+    radial-gradient(900px 480px at 50% -10%, var(--bg-glow), transparent),
+    var(--bg);
+  color:var(--text);font-family:'Hanken Grotesk',sans-serif;font-weight:400;min-height:100vh;
+}
+.page{max-width:920px;margin:0 auto;padding:60px 32px 100px;}
+
+/* HEADER */
+.program-header{text-align:center;padding:56px 0 36px;}
+.header-eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.46em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:22px;opacity:0.85;}
+.program-name{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(34px,6vw,58px);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text);margin-bottom:10px;}
+.program-tagline{font-size:15px;font-weight:300;color:var(--muted);margin-bottom:36px;}
+.program-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:24px;}
+.meta-item{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 20px;min-width:96px;}
+.meta-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px;}
+.meta-value{font-size:14px;font-weight:500;color:var(--text);}
+
+/* CLIENT NOTE */
+.client-note{background:var(--surface);border:1px solid var(--border);padding:26px 28px;margin:40px 0;font-size:14px;line-height:1.9;color:var(--text2);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);position:relative;}
+.client-note::before{content:'';position:absolute;left:0;top:18px;bottom:18px;width:3px;background:var(--cobalt);border-radius:3px;}
+.client-note{padding-left:32px;}
+.client-note-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:10px;display:block;font-weight:600;}
+
+/* INJURY FLAG */
+.injury-flag{background:rgba(232,124,108,0.08);border:1px solid rgba(232,124,108,0.25);border-radius:var(--radius);padding:16px 20px;margin:20px 0;font-size:13px;color:#E8A89B;line-height:1.7;}
+.injury-flag strong{display:block;margin-bottom:4px;letter-spacing:.5px;color:#EDBBAF;}
+
+/* WEEK TABS */
+.week-nav{display:flex;gap:4px;margin:40px 0 0;overflow-x:auto;padding:6px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);position:sticky;top:66px;z-index:10;backdrop-filter:blur(8px);}
+/* CROSSED WEEK TAB */
+.week-tab{flex-shrink:0;padding:11px 20px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--muted);transition:all .2s;border-radius:var(--radius-sm);position:relative;overflow:hidden;}
+.week-tab.crossed{color:var(--muted2);}
+.week-tab.crossed::before,
+.week-tab.crossed::after{content:'';position:absolute;top:50%;left:10%;width:80%;height:1.5px;background:#E05C5C;opacity:0.85;transform-origin:center;}
+.week-tab.crossed::before{transform:translateY(-50%) rotate(18deg);}
+.week-tab.crossed::after{transform:translateY(-50%) rotate(-18deg);}
+.week-tab:hover{color:var(--cobalt-text);background:var(--cobalt-light);}
+.week-tab.active{background:var(--cobalt);color:var(--on-cobalt);border-color:var(--cobalt);font-weight:600;box-shadow:0 0 0 4px var(--cobalt-faint);}
+.week-tab.active.crossed::before,.week-tab.active.crossed::after{opacity:0;}
+.week-tab.deload{border-style:dashed;border-color:var(--border2);}
+.week-loading-state{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:60px 20px;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;}
+.week-loading-spinner{width:22px;height:22px;border-radius:50%;border:2px solid var(--border2);border-top-color:var(--cobalt);animation:week-spin 0.8s linear infinite;}
+@keyframes week-spin{to{transform:rotate(360deg);}}
+.week-tab.deload.active{border-style:solid;}
+.week-tab .week-tab-dates{display:block;font-size:8px;color:var(--muted2);margin-top:2px;letter-spacing:.03em;}
+.week-tab.active .week-tab-dates{color:var(--on-cobalt);opacity:.75;}
+.week-content{display:none;}
+.week-content.active{display:block;}
+
+/* WEEK HEADER */
+.week-header{padding:32px 0 22px;margin-bottom:4px;}
+.week-phase{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:10px;font-weight:600;}
+.week-dates{color:var(--muted);font-weight:500;}
+.week-title{font-size:32px;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:-0.02em;}
+.week-note{font-size:14px;color:var(--muted);line-height:1.8;max-width:580px;font-weight:400;}
+
+/* SESSION GRID (card layout) */
+.session-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:14px;}
+.session-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 24px;cursor:pointer;transition:border-color .18s,transform .18s,box-shadow .18s,background .18s;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow-card);}
+.session-card:hover{background:var(--surface2);border-color:var(--cobalt);transform:translateY(-3px);box-shadow:var(--shadow-card), 0 0 0 1px var(--cobalt-mid);}
+.session-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+.session-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt-text);font-weight:600;}
+.session-title{font-size:17px;font-weight:500;color:var(--text);margin-top:6px;line-height:1.3;}
+.session-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);white-space:nowrap;}
+.session-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.session-progress{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--cobalt-text);font-weight:600;}
+.session-view{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted2);transition:color .15s;}
+.session-card:hover .session-view{color:var(--cobalt-text);}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(8,5,2,0.65);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding:48px 20px;overflow-y:auto;z-index:100;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:var(--bg);border:1px solid var(--border2);border-radius:var(--radius-lg);max-width:720px;width:100%;margin-bottom:48px;overflow:hidden;box-shadow:var(--shadow-modal);}
+.modal-header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--surface);}
+.modal-close{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--border2);padding:7px 14px;cursor:pointer;border-radius:var(--radius-sm);transition:all .15s;}
+.modal-close:hover{border-color:var(--cobalt);color:var(--cobalt-text);}
+.session-detail{display:block;}
+
+/* PROGRESS BAR (inside modal detail) */
+.session-prog-bar{height:3px;background:var(--border);margin:0;}
+.session-prog-fill{height:100%;background:var(--cobalt);transition:width .3s;width:0%;box-shadow:0 0 8px var(--glow);}
+
+/* WARM UP TOGGLE BUTTON */
+.warmup-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--cobalt-faint);border:1.5px solid var(--cobalt-mid);border-radius:var(--radius-sm);cursor:pointer;transition:all .18s;margin:16px 0 8px;}
+.warmup-toggle:hover{background:var(--cobalt-mid);border-color:var(--cobalt);}
+.warmup-toggle-left{display:flex;align-items:center;gap:10px;}
+.warmup-header{display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--cobalt-faint);border:1.5px solid var(--cobalt-mid);border-radius:var(--radius-sm) var(--radius-sm) 0 0;margin:16px 0 0;}
+.warmup-toggle-icon{font-size:16px;line-height:1;}
+.warmup-toggle-text{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt-text);}
+.warmup-toggle-sub{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted2);margin-top:2px;letter-spacing:0.05em;}
+.warmup-toggle-arrow{font-size:12px;color:var(--cobalt-text);transition:transform .2s;}
+.warmup-toggle.open .warmup-toggle-arrow{transform:rotate(180deg);}
+
+/* WARM UP DRAWER */
+.warmup-drawer{display:none;background:var(--surface);border:1px solid var(--border);border-radius:0 0 var(--radius-sm) var(--radius-sm);margin-bottom:12px;overflow:hidden;}
+.warmup-drawer.open{display:block;}
+.protocol-list{list-style:none;padding:4px 0;}
+.protocol-list li{font-size:13px;color:var(--muted);padding:8px 18px;display:flex;justify-content:space-between;border-bottom:1px solid var(--border);}
+.protocol-list li:last-child{border-bottom:none;}
+.protocol-list li span{color:var(--cobalt-text);font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:600;}
+
+/* COOLDOWN (stays visible, no toggle) */
+.protocol-block{background:var(--surface);padding:16px 24px;margin:0;border-top:1px solid var(--border);}
+.protocol-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:8px;font-weight:600;}
+
+
+/* EXERCISE TABLE */
+.exercise-table{width:100%;border-collapse:collapse;background:var(--bg);}
+.exercise-table th{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;}
+.exercise-table th.center{text-align:center;}
+.ex-row{border-bottom:1px solid var(--border);}
+.ex-row:last-child{border-bottom:none;}
+.ex-row.completed .ex-name{color:var(--muted2);text-decoration:line-through;}
+.ex-row td{padding:18px 16px;vertical-align:top;}
+.ex-name{font-size:15px;font-weight:600;color:var(--text);display:block;margin-bottom:3px;transition:color .15s;}
+.ex-detail{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cobalt-text);display:block;margin-bottom:4px;font-weight:600;}
+.ex-cue{font-size:12px;color:var(--muted);font-style:italic;display:block;line-height:1.6;margin-top:4px;}
+.ex-link{display:inline-flex;align-items:center;gap:6px;font-family:'Hanken Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;color:#FFFFFF;background:#C0392B;text-decoration:none;padding:8px 16px 8px 12px;border-radius:999px;margin-top:8px;transition:all .15s;box-shadow:0 2px 8px rgba(0,0,0,0.25);}
+.ex-link:hover{background:#D9483A;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+.ex-link::before{content:'';width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #FFFFFF;flex-shrink:0;}
+.ex-name-row{display:flex;align-items:flex-start;gap:12px;}
+.ex-video-thumb{width:44px;height:44px;flex-shrink:0;border-radius:10px;background-color:var(--surface2);background-size:cover;background-position:center;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .15s;position:relative;overflow:hidden;}
+.ex-video-thumb-lg{width:76px;height:76px;border-radius:12px;}
+.ex-video-thumb-lg .ex-video-play{border-top-width:10px;border-bottom-width:10px;border-left-width:15px;margin-left:3px;}
+.ex-video-thumb:hover{border-color:var(--cobalt);}
+.ex-video-thumb::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.28);}
+.ex-video-thumb .ex-video-play{position:relative;z-index:1;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:9px solid #FFFFFF;margin-left:2px;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.6));}
+.ex-name-col{flex:1;min-width:0;}
+.ex-cat{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted2);display:block;margin-top:2px;}
+.ex-divider-row td{padding:14px 16px 6px;border:none;}
+.ex-divider{font-family:'JetBrains Mono',monospace;font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--cobalt-text);font-weight:800;border-bottom:2px solid var(--border);padding-bottom:8px;}
+
+/* PREV WEEK REFERENCE */
+.prev-week-ref{display:flex;align-items:center;gap:6px;margin-bottom:8px;padding:0 0 8px;border-bottom:1px dashed var(--border2);}
+.prev-week-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted2);width:30px;flex-shrink:0;}
+.prev-week-val{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--cobalt-text);opacity:1;}
+.prev-week-empty{display:none;}
+.sets-col{width:240px;}
+.set-row{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+.set-row:last-child{margin-bottom:0;}
+.set-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);width:30px;flex-shrink:0;}
+.weight-input{width:60px;font-family:'JetBrains Mono',monospace;font-size:13px;padding:7px 8px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);text-align:center;outline:none;transition:all .15s;border-radius:var(--radius-sm);}
+.weight-input:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-faint);}
+.reps-input{width:48px;font-family:'JetBrains Mono',monospace;font-size:13px;padding:7px 8px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);text-align:center;outline:none;transition:all .15s;border-radius:var(--radius-sm);}
+.reps-input:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-faint);}
+.unit{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+.sep{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+
+/* MARK DONE FULL-WIDTH BUTTON */
+.mark-done-row td{padding:0 16px 14px;}
+.mark-done-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 16px;background:transparent;border:1.5px solid var(--border2);border-radius:var(--radius-sm);cursor:pointer;transition:all .18s;}
+.mark-done-btn:hover{border-color:var(--cobalt);background:var(--cobalt-light);}
+.mark-done-check{width:18px;height:18px;border:1.5px solid var(--border2);border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .18s;}
+.mark-done-btn:hover .mark-done-check{border-color:var(--cobalt);}
+.mark-done-text{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);transition:color .18s;}
+.mark-done-btn:hover .mark-done-text{color:var(--cobalt-text);}
+.mark-done-btn.done{background:var(--cobalt);border-color:var(--cobalt);}
+.mark-done-btn.done .mark-done-check{border-color:var(--on-cobalt);background:rgba(0,0,0,0.15);}
+.mark-done-btn.done .mark-done-check::after{content:'';width:9px;height:5px;border-left:2px solid var(--on-cobalt);border-bottom:2px solid var(--on-cobalt);transform:rotate(-45deg) translateY(-1px);display:block;}
+.mark-done-btn.done .mark-done-text{color:var(--on-cobalt);font-weight:600;}
+
+/* NOTES ROW */
+.notes-row{background:var(--surface);border-bottom:1px solid var(--border);}
+.notes-row:last-child{border-bottom:none;}
+.notes-row td{padding:12px 16px;}
+.notes-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:6px;font-weight:600;}
+.notes-input{width:100%;font-size:13px;font-weight:400;color:var(--text);background:transparent;border:none;border-bottom:1px solid var(--border2);padding:4px 0;font-family:'Hanken Grotesk',sans-serif;resize:none;outline:none;transition:border-color .15s;}
+.notes-input:focus{border-bottom-color:var(--cobalt);}
+.notes-input::placeholder{color:var(--muted2);font-style:italic;}
+
+/* SESSION FOOTER */
+.session-footer{padding:14px 24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--surface);}
+.complete-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
+.complete-count .done-num{color:var(--cobalt-text);font-weight:600;}
+.save-note{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);}
+
+/* EXPORT BAR */
+.export-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 0;margin:24px 0 0;border-top:1px solid var(--border);}
+.export-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.05em;}
+.export-btn{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:11px 24px;border:1px solid var(--cobalt);background:transparent;color:var(--cobalt-text);cursor:pointer;transition:all .15s;border-radius:var(--radius-sm);}
+.export-btn:hover{background:var(--cobalt);color:var(--on-cobalt);box-shadow:0 0 16px var(--glow);}
+
+/* PROGRESSION */
+.progression-block{border:1px solid var(--border2);padding:18px 22px;margin:18px 24px;background:var(--surface2);border-radius:var(--radius);}
+.progression-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);margin-bottom:8px;font-weight:600;}
+.progression-text{font-size:13px;color:var(--text2);line-height:1.8;font-weight:400;}
+
+/* DELOAD */
+.deload-banner{background:var(--surface);border:1px dashed var(--border2);padding:26px;margin-bottom:12px;text-align:center;border-radius:var(--radius-lg);}
+.deload-title{font-size:20px;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:-0.02em;}
+.deload-text{font-size:13px;color:var(--muted);line-height:1.8;max-width:480px;margin:0 auto;font-weight:400;}
+
+/* CLOSE */
+.program-close{text-align:center;padding:48px 0 40px;margin-top:48px;}
+.close-text{font-size:clamp(15px,2.5vw,20px);font-weight:300;color:var(--muted);max-width:480px;margin:0 auto 16px;line-height:1.7;}
+.close-sig{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);}
+
+/* APP NAV — shared across all TRAIN pages */
+.app-nav{position:sticky;top:0;z-index:50;display:flex;justify-content:center;gap:6px;background:rgba(21,22,26,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:12px 14px;overflow-x:auto;}
+.app-nav-item{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;color:var(--muted);text-decoration:none;padding:9px 18px;border-radius:30px;white-space:nowrap;transition:all .15s;border:1px solid transparent;flex-shrink:0;}
+.app-nav-item:hover{color:var(--cobalt-text);background:var(--cobalt-faint);border-color:var(--cobalt-mid);}
+.app-nav-item.active{color:var(--on-cobalt);background:var(--cobalt);border-color:var(--cobalt);}
+@media (max-width:480px){.app-nav{justify-content:flex-start;padding:10px 12px;}}
+
+/* PRINT */
+@media print{
+  .week-nav,.session-toggle,.session-footer{display:none!important;}
+  .week-content{display:block!important;}
+  .session-body{display:block!important;}
+  .weight-input{border:1px solid #ccc;}
+}
+
+/* ── MOBILE: stack exercise rows into cards, no horizontal scroll ── */
+@media(max-width:640px){
+  .page{padding:24px 12px 80px;}
+  .modal-overlay{padding:0;}
+  .modal-box{border-radius:0;min-height:100dvh;margin-bottom:0;}
+  .modal-header{padding:16px;}
+
+  /* Hide table header on mobile */
+  .exercise-table thead{display:none;}
+
+  /* Make each row a block card */
+  .exercise-table tbody,
+  .exercise-table tr,
+  .exercise-table td{display:block;width:100%;}
+
+  .ex-row{border-bottom:none;margin-bottom:2px;}
+  .ex-row td{padding:16px 16px 8px;}
+
+  /* Sets column: full width, remove fixed sizing */
+  .sets-col{width:100%;padding:0 16px 12px!important;}
+
+  /* Set rows: compact input row */
+  .set-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .weight-input{width:70px;font-size:15px;padding:10px 8px;}
+  .reps-input{width:56px;font-size:15px;padding:10px 8px;}
+
+  /* Check column: becomes a full-width done button at the bottom of each ex */
+  .check-col{width:100%;text-align:left;padding:0 16px 16px!important;border-top:1px solid var(--border);}
+  .check-wrap{justify-content:flex-start;gap:12px;padding-top:12px;}
+  .custom-check{width:28px;height:28px;border-radius:8px;}
+  .check-done-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;}
+
+  /* Prev week ref */
+  .prev-week-ref{margin-bottom:8px;}
+
+  /* Notes row */
+  .notes-row td{padding:10px 16px 14px!important;}
+
+  /* Session grid: single column */
+  .session-grid{grid-template-columns:1fr;}
+
+  /* Week nav: scroll horizontally but compact */
+  .week-nav{border-radius:var(--radius);top:58px;padding:4px;}
+  .week-tab{padding:9px 14px;font-size:8px;}
+
+  /* Meta pills: 2-col grid */
+  .program-meta{gap:8px;}
+  .meta-item{flex:1;min-width:calc(50% - 8px);padding:10px 12px;}
+}
+
+
+/* ============================================================
+   HOME PANEL STYLES (scoped under #panel-home)
+   ============================================================ */
+#panel-home .wrap{max-width:820px;margin:0 auto;padding:0 0 40px;}
+#panel-home .hero{text-align:center;padding:56px 28px 36px;border-bottom:1px solid var(--border);}
+#panel-home .eyebrow{font-family:'JetBrains Mono',monospace;font-size:15px;letter-spacing:0.22em;text-transform:uppercase;color:var(--cobalt-text);font-weight:700;opacity:0.95;}
+#panel-home .wordmark{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(48px,15vw,64px);font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--text);margin:20px 0 10px;}
+#panel-home .hero-sub{font-size:16px;font-weight:700;letter-spacing:0.06em;color:var(--cobalt-text);text-transform:uppercase;margin-bottom:28px;}
+#panel-home .hero-welcome{font-size:17px;color:var(--text2);max-width:520px;margin:0 auto 28px;line-height:1.7;}
+#panel-home .hero-welcome b{color:var(--cobalt-text);font-weight:700;}
+#panel-home .meta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;}
+#panel-home .meta-item{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 20px;min-width:110px;}
+#panel-home .meta-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px;}
+#panel-home .meta-value{font-size:14px;font-weight:600;color:var(--text);}
+#panel-home .section{padding:44px 28px;border-bottom:1px solid var(--border);}
+#panel-home .section:last-of-type{border-bottom:none;}
+#panel-home .section-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--cobalt-text);font-weight:600;margin-bottom:10px;}
+#panel-home .section-title{font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:26px;letter-spacing:-0.01em;color:var(--text);margin-bottom:14px;}
+#panel-home .section-intro{color:var(--muted);font-size:14.5px;max-width:600px;margin-bottom:28px;line-height:1.7;}
+#panel-home .tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 28px;margin-bottom:16px;box-shadow:var(--shadow-card);}
+#panel-home .tool-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+#panel-home .tool-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);font-weight:700;background:var(--cobalt-faint);border:1px solid var(--cobalt-mid);border-radius:20px;padding:4px 12px;}
+#panel-home .tool-title{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:var(--text);}
+#panel-home .tool-body{color:var(--text2);font-size:14.5px;line-height:1.75;}
+#panel-home .tool-body ul{margin:12px 0 0 18px;padding:0;}
+#panel-home .tool-body li{margin-bottom:8px;}
+#panel-home .btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--cobalt);color:var(--on-cobalt);
+  text-decoration:none;font-weight:600;font-size:12.5px;letter-spacing:0.05em;text-transform:uppercase;
+  padding:12px 22px;border-radius:30px;margin-top:16px;border:1px solid var(--cobalt);
+}
+#panel-home .placeholder{color:#E8877A;font-style:italic;}
+#panel-home .mfp-username{font-weight:800;font-size:1.6em;color:var(--cobalt-text);}
+#panel-home .expect-wrap{overflow:hidden;margin-bottom:8px;}
+#panel-home .expect-col{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 28px;margin:0 0 20px 0;box-shadow:var(--shadow-card);}
+#panel-home .expect-col h3{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text);font-weight:600;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--cobalt);}
+#panel-home .expect-col p{color:var(--text2);font-size:14.5px;margin-bottom:14px;line-height:1.7;}
+#panel-home .expect-col ul{margin-left:18px;color:var(--text2);font-size:14.5px;}
+#panel-home .expect-col li{margin-bottom:10px;line-height:1.7;}
+@media (min-width:700px){
+#panel-home .expect-col{float:left;width:46%;margin:0 4% 20px 0;}#panel-home .expect-col.last{margin-right:0;}
+}
+#panel-home table.supps{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#panel-home table.supps th{background:var(--surface2);color:var(--cobalt-text);text-align:left;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;padding:12px 16px;font-weight:700;}
+#panel-home table.supps td{padding:14px 16px;border-top:1px solid var(--border);font-size:14px;color:var(--text2);vertical-align:top;}
+#panel-home table.supps td.name{font-weight:600;color:var(--text);width:34%;}
+#panel-home table.supps th:first-child{width:34%;}
+#panel-home .faq-item{margin-bottom:20px;}
+#panel-home .faq-q{font-weight:600;font-size:15px;color:var(--text);margin-bottom:6px;font-family:'Hanken Grotesk',sans-serif;}
+#panel-home .faq-q::before{content:"Q. ";color:var(--cobalt-text);font-family:'JetBrains Mono',monospace;font-weight:700;}
+#panel-home .faq-a{color:var(--text2);font-size:14.5px;margin-left:22px;line-height:1.7;}
+#panel-home .footer{padding:36px 28px 10px;text-align:center;border-top:1px solid var(--border);margin-top:8px;}
+#panel-home .footer .fw{font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:22px;letter-spacing:0.08em;color:var(--text);text-transform:uppercase;margin-bottom:10px;}
+#panel-home .footer p{font-size:13px;color:var(--muted);margin-bottom:4px;}
+#panel-home .footer .tagline{color:var(--cobalt-text);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;margin-top:16px;font-family:'JetBrains Mono',monospace;}
+@media (max-width:480px){
+#panel-home .hero{padding:32px 20px 28px;}#panel-home .eyebrow{font-size:15px;letter-spacing:0.14em;}#panel-home .wordmark{font-size:58px;letter-spacing:0.12em;margin:14px 0 10px;}#panel-home .hero-sub{font-size:16px;letter-spacing:0.05em;margin-bottom:22px;}#panel-home .hero-welcome{font-size:17px;line-height:1.6;max-width:100%;}#panel-home .section{padding:32px 20px;}#panel-home .section-title{font-size:22px;}#panel-home .expect-col{float:none;width:100%;margin:0 0 16px 0;}
+}
+
+/* ============================================================
+   NUTRITION PANEL STYLES (scoped under #panel-nutrition)
+   ============================================================ */
+#panel-nutrition .wrap{max-width:780px;margin:0 auto;padding:0 0 100px;}
+#panel-nutrition .hero{background:var(--surface);border-bottom:1px solid var(--border);padding:40px 28px 32px;}
+#panel-nutrition .hero .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cobalt-text);font-weight:600;}
+#panel-nutrition .hero h1{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:38px;text-transform:uppercase;letter-spacing:.06em;margin:8px 0 6px;color:var(--text);}
+#panel-nutrition .hero .goal-line{font-size:15px;color:var(--muted);letter-spacing:.01em;line-height:1.5;}
+#panel-nutrition .hero .goal-line strong{color:var(--cobalt-text);}
+#panel-nutrition .macro-strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface2);border-bottom:1px solid var(--border);}
+#panel-nutrition .macro-cell{padding:18px 10px;text-align:center;border-right:1px solid var(--border);}
+#panel-nutrition .macro-cell:last-child{border-right:none;}
+#panel-nutrition .macro-cell .num{font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:700;color:var(--cobalt-text);}
+#panel-nutrition .macro-cell .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:4px;}
+#panel-nutrition .macro-cell .pct{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted2);margin-top:3px;}
+#panel-nutrition .intro{padding:24px 28px 4px;font-size:14px;line-height:1.6;color:var(--text2);}
+#panel-nutrition .intro strong{color:var(--cobalt-text);}
+#panel-nutrition .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin:20px 28px 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#panel-nutrition .why-cell{background:var(--surface);padding:16px 14px;}
+#panel-nutrition .why-cell h4{font-family:'Hanken Grotesk',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin:0 0 6px;font-weight:700;color:var(--cobalt-text);}
+#panel-nutrition .why-cell p{font-size:12.5px;line-height:1.55;margin:0;color:var(--text2);}
+#panel-nutrition .tab-bar{display:flex;gap:0;margin:24px 28px 0;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+#panel-nutrition .tab-btn{flex:1;min-width:90px;background:none;border:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:13px;padding:14px 4px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .15s, border-color .15s;}
+#panel-nutrition .tab-btn:hover{color:var(--cobalt-text);}
+#panel-nutrition .tab-btn.active{color:var(--cobalt-text);border-bottom-color:var(--cobalt);}
+#panel-nutrition .tab-panel{display:none;padding:20px 28px 8px;}
+#panel-nutrition .tab-panel.active{display:block;}
+#panel-nutrition .meal-card{border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);margin-bottom:16px;box-shadow:var(--shadow-card);overflow:hidden;}
+#panel-nutrition .meal-card-head{display:flex;justify-content:space-between;align-items:baseline;padding:14px 18px;border-bottom:1px solid var(--border);}
+#panel-nutrition .meal-card-head h3{font-family:'Hanken Grotesk',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:.03em;margin:0;font-weight:600;color:var(--text);}
+#panel-nutrition .meal-card-head .macro-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap;padding-left:12px;}
+#panel-nutrition .meal-card-body{padding:14px 18px;font-size:14px;line-height:1.6;color:var(--text2);}
+#panel-nutrition .meal-card-body ul{margin:0;padding-left:18px;}
+#panel-nutrition .meal-card-body li{margin-bottom:4px;}
+#panel-nutrition .swap-note{font-size:12px;color:var(--muted);margin-top:10px;border-top:1px dashed var(--border);padding-top:10px;}
+#panel-nutrition .flag-note{font-size:11.5px;color:var(--avoid-bright);margin-top:8px;}
+#panel-nutrition .shop-group{margin-bottom:18px;}
+#panel-nutrition .shop-group h3{font-family:'Hanken Grotesk',sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;border-bottom:2px solid var(--cobalt);padding-bottom:6px;margin:0 0 10px;color:var(--cobalt-text);}
+#panel-nutrition .copy-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  background:var(--cobalt);color:var(--on-cobalt);border:1px solid var(--cobalt);border-radius:30px;
+  font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.05em;
+  padding:13px 16px;margin-bottom:16px;cursor:pointer;transition:background .15s, box-shadow .15s;
+}
+#panel-nutrition .copy-btn:hover{background:var(--cobalt-bright);box-shadow:0 0 0 4px var(--cobalt-faint);}
+#panel-nutrition .copy-btn:active{opacity:.85;}
+#panel-nutrition .copy-btn.copied{background:var(--good);border-color:var(--good);}
+#panel-nutrition .shop-list{list-style:none;margin:0;padding:0;}
+#panel-nutrition .shop-list li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14px;color:var(--text2);border-bottom:1px solid var(--border);}
+#panel-nutrition .shop-list li input[type=checkbox]{width:16px;height:16px;accent-color:var(--cobalt);flex-shrink:0;}
+#panel-nutrition .shop-list li .qty{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto;}
+#panel-nutrition .guide-footer{padding:28px 28px 10px;font-size:13px;color:var(--muted);border-top:1px solid var(--border);margin-top:20px;line-height:1.6;}
+#panel-nutrition .guide-footer strong{color:var(--text);}
+@media (max-width:520px){
+#panel-nutrition .hero h1{font-size:28px;}#panel-nutrition .macro-strip{grid-template-columns:repeat(2,1fr);}#panel-nutrition .macro-cell:nth-child(2){border-right:none;}#panel-nutrition .tab-btn{font-size:11px;padding:12px 2px;}#panel-nutrition .why-grid{grid-template-columns:1fr;}
+}
+#panel-nutrition .deficit-table{border-collapse:collapse;margin:20px 28px 0;width:calc(100% - 56px);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+#panel-nutrition .deficit-table th{font-family:'Hanken Grotesk',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:12px 12px;text-align:left;background:var(--surface2);color:var(--cobalt-text);font-weight:700;}
+#panel-nutrition .deficit-table td{padding:12px 12px;border-bottom:1px solid var(--border);font-size:13px;color:var(--text2);background:var(--surface);}
+#panel-nutrition .deficit-table tr:last-child td{border-bottom:none;}
+#panel-nutrition .deficit-table .num{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--text);}
+#panel-nutrition .deficit-table tr.current td{background:var(--surface2);}
+#panel-nutrition .deficit-table tr.current td:first-child{border-left:3px solid var(--cobalt);}
+#panel-nutrition .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.05em;background:var(--cobalt);color:var(--on-cobalt);padding:3px 8px;border-radius:20px;margin-left:6px;font-weight:600;}
+@media (max-width:520px){
+#panel-nutrition .deficit-table{font-size:12px;margin:16px 16px 0;width:calc(100% - 32px);}#panel-nutrition .deficit-table th, #panel-nutrition .deficit-table td{padding:8px 8px;}
+}
+
+/* ============================================================
+   APP-LEVEL PANEL SWITCHER
+   ============================================================ */
+.app-panel{display:none;}
+.app-panel.active{display:block;}
+</style>
+</head>
+<body>
+<nav class="app-nav">
+  <a href="javascript:void(0)" class="app-nav-item active" data-panel="home" onclick="showPanel('home');return false;">Home</a>
+  <a href="javascript:void(0)" class="app-nav-item" data-panel="program" onclick="showPanel('program');return false;">Program</a>
+  <a href="javascript:void(0)" class="app-nav-item" data-panel="nutrition" onclick="showPanel('nutrition');return false;">Nutrition</a>
+  <a href="train-faq.html" class="app-nav-item">FAQ</a>
+</nav>
+
+<div id="panel-home" class="app-panel active">
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">8-Week Coaching Program</div>
+    <div class="wordmark">TRAIN</div>
+    <div class="hero-sub">Kim Valles Coaching</div>
+    <div class="hero-welcome">
+      Welcome, <b>Teresa</b>. Here's your hub for the next 8
+      weeks — your training plan, nutrition, tracking tools, and exactly
+      what to expect from each other along the way.
+    </div>
+    <div class="meta-row">
+      <div class="meta-item"><div class="meta-label">Goal</div><div class="meta-value">Body Recomposition</div></div>
+      <div class="meta-item"><div class="meta-label">Split</div><div class="meta-value">Lower+Core / Upper Push-Pull / Full Body</div></div>
+      <div class="meta-item"><div class="meta-label">Days / Week</div><div class="meta-value">3</div></div>
+      <div class="meta-item"><div class="meta-label">Session</div><div class="meta-value">45 min</div></div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="section-label">Getting Started</div>
+    <div class="section-title">How This Works</div>
+
+    <div class="tool-card">
+      <div class="tool-head"><span class="tool-num">01</span><span class="tool-title">Your Training Program</span></div>
+      <div class="tool-body">
+        TRAIN is an intelligent training platform built around progressive
+        overload and real performance data. Your program is structured in
+        8-week blocks, with each week intentionally building on the one
+        before it. TRAIN tells you exactly what to do each session —
+        including exercises, sets, reps, and progression — while tracking
+        the weight and reps you log along the way.
+        <br><br>
+        As you TRAIN, your performance data carries forward week to week, so
+        you always know what you did last time and what you're working
+        toward next. Progressive overload is built into the programming,
+        allowing reps, sets, and load to increase strategically throughout
+        the block.
+        <br><br>
+        There's no spreadsheets, screenshots, or guessing what to do next.
+        You simply open TRAIN, log your performance, and come back the
+        following week knowing exactly where to pick up. Week 1 establishes
+        your baseline. Week 8 reflects how far you've progressed.
+      </div>
+      <a href="javascript:void(0)" class="btn" onclick="showPanel('program');return false;">Open Training Plan →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-head"><span class="tool-num">02</span><span class="tool-title">Your Nutrition Guide</span></div>
+      <div class="tool-body">
+        What you eat plays a major role in how you feel, perform, recover,
+        and ultimately see results. But the goal isn't to put you on a meal
+        plan you have to follow forever — it's to empower you with the
+        knowledge and tools to take charge of your own nutrition.
+        <br><br>
+        TRAIN gives you personalized calorie, protein, carbohydrate, fat, and
+        fiber targets, along with meal ideas based on foods you actually
+        enjoy. More importantly, it helps you understand why those nutrients
+        matter, how they fuel your body, and how to make smart choices that
+        support your goals.
+        <br><br>
+        Because real life isn't a meal plan. You're going to eat at
+        restaurants, travel, have busy days, change your preferences, and
+        sometimes indulge in a sweet treat. The goal is to give you the
+        knowledge and framework to navigate those situations without
+        feeling like you've "fallen off."
+        <br><br>
+        You'll learn the importance of fueling your body with the right
+        balance of macro and micronutrients, rather than simply being told
+        what to eat. Your targets give you direction. Your food choices are
+        yours.
+        <br><br>
+        Over time, the goal is to move from "Tell me what to eat" to "I
+        understand how to fuel my body." TRAIN isn't here to control your
+        nutrition. It's here to educate and empower you to take control of
+        it.
+      </div>
+      <a href="javascript:void(0)" class="btn" onclick="showPanel('nutrition');return false;">Open Nutrition Guide →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-head"><span class="tool-num">03</span><span class="tool-title">MyFitnessPal — Food Tracking</span></div>
+      <div class="tool-body">
+        For these 8 weeks, we track.
+        <br><br>
+        Not because I want you counting calories forever, but because data
+        teaches us things that guessing can't.
+        <br><br>
+        Your body is an incredibly complex biological system, and the food
+        you eat provides the energy and nutrients it needs to function.
+        Calories (kcal) provide energy, while protein, carbohydrates, fats,
+        and micronutrients each play important roles in how your body
+        functions, performs, and recovers.
+        <br><br>
+        Understanding this process gives you something far more valuable
+        than a meal plan: awareness, control, and the ability to make
+        informed choices.
+        <br><br>
+        Tracking your food for these 8 weeks allows us to see how much
+        energy you're actually consuming, how you're distributing your
+        macronutrients, and how that intake aligns with your training,
+        recovery, and goals. It turns nutrition from something you guess at
+        into something you can actually understand.
+        <br><br>
+        I know tracking can feel tedious at times. That's okay. We're not
+        tracking to obsess — we're tracking to learn.
+        <br><br>
+        Use the free version of MyFitnessPal — no premium subscription
+        needed:
+        <ul>
+          <li>Go to Goal Settings and set a <b>custom</b> calorie and macro goal. I will provide your specific targets.</li>
+          <li>Enter the numbers from your Nutrition Guide for calories, protein, carbohydrates, and fat.</li>
+          <li>Log your meals as accurately and consistently as you can. Consistency matters more than perfection. Protein is the number I care about most — however, that doesn't make carbs, fats, and micronutrients any less important.</li>
+          <li>In Settings → Sharing & Privacy → Diary Sharing, set your diary to Friends Only and send a request to <span class="mfp-username">Kimvalles7113</span> so I can review your food log.</li>
+        </ul>
+        You don't have to track your food forever. These 8 weeks are about
+        education, awareness, and learning how your body responds to what
+        you put into it.
+        <br><br>
+        The goal isn't to become dependent on tracking. It's to understand
+        your body's energy needs and nutritional requirements well enough
+        that you can eventually make smart decisions without needing an app
+        to tell you what to eat.
+        <br><br>
+        Because once you understand the machine, you have far more control
+        over how you fuel it.
+      </div>
+      <a href="https://www.myfitnesspal.com/" class="btn" target="_blank" rel="noopener">Open MyFitnessPal →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-head"><span class="tool-num">04</span><span class="tool-title">Progress Photos</span></div>
+      <div class="tool-body">
+        This is where we capture the part of your progress that numbers
+        can't.
+        <br><br>
+        Your weight, measurements, and performance data tell us what's
+        happening in numbers — but your body is three-dimensional, and a
+        photo captures changes that a scale or measurement simply can't.
+        Muscle definition, shape, proportion, posture, and the way your body
+        is changing over time can all tell a deeper story.
+        <br><br>
+        I know progress photos can feel uncomfortable at first, but this data
+        is incredibly valuable. The more pieces of the picture we have, the
+        better we can understand your progress. Think of your photos as
+        another measurement — just one that tells a visual story.
+        <br><br>
+        Upload once a week when possible, ideally in the same lighting,
+        pose, and clothing (front, side, and back). Consistency makes the
+        changes easier to see over time.
+        <br><br>
+        You don't need to love the photo. You just need to take it. Let the
+        data tell the story.
+      </div>
+      <a href="https://drive.google.com/drive/folders/1aj6-_DnYV8JRDlxL9dgzYSO2OKW2SYmy?usp=drive_link" class="btn" target="_blank" rel="noopener">Open Photo Folder →</a>
+    </div>
+  </div>
+
+  <!-- EXPECTATIONS -->
+  <div class="section">
+    <div class="section-label">The Partnership</div>
+    <div class="section-title">What To Expect</div>
+    <p class="section-intro">
+      Coaching works best as a two-way street. Here's what you can count on
+      from me, and what I'll be counting on from you.
+    </p>
+
+    <div class="expect-wrap">
+      <div class="expect-col">
+        <h3>From Me</h3>
+        <p>TRAIN handles the structure, progression, and tracking. I'm here to coach you through the process.</p>
+        <ul>
+          <li>I review your weekly check-in, progress photos, training data, and nutrition tracking to see the bigger picture</li>
+          <li>I use that information to help guide you throughout your 8-week block and make adjustments when they're actually needed</li>
+          <li>I'm available for questions, exercise substitutions, and form checks between sessions — I'll respond the same day if you reach out before 8pm. Messages after 8pm will get a response the next day.</li>
+          <li>If something isn't working, we'll address it. That might mean adjusting your training, nutrition targets, or approach based on what your data is telling us</li>
+          <li>You'll get honest, direct feedback from me — not just what you want to hear, but what you need to hear to keep moving forward</li>
+          <li>My goal isn't to make you dependent on me. It's to teach you enough about your training and nutrition that you become more confident, capable, and in control of your own progress</li>
+        </ul>
+      </div>
+      <div class="expect-col last">
+        <h3>From You</h3>
+        <p>Your job is to show up, collect the data, and communicate.</p>
+        <ul>
+          <li>Log every workout — weight, reps, and how the session felt. This gives us real performance data to work from</li>
+          <li>Upload your weekly progress photos by Sunday — 4 total: front, back, and both sides. Keep your lighting, clothing, and poses as consistent as possible so we can accurately track visual changes over time</li>
+          <li>Track your food consistently in MyFitnessPal — protein is the priority, but the goal is to build an accurate picture of your overall nutrition</li>
+          <li>Tell me when something is off. Injury, pain, poor sleep, stress, travel, or anything else affecting your training matters. Communicating early gives us the opportunity to adjust before it becomes a missed week</li>
+          <li>Ask questions. If you're unsure about an exercise, your numbers, or why you're doing something, ask. Don't guess — understanding why is part of the process</li>
+          <li>Be honest with your data. You don't need perfect workouts, perfect nutrition, or perfect weeks. You need accurate information so we can make smart decisions from it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUPPLEMENTS & TOOLS -->
+  <div class="section">
+    <div class="section-label">Optional, Not Required</div>
+    <div class="section-title">Recommended Supplements &amp; Tools</div>
+    <p class="section-intro">
+      Supplements and tools support the plan — they don't replace it.
+      Training and nutrition come first. Below is a starting reference;
+      adjust it to what you actually recommend for this client.
+    </p>
+
+    <table class="supps">
+      <tr><th>Supplement</th><th>Why It's On The List</th></tr>
+      <tr><td class="name">Protein Powder</td><td>Helps you hit your daily protein target when whole food falls short</td></tr>
+      <tr><td class="name">Creatine Monohydrate</td><td>Well-studied support for strength and training performance</td></tr>
+      <tr><td class="name">Fish Oil / Omega-3</td><td>General health support, especially with lower fish intake</td></tr>
+      <tr><td class="name">Vitamin D</td><td>Common gap, especially with limited sun exposure</td></tr>
+      <tr><td class="name">Daily Multivitamin</td><td>Covers baseline micronutrient gaps</td></tr>
+    </table>
+
+    <table class="supps" style="margin-top:24px;">
+      <tr><th>Tool</th><th>Why It's On The List</th></tr>
+      <tr><td class="name">Food Scale</td><td>The most accurate way to measure portions — eyeballing servings is one of the biggest sources of tracking error</td></tr>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="fw">TRAIN</div>
+    <p>Kim Valles Coaching</p>
+    <p>TRAIN@kimvallescoaching.com · @Kim_valles</p>
+    <div class="tagline">Let's Get To Work</div>
+  </div>
+
+</div>
+</div>
+
+<div id="panel-program" class="app-panel">
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="program-header">
+    <div class="header-eyebrow">Kim Valles Coaching &nbsp;·&nbsp; TRAIN</div>
+    <div class="program-name" id="program-name">8-Week Recomp Program</div>
+    <div class="program-tagline" id="program-tagline">Built around your strength + Pilates split, your equipment access, and your tight hips.</div>
+    <div class="program-meta">
+      <div class="meta-item"><div class="meta-label">Client</div><div class="meta-value" id="meta-client">Teresa G</div></div>
+      <div class="meta-item"><div class="meta-label">Goal</div><div class="meta-value" id="meta-goal">Body Recomposition</div></div>
+      <div class="meta-item"><div class="meta-label">Split</div><div class="meta-value" id="meta-split">Lower+Core / Upper Push-Pull / Full Body+Conditioning</div></div>
+      <div class="meta-item"><div class="meta-label">Days / Week</div><div class="meta-value" id="meta-days">3</div></div>
+      <div class="meta-item"><div class="meta-label">Session Length</div><div class="meta-value" id="meta-duration">45 min</div></div>
+      <div class="meta-item"><div class="meta-label">Equipment</div><div class="meta-value" id="meta-equipment">Mixed</div></div>
+    </div>
+  </div>
+
+  <div style="width:100%;height:1px;background:var(--border);margin-bottom:40px;"></div>
+
+  <div class="injury-flag" id="injury-flag" style="display:block">
+    <strong>Mobility note applied</strong>
+    <span id="injury-flag-text">Tight hips flagged on intake — every lower/full body session opens with hip-focused mobility work, and squat/lunge depth is cued to a comfortable range rather than maximal depth. Also watch the right shoulder/upper back area — a pinched nerve showed up around Block 1 Week 5-7, likely from an outside strength class, and bar placement on RDLs plus shoulder press and incline press loads were being worked around it. No pain should be present in any movement; if something pinches or feels off, swap it out and tell Kim.</span>
+  </div>
+
+  <div style="width:100%;height:1px;background:var(--border);margin:32px 0 0;"></div>
+
+  <!-- WEEK TABS -->
+  <div class="week-nav" id="week-nav">
+    <button class="week-tab" onclick="showWeek(1)">Week 9<span class="week-tab-dates" id="week-dates-1"></span></button>
+    <button class="week-tab" onclick="showWeek(2)">Week 10<span class="week-tab-dates" id="week-dates-2"></span></button>
+    <button class="week-tab" onclick="showWeek(3)">Week 11<span class="week-tab-dates" id="week-dates-3"></span></button>
+    <button class="week-tab" onclick="showWeek(4)">Week 12<span class="week-tab-dates" id="week-dates-4"></span></button>
+    <button class="week-tab" onclick="showWeek(5)">Week 13<span class="week-tab-dates" id="week-dates-5"></span></button>
+    <button class="week-tab deload" onclick="showWeek(6)">Week 14 — Recovery<span class="week-tab-dates" id="week-dates-6"></span></button>
+    <button class="week-tab" onclick="showWeek(7)">Week 15<span class="week-tab-dates" id="week-dates-7"></span></button>
+    <button class="week-tab" onclick="showWeek(8)">Week 16<span class="week-tab-dates" id="week-dates-8"></span></button>
+    <button class="week-tab" onclick="showWeek(9)">Week 17 — Peak<span class="week-tab-dates" id="week-dates-9"></span></button>
+    <button class="week-tab" onclick="showWeek(10)">Week 18<span class="week-tab-dates" id="week-dates-10"></span></button>
+  </div>
+
+  <div id="week-loading" class="week-loading-state">
+    <div class="week-loading-spinner"></div>
+    <span>Loading your program…</span>
+  </div>
+
+  <!-- WEEKS -->
+  <div id="week-1" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 9 <span class="week-dates" id="week-header-dates-1"></span></div>
+      <div class="week-title">Re-Entry</div>
+      <div class="week-note">This is a straight continuation, not a comeback — Block 2 starts right where Block 1 left off, with no time off in between. Here's where you left off: <strong style="color:var(--cobalt-text);">135lbs on RDLs</strong>, <strong style="color:var(--cobalt-text);">165lbs on hip thrusts</strong>, <strong style="color:var(--cobalt-text);">150lbs on lat pulldown</strong>, <strong style="color:var(--cobalt-text);">85lbs on barbell rows</strong>. Those numbers are your floor, not a ceiling to chase on day one. Week 9 is still a quick calibration week — not because you've been away, but because we're deliberately testing whether your body wants to jump straight back to Block 1's peak numbers or settle in for a session or two first. Move through your working sets at a moderate RPE, pay attention to how things feel, and let the data tell you which it is. Show up, move well, and gather real numbers.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-1-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-2" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 10 <span class="week-dates" id="week-header-dates-2"></span></div>
+      <div class="week-title">Reload</div>
+      <div class="week-note">Now that you've got a real read on where you're at, this week is about pushing back toward your Block 1 numbers with intention. Work toward the top of your prescribed rep ranges again — if you hit the top of the range with 2 or more reps left in the tank, add weight next session. Your body adapts fast when it's rebuilding on top of existing strength rather than starting from zero, so don't be surprised if this feels quicker than Block 1's early weeks did. Keep logging everything; these numbers set up the comparison for where you're headed.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-2-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-3" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 11 <span class="week-dates" id="week-header-dates-3"></span></div>
+      <div class="week-title">Reclaim</div>
+      <div class="week-note">This is the week you meet or pass your Block 1 peak numbers. A 4th set returns on your main lifts — more total volume, same rep target. If your working weight from Block 1 (135 on RDLs, 150 on lat pulldown, 85 on rows) feels manageable for a full 4 sets at the prescribed reps, that's the green light to call this reclaimed ground and start pushing past it. Trust the strength that's still there — it didn't go anywhere, it just needed reactivating.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-3-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-4" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 12 <span class="week-dates" id="week-header-dates-4"></span></div>
+      <div class="week-title">Surplus</div>
+      <div class="week-note">New ground. Everything you lift well this week is genuinely past where Block 1 left off — not a rebuild, a gain. Reps tighten slightly on the heavy compounds so you can push the weight, RPE climbs toward 8-9. This is the payoff week for the calibration and reload weeks — you didn't rush back to your old numbers, so pushing past them now should feel earned rather than forced.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-4-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-5" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 13 <span class="week-dates" id="week-header-dates-5"></span></div>
+      <div class="week-title">New Wave</div>
+      <div class="week-note">Sets reset to 3, but your working weight should sit above where Week 9 started — this is a fresh wave built on a higher floor, not a step back. Use this week to reset your rep counts at a slightly lower RPE before the next build-up begins. Lateral movements and any accessory work that's felt easy are fair game to bump up a notch here too.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-5-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-6" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 14 — Recommended Deload <span class="week-dates" id="week-header-dates-6"></span></div>
+      <div class="week-title">Recovery Week</div>
+      <div class="week-note">Same story as Block 1's deload: fatigue has accumulated from four straight weeks of building on top of an already-strong base, and this week lets your body absorb that work. Same movements, 2 working sets, roughly 60% of what you've been using in Week 13. No conditioning finishers. This is where the adaptation from Weeks 9-13 actually consolidates — trust it the same way you did last time.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div class="deload-banner">
+      <div class="deload-title">Recovery week</div>
+      <div class="deload-text">Same movements. 2 sets. 60% of your best loads. No conditioning finishers. Let the last five weeks of work settle in.</div>
+    </div>
+    <div id="week-6-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-7" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 15 <span class="week-dates" id="week-header-dates-7"></span></div>
+      <div class="week-title">Ascend</div>
+      <div class="week-note">Coming out of the deload, expect this week to feel noticeably lighter than Week 13 did — that's the recovery working, not lost strength. Build back into your working weights over this session and the next; most people find they're actually a little stronger post-deload than they were going into it. Focus on clean reps as the weight climbs back up.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-7-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-8" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 16 <span class="week-dates" id="week-header-dates-8"></span></div>
+      <div class="week-title">Threshold</div>
+      <div class="week-note">A 4th set returns and RPE climbs toward 8 again — this is the volume push that sets up Peak Week. You should be approaching or passing your Week 12 surplus numbers by the end of this week. Stay disciplined with rest periods; the shorter rest at higher volume is what makes this week demanding.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-8-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-9" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 17 — Peak Week <span class="week-dates" id="week-header-dates-9"></span></div>
+      <div class="week-title">Peak Week</div>
+      <div class="week-note">Heaviest loads of Block 2, right here. Push your primary lifts to an RPE of 8-9 (2 reps left in the tank at an 8, 1 rep left at a 9) with rest stretching to 90-120 seconds so you can actually recover between sets. Everything you've built since Week 9 — the calibration, the reload, the new wave, the recovery — was preparing your body for exactly this week. Trust your technique under the heavier loads and let the numbers reflect the work.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-9-sessions" class="session-grid"></div>
+  </div>
+
+  <div id="week-10" class="week-content">
+    <div class="week-header">
+      <div class="week-phase">Block 2 — Week 18 — Finish Strong <span class="week-dates" id="week-header-dates-10"></span></div>
+      <div class="week-title">Consolidate</div>
+      <div class="week-note">Ten weeks ago you came back from a full block off and had to find out where you actually stood. Compare that Week 9 number to what you're lifting today — that gap is entirely yours, and it's bigger than the gap you built in Block 1, because this time you were rebuilding on top of real strength instead of starting from scratch. This week isn't about a new max, it's about locking in confident, controlled numbers you can carry into Block 3. When it's done: pause, compare Week 9 to Week 18 side by side, and start thinking about what Day 3's new movements should look like — that conversation starts now.</div>
+    </div>
+    <div style="width:100%;height:1px;background:var(--border);margin-bottom:16px;"></div>
+    <div id="week-10-sessions" class="session-grid"></div>
+  </div>
+
+  <!-- EXPORT BAR -->
+  <div class="export-bar">
+    <span class="export-label">Weights, reps and notes save automatically — <span id="sync-status" style="color:var(--muted2);">not synced yet</span></span>
+    <button class="export-btn" onclick="exportCSV()">Export progress CSV</button>
+  </div>
+
+  <!-- CLOSE -->
+  <div style="width:100%;height:1px;background:var(--border);margin-top:48px;"></div>
+  <div class="program-close">
+    <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 28px;">
+      <path d="M10 2 C10 16, 30 24, 30 32 C30 40, 10 48, 10 62" stroke="rgba(154,157,165,0.30)" stroke-width="1.2" fill="none"/>
+      <path d="M30 2 C30 16, 10 24, 10 32 C10 40, 30 48, 30 62" stroke="rgba(154,157,165,0.30)" stroke-width="1.2" fill="none"/>
+      <line x1="10" y1="8" x2="30" y2="8" stroke="rgba(154,157,165,0.16)" stroke-width="1"/>
+      <line x1="13" y1="16" x2="27" y2="16" stroke="rgba(154,157,165,0.20)" stroke-width="1"/>
+      <line x1="18" y1="24" x2="22" y2="24" stroke="rgba(154,157,165,0.24)" stroke-width="1"/>
+      <line x1="20" y1="32" x2="20" y2="32" stroke="rgba(154,157,165,0.28)" stroke-width="1"/>
+      <line x1="18" y1="40" x2="22" y2="40" stroke="rgba(154,157,165,0.24)" stroke-width="1"/>
+      <line x1="13" y1="48" x2="27" y2="48" stroke="rgba(154,157,165,0.20)" stroke-width="1"/>
+      <line x1="10" y1="56" x2="30" y2="56" stroke="rgba(154,157,165,0.16)" stroke-width="1"/>
+      <circle r="2" fill="var(--cobalt)" opacity="0.6">
+        <animateMotion dur="3s" repeatCount="indefinite">
+          <mpath href="#close-path"/>
+        </animateMotion>
+        <animate attributeName="opacity" values="0;0.6;0.6;0" keyTimes="0;0.1;0.9;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <defs><path id="close-path" d="M10 2 C10 16, 30 24, 30 32 C30 40, 10 48, 10 62"/></defs>
+    </svg>
+    <div class="close-text" id="close-text">"She shows up for herself with the same consistency she shows up for everyone else. Not earning her body back — building a life that supports it."</div>
+    <div class="close-sig" style="margin-top:16px;">TRAIN &nbsp;·&nbsp; Kim Valles Coaching</div>
+  </div>
+
+</div>
+
+<div id="offscreen-details" style="display:none;"></div>
+
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this) closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="session-label" id="modal-label">Session</div>
+        <div class="session-title" id="modal-title">Training session</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">Close ✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+</div>
+
+<div id="panel-nutrition" class="app-panel">
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Nutrition Guide</div>
+    <h1>Teresa G</h1>
+    <div class="goal-line">Goal: <strong>Body Recomposition</strong> · Built from your food preferences, not a generic plan.</div>
+  </div>
+
+  <div class="macro-strip">
+    <div class="macro-cell"><div class="num">1650</div><div class="lbl">Calories</div></div>
+    <div class="macro-cell"><div class="num">130g</div><div class="lbl">Protein</div><div class="pct">32%</div></div>
+    <div class="macro-cell"><div class="num">160g</div><div class="lbl">Carbs</div><div class="pct">39%</div></div>
+    <div class="macro-cell"><div class="num">55g</div><div class="lbl">Fat</div><div class="pct">30%</div></div>
+  </div>
+  <div style="font-size:11px;color:var(--muted2);text-align:center;padding:8px 28px 0;font-family:'JetBrains Mono',monospace;">% = share of daily calories — set it up this way in MyFitnessPal's custom macro goals</div>
+
+  <div class="intro" style="padding-top:20px;">
+    <strong>Your estimated maintenance is ~1,900 calories/day</strong> — that's roughly what your body burns in a day at your current size and activity level, the number where weight stays the same. To lose fat, you have to eat <em>below</em> that number consistently. That gap between maintenance and what you actually eat is your <strong>calorie deficit</strong>, and it's the thing that actually drives fat loss — protein, food choice, and timing just determine how good you feel and how much muscle you keep while it happens.
+  </div>
+
+  <table class="deficit-table">
+    <thead><tr><th>Level</th><th>Daily Calories</th><th>Deficit</th><th>Est. Weekly Change</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Maintenance</td>
+        <td class="num">~1,900</td>
+        <td>—</td>
+        <td>Weight stays the same</td>
+      </tr>
+      <tr class="current">
+        <td>Moderate deficit <span class="tag">your plan</span></td>
+        <td class="num">~1,650</td>
+        <td>-250 cal</td>
+        <td>~0.5 lb/week</td>
+      </tr>
+      <tr>
+        <td>Aggressive deficit</td>
+        <td class="num">~1,400</td>
+        <td>-500 cal</td>
+        <td>~1 lb/week</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="intro">
+    We're starting you at the <strong>moderate -250 deficit (~1,650 cal)</strong>, not the aggressive one. A smaller deficit is easier to hit your 130g protein floor on, easier to recover from your lifting sessions on, and far easier to actually stick to — which matters given your schedule and the sweet-treat pattern you flagged. A bigger deficit drops the scale faster on paper, but raises the risk of losing muscle along with the fat (working against the "gain muscle" half of recomp) and makes crash-and-overeat cycles more likely. If progress stalls a few weeks in — which happens naturally as your maintenance drops with your weight — we can step toward the -500 range. We don't start there.
+  </div>
+
+  <div class="intro">
+    These numbers are your daily targets, not a strict meal plan. <strong>130g protein is non-negotiable</strong>: it's the floor, not the ceiling. You eat 1–2 meals + a shake, so we're structuring it as <strong>one ~50g protein shake + two meals at 34–38g protein each</strong>, plus a snack to round things out — that combination lands you at 130g protein without forcing a 5-meals-a-day structure you don't have time for between clients.
+  </div>
+
+  <div class="why-grid">
+    <div class="why-cell">
+      <h4>Protein</h4>
+      <p>Repairs and builds the muscle tissue you break down in training — without enough, your body will pull from muscle for energy in a deficit, which works against the "gain muscle" half of recomp. It's also the most filling macro, which helps with the snacking/munchies pattern.</p>
+    </div>
+    <div class="why-cell">
+      <h4>Carbs</h4>
+      <p>Your primary fuel for training output and recovery — they replenish glycogen so your strength sessions don't feel flat, and they directly support brain function and mood (this matters with your schedule and fatigue).</p>
+    </div>
+    <div class="why-cell">
+      <h4>Fat</h4>
+      <p>Drives hormone production — relevant given the hormonal piece you flagged with your IUD. Also supports brain health and helps you absorb fat-soluble vitamins from your veggies.</p>
+    </div>
+  </div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="shake">Breakfast/Shake</button>
+    <button class="tab-btn" data-tab="meal1">Meal 1</button>
+    <button class="tab-btn" data-tab="meal2">Meal 2</button>
+    <button class="tab-btn" data-tab="snacks">Snacks</button>
+    <button class="tab-btn" data-tab="shopping">Shopping List</button>
+  </div>
+
+  <!-- SHAKE -->
+  <div class="tab-panel active" data-tab="shake">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Standard Protein Shake</h3><span class="macro-tag">~430 kcal · 50P / 35C / 10F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>2 scoops plant protein powder</li>
+          <li>1 cup unsweetened almond or oat milk (check label for lactose-free)</li>
+          <li>1 large banana or 1 cup berries</li>
+          <li>1 tsp peanut or almond butter</li>
+        </ul>
+        <div class="swap-note">Swap: water instead of milk for fewer calories if you're running tight that day · add a full tbsp of nut butter instead of a tsp on training days for extra fuel</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Greek Yogurt + Egg White Bowl</h3><span class="macro-tag">~430 kcal · 50P / 35C / 9F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>1 1/4 cups Greek yogurt (lactose-light — usually fine, test your tolerance)</li>
+          <li>1 cup carton egg whites, scrambled on the side</li>
+          <li>1/2 cup oats or a sliced banana</li>
+        </ul>
+        <div class="swap-note">Swap: cottage cheese instead of yogurt — also low-lactose · use this version on days you want savory instead of a shake</div>
+        <div class="flag-note">Lactose note: both Greek yogurt and cottage cheese are naturally lower-lactose than milk. If either bothers your IBS, swap back to the plant-based shake.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MEAL 1 -->
+  <div class="tab-panel" data-tab="meal1">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Tofu or Edamame Rice Bowl</h3><span class="macro-tag">~560 kcal · 38P / 65C / 16F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>7oz baked or pan-seared tofu, or 2 cups edamame</li>
+          <li>1 cup cooked white or brown rice</li>
+          <li>Roasted broccoli, zucchini, or cauliflower</li>
+          <li>Drizzle of olive oil + soy sauce</li>
+        </ul>
+        <div class="swap-note">Swap: quinoa or a tortilla wrap for the rice · any liked fibrous veg works here</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Shrimp or Salmon Bowl</h3><span class="macro-tag">~555 kcal · 38P / 60C / 16F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>7oz shrimp (pre-cooked frozen shrimp works great for low-effort cooking) or 5-6oz salmon</li>
+          <li>Large sweet potato or 1 cup rice</li>
+          <li>Asparagus, green beans, or salad greens</li>
+          <li>Avocado or olive oil for fat</li>
+        </ul>
+        <div class="swap-note">Swap: frozen pre-cooked shrimp removes the "iffy about prepping seafood" issue entirely — just reheat</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MEAL 2 -->
+  <div class="tab-panel" data-tab="meal2">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Lentil or Chickpea Bowl</h3><span class="macro-tag">~470 kcal · 34P / 50C / 15F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>1 1/4 cups cooked lentils or chickpeas</li>
+          <li>1/2 cup quinoa or couscous</li>
+          <li>Mixed roasted veg (carrots, brussels sprouts, tomatoes)</li>
+          <li>Tahini or olive oil drizzle</li>
+        </ul>
+        <div class="swap-note">Swap: black beans for lentils · this one travels well for between-clients eating</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Tempeh or Egg White Stir-fry</h3><span class="macro-tag">~465 kcal · 34P / 48C / 15F</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>6oz tempeh, cubed and seared, or 1 1/4 cups egg whites + 3/4 cup chickpeas for protein</li>
+          <li>Whole wheat pasta or rice noodles</li>
+          <li>Mushrooms, peppers, cucumber, or any liked fibrous veg</li>
+          <li>Sesame oil + a little peanut butter for sauce</li>
+        </ul>
+        <div class="swap-note">Swap: corn or a bagel-based side instead of pasta if you want variety</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SNACKS -->
+  <div class="tab-panel" data-tab="snacks">
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Protein-Forward (beats the munchies)</h3><span class="macro-tag">~180-220 kcal · 15-20P</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>Cottage cheese + berries</li>
+          <li>Protein bar (check sugar alcohols if IBS-sensitive)</li>
+          <li>Edamame, lightly salted</li>
+          <li>Hard-boiled egg whites + a piece of fruit</li>
+        </ul>
+        <div class="flag-note">The "stoner munchies/sweet treats" pattern is easier to manage when a protein-forward snack is sitting in the fridge ready to go — decision fatigue is the enemy, not willpower.</div>
+      </div>
+    </div>
+
+    <div class="meal-card">
+      <div class="meal-card-head"><h3>Quick & Easy</h3><span class="macro-tag">~150-220 kcal</span></div>
+      <div class="meal-card-body">
+        <ul>
+          <li>Apple + peanut or almond butter</li>
+          <li>Rice cakes + almond butter</li>
+          <li>Almonds, a small handful</li>
+          <li>Sparkling water + a protein bar if you need something sweet-feeling</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SHOPPING LIST -->
+  <div class="tab-panel" data-tab="shopping">
+
+    <div class="intro" style="padding:0 0 16px;">Built from foods you actually said you eat — check off what you need this week, swap in extras as you go.</div>
+
+    <button class="copy-btn" id="copy-shop-btn" onclick="copyShoppingList()">📋 Copy List to Clipboard</button>
+
+    <div class="shop-group">
+      <h3>Protein</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> Egg whites (carton) <span class="qty">[2 cartons]</span></li>
+        <li><input type="checkbox"> Greek yogurt <span class="qty">[4 containers]</span></li>
+        <li><input type="checkbox"> Cottage cheese <span class="qty">[2 containers]</span></li>
+        <li><input type="checkbox"> Tofu <span class="qty">[2 blocks]</span></li>
+        <li><input type="checkbox"> Tempeh <span class="qty">[1-2 pkgs]</span></li>
+        <li><input type="checkbox"> Edamame, frozen <span class="qty">[2 bags]</span></li>
+        <li><input type="checkbox"> Lentils <span class="qty">[1 bag]</span></li>
+        <li><input type="checkbox"> Black beans / chickpeas <span class="qty">[cans]</span></li>
+        <li><input type="checkbox"> Shrimp, frozen pre-cooked <span class="qty">[1-2 bags]</span></li>
+        <li><input type="checkbox"> Salmon <span class="qty">[1-1.5 lb]</span></li>
+        <li><input type="checkbox"> Plant protein powder <span class="qty">[tub]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Carbs — Starchy</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> Rice (white/brown) <span class="qty">[bag]</span></li>
+        <li><input type="checkbox"> Sweet potatoes <span class="qty">[4-5]</span></li>
+        <li><input type="checkbox"> Oats <span class="qty">[container]</span></li>
+        <li><input type="checkbox"> Quinoa <span class="qty">[bag]</span></li>
+        <li><input type="checkbox"> Whole wheat pasta <span class="qty">[2 boxes]</span></li>
+        <li><input type="checkbox"> Sourdough or tortillas <span class="qty">[1 loaf/pkg]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Carbs — Veg & Fibrous</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> Broccoli / cauliflower <span class="qty">[2 heads]</span></li>
+        <li><input type="checkbox"> Zucchini / asparagus <span class="qty">[bunch]</span></li>
+        <li><input type="checkbox"> Salad greens <span class="qty">[bag]</span></li>
+        <li><input type="checkbox"> Mushrooms / tomatoes <span class="qty">[as needed]</span></li>
+        <li><input type="checkbox"> Carrots / brussels sprouts <span class="qty">[bag]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Fats</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> Olive oil <span class="qty">[bottle]</span></li>
+        <li><input type="checkbox"> Avocado <span class="qty">[3-4]</span></li>
+        <li><input type="checkbox"> Peanut/almond butter <span class="qty">[jar]</span></li>
+        <li><input type="checkbox"> Almonds <span class="qty">[bag]</span></li>
+        <li><input type="checkbox"> Chia / flax seeds <span class="qty">[bag]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Fruit</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> Berries <span class="qty">[2 containers]</span></li>
+        <li><input type="checkbox"> Bananas <span class="qty">[bunch]</span></li>
+        <li><input type="checkbox"> Apples / oranges <span class="qty">[4-5]</span></li>
+      </ul>
+    </div>
+
+    <div class="shop-group">
+      <h3>Extras</h3>
+      <ul class="shop-list">
+        <li><input type="checkbox"> Protein bars <span class="qty">[box]</span></li>
+        <li><input type="checkbox"> Sparkling water <span class="qty">[case]</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="guide-footer">
+    Built around what you actually eat — no land meat, lactose-light dairy where it works for you, and protein sources you don't have to be "iffy" about prepping. As your tolerance, schedule, or preferences change, tell Kim and this gets updated. <strong>Questions about anything on here? Just ask.</strong>
+  </div>
+
+</div>
+</div>
+
+<script>
+
+// ── Backend sync config — same Sheet/script as your other programs ──
+const API_URL = 'https://script.google.com/macros/s/AKfycbyXq5X8ng5u2oXHdXW9P5tjk3UhU64T3VHxKIWEApdkBy45q3FQNnEoVQ6Benvztuie/exec';
+const API_SECRET = 'kimtrain2026secure';
+const CLIENT_ID = new URLSearchParams(window.location.search).get('c') || 'teresa001-block2';
+const DEFAULT_START_DATE = '2026-08-31'; // Block 2 / Week 9 start date, used only if the Clients row doesn't have this set yet
+
+const STORAGE_KEY = 'train_program_' + (window.location.pathname.split('/').pop() || 'default');
+
+// Teresa's actual logged Weeks 1-4 numbers, baked in as a fallback so her
+// "Wk_ ref" comparisons and history are correct even on a fresh browser/device.
+// Anything already saved in this browser's localStorage still takes priority.
+const historicalData = {}; // Block 2 is a fresh block under its own client_id — no Block 1 numbers baked in here.
+
+function showWeek(n) {
+  const loading = document.getElementById('week-loading');
+  if (loading) loading.style.display = 'none';
+  document.querySelectorAll('.week-content').forEach(w => w.classList.remove('active'));
+  document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('week-' + n).classList.add('active');
+  document.querySelectorAll('.week-tab')[n-1].classList.add('active');
+  window.scrollTo({top: document.querySelector('.week-nav').offsetTop - 20, behavior:'smooth'});
+}
+
+function updateWeekTabStatus(weekNum) {
+  const container = document.getElementById('week-' + weekNum + '-sessions');
+  if (!container) return;
+  // Gather all detail nodes for this week (may be in offscreen or modal)
+  const sessionIds = Array.from(container.querySelectorAll('.session-card'))
+    .map(c => c.id.replace('card-', ''));
+  const total = sessionIds.reduce((sum, id) => {
+    const d = document.getElementById('detail-' + id);
+    return sum + (d ? d.querySelectorAll('.mark-done-btn').length : 0);
+  }, 0);
+  const done = sessionIds.reduce((sum, id) => {
+    const d = document.getElementById('detail-' + id);
+    return sum + (d ? d.querySelectorAll('.mark-done-btn.done').length : 0);
+  }, 0);
+  const tab = document.querySelectorAll('.week-tab')[weekNum - 1];
+  if (!tab) return;
+  if (total > 0 && done === total) {
+    tab.classList.add('crossed');
+  } else {
+    tab.classList.remove('crossed');
+  }
+}
+
+function toggleWarmup(btn) {
+  btn.classList.toggle('open');
+  const drawer = btn.nextElementSibling;
+  drawer.classList.toggle('open');
+}
+
+function toggleCheck(el, sessionId, exIdx) {
+  el.classList.toggle('done');
+  const row = document.getElementById('ex-row-' + sessionId + '-' + exIdx);
+  if (row) row.classList.toggle('completed');
+  updateSessionProgress(sessionId);
+  // Derive week number from sessionId (format: w{N}_...)
+  const weekMatch = sessionId.match(/^w(\d+)_/);
+  if (weekMatch) updateWeekTabStatus(parseInt(weekMatch[1]));
+  saveData();
+}
+
+function updateSessionProgress(sessionId) {
+  const detail = document.getElementById('detail-' + sessionId);
+  if (!detail) return;
+  const btns = detail.querySelectorAll('.mark-done-btn');
+  const done = detail.querySelectorAll('.mark-done-btn.done').length;
+  const total = btns.length;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  const fill = document.getElementById('fill-' + sessionId);
+  if (fill) fill.style.width = pct + '%';
+  const prog = document.getElementById('progress-' + sessionId);
+  if (prog) prog.textContent = done + ' / ' + total + ' done';
+  const count = document.getElementById('count-' + sessionId);
+  if (count) count.innerHTML = '<span class="done-num">' + done + '</span> of ' + total + ' exercises complete';
+}
+
+function saveData() {
+  const data = {};
+  document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.notes-input').forEach(inp => {
+    if (inp.dataset.key && inp.value) data[inp.dataset.key] = inp.value;
+  });
+  document.querySelectorAll('.mark-done-btn.done').forEach(btn => {
+    if (btn.dataset.key) data[btn.dataset.key] = '1';
+  });
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+  queueSync();
+}
+
+// ── Backend sync: pulls this client's saved bundle on load, pushes it after every save ──
+let syncTimer = null;
+let syncStatusEl = null;
+
+function queueSync() {
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(pushRemoteState, 1200);
+}
+
+function setSyncStatus(text, ok) {
+  if (!syncStatusEl) syncStatusEl = document.getElementById('sync-status');
+  if (syncStatusEl) {
+    syncStatusEl.textContent = text;
+    syncStatusEl.style.color = ok === true ? 'var(--cobalt-text)' : (ok === false ? '#E8776B' : 'var(--muted2)');
+  }
+}
+
+async function pushRemoteState() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    setSyncStatus('Saving…', null);
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ secret: API_SECRET, action: 'setState', client_id: CLIENT_ID, state: data })
+    });
+    const json = await res.json();
+    if (json && json.success) {
+      setSyncStatus('Saved ✓', true);
+    } else {
+      setSyncStatus('Not saved — ' + (json && json.error ? json.error : 'unknown error'), false);
+      console.error('Sync failed:', json);
+    }
+  } catch (e) {
+    setSyncStatus('Not saved — connection error', false);
+    console.error('Sync error:', e);
+  }
+}
+
+async function mergeRemoteState() {
+  try {
+    const res = await fetch(`${API_URL}?action=getState&client_id=${encodeURIComponent(CLIENT_ID)}`);
+    const json = await res.json();
+    if (json && json.state && Object.keys(json.state).length) {
+      const local = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      const merged = Object.assign({}, local, json.state); // remote is source of truth across devices
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+    }
+  } catch (e) {
+    // offline or first load — fall back to whatever's already in this browser (including her seeded history)
+  }
+}
+
+// ── Auto-detect current week from program_start_date, lock past weeks, render real dates ──
+const LOCKED_WEEKS = [];
+
+function lockWeek(weekNum) {
+  const details = document.querySelectorAll('[id^="detail-w' + weekNum + '_"]');
+  details.forEach(detail => {
+    detail.classList.add('locked');
+    detail.querySelectorAll('.weight-input, .reps-input, .notes-input').forEach(inp => { inp.disabled = true; });
+    detail.querySelectorAll('.mark-done-btn').forEach(btn => { btn.onclick = null; btn.style.pointerEvents = 'none'; });
+  });
+}
+
+function getWeek1Monday(startDateStr) {
+  if (!startDateStr) return null;
+  const start = new Date(startDateStr + 'T00:00:00');
+  if (isNaN(start.getTime())) return null;
+  const day = start.getDay();
+  const diffToMonday = (day === 0) ? -6 : (1 - day);
+  const monday = new Date(start);
+  monday.setDate(start.getDate() + diffToMonday);
+  return monday;
+}
+
+function formatDateShort(d) {
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return months[d.getMonth()] + ' ' + d.getDate();
+}
+
+function renderWeekDates(startDateStr) {
+  const monday = getWeek1Monday(startDateStr);
+  if (!monday) return;
+  for (let w = 1; w <= 10; w++) {
+    const weekStart = new Date(monday);
+    weekStart.setDate(monday.getDate() + (w - 1) * 7);
+    const weekEnd = new Date(weekStart);
+    weekEnd.setDate(weekStart.getDate() + 6);
+    const rangeText = formatDateShort(weekStart) + '–' + formatDateShort(weekEnd);
+    const tabEl = document.getElementById('week-dates-' + w);
+    if (tabEl) tabEl.textContent = rangeText;
+    const headerEl = document.getElementById('week-header-dates-' + w);
+    if (headerEl) headerEl.textContent = '· ' + rangeText;
+  }
+}
+
+function computeCurrentWeek(startDateStr) {
+  const monday = getWeek1Monday(startDateStr);
+  if (!monday) return null;
+  const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+  const elapsed = Math.floor((new Date() - monday) / msPerWeek);
+  return Math.min(10, Math.max(1, elapsed + 1));
+}
+
+function applyClientMeta(client) {
+  if (!client) return;
+  const setIfPresent = (id, val) => { if (val) { const el = document.getElementById(id); if (el) el.textContent = val; } };
+  setIfPresent('meta-client', client.name);
+  setIfPresent('meta-goal', client.goal);
+  setIfPresent('meta-days', client.days_per_week);
+  setIfPresent('meta-equipment', client.equipment);
+  setIfPresent('client-note-text', client.client_note);
+  if (client.injury_flag) {
+    const flag = document.getElementById('injury-flag');
+    const flagText = document.getElementById('injury-flag-text');
+    if (flag && flagText) { flagText.textContent = client.injury_flag; flag.style.display = 'block'; }
+  }
+}
+
+async function determineCurrentWeek() {
+  try {
+    const res = await fetch(`${API_URL}?action=getClient&client_id=${encodeURIComponent(CLIENT_ID)}`);
+    const json = await res.json();
+    const client = json && json.client;
+    const startDate = (client && client.program_start_date) || DEFAULT_START_DATE;
+    renderWeekDates(startDate);
+    applyClientMeta(client);
+    return computeCurrentWeek(startDate);
+  } catch (e) {
+    renderWeekDates(DEFAULT_START_DATE);
+    return computeCurrentWeek(DEFAULT_START_DATE);
+  }
+}
+
+function applyCurrentWeek(week) {
+  LOCKED_WEEKS.length = 0;
+  for (let w = 1; w < week; w++) LOCKED_WEEKS.push(w);
+  for (let w = 1; w <= 10; w++) {
+    updateWeekTabStatus(w);
+    if (w < week) {
+      const tab = document.querySelectorAll('.week-tab')[w - 1];
+      if (tab) tab.classList.add('crossed');
+    }
+  }
+  LOCKED_WEEKS.forEach(lockWeek);
+  showWeek(week);
+}
+
+function loadData() {
+  try {
+    const data = Object.assign({}, historicalData, JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'));
+    document.querySelectorAll('.weight-input,.reps-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.notes-input').forEach(inp => {
+      if (inp.dataset.key && data[inp.dataset.key]) inp.value = data[inp.dataset.key];
+    });
+    document.querySelectorAll('.mark-done-btn').forEach(btn => {
+      if (btn.dataset.key && data[btn.dataset.key]) {
+        btn.classList.add('done');
+        const row = document.getElementById(btn.dataset.rowId);
+        if (row) row.classList.add('completed');
+      }
+    });
+    // Populate prev-week reference rows
+    document.querySelectorAll('.prev-week-ref').forEach(ref => {
+      const id = ref.id.replace('prev-', '');
+      const w = data[id + '_w'];
+      const r = data[id + '_r'];
+      if (w || r) {
+        const wEl = document.getElementById('prev-w-' + id);
+        const rEl = document.getElementById('prev-r-' + id);
+        if (wEl) wEl.textContent = w || '—';
+        if (rEl) rEl.textContent = r || '—';
+        ref.classList.remove('prev-week-empty');
+      }
+    });
+    document.querySelectorAll('.session-detail').forEach(s => {
+      const id = s.id.replace('detail-','');
+      if (id) updateSessionProgress(id);
+    });
+    for (let w = 1; w <= 10; w++) updateWeekTabStatus(w);
+  } catch(e) {}
+}
+
+function exportCSV() {
+  try {
+    const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    const rows = [['Week', 'Session', 'Exercise', 'Set', 'Weight (lbs)', 'Reps', 'Notes', 'Completed']];
+
+    // exKey = the "w{N}_{session}_ex{idx}" identifier for one exercise.
+    // setData[exKey][setNum] holds either {plain:{w,r}} for normal exercises
+    // or {R:{w,r}, L:{w,r}} for perSide (left/right) exercises like lunges/step-ups.
+    const setData = {};
+    const noteData = {};
+    const doneData = {};
+
+    const setRe = /^(.+_ex\d+)_set(\d+)(?:_(R|L|P\d+))?_(w|r)$/;
+    const noteRe = /^(.+_ex\d+)_note$/;
+    const doneRe = /^(.+_ex\d+)_done$/;
+
+    Object.keys(data).forEach(k => {
+      let m = k.match(setRe);
+      if (m) {
+        const exKey = m[1], setNum = parseInt(m[2]), side = m[3] || 'plain', type = m[4];
+        if (!setData[exKey]) setData[exKey] = {};
+        if (!setData[exKey][setNum]) setData[exKey][setNum] = {};
+        if (!setData[exKey][setNum][side]) setData[exKey][setNum][side] = {};
+        setData[exKey][setNum][side][type] = data[k];
+        return;
+      }
+      m = k.match(noteRe);
+      if (m) { noteData[m[1]] = data[k]; return; }
+      m = k.match(doneRe);
+      if (m) { doneData[m[1]] = true; return; }
+    });
+
+    // Every exercise that has logged sets AND every exercise that's just
+    // marked done (even with no numbers typed in) both need to show up.
+    const allExKeys = new Set([...Object.keys(setData), ...Object.keys(doneData)]);
+
+    [...allExKeys].sort().forEach(exKey => {
+      const weekMatch = exKey.match(/^w(\d+)/);
+      const week = weekMatch ? weekMatch[1] : '?';
+      const sessionPart = exKey.replace(/^w\d+_/, '').replace(/_ex\d+$/, '');
+      const exMatch = exKey.match(/_ex(\d+)$/);
+      const exIdx = exMatch ? exMatch[1] : '?';
+      const note = noteData[exKey] || '';
+      const done = doneData[exKey] ? '✓' : '';
+      const exerciseLabel = 'Exercise ' + (parseInt(exIdx) + 1);
+      const sessionLabel = sessionPart.replace(/_/g, ' ');
+
+      const sets = setData[exKey];
+      if (!sets) {
+        // Marked done but nothing ever logged — still record completion.
+        rows.push(['Week ' + week, sessionLabel, exerciseLabel, 'Set 1', '', '', note, done]);
+        return;
+      }
+      Object.keys(sets).map(Number).sort((a,b)=>a-b).forEach(setNum => {
+        const buckets = sets[setNum];
+        const sides = buckets.plain ? ['plain'] : Object.keys(buckets);
+        sides.forEach(side => {
+          const d = buckets[side];
+          if (!d) return;
+          const label = side === 'plain' ? ('Set ' + (setNum+1)) : ('Set ' + (setNum+1) + ' · ' + side);
+          rows.push([
+            'Week ' + week, sessionLabel, exerciseLabel, label,
+            d.w || '', d.r || '', note, done
+          ]);
+        });
+      });
+    });
+
+    const csv = rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(',')).join('\n');
+    const blob = new Blob([csv], {type: 'text/csv'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'train_progress_' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch(e) { alert('Export failed — try again.'); }
+}
+
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('weight-input') || e.target.classList.contains('reps-input') || e.target.classList.contains('notes-input')) saveData();
+});
+
+const sessionDetails = {};
+
+function ytThumb(url) {
+  if (!url) return null;
+  const m = url.match(/(?:shorts\/|v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{6,})/);
+  return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : null;
+}
+
+function buildSession(weekNum, session) {
+  const container = document.getElementById('week-' + weekNum + '-sessions');
+  if (!container) return;
+  const sessionId = 'w' + weekNum + '_' + (session.id || session.title || '').replace(/\s+/g,'_').toLowerCase();
+
+  const warmUpItems = (session.warm_up_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.sets_reps || e.duration || ''}</span>${e.note ? `<div class="ex-cue" style="margin-top:2px;">${e.note}</div>` : ''}</li>`).join('');
+
+  const cooldownItems = (session.cooldown_exercises || []).map(e =>
+    `<li>${e.name}<span>${e.hold || e.duration || ''}</span></li>`).join('');
+
+  const prevSessionId = weekNum > 1
+    ? 'w' + (weekNum - 1) + '_' + (session.id || session.title || '').replace(/\s+/g,'_').toLowerCase()
+    : null;
+
+  const prevRefBlock = (weekNum, prevKey, label, repsOnly) => prevKey ? (repsOnly ? `<div class="prev-week-ref prev-week-empty" id="prev-${prevKey}">
+        <span class="prev-week-label">${label}</span>
+        <span class="prev-week-val" id="prev-r-${prevKey}">—</span>
+        <span class="prev-week-val" style="color:var(--muted2);font-weight:400;">reps</span>
+      </div>` : `<div class="prev-week-ref prev-week-empty" id="prev-${prevKey}">
+        <span class="prev-week-label">${label}</span>
+        <span class="prev-week-val" id="prev-w-${prevKey}">—</span>
+        <span class="prev-week-val" style="color:var(--muted2);font-weight:400;">lbs ×</span>
+        <span class="prev-week-val" id="prev-r-${prevKey}">—</span>
+        <span class="prev-week-val" style="color:var(--muted2);font-weight:400;">reps</span>
+      </div>`) : '';
+
+  const exerciseRows = (session.exercises || []).map((e, idx) => {
+    if (e.divider) {
+      return `<tr class="ex-divider-row"><td colspan="2"><div class="ex-divider">${e.divider}</div></td></tr>`;
+    }
+    const numSets = parseInt(e.sets) || 3;
+
+    let setRows;
+    if (e.parts) {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        return e.parts.map((part, pIdx) => {
+          const key = `${sessionId}_ex${idx}_set${i}_P${pIdx}`;
+          const prevKey = prevSessionId ? `${prevSessionId}_ex${idx}_set${i}_P${pIdx}` : null;
+          if (part.repsOnly) {
+            return `<div class="set-row">
+                <span class="set-num">Set ${i+1} · ${part.label}</span>
+                <input class="reps-input" type="text" placeholder="—" data-key="${key}_r" aria-label="Reps set ${i+1} ${part.label}">
+                <span class="unit">reps</span>
+              </div>
+              ${prevRefBlock(weekNum, prevKey, 'Wk'+(weekNum-1)+'·'+part.label, true)}`;
+          }
+          return `<div class="set-row">
+              <span class="set-num">Set ${i+1} · ${part.label}</span>
+              <input class="weight-input" type="text" placeholder="—" data-key="${key}_w" aria-label="Weight set ${i+1} ${part.label}">
+              <span class="unit">lbs</span>
+              <span class="sep">×</span>
+              <input class="reps-input" type="text" placeholder="—" data-key="${key}_r" aria-label="Reps set ${i+1} ${part.label}">
+              <span class="unit">reps</span>
+            </div>
+            ${prevRefBlock(weekNum, prevKey, 'Wk'+(weekNum-1)+'·'+part.label)}`;
+        }).join('');
+      }).join('');
+    } else if (e.perSide) {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const keyR = `${sessionId}_ex${idx}_set${i}_R`;
+        const keyL = `${sessionId}_ex${idx}_set${i}_L`;
+        const prevKeyR = prevSessionId ? `${prevSessionId}_ex${idx}_set${i}_R` : null;
+        const prevKeyL = prevSessionId ? `${prevSessionId}_ex${idx}_set${i}_L` : null;
+        if (e.repsOnly) {
+          return `<div class="set-row">
+              <span class="set-num">Set ${i+1} · R</span>
+              <input class="reps-input" type="text" placeholder="—" data-key="${keyR}_r" aria-label="Reps set ${i+1} right">
+              <span class="unit">reps</span>
+            </div>
+            ${prevRefBlock(weekNum, prevKeyR, 'Wk'+(weekNum-1)+'·R', true)}
+            <div class="set-row">
+              <span class="set-num">Set ${i+1} · L</span>
+              <input class="reps-input" type="text" placeholder="—" data-key="${keyL}_r" aria-label="Reps set ${i+1} left">
+              <span class="unit">reps</span>
+            </div>
+            ${prevRefBlock(weekNum, prevKeyL, 'Wk'+(weekNum-1)+'·L', true)}`;
+        }
+        return `<div class="set-row">
+            <span class="set-num">Set ${i+1} · R</span>
+            <input class="weight-input" type="text" placeholder="—" data-key="${keyR}_w" aria-label="Weight set ${i+1} right">
+            <span class="unit">lbs</span>
+            <span class="sep">×</span>
+            <input class="reps-input" type="text" placeholder="—" data-key="${keyR}_r" aria-label="Reps set ${i+1} right">
+            <span class="unit">reps</span>
+          </div>
+          ${prevRefBlock(weekNum, prevKeyR, 'Wk'+(weekNum-1)+'·R')}
+          <div class="set-row">
+            <span class="set-num">Set ${i+1} · L</span>
+            <input class="weight-input" type="text" placeholder="—" data-key="${keyL}_w" aria-label="Weight set ${i+1} left">
+            <span class="unit">lbs</span>
+            <span class="sep">×</span>
+            <input class="reps-input" type="text" placeholder="—" data-key="${keyL}_r" aria-label="Reps set ${i+1} left">
+            <span class="unit">reps</span>
+          </div>
+          ${prevRefBlock(weekNum, prevKeyL, 'Wk'+(weekNum-1)+'·L')}`;
+      }).join('');
+    } else {
+      setRows = Array.from({length: numSets}, (_, i) => {
+        const key = `${sessionId}_ex${idx}_set${i}`;
+        const prevKey = prevSessionId ? `${prevSessionId}_ex${idx}_set${i}` : null;
+        return `<div class="set-row">
+          <span class="set-num">Set ${i+1}</span>
+          <input class="weight-input" type="text" placeholder="—" data-key="${key}_w" aria-label="Weight set ${i+1}">
+          <span class="unit">lbs</span>
+          <span class="sep">×</span>
+          <input class="reps-input" type="text" placeholder="—" data-key="${key}_r" aria-label="Reps set ${i+1}">
+          <span class="unit">reps</span>
+        </div>
+        ${prevRefBlock(weekNum, prevKey, 'Wk'+(weekNum-1))}`;
+      }).join('');
+    }
+
+    const checkKey = `${sessionId}_ex${idx}_done`;
+    const rowId = `ex-row-${sessionId}-${idx}`;
+    const thumbUrl = ytThumb(e.link);
+    return `
+      <tr class="ex-row" id="${rowId}">
+        <td>
+          <div class="ex-name-row">
+            ${e.link ? `<a class="ex-video-thumb" href="${e.link}" target="_blank" rel="noopener noreferrer" aria-label="Watch form video"${thumbUrl ? ` style="background-image:url('${thumbUrl}');"` : ''}><span class="ex-video-play"></span></a>` : ''}
+            <div class="ex-name-col">
+              <span class="ex-name">${e.name}</span>
+              ${e.category ? `<span class="ex-cat">${e.category}</span>` : ''}
+              <span class="ex-detail">${e.sets || '—'} × ${e.reps || e.duration || '—'}${e.tempo ? ' · ' + e.tempo : ''}${e.rest ? ' · rest ' + e.rest : ''}${e.RPE ? ' · RPE ' + e.RPE : ''}</span>
+              ${e.cue ? `<span class="ex-cue">${e.cue}</span>` : ''}
+              ${e.note ? `<span class="ex-cue">${e.note}</span>` : ''}
+            </div>
+          </div>
+        </td>
+        <td class="sets-col">${setRows}</td>
+      </tr>
+      <tr class="mark-done-row" id="done-row-${rowId}">
+        <td colspan="2">
+          <div class="mark-done-btn" onclick="toggleCheck(this,'${sessionId}',${idx})" data-key="${checkKey}" data-row-id="${rowId}" aria-label="Mark complete">
+            <span class="mark-done-check"></span>
+            <span class="mark-done-text">Mark done</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="notes-row">
+        <td colspan="2">
+          <div class="notes-label">Session notes</div>
+          <input class="notes-input" type="text" placeholder="How it felt, what to adjust, anything to remember next week…" data-key="${sessionId}_ex${idx}_note">
+        </td>
+      </tr>`;
+  }).join('');
+
+  const exerciseCount = (session.exercises || []).filter(e => !e.divider).length;
+
+  const cardHtml = `
+    <div class="session-card" id="card-${sessionId}" onclick="openSessionModal('${sessionId}')">
+      <div class="session-card-top">
+        <div>
+          <div class="session-label">${session.label || 'Session'}</div>
+          <div class="session-title">${session.title || 'Training session'}</div>
+        </div>
+        <div class="session-meta">${session.duration || ''}</div>
+      </div>
+      <div class="session-prog-bar"><div class="session-prog-fill" id="fill-${sessionId}"></div></div>
+      <div class="session-card-bottom">
+        <span class="session-progress" id="progress-${sessionId}">0 / ${exerciseCount} done</span>
+        <span class="session-view">View workout →</span>
+      </div>
+    </div>`;
+
+  const detailHtml = `
+    <div id="detail-${sessionId}" class="session-detail">
+      ${warmUpItems ? `
+      <div style="padding:0 20px;">
+        <div class="warmup-header">
+          ${session.warm_up_video ? (() => {
+            const wThumb = ytThumb(session.warm_up_video);
+            return `<a class="ex-video-thumb ex-video-thumb-lg" href="${session.warm_up_video}" target="_blank" rel="noopener noreferrer" aria-label="Watch warm-up video"${wThumb ? ` style="background-image:url('${wThumb}');"` : ''}><span class="ex-video-play"></span></a>`;
+          })() : `<span class="warmup-toggle-icon">🔥</span>`}
+          <div>
+            <div class="warmup-toggle-text">Warm-up · ${session.warm_up_duration||'8–10 min'}</div>
+            <div class="warmup-toggle-sub">Don't skip</div>
+          </div>
+        </div>
+        <div class="warmup-drawer open">
+          <ul class="protocol-list">${warmUpItems}</ul>
+        </div>
+      </div>` : ''}
+      ${session.progression_note ? `<div class="progression-block"><div class="progression-label">Progression this week</div><div class="progression-text">${session.progression_note}</div></div>` : ''}
+      <table class="exercise-table">
+        <thead><tr>
+          <th>Exercise</th>
+          <th class="sets-col">Sets · weight · reps</th>
+        </tr></thead>
+        <tbody>${exerciseRows}</tbody>
+      </table>
+      ${cooldownItems ? `<div class="protocol-block"><div class="protocol-label">Cooldown &amp; stretch · ${session.cooldown_duration||'8 min'}</div><ul class="protocol-list">${cooldownItems}</ul></div>` : ''}
+      <div class="session-footer">
+        <span class="complete-count" id="count-${sessionId}"><span class="done-num">0</span> of ${exerciseCount} exercises complete</span>
+        <span class="save-note">saves automatically</span>
+      </div>
+    </div>`;
+
+  container.insertAdjacentHTML('beforeend', cardHtml);
+  sessionDetails[sessionId] = {
+    label: session.label || 'Session',
+    title: session.title || 'Training session',
+    html: detailHtml
+  };
+  // Render the detail off-screen once so its inputs exist and can be
+  // restored by loadData() even before the modal is first opened.
+  const offscreen = document.getElementById('offscreen-details');
+  offscreen.insertAdjacentHTML('beforeend', detailHtml);
+  updateSessionProgress(sessionId);
+}
+
+function openSessionModal(sessionId) {
+  const detail = document.getElementById('detail-' + sessionId);
+  const modalBody = document.getElementById('modal-body');
+  const info = sessionDetails[sessionId];
+  if (!detail || !modalBody || !info) return;
+  document.getElementById('modal-label').textContent = info.label;
+  document.getElementById('modal-title').textContent = info.title;
+  modalBody.innerHTML = '';
+  modalBody.appendChild(detail);
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modalBody = document.getElementById('modal-body');
+  const detail = modalBody ? modalBody.firstElementChild : null;
+  if (detail) document.getElementById('offscreen-details').appendChild(detail);
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ---- PROGRAM DATA (Teresa G — unchanged from original program) ----
+
+// ---------- WARM-UPS / COOLDOWNS ----------
+const hipMobilityWarmup = [
+  {name:'Air Squats', duration:'10 reps'},
+  {name:'Yogi Squat Hold', duration:'30 sec'},
+  {name:'Ankle Flexion', duration:'15-30 sec/side'},
+  {name:'Hamstring Scoops', duration:'10 reps/side'},
+  {name:'Rockies (Front and Back)', duration:'5/side, hold 10 sec'},
+  {name:'Alternating Reverse Lunges', duration:'10/side, 20 total'},
+  {name:'Fire Hydrants', duration:'5 forward, 5 back/side'},
+  {name:'Leg Swings', duration:'10/side'}
+];
+const upperWarmup = [
+  {name:'Cat-Cow', duration:'10 reps'},
+  {name:'Thread the Needle', duration:'5 reps/side'},
+  {name:'Band Pull-Thrus', duration:'5-10 reps — both arms, left arm, right arm'},
+  {name:'Band Around the World', duration:'5 reps/side'},
+  {name:'Arm Circles', duration:'forward and back, 5 reps each side'},
+  {name:'Wrist Mobility Stretch', duration:'30 sec - 1 min'}
+];
+const fullBodyWarmup = [
+  {name:'90/90 Hip Switch', duration:'6 reps/side'},
+  {name:'Inchworm to Push-up', duration:'5 reps'},
+  {name:'Band Pull-Apart', duration:'15 reps'},
+  {name:'Bodyweight Squat to Stand', duration:'8 reps'}
+];
+const lowerCooldown = [
+  {name:'Child\'s Pose Breathing', hold:'60 sec'},
+  {name:'Pigeon Pose', hold:'45 sec/side'},
+  {name:'Seated Figure-4 Stretch', hold:'30 sec/side'},
+  {name:'Foam Roll (if needed)', hold:'as needed'}
+];
+const upperCooldown = [
+  {name:'Doorway Chest Stretch', hold:'30 sec/side'},
+  {name:'Thread the Needle', hold:'30 sec/side'},
+  {name:'Box Breathing', hold:'60 sec'}
+];
+
+// ---------- PROGRESSION SCHEME — BLOCK 2 (Weeks 9-18) ----------
+// Keys 1-10 map to displayed Weeks 9-18. Teresa is rebuilding on top of real
+// strength, not learning patterns from zero, so Week 9 is a calibration week
+// rather than a "start light" foundation week.
+const scheme = {
+  1:{sets:3, repsMain:'6-8',  repsAcc:'8-10',  rpe:'6-7', rest:'90 sec',      tempo:'controlled', note:'Re-Entry — straight continuation from Block 1, no time off in between. This week is a quick calibration, not a restart: work at a moderate RPE and let how it feels guide the weight, since you already know these movements cold.'},
+  2:{sets:3, repsMain:'6-8',  repsAcc:'8-10',  rpe:'7-8', rest:'90 sec',      tempo:'controlled', note:'Reload — push back toward your Block 1 numbers. If you hit the top of the rep range with 2+ reps left in the tank, add weight next session, same rule as always.'},
+  3:{sets:4, repsMain:'6-8',  repsAcc:'8-10',  rpe:'8',   rest:'75 sec',      tempo:'controlled, slight pause', note:'Reclaim — a 4th set returns. This is the week to meet or pass your Block 1 peak loads with a full 4 sets at the prescribed reps.'},
+  4:{sets:4, repsMain:'5-6',  repsAcc:'8-10',  rpe:'8-9', rest:'90 sec',      tempo:'controlled', note:'Surplus — new ground. Anything you lift well this week is genuinely past where Block 1 ended. Reps tighten on the heavy compounds so you can push the weight.'},
+  5:{sets:3, repsMain:'6-8',  repsAcc:'8-10',  rpe:'7',   rest:'90 sec',      tempo:'controlled', note:'New Wave — sets reset to 3, but your working weight should sit above where Week 9 started. Fresh wave, higher floor. Lateral lunges stay heel-elevated and assisted pull-ups should keep needing less band from here.'},
+  6:{sets:2, repsMain:'8',    repsAcc:'10',    rpe:'5-6', rest:'60 sec',      tempo:'easy, controlled', note:'Recovery — 2 sets only, ~60% of your recent loads. This consolidates everything Weeks 9-13 built. Trust it the same way you did in Block 1.'},
+  7:{sets:3, repsMain:'6-8',  repsAcc:'8-10',  rpe:'7-8', rest:'90 sec',      tempo:'controlled', note:'Ascend — expect this to feel lighter than Week 13, that\'s the deload working. Build back into your working weights over this week and next.'},
+  8:{sets:4, repsMain:'6-8',  repsAcc:'8-10',  rpe:'8',   rest:'75 sec',      tempo:'controlled, slight pause', note:'Threshold — a 4th set returns and RPE climbs toward 8 again. You should be approaching or passing your Week 12 surplus numbers by the end of this week.'},
+  9:{sets:4, repsMain:'5-6',  repsAcc:'8-10',  rpe:'9',   rest:'90-120 sec',  tempo:'controlled, explosive on the way up', note:'Peak Week — heaviest loads of Block 2 on every lift. 1-2 reps left in the tank, max.'},
+  10:{sets:3, repsMain:'6-8', repsAcc:'10-12', rpe:'8',   rest:'90 sec',      tempo:'controlled', note:'Consolidate — compare your Week 9 numbers on these exact exercises to today. That gap is bigger than Block 1\'s, because this time you built it on top of real strength instead of starting from zero.'}
+};
+
+// Day 3 (Full Body + Conditioning) is a TEMPORARY holdover from Block 1 while
+// new movements get designed — see the banner on every session below.
+// Same wave shape as scheme above, kept simple since this day is changing.
+const schemeC = {
+  1:{sets:3, reps:'6-8/side', rpe:'6-7', rest:'50 sec', note:'Re-Entry — same conditioning-day logic as Day 1 and Day 2: find where you\'re at, don\'t force last block\'s numbers.'},
+  2:{sets:3, reps:'8/side', rpe:'7-8', rest:'45 sec', note:'Reload — push back toward your Block 1 conditioning-day loads.'},
+  3:{sets:4, reps:'8/side', rpe:'8', rest:'35 sec', note:'Reclaim — 4th set returns, rest shrinks back down.'},
+  4:{sets:4, reps:'6-8/side', rpe:'8-9', rest:'40 sec', note:'Surplus — heavier loads, rest ticks up slightly to support that.'},
+  5:{sets:3, reps:'8/side', rpe:'7', rest:'45 sec', note:'New Wave — heavier baseline than Week 9.'},
+  6:{sets:2, reps:'8/side', rpe:'5-6', rest:'75 sec', note:'Recovery — fewer sets, more rest, ~60% loads.'},
+  7:{sets:3, reps:'8/side', rpe:'7-8', rest:'45 sec', note:'Ascend — rebuilding post-deload.'},
+  8:{sets:4, reps:'6-8/side', rpe:'8', rest:'35 sec', note:'Threshold — volume and conditioning demand both climb again.'},
+  9:{sets:4, reps:'6-8/side', rpe:'9', rest:'30 sec', note:'Peak Week — heaviest loads and shortest rest of Block 2.'},
+  10:{sets:3, reps:'8/side', rpe:'8', rest:'40 sec', note:'Consolidate — this whole day gets redesigned for Block 3, so use this week to note what you liked, what felt stale, and what you want more of.'}
+};
+
+// Core block (Day 1) — endurance-style progression, its own light scheme.
+// Starts near where Block 1 finished since these are the same cable/bodyweight
+// movements — less need to recalibrate than the heavier barbell lifts.
+const coreScheme = {
+  1:{crunch:'15-18',  dips:'12-14/side', taps:'28 taps', rpe:'7'},
+  2:{crunch:'15-18',  dips:'12-14/side', taps:'28 taps', rpe:'7-8'},
+  3:{crunch:'18-20',  dips:'14/side',    taps:'30 taps', rpe:'8'},
+  4:{crunch:'18-20',  dips:'14-16/side', taps:'32 taps', rpe:'8-9'},
+  5:{crunch:'15-18',  dips:'12-14/side', taps:'28 taps', rpe:'7'},
+  6:{crunch:'12-15',  dips:'10/side',    taps:'20 taps', rpe:'5-6'},
+  7:{crunch:'18-20',  dips:'14-16/side', taps:'32 taps', rpe:'7-8'},
+  8:{crunch:'20-22',  dips:'16/side',    taps:'34 taps', rpe:'8'},
+  9:{crunch:'20-22',  dips:'16/side',    taps:'36 taps', rpe:'9'},
+  10:{crunch:'18-20', dips:'14-16/side', taps:'32 taps', rpe:'8'}
+};
+
+// Cardio of choice — Day 2 (progressing duration/intensity)
+const cardioDay2 = {
+  1:'12 min, easy-moderate pace — get a feel for where your conditioning is post-break.',
+  2:'14 min, moderate pace.',
+  3:'15 min, moderate pace.',
+  4:'16 min — push pace slightly vs Week 11.',
+  5:'15 min, moderate pace — new wave baseline.',
+  6:'10 min, easy recovery pace only.',
+  7:'16 min, moderate-push pace.',
+  8:'18 min, push pace.',
+  9:'18 min, push pace — but don\'t overdo it, you\'re peaking on lifts this week.',
+  10:'20 min — finish the block strong.'
+};
+
+// Treadmill sprint intervals — Day 3 finisher (temporary day, see banner)
+const sprintTable = {
+  1:'20 sec on / 70 sec off × 4 rounds — easing back in.',
+  2:'20 sec on / 60 sec off × 4 rounds.',
+  3:'25 sec on / 60 sec off × 4 rounds.',
+  4:'25 sec on / 50 sec off × 5 rounds.',
+  5:'20 sec on / 60 sec off × 4 rounds — new wave reset.',
+  6:'15 sec on / 90 sec off × 3 rounds — deload, easy effort.',
+  7:'25 sec on / 55 sec off × 5 rounds.',
+  8:'30 sec on / 50 sec off × 5 rounds.',
+  9:'30 sec on / 60 sec off × 5 rounds — peak week.',
+  10:'25 sec on / 55 sec off × 5 rounds — finish strong.'
+};
+
+function buildExercise(base, schemeWk, isMain){
+  const reps = isMain ? schemeWk.repsMain : schemeWk.repsAcc;
+  return Object.assign({}, base, {
+    sets: String(schemeWk.sets),
+    reps: reps,
+    tempo: schemeWk.tempo,
+    rest: schemeWk.rest,
+    RPE: schemeWk.rpe
+  });
+}
+
+function dayA(weekNum, schemeWk, coreWk){ // Lower Body + Core
+  return {
+    id:'lower_core', label:'Day 1', title:'Lower Body + Core', duration:'45 min',
+    warm_up_exercises: hipMobilityWarmup, warm_up_duration:'8 min', warm_up_video:'https://youtube.com/shorts/7o4PsmtXDfI?feature=share',
+    exercises:[
+      Object.assign(buildExercise({name:'Barbell RDL', category:'Lower — Hamstring/Glute', link:'https://youtube.com/shorts/g5yCIK70F1g?feature=share'}, schemeWk, true),
+        {cue:'Watch where the bar sits on your back/shoulders — that\'s close to where the pinched nerve was flaring in Block 1. Adjust placement if anything feels off.'},
+        weekNum===1 ? {note:'You closed Block 1 with a top set of 135lbs × 6. Use that as context for today, not a target — see what a moderate RPE set actually feels like first.'} : {}),
+      Object.assign(buildExercise({name:'Hip Thrust', category:'Lower — Glute', link:'https://youtube.com/shorts/Ik3cucr8DiA?feature=share'}, schemeWk, false),
+        weekNum===1 ? {note:'Last logged: 165lbs for a top single-set push. No need to chase that immediately — build back into it over the next couple weeks.'} : {}),
+      buildExercise({name:'Heel-Elevated Goblet Squat', category:'Lower — Quad/Glute', link:'https://youtube.com/shorts/R6D3Ktha47U?feature=share'}, schemeWk, false),
+      {name:'Smith Machine Reverse Lunge', category:'Lower — Unilateral', sets:'3', reps:'8-10/side', RPE:schemeWk.rpe, rest:schemeWk.rest, tempo:schemeWk.tempo, perSide:true, cue:'Tracked per leg below — log right and left separately each set.', link:'https://youtube.com/shorts/bKj39GbVpHE?feature=share'},
+      buildExercise({name:'Cable Glute Medius Kickback', category:'Lower — Glute Medius', link:'https://youtube.com/shorts/P8MGRyySdwQ?feature=share'}, schemeWk, false),
+      buildExercise({name:'Smith Machine Calf Raise', category:'Lower — Calf', link:'https://youtube.com/shorts/PfoDgYv2egw?feature=share', note:'Stand with the balls of your feet on a plate, heels hanging off the back edge — that lets your heels drop below your toes for a deeper stretch and fuller range of motion at the bottom of each rep.'}, schemeWk, false),
+      {divider:'CORE WORKOUT'},
+      Object.assign({name:'Cable Crunch', category:'Core', sets:'3', reps:coreWk.crunch, RPE:coreWk.rpe, cue:'Curl through the spine, don\'t just yank the cable down.', link:'https://youtube.com/shorts/7rQrHLxw5HE?feature=share'},
+        weekNum===1 ? {note:'Last logged: 140lbs × 15. This one doesn\'t need much recalibration — pick back up close to where you left off.'} : {}),
+      {name:'Standing Cable Rotation', category:'Core — Rotational', sets:'3', reps:'10-12/side', RPE:coreWk.rpe, note:'Per side.', link:'https://youtube.com/shorts/kmJFAO5AnDo?feature=share'}
+    ],
+    cooldown_exercises: lowerCooldown, cooldown_duration:'6 min',
+    progression_note: schemeWk.note
+  };
+}
+function dayB(weekNum, schemeWk){ // Upper Push/Pull Strength + Cardio
+  const pullupNote = weekNum===1 ? 'Still assisted going into Block 2 — that\'s completely fine. Retest your band this week and log your AMRAP reps so we have a fresh baseline (you were hitting 6, then 5 reps on your last log).'
+    : (weekNum===5 ? 'Test a lighter band again now that you\'re on a new wave.'
+    : (weekNum===6 ? 'Deload — go back to a band one step heavier than your current one, easy effort.'
+    : 'Aim to either add reps or drop to a lighter band vs your last session.'));
+  return {
+    id:'upper_pushpull', label:'Day 2', title:'Upper Body Push/Pull Strength', duration:'45 min',
+    warm_up_exercises: upperWarmup, warm_up_duration:'6 min', warm_up_video:'https://youtu.be/2iSO-BDT4hc',
+    exercises:[
+      {name:'Assisted Pull-ups', category:'Upper — Pull', sets:'2', reps:'AMRAP', RPE:'9-10', rest: schemeWk.rest, note: pullupNote, link:'https://youtube.com/shorts/tkerFQWWPs8?feature=share'},
+      Object.assign(buildExercise({name:'Shoulder Press', category:'Upper — Push', link:'https://youtube.com/shorts/NlLDWPSMgMw?feature=share'}, {sets:schemeWk.sets, repsMain:schemeWk.repsMain, repsAcc:schemeWk.repsMain, rpe:schemeWk.rpe, rest:schemeWk.rest, tempo:schemeWk.tempo}, true),
+        {cue:'Keep an eye on the shoulder/upper back — the pinched nerve from Block 1 showed up in overhead and pressing positions like this one.'}),
+      Object.assign(buildExercise({name:'Barbell Rows', category:'Upper — Pull', link:'https://youtube.com/shorts/FyoAEZTtKUk?feature=share'}, schemeWk, false),
+        weekNum===1 ? {note:'Last logged: 85lbs × 8. A good, honest place to start rebuilding from.'} : {}),
+      Object.assign(buildExercise({name:'Smith Machine Incline Chest Press', category:'Upper — Push'}, schemeWk, false),
+        {cue:'Same shoulder awareness as the overhead press — ease off or adjust hand position if it pinches.'}),
+      Object.assign(buildExercise({name:'Lat Pulldown', category:'Upper — Pull', link:'https://youtube.com/shorts/mn_XCP_Lajo?feature=share'}, schemeWk, false),
+        weekNum===1 ? {note:'Last logged: 150lbs × 7-8. See how that feels today before deciding whether to match it or ease in lighter.'} : {}),
+      Object.assign(buildExercise({name:'Seated Lateral Raises', category:'Upper — Shoulder', link:'https://youtube.com/shorts/OA1FJktMong?feature=share'}, schemeWk, false),
+        weekNum===1 ? {note:'You finished Block 1 handling 15lb for a clean set of 9. Start around 12-15lb and see what\'s still there — this one\'s about shoulder health, not ego, same as always.'} : {}),
+      buildExercise({name:'Cable Bicep Curls', category:'Upper — Arms', link:'https://youtube.com/shorts/aLx7RQDNKJY?feature=share'}, schemeWk, false),
+      buildExercise({name:'Cable Tricep Extensions', category:'Upper — Arms', link:'https://youtube.com/shorts/v1CJRUoI11I?feature=share'}, schemeWk, false),
+      {name:'Cardio of Choice', category:'Conditioning', sets:'1', reps:'—', note: cardioDay2[weekNum]}
+    ],
+    cooldown_exercises: upperCooldown, cooldown_duration:'6 min',
+    progression_note: schemeWk.note
+  };
+}
+function dayC(weekNum, schemeWk){ // Full Body + Conditioning — TEMPORARY, see banner
+  return {
+    id:'full_body_conditioning', label:'Day 3', title:'Full Body + Conditioning', duration:'45 min',
+    warm_up_exercises: fullBodyWarmup, warm_up_duration:'7 min',
+    exercises:[
+      {name:'Deadlifts + Pogo Jumps', category:'Full Body — Hinge/Power', sets:String(schemeWk.sets), reps: schemeWk.reps.replace('/side','') + ' → 15-20 pogo jumps', RPE:schemeWk.rpe, rest:schemeWk.rest, cue:'Reset fully between the deadlift and the jumps — this is strength + power, not a circuit shortcut.'},
+      {name:'Kneeling DB Press w/ Banded Row → Seated Lateral Raise Burnout', category:'Full Body — Push/Pull (superset)', sets:String(schemeWk.sets), reps:schemeWk.reps + ' → 15-20 lateral raises', RPE:schemeWk.rpe, rest:schemeWk.rest, note:'Press/row each side, then go straight into light seated lateral raises for 15-20 reps — no rest between. Go noticeably lighter than your Day 2 lateral raise weight; this is a burnout, not a strength set.', link:'https://youtube.com/shorts/T_7KXCfDyuM?feature=share'},
+      {name:'Bulgarian Split Squat → Split Squat Explosive Jumps', category:'Full Body — Unilateral/Power (superset)', sets:'3', reps:'6-8/side', RPE:schemeWk.rpe, rest:schemeWk.rest, perSide:true, link:'https://youtube.com/shorts/rJrqluH7Ogk?feature=share', note:'Superset — straight into explosive jump squats on the same leg right after the Bulgarian split squats, no rest between the two. Tracked per leg below — log right and left separately each set.'},
+      {name:'Kettlebell Gorilla Row → Push-ups (Full, Assisted, or Banded)', category:'Full Body — Pull/Push (superset)', sets:String(schemeWk.sets), reps:schemeWk.reps + ' → 6-10 push-ups', RPE:schemeWk.rpe, rest:schemeWk.rest, parts:[{label:'Row'}, {label:'Push-up', repsOnly:true}], link:'https://youtube.com/shorts/a89O-BKu9vY?feature=share', note:'Alternating gorilla rows, then straight into push-ups — full, banded-assisted, or on your knees, whatever lets you finish the set with good form. No rest between the two. Log the row weight/reps and push-up reps separately below.'},
+      {name:'Copenhagen Side Plank Hold w/ Adduction Side Dips', category:'Full Body — Core/Adductors', sets:String(schemeWk.sets), reps:'20 sec hold + 8-10 dips/side', RPE:schemeWk.rpe, rest:schemeWk.rest, perSide:true, repsOnly:true, link:'https://youtube.com/shorts/pICMWVnECcI?feature=share', note:'Top foot propped on a bench, bottom leg hovering — hold the plank for 20 sec, then pulse the bottom leg up and down (the "dip") for the remaining reps. Tracked per side below.'}
+    ],
+    cooldown_exercises: lowerCooldown, cooldown_duration:'6 min',
+    progression_note: '🔧 Temporary — these are Block 1\'s Day 3 movements carried forward while your new Full Body + Conditioning day gets designed. ' + schemeWk.note
+  };
+}
+
+const programData = {
+  meta: {
+    programName: "Block 2 — Weeks 9-18",
+    tagline: "Same 3-day split, same equipment — rebuilding on top of what Block 1 already earned.",
+    client: "Teresa G",
+    goal: "Body Recomposition",
+    split: "Lower+Core / Upper Push-Pull / Full Body+Conditioning",
+    daysPerWeek: "3",
+    duration: "45 min",
+    equipment: "Mixed"
+  },
+  weeks: {}
+};
+for (let w=1; w<=10; w++){
+  programData.weeks[w] = [ dayA(w, scheme[w], coreScheme[w]), dayB(w, scheme[w]), dayC(w, schemeC[w]) ];
+}
+
+function renderMeta() {
+  const m = programData.meta || {};
+  const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+  set('program-name', m.programName);
+  set('program-tagline', m.tagline);
+  set('meta-client', m.client);
+  set('meta-goal', m.goal);
+  set('meta-split', m.split);
+  set('meta-days', m.daysPerWeek);
+  set('meta-duration', m.duration);
+  set('meta-equipment', m.equipment);
+}
+
+
+function renderProgram() {
+  renderMeta();
+  Object.keys(programData.weeks).forEach(weekNum => {
+    const sessions = programData.weeks[weekNum] || [];
+    sessions.forEach(session => buildSession(weekNum, session));
+  });
+}
+
+window.addEventListener('load', async function() {
+  renderProgram();
+  // Run both backend calls at the same time instead of one after the other — cuts real wait time roughly in half
+  const [, detectedWeek] = await Promise.all([mergeRemoteState(), determineCurrentWeek()]);
+  loadData();
+  if (detectedWeek) {
+    applyCurrentWeek(detectedWeek);
+  } else {
+    showWeek(1); // fallback to Block 2's opening week if the backend is unreachable
+  }
+});
+
+
+// ============================================================
+// NUTRITION PANEL SCRIPT
+// ============================================================
+
+document.querySelectorAll('#panel-nutrition .tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('#panel-nutrition .tab-btn').forEach(b=>b.classList.toggle('active', b===btn));
+    document.querySelectorAll('#panel-nutrition .tab-panel').forEach(p=>p.classList.toggle('active', p.dataset.tab===tab));
+  });
+});
+
+function copyShoppingList(){
+  const groups = document.querySelectorAll('#panel-nutrition [data-tab="shopping"] .shop-group');
+  let lines = ["Shopping List"];
+  groups.forEach(group => {
+    const heading = group.querySelector('h3').textContent.trim();
+    const items = [];
+    group.querySelectorAll('.shop-list li').forEach(li => {
+      const checkbox = li.querySelector('input[type=checkbox]');
+      if (checkbox && checkbox.checked) return; // skip items already checked off
+      const qtyEl = li.querySelector('.qty');
+      const qty = qtyEl ? qtyEl.textContent.trim() : '';
+      let text = li.textContent.trim();
+      if (qty) text = text.replace(qty, '').trim();
+      items.push('- ' + text + (qty ? ' ' + qty : ''));
+    });
+    if (items.length){
+      lines.push('', heading.toUpperCase());
+      lines = lines.concat(items);
+    }
+  });
+  const fullText = lines.join('\n');
+  const btn = document.getElementById('copy-shop-btn');
+
+  function showCopied(){
+    const original = btn.textContent;
+    btn.textContent = '✓ Copied — paste into Notes';
+    btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent = original; btn.classList.remove('copied'); }, 2200);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(fullText).then(showCopied).catch(()=>fallbackCopy(fullText, showCopied));
+  } else {
+    fallbackCopy(fullText, showCopied);
+  }
+}
+
+function fallbackCopy(text, cb){
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) { alert('Could not copy automatically — long-press to select and copy the list manually.'); }
+  document.body.removeChild(ta);
+}
+
+
+
+// ============================================================
+// APP-LEVEL PANEL SWITCHER
+// ============================================================
+function showPanel(name) {
+  document.querySelectorAll('.app-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.app-nav-item[data-panel]').forEach(function(b){ b.classList.remove('active'); });
+  var panel = document.getElementById('panel-' + name);
+  var btn = document.querySelector('.app-nav-item[data-panel="' + name + '"]');
+  if (panel) panel.classList.add('active');
+  if (btn) btn.classList.add('active');
+  try { history.replaceState(null, '', '#' + name); } catch(e) {}
+  window.scrollTo(0, 0);
+}
+(function initPanel(){
+  var initial = (location.hash || '').replace('#', '');
+  var valid = ['home','program','nutrition'].indexOf(initial) !== -1 ? initial : 'home';
+  showPanel(valid);
+})();
+</script>
+</body>
+</html>
