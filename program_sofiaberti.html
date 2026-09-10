@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRAIN — Kamryn Lee</title>
+<title>TRAIN — Sofia Berti | 8-Week Recomp</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -193,15 +193,15 @@ body{
 /* MARK DONE FULL-WIDTH BUTTON */
 .mark-done-row td{padding:0 16px 14px;}
 .completed-at{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cobalt-text);font-weight:600;}
+.session-total-row{display:none;align-items:center;justify-content:space-between;padding:16px 24px;border-top:1px solid var(--cobalt-mid);background:var(--cobalt-faint);}
+.session-total-row.show{display:flex;}
+.session-total-label{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:var(--cobalt-text);font-weight:600;display:flex;align-items:center;gap:8px;}
+.session-total-value{font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:var(--text);}
 .badge-toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);display:flex;align-items:center;gap:14px;background:var(--surface2);border:1px solid var(--cobalt);border-radius:var(--radius-lg);box-shadow:var(--shadow-modal);padding:16px 22px;max-width:min(360px,88vw);z-index:200;opacity:0;transition:opacity .3s, transform .3s;}
 .badge-toast.show{opacity:1;transform:translate(-50%,0);}
 .badge-toast-icon{font-size:26px;flex-shrink:0;}
 .badge-toast-title{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt-text);font-weight:700;margin-bottom:3px;}
 .badge-toast-desc{font-size:13px;color:var(--text2);line-height:1.5;}
-.session-total-row{display:none;align-items:center;justify-content:space-between;padding:16px 24px;border-top:1px solid var(--cobalt-mid);background:var(--cobalt-faint);}
-.session-total-row.show{display:flex;}
-.session-total-label{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:var(--cobalt-text);font-weight:600;display:flex;align-items:center;gap:8px;}
-.session-total-value{font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:var(--text);}
 .mark-done-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 16px;background:transparent;border:1.5px solid var(--border2);border-radius:var(--radius-sm);cursor:pointer;transition:all .18s;}
 .mark-done-btn:hover{border-color:var(--cobalt);background:var(--cobalt-light);}
 .mark-done-check{width:18px;height:18px;border:1.5px solid var(--border2);border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .18s;}
@@ -311,12 +311,6 @@ body{
   .program-meta{gap:8px;}
   .meta-item{flex:1;min-width:calc(50% - 8px);padding:10px 12px;}
 }
-
-/* APP NAV — shared across all TRAIN pages */
-.app-nav{position:sticky;top:0;z-index:50;display:flex;justify-content:center;gap:6px;background:rgba(21,22,26,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:12px 14px;overflow-x:auto;}
-.app-nav-item{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;color:var(--muted);text-decoration:none;background:none;border:1px solid transparent;padding:9px 18px;border-radius:30px;white-space:nowrap;transition:all .15s;flex-shrink:0;cursor:pointer;}
-.app-nav-item:hover{color:var(--cobalt-text);background:var(--cobalt-faint);border-color:var(--cobalt-mid);}
-.app-nav-item.active{color:var(--on-cobalt);background:var(--cobalt);border-color:var(--cobalt);}
 
 
 /* ===== TAB SWITCHER ===== */
@@ -487,6 +481,13 @@ table.supps{width:100%;border-collapse:collapse;background:var(--surface);border
 }
 
 
+
+/* APP NAV — shared across all TRAIN pages */
+.app-nav{position:sticky;top:0;z-index:50;display:flex;justify-content:center;gap:6px;background:rgba(21,22,26,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:12px 14px;overflow-x:auto;}
+.app-nav-item{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;color:var(--muted);text-decoration:none;background:none;border:1px solid transparent;padding:9px 18px;border-radius:30px;white-space:nowrap;transition:all .15s;flex-shrink:0;cursor:pointer;}
+.app-nav-item:hover{color:var(--cobalt-text);background:var(--cobalt-faint);border-color:var(--cobalt-mid);}
+.app-nav-item.active{color:var(--on-cobalt);background:var(--cobalt);border-color:var(--cobalt);}
+@media (max-width:480px){.app-nav{justify-content:flex-start;padding:10px 12px;}}
 </style>
 </head>
 <body>
@@ -506,7 +507,7 @@ table.supps{width:100%;border-collapse:collapse;background:var(--surface);border
     <div class="wordmark">TRAIN</div>
     <div class="hero-sub">Kim Valles Coaching</div>
     <div class="hero-welcome">
-      Welcome, <b>Kamryn</b>. Here's your hub for the next 8
+      Welcome, <b>Sofia</b>. Here's your hub for the next 8
       weeks — your training plan, nutrition, tracking tools, and exactly
       what to expect from each other along the way.
     </div>
@@ -756,17 +757,23 @@ table.supps{width:100%;border-collapse:collapse;background:var(--surface);border
 
   <div class="client-note" id="coach-note-wrap">
     <span class="client-note-label">A note from Coach Kim</span>
-    <span id="client-note-text">New program for a busy woman! I am so excited for this next chapter for you. Being able to work for a company like the Niners is right up your alley, and there's no doubt in my mind you're going to work your way up like the badass you are. ❤️
+    <span id="client-note-text">I remember our very first session together, you told me you wanted a small waist and a phat juicy booty. 😂 Here we are 2+ years later, and we are still on that same, yet deeper, mission together.
       <br><br>
-      We started working together almost 2 years ago now, and you have really come such a long way. I know some days are harder than others, but girl… that muscle doesn't lie, and you are looking STRONG! People are really hyping you up because you look great, and you absolutely deserve that love and positive feedback. YOU built that foundation, and you should be so proud of yourself.
+      We have come such a long way, and I am so proud of your discipline and your ability to continue showing up for yourself. You glow, and I truly believe that's because you take such good care of your health. 🩵
       <br><br>
-      Thank you for being patient with the evolution of my coaching style — whatever that may be lol and thank you for trusting me, trying out all my ideas, and being willing to test all the different versions of this app with me. You are such an important part of this journey. 🩵
+      You know the drill… we are sticking with a lot of the same movements you know and love, but over the next 8 weeks, we are going to change up the sets and reps to really push progressive overload and continue growing that muscle.
+      <br><br>
+      We did go from 2 upper body days to 1, with a little more volume packed into that day. It will be plenty of work if you train hard and push yourself, and I'll go into more detail before your upper body day.
+      <br><br>
+      You really have grown and progressed so much in the gym over these past two years, so I want to empower you to push your limits a little more and intuitively listen to your body. And that also means listening when your body is asking for rest. Do NOT feel guilty for taking a rest day when you need one. Recovery is part of the work too.
+      <br><br>
+      Thank you for being patient with the evolution of my coaching style — whatever that may be lol — and thank you for trusting me, trying out all my ideas, and being willing to test all the different versions of this app with me. You are such an important part of this journey. 🩵
     </span>
   </div>
 
   <div class="client-note" style="margin-top:16px;">
     <span class="client-note-label">A note from TRAIN: Your Program Overview</span>
-    <span>This 8-week block is built around your new schedule — Day 1 is glute-focused lower body + core, Day 3 is quad-focused lower body + conditioning, and Day 2 combines what used to be two separate upper body days into one higher-volume, higher-intensity session, so you're not splitting focus thin across a busy week. Day 4 is an optional full-body bonus day — details coming soon, no pressure if a week doesn't have room for it. Sets, reps, and intensity shift deliberately week to week: building through Weeks 1-4, a real deload in Week 6, and a true peak in Week 7 — the same progressive overload we've always trained by, just tracked more honestly now that it auto-saves as you go.</span>
+    <span>This 8-week block runs the same movement patterns you already know — Day 1 is glute-focused lower body + core, Day 3 is quad-focused lower body + conditioning, and Day 4 pairs your hip thrust work with Mat Pilates. The big change this cycle: your two upper body days are now one — higher volume, higher intensity, built so you can bring full focus into a single session instead of splitting it thin across two. Sets, reps, and intensity shift deliberately week to week: building through Weeks 1-4, a real deload in Week 6, and a true peak in Week 7 — the same progressive overload principle we've always trained by, just tracked more honestly than ever now that it auto-saves as you go.</span>
   </div>
 
   <div style="width:100%;height:1px;background:var(--border);margin:32px 0 0;"></div>
@@ -885,7 +892,7 @@ table.supps{width:100%;border-collapse:collapse;background:var(--surface);border
     <div class="checkin-label">Weekly Check-In</div>
     <div class="checkin-text">Take a moment to check in with yourself. How did this week feel? Were the sessions hard in the right way? Did you get your rest day in? How is your energy, your sleep, your stress? Please complete your weekly check-in and upload your progress photos before your call with Coach Kim.</div>
     <a class="checkin-link" href="http://train.kimvallescoaching.com/checkin.html" target="_blank" rel="noopener">Complete Weekly Check-In Form →</a>
-    <a class="checkin-link" href="https://drive.google.com/drive/folders/1V6itiwf_oxmoPu06uE7SkYQIatKFynKU?usp=drive_link" target="_blank" rel="noopener">Upload Progress Photos →</a>
+    <a class="checkin-link" href="https://drive.google.com/drive/folders/16p0jqgJ8ZEtPIrdWFE59O40o-gyRmIcf?usp=drive_link" target="_blank" rel="noopener">Upload Progress Photos →</a>
   </div>
 
   <!-- CLOSE -->
@@ -928,7 +935,6 @@ table.supps{width:100%;border-collapse:collapse;background:var(--surface);border
   </div>
 </div>
 
-
 </div>
 
 <div id="tab-nutrition" class="tab-page">
@@ -936,7 +942,7 @@ table.supps{width:100%;border-collapse:collapse;background:var(--surface);border
 
   <div class="hero">
     <div class="eyebrow">Nutrition Guide</div>
-    <h1>Kamryn Lee</h1>
+    <h1>Sofia Berti</h1>
     <div class="goal-line">Goal: <strong>[Primary Goal]</strong> · Built from your food preferences, not a generic plan.</div>
   </div>
 
@@ -1203,11 +1209,11 @@ function switchTab(tab) {
     p.classList.toggle('active', p.id === 'tab-' + tab);
   });
   window.scrollTo(0, 0);
-  try { localStorage.setItem('train_active_tab_kamrynlee', tab); } catch(e) {}
+  try { localStorage.setItem('train_active_tab_sofiaberti', tab); } catch(e) {}
 }
 document.addEventListener('DOMContentLoaded', function() {
   try {
-    const saved = localStorage.getItem('train_active_tab_kamrynlee');
+    const saved = localStorage.getItem('train_active_tab_sofiaberti');
     if (saved) switchTab(saved);
   } catch(e) {}
 });
@@ -1275,7 +1281,7 @@ function fallbackCopy(text, cb){
 // ── Backend sync config — same Sheet/script as your other programs ──
 const API_URL = 'https://script.google.com/macros/s/AKfycbyXq5X8ng5u2oXHdXW9P5tjk3UhU64T3VHxKIWEApdkBy45q3FQNnEoVQ6Benvztuie/exec';
 const API_SECRET = 'kimtrain2026secure';
-const CLIENT_ID = new URLSearchParams(window.location.search).get('c') || 'kam001';
+const CLIENT_ID = new URLSearchParams(window.location.search).get('c') || 'sofia001';
 const DEFAULT_START_DATE = '2026-08-17'; // new 8-week block start, used only if the Clients row doesn't have this set yet
 
 const STORAGE_KEY = 'train_program_' + (window.location.pathname.split('/').pop() || 'default');
@@ -1300,11 +1306,6 @@ function showWeek(n) {
 // week-nav buttons in the HTML — and is not auto-derived from checked-off
 // exercises, so it stays put regardless of how much of a given week's
 // workouts have been logged.
-
-function autoGrowNotes(el) {
-  el.style.height = 'auto';
-  el.style.height = el.scrollHeight + 'px';
-}
 
 // ══════════════════════════════════════════════════════════════════════════
 // P1.3 — VOLUME TREND CHART
@@ -1465,6 +1466,11 @@ const TrainBadges = (function () {
   // and DEFS directly to render itself — nothing here needs to change.
   return { DEFS, computeStats, seedIfNeeded, checkAndToast, getShown };
 })();
+
+function autoGrowNotes(el) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + 'px';
+}
 
 function toggleWarmup(btn) {
   btn.classList.toggle('open');
@@ -2124,11 +2130,11 @@ document.addEventListener('keydown', function(e) {
 
 // ─── PROGRAM META ──────────────────────────────────────────────────────────
 const programMeta = {
-  programName: "FAT LOSS",
-  tagline: "8-Week Fat Loss · Intermediate · 2 Lower / 1 Upper / 1 Optional Full Body Split",
-  client: "Kamryn Lee",
-  goal: "Fat Loss",
-  split: "2 Lower / 1 Upper / 1 Optional Full Body",
+  programName: "RECOMP",
+  tagline: "8-Week Body Recomposition · Intermediate · 2 Lower / 1 Upper / 1 Mat Pilates Split",
+  client: "Sofia Berti",
+  goal: "Body Recomposition",
+  split: "2 Lower / 1 Upper / 1 Mat Pilates",
   daysPerWeek: "4",
   duration: "90 min",
   equipment: "Full Gym"
@@ -2230,11 +2236,11 @@ function mondayExercises(w) {
       note: isDeload ? 'Deload: reduce load by roughly 40%. Focus on the hinge pattern, not the number on the bar.' : (isPeak ? 'Peak week: your heaviest RDL of the block. Don\'t sacrifice the hinge for load.' : '')
     },
     {
-      name: 'Reverse Lunge',
+      name: 'Bulgarian Split Squat',
       category: 'Unilateral Lower · Primary · DB_Quads',
-      videoUrl: 'https://youtube.com/shorts/bKj39GbVpHE?feature=share',
+      videoUrl: 'https://youtube.com/shorts/7kUdX2Gbbwo?feature=share',
       sets: bssSets, reps: '8–10 / side · track L + R separately', tempo: '2-1-2-0', rest: '90s', RPE: bssRPE,
-      cue: 'Holding dumbbells at your sides (or a bar across your back), step back into a lunge, lowering your back knee toward the floor while keeping most of your weight on the front leg. Front shin stays close to vertical. Push through the front heel to return to standing before stepping back for the next rep.',
+      cue: 'Rear foot elevated on a bench, most of your weight on the front leg. Lower straight down until your back knee nearly grazes the floor, then drive through the front heel to stand. Keep your torso fairly upright and hips square — this isn\'t a lunge, it should feel like a squat on one leg.',
       note: isDeload ? 'Deload: reduce load, weaker leg first, keep volume even both sides.' : ''
     },
     {
@@ -2529,24 +2535,32 @@ for (let w = 1; w <= 8; w++) {
     })()
   });
 
-  // DAY 4 — OPTIONAL FULL BODY (placeholder — Kim to fill in exercise selection)
+  // DAY 4 — YT MAT PILATES
   buildSession(w, {
     id: 'thu',
-    label: 'DAY 4 · OPTIONAL FULL BODY',
-    title: 'Optional Full Body',
-    duration: 'TBD',
+    label: 'DAY 4 · HIP THRUSTS + MAT PILATES',
+    title: 'Hip Thrusts + Mat Pilates',
+    duration: '60 min',
     warm_up_exercises: [],
     cooldown_exercises: [],
     exercises: [
       {
-        name: '[Placeholder — exercises to be added]',
-        category: 'Optional · Full Body',
-        sets: '—', reps: '—', rest: '—', RPE: '—',
-        cue: 'This day is optional — a bonus session, not a required part of the 8-week block.',
-        note: 'Exercise selection still TBD — update this session once finalized.'
+        name: 'Hip Thrusts (Full) + Pulses + Static Hold — TRISET',
+        category: 'Hip Hinge · Glute Finisher · TRISET_HT',
+        sets: '3', reps: '8-10 full → 8-10 pulses → 10s hold', rest: '90s', RPE: '8',
+        videoUrl: 'https://youtube.com/shorts/qnuymd8QW0c?feature=share',
+        cue: 'One continuous set — no rest between the three parts, the hold comes last while you\'re already fatigued.',
+        note: 'Sit on the floor with your upper back against a bench, bar or plate positioned across your hip crease (pad it if needed). Feet flat, shoulder-width, knees bent to roughly 90° at the top. Part 1 — Full reps: drive through your heels and squeeze your glutes to lift your hips until your body forms a straight line from shoulders to knees, then lower with control until your hips are just short of the floor. Part 2 — Pulses: staying up near the top position, pulse your hips up and down in a small 2-3 inch range, keeping constant tension on your glutes. Part 3 — Static hold: finish by holding at the top, squeezing as hard as you can for the full duration. Don\'t let your lower back arch to make any of the three parts easier — the movement should stay in your hips.'
+      },
+      {
+        name: 'Follow-Along Mat Pilates',
+        category: 'Active Recovery · Mobility · NO_TRACKING',
+        videoUrl: 'https://www.youtube.com/watch?v=VxHavhWHo3I',
+        cue: 'Follow along with the video at your own pace — this is about movement quality and controlled breathing, not chasing intensity.',
+        note: ''
       }
     ],
-    progression_note: 'Optional day — not required to complete the program, purely a bonus if there\'s time/energy for it.'
+    progression_note: 'This day is about movement quality and recovery, not progressive overload — no sets/reps to chase week to week, just show up and follow along.'
   });
 }
 
