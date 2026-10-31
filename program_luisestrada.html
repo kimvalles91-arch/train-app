@@ -14,7 +14,7 @@
 <link rel="manifest" id="app-manifest" href="data:application/manifest+json,%7B%7D">
 <!--
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║  TRAIN — UNIVERSAL 4-DAY TEMPLATE  ·  Kim Valles Coaching                    ║
+║  TRAIN — UNIVERSAL 4-DAY TEMPLATE  ·  Kim Valles Coaching, LLC                    ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
 ║  HOW TO ONBOARD A NEW CLIENT (instructions for the AI chat this file is      ║
 ║  uploaded into):                                                             ║
@@ -1009,6 +1009,96 @@ body.timer-on #panel-program .modal-box{padding-bottom:110px;}
   .a2hs button{margin-left:62px;}
   .sync-warn-card button{margin-left:22px;}
 }
+/* ===== Form cues + Pain Felt ===== */
+.rd-title{font-weight:800;font-size:16px;color:var(--text);margin-bottom:3px;}
+.rd-text{font-size:14.5px;line-height:1.55;color:var(--text2);}
+.pain-btn,#panel-program .pain-btn,.session-detail .pain-btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#F3B2A7;background:rgba(232,135,122,0.10);border:1px solid #E8877A;border-radius:20px;cursor:pointer;padding:6px 11px!important;margin:6px 0 4px 6px;line-height:1.2;}
+.pain-btn:hover{background:rgba(232,135,122,0.22);color:#fff;}
+.ex-tools{display:inline-flex;flex-direction:column;align-items:stretch;gap:8px;vertical-align:middle;}
+.ex-tools .hist-btn,.ex-tools .pain-btn,#panel-program .ex-tools .pain-btn{margin:0!important;justify-content:center;}
+.pain-btn:hover{background:#D9483A;}
+.session-detail.locked .pain-btn{display:none;}
+.pain-chip{display:inline-block;margin:6px 0 2px;font-size:13px;font-weight:700;border-radius:10px;padding:7px 11px;border:1px solid #E8877A;background:rgba(232,135,122,0.12);color:#F3B2A7;cursor:pointer;font-family:inherit;text-align:left;}
+.pain-chip.monitor{border-color:#F2C46D;background:rgba(242,196,109,0.10);color:#F2D49A;}
+.pain-prev-box{margin:8px 0 2px;padding:10px 12px;border-left:3px solid #E8877A;background:rgba(232,135,122,0.08);border-radius:8px;font-size:13.5px;line-height:1.5;color:var(--text2);}
+.pain-prev-box b{color:#F3B2A7;}
+.pain-form{display:grid;gap:10px;}
+.pain-form .ci-label{margin-top:6px;font-weight:700;color:var(--text);}
+.pain-form .ci-label small{font-weight:500;color:var(--muted);}
+.pain-advice{padding:14px 16px;border-radius:12px;border:1.5px solid #F2C46D;background:rgba(242,196,109,0.10);}
+.pain-advice.stop{border-color:#E8877A;background:rgba(232,135,122,0.14);}
+.pain-advice.monitor{border-color:var(--cobalt);background:var(--cobalt-faint);}
+.pain-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+.pain-actions .start-btn{width:auto;min-width:160px;padding:14px 30px;font-size:15px;}
+#info-modal-body .rd-flag,#info-modal-body .pain-advice{margin:4px 0;}
+.pain-actions .start-btn[disabled]{opacity:0.4;cursor:default;}
+.pain-note{font-size:12px;color:var(--muted);margin:0;}
+.cue-steps,#panel-program .cue-steps{list-style:none;margin:8px 0 6px!important;padding:0!important;display:grid;gap:9px;}
+.cue-steps li{display:grid;grid-template-columns:78px minmax(0,1fr);gap:10px;align-items:baseline;margin:0!important;}
+.cue-steps b{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cobalt-text);font-weight:700;padding-top:2px;}
+.cue-steps span{font-size:14.5px;line-height:1.55;color:var(--text2);font-style:normal;}
+.cue-steps li:last-child b{color:#F2C46D;}
+.ex-note{margin-top:6px!important;}
+#info-modal-body .pain-advice{padding:14px 16px;}
+#info-modal-body .pain-actions .start-btn{padding:14px 30px;}
+#info-modal-body .pain-form .ci-label{margin-top:6px;}
+#panel-program .pain-chip{padding:7px 11px;margin:10px 0 8px;}
+#panel-program .pain-prev-box{padding:10px 12px;margin:8px 0 4px;}
+/* ===== Report card plus ===== */
+#report-details{max-width:460px;margin:18px auto 0;}
+.rp{display:grid;gap:14px;}
+.rp-head h2{margin:4px 0 0;font-size:22px;color:var(--text);}
+.rp-sec{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px 18px 14px;}
+.rp-sec h3{margin:0 0 4px;font-size:17px;color:var(--text);}
+.rp-sub{margin:0 0 10px;font-size:13px;line-height:1.5;color:var(--muted);}
+.rp-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--border);}
+.rp-row:last-child{border-bottom:none;}
+.rp-n{font-size:13.5px;font-weight:600;color:var(--text);min-width:0;}
+.rp-v{font-family:var(--font-mono);font-size:12px;color:var(--muted);white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums;}
+.rp-v b{color:var(--text);}
+.rp-v .up,.rp-v .down{display:inline-block;margin-left:8px;font-weight:700;min-width:40px;}
+.rp-v .up{color:#5CC28A;} .rp-v .down{color:#E8877A;}
+.rp-spark{display:block;}
+.rp-tag{display:inline-block;margin-left:4px;padding:1px 7px;border-radius:10px;font-family:var(--font-mono);font-size:8.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--cobalt-text);border:1px solid var(--cobalt-mid);vertical-align:2px;}
+.rp-tag.warn{color:#F2C46D;border-color:#F2C46D;}
+.rp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:10px;}
+.rp-k{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:10px;}
+.rp-k b{display:block;font-family:var(--font-mono);font-size:20px;color:var(--text);}
+.rp-k span{font-family:var(--font-mono);font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);}
+.rp-ready{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-family:var(--font-mono);font-size:13px;color:var(--text);margin:4px 0 6px;}
+.rp-muted{color:var(--muted2);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;}
+.rp-insight{margin:8px 0 2px;font-size:14px;line-height:1.55;color:var(--text2);}
+.rp-bar{width:90px;height:6px;border-radius:4px;background:var(--surface3,var(--border));overflow:hidden;}
+.rp-bar i{display:block;height:100%;background:var(--cobalt);border-radius:4px;}
+.rp-blueprint{border-color:var(--cobalt-mid);background:linear-gradient(160deg,rgba(143,208,240,0.08),var(--surface) 55%);}
+.rp-h4{margin:14px 0 6px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cobalt-text);font-weight:700;}
+.rp-list{list-style:none;margin:0;padding:0;display:grid;gap:7px;}
+.rp-list li{font-size:13.5px;line-height:1.5;color:var(--text2);}
+.rp-list li b{color:var(--text);margin-right:6px;}
+.rp-list.keep li b::before{content:'✓ ';color:#5CC28A;} .rp-list.change li b::before{content:'↻ ';color:#F2C46D;}
+.rp-list.keep li span,.rp-list.change li span{display:block;color:var(--muted);font-size:13px;}
+.rp-list.plain li{padding-left:14px;position:relative;} .rp-list.plain li::before{content:'•';position:absolute;left:0;color:var(--cobalt-text);}
+.rp-table{display:grid;gap:0;font-size:13px;margin-top:4px;}
+.rp-th,.rp-tr{display:grid;grid-template-columns:minmax(0,1.3fr) 70px minmax(0,1.3fr);gap:8px;padding:8px 0;border-bottom:1px dashed var(--border);align-items:baseline;}
+.rp-th{font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);}
+.rp-tr span:first-child{font-weight:600;color:var(--text);}
+.rp-tr span{color:var(--muted);font-family:var(--font-mono);font-variant-numeric:tabular-nums;}
+.rp-tr span:first-child{font-family:var(--font-body);}
+.rp-tr b{color:var(--text);}
+.rf-actions{display:flex;flex-wrap:wrap;gap:10px;}
+@media print{
+  body.rp-printing > *:not(#report-overlay){display:none!important;}
+  body.rp-printing .report-top,body.rp-printing #report-details,body.rp-printing #report-reflect{display:none!important;}
+  body.rp-printing .report-overlay{position:static!important;overflow:visible!important;display:block!important;padding:0!important;height:auto!important;}
+  body.rp-printing .rc{break-inside:avoid;}
+  body.rp-printing #report-card{zoom:0.8;}
+  body.rp-printing .rc{box-shadow:none!important;max-width:520px;}
+  body.rp-printing *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  @page{margin:12mm;}
+}
+.ex-num-sm{display:inline-block;min-width:26px;color:var(--cobalt-text);font-family:var(--font-mono,'JetBrains Mono',monospace);font-size:12px;font-weight:600;}
+#panel-program .ex-callout{padding:12px 14px!important;margin:10px 0 8px!important;}
+#panel-program .ex-callout b{margin-bottom:4px!important;}
 </style>
 </head>
 <body>
@@ -1027,6 +1117,7 @@ body.timer-on #panel-program .modal-box{padding-bottom:110px;}
 <div class="report-overlay" id="report-overlay" role="dialog" aria-modal="true" aria-label="Report card">
   <div class="report-top"><span class="today-eyebrow" id="report-mode">Report card</span><button type="button" class="guide-close" onclick="closeReport()">Close ✕</button></div>
   <div id="report-card"></div>
+  <div id="report-details"></div>
   <div class="rf" id="report-reflect"></div>
 </div>
 <div class="guide-overlay" id="guide-overlay" onclick="if(event.target===this) closeGuide()">
@@ -1078,9 +1169,9 @@ body.timer-on #panel-program .modal-box{padding-bottom:110px;}
 
   <!-- HERO -->
   <div class="hero">
-    <div class="eyebrow">8-Week Coaching Program</div>
+    <div class="eyebrow">8-Week Strength Training Program</div>
     <div class="wordmark">TRAIN</div>
-    <div class="hero-sub">Kim Valles Coaching</div>
+    <div class="hero-sub">Kim Valles Coaching, LLC</div>
     <div class="hero-welcome">
       Welcome, <b>Luis</b>. Here's your hub for the next 8
       weeks — your training plan, nutrition, tracking tools, and exactly
@@ -1096,23 +1187,13 @@ body.timer-on #panel-program .modal-box{padding-bottom:110px;}
     <div class="tool-card">
       <div class="tool-head"><span class="tool-num">01</span><span class="tool-title">Your Training Program</span></div>
       <div class="tool-body">
-        TRAIN is an intelligent training platform built around progressive
-        overload and real performance data. Your program is structured in
-        8-week blocks, with each week intentionally building on the one
-        before it. TRAIN tells you exactly what to do each session —
-        including exercises, sets, reps, and progression — while tracking
-        the weight and reps you log along the way.
+        TRAIN is an intelligent training platform built around progressive overload and real performance data. Your program runs in 8-week blocks, and every week is designed to build on the one before it. Each session tells you exactly what to do — exercises, sets, reps, rest and effort — with step-by-step form cues (Setup, Move, Key point) and demo videos right on every exercise.
         <br><br>
-        As you TRAIN, your performance data carries forward week to week, so
-        you always know what you did last time and what you're working
-        toward next. Progressive overload is built into the programming,
-        allowing reps, sets, and load to increase strategically throughout
-        the block.
+        As you log, TRAIN does the remembering. Last week's weight and reps sit right next to every set, a rest timer keeps you on pace, and new personal records are flagged the moment you hit them. Quick check-ins before and after each workout track your sleep, energy, stress and soreness — and if something doesn't feel right, tap Pain Felt for safe, in-the-moment guidance.
         <br><br>
-        There's no spreadsheets, screenshots, or guessing what to do next.
-        You simply open TRAIN, log your performance, and come back the
-        following week knowing exactly where to pick up. Week 1 establishes
-        your baseline. Week 8 reflects how far you've progressed.
+        Everything you log is backed up and goes straight to your coach, so your program is adjusted based on what's actually happening, not guesswork. No spreadsheets, no screenshots, no texting numbers back and forth. Just open TRAIN, log your work, and pick up exactly where you left off.
+        <br><br>
+        Week 1 sets your baseline. By Week 8, your report card shows how far you've come — strength, power, recovery and consistency — and maps out where your next block should start.
       </div>
       <button class="btn" onclick="showMainTab('program')">Open Training Plan →</button>
       <button class="btn" style="margin-left:8px;background:transparent;color:var(--cobalt-text);" onclick="runTodayAction()" data-today-cta>Start today's workout →</button>
@@ -1293,7 +1374,7 @@ body.timer-on #panel-program .modal-box{padding-bottom:110px;}
   <!-- FOOTER -->
   <div class="footer">
     <div class="fw">TRAIN</div>
-    <p>Kim Valles Coaching</p>
+    <p>Kim Valles Coaching, LLC</p>
     <p>TRAIN@kimvallescoaching.com · @Kim_valles</p>
     <div class="tagline">Let's Get To Work</div>
   </div>
@@ -1442,7 +1523,7 @@ const CLIENT = {
   flexibleDays: true,   // Day 1 / Day 2 / Day 3 (+ optional Day 4) done on whichever days work — no fixed weekday
   programName: 'STRENGTH',
   programTagline: '8-Week Program · Block 2 · Intermediate · Lower / Upper / Full Body + Active Recovery',
-  startDate: '2026-10-26',           // MONDAY of Block 2, Week 1
+  startDate: '2026-11-02',           // MONDAY of Block 2, Week 1 (moved from Oct 26 — sick that week)
   coachNote: '',
   coachNoteFrom: 'Note from Coach Kim',
   clientNote: "Luis — eight weeks down, and you showed up for them. This block builds on exactly that. You're not starting over, you're starting from a stronger place. The structure is the one you already know: three training days plus an active recovery day, with a few smart upgrades. More quad and chest work, a stronger back, and extra calf and core finishers, all built around your knee. Leg press and hip hinge work stay the foundation, and anything knee-bending stays light and pain-free. This is a program to execute, not figure out. Show up. Log every set. Beat last week somewhere, every session. That's the whole game. The version of you who keeps showing up already knows how this ends.",
@@ -1452,7 +1533,7 @@ const CLIENT = {
 };
 
 const COACH = {
-  brand: 'Kim Valles Coaching',
+  brand: 'Kim Valles Coaching, LLC',
   product: 'TRAIN',
   email: 'TRAIN@kimvallescoaching.com',
   handle: '@Kim_valles',
@@ -1503,6 +1584,15 @@ const CHECKIN = {
   bodyweight: true,
   cycle: false,
 };
+// ── PAIN FELT ─────────────────────────────────────────────────────────────
+// A "Pain felt" button under History on every exercise. She picks where, how bad (1–10) and what it
+// feels like, and gets safe advice right away. It also answers "Any pain?" in the after-workout check-in.
+const PAIN = {
+  on: true,
+  coachSupport: true,   // advice says "Your coach has been notified" (needs this client in VIP_CLIENTS / Alerts = yes)
+  areas: ['Knee', 'Hip', 'Low back', 'Upper back', 'Shoulder', 'Elbow', 'Wrist', 'Neck', 'Ankle / foot', 'Other'],
+};
+
 const SHOW_WELCOME_TOUR = true;
 
 // ── WEEKLY NOTE (shows at the top of Today all week) ─────────────────────
@@ -1591,14 +1681,26 @@ const SESSIONS = {
     warmup: "lowerBodyDay", cooldown: "lower", warmupTime: "8 min", cooldownTime: "6–7 min",
     progression: {"w1":"Establish your baseline loads this week — these numbers are what you'll beat starting Week 2.","w2":"Beat last week's loads where RPE allows.","w3":"Heaviest week of the mesocycle so far — push here.","w4":"Match or beat your Week 3 numbers. Same set structure, no reduction.","w5":"New mesocycle. Your baseline today should sit above Week 1 across the board.","w6":"Deload week — everything drops to roughly 60% load. This is recovery, not a step backward.","w7":"Peak week. Heaviest loads of the block. Leave nothing in reserve.","w8":"Final week — full sets, full loads. Compare Week 1 to today."},
     exercises: [
-      { name: "Seated Leg Curl (Machine)", noteHighlight: true, category: "Knee Flexion · Accessory · Hamstrings", equip: "machine", video: "https://www.youtube.com/shorts/yU8E_E8KkMc", sets: "3", reps: "10-12", rest: "60s", rpe: "7", cue: "Slow and controlled — very easy on the knee joint and builds the hamstring strength that helps protect it.", note: "Still part of your program — it's just moved to the front of Day 1 on purpose. Doing it first warms up and lubricates the knees before the heavier leg work." },
-      { name: "DB Squat", category: "Knee-Dominant · Secondary · Quads", equip: "db", video: "https://www.youtube.com/shorts/CX_n7htF4t8", sets: {"base":"3","w6":"2"}, reps: "10-12", tempo: "3-1-1-0", rest: "75s", rpe: {"base":"7","w3":"8","w6":"5-6","w7":"8"}, cue: "Hold a dumbbell in each hand at your sides (or one at your chest), feet about shoulder-width, chest tall. Sit straight down under control and drive up through the whole foot.", note: "Left knee: start light and only go as deep as feels good — stop short of any pinch. If it bothers the knee, skip it and tell Kim." },
-      { name: "Barbell Romanian Deadlift", category: "Hip Hinge · Primary · Posterior Chain", primary: true, equip: "barbell", video: "https://www.youtube.com/shorts/g5yCIK70F1g", sets: {"base":"4","w6":"2"}, reps: "8-10", tempo: "3-1-1-0", rest: "90s", rpe: {"base":"7-8","w3":"8-9","w6":"5-6","w7":"8-9"}, cue: "Soft knees, push the hips back, keep the bar close to your legs. You should feel this in the hamstrings/glutes, not the low back.", note: {"w1":"Block 1 finish: 60 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there.","m2":"New block — aim to build from your strongest Weeks 1-4 top set."} },
-      { name: "Leg Press (Machine)", category: "Knee-Dominant · Secondary · Quads", equip: "machine", video: "https://www.youtube.com/shorts/5UkCEpw66yM", sets: {"base":"3","w6":"2"}, reps: "10-12", rest: "75s", rpe: {"base":"7","w3":"8-9","w6":"5-6"}, cue: "Feet mid-to-high on the platform, controlled range of motion — stop short of any knee pinch. No need to chase full depth.", note: "This is the knee-friendly stand-in for heavy squatting. Adjust foot position and depth to whatever feels best for the knee that day." },
-      { name: "Standing Calf Raise (Machine)", category: "Plantarflexion · Accessory · Calves", equip: "machine", group: "C", video: "https://www.youtube.com/shorts/95itLfMBG40", sets: "3", reps: "12-15", rest: "0s (superset)", rpe: "7", cue: "Full stretch at the bottom, pause and squeeze at the top.", note: "SUPERSET with Calf Raise to Med Ball Slam — go straight into it after your last rep, then rest 45s. This pair burns out the calves and adds core work." },
-      { name: "Calf Raise to Med Ball Slam", category: "Plantarflexion + Core · Superset · Calves/Core", equip: "db", group: "C", video: "https://www.youtube.com/shorts/_Jwcs8RydBQ", sets: "3", reps: "12-15", rest: "45s", rpe: "7", cue: "Hold a med ball overhead and rise all the way onto your toes, then slam the ball down hard in front of you as you lower your heels. Catch or pick it up and reset. Stay tall and brace your core on every rep. Log the ball weight.", note: "SUPERSET with Standing Calf Raise — complete both back to back, then rest 45s." },
-      { name: "Pallof Press with Rotation (Cable)", category: "Anti-Rotation + Rotation · Core · Functional", equip: "cable", log: "unilateral", group: "A", video: "https://www.youtube.com/shorts/5aZ0IhJS8O8", sets: "3", reps: "10-12 / side · track L + R separately", rest: "0s (superset)", rpe: "—", cue: "Stand side-on to the cable, handle at your chest. Press straight out, then rotate through your torso away from the cable and back to center, arms extended, under control. Hips stay square and the cable never yanks you around. Builds the same rotational control you use on the golf course and the trail.", note: "SUPERSET with Standing Rotational Ball Slams — go straight into the slams after your last rep on each side, then rest." },
-      { name: "Standing Rotational Ball Slams", category: "Rotational Power · Core · Functional", equip: "db", log: "unilateral", group: "A", video: "https://www.youtube.com/shorts/1xTjb9kyJjI", sets: "3", reps: "10-12 / side · track L + R separately", rest: "45s", rpe: "7", cue: "Standing tall, rotate through the torso and drive the ball down and across — same explosive rotational pattern as your golf and tennis swing." },
+      { name: "Seated Leg Curl (Machine)", noteHighlight: true, category: "Knee Flexion · Accessory · Hamstrings", equip: "machine", video: "https://www.youtube.com/shorts/yU8E_E8KkMc", sets: "3", reps: "10-12", rest: "60s", rpe: "7", move:"Slow and controlled.",
+        key:"Very easy on the knee joint and builds the hamstring strength that helps protect it.", note: "Still part of your program — it's just moved to the front of Day 1 on purpose. Doing it first warms up and lubricates the knees before the heavier leg work." },
+      { name: "DB Squat", category: "Knee-Dominant · Secondary · Quads", equip: "db", video: "https://www.youtube.com/shorts/CX_n7htF4t8", sets: {"base":"3","w6":"2"}, reps: "10-12", tempo: "3-1-1-0", rest: "75s", rpe: {"base":"7","w3":"8","w6":"5-6","w7":"8"}, setup:"Hold a dumbbell in each hand at your sides (or one at your chest), feet about shoulder-width, chest tall.",
+        move:"Sit straight down under control and drive up through the whole foot.", note: "Left knee: start light and only go as deep as feels good — stop short of any pinch. If it bothers the knee, skip it and tell Kim." },
+      { name: "Barbell Romanian Deadlift", category: "Hip Hinge · Primary · Posterior Chain", primary: true, equip: "barbell", video: "https://www.youtube.com/shorts/g5yCIK70F1g", sets: {"base":"4","w6":"2"}, reps: "8-10", tempo: "3-1-1-0", rest: "90s", rpe: {"base":"7-8","w3":"8-9","w6":"5-6","w7":"8-9"}, setup:"Soft knees.",
+        move:"Push the hips back, keep the bar close to your legs.",
+        key:"You should feel this in the hamstrings/glutes, not the low back.", note: {"w1":"Block 1 finish: 60 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there.","m2":"New block — aim to build from your strongest Weeks 1-4 top set."} },
+      { name: "Leg Press (Machine)", category: "Knee-Dominant · Secondary · Quads", equip: "machine", video: "https://www.youtube.com/shorts/5UkCEpw66yM", sets: {"base":"3","w6":"2"}, reps: "10-12", rest: "75s", rpe: {"base":"7","w3":"8-9","w6":"5-6"}, setup:"Feet mid-to-high on the platform.",
+        move:"Controlled range of motion — stop short of any knee pinch.",
+        key:"No need to chase full depth.", note: "This is the knee-friendly stand-in for heavy squatting. Adjust foot position and depth to whatever feels best for the knee that day." },
+      { name: "Standing Calf Raise (Machine)", category: "Plantarflexion · Accessory · Calves", equip: "machine", group: "C", video: "https://www.youtube.com/shorts/95itLfMBG40", sets: "3", reps: "12-15", rest: "0s (superset)", rpe: "7", move:"Full stretch at the bottom, pause and squeeze at the top.", note: "SUPERSET with Calf Raise to Med Ball Slam — go straight into it after your last rep, then rest 45s. This pair burns out the calves and adds core work." },
+      { name: "Calf Raise to Med Ball Slam", category: "Plantarflexion + Core · Superset · Calves/Core", equip: "db", group: "C", video: "https://www.youtube.com/shorts/_Jwcs8RydBQ", sets: "3", reps: "12-15", rest: "45s", rpe: "7", setup:"Hold a med ball overhead.",
+        move:"Rise all the way onto your toes, then slam the ball down hard in front of you as you lower your heels. Catch or pick it up and reset.",
+        key:"Stay tall and brace your core on every rep. Log the ball weight.", note: "SUPERSET with Standing Calf Raise — complete both back to back, then rest 45s." },
+      { name: "Pallof Press with Rotation (Cable)", category: "Anti-Rotation + Rotation · Core · Functional", equip: "cable", log: "unilateral", group: "A", video: "https://www.youtube.com/shorts/5aZ0IhJS8O8", sets: "3", reps: "10-12 / side · track L + R separately", rest: "0s (superset)", rpe: "—", setup:"Stand side-on to the cable, handle at your chest.",
+        move:"Press straight out, then rotate through your torso away from the cable and back to center, arms extended, under control.",
+        key:"Hips stay square and the cable never yanks you around. Builds the same rotational control you use on the golf course and the trail.", note: "SUPERSET with Standing Rotational Ball Slams — go straight into the slams after your last rep on each side, then rest." },
+      { name: "Standing Rotational Ball Slams", category: "Rotational Power · Core · Functional", equip: "db", log: "unilateral", group: "A", video: "https://www.youtube.com/shorts/1xTjb9kyJjI", sets: "3", reps: "10-12 / side · track L + R separately", rest: "45s", rpe: "7", setup:"Standing tall.",
+        move:"Rotate through the torso and drive the ball down and across.",
+        key:"Same explosive rotational pattern as your golf and tennis swing." },
     ],
   },
   day2: {
@@ -1606,15 +1708,25 @@ const SESSIONS = {
     warmup: "upper", cooldown: "upper", warmupTime: "8 min", cooldownTime: "6–7 min",
     progression: {"w1":"Establish your baseline loads this week — these numbers are what you'll beat starting Week 2.","w2":"Beat last week's loads where RPE allows.","w3":"Heaviest week of the mesocycle so far — push here.","w4":"Match or beat your Week 3 numbers. Same set structure, no reduction.","w5":"New mesocycle. Your baseline today should sit above Week 1 across the board.","w6":"Deload week — everything drops to roughly 60% load. This is recovery, not a step backward.","w7":"Peak week. Heaviest loads of the block. Leave nothing in reserve.","w8":"Final week — full sets, full loads. Compare Week 1 to today."},
     exercises: [
-      { name: "Barbell Bench Press", category: "Horizontal Push · Primary · Chest", primary: true, equip: "barbell", video: "https://www.youtube.com/shorts/hWbUlkb5Ms4", sets: {"base":"4","w6":"2"}, reps: "6-10", tempo: "2-1-1-0", rest: "90s", rpe: {"base":"7-8","w3":"8-9","w6":"5-6","w7":"8-9"}, cue: "Shoulder blades pinned back and down, feet planted, controlled bar path to the chest.", note: {"w1":"Block 1 finish: 60 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there.","m2":"New block — this is your new baseline to build from."} },
-      { name: "Chest-Supported Row (Machine)", category: "Horizontal Pull · Primary · Back", primary: true, equip: "machine", video: "https://www.youtube.com/shorts/da-_FadNfhc", sets: {"base":"3","w6":"2"}, reps: "8-12", rest: "75s", rpe: {"base":"7-8","w6":"5-6"}, cue: "Chest stays on the pad the whole set — pull with your back, not your arms.", note: {"w1":"Block 1 finish: 85 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there."} },
-      { name: "Chest Fly (Machine)", category: "Horizontal Push · Accessory · Chest", equip: "machine", sets: "3", reps: "10-12", tempo: "2-1-2-0", rest: "60s", rpe: "7", cue: "Set the seat so the handles sit at mid-chest. Soft elbows, bring the handles together in a wide arc and squeeze the chest, then control the stretch back — don't let the weight stack slam." },
-      { name: "Seated Shoulder Press (Machine)", category: "Vertical Push · Secondary · Shoulders", equip: "machine", video: "https://www.youtube.com/shorts/PM1hB_2xNBU", sets: "3", reps: "8-12", rest: "60s", rpe: "7", cue: "Press straight up without over-arching through the low back." },
-      { name: "Wide Grip Cable Row", category: "Horizontal Pull · Accessory · Upper Back/Rear Delts", equip: "cable", video: "https://www.youtube.com/watch?v=sjJ0z4R3w0M", sets: "3", reps: "12-15", rest: "45s", rpe: "6-7", cue: "Wide grip, elbows flared out to the sides. Pull the handle toward your upper chest and squeeze the upper back and rear delts. Stay tall, no leaning back, control the return." },
+      { name: "Barbell Bench Press", category: "Horizontal Push · Primary · Chest", primary: true, equip: "barbell", video: "https://www.youtube.com/shorts/hWbUlkb5Ms4", sets: {"base":"4","w6":"2"}, reps: "6-10", tempo: "2-1-1-0", rest: "90s", rpe: {"base":"7-8","w3":"8-9","w6":"5-6","w7":"8-9"}, setup:"Shoulder blades pinned back and down, feet planted.",
+        move:"Controlled bar path to the chest.", note: {"w1":"Block 1 finish: 60 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there.","m2":"New block — this is your new baseline to build from."} },
+      { name: "Chest-Supported Row (Machine)", category: "Horizontal Pull · Primary · Back", primary: true, equip: "machine", video: "https://www.youtube.com/shorts/da-_FadNfhc", sets: {"base":"3","w6":"2"}, reps: "8-12", rest: "75s", rpe: {"base":"7-8","w6":"5-6"}, setup:"Chest stays on the pad the whole set.",
+        move:"Pull with your back, not your arms.", note: {"w1":"Block 1 finish: 85 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there."} },
+      { name: "Chest Fly (Machine)", category: "Horizontal Push · Accessory · Chest", equip: "machine", sets: "3", reps: "10-12", tempo: "2-1-2-0", rest: "60s", rpe: "7", setup:"Set the seat so the handles sit at mid-chest. Soft elbows.",
+        move:"Bring the handles together in a wide arc and squeeze the chest, then control the stretch back.",
+        key:"Don't let the weight stack slam." },
+      { name: "Seated Shoulder Press (Machine)", category: "Vertical Push · Secondary · Shoulders", equip: "machine", video: "https://www.youtube.com/shorts/PM1hB_2xNBU", sets: "3", reps: "8-12", rest: "60s", rpe: "7", move:"Press straight up.",
+        key:"Without over-arching through the low back." },
+      { name: "Wide Grip Cable Row", category: "Horizontal Pull · Accessory · Upper Back/Rear Delts", equip: "cable", video: "https://www.youtube.com/watch?v=sjJ0z4R3w0M", sets: "3", reps: "12-15", rest: "45s", rpe: "6-7", setup:"Wide grip, elbows flared out to the sides. Stay tall, no leaning back.",
+        move:"Pull the handle toward your upper chest and squeeze the upper back and rear delts. Control the return." },
       { name: "Tricep Underhand Grip Extensions (Cable)", category: "Elbow Extension · Accessory · Triceps", equip: "cable", group: "B", video: "https://youtube.com/shorts/v1CJRUoI11I?feature=share", sets: "2", reps: "12-15", rest: "30s", rpe: "7", cue: "Triset with the curls and lateral raises — go straight into curls after this." },
-      { name: "Bicep Curl (Cable)", category: "Elbow Flexion · Accessory · Biceps", equip: "cable", group: "B", video: "https://youtube.com/shorts/aLx7RQDNKJY?feature=share", sets: "2", reps: "10-12", rest: "45s", rpe: "7", cue: "Triset — go straight into lateral raises after this. Control the lowering phase, no swinging." },
-      { name: "DB Lateral Raise", category: "Isolation Upper · Accessory · Side Delts", equip: "db", group: "B", sets: "2", reps: "12-15", rest: "60s", rpe: "7", cue: "Light dumbbells, slight bend in the elbows. Lead with the elbows and raise out to the sides to shoulder height, then lower slowly. Rest 60s after this, then start the next round." },
-      { name: "Optional Cardio — Incline Treadmill or Stairmaster", category: "Conditioning · Optional · Cardio", log: "cardio", sets: "1", reps: "15-20 min", rpe: "6-7", cue: "Only if time and energy allow after your lifts — pick whichever machine is open. Incline treadmill: 3-5% incline, brisk walking pace. Stairmaster: steady, sustainable pace, not a sprint.", note: "Fully optional — skip it on days you're short on time or feeling beat up from the lifting. This is a bonus, not a requirement." },
+      { name: "Bicep Curl (Cable)", category: "Elbow Flexion · Accessory · Biceps", equip: "cable", group: "B", video: "https://youtube.com/shorts/aLx7RQDNKJY?feature=share", sets: "2", reps: "10-12", rest: "45s", rpe: "7", move:"Control the lowering phase, no swinging.",
+        key:"Triset — go straight into lateral raises after this." },
+      { name: "DB Lateral Raise", category: "Isolation Upper · Accessory · Side Delts", equip: "db", group: "B", sets: "2", reps: "12-15", rest: "60s", rpe: "7", setup:"Light dumbbells, slight bend in the elbows.",
+        move:"Lead with the elbows and raise out to the sides to shoulder height, then lower slowly.",
+        key:"Rest 60s after this, then start the next round." },
+      { name: "Optional Cardio — Incline Treadmill or Stairmaster", category: "Conditioning · Optional · Cardio", log: "cardio", sets: "1", reps: "15-20 min", rpe: "6-7", setup:"Only if time and energy allow after your lifts — pick whichever machine is open.",
+        move:"Incline treadmill: 3-5% incline, brisk walking pace. Stairmaster: steady, sustainable pace, not a sprint.", note: "Fully optional — skip it on days you're short on time or feeling beat up from the lifting. This is a bonus, not a requirement." },
     ],
   },
   day3: {
@@ -1622,12 +1734,19 @@ const SESSIONS = {
     warmup: "lower", cooldown: "lower", warmupTime: "8 min", cooldownTime: "6–7 min",
     progression: {"w1":"Establish your baseline loads this week — these numbers are what you'll beat starting Week 2.","w2":"Beat last week's loads where RPE allows.","w3":"Heaviest week of the mesocycle so far — push here.","w4":"Match or beat your Week 3 numbers. Same set structure, no reduction.","w5":"New mesocycle. Your baseline today should sit above Week 1 across the board.","w6":"Deload week — everything drops to roughly 60% load. This is recovery, not a step backward.","w7":"Peak week. Heaviest loads of the block. Leave nothing in reserve.","w8":"Final week — full sets, full loads. Compare Week 1 to today."},
     exercises: [
-      { name: "Trap Bar Deadlift", category: "Hip Hinge · Primary · Full Body", primary: true, equip: "barbell", video: "https://www.youtube.com/shorts/v-SrIcAp3vM", sets: {"base":"4","w6":"2"}, reps: "5-8", tempo: "2-1-1-0", rest: "2 min", rpe: {"base":"7-8","w3":"8-9","w6":"5-6","w7":"8-9"}, cue: "The trap bar keeps you more upright than a straight bar — more knee-friendly. Push the floor away, chest tall.", note: {"w1":"Block 1 finish: 60 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there.","base":"No trap bar available? A standard barbell deadlift works — just prioritize hinging at the hips over bending the knees.","m2":"New block — build from your strongest Weeks 1-4 top set."} },
-      { name: "Incline DB Press", category: "Incline Push · Primary · Upper Chest/Shoulders", primary: true, equip: "db", sets: "3", reps: "8-10", tempo: "2-1-1-0", rest: "75s", rpe: "7-8", cue: "Bench at a moderate incline (30–45°). Dumbbells at upper-chest level, elbows about 45° from your body, press up and slightly together. Control the way down for a full stretch.", note: "Log the weight of ONE dumbbell (per hand)." },
-      { name: "Barbell Bent-Over Row", category: "Horizontal Pull · Primary · Back", primary: true, equip: "barbell", video: "https://youtube.com/shorts/FyoAEZTtKUk?feature=share", sets: "3", reps: "8-10", rest: "75s", rpe: "7-8", cue: "Flat back, hinge at the hips, pull to your lower ribs.", note: {"w1":"Block 1 finish: 70 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there."} },
-      { name: "Lat Pulldown (Machine)", category: "Vertical Pull · Secondary · Back", equip: "machine", video: "https://youtube.com/shorts/mn_XCP_Lajo?feature=share", sets: "3", reps: "10-12", rest: "60s", rpe: "7", cue: "Pull to your upper chest, lead with the elbows, avoid leaning back excessively." },
-      { name: "Single-Leg Romanian Deadlift (Barbell or Dumbbell)", category: "Hip Hinge · Unilateral · Balance/Hamstrings", equip: "db", log: "unilateral", video: "https://www.youtube.com/shorts/R_fJ6H3FlVw", sets: "3", reps: "8-10 / side · track L + R separately", rest: "60s", rpe: "7", cue: "Slow and controlled — builds the single-leg stability you need hiking on uneven ground. Very light on the knee since it barely bends." },
-      { name: "Farmer's Carry", category: "Loaded Carry · Functional · Grip/Core", equip: "db", video: "https://www.youtube.com/shorts/WMJA1gcwygk", sets: "3", reps: "40 yd (or 30-40 sec)", rest: "60s", rpe: "—", cue: "Walk tall, brace the core, grip hard. Builds the real-world strength and grip endurance you actually use hiking and hauling gear." },
+      { name: "Trap Bar Deadlift", category: "Hip Hinge · Primary · Full Body", primary: true, equip: "barbell", video: "https://www.youtube.com/shorts/v-SrIcAp3vM", sets: {"base":"4","w6":"2"}, reps: "5-8", tempo: "2-1-1-0", rest: "2 min", rpe: {"base":"7-8","w3":"8-9","w6":"5-6","w7":"8-9"}, setup:"The trap bar keeps you more upright than a straight bar — more knee-friendly.",
+        move:"Push the floor away.",
+        key:"Chest tall.", note: {"w1":"Block 1 finish: 60 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there.","base":"No trap bar available? A standard barbell deadlift works — just prioritize hinging at the hips over bending the knees.","m2":"New block — build from your strongest Weeks 1-4 top set."} },
+      { name: "Incline DB Press", category: "Incline Push · Primary · Upper Chest/Shoulders", primary: true, equip: "db", sets: "3", reps: "8-10", tempo: "2-1-1-0", rest: "75s", rpe: "7-8", setup:"Bench at a moderate incline (30–45°). Dumbbells at upper-chest level, elbows about 45° from your body.",
+        move:"Press up and slightly together. Control the way down for a full stretch.", note: "Log the weight of ONE dumbbell (per hand)." },
+      { name: "Barbell Bent-Over Row", category: "Horizontal Pull · Primary · Back", primary: true, equip: "barbell", video: "https://youtube.com/shorts/FyoAEZTtKUk?feature=share", sets: "3", reps: "8-10", rest: "75s", rpe: "7-8", setup:"Flat back, hinge at the hips.",
+        move:"Pull to your lower ribs.", note: {"w1":"Block 1 finish: 70 lbs. Use that as your Week 1 starting target, log your real numbers, and beat it from there."} },
+      { name: "Lat Pulldown (Machine)", category: "Vertical Pull · Secondary · Back", equip: "machine", video: "https://youtube.com/shorts/mn_XCP_Lajo?feature=share", sets: "3", reps: "10-12", rest: "60s", rpe: "7", move:"Pull to your upper chest, lead with the elbows.",
+        key:"Avoid leaning back excessively." },
+      { name: "Single-Leg Romanian Deadlift (Barbell or Dumbbell)", category: "Hip Hinge · Unilateral · Balance/Hamstrings", equip: "db", log: "unilateral", video: "https://www.youtube.com/shorts/R_fJ6H3FlVw", sets: "3", reps: "8-10 / side · track L + R separately", rest: "60s", rpe: "7", move:"Slow and controlled.",
+        key:"Builds the single-leg stability you need hiking on uneven ground. Very light on the knee since it barely bends." },
+      { name: "Farmer's Carry", category: "Loaded Carry · Functional · Grip/Core", equip: "db", video: "https://www.youtube.com/shorts/WMJA1gcwygk", sets: "3", reps: "40 yd (or 30-40 sec)", rest: "60s", rpe: "—", move:"Walk tall, brace the core, grip hard.",
+        key:"Builds the real-world strength and grip endurance you actually use hiking and hauling gear." },
     ],
   },
   day4: {
@@ -1944,7 +2063,7 @@ function openVideo(sessionId, idx) {
   const e = resolveExercise(SESSIONS[m[2]].exercises[idx], +m[1]);
   const url = videoFor(e), yt = parseYouTube(url);
   document.getElementById('video-title').textContent = e.name;
-  document.getElementById('video-cue').textContent = e.cue || '';
+  document.getElementById('video-cue').textContent = cueText(e);
   const link = document.getElementById('video-link'); link.href = url;
   document.getElementById('video-box').classList.toggle('vertical', !!(yt && yt.vertical));
   document.getElementById('video-frame').innerHTML = yt
@@ -2014,7 +2133,8 @@ function buildSession(w, sessionKey, dayName) {
     const rowId = `ex-row-${sessionId}-${idx}`;
     return `${e.section ? `<tr class="section-row" data-ex="${idx}"><td colspan="2"><div class="ex-section">${esc(e.section)}</div></td></tr>` : ''}<tr class="ex-row" id="${rowId}" data-ex="${idx}"><td>${tag}
         <span class="ex-name"><span class="ex-num">${numLabels[pos]}.</span> ${esc(e.name)}</span>
-        <div class="ex-actions">${videoButton(e, sessionId, idx)}${(Array.isArray(e.links) ? e.links : []).map(([l, u]) => `<a class="more-link" href="${esc(u)}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><span class="yt"></span>${esc(l)} ↗</a>`).join('')}${e.log !== 'none' ? `<button type="button" class="hist-btn" onclick="event.stopPropagation();openProgress(${JSON.stringify(e.name).replace(/"/g, '&quot;')})">📈 History</button>` : ''}</div>
+        <div class="ex-actions">${videoButton(e, sessionId, idx)}${(Array.isArray(e.links) ? e.links : []).map(([l, u]) => `<a class="more-link" href="${esc(u)}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><span class="yt"></span>${esc(l)} ↗</a>`).join('')}<span class="ex-tools">${e.log !== 'none' ? `<button type="button" class="hist-btn" onclick="event.stopPropagation();openProgress(${JSON.stringify(e.name).replace(/"/g, '&quot;')})">📈 History</button>` : ''}${PN.on ? `<button type="button" class="pain-btn" onclick="event.stopPropagation();openPain('${sessionId}',${idx})">⚠ Pain felt</button>` : ''}</span></div>
+        <div class="pain-log" data-pain-key="${sessionId}_ex${idx}"></div>${prevSessionId && PN.on ? `<div class="pain-prev" data-pain-prev="${prevSessionId}_ex${idx}"></div>` : ''}
         ${e.category ? `<span class="ex-cat">${esc(String(e.category).split(' · ')[0])}</span>` : ''}
         <span class="ex-detail">${rxText(e)}${tempo}${e.rest ? (restSeconds(e.rest) ? ` · <span class="rest-tag" title="Start rest timer" onclick="event.stopPropagation();startRestFromTag('${sessionId}',${idx})">rest ${esc(e.rest)} ⏱</span>` : ' · rest ' + esc(e.rest)) : ''}${e.rpe ? ` · <button type="button" class="guide-link" onclick="event.stopPropagation();openGuide('rpe')">${/RIR/i.test(e.rpe) ? esc(e.rpe) : 'RPE ' + esc(e.rpe)}</button>` : ''}</span>
         ${cueHtml(e)}
@@ -2244,6 +2364,7 @@ function groupDataByBase(data) {
   const g = {};
   Object.keys(data).forEach(k => {
     if (k[0] === '_' || k.endsWith('_total_volume') || /_(pre|post)_[A-Za-z]+$/.test(k)) return; // check-ins are exported separately
+    if (k.endsWith('_pain')) return;
     if (k.endsWith('_note')) { const b = k.slice(0, -5); (g[b] = g[b] || { fields:{} }).note = data[k]; return; }
     if (k.endsWith('_done')) { const b = k.slice(0, -5); (g[b] = g[b] || { fields:{} }).done = true; return; }
     for (const [s, l] of SUFFIX_LABELS) if (k.endsWith(s)) { const b = k.slice(0, -s.length); (g[b] = g[b] || { fields:{} }).fields[l] = data[k]; return; }
@@ -2680,9 +2801,11 @@ function sessionCardHtml(w, key, dayName, opts) {
   const btnText = opts.preview ? (opts.previewText || 'Preview workout →')
     : state === 'done' ? 'Review workout ✓' : state === 'partial' ? `Continue workout · ${p.done} of ${p.total} done →` : (opts.label || "Start today's workout →");
   const vol = data[`w${w}_${key}_total_volume`];
-  const list = exs.map(({ e, idx }) => {
+  const tNums = []; { let n = 0; exs.forEach(({ e }, pos) => { const prev = pos > 0 && e.group && exs[pos - 1].e.group === e.group; const gs = e.group ? exs.filter(x => x.e.group === e.group).length : 0;
+    if (gs >= 2) { if (!prev) n++; tNums[pos] = n + String.fromCharCode(65 + exs.slice(0, pos).filter(x => x.e.group === e.group).length); } else { n++; tNums[pos] = String(n); } }); }
+  const list = exs.map(({ e, idx }, pos) => {
     const isDone = !!data[`w${w}_${key}_ex${idx}_done`];
-    return `<li class="${isDone ? 'done-ex' : ''}"><span>${e.group ? `<span class="grp">${esc(e.group)}</span>` : ''}${esc(e.name)}${videoFor(e) ? '<span class="vid" title="Has a demo video"></span>' : ''}</span><span class="rx">${rxText(e).replace(/(\d)\s*([–-])\s*(\d)/g, "$1\u2060$2\u2060$3").replace(/ × /g, "\u00a0×\u00a0")}</span></li>`;
+    return `<li class="${isDone ? 'done-ex' : ''}"><span><span class="ex-num-sm">${tNums[pos]}.</span>${esc(e.name)}${videoFor(e) ? '<span class="vid" title="Has a demo video"></span>' : ''}</span><span class="rx">${rxText(e).replace(/(\d)\s*([–-])\s*(\d)/g, "$1\u2060$2\u2060$3").replace(/ × /g, "\u00a0×\u00a0")}</span></li>`;
   }).join('');
   return `<div class="today-card${state === 'done' ? ' done' : ''}">
     <div class="today-progress"><div style="width:${pct}%"></div></div>
@@ -2733,6 +2856,7 @@ function renderFlexToday(w, today, ctaBtns, name) {
   if (next) {
     const p = prog(next.s.session);
     html += sessionCardHtml(w, next.s.session, next.s.day, { label: 'Start this workout →' });
+    html += altPickHtml(w, next.i, true, (today.getDay() + 6) % 7);
     todayAction = () => startSession(w, next.s.session);
     ctaBtns.forEach(b => b.textContent = p.done ? 'Continue your workout →' : 'Start your next workout →');
   } else if (w < TOTAL_WEEKS) {
@@ -2921,7 +3045,7 @@ document.addEventListener('change', ev => {
 function sessionLogged(data, w, key) {
   if (data['_completed_' + `w${w}_${key}`]) return true;
   const pre = `w${w}_${key}_ex`;
-  return Object.keys(data).some(k => k.startsWith(pre) && data[k] !== '' && !k.endsWith('_note'));
+  return Object.keys(data).some(k => k.startsWith(pre) && data[k] !== '' && !k.endsWith('_note') && !k.endsWith('_pain'));
 }
 function loggedCount(data) {
   let req = 0, opt = 0;
@@ -3242,6 +3366,7 @@ function renderReport() {
   const prs = countPRsIn(data);
   let best = 0, run = 0; for (let w = 1; w <= TOTAL_WEEKS; w++) { if (weekLogged(data, w)) { run++; best = Math.max(best, run); } else run = 0; }
   const lifts = liftChanges(data);
+  const RPA = rpAnalyze(data);
   const star = lifts.filter(l => !l.lower && l.pct > 0).sort((a, b) => b.pct - a.pct)[0];
   const firstVolW = vols.findIndex(v => v > 0), lastVolW = (() => { for (let i = vols.length - 1; i >= 0; i--) if (vols[i] > 0 && WEEKS[i].phase !== 'deload') return i; return -1; })();
   const volChange = firstVolW >= 0 && lastVolW > firstVolW && vols[firstVolW] ? Math.round((vols[lastVolW] - vols[firstVolW]) / vols[firstVolW] * 100) : null;
@@ -3265,15 +3390,17 @@ function renderReport() {
     ${star ? `<div class="rc-star"><div class="k">🏆 Most improved</div><div class="t">${esc(star.name)} <span>+${Math.round(star.pct)}%</span></div><div class="rc-sub" style="margin-top:4px;">${r1(star.from)} → ${r1(star.to)} lbs, Week ${WN(star.fromW)} to Week ${WN(star.toW)}</div></div>` : ''}
     ${lifts.length ? `<div><div class="rc-label">Where you started → where you finished</div><div class="rc-lifts">${lifts.slice(0, 7).map(l => `<div class="rc-lift"><span class="n">${esc(l.name.replace(/ — .*/, ''))}</span><span class="ft">${r1(l.from)} → <b>${r1(l.to)}</b>${l.lower ? ' assist' : ''}</span><span class="d">${l.gain > 0 ? (l.lower ? '−' + r1(l.gain) : '+' + r1(l.gain)) + ' lbs' : '—'}</span></div>`).join('')}</div></div>` : `<div class="rc-sub">Your lifts show up here once you've logged at least two weeks.</div>`}
     ${volChange !== null ? `<div class="rc-sub" style="color:var(--text2);">Weekly training volume <b style="color:var(--cobalt-text)">${volChange >= 0 ? '+' : ''}${volChange}%</b> from Week ${WN(firstVolW + 1)} to Week ${WN(lastVolW + 1)}</div>` : ''}
+    ${RPA.power.filter(p => p.unit !== 'reps' && p.first !== null && p.best > p.first).length ? `<div><div class="rc-label">Power &amp; conditioning</div><div class="rc-lifts">${RPA.power.filter(p => p.unit !== 'reps' && p.first !== null && p.best > p.first).slice(0, 4).map(p => `<div class="rc-lift"><span class="n">${esc(p.name)}</span><span class="ft">${r1(p.first)} → <b>${r1(p.best)}</b> ${p.unit}</span><span class="d">+${r1(p.best - p.first)}</span></div>`).join('')}</div></div>` : ''}
     ${notesW1.length || latestWin ? `<div><div class="rc-label">Then and now</div><div class="rc-quotes">${notesW1.length ? `<div class="rc-quote"><b>Week 1, you wrote</b>“${esc(notesW1[0])}”</div>` : ''}${latestWin ? `<div class="rc-quote"><b>Week ${WN(latestWin.w)}, your win</b>“${esc(latestWin.t)}”</div>` : ''}</div></div>` : ''}
     <div class="rc-foot"><span>${esc(COACH.brand)}</span><span>${esc(COACH.handle || '')}</span></div>
   </div></div>`;
 
+  document.getElementById('report-details').innerHTML = rpDetailsHtml(RPA);
   const rk = i => '_reflect_' + i;
   document.getElementById('report-reflect').innerHTML = `<div><h2>Look back before you move on</h2><p class="rf-sub" style="margin-top:6px;">Take five minutes with these. There are no wrong answers. Your coach reads them before your next block is built.</p></div>
     ${REFLECTION_PROMPTS.map((q, i) => `<div class="rf-q"><label for="rf-${i}">${i + 1}. ${esc(q)}</label><textarea id="rf-${i}" data-rf="${i}" ${reportSample ? 'disabled placeholder="Your answer would go here."' : 'placeholder="Write as much or as little as you like…"'}>${reportSample ? '' : esc(getStoredData()[rk(i)] || '')}</textarea></div>`).join('')}
     <div class="rf-q"><label>How confident do you feel training on your own now?</label><div class="ci-scale">${['Not yet','A little','Somewhat','Confident','Very'].map((l, i) => `<button type="button" class="ci-opt${!reportSample && getStoredData()._reflect_conf === String(i + 1) ? ' on' : ''}" ${reportSample ? 'disabled' : ''} onclick="setReflectConf(${i + 1})"><b>${i + 1}</b><span>${l}</span></button>`).join('')}</div></div>
-    <div class="rf-actions"><button type="button" class="start-btn secondary" style="width:auto;padding:12px 18px;font-size:14px;" onclick="copyReport()" id="copy-report-btn">Copy my report + answers</button></div>
+    <div class="rf-actions"><button type="button" class="start-btn secondary" style="width:auto;padding:12px 18px;font-size:14px;" onclick="copyReport()" id="copy-report-btn">Copy my report + answers</button><button type="button" class="start-btn secondary" style="width:auto;padding:12px 18px;font-size:14px;" onclick="rpPrint()">Save as PDF / share</button></div>
     <textarea id="report-copy-fallback" hidden readonly style="width:100%;min-height:200px;background:var(--surface);color:var(--text);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:10px;font-family:var(--font-mono);font-size:12px;"></textarea>
     <span class="rf-saved" id="rf-saved">${reportSample ? 'Sample mode — answers are disabled.' : 'Answers save automatically and sync with your diary.'}</span>`;
   window._reportText = () => {
@@ -3283,6 +3410,7 @@ function renderReport() {
     const d = getStoredData();
     lines.push('', 'Reflections:'); REFLECTION_PROMPTS.forEach((q, i) => lines.push(`${i + 1}. ${q}`, `   ${d[rk(i)] || '—'}`));
     if (d._reflect_conf) lines.push(`Confidence training alone: ${d._reflect_conf}/5`);
+    lines.push(rpBlueprintText(RPA));
     return lines.join('\n');
   };
 }
@@ -3592,13 +3720,15 @@ function migrateLegacyKeys() {
   if (changed) { putStoredData(d); queueSync(); }
 }
 
-/* ── Form cues: first sentence shows, the rest tucks behind a toggle ── */
+/* ── Form cues: Setup · Move · Key point (older single-line cues: first sentence shows, the rest tucks behind a toggle) ── */
+function cueSteps(e) { return [['Setup', e.setup], ['Move', e.move], ['Key point', e.key]].filter(([, t]) => t && String(t).trim()); }
+function cueText(e) { const st = cueSteps(e); return st.length ? st.map(([l, t]) => l + ': ' + t).join('  ') : String(e.cue || ''); }
 function cueHtml(e) {
-  const cue = String(e.cue || '').trim(), note = String(e.note || '').trim();
-  const m = cue.match(/^(.+?[.!?])(\s+|$)/);
-  const first = m ? m[1] : cue, rest = m ? cue.slice(m[0].length).trim() : '';
+  const steps = cueSteps(e), cue = String(e.cue || '').trim(), note = String(e.note || '').trim();
   const longNote = note.length > 160 && !e.noteHighlight;
-  let html = first ? `<span class="ex-cue">${esc(first)}</span>` : '';
+  let html = '', rest = '';
+  if (steps.length) html = `<ul class="cue-steps">${steps.map(([l, t]) => `<li><b>${l}</b><span>${esc(t)}</span></li>`).join('')}</ul>`;
+  else { const m = cue.match(/^(.+?[.!?])(\s+|$)/); const first = m ? m[1] : cue; rest = m ? cue.slice(m[0].length).trim() : ''; html = first ? `<span class="ex-cue">${esc(first)}</span>` : ''; }
   if (note && e.noteHighlight) html += `<span class="ex-callout"><b>Coach note</b>${esc(note)}</span>`;
   else if (note && !longNote) html += `<span class="ex-cue ex-note">${esc(note)}</span>`;
   const more = [rest, longNote ? note : ''].filter(Boolean);
@@ -3798,13 +3928,13 @@ document.addEventListener('change', e => {
 });
 
 // "Doing something different today?" — any workout this week, or log a class instead.
-function altPickHtml(w, dayIdx, trainingDay) {
+function altPickHtml(w, dayIdx, trainingDay, actIdx) {
   const rows = SCHEDULE.map((s, i) => ({ s, i })).filter(x => x.s.session && x.i !== dayIdx).map(({ s }) => {
     const p = sessionProgress(w, s.session), done = p.total && p.done === p.total;
     const st = done ? 'Done ✓' : p.done ? `${p.done} of ${p.total} logged` : 'Not started';
     return `<div class="alt-row${done ? ' done' : ''}"><div><div class="alt-name">${esc(SESSIONS[s.session].title)}</div><span class="alt-meta">${esc(s.day)} · ${st}${SESSIONS[s.session].optional ? ' · optional' : ''}</span></div><button type="button" onclick="startSession(${w},'${s.session}')">${done ? 'Review' : p.done ? 'Continue' : 'Do this today'}</button></div>`;
   }).join('');
-  const dd = actDay(WEEKDAY_NAMES[dayIdx]), logged = actEntries(w, dd).length > 0;
+  const dd = actDay(WEEKDAY_NAMES[actIdx === undefined ? dayIdx : actIdx]), logged = actEntries(w, dd).length > 0;
   const act = trainingDay ? `<div class="alt-row"><div><div class="alt-name">Took a class or did something else?</div><span class="alt-meta">Boxing, reformer, a ride… · ${logged ? 'logged ✓' : 'log it for today'}</span></div><button type="button" onclick="this.closest('.alt-list').querySelector('.alt-act').classList.toggle('show')">${logged ? 'Edit' : 'Log it'}</button></div>
     <div class="alt-act${logged ? ' show' : ''}"><div class="act-box" data-act-box="${w}|${dd}">${actInnerHtml(w, dd)}</div></div>` : '';
   return `<details class="alt-pick"${logged && trainingDay ? ' open' : ''}><summary><span>${trainingDay ? 'Doing something different today?' : 'Feel like training today instead?'}<span class="alt-sub">${trainingDay ? 'Swap in any workout from this week, or log a class' : 'Pick any workout from this week'}</span></span></summary><div class="alt-list">${rows}${act}</div></details>`;
@@ -3886,7 +4016,7 @@ function finishWorkout(sid) {
 
 /* ── Weekly note from the coach on Today ── */
 function coachWeekHtml(w) {
-  const t = (typeof COACH_WEEKLY_NOTES !== 'undefined' && COACH_WEEKLY_NOTES[w]) || '';
+  const t = '';   // weekly note card on Today is turned off — notes from Kim live on the Program tab
   if (!t) return '';
   return `<div class="coach-week"><div class="cw-from"><span class="cw-dot"></span>${esc(CLIENT.coachNoteFrom || 'Your coach')} · Week ${WN(w)}</div><div class="cw-text">${esc(t)}</div></div>`;
 }
@@ -3947,6 +4077,319 @@ function a2hsHtml() {
   return `<div class="a2hs"><img class="a2hs-icon" src="${APP_ICON}" alt=""><div class="a2hs-txt"><b>Put ${esc(COACH.product)} on your home screen</b><span>${how} It opens full screen like an app, and your logs sync over on their own.</span></div><button type="button" onclick="setPref('a2hsDone',true);renderToday()">Got it</button></div>`;
 }
 
+/* ── PAIN FELT ── */
+const PN = Object.assign({ on: true, areas: ['Knee','Hip','Low back','Upper back','Shoulder','Elbow','Wrist','Neck','Ankle / foot','Other'] }, typeof PAIN === 'object' ? PAIN : {});
+const PAIN_KINDS = [['sharp','Sharp / stabbing'],['pinch','Pinching'],['ache','Dull ache'],['tight','Tight / strained']];
+const painDraft = {};
+function painGet(key, data) { try { return JSON.parse((data || getStoredData())[key + '_pain'] || 'null'); } catch (e) { return null; } }
+function painLevel(p) { return !p ? '' : (+p.level >= 7 || p.kind === 'sharp') ? 'stop' : +p.level >= 4 ? 'modify' : 'monitor'; }
+function painExercise(sid, idx) { const m = sid.match(/^w(\d+)_(.+)$/); return resolveExercise(SESSIONS[m[2]].exercises[idx], +m[1]); }
+function painAdvice(p, e) {
+  const lvl = painLevel(p), swap = e && e.swap ? (typeof e.swap === 'object' ? e.swap.name : e.swap) : '';
+  const coach = PN.coachSupport ? 'Your coach has been notified and will check in.' : 'If it doesn’t ease within 48 hours, or it keeps coming back, check with a doctor or physical therapist.';
+  if (lvl === 'stop') return { lvl, title: 'Stop this exercise for today', text: `Don’t push through ${p.kind === 'sharp' ? 'sharp' : 'strong'} pain. Skip the rest of this exercise${swap ? ` — or try <b>${esc(swap)}</b>, only if it’s completely pain-free` : ''}. ${coach}` };
+  if (lvl === 'modify') return { lvl, title: 'Change it, then carry on carefully', text: `Drop the weight by about a third, shorten the range to where it’s pain-free, and slow the tempo down.${swap ? ` Still there? Switch to <b>${esc(swap)}</b>.` : ''} If it gets worse, stop. ${coach}` };
+  return { lvl, title: 'Keep going, gently', text: 'Lighter weight and a pain-free range for the rest of this exercise. Logged — you’ll get a reminder next week. Mention it in your after-workout check-in if it sticks around.' };
+}
+function openPain(sid, idx) {
+  if (document.getElementById('detail-' + sid).classList.contains('locked')) return;
+  const key = `${sid}_ex${idx}`; painDraft[key] = Object.assign({ area: '', level: '', kind: '' }, painGet(key) || {});
+  renderPain(sid, idx); document.getElementById('info-modal-overlay').classList.add('open');
+}
+function renderPain(sid, idx) {
+  const key = `${sid}_ex${idx}`, d = painDraft[key], e = painExercise(sid, idx);
+  const chip = (f, v, l) => `<button type="button" class="ci-chip${String(d[f]) === String(v) ? ' on' : ''}" onclick="painPick('${sid}',${idx},'${f}','${v}')">${esc(l)}</button>`;
+  document.getElementById('info-modal-title').textContent = 'Pain felt — ' + e.name;
+  document.getElementById('info-modal-body').innerHTML = `<div class="pain-form">
+    <div class="ci-label">Where?</div><div class="ci-chips">${PN.areas.map(a => chip('area', a, a)).join('')}</div>
+    <div class="ci-label">How bad? <small>1 = barely there · 10 = worst</small></div><div class="ci-scale ten">${Array.from({ length: 10 }, (_, i) => `<button type="button" class="ci-opt${String(d.level) === String(i + 1) ? ' on' : ''}" onclick="painPick('${sid}',${idx},'level',${i + 1})"><b>${i + 1}</b></button>`).join('')}</div>
+    <div class="ci-label">What does it feel like?</div><div class="ci-chips">${PAIN_KINDS.map(([v, l]) => chip('kind', v, l)).join('')}</div>
+    ${d.area && d.level && d.kind ? (() => { const a = painAdvice(d, e); return `<div class="pain-advice ${a.lvl}"><div class="rd-title">${a.title}</div><div class="rd-text">${a.text}</div></div>`; })() : ''}
+    <div class="pain-actions"><button type="button" class="start-btn" ${d.area && d.level && d.kind ? '' : 'disabled'} onclick="savePain('${sid}',${idx})">Log it</button>${painGet(key) ? `<button type="button" class="text-link" onclick="clearPain('${sid}',${idx})">Remove this report</button>` : ''}</div>
+    <p class="pain-note">This is general guidance, not a diagnosis.</p></div>`;
+}
+function painPick(sid, idx, f, v) { painDraft[`${sid}_ex${idx}`][f] = v; renderPain(sid, idx); }
+function painSummaryText(sid) {
+  const m = sid.match(/^w(\d+)_(.+)$/), out = [];
+  SESSIONS[m[2]].exercises.forEach((_, i) => { const p = painGet(`${sid}_ex${i}`); if (p) out.push(`${p.area} ${p.level}/10 on ${painExercise(sid, i).name}`); });
+  return out.join('; ');
+}
+function savePain(sid, idx) {
+  const key = `${sid}_ex${idx}`, d = Object.assign({}, painDraft[key], { t: new Date().toISOString() });
+  setStoredValue(key + '_pain', JSON.stringify(d));
+  ciSet(sid, 'post', 'pain', 'yes'); ciSet(sid, 'post', 'painWhere', painSummaryText(sid));
+  queueSync(); closeInfoModal(); refreshPainNotes(); renderCheckin(sid, 'post');
+}
+function clearPain(sid, idx) {
+  const dd = getStoredData(); delete dd[`${sid}_ex${idx}_pain`]; putStoredData(dd);
+  const left = painSummaryText(sid); ciSet(sid, 'post', 'painWhere', left); if (!left) ciSet(sid, 'post', 'pain', '');
+  queueSync(); closeInfoModal(); refreshPainNotes(); renderCheckin(sid, 'post');
+}
+function refreshPainNotes() {
+  const data = getStoredData();
+  document.querySelectorAll('[data-pain-key]').forEach(el => {
+    const p = painGet(el.dataset.painKey, data), [sid, ex] = el.dataset.painKey.split(/_ex(?=\d+$)/);
+    el.innerHTML = p ? `<button type="button" class="pain-chip ${painLevel(p)}" onclick="event.stopPropagation();openPain('${sid}',${ex})">⚠ Pain logged: ${esc(p.area)} ${esc(p.level)}/10 · ${esc((PAIN_KINDS.find(k => k[0] === p.kind) || ['', ''])[1].toLowerCase())}</button>` : '';
+  });
+  document.querySelectorAll('[data-pain-prev]').forEach(el => {
+    const p = painGet(el.dataset.painPrev, data);
+    el.innerHTML = p ? `<div class="pain-prev-box">Last week you felt <b>${esc(p.area.toLowerCase())} pain (${esc(p.level)}/10)</b> here. Start lighter than last week and stop if it comes back${painLevel(p) === 'stop' ? ' — or use the swap your coach set' : ''}.</div>` : '';
+  });
+}
+
+/* ── REPORT CARD PLUS: block analytics + Next Block Blueprint ────────────────
+   Everything here is computed from what the client already logs: sets, check-ins, pain reports,
+   weekly measurements, exercise changes and an early deload. Nothing new to fill in. */
+const RP_EPLEY = (w, r) => (w > 0 && r > 0 && r <= 15) ? w * (1 + r / 30) : null;
+const rpRound = (v, equip) => { const step = equip === 'barbell' || equip === 'machine' ? 5 : 2.5; return Math.round(v / step) * step; };
+const rpAvg = a => { const v = a.filter(x => x !== null && !isNaN(x)); return v.length ? v.reduce((s, x) => s + x, 0) / v.length : null; };
+const rpNum = v => { const n = parseFloat(v); return isNaN(n) ? null : n; };
+const rpIsDeload = w => (WEEKS[w - 1] || {}).phase === 'deload';
+function rpReadiness(sleep, energy, stress, sore) {
+  if (sleep === null && energy === null) return '';
+  if ((sleep !== null && sleep < 4) || (energy === 1 && sleep !== null && sleep < 6)) return 'red';
+  if ((sleep !== null && sleep < 6) || (energy !== null && energy <= 2) || stress === 5 || sore === 5) return 'yellow';
+  return 'green';
+}
+// One entry per exercise slot (session + position), with the name in use each week (exercise changes included).
+function rpSlots() {
+  const out = [];
+  SESSION_KEYS.forEach(key => SESSIONS[key].exercises.forEach((ex, idx) => {
+    const e1 = resolveExercise(ex, 1);
+    if (e1.log === 'none') return;
+    out.push({ key, idx, ex, primary: !!ex.primary, equip: e1.equip || '', baseName: exNameOf(key, idx) });
+  }));
+  return out;
+}
+function rpSlotWeek(slot, w, data) {
+  const e = typeof exAt === 'function' ? exAt(slot.key, slot.idx, w) : resolveExercise(slot.ex, w);
+  if (e.include === false) return null;
+  const log = e.log || 'weight_reps', sid = `w${w}_${slot.key}`, g = s => data[`${sid}_ex${slot.idx}_${s}`];
+  const r = { w, name: e.name, log, e1: null, top: null, reps: 0, any: false, power: null };
+  const n = parseInt(e.sets) || 1;
+  for (let i = 0; i < Math.max(n, 12); i++) {
+    const p = `set${i}`;
+    if (log === 'weight_reps' || log === 'plus_reps') {
+      const wt = rpNum(g(p + '_w')), rp = rpNum(g(p + '_r'));
+      if (wt !== null || rp !== null) r.any = true;
+      if (wt) { r.top = Math.max(r.top || 0, wt); const x = RP_EPLEY(wt, rp); if (x) r.e1 = Math.max(r.e1 || 0, x); }
+      if (rp) r.reps += rp;
+    } else if (log === 'unilateral') {
+      ['l', 'r'].forEach(s => { const wt = rpNum(g(p + '_' + s + 'w')), rp = rpNum(g(p + '_' + s + 'r')); if (wt !== null || rp !== null) r.any = true; if (wt) { r.top = Math.max(r.top || 0, wt); const x = RP_EPLEY(wt, rp); if (x) r.e1 = Math.max(r.e1 || 0, x); } if (rp) r.reps += rp; });
+    } else if (log === 'weight') {
+      const wt = rpNum(g(p + '_w')); if (wt !== null) { r.any = true; r.top = Math.max(r.top || 0, wt); }
+    } else if (log === 'reps' || log === 'reps_lr') {
+      const a = log === 'reps' ? [rpNum(g(p + '_r'))] : [rpNum(g(p + '_lr')), rpNum(g(p + '_rr'))];
+      a.forEach(x => { if (x !== null) { r.any = true; r.reps += x; } });
+    } else if (log === 'timed_lr') {
+      [rpNum(g(p + '_lsec')), rpNum(g(p + '_rsec'))].forEach(x => { if (x !== null) { r.any = true; r.top = Math.max(r.top || 0, x); } });
+    } else if (log === 'drop2') {
+      const wt = rpNum(g(p + '_w1')), rp = rpNum(g(p + '_r1')); if (wt !== null || rp !== null) r.any = true; if (wt) { r.top = Math.max(r.top || 0, wt); }
+    } else if (log === 'drop3') {
+      const wt = rpNum(g(p + '_d1w')); if (wt !== null) { r.any = true; r.top = Math.max(r.top || 0, wt); }
+    }
+  }
+  if (log === 'cardio') { const mi = rpNum(g('stair_min')); if (mi !== null) { r.any = true; r.top = mi; r.cardio = true; } }
+  if (data[`${sid}_ex${slot.idx}_done`]) r.any = true;
+  return r;
+}
+function rpAnalyze(data) {
+  const A = { lifts: [], power: [], recovery: null, pain: null, body: null, days: [], swaps: [], earlyDeload: null, blueprint: null };
+  const weeksIn = Array.from({ length: TOTAL_WEEKS }, (_, i) => i + 1);
+
+  // ---- Strength + power, per exercise slot ----
+  rpSlots().forEach(slot => {
+    const wk = weeksIn.map(w => rpSlotWeek(slot, w, data)).filter(Boolean);
+    const logged = wk.filter(x => x.any);
+    if (!logged.length) return;
+    const log = logged[logged.length - 1].log;
+    const nameNow = logged[logged.length - 1].name;
+    const isPowerish = /power|plyometric|conditioning|carry|cardio/i.test(String(resolveExercise(slot.ex, 1).category || '')) || /carry|sled|jump|slam|punch|throw|explosive|push-up|sprint/i.test(nameNow) || ['weight', 'reps', 'reps_lr', 'timed_lr', 'cardio'].includes(log);
+    const work = logged.filter(x => !rpIsDeload(x.w));
+    const metric = x => (x.e1 !== null && slot.equip !== 'bw') ? x.e1 : x.top;
+    const usable = work.filter(x => metric(x) !== null && metric(x) > 0);
+    // Strength lifts: estimated max; power/conditioning: load (or reps/seconds)
+    if (!isPowerish && usable.length >= 1 && (log === 'weight_reps' || log === 'unilateral' || log === 'drop2' || log === 'drop3' || log === 'plus_reps')) {
+      const first = usable[0], best = usable.reduce((a, b) => metric(b) > metric(a) ? b : a), last = usable[usable.length - 1];
+      const pct = metric(first) ? (metric(best) - metric(first)) / metric(first) * 100 : 0;
+      // stalled: the last 3 working weeks didn't beat the best from before them
+      let stalledSince = null;
+      if (usable.length >= 4) {
+        const tail = usable.slice(-3), before = usable.slice(0, -3), bestBefore = Math.max(...before.map(metric));
+        if (Math.max(...tail.map(metric)) <= bestBefore * 1.005) stalledSince = before.reduce((a, b) => metric(b) > metric(a) ? b : a).w;
+      }
+      const swappedTo = nameNow !== slot.baseName ? nameNow : null;
+      A.lifts.push({ name: nameNow, baseName: slot.baseName, primary: slot.primary, equip: slot.equip, e1rm: first.e1 !== null && slot.equip !== 'bw', added: slot.equip === 'bw',
+        first: metric(first), firstW: first.w, best: metric(best), bestW: best.w, last: metric(last), pct, stalledSince, swappedTo,
+        weeks: weeksIn.map(w => { const x = wk.find(y => y.w === w); return x && x.any && metric(x) && !rpIsDeload(w) ? Math.round(metric(x)) : null; }) });
+    } else if (isPowerish) {
+      const val = x => x.top !== null ? x.top : (x.reps || null);
+      const pv = logged.filter(x => !rpIsDeload(x.w) && val(x));
+      const unit = log === 'timed_lr' ? 'sec' : log === 'cardio' ? 'min' : (logged.some(x => x.top !== null) ? 'lbs' : 'reps');
+      A.power.push({ name: nameNow, unit, sessions: logged.length, first: pv.length ? val(pv[0]) : null, firstW: pv.length ? pv[0].w : null,
+        best: pv.length ? Math.max(...pv.map(val)) : null, last: pv.length ? val(pv[pv.length - 1]) : null, lastW: pv.length ? pv[pv.length - 1].w : null });
+    }
+  });
+  A.lifts.sort((a, b) => (b.primary - a.primary) || (b.pct - a.pct));
+  // same exercise on two days (e.g. Stairmaster) → one row
+  const pw = {}; A.power.forEach(p => { const k = p.name.toLowerCase() + '|' + p.unit; const q = pw[k];
+    if (!q) { pw[k] = Object.assign({}, p); return; }
+    q.sessions += p.sessions;
+    if (p.first !== null && (q.first === null || p.firstW < q.firstW)) { q.first = p.first; q.firstW = p.firstW; }
+    if (p.best !== null) q.best = q.best === null ? p.best : Math.max(q.best, p.best); });
+  A.power = Object.keys(pw).map(k => pw[k]);
+
+  // ---- Recovery (before-workout check-ins) ----
+  const rec = { weeks: [], counts: { green: 0, yellow: 0, red: 0 }, sessions: [] };
+  weeksIn.forEach(w => {
+    const rows = SESSION_KEYS.map(k => { const s = `w${w}_${k}`, g = f => rpNum(data[`${s}_pre_${f}`]);
+      const r = { w, k, sleep: g('sleep'), energy: g('energy'), stress: g('stress'), sore: g('sore'), feel: rpNum(data[`${s}_post_feel`]), rpe: rpNum(data[`${s}_post_rpe`]) };
+      r.ready = data[`${s}_pre_ready`] || rpReadiness(r.sleep, r.energy, r.stress, r.sore); return r; }).filter(r => r.sleep !== null || r.energy !== null || r.feel !== null);
+    rows.forEach(r => { if (r.ready) rec.counts[r.ready]++; rec.sessions.push(r); });
+    if (rows.length) rec.weeks.push({ w, sleep: rpAvg(rows.map(r => r.sleep)), energy: rpAvg(rows.map(r => r.energy)), stress: rpAvg(rows.map(r => r.stress)), sore: rpAvg(rows.map(r => r.sore)) });
+  });
+  if (rec.sessions.length) {
+    rec.sleep = rpAvg(rec.sessions.map(r => r.sleep)); rec.energy = rpAvg(rec.sessions.map(r => r.energy)); rec.stress = rpAvg(rec.sessions.map(r => r.stress));
+    const good = rec.sessions.filter(r => r.sleep !== null && r.sleep >= 7 && r.feel !== null), short = rec.sessions.filter(r => r.sleep !== null && r.sleep < 7 && r.feel !== null);
+    if (good.length >= 2 && short.length >= 2) rec.sleepFeel = { good: rpAvg(good.map(r => r.feel)), short: rpAvg(short.map(r => r.feel)), nGood: good.length, nShort: short.length };
+    A.recovery = rec;
+  }
+
+  // ---- Pain / joint health ----
+  const pain = { total: 0, areas: {}, exercises: {}, weeks: {} };
+  Object.keys(data).forEach(k => {
+    let m = k.match(/^w(\d+)_([a-z0-9]+)_ex(\d+)_pain$/);
+    if (m && !SESSIONS[m[2]]) return;
+    if (m) { let p = {}; try { p = JSON.parse(data[k]) || {}; } catch (e) {} pain.total++; pain.weeks[m[1]] = (pain.weeks[m[1]] || 0) + 1;
+      const ex = (typeof exAt === 'function' ? exAt(m[2], +m[3], +m[1]) : resolveExercise(SESSIONS[m[2]].exercises[+m[3]], +m[1])).name;
+      if (p.area) pain.areas[p.area] = (pain.areas[p.area] || 0) + 1; pain.exercises[ex] = (pain.exercises[ex] || 0) + 1; return; }
+    m = k.match(/^w(\d+)_([a-z0-9]+)_post_pain$/);
+    if (m && /yes/i.test(data[k]) && !Object.keys(data).some(x => x.indexOf(`w${m[1]}_${m[2]}_ex`) === 0 && /_pain$/.test(x))) { pain.total++; pain.weeks[m[1]] = (pain.weeks[m[1]] || 0) + 1; const wh = data[`w${m[1]}_${m[2]}_post_painWhere`]; if (wh) pain.areas[wh] = (pain.areas[wh] || 0) + 1; }
+  });
+  A.pain = pain;
+
+  // ---- Body composition (weekly check-in, or before-workout bodyweight) ----
+  const bwWeek = w => rpNum(data[`_wk${w}_bodyweight`]) || rpAvg(SESSION_KEYS.map(k => rpNum(data[`w${w}_${k}_pre_bw`])));
+  const bws = weeksIn.map(w => ({ w, v: bwWeek(w) })).filter(x => x.v), waists = weeksIn.map(w => ({ w, v: rpNum(data[`_wk${w}_waist`]) })).filter(x => x.v);
+  if (bws.length >= 2 || waists.length >= 2) A.body = {
+    bw: bws.length >= 2 ? { from: bws[0].v, fromW: bws[0].w, to: bws[bws.length - 1].v, toW: bws[bws.length - 1].w } : null,
+    waist: waists.length >= 2 ? { from: waists[0].v, fromW: waists[0].w, to: waists[waists.length - 1].v, toW: waists[waists.length - 1].w } : null };
+
+  // ---- Consistency by training day ----
+  const nowW = Math.min(TOTAL_WEEKS, Math.max(1, rawProgramWeek()));
+  const pastWeeks = weeksIn.filter(w => w <= nowW);
+  A.days = REQUIRED_KEYS.map(k => ({ key: k, title: SESSIONS[k].title, label: (SCHEDULE.find(s => s.session === k) || {}).day || k,
+    done: pastWeeks.filter(w => sessionLogged(data, w, k)).length, of: pastWeeks.length,
+    rpe: rpAvg(pastWeeks.map(w => rpNum(data[`w${w}_${k}_post_rpe`]))) }));
+
+  // ---- Exercise changes + early deload ----
+  Object.keys(data).forEach(k => { const m = k.match(/^w(\d+)_([a-z0-9]+)_swap(\d+)$/); if (!m || !SESSIONS[m[2]]) return; let o = {}; try { o = JSON.parse(data[k]) || {}; } catch (e) {}
+    if (o.name) A.swaps.push({ w: +m[1], from: exNameOf(m[2], +m[3]), to: o.name, day: (SCHEDULE.find(s => s.session === m[2]) || {}).day || m[2] }); });
+  A.swaps.sort((a, b) => a.w - b.w);
+  try { const o = JSON.parse(data._earlyDeload || 'null'); if (o && +o.week) A.earlyDeload = o; } catch (e) {}
+
+  A.blueprint = rpBlueprint(A, data);
+  return A;
+}
+
+// ---- Next Block Blueprint ----
+function rpBlueprint(A, data) {
+  const bp = { start: [], keep: [], change: [], recovery: [], schedule: [], body: [] };
+  const mains = A.lifts.some(l => l.primary) ? A.lifts.filter(l => l.primary) : A.lifts.filter(l => l.e1rm).slice(0, 4);
+  mains.forEach(l => {
+    if (l.added) bp.start.push({ name: l.name, best: '+' + Math.round(l.best), top: l.last > 0 ? '+' + rpRound(l.last, 'db') + ' lbs added' : 'Bodyweight', primary: true });
+    else if (l.e1rm) {
+      const base = l.best * 0.925;                     // start a touch under your best so the new block has room to build
+      bp.start.push({ name: l.name, best: Math.round(l.best), five: rpRound(base / (1 + 5 / 30), l.equip), eight: rpRound(base / (1 + 8 / 30), l.equip), primary: l.primary });
+    } else bp.start.push({ name: l.name, best: Math.round(l.best), top: rpRound(l.last, l.equip), primary: l.primary });
+  });
+  A.lifts.forEach(l => {
+    if (l.stalledSince) bp.change.push({ name: l.name, why: `No new best since Week ${WN(l.stalledSince)} — try a new variation or rep range` });
+    else if (l.pct >= 5 && !l.swappedTo && (l.primary || bp.keep.filter(k => !k.primary).length < 3)) bp.keep.push({ name: l.name, primary: l.primary, why: `+${Math.round(l.pct)}%${l.added ? ' added weight' : ''} and still climbing` });
+  });
+  A.swaps.forEach(s => bp.change.push({ name: s.from, why: `You swapped it for ${s.to} in Week ${WN(s.w)} — build ${s.to} into the next block` }));
+  Object.keys(A.pain.exercises).forEach(ex => { const n = A.pain.exercises[ex]; bp.change.push({ name: ex, why: `${n} pain report${n > 1 ? 's' : ''} — regress, swap or rebuild the range` }); });
+  if (A.earlyDeload) bp.recovery.push(`You took an early deload in Week ${WN(+A.earlyDeload.week)}${A.earlyDeload.why ? ` (“${A.earlyDeload.why}”)` : ''}. Plan the next deload around week 4–5 instead of 6.`);
+  if (A.recovery) {
+    const c = A.recovery.counts, tot = c.green + c.yellow + c.red;
+    if (tot) bp.recovery.push(`${Math.round(c.green / tot * 100)}% green days, ${c.yellow} yellow, ${c.red} red across ${tot} check-ins.`);
+    if (A.recovery.sleep !== null) bp.recovery.push(`Average sleep ${A.recovery.sleep.toFixed(1)} h before training.`);
+    const sf = A.recovery.sleepFeel; if (sf && sf.good - sf.short >= 0.4) bp.recovery.push(`Workouts after 7+ hours of sleep felt ${sf.good.toFixed(1)}/5 vs ${sf.short.toFixed(1)}/5 on shorter nights — sleep is a lever worth protecting.`);
+  }
+  A.days.forEach(d => { const miss = d.of - d.done; if (d.of >= 4 && miss >= 2) bp.schedule.push(`${d.label} (${d.title}) was missed ${miss} of ${d.of} weeks — consider folding it into the other days.`); });
+  if (!bp.schedule.length && A.days.length && A.days.every(d => d.done >= d.of - 1)) bp.schedule.push('Every training day held up — the current schedule works.');
+  if (A.body && A.body.bw) {
+    const d = A.body.bw.to - A.body.bw.from, prim = A.lifts.filter(l => l.primary && l.e1rm && !l.added), sp = prim.length ? rpAvg(prim.map(l => l.pct)) : null;
+    const wd = A.body.waist ? A.body.waist.to - A.body.waist.from : null;
+    bp.body.push(`Bodyweight ${d >= 0 ? '+' : ''}${d.toFixed(1)} lbs${wd !== null ? `, waist ${wd >= 0 ? '+' : ''}${wd.toFixed(1)} in` : ''}${sp !== null ? ` while main-lift strength went ${sp >= 0 ? 'up' : 'down'} ${Math.abs(Math.round(sp))}%` : ''}.` + (d <= 0 && sp > 0 ? ' Lighter and stronger — that\'s recomposition.' : ''));
+  }
+  return bp;
+}
+
+// ---- Report sections ----
+function rpSpark(vals) {
+  const pts = vals.map((v, i) => ({ i, v })).filter(p => p.v !== null); if (pts.length < 2) return '';
+  const W = 120, H = 30, lo = Math.min(...pts.map(p => p.v)), hi = Math.max(...pts.map(p => p.v)), span = hi - lo || 1;
+  const x = i => 3 + i / (vals.length - 1) * (W - 6), y = v => H - 4 - (v - lo) / span * (H - 8);
+  const d = pts.map((p, j) => (j ? 'L' : 'M') + x(p.i).toFixed(1) + ' ' + y(p.v).toFixed(1)).join(' ');
+  const last = pts[pts.length - 1];
+  return `<svg class="rp-spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><path d="${d}" fill="none" stroke="var(--cobalt)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${x(last.i).toFixed(1)}" cy="${y(last.v).toFixed(1)}" r="3" fill="#F6D47A"/></svg>`;
+}
+function rpDetailsHtml(A) {
+  const sec = (title, sub, body) => body ? `<section class="rp-sec"><h3>${title}</h3>${sub ? `<p class="rp-sub">${sub}</p>` : ''}${body}</section>` : '';
+  const fmt = v => v === null || v === undefined ? '—' : (Math.round(v * 10) / 10).toLocaleString();
+  const strength = A.lifts.filter(l => l.e1rm || l.added).slice(0, 8).map(l => `<div class="rp-row"><div class="rp-n">${esc(l.name)}${l.primary ? ' <span class="rp-tag">Main</span>' : ''}${l.stalledSince ? ' <span class="rp-tag warn">Stalled</span>' : ''}</div>${rpSpark(l.weeks)}<div class="rp-v">${l.added ? '+' : ''}${fmt(Math.round(l.first))} → <b>${l.added ? '+' : ''}${fmt(Math.round(l.best))}</b>${l.added ? ' added' : ''}<span class="${l.pct >= 0 ? 'up' : 'down'}">${l.pct >= 0 ? '+' : ''}${Math.round(l.pct)}%</span></div></div>`).join('');
+  const power = A.power.filter(p => p.sessions).map(p => `<div class="rp-row"><div class="rp-n">${esc(p.name)}</div><div class="rp-v">${p.unit === 'reps' || p.first === null ? `<b>${p.sessions}</b> session${p.sessions > 1 ? 's' : ''}` : `${fmt(p.first)} → <b>${fmt(p.best)}</b> ${p.unit}${p.best > p.first ? `<span class="up">+${fmt(p.best - p.first)}</span>` : ''}`}</div></div>`).join('');
+  const r = A.recovery;
+  const recovery = r ? `<div class="rp-grid">
+      <div class="rp-k"><b>${r.sleep !== null ? r.sleep.toFixed(1) : '—'}</b><span>avg sleep (h)</span></div>
+      <div class="rp-k"><b>${r.energy !== null ? r.energy.toFixed(1) : '—'}</b><span>avg energy /5</span></div>
+      <div class="rp-k"><b>${r.stress !== null ? r.stress.toFixed(1) : '—'}</b><span>avg stress /5</span></div>
+    </div>
+    <div class="rp-ready"><span class="g">🟢 ${r.counts.green}</span><span class="y">🟡 ${r.counts.yellow}</span><span class="r">🔴 ${r.counts.red}</span><span class="rp-muted">ready days</span></div>
+    ${r.weeks.length >= 2 ? `<div class="rp-row"><div class="rp-n">Sleep by week</div>${rpSpark(Array.from({ length: TOTAL_WEEKS }, (_, i) => { const x = r.weeks.find(y => y.w === i + 1); return x && x.sleep !== null ? x.sleep : null; }))}<div class="rp-v"></div></div>` : ''}
+    ${r.sleepFeel ? `<p class="rp-insight">💡 After 7+ hours of sleep your workouts felt <b>${r.sleepFeel.good.toFixed(1)}/5</b>. On shorter nights: <b>${r.sleepFeel.short.toFixed(1)}/5</b>.</p>` : ''}` : '';
+  const P = A.pain, areas = Object.keys(P.areas).sort((a, b) => P.areas[b] - P.areas[a]), exs = Object.keys(P.exercises).sort((a, b) => P.exercises[b] - P.exercises[a]);
+  const pain = P.total ? `<p class="rp-insight">${P.total} pain report${P.total > 1 ? 's' : ''} this block${areas.length ? ` — mostly <b>${esc(areas[0].toLowerCase())}</b>` : ''}${exs.length ? `, on ${exs.slice(0, 3).map(esc).join(', ')}` : ''}. Logged and worked around — exactly how to handle it.</p>` : `<p class="rp-insight">🟢 No pain reported all block. Moving well is the foundation everything else is built on.</p>`;
+  const B = A.body;
+  const body = B ? `<div class="rp-grid">${B.bw ? `<div class="rp-k"><b>${B.bw.to - B.bw.from >= 0 ? '+' : ''}${(B.bw.to - B.bw.from).toFixed(1)}</b><span>bodyweight (lbs)</span></div>` : ''}${B.waist ? `<div class="rp-k"><b>${B.waist.to - B.waist.from >= 0 ? '+' : ''}${(B.waist.to - B.waist.from).toFixed(1)}</b><span>waist (in)</span></div>` : ''}</div>${A.blueprint.body.map(t => `<p class="rp-insight">${esc(t)}</p>`).join('')}` : '';
+  const days = A.days.length ? A.days.map(d => `<div class="rp-row"><div class="rp-n">${esc(d.label)} · ${esc(d.title)}</div><div class="rp-bar"><i style="width:${d.of ? Math.round(d.done / d.of * 100) : 0}%"></i></div><div class="rp-v"><b>${d.done}</b>/${d.of}${d.rpe ? ` · RPE ${d.rpe.toFixed(1)}` : ''}</div></div>`).join('') : '';
+  const bp = A.blueprint;
+  const list = (items, cls) => items.length ? `<ul class="rp-list ${cls}">${items.map(i => `<li><b>${esc(i.name)}</b><span>${esc(i.why)}</span></li>`).join('')}</ul>` : '';
+  const start = bp.start.length ? `<div class="rp-table"><div class="rp-th"><span>Lift</span><span>Best (est.)</span><span>Start at</span></div>${bp.start.map(s => `<div class="rp-tr"><span>${esc(s.name)}</span><span>${s.best}</span><span>${s.five ? `<b>${s.five}</b> × 5 · <b>${s.eight}</b> × 8` : `<b>${s.top}</b>`}</span></div>`).join('')}</div><p class="rp-sub">Starting weights sit about 7% under your best so the next block has room to build.</p>` : '';
+  const blueprint = `${start}
+    ${bp.keep.length ? `<div class="rp-h4">Keep — it's working</div>${list(bp.keep.slice(0, 6), 'keep')}` : ''}
+    ${bp.change.length ? `<div class="rp-h4">Change</div>${list(bp.change.slice(0, 8), 'change')}` : ''}
+    ${bp.recovery.length ? `<div class="rp-h4">Recovery</div><ul class="rp-list plain">${bp.recovery.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+    ${bp.schedule.length ? `<div class="rp-h4">Schedule</div><ul class="rp-list plain">${bp.schedule.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+    ${A.swaps.length ? `<div class="rp-h4">Exercises you changed</div><ul class="rp-list plain">${A.swaps.map(s => `<li>Week ${WN(s.w)} · ${esc(s.day)}: ${esc(s.from)} → <b>${esc(s.to)}</b></li>`).join('')}</ul>` : ''}`;
+  return `<div class="rp">
+    <div class="rp-head"><div class="today-eyebrow">The full breakdown</div><h2>What this block tells us</h2></div>
+    ${sec('Strength', 'Estimated max from your best set each week — a fair comparison even when the reps change.', strength)}
+    ${sec('Power, conditioning &amp; core', 'First week → best week (deload weeks left out).', power)}
+    ${sec('Recovery', '', recovery)}
+    ${sec('Joint health', '', pain)}
+    ${sec('Body composition', '', body)}
+    ${sec('Consistency by day', '', days)}
+    <section class="rp-sec rp-blueprint"><h3>🧭 Your next block</h3><p class="rp-sub">Built from your numbers. ${esc((COACH.brand || 'Your coach').split(' ')[0])} uses this to build what comes next.</p>${blueprint}</section>
+  </div>`;
+}
+function rpBlueprintText(A) {
+  const bp = A.blueprint, L = ['', 'NEXT BLOCK BLUEPRINT'];
+  if (bp.start.length) { L.push('Starting weights:'); bp.start.forEach(s => L.push(`- ${s.name}: best est. ${s.best} → start ${s.five ? s.five + ' × 5 / ' + s.eight + ' × 8' : s.top}`)); }
+  if (bp.keep.length) { L.push('Keep:'); bp.keep.forEach(i => L.push(`- ${i.name}: ${i.why}`)); }
+  if (bp.change.length) { L.push('Change:'); bp.change.forEach(i => L.push(`- ${i.name}: ${i.why}`)); }
+  bp.recovery.concat(bp.schedule, bp.body).forEach(t => L.push('- ' + t));
+  if (A.power.length) { L.push('Power, conditioning & core:'); A.power.forEach(p => L.push(p.unit === 'reps' || p.first === null ? `- ${p.name}: ${p.sessions} sessions` : `- ${p.name}: ${p.first} → ${p.best} ${p.unit}`)); }
+  return L.join('\n');
+}
+function rpPrint() {
+  document.body.classList.add('rp-printing');
+  const done = () => { document.body.classList.remove('rp-printing'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  setTimeout(() => { window.print(); setTimeout(done, 1500); }, 50);
+}
+
 /* ── Boot ── */
 setupHomeScreenApp();
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(setupHomeScreenApp);
@@ -3957,6 +4400,7 @@ renderNutrition();
 applyProgramWeekState();
 renderToday();
 renderGuide();
+refreshPainNotes();
 (async function boot() {
   await mergeRemoteState();
   seedHistoricalData();
@@ -3967,6 +4411,7 @@ renderGuide();
   for (let w = 1; w <= TOTAL_WEEKS; w++) updateWeekTabStatus(w);
   evaluateBadges();
   renderBadgesShelf();
+  refreshPainNotes();
   renderToday();
   if (SHOW_WELCOME_TOUR && !getPrefs().tourSeen) startTour();
   if (SYNC.apiUrl) queueSync(); else setSyncStatus('Saved on this device ✓');   // push once on open so the outline + any offline changes reach the Sheet
