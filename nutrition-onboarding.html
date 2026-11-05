@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nutrition Onboarding · Kim Valles Coaching, LLC</title>
+<meta property="og:title" content="TRAIN — Nutrition Onboarding">
+<meta property="og:description" content="About 6–9 minutes. Your answers go straight to Kim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#15161A;--bg-glow:#1B1D22;--surface:#1E2025;--surface2:#272A30;--surface3:#30343B;--border:#2C2F35;--border2:#454952;--text:#F1F1F0;--text2:#DADBDC;--muted:#9A9DA5;--muted2:#6E7178;
+  --cobalt:#8FD0F0;--cobalt-bright:#B9E3F6;--cobalt-faint:rgba(143,208,240,0.10);--cobalt-mid:rgba(143,208,240,0.26);--on-cobalt:#0E2733;--avoid:#E8877A;--on-avoid:#3A1712;
+  --mono:'JetBrains Mono',monospace;--body:'Hanken Grotesk',sans-serif;}
+*{box-sizing:border-box}
+html,body{margin:0;background:radial-gradient(900px 480px at 50% -10%,var(--bg-glow),transparent),var(--bg);color:var(--text);font-family:var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 18px 140px;min-height:100vh}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.brand{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--cobalt);font-weight:700}
+.count{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.bar{height:5px;background:var(--surface2);border-radius:6px;overflow:hidden;margin:12px 0 26px}
+.bar i{display:block;height:100%;width:0;background:var(--cobalt);transition:width .25s ease;box-shadow:0 0 8px rgba(143,208,240,.3)}
+.sec{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt);font-weight:700;margin-bottom:8px}
+h1{font-size:28px;line-height:1.2;margin:0 0 8px;font-weight:800;letter-spacing:-.01em}
+.help{font-size:15px;line-height:1.55;color:var(--text2);margin:0 0 20px}
+.lbl{display:block;font-size:14px;font-weight:700;color:var(--text);margin:18px 0 8px}
+.lbl small{font-weight:500;color:var(--muted)}
+input[type=text],input[type=email],input[type=number],textarea,select{width:100%;font-family:var(--body);font-size:17px;padding:14px 15px;border:1.5px solid var(--border2);border-radius:12px;background:var(--surface2);color:var(--text);outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-faint)}
+textarea{min-height:96px;resize:vertical;line-height:1.45}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;padding:16px 17px;border-radius:13px;border:1.5px solid var(--border2);background:var(--surface2);color:var(--text);font-family:var(--body);font-size:16.5px;font-weight:600;line-height:1.3;cursor:pointer}
+.opt small{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:3px}
+.opt.on{border-color:var(--cobalt);background:var(--cobalt-faint)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--border2);border-radius:22px;padding:10px 15px;font-size:15px;cursor:pointer;background:var(--surface2);color:var(--text2);user-select:none;font-family:var(--body);font-weight:500}
+.chip.on,.chip[data-s=like]{background:var(--cobalt);color:var(--on-cobalt);border-color:var(--cobalt);font-weight:700}
+.chip[data-s=avoid]{background:var(--avoid);color:var(--on-avoid);border-color:var(--avoid);text-decoration:line-through;font-weight:700}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin:0 0 16px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:5px;border:1px solid var(--border2);background:var(--surface2)}
+.legend i.l{background:var(--cobalt);border-color:var(--cobalt)}.legend i.a{background:var(--avoid);border-color:var(--avoid)}
+.nav{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(transparent,var(--bg) 30%);padding:26px 18px max(18px,env(safe-area-inset-bottom))}
+.nav-in{max-width:560px;margin:0 auto;display:flex;gap:10px}
+button.go{flex:1;min-height:56px;border:0;border-radius:14px;background:var(--cobalt);color:var(--on-cobalt);font-family:var(--body);font-size:17px;font-weight:800;cursor:pointer}
+button.go:disabled{opacity:.4}
+button.back{min-height:56px;padding:0 20px;border:1.5px solid var(--border2);border-radius:14px;background:transparent;color:var(--text2);font-family:var(--body);font-size:15px;font-weight:700;cursor:pointer}
+.skip{display:block;margin:16px auto 0;background:none;border:0;color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:underline}
+.prog{padding:14px 16px;border-radius:12px;border:1px solid var(--cobalt-mid);background:var(--cobalt-faint);font-size:15px;line-height:1.5;margin-bottom:12px}
+.prog b{color:var(--text)}
+.rev{border:1px solid var(--border);border-radius:14px;background:var(--surface);padding:6px 16px;margin-bottom:12px}
+.rev div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+.rev div:last-child{border-bottom:0}
+.rev span{color:var(--muted)}.rev b{color:var(--text);text-align:right;font-weight:600}
+.rev a{color:var(--cobalt);font-size:12px;font-family:var(--mono);text-decoration:none;margin-left:8px}
+.status{font-size:14px;color:var(--muted);margin-top:12px;min-height:20px}
+.done{text-align:center;padding-top:30px}
+.done .big{font-size:54px;margin-bottom:10px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="brand">TRAIN · Nutrition onboarding</div><div class="count" id="count"></div></div>
+  <div class="bar"><i id="barFill"></i></div>
+  <main id="screen"></main>
+  <input class="hp" type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+</div>
+<div class="nav" id="nav"><div class="nav-in"><button type="button" class="back" id="backBtn">Back</button><button type="button" class="go" id="goBtn">Continue</button></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+// ── Settings ──
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyXq5X8ng5u2oXHdXW9P5tjk3UhU64T3VHxKIWEApdkBy45q3FQNnEoVQ6Benvztuie/exec';   // same as SYNC.apiUrl in the programs
+const EMAILJS = { publicKey: 'kEkUQQISB5kC7fLEd', service: 'service_v56cwc7', template: 'template_twlrhp3' };
+const PROGRAMS = [   // [label, tier]
+  ['TRAIN Beginner Strength · 3-Day · 8 weeks (Tier I)', 1], ['TRAIN Beginner/Intermediate · 4-Day · 8 weeks (Tier I)', 1], ['TRAIN Intermediate/Advanced · 5-Day · 8 weeks (Tier I)', 1],
+  ['Personalized Link + Nutrition · 8 weeks (Tier II)', 2], ['Personalized Link + Nutrition + Weekly Check-ins · 12 weeks (Tier III)', 3], ['TRAIN Build Your Own', 2], ['Not sure', ''],
+];
+const FOODS = {
+  protein: ["Chicken breast","Chicken thigh","Turkey","Turkey bacon","Lean beef","Sirloin steak","Bison","Salmon","White fish (cod/tilapia)","Shrimp","Tuna","Eggs","Egg whites","Greek yogurt","Cottage cheese","Tofu/Tempeh","Edamame","Lentils","Black beans","Whey protein","Plant protein powder"],
+  starchyCarbs: ["White rice","Brown rice","Potatoes","Sweet potatoes","Oats","Quinoa","Whole grain bread","Sourdough bread","Pita bread","Pasta","Whole wheat pasta","Tortillas","Corn","Couscous","Bagels","Cereal"],
+  fibrousCarbs: ["Broccoli","Spinach","Kale","Bell peppers","Zucchini","Asparagus","Cauliflower","Brussels sprouts","Carrots","Cucumber","Salad greens","Green beans","Mushrooms","Tomatoes"],
+  fiber: ["Lentils","Split peas","Black beans","Chickpeas","Raspberries","Pears","Artichokes","Chia seeds","Flax seeds","Oats","Broccoli","Brussels sprouts","Avocado","Popcorn","Whole wheat pasta","Barley","Almonds"],
+  fats: ["Olive oil","Avocado","Almonds","Peanut butter","Almond butter","Walnuts","Chia seeds","Flax seeds","Cheese","Butter","Coconut oil","Mayo","Fatty fish (salmon/mackerel)"],
+  fruit: ["Berries","Blackberries","Strawberries","Bananas","Apples","Oranges","Grapes","Mango","Pineapple","Watermelon","Pears","Dried fruit"],
+  extras: ["Coffee","Tea","Diet soda","Regular soda","Alcohol (beer)","Alcohol (wine)","Alcohol (spirits)","Protein bars","Energy drinks","Sparkling water"],
+};
+const FOOD_TITLES = { protein: ['Protein', 'Builds and repairs muscle'], starchyCarbs: ['Carbs — starchy', 'Fuel and training energy'], fibrousCarbs: ['Carbs — veggies', 'Volume, fiber and micronutrients'], fiber: ['Fiber boosters', 'Digestion and fullness'], fats: ['Fats', 'Hormones and staying full'], fruit: ['Fruit', 'Fiber, micronutrients and sweetness'], extras: ['Drinks & extras', 'Good to know for the full picture'] };
+const ALLERGY_TAGS = [['dairy', 'Dairy / lactose'], ['gluten', 'Gluten / celiac'], ['shellfish', 'Shellfish'], ['fish', 'Fish'], ['nuts', 'Peanuts / tree nuts'], ['sesame', 'Sesame'], ['eggs', 'Eggs'], ['soy', 'Soy']];
+
+// ── Who opened it (links from inside their program carry ?c=code or ?id=, plus n name, t tier, p program) ──
+const Q = new URLSearchParams(location.search);
+const LINK = { code: Q.get('c') || '', id: Q.get('id') || '', name: Q.get('n') || '', tier: Q.get('t') || '', program: Q.get('p') || '' };
+const KEY = 'train_nutrition_onboarding_v2';
+let A = {}; try { A = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+A.food = A.food || {}; A.allergyTags = A.allergyTags || [];
+if (LINK.name && !A.name) A.name = LINK.name;
+if (LINK.tier && !A.tier) { A.tier = LINK.tier; A.program = LINK.program || A.program || ''; A.fromLink = true; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(A)); } catch (e) {} };
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+
+// ── Screens ── each: sec, title, help, html(), auto (single tap moves on), ok() (can continue)
+const opt = (field, v, label, sub) => `<button type="button" class="opt${A[field] === v ? ' on' : ''}" onclick="pick('${field}','${v}')">${esc(label)}${sub ? `<small>${esc(sub)}</small>` : ''}</button>`;
+const inp = (field, type, ph, extra) => `<input type="${type}" id="i_${field}" value="${esc(A[field] || '')}" ${ph ? `placeholder="${esc(ph)}"` : ''} oninput="setv('${field}',this.value)" ${extra || ''}>`;
+const area = field => `<textarea id="i_${field}" oninput="setv('${field}',this.value)">${esc(A[field] || '')}</textarea>`;
+const S = [
+  { sec: 'Welcome', title: 'Let’s build your nutrition profile', help: 'About 6–9 minutes. One question at a time. Your answers go straight to Kim and shape your targets, meals and shopping list. Your progress saves as you go.',
+    html: () => `<label class="lbl">Full name</label>${inp('name', 'text', '', 'autocomplete="name"')}<label class="lbl">Email</label>${inp('email', 'email', '', 'autocomplete="email" inputmode="email"')}`, ok: () => (A.name || '').trim() },
+  { sec: 'Your program', title: 'Which program are you on?', help: '', when: () => !A.fromLink,
+    html: () => `<div class="opts">${PROGRAMS.map(([l, t]) => `<button type="button" class="opt${A.program === l ? ' on' : ''}" onclick="pickProgram('${esc(l)}','${t}')">${esc(l)}</button>`).join('')}</div>`, ok: () => A.program },
+  { sec: 'Your program', title: 'Your program', help: '', when: () => A.fromLink,
+    html: () => `<div class="prog">You’re on <b>${esc(A.program || 'your TRAIN program')}</b>${A.tier ? ` · Tier ${esc(A.tier)}` : ''}. Your answers will be linked to it.</div><button type="button" class="skip" onclick="A.fromLink=false;save();render()">Not right? Change it</button>`, ok: () => true },
+  { sec: 'The basics', title: 'A little about you', help: 'Used to estimate your calories. Kim reviews every number.',
+    html: () => `<div class="two"><div><label class="lbl">Age</label>${inp('age', 'number', '', 'inputmode="numeric" min="14" max="100"')}</div><div><label class="lbl">Sex <small>for the calorie math</small></label><select id="i_sex" onchange="setv('sex',this.value)">${[['', 'Select'], ['female', 'Female'], ['male', 'Male'], ['other', 'Prefer to skip']].map(([v, l]) => `<option value="${v}"${A.sex === v ? ' selected' : ''}>${l}</option>`).join('')}</select></div></div>`, ok: () => true },
+  { sec: 'The basics', title: 'Height and weight', help: '',
+    html: () => `<label class="lbl">Height</label><div class="two">${inp('heightFt', 'number', 'ft', 'inputmode="numeric"')}${inp('heightIn', 'number', 'in', 'inputmode="numeric"')}</div><label class="lbl">Current weight <small>lb</small></label>${inp('weight', 'number', '', 'inputmode="decimal"')}`, ok: () => true },
+  { sec: 'The basics', title: 'How active are you outside of training?', help: 'Think about your job and general movement.', auto: true,
+    html: () => `<div class="opts">${opt('activity', 'sedentary', 'Mostly sitting', 'Desk job, little walking')}${opt('activity', 'light', 'Lightly active', 'On my feet sometimes')}${opt('activity', 'moderate', 'Active', 'On my feet most of the day')}${opt('activity', 'high', 'Very active', 'Physically demanding job')}</div>`, ok: () => A.activity },
+  { sec: 'The basics', title: 'Your training', help: '',
+    html: () => `<label class="lbl">Training days per week</label>${inp('trainDays', 'number', '', 'inputmode="numeric" min="0" max="7"')}<label class="lbl">Type of training</label>${inp('trainType', 'text', '')}`, ok: () => true },
+  { sec: 'The basics', title: 'What’s your main goal?', help: '', auto: true,
+    html: () => `<div class="opts">${opt('goal', 'fatloss', 'Fat loss')}${opt('goal', 'recomp', 'Recomp', 'Lose fat, keep muscle')}${opt('goal', 'muscle', 'Build muscle')}${opt('goal', 'performance', 'Performance / energy')}${opt('goal', 'maintain', 'Maintain and build habits')}</div>`, ok: () => A.goal },
+  { sec: 'Lifestyle', title: 'How do you eat right now?', help: '',
+    html: () => `<label class="lbl">Meals a day</label>${inp('mealsPerDay', 'number', '', 'inputmode="numeric" min="1" max="8"')}<label class="lbl">Do you snack?</label><div class="chips">${[['yes', 'Yes, often'], ['sometimes', 'Sometimes'], ['no', 'Rarely']].map(([v, l]) => `<span class="chip${A.snack === v ? ' on' : ''}" onclick="setv('snack','${v}');render()">${l}</span>`).join('')}</div>`, ok: () => true },
+  { sec: 'Lifestyle', title: 'How much time do you have for cooking?', help: '', auto: true,
+    html: () => `<div class="opts">${opt('cooking', 'love', 'I love cooking and have time')}${opt('cooking', 'quick', 'Quick and simple meals')}${opt('cooking', 'minimal', 'Minimal', 'Mostly grab-and-go or prepped')}${opt('cooking', 'eatout', 'I eat out or order in often')}</div>`, ok: () => A.cooking },
+  { sec: 'Lifestyle', title: 'Grocery budget', help: '', auto: true,
+    html: () => `<div class="opts">${opt('budget', 'low', 'Tight')}${opt('budget', 'mid', 'Moderate')}${opt('budget', 'flex', 'Flexible')}</div>`, ok: () => A.budget },
+  { sec: 'Lifestyle', title: 'Do you do intermittent fasting?', help: 'Or any time-restricted eating.', auto: true,
+    html: () => `<div class="opts">${opt('fasting', 'yes', 'Yes')}${opt('fasting', 'no', 'No')}${opt('fasting', 'open', 'Open to it')}</div>`, ok: () => A.fasting },
+  { sec: 'Lifestyle', title: 'Anything about your routine Kim should know?', help: 'Shift work, travel, family meals — anything. Optional.',
+    html: () => area('routineNotes'), ok: () => true },
+  { sec: 'Health', title: 'Any food allergies or intolerances?', help: 'Tap all that apply.',
+    html: () => `<div class="chips">${ALLERGY_TAGS.map(([v, l]) => `<span class="chip${A.allergyTags.includes(v) ? ' on' : ''}" onclick="toggleAllergy('${v}')">${l}</span>`).join('')}<span class="chip${A.noAllergies ? ' on' : ''}" onclick="toggleAllergy('none')">None</span></div><label class="lbl">Anything else? <small>optional</small></label>${area('allergies')}`, ok: () => true },
+  { sec: 'Health', title: 'Medical conditions that affect how you eat', help: 'Diabetes, IBS, reflux, blood pressure, etc. Optional.',
+    html: () => area('medical'), ok: () => true },
+  { sec: 'Health', title: 'Medications or supplements you take', help: 'Optional.',
+    html: () => area('meds'), ok: () => true },
+  { sec: 'Health', title: 'How do you eat?', help: '', auto: () => A.pattern !== 'other',
+    html: () => `<div class="opts">${opt('pattern', 'omnivore', 'No restrictions')}${opt('pattern', 'vegetarian', 'Vegetarian')}${opt('pattern', 'vegan', 'Vegan')}${opt('pattern', 'pescatarian', 'Pescatarian')}${opt('pattern', 'halal', 'Halal')}${opt('pattern', 'kosher', 'Kosher')}${opt('pattern', 'other', 'Other')}</div>${A.pattern === 'other' ? `<label class="lbl">Tell us more</label>${inp('patternOther', 'text', '')}` : ''}`, ok: () => A.pattern },
+  ...Object.keys(FOODS).map(cat => ({ sec: 'Foods you like', title: FOOD_TITLES[cat][0], help: FOOD_TITLES[cat][1] + '. Tap once = like, twice = avoid, three times = reset.',
+    html: () => `<div class="legend"><span><i></i>Neutral</span><span><i class="l"></i>Like</span><span><i class="a"></i>Avoid</span></div><div class="chips">${FOODS[cat].map((f, i) => `<span class="chip" data-s="${(A.food[cat] || {})[f] || 'n'}" onclick="cycle('${cat}',${i},this)">${esc(f)}</span>`).join('')}</div>`, ok: () => true })),
+  { sec: 'Foods you like', title: 'Anything we missed?', help: '',
+    html: () => `<label class="lbl">Foods you love that weren’t listed</label>${inp('extraLikes', 'text', '')}<label class="lbl">Foods you absolutely won’t eat <small>texture, taste, ethics — anything</small></label>${inp('extraDislikes', 'text', '')}`, ok: () => true },
+  { sec: 'Review', title: 'Look good?', help: 'Tap any line to change it. When you’re ready, send it to Kim.', review: true,
+    html: () => { const row = (l, v, i) => `<div><span>${l}</span><b>${esc(v || '—')}<a href="#" onclick="event.preventDefault();jump(${i})">Edit</a></b></div>`, f = k => S.findIndex(s => s.title === k);
+      const likes = Object.values(A.food).reduce((n, o) => n + Object.values(o).filter(x => x === 'like').length, 0), avoids = Object.values(A.food).reduce((n, o) => n + Object.values(o).filter(x => x === 'avoid').length, 0);
+      return `<div class="rev">${row('Name', A.name, 0)}${row('Program', A.program + (A.tier ? ' · Tier ' + A.tier : ''), 1)}${row('Goal', ({ fatloss: 'Fat loss', recomp: 'Recomp', muscle: 'Build muscle', performance: 'Performance', maintain: 'Maintain' })[A.goal], f('What’s your main goal?'))}${row('Allergies', A.noAllergies ? 'None' : A.allergyTags.map(t => (ALLERGY_TAGS.find(x => x[0] === t) || ['', t])[1]).join(', ') + (A.allergies ? ' + notes' : ''), f('Any food allergies or intolerances?'))}${row('How you eat', A.pattern === 'other' ? A.patternOther : A.pattern, f('How do you eat?'))}${row('Foods tagged', likes + ' liked · ' + avoids + ' avoid', f('Protein'))}</div><div class="status" id="status"></div>`; }, ok: () => true },
+];
+let step = 0, sending = false, sent = false;
+const visible = () => S.filter(s => !s.when || s.when());
+function render() {
+  const V = visible(); step = Math.max(0, Math.min(step, V.length - 1)); const s = V[step];
+  if (sent) return;
+  document.getElementById('screen').innerHTML = `<div class="sec">${esc(s.sec)}</div><h1>${esc(s.title)}</h1>${s.help ? `<p class="help">${esc(s.help)}</p>` : ''}${s.html()}`;
+  document.getElementById('count').textContent = `${step + 1} of ${V.length}`;
+  document.getElementById('barFill').style.width = Math.round(step / (V.length - 1) * 100) + '%';
+  document.getElementById('backBtn').style.visibility = step ? 'visible' : 'hidden';
+  const go = document.getElementById('goBtn'); go.textContent = s.review ? (sending ? 'Sending…' : 'Send to Kim') : 'Continue'; go.disabled = !s.ok() || sending;
+  window.scrollTo({ top: 0 });
+}
+window.setv = (f, v) => { A[f] = v; save(); const s = visible()[step]; document.getElementById('goBtn').disabled = !s.ok(); };
+window.pick = (f, v) => { A[f] = v; save(); render(); };   // they tap Continue to move on
+window.pickProgram = (l, t) => { A.program = l; A.tier = t; save(); render(); };
+window.toggleAllergy = v => { if (v === 'none') { A.noAllergies = !A.noAllergies; if (A.noAllergies) A.allergyTags = []; } else { A.noAllergies = false; A.allergyTags = A.allergyTags.includes(v) ? A.allergyTags.filter(x => x !== v) : A.allergyTags.concat(v); } save(); render(); };
+window.cycle = (cat, i, el) => { const f = FOODS[cat][i], o = A.food[cat] = A.food[cat] || {}, nx = { n: 'like', like: 'avoid', avoid: 'n' }[o[f] || 'n']; if (nx === 'n') delete o[f]; else o[f] = nx; el.dataset.s = nx; save(); };
+window.jump = i => { const V = visible(), s = S[i]; const vi = V.indexOf(s); step = vi >= 0 ? vi : 0; render(); };
+function next() { const V = visible(); if (step < V.length - 1) { step++; render(); } else submit(); }
+document.getElementById('goBtn').onclick = next;
+document.getElementById('backBtn').onclick = () => { if (step) { step--; render(); } };
+document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && !document.getElementById('goBtn').disabled) next(); });
+
+// ── Starting targets (Mifflin-St Jeor) — for Kim's eyes only ──
+function calc() {
+  const age = +A.age, lb = +A.weight, cm = ((+A.heightFt || 0) * 12 + (+A.heightIn || 0)) * 2.54, kg = lb * 0.453592;
+  if (!(age && lb && cm && (A.sex === 'male' || A.sex === 'female') && A.activity)) return null;
+  const bmr = 10 * kg + 6.25 * cm - 5 * age + (A.sex === 'male' ? 5 : -161), tdee = bmr * { sedentary: 1.2, light: 1.375, moderate: 1.55, high: 1.725 }[A.activity];
+  const cals = Math.round(tdee * (1 + ({ fatloss: -0.20, recomp: -0.10, muscle: 0.10 }[A.goal] || 0))), p = Math.round(lb), f = Math.round(cals * 0.25 / 9);
+  return { tdee: Math.round(tdee), cals, protein: p, fat: f, carbs: Math.max(0, Math.round((cals - p * 4 - cals * 0.25) / 4)) };
+}
+function profile() {
+  const fp = {}; Object.keys(FOODS).forEach(c => { fp[c] = Object.assign({}, A.food[c] || {}); });
+  return { action: 'nutritionIntake', code: LINK.code, client_id: LINK.code ? '' : LINK.id, website: document.getElementById('website').value,
+    name: A.name || '', email: A.email || '', tier: A.tier || '', program: A.program || '', age: A.age || '', sex: A.sex || '', heightFt: A.heightFt || '', heightIn: A.heightIn || '', weightLb: A.weight || '',
+    activityLevel: A.activity || '', trainingDaysPerWeek: A.trainDays || '', trainingType: A.trainType || '', goal: A.goal || '', mealsPerDay: A.mealsPerDay || '', snackHabit: A.snack || '',
+    cookingStyle: A.cooking || '', budget: A.budget || '', fasting: A.fasting || '', routineNotes: A.routineNotes || '', allergyTags: A.allergyTags, allergies: A.noAllergies ? 'None' : (A.allergies || ''),
+    medical: A.medical || '', medications: A.meds || '', dietaryPattern: A.pattern === 'other' ? 'other: ' + (A.patternOther || '') : (A.pattern || ''), foodPreferences: fp,
+    extraLikes: A.extraLikes || '', extraDislikes: A.extraDislikes || '', suggestedTargets: calc(), submittedAt: new Date().toISOString() };
+}
+function emailParams(p) {
+  const flat = st => Object.keys(p.foodPreferences).map(c => { const f = Object.keys(p.foodPreferences[c]).filter(x => p.foodPreferences[c][x] === st); return f.length ? c + ': ' + f.join(', ') : ''; }).filter(Boolean).join(' | ');
+  const t = p.suggestedTargets || {}, tierTxt = p.tier ? 'Tier ' + p.tier : 'Tier ?';
+  const allergyTxt = [p.allergyTags.map(x => (ALLERGY_TAGS.find(a => a[0] === x) || ['', x])[1]).join(', '), p.allergies].filter(Boolean).join(' — ');
+  return { to_email: 'train@kimvallescoaching.com', name: p.name || 'New client', client_name: p.name || 'New client', email: p.email || '—', tier: tierTxt, program: p.program || '—',
+    subject: `Nutrition intake — ${p.name || 'New client'} · ${tierTxt} · ${p.program || 'program not given'}`, submitted_at: p.submittedAt, goal: p.goal || '—', age: p.age || '—', sex: p.sex || '—',
+    height: `${p.heightFt || '—'}'${p.heightIn || '0'}"`, weight: p.weightLb || '—', activity_level: p.activityLevel || '—', training_days: p.trainingDaysPerWeek || '—', training_type: p.trainingType || '—',
+    meals_per_day: p.mealsPerDay || '—', snack_habit: p.snackHabit || '—', cooking_style: p.cookingStyle || '—', budget: p.budget || '—', fasting: p.fasting || '—',
+    routine_notes: `[${tierTxt} · ${p.program || 'program not given'}${p.email ? ' · ' + p.email : ''}] ` + (p.routineNotes || 'none'),
+    allergies: allergyTxt || 'none listed', medical: p.medical || 'none listed', medications: p.medications || 'none listed', dietary_pattern: p.dietaryPattern || '—',
+    liked_foods: flat('like') || 'none tagged', avoided_foods: flat('avoid') || 'none tagged', extra_likes: p.extraLikes || 'none', extra_dislikes: p.extraDislikes || 'none',
+    tdee: t.tdee || '—', target_calories: t.cals || '—', target_protein: t.protein || '—', target_carbs: t.carbs || '—', target_fat: t.fat || '—' };
+}
+async function submit() {
+  if (sending) return; sending = true; render(); const st = document.getElementById('status'); if (st) st.textContent = 'Sending…';
+  const p = profile();
+  const toSheet = fetch(SHEET_URL, { method: 'POST', body: JSON.stringify(p) }).then(r => r.json()).then(j => { if (!j || !j.success) throw new Error((j && j.error) || 'Sheet'); return j; });
+  const toEmail = (window.emailjs ? (emailjs.init({ publicKey: EMAILJS.publicKey }), emailjs.send(EMAILJS.service, EMAILJS.template, emailParams(p))) : Promise.reject(new Error('email unavailable')));
+  const [a, b] = await Promise.allSettled([toSheet, toEmail]);
+  if (a.status === 'fulfilled' || b.status === 'fulfilled') {
+    sent = true; try { localStorage.removeItem(KEY); } catch (e) {}
+    document.getElementById('nav').style.display = 'none'; document.getElementById('barFill').style.width = '100%'; document.getElementById('count').textContent = 'Done';
+    document.getElementById('screen').innerHTML = `<div class="done"><div class="big">✓</div><h1>You’re all set${A.name ? ', ' + esc(String(A.name).split(' ')[0]) : ''}</h1><p class="help">Kim will personally review your answers and build your nutrition guide. It will show up in the Nutrition tab of your program.${a.status === 'fulfilled' && a.value.linked ? ' Your recipes are already matched to how you eat.' : ''}</p></div>`;
+  } else {
+    sending = false; render(); const s2 = document.getElementById('status'); if (s2) s2.textContent = 'Something went wrong sending this. Check your connection and try again — or email train@kimvallescoaching.com.';
+  }
+}
+render();
+</script>
+</body>
+</html>
